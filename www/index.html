@@ -32,9 +32,6 @@
         <link rel="stylesheet" href="css/page-about_html.css" />
         <link rel="stylesheet" href="css/ons-view.css" />
         <link rel="stylesheet" href="css/ons.css" />
-
-        <script src="js/database_utils.js"></script>
-        
         
         <title>{{ 'TITLE' | translate }}</title>
 
@@ -45,8 +42,8 @@
       -- ---------------------------------------- -->
     <body ng-controller="app_controller">
 
-    <div ons-loading-placeholder="menu" style="text-align:center;">
-        <img src="img/loading.svg" style="position:fixed;top: calc(50% - 60px);left: calc(50% - 60px)" /> 
+    <div class="ons-loading-placeholder">
+        <img src="img/loading.svg" /> 
     </div>
 
 
@@ -74,13 +71,14 @@
     <script src="lib/pulipuli-utils/app_factory_ons_view.js"></script>
     <script src="lib/pulipuli-utils/app_factory_ons_utils.js"></script>
     <script src="lib/pulipuli-utils/app_factory_jquery.js"></script>
+    <script src="lib/pulipuli-utils/db_profile.js"></script>
     
-    <script src="lib/pulipuli-utils/cordova_barcode_scan.js"></script>
     <script src="lib/pulipuli-utils/cordova_social_share.js"></script>
     <script src="lib/pulipuli-utils/cordova_inappbrowser_submit.js"></script>
     
+    
+    
     <script src="js/app_factory_db.js"></script>
-    <script src="js/controller_name.js"></script>
     <script src="js/app_factory_book_cart.js"></script>
     <script src="js/app_ready.js"></script>
     
@@ -115,7 +113,7 @@
             _app_factory_jquery_utils($scope);
 
             _app_factory_db($scope);
-            controller_name($scope);
+            db_profile($scope);
             _app_factory_book_cart($scope, $filter);
 
             
@@ -127,6 +125,5 @@
 
     <!-- cordova -->
     <script src="cordova.js"></script>
-    <script type="text/javascript" src="js/paypal-mobile-js-helper.js"></script>
 </body>
 </html>

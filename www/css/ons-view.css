@@ -108,3 +108,9 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
         display:none;
     }
 }   /* @media screen and (min-width: 400px) and (max-width: 700px) { */
+
+.ons-loading-placeholder img {
+    position:fixed;
+    top: calc(50% - 60px);
+    left: calc(50% - 60px);
+}

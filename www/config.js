@@ -8,8 +8,6 @@ var _app_factory_config = function ($scope) {
 
         // ------------------------------------
 
-        $scope.user_name = "John Doe";
-
         // ------------------------------------
 
         $scope.empty_todo_list = [
