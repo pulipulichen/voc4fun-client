@@ -21,7 +21,6 @@ var _app_ready = function ($scope) {
         }
         app.navi.replacePage(_navi_html, {animation: 'none'});
         
-        $scope.setup_profile();
     });
 
 };

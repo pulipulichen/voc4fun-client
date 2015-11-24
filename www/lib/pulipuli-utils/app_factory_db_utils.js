@@ -51,11 +51,11 @@ var _app_factory_db_utils = function ($scope) {
         },
         exec: function (_sql, _success_callback) {
             var _ = this;
-            //console.log(_sql);
+            console.log(_sql);
             this.db.transaction(function (_tx) {
                 _tx.executeSql(_sql, [], function (_tx, _results) {
                     if (typeof (_success_callback) === "function") {
-                        _success_callback(_results);
+                        _success_callback(_results.rows);
                     }
                 }, function (_tx, _error) {
                     _.error_handler(_tx, _error, _sql);
@@ -99,6 +99,8 @@ var _app_factory_db_utils = function ($scope) {
             var _sql = "SELECT id FROM " + _table 
                     + " WHERE " + _where_sql;
             $scope.DB.exec(_sql, function (_results) {
+                console.log("result");
+                console.log(_results);
                 if (_results.length > 0) {
                     var _id = _results[0].id;
                     $scope.DB.update(_table, _data, _where_sql, _success_callback);
@@ -131,8 +133,9 @@ var _app_factory_db_utils = function ($scope) {
             var _field_sql = "";
             var _value_sql = "";
             
+            //console.log(_data);
             for (var _field in _data) {
-                var _value = _data[_value];
+                var _value = _data[_field];
                 
                 if (_field_sql !== "") {
                     _field_sql = _field_sql + ",";
