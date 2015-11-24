@@ -66,7 +66,7 @@ var _app_factory_db_utils = function ($scope) {
                             }
                             _data.push(_d);
                         };
-                        _success_callback(_d);
+                        _success_callback(_data);
                     }
                 }, function (_tx, _error) {
                     _.error_handler(_tx, _error, _sql);

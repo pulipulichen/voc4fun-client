@@ -6,7 +6,7 @@ var _app_factory_jquery_utils = function ($scope) {
      * @param {String} _msg
      */
     $.console_log = function (_msg) {
-        console.log(_msg);
+        console.trace(_msg);
     };
 
     $.trigger_callback = function (_callback) {
@@ -70,10 +70,16 @@ var _app_factory_jquery_utils = function ($scope) {
     };
     
     $.escape_quotation = function (_str) {
+        if (typeof(_str) !== "string") {
+            return _str;
+        }
         return _str.replace(/\'/g, '%27');
     };
     
     $.unescape_quotation = function (_str) {
+        if (typeof(_str) !== "string") {
+            return _str;
+        }
         return _str.replace(/%27/g, "'");
     };
     
