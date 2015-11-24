@@ -1,0 +1,1 @@
+{"word_chinese":"由熱造成的","word_english":"thermal","test_options":["thermal","thrust","traitor"]}

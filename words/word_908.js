@@ -1,0 +1,1 @@
+{"word_chinese":"激烈的","word_english":"drastic","test_options":["drastic","eccentric","encouraging"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"限額","word_english":"quota","test_options":["quota","random","reel"]}

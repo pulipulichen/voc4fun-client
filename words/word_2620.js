@@ -1,0 +1,1 @@
+{"word_chinese":"配偶","word_english":"spouse","test_options":["spouse","stammer","strain"]}

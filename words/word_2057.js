@@ -1,0 +1,1 @@
+{"word_chinese":"謹防;預防措施","word_english":"precaution","test_options":["precaution","premiere","profile"]}

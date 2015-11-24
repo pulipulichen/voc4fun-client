@@ -1,0 +1,1 @@
+{"word_chinese":"漂白","word_english":"bleach","test_options":["bleach","bomber","brittle"]}

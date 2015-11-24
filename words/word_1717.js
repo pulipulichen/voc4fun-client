@@ -1,0 +1,1 @@
+{"word_chinese":"發動;使流通","word_english":"mobilize","test_options":["mobilize","morality","nationalist"]}

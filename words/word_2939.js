@@ -1,0 +1,1 @@
+{"word_chinese":"休戰，中止","word_english":"truce","test_options":["truce","ulcer","unnecessary"]}

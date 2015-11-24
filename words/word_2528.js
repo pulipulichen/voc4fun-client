@@ -1,0 +1,1 @@
+{"word_chinese":"靜坐罷工","word_english":"sit-down","test_options":["sit-down","slit","sophomore"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"漫遊，遊蕩","word_english":"roam","test_options":["roam","run-up","scroll"]}

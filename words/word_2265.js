@@ -1,0 +1,1 @@
+{"word_chinese":"駕馭","word_english":"rein","test_options":["rein","remnant","restrain"]}

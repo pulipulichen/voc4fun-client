@@ -1,0 +1,1 @@
+{"word_chinese":"可信的","word_english":"credible","test_options":["credible","crust","deduct"]}

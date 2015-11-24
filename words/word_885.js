@@ -1,0 +1,1 @@
+{"word_chinese":"使多樣化","word_english":"diversify","test_options":["diversify","dough","elicit"]}

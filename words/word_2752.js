@@ -1,0 +1,1 @@
+{"word_chinese":"吞，咽","word_english":"swallow","test_options":["swallow","tactic","terrain"]}

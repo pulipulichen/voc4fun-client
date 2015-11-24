@@ -1,0 +1,1 @@
+{"word_chinese":"定…的罪","word_english":"convict","test_options":["convict","correction","creek"]}

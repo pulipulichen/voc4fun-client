@@ -1,0 +1,1 @@
+{"word_chinese":"舊式的","word_english":"old-fashioned","test_options":["old-fashioned","ore","overwhelming"]}

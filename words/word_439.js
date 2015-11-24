@@ -1,0 +1,1 @@
+{"word_chinese":"以…為特性","word_english":"characterize","test_options":["characterize","chord","coincide"]}

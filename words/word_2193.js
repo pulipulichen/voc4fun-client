@@ -1,0 +1,1 @@
+{"word_chinese":"放射的;滿面春風的","word_english":"radiant","test_options":["radiant","rash","refrain"]}

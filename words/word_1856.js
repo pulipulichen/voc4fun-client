@@ -1,0 +1,1 @@
+{"word_chinese":"操作的","word_english":"operative","test_options":["operative","orientation","packing"]}

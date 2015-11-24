@@ -1,0 +1,1 @@
+{"word_chinese":"語調","word_english":"intonation","test_options":["intonation","irrelevant","lament"]}

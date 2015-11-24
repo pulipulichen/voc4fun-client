@@ -1,0 +1,1 @@
+{"word_chinese":"行政的","word_english":"Administrative","test_options":["Administrative","aesthetic","alter"]}

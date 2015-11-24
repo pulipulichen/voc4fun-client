@@ -1,0 +1,1 @@
+{"word_chinese":"局部的","word_english":"partially","test_options":["partially","pavement","petroleum"]}

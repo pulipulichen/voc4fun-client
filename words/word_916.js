@@ -1,0 +1,1 @@
+{"word_chinese":"二元的;雙的","word_english":"dual","test_options":["dual","eel","enforcement"]}

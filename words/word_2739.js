@@ -1,0 +1,1 @@
+{"word_chinese":"補足，附錄","word_english":"supplement","test_options":["supplement","syllabus","teller("]}

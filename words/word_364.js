@@ -1,0 +1,1 @@
+{"word_chinese":"裝配","word_english":"build-up","test_options":["build-up","calorie","Celsius"]}

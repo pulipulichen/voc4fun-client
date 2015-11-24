@@ -1,0 +1,1 @@
+{"word_chinese":"被誘惑的","word_english":"tempted","test_options":["tempted","textual","toady"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"(使)結盟;同盟者","word_english":"ally","test_options":["ally","anchor","array"]}

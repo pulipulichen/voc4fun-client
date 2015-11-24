@@ -1,0 +1,1 @@
+{"word_chinese":"抬高，擁護","word_english":"uphold","test_options":["uphold","validity","villager"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"光、熱、氣體等的)發出","word_english":"emission(","test_options":["emission(","ensue","evaporation"]}

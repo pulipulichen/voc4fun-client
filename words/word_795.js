@@ -1,0 +1,1 @@
+{"word_chinese":"命運，天數","word_english":"destiny","test_options":["destiny","diagnose","disintegrate"]}

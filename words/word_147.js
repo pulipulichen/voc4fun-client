@@ -1,0 +1,1 @@
+{"word_chinese":"器具","word_english":"apparatus","test_options":["apparatus","arms","authentic"]}

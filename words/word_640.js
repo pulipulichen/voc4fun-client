@@ -1,0 +1,1 @@
+{"word_chinese":"使人信服的","word_english":"convincing","test_options":["convincing","correspondent","crocodile"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"賠償","word_english":"amends","test_options":["amends","antibiotic","assault"]}

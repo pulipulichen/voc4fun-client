@@ -1,0 +1,1 @@
+{"word_chinese":"配給者；散佈者","word_english":"distributor","test_options":["distributor","doorstep","electorate"]}

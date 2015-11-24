@@ -1,0 +1,1 @@
+{"word_chinese":"監督","word_english":"supervise","test_options":["supervise","sway","tedious"]}

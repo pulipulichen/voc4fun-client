@@ -1,0 +1,1 @@
+{"word_chinese":"軍隊的)士氣；風紀","word_english":"morale(","test_options":["morale(","mule","nick"]}

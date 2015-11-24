@@ -1,0 +1,1 @@
+{"word_chinese":"使無能；使殘廢","word_english":"disable","test_options":["disable","disgraceful","dodge"]}

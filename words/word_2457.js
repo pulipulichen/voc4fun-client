@@ -1,0 +1,1 @@
+{"word_chinese":"準決賽","word_english":"semi-final","test_options":["semi-final","sermon","sideways"]}

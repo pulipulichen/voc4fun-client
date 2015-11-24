@@ -1,0 +1,1 @@
+{"word_chinese":"動量;勢頭；要素","word_english":"momentum","test_options":["momentum","motorway","negligible"]}

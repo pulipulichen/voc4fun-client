@@ -1,0 +1,1 @@
+{"word_chinese":"敵意","word_english":"hostility","test_options":["hostility","ideological","indicator"]}

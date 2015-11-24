@@ -1,0 +1,1 @@
+{"word_chinese":"膚色","word_english":"complexion","test_options":["complexion","concentrated","constraint"]}

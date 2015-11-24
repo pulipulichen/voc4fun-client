@@ -1,0 +1,1 @@
+{"word_chinese":"坦白地","word_english":"frankly","test_options":["frankly","fuse","good-looking"]}

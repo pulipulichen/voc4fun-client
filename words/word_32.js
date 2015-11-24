@@ -1,0 +1,1 @@
+{"word_chinese":"承認","word_english":"acknowledge","test_options":["acknowledge","Administrative","airway"]}

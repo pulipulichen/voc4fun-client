@@ -1,0 +1,1 @@
+{"word_chinese":"精神錯亂的","word_english":"insane","test_options":["insane","intact","irony"]}

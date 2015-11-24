@@ -1,0 +1,1 @@
+{"word_chinese":"迷信","word_english":"superstition","test_options":["superstition","swap","teamwork"]}

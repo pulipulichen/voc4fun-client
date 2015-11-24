@@ -1,0 +1,1 @@
+{"word_chinese":"富於表情的","word_english":"expressive","test_options":["expressive","faction","fixed"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"座談會，學術報告會","word_english":"symposium","test_options":["symposium","tar","textile"]}

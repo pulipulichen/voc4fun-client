@@ -1,0 +1,1 @@
+{"word_chinese":"盛裝的","word_english":"dressed","test_options":["dressed","ecstasy","endorse"]}

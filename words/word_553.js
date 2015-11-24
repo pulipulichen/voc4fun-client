@@ -1,0 +1,1 @@
+{"word_chinese":"有理解力的","word_english":"comprehensive","test_options":["comprehensive","condense","contemplate"]}

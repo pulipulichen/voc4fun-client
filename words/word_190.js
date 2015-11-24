@@ -1,0 +1,1 @@
+{"word_chinese":"天文學","word_english":"astronomy","test_options":["astronomy","auto","batch"]}

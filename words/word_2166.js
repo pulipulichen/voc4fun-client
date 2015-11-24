@@ -1,0 +1,1 @@
+{"word_chinese":"【高爾夫球】把(球)輕輕打進洞裏","word_english":"putt","test_options":["putt","questionnaire","reassure"]}

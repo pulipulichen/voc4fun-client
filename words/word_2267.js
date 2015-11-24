@@ -1,0 +1,1 @@
+{"word_chinese":"拒斥","word_english":"rejection","test_options":["rejection","renaissance","restraint"]}

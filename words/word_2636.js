@@ -1,0 +1,1 @@
+{"word_chinese":"腐敗了的","word_english":"stale","test_options":["stale","statistical","stump"]}

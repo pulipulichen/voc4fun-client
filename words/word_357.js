@@ -1,0 +1,1 @@
+{"word_chinese":"兄弟情誼","word_english":"brotherhood","test_options":["brotherhood","byte","ceasefire"]}

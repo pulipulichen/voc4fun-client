@@ -1,0 +1,1 @@
+{"word_chinese":"美味的","word_english":"tasteful","test_options":["tasteful","tentative","thrive"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"倉促;輕率","word_english":"haste","test_options":["haste","heighten","hostility"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"勞累","word_english":"fatigue","test_options":["fatigue","finding","forsake"]}

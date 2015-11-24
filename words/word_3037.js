@@ -1,0 +1,1 @@
+{"word_chinese":"空虛；無用；虛榮","word_english":"vanity","test_options":["vanity","veteran","vow"]}

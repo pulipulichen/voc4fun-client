@@ -1,0 +1,1 @@
+{"word_chinese":"登記住房","word_english":"check-in","test_options":["check-in","clam","colonel"]}

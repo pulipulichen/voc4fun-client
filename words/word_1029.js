@@ -1,0 +1,1 @@
+{"word_chinese":"優於，超過","word_english":"excel","test_options":["excel","experienced","fearful"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"範圍","word_english":"coverage","test_options":["coverage","crocodile","deadly"]}

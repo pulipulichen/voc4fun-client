@@ -1,0 +1,1 @@
+{"word_chinese":"指定，委派","word_english":"assignmen","test_options":["assignmen","attic","barometer"]}

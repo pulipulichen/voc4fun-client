@@ -1,0 +1,1 @@
+{"word_chinese":"使迅速上升；發出嗡嗡聲；放大","word_english":"zoom","test_options":["zoom","wrench","warrior"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"平凡的；陳腐的","word_english":"commonplace","test_options":["commonplace","competence","confusing"]}

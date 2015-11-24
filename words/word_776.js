@@ -1,0 +1,1 @@
+{"word_chinese":"否認","word_english":"denial","test_options":["denial","destiny","disagreement"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"使恢復原狀","word_english":"undo","test_options":["undo","unpopular","veil"]}

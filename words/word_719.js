@@ -1,0 +1,1 @@
+{"word_chinese":"累積的","word_english":"cumulative","test_options":["cumulative","dazzle","denounce"]}

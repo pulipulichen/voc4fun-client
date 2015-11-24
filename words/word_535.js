@@ -1,0 +1,1 @@
+{"word_chinese":"富於同情心的","word_english":"compassionate","test_options":["compassionate","compress","consolation"]}

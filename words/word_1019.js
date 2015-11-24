@@ -1,0 +1,1 @@
+{"word_chinese":"使蒸發","word_english":"evaporate","test_options":["evaporate","exemplify","faithfully"]}

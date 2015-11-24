@@ -1,0 +1,1 @@
+{"word_chinese":"戲院的，戲劇性的","word_english":"theatrical","test_options":["theatrical","thriller","tractor"]}

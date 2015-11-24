@@ -1,0 +1,1 @@
+{"word_chinese":"發射;釋放；解除","word_english":"discharge","test_options":["discharge","dispatch","doom"]}

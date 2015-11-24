@@ -1,0 +1,1 @@
+{"word_chinese":"激怒","word_english":"irritate","test_options":["irritate","judiciary","lesbian"]}

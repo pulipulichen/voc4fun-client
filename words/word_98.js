@@ -1,0 +1,1 @@
+{"word_chinese":"斷言","word_english":"allege","test_options":["allege","amendment","arbitrary"]}

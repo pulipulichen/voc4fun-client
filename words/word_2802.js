@@ -1,0 +1,1 @@
+{"word_chinese":"誘惑","word_english":"tempt","test_options":["tempt","testimony","tint"]}

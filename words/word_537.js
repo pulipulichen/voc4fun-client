@@ -1,0 +1,1 @@
+{"word_chinese":"強迫","word_english":"compel","test_options":["compel","compromise","consolidate"]}

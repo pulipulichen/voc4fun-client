@@ -1,0 +1,1 @@
+{"word_chinese":"雙邊的","word_english":"bilateral","test_options":["bilateral","blonde","brassiere"]}

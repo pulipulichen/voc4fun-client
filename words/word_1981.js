@@ -1,0 +1,1 @@
+{"word_chinese":"持之以恆","word_english":"persevere","test_options":["persevere","pickle","ponder"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"拷問，折磨","word_english":"torture","test_options":["torture","transaction","trot"]}

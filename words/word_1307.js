@@ -1,0 +1,1 @@
+{"word_chinese":"海洛因","word_english":"heroin","test_options":["heroin","hood(","impair"]}

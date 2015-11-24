@@ -1,0 +1,1 @@
+{"word_chinese":"虛弱的","word_english":"feeble","test_options":["feeble","fiscal","foster"]}

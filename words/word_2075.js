@@ -1,0 +1,1 @@
+{"word_chinese":"總理;首要的","word_english":"premier","test_options":["premier","prevalent","proposition"]}

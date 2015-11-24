@@ -1,0 +1,1 @@
+{"word_chinese":"因情況而異的","word_english":"contingent","test_options":["contingent","convinced","courtyard"]}

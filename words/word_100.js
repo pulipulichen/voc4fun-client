@@ -1,0 +1,1 @@
+{"word_chinese":"過敏的","word_english":"allergic","test_options":["allergic","amiable","archaeology"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"冗餘，過剩","word_english":"redundancy","test_options":["redundancy","regulator","repression"]}

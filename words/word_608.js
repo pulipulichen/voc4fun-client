@@ -1,0 +1,1 @@
+{"word_chinese":"消費","word_english":"consumption","test_options":["consumption","contrive","costing"]}

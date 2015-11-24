@@ -1,0 +1,1 @@
+{"word_chinese":"勝利的","word_english":"victorious","test_options":["victorious","vogue","whereas"]}

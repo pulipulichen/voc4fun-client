@@ -1,0 +1,1 @@
+{"word_chinese":"輕快的;(天氣)清新的","word_english":"brisk","test_options":["brisk","buffer","carton"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"避難所;港口","word_english":"haven","test_options":["haven","herald","humanitarian"]}

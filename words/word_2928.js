@@ -1,0 +1,1 @@
+{"word_chinese":"整齊的，修剪","word_english":"trim","test_options":["trim","tuna","unemployed"]}

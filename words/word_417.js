@@ -1,0 +1,1 @@
+{"word_chinese":"有名的","word_english":"celebrated","test_options":["celebrated","chaos","clearing("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"上校","word_english":"colonel","test_options":["colonel","communism","conception"]}

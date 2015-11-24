@@ -1,0 +1,1 @@
+{"word_chinese":"交戰的","word_english":"warring","test_options":["warring","whereabouts","yearn"]}

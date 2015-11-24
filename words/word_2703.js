@@ -1,0 +1,1 @@
+{"word_chinese":"潛水艇，潛水艇","word_english":"sub ","test_options":["sub ","successive","symmetry"]}

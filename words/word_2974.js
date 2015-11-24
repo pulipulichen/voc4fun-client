@@ -1,0 +1,1 @@
+{"word_chinese":"經驗，經歷","word_english":"undergo","test_options":["undergo","unification","valiant"]}

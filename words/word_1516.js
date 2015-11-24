@@ -1,0 +1,1 @@
+{"word_chinese":"大壺","word_english":"jug","test_options":["jug","lasting","likewise"]}

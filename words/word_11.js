@@ -1,0 +1,1 @@
+{"word_chinese":"大量;充滿(v.)","word_english":"abound","test_options":["abound","accustom","aesthetic"]}

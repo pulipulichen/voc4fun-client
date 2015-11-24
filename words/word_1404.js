@@ -1,0 +1,1 @@
+{"word_chinese":"工業化的","word_english":"industrialized","test_options":["industrialized","injustice","interim"]}

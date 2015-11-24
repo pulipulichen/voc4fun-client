@@ -1,0 +1,1 @@
+{"word_chinese":"美學的","word_english":"aesthetic","test_options":["aesthetic","airlift","angler"]}

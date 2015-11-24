@@ -1,0 +1,1 @@
+{"word_chinese":"義務;易於…的傾向","word_english":"liability","test_options":["liability","line-up","lump"]}

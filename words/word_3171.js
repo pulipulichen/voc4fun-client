@@ -1,0 +1,1 @@
+{"word_chinese":"產生；讓渡；讓步","word_english":"yield","test_options":["yield","workforce","wallpaper"]}

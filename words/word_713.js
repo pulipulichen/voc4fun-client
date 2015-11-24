@@ -1,0 +1,1 @@
+{"word_chinese":"地殼","word_english":"crust","test_options":["crust","damned","deliberate"]}

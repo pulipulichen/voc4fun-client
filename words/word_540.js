@@ -1,0 +1,1 @@
+{"word_chinese":"賠償金","word_english":"compensation","test_options":["compensation","computing","conspiracy"]}

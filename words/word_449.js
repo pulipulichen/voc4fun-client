@@ -1,0 +1,1 @@
+{"word_chinese":"檢查","word_english":"check-up","test_options":["check-up","clamp","colonial"]}

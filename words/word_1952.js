@@ -1,0 +1,1 @@
+{"word_chinese":"維持和平的","word_english":"peacekeeping","test_options":["peacekeeping","perfect","pious"]}

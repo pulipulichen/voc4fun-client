@@ -1,0 +1,1 @@
+{"word_chinese":"無法預言的","word_english":"unpredictable","test_options":["unpredictable","usher","vicar"]}

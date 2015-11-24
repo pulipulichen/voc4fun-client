@@ -1,0 +1,1 @@
+{"word_chinese":"挑剔","word_english":"carp","test_options":["carp","celery","chronic"]}

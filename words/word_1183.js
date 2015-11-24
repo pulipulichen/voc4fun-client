@@ -1,0 +1,1 @@
+{"word_chinese":"聚變","word_english":"fusion","test_options":["fusion","geometry","groan"]}

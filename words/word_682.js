@@ -1,0 +1,1 @@
+{"word_chinese":"妄想(別人東西)","word_english":"covet","test_options":["covet","crooked","dealer"]}

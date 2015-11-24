@@ -1,0 +1,1 @@
+{"word_chinese":"預期","word_english":"anticipation","test_options":["anticipation","archaeology","attendant"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"垂直的","word_english":"vertical","test_options":["vertical","villager","watt"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"立法的","word_english":"legislative","test_options":["legislative","lifeguard","long-time"]}

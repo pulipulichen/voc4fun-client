@@ -1,0 +1,1 @@
+{"word_chinese":"分散(注意力等)","word_english":"distract","test_options":["distract","donation","ego"]}

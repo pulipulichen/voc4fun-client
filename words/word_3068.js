@@ -1,0 +1,1 @@
+{"word_chinese":"使犧牲[受損害]","word_english":"victimize","test_options":["victimize","vocation","wheelchair"]}

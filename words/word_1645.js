@@ -1,0 +1,1 @@
+{"word_chinese":"手寫的;抄本","word_english":"manuscript","test_options":["manuscript","mattress(","minimal"]}

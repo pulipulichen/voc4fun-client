@@ -1,0 +1,1 @@
+{"word_chinese":"脫離","word_english":"detach","test_options":["detach","diagnosis","dismantle"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"黎明，拂曉","word_english":"daybreak","test_options":["daybreak","deem","destiny"]}

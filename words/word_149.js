@@ -1,0 +1,1 @@
+{"word_chinese":"可適用的","word_english":"applicable","test_options":["applicable","arrogant","authorize"]}

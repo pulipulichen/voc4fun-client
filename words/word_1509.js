@@ -1,0 +1,1 @@
+{"word_chinese":"叮噹聲","word_english":"jingle","test_options":["jingle","knuckle","lifeboat"]}

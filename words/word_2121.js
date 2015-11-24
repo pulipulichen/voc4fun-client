@@ -1,0 +1,1 @@
+{"word_chinese":"激增；擴散","word_english":"proliferate","test_options":["proliferate","prospective","quartz"]}

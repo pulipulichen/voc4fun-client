@@ -1,0 +1,1 @@
+{"word_chinese":"令人滿意的","word_english":"satisfying","test_options":["satisfying","scrutiny","seriously"]}

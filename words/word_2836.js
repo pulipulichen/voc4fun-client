@@ -1,0 +1,1 @@
+{"word_chinese":"厚；濃","word_english":"thickness","test_options":["thickness","timeless","tranquilizer"]}

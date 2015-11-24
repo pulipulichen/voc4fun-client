@@ -1,0 +1,1 @@
+{"word_chinese":"帽)掛;木樁","word_english":"peg(","test_options":["peg(","perpetual","plaster"]}

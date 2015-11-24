@@ -1,0 +1,1 @@
+{"word_chinese":"單獨表演","word_english":"solo","test_options":["solo","specify","standpoint"]}

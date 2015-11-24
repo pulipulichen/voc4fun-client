@@ -1,0 +1,1 @@
+{"word_chinese":"訂閱(n.)","word_english":"subscription","test_options":["subscription","sunshine","taco ("]}

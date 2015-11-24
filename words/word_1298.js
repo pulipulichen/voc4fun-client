@@ -1,0 +1,1 @@
+{"word_chinese":"無依無靠的","word_english":"helpless","test_options":["helpless","hockey","idiot"]}

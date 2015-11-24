@@ -1,0 +1,1 @@
+{"word_chinese":"棍；使固著","word_english":"stick","test_options":["stick","stride","sulfur"]}

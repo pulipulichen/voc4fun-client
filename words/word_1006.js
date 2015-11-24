@@ -1,0 +1,1 @@
+{"word_chinese":"本質","word_english":"essence","test_options":["essence","exaggeration","extravagant"]}

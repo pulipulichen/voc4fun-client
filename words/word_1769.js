@@ -1,0 +1,1 @@
+{"word_chinese":"嫌言怨語；嘮叨","word_english":"nag","test_options":["nag","neutral","obedience"]}

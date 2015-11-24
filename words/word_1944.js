@@ -1,0 +1,1 @@
+{"word_chinese":"補釘","word_english":"patch","test_options":["patch","peninsula","picturesque"]}

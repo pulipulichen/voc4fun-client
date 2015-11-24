@@ -1,0 +1,1 @@
+{"word_chinese":"景色;前途；遠見","word_english":"prospect","test_options":["prospect","puff","radius"]}

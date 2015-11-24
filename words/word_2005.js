@@ -1,0 +1,1 @@
+{"word_chinese":"刺穿","word_english":"pierce","test_options":["pierce","plead","preclude"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"各自的","word_english":"respective","test_options":["respective","retrospection","rotate"]}

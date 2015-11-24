@@ -1,0 +1,1 @@
+{"word_chinese":"妨礙","word_english":"hamper","test_options":["hamper","head-on","hood("]}

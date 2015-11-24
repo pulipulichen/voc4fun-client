@@ -1,0 +1,1 @@
+{"word_chinese":"手槍","word_english":"pistol","test_options":["pistol","poetic","preliminary"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"卡(路里)","word_english":"calorie","test_options":["calorie","cartel","charitable"]}

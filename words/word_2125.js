@@ -1,0 +1,1 @@
+{"word_chinese":"有…傾向的","word_english":"prone","test_options":["prone","provided","quest"]}

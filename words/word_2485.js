@@ -1,0 +1,1 @@
+{"word_chinese":"襤褸的；破舊的","word_english":"shabby","test_options":["shabby","short-term","sled"]}

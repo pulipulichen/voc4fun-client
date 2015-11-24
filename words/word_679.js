@@ -1,0 +1,1 @@
+{"word_chinese":"庭院","word_english":"courtyard","test_options":["courtyard","criterion(","dazzle"]}

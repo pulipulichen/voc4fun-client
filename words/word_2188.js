@@ -1,0 +1,1 @@
+{"word_chinese":"引用;時價","word_english":"quotation","test_options":["quotation","ranking","referee"]}

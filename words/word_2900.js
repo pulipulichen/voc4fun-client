@@ -1,0 +1,1 @@
+{"word_chinese":"謄本，抄本","word_english":"transcript","test_options":["transcript","tremor","ultimate"]}

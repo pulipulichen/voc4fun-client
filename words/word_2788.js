@@ -1,0 +1,1 @@
+{"word_chinese":"辱?，嘲弄","word_english":"taunt","test_options":["taunt","termination","throne"]}

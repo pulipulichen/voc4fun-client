@@ -1,0 +1,1 @@
+{"word_chinese":"伺候；(食物的)一份","word_english":"serving","test_options":["serving","shipment","slam"]}

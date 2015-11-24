@@ -1,0 +1,1 @@
+{"word_chinese":"頭皮屑","word_english":"dandruff","test_options":["dandruff","deduce","desirable"]}

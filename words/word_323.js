@@ -1,0 +1,1 @@
+{"word_chinese":"投球手","word_english":"bowler","test_options":["bowler","brigade","calligraphy"]}

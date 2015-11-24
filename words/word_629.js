@@ -1,0 +1,1 @@
+{"word_chinese":"有)爭論的","word_english":"controversial(","test_options":["controversial(","cordially","crap"]}

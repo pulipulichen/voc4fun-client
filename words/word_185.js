@@ -1,0 +1,1 @@
+{"word_chinese":"假設","word_english":"assumption","test_options":["assumption","audit","bash"]}

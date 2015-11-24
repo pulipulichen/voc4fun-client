@@ -1,0 +1,1 @@
+{"word_chinese":"符號的；象徵的","word_english":"symbolic","test_options":["symbolic","tan","tertiary"]}

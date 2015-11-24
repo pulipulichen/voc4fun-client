@@ -1,0 +1,1 @@
+{"word_chinese":"移居外國(n.)","word_english":"emigration","test_options":["emigration","enrich","evaporate"]}

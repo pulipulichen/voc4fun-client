@@ -1,0 +1,1 @@
+{"word_chinese":"呻吟","word_english":"moan","test_options":["moan","morale(","nationalism"]}

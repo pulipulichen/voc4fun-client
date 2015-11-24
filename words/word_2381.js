@@ -1,0 +1,1 @@
+{"word_chinese":"旋轉","word_english":"rotate","test_options":["rotate","safari (","seasonal"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"壞蛋;無賴的","word_english":"rascal","test_options":["rascal","reckless","relaxed"]}

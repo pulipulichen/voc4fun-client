@@ -1,0 +1,1 @@
+{"word_chinese":"視覺的;光學的","word_english":"optical","test_options":["optical","ornament","pail"]}

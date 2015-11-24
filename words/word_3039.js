@@ -1,0 +1,1 @@
+{"word_chinese":"變化","word_english":"variation","test_options":["variation","veto","vulnerable"]}

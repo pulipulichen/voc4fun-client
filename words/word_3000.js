@@ -1,0 +1,1 @@
+{"word_chinese":"打開(包裹等)","word_english":"unpack","test_options":["unpack","up-to-date","via"]}

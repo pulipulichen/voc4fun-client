@@ -1,0 +1,1 @@
+{"word_chinese":"外交(上)的","word_english":"diplomatic","test_options":["diplomatic","discrete","divert"]}

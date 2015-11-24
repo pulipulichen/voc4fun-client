@@ -1,0 +1,1 @@
+{"word_chinese":"持續性","word_english":"persistence","test_options":["persistence","pickpocket","pope"]}

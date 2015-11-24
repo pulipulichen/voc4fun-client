@@ -1,0 +1,1 @@
+{"word_chinese":"縫製得講究的","word_english":"tailor-made","test_options":["tailor-made","team-mate","thesaurus"]}

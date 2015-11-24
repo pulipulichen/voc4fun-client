@@ -1,0 +1,1 @@
+{"word_chinese":"可以忽視的","word_english":"negligible","test_options":["negligible","nominee","odds"]}

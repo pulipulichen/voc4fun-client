@@ -1,0 +1,1 @@
+{"word_chinese":"有能力的","word_english":"competent","test_options":["competent","con","constituency"]}

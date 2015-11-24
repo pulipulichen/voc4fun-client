@@ -1,0 +1,1 @@
+{"word_chinese":"橄欖","word_english":"olive","test_options":["olive","organism","overwork"]}

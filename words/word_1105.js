@@ -1,0 +1,1 @@
+{"word_chinese":"發現的東西","word_english":"finding","test_options":["finding","fling","frantic"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"消費的","word_english":"consuming","test_options":["consuming","contributor","cosmopolitan"]}

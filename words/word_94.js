@@ -1,0 +1,1 @@
+{"word_chinese":"代數學","word_english":"algebra","test_options":["algebra","ambiguity","apprentice"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"分離；隔開(n.)","word_english":"segregation","test_options":["segregation","serenity","shuffle"]}

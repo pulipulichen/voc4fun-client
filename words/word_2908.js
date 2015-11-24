@@ -1,0 +1,1 @@
+{"word_chinese":"傳送，寄，送","word_english":"transmit","test_options":["transmit","trillion","uncertainty"]}

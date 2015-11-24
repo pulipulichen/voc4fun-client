@@ -1,0 +1,1 @@
+{"word_chinese":"道德","word_english":"morality","test_options":["morality","multinational","nickel"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"不舒適的","word_english":"uncomfortable","test_options":["uncomfortable","unfair","utterly"]}

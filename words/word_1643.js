@@ -1,0 +1,1 @@
+{"word_chinese":"明白的;表明","word_english":"manifest","test_options":["manifest","mastery","mingle"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"緊張的；勉強的","word_english":"strained","test_options":["strained","sturdy","supplement"]}

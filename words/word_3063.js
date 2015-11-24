@@ -1,0 +1,1 @@
+{"word_chinese":"教區牧師","word_english":"vicar","test_options":["vicar","visa","weird"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"專門名詞","word_english":"terminology","test_options":["terminology","therapist","token"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"主觀的","word_english":"subjective","test_options":["subjective","successor","symposium"]}

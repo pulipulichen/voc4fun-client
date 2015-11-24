@@ -1,0 +1,1 @@
+{"word_chinese":"直徑","word_english":"diameter","test_options":["diameter","disastrous","distort"]}

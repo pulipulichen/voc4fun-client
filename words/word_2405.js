@@ -1,0 +1,1 @@
+{"word_chinese":"旅館、輪船等的)大廳，客廳","word_english":"saloon(","test_options":["saloon(","scenario","sentiment"]}

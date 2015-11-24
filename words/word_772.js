@@ -1,0 +1,1 @@
+{"word_chinese":"考慮;思考","word_english":"deliberate","test_options":["deliberate","designate","directly"]}

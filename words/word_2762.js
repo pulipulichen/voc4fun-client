@@ -1,0 +1,1 @@
+{"word_chinese":"對稱","word_english":"symmetry","test_options":["symmetry","tanker","testimony"]}

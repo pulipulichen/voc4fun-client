@@ -1,0 +1,1 @@
+{"word_chinese":"省的","word_english":"provincial","test_options":["provincial","purity","rally"]}

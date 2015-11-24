@@ -1,0 +1,1 @@
+{"word_chinese":"鴕鳥","word_english":"ostrich","test_options":["ostrich","overhear","pastime"]}

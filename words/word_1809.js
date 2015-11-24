@@ -1,0 +1,1 @@
+{"word_chinese":"記號","word_english":"notation","test_options":["notation","obedience","ore"]}

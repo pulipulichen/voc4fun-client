@@ -1,0 +1,1 @@
+{"word_chinese":"宣佈","word_english":"proclaim","test_options":["proclaim","propel","qualifier"]}

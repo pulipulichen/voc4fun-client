@@ -1,0 +1,1 @@
+{"word_chinese":"惡運","word_english":"doom","test_options":["doom","dub","emergence"]}

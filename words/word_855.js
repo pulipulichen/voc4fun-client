@@ -1,0 +1,1 @@
+{"word_chinese":"拆除…的設備","word_english":"dismantle","test_options":["dismantle","distil","driveway"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"不安全的，不牢靠的","word_english":"insecure","test_options":["insecure","integral","irresistible"]}

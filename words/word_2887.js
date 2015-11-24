@@ -1,0 +1,1 @@
+{"word_chinese":"受訓練的人[動物]","word_english":"trainee","test_options":["trainee","transition","tumor"]}

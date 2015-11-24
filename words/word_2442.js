@@ -1,0 +1,1 @@
+{"word_chinese":"調味品","word_english":"seasoning","test_options":["seasoning","sensation","shocking"]}

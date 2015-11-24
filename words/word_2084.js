@@ -1,0 +1,1 @@
+{"word_chinese":"主持","word_english":"preside","test_options":["preside","privatize","prototype"]}

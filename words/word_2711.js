@@ -1,0 +1,1 @@
+{"word_chinese":"其後的","word_english":"subsequent","test_options":["subsequent","superficial","tact"]}

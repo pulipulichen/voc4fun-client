@@ -1,0 +1,1 @@
+{"word_chinese":"氣喘(病)","word_english":"asthma","test_options":["asthma","authentic","basic"]}

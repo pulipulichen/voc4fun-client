@@ -1,0 +1,1 @@
+{"word_chinese":"探戈","word_english":"tango ","test_options":["tango ","temperament","thorny"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"粗壯的","word_english":"robust","test_options":["robust","rustle","sculptor"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"花費","word_english":"expend","test_options":["expend","extravagant","finding"]}

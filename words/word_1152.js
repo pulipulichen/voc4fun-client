@@ -1,0 +1,1 @@
+{"word_chinese":"有惡臭的;令人作嘔的","word_english":"foul","test_options":["foul","front-page","glassware"]}

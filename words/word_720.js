@@ -1,0 +1,1 @@
+{"word_chinese":"限制;路邊攔石","word_english":"curb","test_options":["curb","deadly","density"]}

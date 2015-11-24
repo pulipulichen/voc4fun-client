@@ -1,0 +1,1 @@
+{"word_chinese":"畏懼","word_english":"awe","test_options":["awe","barbershop","birdie"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"挑戰書","word_english":"cartel","test_options":["cartel","cello","chuckle"]}

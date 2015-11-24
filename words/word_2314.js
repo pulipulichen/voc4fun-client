@@ -1,0 +1,1 @@
+{"word_chinese":"已辭職的，認命的","word_english":"resigned","test_options":["resigned","retaliate(","rivalry"]}

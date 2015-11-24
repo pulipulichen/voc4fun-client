@@ -1,0 +1,1 @@
+{"word_chinese":"味美的;繁榮的","word_english":"lush","test_options":["lush","manipulate","mermaid"]}

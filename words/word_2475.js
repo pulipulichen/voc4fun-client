@@ -1,0 +1,1 @@
+{"word_chinese":"嚴肅；認真；嚴重","word_english":"seriously","test_options":["seriously","sherry","skipper("]}

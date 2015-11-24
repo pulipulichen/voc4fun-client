@@ -1,0 +1,1 @@
+{"word_chinese":"飲料","word_english":"beverage","test_options":["beverage","bleach","boyhood"]}

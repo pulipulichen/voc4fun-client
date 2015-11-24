@@ -1,0 +1,1 @@
+{"word_chinese":"見解;觀點","word_english":"notion","test_options":["notion","obligatory","Orient"]}

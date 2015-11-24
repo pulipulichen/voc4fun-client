@@ -1,0 +1,1 @@
+{"word_chinese":"拂，掃，攪拌(蛋等)","word_english":"whisk","test_options":["whisk","workman","well-being"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"暴風雨，騷動","word_english":"tempest","test_options":["tempest","testament","timing"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"有聲譽的","word_english":"prestigious","test_options":["prestigious","probe","provisional"]}

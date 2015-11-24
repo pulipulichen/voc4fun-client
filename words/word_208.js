@@ -1,0 +1,1 @@
+{"word_chinese":"授權","word_english":"authorize","test_options":["authorize","baffle","beverage"]}

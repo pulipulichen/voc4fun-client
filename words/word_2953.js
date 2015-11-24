@@ -1,0 +1,1 @@
+{"word_chinese":"薄暮，黃昏；微明","word_english":"twilight","test_options":["twilight","uncover","upbringing"]}

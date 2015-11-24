@@ -1,0 +1,1 @@
+{"word_chinese":"接近","word_english":"proximity","test_options":["proximity","qualifier","rape"]}

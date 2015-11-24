@@ -1,0 +1,1 @@
+{"word_chinese":"神龕","word_english":"shrine","test_options":["shrine","sit-down","sober"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"應付，處理","word_english":"tackle","test_options":["tackle","tasteless","therapist"]}

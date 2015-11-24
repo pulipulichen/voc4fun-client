@@ -1,0 +1,1 @@
+{"word_chinese":"英勇的","word_english":"heroic","test_options":["heroic","honorary","immune"]}

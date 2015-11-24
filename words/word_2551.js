@@ -1,0 +1,1 @@
+{"word_chinese":"沼地；(精神等的)消沈","word_english":"slump","test_options":["slump","socialism","spike"]}

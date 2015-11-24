@@ -1,0 +1,1 @@
+{"word_chinese":"民間傳說","word_english":"folklore","test_options":["folklore","fraction","generalize"]}

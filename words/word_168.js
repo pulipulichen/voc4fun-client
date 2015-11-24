@@ -1,0 +1,1 @@
+{"word_chinese":"自大的","word_english":"arrogant","test_options":["arrogant","asthma","baffle"]}

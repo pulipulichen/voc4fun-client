@@ -1,0 +1,1 @@
+{"word_chinese":"倫理的，道德的","word_english":"ethical","test_options":["ethical","excessive","facet("]}

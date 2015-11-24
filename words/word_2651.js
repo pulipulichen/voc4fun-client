@@ -1,0 +1,1 @@
+{"word_chinese":"政治家","word_english":"statesman","test_options":["statesman","stimulating","subscription"]}

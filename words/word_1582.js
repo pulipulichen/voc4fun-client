@@ -1,0 +1,1 @@
+{"word_chinese":"逗留；徘徊","word_english":"linger","test_options":["linger","lofty","mandate"]}

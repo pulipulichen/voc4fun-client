@@ -1,0 +1,1 @@
+{"word_chinese":"中世紀的","word_english":"medieval","test_options":["medieval","migrant","monotony"]}

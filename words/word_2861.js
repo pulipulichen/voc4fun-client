@@ -1,0 +1,1 @@
+{"word_chinese":"色調，色澤","word_english":"tint","test_options":["tint","tournament","trench"]}

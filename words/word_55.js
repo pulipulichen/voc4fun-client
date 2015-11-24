@@ -1,0 +1,1 @@
+{"word_chinese":"青少年","word_english":"adolescent","test_options":["adolescent","affirm","ambiguous"]}

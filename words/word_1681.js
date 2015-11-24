@@ -1,0 +1,1 @@
+{"word_chinese":"單；只；純粹；全然","word_english":"merely","test_options":["merely","millionaire","moss"]}

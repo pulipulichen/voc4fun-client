@@ -1,0 +1,1 @@
+{"word_chinese":"極度的","word_english":"exceedingly","test_options":["exceedingly","expenditure","fatty"]}

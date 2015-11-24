@@ -1,0 +1,1 @@
+{"word_chinese":"首演","word_english":"premiere","test_options":["premiere","preventive","prose"]}

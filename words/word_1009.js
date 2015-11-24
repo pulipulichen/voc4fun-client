@@ -1,0 +1,1 @@
+{"word_chinese":"尊敬","word_english":"esteem","test_options":["esteem","exceedingly","eyelid"]}

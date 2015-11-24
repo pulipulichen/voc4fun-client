@@ -1,0 +1,1 @@
+{"word_chinese":"雜貨商","word_english":"grocer","test_options":["grocer","hacker","herb"]}

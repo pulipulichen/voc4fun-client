@@ -1,0 +1,1 @@
+{"word_chinese":"關於)聲音的","word_english":"vocal(","test_options":["vocal(","wardrobe","withdrawal"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"債權人","word_english":"creditor","test_options":["creditor","cube","deduction"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"簡明扼要的","word_english":"concise","test_options":["concise","consecutive","controller"]}

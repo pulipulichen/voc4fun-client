@@ -1,0 +1,1 @@
+{"word_chinese":"抗生的","word_english":"antibiotic","test_options":["antibiotic","aptitude","attain"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"平衡的","word_english":"balanced","test_options":["balanced","bastard","blizzard"]}

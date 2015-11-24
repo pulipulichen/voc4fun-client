@@ -1,0 +1,1 @@
+{"word_chinese":"貢獻者","word_english":"contributor","test_options":["contributor","copyright","crackdown"]}

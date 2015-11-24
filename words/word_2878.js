@@ -1,0 +1,1 @@
+{"word_chinese":"令人感動的","word_english":"touching","test_options":["touching","transcend","troubled"]}

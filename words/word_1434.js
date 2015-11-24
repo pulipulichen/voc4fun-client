@@ -1,0 +1,1 @@
+{"word_chinese":"知內情的人","word_english":"insider","test_options":["insider","integrate","irrespective"]}

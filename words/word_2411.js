@@ -1,0 +1,1 @@
+{"word_chinese":"涼鞋","word_english":"sandal","test_options":["sandal","scrap","sequence"]}

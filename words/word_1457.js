@@ -1,0 +1,1 @@
+{"word_chinese":"可以理解的","word_english":"intelligible","test_options":["intelligible","intrinsic","jug"]}

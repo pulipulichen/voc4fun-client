@@ -1,0 +1,1 @@
+{"word_chinese":"縫；接合線","word_english":"seam","test_options":["seam","semi-final","shining"]}

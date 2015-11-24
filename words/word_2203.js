@@ -1,0 +1,1 @@
+{"word_chinese":"軌道","word_english":"rail","test_options":["rail","realization","regulator"]}

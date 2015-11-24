@@ -1,0 +1,1 @@
+{"word_chinese":"快樂的;令人開心的","word_english":"joyous","test_options":["joyous","landing","lighting"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"被提名者","word_english":"nominee","test_options":["nominee","nurture","optimism"]}

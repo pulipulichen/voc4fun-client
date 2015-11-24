@@ -1,0 +1,1 @@
+{"word_chinese":"應允","word_english":"comply","test_options":["comply","concession","consumption"]}

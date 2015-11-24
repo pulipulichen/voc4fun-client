@@ -1,0 +1,1 @@
+{"word_chinese":"石英，水晶","word_english":"quartz","test_options":["quartz","raft","recruit"]}

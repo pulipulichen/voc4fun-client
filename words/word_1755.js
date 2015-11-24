@@ -1,0 +1,1 @@
+{"word_chinese":"多國的","word_english":"multinational","test_options":["multinational","narrator","notorious"]}

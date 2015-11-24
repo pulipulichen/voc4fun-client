@@ -1,0 +1,1 @@
+{"word_chinese":"謙恭的，有禮貌的","word_english":"respectful","test_options":["respectful","retrospect","rotary"]}

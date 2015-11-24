@@ -1,0 +1,1 @@
+{"word_chinese":"危險的，冒險的","word_english":"hazardous","test_options":["hazardous","hereafter","humiliation"]}

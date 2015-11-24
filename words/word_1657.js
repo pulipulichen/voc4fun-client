@@ -1,0 +1,1 @@
+{"word_chinese":"陽剛的","word_english":"masculine","test_options":["masculine","mellow","moan"]}

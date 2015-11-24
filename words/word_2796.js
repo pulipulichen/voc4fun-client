@@ -1,0 +1,1 @@
+{"word_chinese":"單調沈悶的","word_english":"tedious","test_options":["tedious","territorial","timeless"]}

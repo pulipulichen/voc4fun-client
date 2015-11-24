@@ -1,0 +1,1 @@
+{"word_chinese":"衛生學","word_english":"hygiene","test_options":["hygiene","impart","inevitably"]}

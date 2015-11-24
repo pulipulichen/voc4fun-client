@@ -1,0 +1,1 @@
+{"word_chinese":"初學者","word_english":"novice","test_options":["novice","obscure","oriented"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"帶槍者","word_english":"gunman","test_options":["gunman","harmonica","hiss"]}

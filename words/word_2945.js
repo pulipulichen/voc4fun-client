@@ -1,0 +1,1 @@
+{"word_chinese":"學費","word_english":"tuition","test_options":["tuition","unanimous","unpredictable"]}

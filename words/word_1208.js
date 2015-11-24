@@ -1,0 +1,1 @@
+{"word_chinese":"富有魔力的，迷人的","word_english":"glamorous","test_options":["glamorous","gorilla","hamper"]}

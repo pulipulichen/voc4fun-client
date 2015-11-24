@@ -1,0 +1,1 @@
+{"word_chinese":"沈沒","word_english":"submersion","test_options":["submersion","suffocate","tableware"]}

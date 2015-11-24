@@ -1,0 +1,1 @@
+{"word_chinese":"養育，撫育","word_english":"foster","test_options":["foster","frontier","glare"]}

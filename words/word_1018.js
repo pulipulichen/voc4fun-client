@@ -1,0 +1,1 @@
+{"word_chinese":"評價","word_english":"evaluation","test_options":["evaluation","execution","Fahrenheit"]}

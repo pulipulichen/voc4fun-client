@@ -1,0 +1,1 @@
+{"word_chinese":"羅盤","word_english":"compass","test_options":["compass","comprehend","conserve"]}

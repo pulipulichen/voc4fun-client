@@ -1,0 +1,1 @@
+{"word_chinese":"虔誠的","word_english":"pious","test_options":["pious","pneumonia","preference"]}

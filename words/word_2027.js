@@ -1,0 +1,1 @@
+{"word_chinese":"犁","word_english":"plow","test_options":["plow","pore","president-elect"]}

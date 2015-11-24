@@ -1,0 +1,1 @@
+{"word_chinese":"徒刑","word_english":"imprisonment","test_options":["imprisonment","indefinite","insecticide"]}

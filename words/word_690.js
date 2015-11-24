@@ -1,0 +1,1 @@
+{"word_chinese":"吱吱嘎嘎聲","word_english":"creak","test_options":["creak","crumb","decree"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"外星人","word_english":"alien","test_options":["alien","ambiguous","approximate"]}

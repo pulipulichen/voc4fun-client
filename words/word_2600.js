@@ -1,0 +1,1 @@
+{"word_chinese":"規格","word_english":"specification","test_options":["specification","spotlight","statutory"]}

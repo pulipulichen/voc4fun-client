@@ -1,0 +1,1 @@
+{"word_chinese":"被禁閉著的","word_english":"confined","test_options":["confined","conspicuous","conviction"]}

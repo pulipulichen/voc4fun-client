@@ -1,0 +1,1 @@
+{"word_chinese":"設置;機關","word_english":"establishment","test_options":["establishment","exceed","eyelash"]}

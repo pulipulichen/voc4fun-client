@@ -1,0 +1,1 @@
+{"word_chinese":"用手指)輕彈;輕彈聲","word_english":"flick(","test_options":["flick(","forge(","fury"]}

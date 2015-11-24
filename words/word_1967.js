@@ -1,0 +1,1 @@
+{"word_chinese":"察覺","word_english":"perceive","test_options":["perceive","pertain","plight"]}

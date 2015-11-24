@@ -1,0 +1,1 @@
+{"word_chinese":"翼(運動員)","word_english":"winger","test_options":["winger","wrestle","whine"]}

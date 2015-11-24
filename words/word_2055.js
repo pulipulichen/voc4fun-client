@@ -1,0 +1,1 @@
+{"word_chinese":"草原;牧場","word_english":"prairie","test_options":["prairie","premature","proficiency"]}

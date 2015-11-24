@@ -1,0 +1,1 @@
+{"word_chinese":"公民權;給…以特(許)權","word_english":"franchise","test_options":["franchise","fury","gobble"]}

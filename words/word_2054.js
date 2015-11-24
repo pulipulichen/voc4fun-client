@@ -1,0 +1,1 @@
+{"word_chinese":"開業者","word_english":"practitioner","test_options":["practitioner","preliminary","productivity"]}

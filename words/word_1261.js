@@ -1,0 +1,1 @@
+{"word_chinese":"亂劈; 胡亂刪改","word_english":"hack","test_options":["hack","haul","homeless"]}

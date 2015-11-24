@@ -1,0 +1,1 @@
+{"word_chinese":"使成為必需","word_english":"necessitate","test_options":["necessitate","nominate","occurrence("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"可樂","word_english":"cola","test_options":["cola","commentary","computerize"]}

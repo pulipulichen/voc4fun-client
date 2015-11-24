@@ -1,0 +1,1 @@
+{"word_chinese":"當年)葡萄酒產量","word_english":"vintage(","test_options":["vintage(","vulgar","wholesome"]}

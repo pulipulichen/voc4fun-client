@@ -1,0 +1,1 @@
+{"word_chinese":"優於;打敗","word_english":"outdo","test_options":["outdo","oversleep","patch"]}

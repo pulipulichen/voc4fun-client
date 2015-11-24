@@ -1,0 +1,1 @@
+{"word_chinese":"空間的","word_english":"spatial","test_options":["spatial","spire","stationary"]}

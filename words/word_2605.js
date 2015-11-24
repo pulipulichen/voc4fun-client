@@ -1,0 +1,1 @@
+{"word_chinese":"光譜","word_english":"spectrum","test_options":["spectrum","sprint","sterling"]}

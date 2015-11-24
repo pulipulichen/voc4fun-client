@@ -1,0 +1,1 @@
+{"word_chinese":"半島","word_english":"peninsula","test_options":["peninsula","persistence","playwright"]}

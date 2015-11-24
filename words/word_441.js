@@ -1,0 +1,1 @@
+{"word_chinese":"〔美俚〕汽車","word_english":"chariot","test_options":["chariot","chuck","collaboration"]}

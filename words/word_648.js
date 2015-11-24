@@ -1,0 +1,1 @@
+{"word_chinese":"懇摯地","word_english":"cordially","test_options":["cordially","costing","cruise"]}

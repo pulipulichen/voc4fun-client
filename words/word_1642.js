@@ -1,0 +1,1 @@
+{"word_chinese":"策略;伎倆","word_english":"maneuver","test_options":["maneuver","massive","mimic"]}

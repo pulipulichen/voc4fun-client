@@ -1,0 +1,1 @@
+{"word_chinese":"惡化","word_english":"deterioration","test_options":["deterioration","diffuse","displace"]}

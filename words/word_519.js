@@ -1,0 +1,1 @@
+{"word_chinese":"時事評論員","word_english":"commentator","test_options":["commentator","compelling","configuration"]}

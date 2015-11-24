@@ -1,0 +1,1 @@
+{"word_chinese":"給…裝置通風設備","word_english":"ventilate","test_options":["ventilate","vicinity","warehouse"]}

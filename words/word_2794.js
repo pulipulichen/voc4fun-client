@@ -1,0 +1,1 @@
+{"word_chinese":"合作","word_english":"teamwork","test_options":["teamwork","terrified","tile"]}

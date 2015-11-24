@@ -1,0 +1,1 @@
+{"word_chinese":"圓屋頂","word_english":"dome","test_options":["dome","driveway","embody"]}

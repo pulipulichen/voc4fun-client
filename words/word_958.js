@@ -1,0 +1,1 @@
+{"word_chinese":"移民;移民的","word_english":"emigrant","test_options":["emigrant","engagement","evacuation"]}

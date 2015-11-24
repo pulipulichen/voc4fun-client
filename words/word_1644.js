@@ -1,0 +1,1 @@
+{"word_chinese":"巧妙地處理","word_english":"manipulate","test_options":["manipulate","materialism","miniature"]}

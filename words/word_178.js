@@ -1,0 +1,1 @@
+{"word_chinese":"斷言","word_english":"assert","test_options":["assert","attempted","barbershop"]}

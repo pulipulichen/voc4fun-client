@@ -1,0 +1,1 @@
+{"word_chinese":"大炮","word_english":"artillery","test_options":["artillery","asylum","bandit"]}

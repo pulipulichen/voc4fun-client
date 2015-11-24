@@ -1,0 +1,1 @@
+{"word_chinese":"淘氣的","word_english":"mischievous","test_options":["mischievous","monotonous","na"]}

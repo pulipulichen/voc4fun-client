@@ -1,0 +1,1 @@
+{"word_chinese":"熱帶(地區)的","word_english":"tropic","test_options":["tropic","two-thirds","unify"]}

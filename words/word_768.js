@@ -1,0 +1,1 @@
+{"word_chinese":"蔑視","word_english":"defy","test_options":["defy","derive","diminish"]}

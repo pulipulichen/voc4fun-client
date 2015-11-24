@@ -1,0 +1,1 @@
+{"word_chinese":"彎曲","word_english":"crook","test_options":["crook","cumulative","defendant"]}

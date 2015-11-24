@@ -1,0 +1,1 @@
+{"word_chinese":"刺；荊棘","word_english":"thorn","test_options":["thorn","time-out","transcend"]}

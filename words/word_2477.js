@@ -1,0 +1,1 @@
+{"word_chinese":"服務者；發球人","word_english":"server","test_options":["server","shilling","skull"]}

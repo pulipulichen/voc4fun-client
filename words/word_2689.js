@@ -1,0 +1,1 @@
+{"word_chinese":"觸目的，驚人的","word_english":"striking","test_options":["striking","subordinate","surveillance"]}

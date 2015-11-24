@@ -1,0 +1,1 @@
+{"word_chinese":"感覺的；感情的","word_english":"sensational","test_options":["sensational","setting","simmer"]}

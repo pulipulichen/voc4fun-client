@@ -1,0 +1,1 @@
+{"word_chinese":"耐久的","word_english":"lasting","test_options":["lasting","lengthy","loaded"]}

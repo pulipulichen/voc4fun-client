@@ -1,0 +1,1 @@
+{"word_chinese":"鍍金的","word_english":"gilt","test_options":["gilt","goodwill","hail"]}

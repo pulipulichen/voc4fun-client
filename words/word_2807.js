@@ -1,0 +1,1 @@
+{"word_chinese":"終止(n.)","word_english":"termination","test_options":["termination","theoretical","toil"]}

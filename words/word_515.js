@@ -1,0 +1,1 @@
+{"word_chinese":"紀念","word_english":"commemorate","test_options":["commemorate","compassion","confederation("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"激流的；騷亂的","word_english":"turbulent","test_options":["turbulent","unchanged","unveil"]}

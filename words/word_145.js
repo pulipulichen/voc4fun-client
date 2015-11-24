@@ -1,0 +1,1 @@
+{"word_chinese":"嚇壞","word_english":"appall","test_options":["appall","armor","audit"]}

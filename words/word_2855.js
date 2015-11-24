@@ -1,0 +1,1 @@
+{"word_chinese":"永久的，長期有效的","word_english":"timeless","test_options":["timeless","topple","treacherous"]}

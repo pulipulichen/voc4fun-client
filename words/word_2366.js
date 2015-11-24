@@ -1,0 +1,1 @@
+{"word_chinese":"暴動","word_english":"riot","test_options":["riot","rouse","scenic"]}

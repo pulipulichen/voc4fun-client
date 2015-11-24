@@ -1,0 +1,1 @@
+{"word_chinese":"生命力，活力","word_english":"vitality","test_options":["vitality","walnut","winning"]}

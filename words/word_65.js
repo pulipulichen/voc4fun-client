@@ -1,0 +1,1 @@
+{"word_chinese":"適當的，可取的","word_english":"advisable","test_options":["advisable","agony","amplify"]}

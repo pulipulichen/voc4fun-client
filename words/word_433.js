@@ -1,0 +1,1 @@
+{"word_chinese":"挑戰的","word_english":"challenging","test_options":["challenging","chili","cockpit("]}

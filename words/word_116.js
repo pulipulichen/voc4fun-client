@@ -1,0 +1,1 @@
+{"word_chinese":"訂正","word_english":"amend","test_options":["amend","antenna","aspiration"]}

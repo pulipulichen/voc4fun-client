@@ -1,0 +1,1 @@
+{"word_chinese":"和解","word_english":"reconciliation","test_options":["reconciliation","refreshment","repayment"]}

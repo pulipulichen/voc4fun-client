@@ -1,0 +1,1 @@
+{"word_chinese":"君主政治","word_english":"monarchy","test_options":["monarchy","mound","neighboring"]}

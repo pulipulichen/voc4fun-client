@@ -1,0 +1,1 @@
+{"word_chinese":"懷舊的","word_english":"reminiscent","test_options":["reminiscent","repression","retrospective"]}

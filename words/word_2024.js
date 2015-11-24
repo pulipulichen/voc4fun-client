@@ -1,0 +1,1 @@
+{"word_chinese":"辯護;懇求","word_english":"plead","test_options":["plead","populate","preservation"]}

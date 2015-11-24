@@ -1,0 +1,1 @@
+{"word_chinese":"游擊隊","word_english":"guerrilla","test_options":["guerrilla","harass","hi-fi"]}

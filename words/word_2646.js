@@ -1,0 +1,1 @@
+{"word_chinese":"使僵硬","word_english":"starch","test_options":["starch","stern","submerge"]}

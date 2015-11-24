@@ -1,0 +1,1 @@
+{"word_chinese":"照亮","word_english":"illuminate","test_options":["illuminate","inappropriate","inhibited"]}

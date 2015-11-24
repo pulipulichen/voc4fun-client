@@ -1,0 +1,1 @@
+{"word_chinese":"豐富","word_english":"abundance","test_options":["abundance","acquisition","afflict"]}

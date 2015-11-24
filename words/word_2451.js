@@ -1,0 +1,1 @@
+{"word_chinese":"分離；隔開","word_english":"segregate","test_options":["segregate","sequence","shrub"]}

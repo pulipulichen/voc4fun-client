@@ -1,0 +1,1 @@
+{"word_chinese":"粗略地","word_english":"roughly","test_options":["roughly","salmon","secondly"]}

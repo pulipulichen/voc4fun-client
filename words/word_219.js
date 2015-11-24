@@ -1,0 +1,1 @@
+{"word_chinese":"使人敬畏的","word_english":"awesome","test_options":["awesome","barefoot","bitch"]}

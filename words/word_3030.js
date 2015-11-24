@@ -1,0 +1,1 @@
+{"word_chinese":"空；心不在焉，空位","word_english":"vacancy","test_options":["vacancy","verbal","vogue"]}

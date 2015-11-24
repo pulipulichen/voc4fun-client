@@ -1,0 +1,1 @@
+{"word_chinese":"百折不撓的","word_english":"persistent","test_options":["persistent","pick-up","popularity"]}

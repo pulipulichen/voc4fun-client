@@ -1,0 +1,1 @@
+{"word_chinese":"依附","word_english":"cling","test_options":["cling","coincide","compelling"]}

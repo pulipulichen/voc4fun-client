@@ -1,0 +1,1 @@
+{"word_chinese":"支柱","word_english":"brace","test_options":["brace","broadcaster","capability"]}

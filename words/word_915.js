@@ -1,0 +1,1 @@
+{"word_chinese":"毛毛雨","word_english":"drizzle","test_options":["drizzle","educated","energize"]}

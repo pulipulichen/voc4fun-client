@@ -1,0 +1,1 @@
+{"word_chinese":"保留的，冷淡的","word_english":"reserved","test_options":["reserved","resultant","ripple"]}

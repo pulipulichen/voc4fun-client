@@ -1,0 +1,1 @@
+{"word_chinese":"衣服","word_english":"garment","test_options":["garment","glacier","gross"]}

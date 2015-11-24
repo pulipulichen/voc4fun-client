@@ -1,0 +1,1 @@
+{"word_chinese":"鄰接","word_english":"adjoin","test_options":["adjoin","advocate","alloy"]}

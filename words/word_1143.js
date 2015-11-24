@@ -1,0 +1,1 @@
+{"word_chinese":"可怕的;難以應付的","word_english":"formidable","test_options":["formidable","franchise","geometry"]}

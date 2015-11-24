@@ -1,0 +1,1 @@
+{"word_chinese":"微光","word_english":"gleam","test_options":["gleam","graph","harassment"]}

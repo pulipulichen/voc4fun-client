@@ -1,0 +1,1 @@
+{"word_chinese":"慢性的","word_english":"chronic","test_options":["chronic","clinch","commentary"]}

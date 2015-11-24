@@ -1,0 +1,1 @@
+{"word_chinese":"千金難買的","word_english":"priceless","test_options":["priceless","profound","publicize"]}

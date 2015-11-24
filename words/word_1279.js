@@ -1,0 +1,1 @@
+{"word_chinese":"可恨的;討厭的","word_english":"hateful","test_options":["hateful","helpless","hover"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"滾球，冰上溜石等遊戲)的隊長","word_english":"skipper(","test_options":["skipper(","smack","span"]}

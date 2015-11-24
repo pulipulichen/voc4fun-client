@@ -1,0 +1,1 @@
+{"word_chinese":"裙","word_english":"skirt","test_options":["skirt","smallpox","spatial"]}

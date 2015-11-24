@@ -1,0 +1,1 @@
+{"word_chinese":"遺傳學","word_english":"genetics","test_options":["genetics","gloomy","gust"]}

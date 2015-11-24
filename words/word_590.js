@@ -1,0 +1,1 @@
+{"word_chinese":"同意","word_english":"consent","test_options":["consent","contagious","core"]}

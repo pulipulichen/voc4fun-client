@@ -1,0 +1,1 @@
+{"word_chinese":"不會生育的;荒蕪的","word_english":"barren","test_options":["barren","behalf","boiling"]}

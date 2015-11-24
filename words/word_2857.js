@@ -1,0 +1,1 @@
+{"word_chinese":"休息時間；不算在工作時間內的時間","word_english":"time-out","test_options":["time-out","torrent","treason"]}

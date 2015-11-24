@@ -1,0 +1,1 @@
+{"word_chinese":"戰爭、怒氣等的)爆發","word_english":"outbreak(","test_options":["outbreak(","oversee","pasture"]}

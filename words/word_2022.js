@@ -1,0 +1,1 @@
+{"word_chinese":"劇作家","word_english":"playwright","test_options":["playwright","pope","prescription"]}

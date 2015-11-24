@@ -1,0 +1,1 @@
+{"word_chinese":"鞭炮","word_english":"firecracker","test_options":["firecracker","flounder","freak"]}

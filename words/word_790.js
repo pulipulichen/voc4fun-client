@@ -1,0 +1,1 @@
+{"word_chinese":"敘述的","word_english":"descriptive","test_options":["descriptive","developing","discretion"]}

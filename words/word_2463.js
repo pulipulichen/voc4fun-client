@@ -1,0 +1,1 @@
+{"word_chinese":"靈敏性","word_english":"sensitivity","test_options":["sensitivity","settle","simplicity"]}

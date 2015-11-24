@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html ng-app="unitApp">
+    <head>
+		<!--引用phonegap.js(檔案不在專案中)-->
+		<script type="text/javascript" src="phonegap.js"></script>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        -->
+        <title>Hello World</title>  
+			
+<!--
+        <script type="text/javascript" src="js/dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+        <script type="text/javascript">
+            //dojo.require("dojox.mobile.parser");
+            //dojo.require("dojox.mobile");
+            //dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
+            require([
+              "dojox/mobile/parser", // (Optional) This mobile app uses declarative programming with fast mobile parser
+              "dojox/mobile",        // (Required) This is a mobile app.
+              "dojox/mobile/compat"  // (Optional) This mobile app supports running on desktop browsers
+            ], function(parser, mobile, compat){ Optional module aliases that can then be referenced inside callback block
+              // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
+            );
+        </script>
+        <link rel="stylesheet" type="text/css" href="js/dojox/mobile/themes/android/android.css" />
+    -->
+        <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
+        <!--<link href="js/dojox/mobile/themes/windows/windows.css" rel="stylesheet"></link>-->
+     <script src="dojo/dojo.js" data-dojo-config="async:true, parseOnLoad:true"></script>
+     <script>
+	 
+       require([
+	   "dojo/_base/connect",
+	   "dojo/_base/window",
+         "dojox/mobile/parser",    // This mobile app uses declarative programming with fast mobile parser
+		 "dojo/ready",
+         "dojox/mobile",           // This is a mobile app.
+		 "dojox/mobile/TabBar", //shun find
+		 "dojox/mobile/TextArea", //shun find		 
+		 "dojox/mobile/SimpleDialog", //shun find		
+         "dijit/registry",//shun find	
+         "dojox/mobile/Button",		 //shun find
+		 "dojox/dgauges/components/default/HorizontalLinearGauge",//shun find
+		 "dojox/mobile/Slider",	 //shun find
+		 "dijit/form/DataList", //shun find
+		 "dojox/mobile/ComboBox", //shun find
+		 "dojox/mobile/GridLayout", //shun find
+		 "dojox/mobile/IconItem",
+		 "dojox/mobile/IconMenu",  //shun find
+		 "dojox/mobile/FixedSplitter", //shun find
+         "dojox/mobile/Pane" , //shun find
+		 "dojox/mobile/Switch", //shun find
+		 "dojox/mobile/ValuePickerTimePicker",//shun find
+		 "dojox/mobile/SwapView" ,//shun find
+		 "dojox/mobile/Audio"//shun find
+	
+		  
+       ],function(connect,win,parser,ready,registry){
+			login = function () {
+		var account = $("#username").val();
+		var password = $("#userpassword").val();
+		console.log( account );
+		var loginPage = this;
+		$.post(
+			'/server/login.php',
+			{ 'userid': account ,
+			  'password':password}, 
+			function (result) {
+				//alert(_userid);
+				if(result=='1')
+				{
+					console.log('Success');
+					console.log(loginPage);
+					loginPage.transitionTo("set goal");
+				}
+				else{
+					console.log('Failed');
+				}
+			}
+		);
+	}
+	   }); // Skip module alias and function block because we're not doing anything special...
+	   
+   
+     </script>
+	  
+		<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="module.js"></script>	
+		
+		</head>
+    <body class="mblIOS6Stripes" style="visibility: hidden;"  ng-controller="UnitCtrl">
+        <!--
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Readya5555</p>
+                
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        -->
+
+
+		
+		
+<div id="login" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props=>Let's Learning English!</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <img alt="" src='images/homepage.png' style="width:60%" >
+				 
+       </ul>
+  <textarea id="username" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="30" placeHolder="請輸入帳號"></textarea>
+ <textarea id="userpassword" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="30" placeHolder="請輸入密碼"></textarea>
+<!--  <span id="btnLogin" data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'home page' ">登入</span> -->
+  <span id="btnLogin" data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'#',onClick:login ">登入</span> 
+  <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">沒 有 帳 號 ? 歡 迎 註 冊 !
+     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'new_username'">前往註冊</span> 
+    
+     </div>		
+
+     <div id="setting" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">提醒設定</h1>
+		<ul dojoType="dojox.mobile.RoundRect" >
+			<li data-dojo-type="dojox/mobile/ListItem" 
+				data-dojo-props="icon:'images/Vibration.png'">震 動 提 醒
+				<div class="mblItemSwitch" data-dojo-type="dojox/mobile/Switch" value="on" leftLabel="ON" rightLabel="Off"></div>
+			</li>
+			
+			<li data-dojo-type="dojox/mobile/ListItem" 
+				data-dojo-props="icon:'images/voice.png'">聲 音 提 醒
+				<div class="mblItemSwitch" data-dojo-type="dojox/mobile/Switch" value="on" leftLabel="ON" rightLabel="Off"></div>
+			</li>
+			
+		</ul>
+				
+		<ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">設定提醒時間</li>		 
+					
+			<li id="picker1" data-dojo-type="dojox/mobile/ValuePickerTimePicker" data-dojo-props='is24h:true'></li>	
+			<span data-dojo-type="dojox.mobile.ToolBarButton" onClick="showPickedValues()" props='label:"Get"'>完成</span>
+		</ul>		   	   			
+		
+		<ul data-dojo-type="dojox/mobile/TabBar"
+			data-dojo-props='iconBase:"images/tab-icons.png"'>
+			<li data-dojo-type="dojox/mobile/TabBarButton" moveTo="learn list"
+			    data-dojo-props='iconPos1:"0,0,29,29",
+				   			     iconPos2:"29,0,29,29"'>學習單字</li>
+			<li data-dojo-type="dojox/mobile/TabBarButton" moveTo="test list"
+			    data-dojo-props='iconPos1:"0,29,29,29",
+							     iconPos2:"29,29,29,29"'>小試身手</li>					   
+			<li data-dojo-type="dojox/mobile/TabBarButton" moveTo="setting"
+			    data-dojo-props= 'iconPos1:"0,116,29,29",
+				     			  iconPos2:"29,116,29,29",selected:true'>設定</li>
+		</ul>   	
+		
+     </div>
+		
+
+		
+<div id="new_username" data-dojo-type="dojox/mobile/View">
+  <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props=>歡迎註冊Let's Learning English!</h1>
+	<ul data-dojo-type="dojox/mobile/RoundRectList">
+		<img alt="" src='images/homepage.png' style="width:60%" >
+	</ul>
+    <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">請註冊帳號與密碼</li>
+		<textarea id="new_username_text" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="30" placeHolder="請輸入帳號"></textarea>
+		<textarea id="new_userpassword_text" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="30" placeHolder="請輸入密碼"></textarea>
+   <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'xx'"id="new_username_btn">註冊</span>
+   <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'login'">前往登入</span> 
+ </div>
+
+
+
+		
+	<div id="home page" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" id="index_heading">Let's Learning English</h1>
+   
+		<ul data-dojo-type="dojox/mobile/IconMenu" style="width:300px;height:450px;margin:20px;"
+			data-dojo-props='cols:2'>
+			<li data-dojo-type="dojox/mobile/IconMenuItem" id="index_setgoal"
+				data-dojo-props='icon:"images/setgoal.png", moveTo:"set goal", transition:"swirl"'></li>
+			<li data-dojo-type="dojox/mobile/IconMenuItem" id="index_learnlist"
+				data-dojo-props='icon:"images/read.png", moveTo:"learn list", transition:"fade"'></li>
+			<li data-dojo-type="dojox/mobile/IconMenuItem" id="index_testlist"
+				data-dojo-props='icon:"images/test.png", moveTo:"test list", transition:"swirl"'></li>
+			<li data-dojo-type="dojox/mobile/IconMenuItem" id="index_lookgoal"
+				data-dojo-props='icon:"images/look goal.png", moveTo:"look other goal", transition:"fade"'></li>
+			<li data-dojo-type="dojox/mobile/IconMenuItem" id="index_setting"
+				data-dojo-props='icon:"images/setting.png", moveTo:"setting"'></li>
+			<li data-dojo-type="dojox/mobile/IconMenuItem"
+				data-dojo-props='icon:"images/logout.png", moveTo:"x", transition:"fade"'></li>
+		</ul>
+
+     </div>			
+     
+	 
+	 
+	 <div id="set goal" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" >請設定學習目標</h1>
+ <ul data-dojo-type="dojox/mobile/RoundRectList">
+  <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">設定學習目標</li>
+  <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:false'>  設定每日學習單字數<br>(系統建議：每日學習單字數20~40個)</div>
+<li data-dojo-type="dojox/mobile/ListItem"> 
+ <textarea id="goal_word_text" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="25" placeHolder="請輸入學習單字數(20~40)"></textarea>
+ </li>
+  <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:false'> 設定每日單字標著數<br>(系統建議：等同每日所學單字數)</div>
+    <li data-dojo-type="dojox/mobile/ListItem">
+	<textarea id="goal_note_text" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="25" placeHolder="請輸入單字標注數"></textarea>
+	</li>
+  <div data-dojo-type="dojox/mobile/RoundRect" data-dojo-props='shadow:false'> 設定每日小試身手次數<br>(系統建議：根據所選單元進行練習)</div>
+    <li data-dojo-type="dojox/mobile/ListItem">
+	<textarea id="goal_test_text" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="25" placeHolder="請輸入次數"></textarea>
+	</li>
+	
+   <span data-dojo-type="dojox/mobile/ToolBarButton"   data-dojo-props="layout:'center',moveTo:'home page'"id="new_goal_btn">確定</span> 
+  
+     </div>
+	 	 
+
+
+     <div id="bar" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'home page'">View 2</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">試試看有沒有成功？</li>		 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bard',label:'去第三頁'"></li>
+		 <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'" ><div id="jquery_jplayer_1" class="cp-jplayer"></div></span> 
+		</ul> 		
+     </div>
+	 
+	 <div id="look other goal" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">查看他人目標</h1>
+		 <ul data-dojo-type="dojox/mobile/RoundRectList"  >
+      	     <li data-dojo-type="dojox/mobile/SwapView">
+				 <h1 data-dojo-type="dojox/mobile/RoundRectCategory">參 考 目 標 (一)</h1>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 學 習 單 字 數 ： 20
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 單 字 標 註 數 ： 20
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 小 試 身 手 次 數 ： 1
+				  </ul>
+				  <br>
+				  <h1 data-dojo-type="dojox/mobile/RoundRectCategory">參 考 目 標 (二)</h1>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 學 習 單 字 數 ： 25
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 單 字 標 註 數 ： 25
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 小 試 身 手 次 數 ： 1
+				  </ul>
+				   <ul data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" > 1 / 2 </div> </ul>
+			 </li>
+			 
+			<li data-dojo-type="dojox/mobile/SwapView">
+				 <h1 data-dojo-type="dojox/mobile/RoundRectCategory">參 考 目 標 (三)</h1>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 學 習 單 字 數 ： 30
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 單 字 標 註 數 ： 30
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 小 試 身 手 次 數 ： 1
+				  </ul>
+				  <br>
+				  <h1 data-dojo-type="dojox/mobile/RoundRectCategory">參 考 目 標 (四)</h1>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 學 習 單 字 數 ： 40
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 單 字 標 註 數 ： 40
+				  </ul>
+				  <ul data-dojo-type="dojox/mobile/RoundRect">
+					每 日 小 試 身 手 次 數 ： 2
+				  </ul>
+				   <ul data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" > 2 / 2 </div> </ul>
+			 </li>
+		 
+         </ul>
+	   	   			
+		<ul data-dojo-type="dojox/mobile/TabBar"
+			data-dojo-props='iconBase:"images/tab-icons.png"'>
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="learn list"
+			  data-dojo-props='iconPos1:"0,0,29,29",
+							   iconPos2:"29,0,29,29"'>學習單字</li>
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="test list"
+			  data-dojo-props='iconPos1:"0,29,29,29",
+							   iconPos2:"29,29,29,29"'>小試身手</li>					   
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="setting"
+			  data-dojo-props= 'iconPos1:"0,116,29,29",
+							   iconPos2:"29,116,29,29"'>設定</li>
+		</ul>   	
+				
+  
+     </div>
+	 
+	<div id="look rank" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：起始點</li>	
+		 <img alt="" src='images/first.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">出發吧!向終點邁進!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank01'">前進示意用按鈕</span> </li>
+     </div>
+	 
+	 	<div id="look rank01" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第一區</li>	
+		 <img alt="" src='images/step1.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第一區!朝第二區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank02'">前進示意用按鈕</span> </li>
+     </div>
+
+	 	<div id="look rank02" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第二區</li>	
+		 <img alt="" src='images/step2.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第二區!朝第三區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank03'">前進示意用按鈕</span> </li>
+     </div>
+	 
+	 	<div id="look rank03" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第三區</li>	
+		 <img alt="" src='images/step3.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第三區!朝第四區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank04'">前進示意用按鈕</span> </li>
+     </div>
+
+	 	<div id="look rank04" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第四區</li>	
+		 <img alt="" src='images/step4.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第四區!朝第五區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank05'">前進示意用按鈕</span> </li>
+     </div>	 
+	 
+	 	<div id="look rank05" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第五區</li>	
+		 <img alt="" src='images/step5.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第五區!朝第六區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank06'">前進示意用按鈕</span> </li>
+     </div>	 
+	 
+	 	<div id="look rank06" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第六區</li>	
+		 <img alt="" src='images/step6.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第六區!朝第七區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank07'">前進示意用按鈕</span> </li>
+     </div>	
+	 
+	 	 	<div id="look rank07" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第七區</li>	
+		 <img alt="" src='images/step7.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第七區!朝第八區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank08'">前進示意用按鈕</span> </li>
+     </div>		
+	 
+	 	 	<div id="look rank08" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第八區</li>	
+		 <img alt="" src='images/step8.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第八區!朝第九區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank09'">前進示意用按鈕</span> </li>
+     </div>		
+	 
+	 	 	<div id="look rank09" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第九區</li>	
+		 <img alt="" src='images/step9.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第九區!朝第十區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank10'">前進示意用按鈕</span> </li>
+     </div>			
+	 
+	 	 	<div id="look rank10" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第十區</li>	
+		 <img alt="" src='images/step10.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第十區!朝第十一區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank11'">前進示意用按鈕</span> </li>
+     </div>			
+	 
+	 	 	<div id="look rank11" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第十一區</li>	
+		 <img alt="" src='images/step11.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第十一區!朝第十二區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank12'">前進示意用按鈕</span> </li>
+     </div>				
+	 
+	 	 	<div id="look rank12" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第十二區</li>	
+		 <img alt="" src='images/step12.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第十二區!朝第十三區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank13'">前進示意用按鈕</span> </li>
+     </div>				
+	 
+	 	 	<div id="look rank13" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第十三區</li>	
+		 <img alt="" src='images/step13.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜抵達第十三區!朝最後一區前進吧!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank14'">前進示意用按鈕</span> </li>
+     </div>				
+	 
+	 	 	<div id="look rank14" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">目前所在區域：第十四區</li>	
+		 <img alt="" src='images/step14.png'  style="width:100%" > 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">恭喜全區制霸!</li>	 
+       </ul>
+  前進規則：於"學習單字"中進行標註並通過"小試身手"!</li>	
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank14'">前進示意用按鈕</span> </li>
+     </div>	
+	 
+	 
+	 
+	  <div id="learn list" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">學習單字</h1>
+	   <ul data-dojo-type="dojox/mobile/RoundRectList">	                   
+	        <ul data-dojo-type="dojox/mobile/RoundRectList">
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'select_ch_1',label:'單 元 (一)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'select_ch_2',label:'單 元 (二)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'select_ch_3',label:'單 元 (三)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'select_ch_4',label:'單 元 (四)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'select_ch_5',label:'單 元 (五)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'select_ch_6',label:'單 元 (六)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'select_ch_7',label:'單 元 (七)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'select_ch_8',label:'單 元 (八)'"></li>
+	   </ul>
+	   	   	   			
+		<ul data-dojo-type="dojox/mobile/TabBar"
+			data-dojo-props='iconBase:"images/tab-icons.png"'>
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="learn list"
+			  data-dojo-props='iconPos1:"0,0,29,29",
+							   iconPos2:"29,0,29,29",
+							   selected:true'>學習單字</li>
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="test list"
+			  data-dojo-props='iconPos1:"0,29,29,29",
+							   iconPos2:"29,29,29,29"'>小試身手</li>					   
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="setting"
+			  data-dojo-props= 'iconPos1:"0,116,29,29",
+							   iconPos2:"29,116,29,29"'>設定</li>
+		</ul>   	
+		 	   
+     </div>
+
+<div id="select_ch_1" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(一)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元1'"class="select-word"word_id="1" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元2'"class="select-word"word_id="21" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元3'"class="select-word"word_id="41" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元4'"class="select-word"word_id="61" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元5'"class="select-word"word_id="81" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元6'"class="select-word"word_id="101" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元7'"class="select-word"word_id="121" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元8'"class="select-word"word_id="141" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元9'"class="select-word"word_id="161" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元10'"class="select-word"word_id="181" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元11'"class="select-word"word_id="201" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元12'"class="select-word"word_id="221" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元13'"class="select-word"word_id="241" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元14'"class="select-word"word_id="261" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元15'"class="select-word"word_id="281" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元16'"class="select-word"word_id="301" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元17'"class="select-word"word_id="321" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元18'"class="select-word"word_id="341" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元19'"class="select-word"word_id="361" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/readsmall.png',moveTo:'word_template',label:'單元20'"class="select-word"word_id="381" ></li>
+
+		 </ul> 
+		
+     </div>
+
+
+<div id="select_ch_2" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(二)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元21'"class="select-word"word_id="401" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元22'"class="select-word"word_id="421" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元23'"class="select-word"word_id="441" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元24'"class="select-word"word_id="461" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元25'"class="select-word"word_id="481" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元26'"class="select-word"word_id="501" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元27'"class="select-word"word_id="521" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元28'"class="select-word"word_id="541" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元29'"class="select-word"word_id="561" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元30'"class="select-word"word_id="581" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元31'"class="select-word"word_id="601" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元32'"class="select-word"word_id="621" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元33'"class="select-word"word_id="641" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元34'"class="select-word"word_id="661" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元35'"class="select-word"word_id="681" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元36'"class="select-word"word_id="701" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元37'"class="select-word"word_id="721" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元38'"class="select-word"word_id="741" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元39'"class="select-word"word_id="761" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redbook.png',moveTo:'word_template',label:'單元40'"class="select-word"word_id="781" ></li>
+
+
+		 </ul> 
+		
+     </div>
+	 
+<div id="select_ch_3" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(三)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元41'"class="select-word"word_id="801" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元42'"class="select-word"word_id="821" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元43'"class="select-word"word_id="841" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元44'"class="select-word"word_id="861" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元45'"class="select-word"word_id="881" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元46'"class="select-word"word_id="901" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元47'"class="select-word"word_id="921" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元48'"class="select-word"word_id="941" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元49'"class="select-word"word_id="961" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元50'"class="select-word"word_id="981" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元51'"class="select-word"word_id="1001" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元52'"class="select-word"word_id="1021" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元53'"class="select-word"word_id="1041" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元54'"class="select-word"word_id="1061" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元55'"class="select-word"word_id="1081" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元56'"class="select-word"word_id="1101" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元57'"class="select-word"word_id="1121" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元58'"class="select-word"word_id="1141" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元59'"class="select-word"word_id="1161" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowbook.png',moveTo:'word_template',label:'單元60'"class="select-word"word_id="1181" ></li>
+
+
+
+		 </ul> 
+		
+     </div>
+
+
+<div id="select_ch_4" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(四)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元61'"class="select-word"word_id="1201" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元62'"class="select-word"word_id="1221" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元63'"class="select-word"word_id="1241" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元64'"class="select-word"word_id="1261" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元65'"class="select-word"word_id="1281" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元66'"class="select-word"word_id="1301" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元67'"class="select-word"word_id="1321" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元68'"class="select-word"word_id="1341" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元69'"class="select-word"word_id="1361" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元70'"class="select-word"word_id="1381" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元71'"class="select-word"word_id="1401" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元72'"class="select-word"word_id="1421" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元73'"class="select-word"word_id="1441" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元74'"class="select-word"word_id="1461" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元75'"class="select-word"word_id="1481" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元76'"class="select-word"word_id="1501" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元77'"class="select-word"word_id="1521" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元78'"class="select-word"word_id="1541" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元79'"class="select-word"word_id="1561" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garybook.png',moveTo:'word_template',label:'單元80'"class="select-word"word_id="1581" ></li>
+
+		 </ul> 
+		
+     </div>
+
+		
+<div id="select_ch_5" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(五)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元81'"class="select-word"word_id="1601" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元82'"class="select-word"word_id="1621" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元83'"class="select-word"word_id="1641" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元84'"class="select-word"word_id="1661" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元85'"class="select-word"word_id="1681" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元86'"class="select-word"word_id="1701" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元87'"class="select-word"word_id="1721" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元88'"class="select-word"word_id="1741" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元89'"class="select-word"word_id="1761" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元90'"class="select-word"word_id="1781" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元91'"class="select-word"word_id="1801" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元92'"class="select-word"word_id="1821" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元93'"class="select-word"word_id="1841" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元94'"class="select-word"word_id="1861" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元95'"class="select-word"word_id="1881" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元96'"class="select-word"word_id="1901" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元97'"class="select-word"word_id="1921" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元98'"class="select-word"word_id="1941" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元99'"class="select-word"word_id="1961" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluebook.png',moveTo:'word_template',label:'單元100'"class="select-word"word_id="1981" ></li>
+
+		 </ul> 
+		
+     </div>
+
+
+<div id="select_ch_6" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(六)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元101'"class="select-word"word_id="2001" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元102'"class="select-word"word_id="2021" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元103'"class="select-word"word_id="2041" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元104'"class="select-word"word_id="2061" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元105'"class="select-word"word_id="2081" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元106'"class="select-word"word_id="2101" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元107'"class="select-word"word_id="2121" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元108'"class="select-word"word_id="2141" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元109'"class="select-word"word_id="2161" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元110'"class="select-word"word_id="2181" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元111'"class="select-word"word_id="2201" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元112'"class="select-word"word_id="2221" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元113'"class="select-word"word_id="2241" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元114'"class="select-word"word_id="2261" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元115'"class="select-word"word_id="2281" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元116'"class="select-word"word_id="2301" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元117'"class="select-word"word_id="2321" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元118'"class="select-word"word_id="2341" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元119'"class="select-word"word_id="2361" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkbook.png',moveTo:'word_template',label:'單元120'"class="select-word"word_id="2381" ></li>
+
+		 </ul> 
+		
+     </div>
+	 
+<div id="select_ch_7" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(七)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元121'"class="select-word"word_id="2401" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元122'"class="select-word"word_id="2421" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元123'"class="select-word"word_id="2441" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元124'"class="select-word"word_id="2461" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元125'"class="select-word"word_id="2481" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元126'"class="select-word"word_id="2501" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元127'"class="select-word"word_id="2521" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元128'"class="select-word"word_id="2541" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元129'"class="select-word"word_id="2561" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元130'"class="select-word"word_id="2581" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元131'"class="select-word"word_id="2601" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元132'"class="select-word"word_id="2621" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元133'"class="select-word"word_id="2641" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元134'"class="select-word"word_id="2661" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元135'"class="select-word"word_id="2681" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元136'"class="select-word"word_id="2701" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元137'"class="select-word"word_id="2721" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元138'"class="select-word"word_id="2741" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元139'"class="select-word"word_id="2761" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenbook.png',moveTo:'word_template',label:'單元140'"class="select-word"word_id="2781" ></li>
+
+		 </ul> 
+		
+     </div>
+
+
+<div id="select_ch_8" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'back',moveTo:'learn list'">單元(八)</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元141'"class="select-word"word_id="2801" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元142'"class="select-word"word_id="2821" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元143'"class="select-word"word_id="2841" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元144'"class="select-word"word_id="2861" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元145'"class="select-word"word_id="2881" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元146'"class="select-word"word_id="2901" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元147'"class="select-word"word_id="2921" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元148'"class="select-word"word_id="2941" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元149'"class="select-word"word_id="2961" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元150'"class="select-word"word_id="2981" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元151'"class="select-word"word_id="3001" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元152'"class="select-word"word_id="3021" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元153'"class="select-word"word_id="3041" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元154'"class="select-word"word_id="3061" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元155'"class="select-word"word_id="3081" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元156'"class="select-word"word_id="3101" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元157'"class="select-word"word_id="3121" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元158'"class="select-word"word_id="3141" ></li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangebook.png',moveTo:'word_template',label:'單元159'"class="select-word"word_id="3161" ></li>
+
+
+		 </ul> 
+		
+     </div>
+	 
+	 
+	 
+	<div id="test list" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">小試身手</h1>
+	   <ul data-dojo-type="dojox/mobile/RoundRectList">	                   
+	        <ul data-dojo-type="dojox/mobile/RoundRectList">
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluepen.png',moveTo:'select_test_ch_1',label:'單 元 (一)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/redpen.png',moveTo:'select_test_ch_2',label:'單 元 (二)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/yellowpen.png',moveTo:'select_test_ch_3',label:'單 元 (三)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/garypen.png',moveTo:'select_test_ch_4',label:'單 元 (四)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/bluexpen.png',moveTo:'select_test_ch_5',label:'單 元 (五)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/pinkpen.png',moveTo:'select_test_ch_6',label:'單 元 (六)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/greenpen.png',moveTo:'select_test_ch_7',label:'單 元 (七)'"></li>
+				 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="icon:'images/orangepen.png',moveTo:'select_test_ch_8',label:'單 元 (八)'"></li>
+	   </ul>
+	
+		 <ul data-dojo-type="dojox/mobile/TabBar"
+			data-dojo-props='iconBase:"images/tab-icons.png"'>
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="learn list"
+			  data-dojo-props='iconPos1:"0,0,29,29",
+							   iconPos2:"29,0,29,29"'>學習單字</li>
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="test list"
+			  data-dojo-props='iconPos1:"0,29,29,29",
+							   iconPos2:"29,29,29,29",
+							   selected:true'>小試身手</li>					   
+		  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="setting"
+			  data-dojo-props= 'iconPos1:"0,116,29,29",
+							   iconPos2:"29,116,29,29"'>設定</li>
+		 </ul>   	
+
+		 
+     </div> 
+	 
+
+	 
+     <div id="select_test_ch_1" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+	   <ul data-dojo-type="dojox/mobile/RoundRectList">
+		
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="1">單元1</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="21">單元2</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="41">單元3</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="61">單元4</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="81">單元5</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="101">單元6</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="121">單元7</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="141">單元8</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="161">單元9</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="181">單元10</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="201">單元11</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="221">單元12</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="241">單元13</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="261">單元14</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="281">單元15</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="301">單元16</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="321">單元17</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="341">單元18</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="361">單元19</span> </li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/bluepen.png',moveTo:'test_template_odd'" class="select-test" test_id="381">單元20</span> </li>
+	   
+	   </ul>
+	   
+     </div>
+	 
+	 <div id="select_test_ch_2" data-dojo-type="dojox/mobile/View">
+		   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+		   <ul data-dojo-type="dojox/mobile/RoundRectList">			
+
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="401">單元21</span> </li>		   
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="421">單元22</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="441">單元23</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="461">單元24</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="481">單元25</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="501">單元26</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="521">單元27</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="541">單元28</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="561">單元29</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="581">單元30</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="601">單元31</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="621">單元32</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="641">單元33</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="661">單元34</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="681">單元35</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="701">單元36</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="721">單元37</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="741">單元38</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="761">單元39</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'left',icon:'images/redpen.png',moveTo:'test_template_odd'" class="select-test"test_id="781">單元40</span> </li>
+
+			
+		
+		   </ul>
+		   
+		 </div>	 
+		 
+	 <div id="select_test_ch_3" data-dojo-type="dojox/mobile/View">
+		   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+		   <ul data-dojo-type="dojox/mobile/RoundRectList">
+			
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="801">單元41</span> </li>			
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="821">單元42</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="841">單元43</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="861">單元44</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="881">單元45</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="901">單元46</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="921">單元47</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="941">單元48</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="961">單元49</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="981">單元50</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1001">單元51</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1021">單元52</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1041">單元53</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1061">單元54</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1081">單元55</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1101">單元56</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1121">單元57</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1141">單元58</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1161">單元59</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/yellowpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1181">單元60</span> </li>
+				
+		   </ul>
+		   
+		 </div>	 		 
+		 
+		 <div id="select_test_ch_4" data-dojo-type="dojox/mobile/View">
+		   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+		   <ul data-dojo-type="dojox/mobile/RoundRectList">
+	
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1201">單元61</span> </li>	
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1221">單元62</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1241">單元63</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1261">單元64</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1281">單元65</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1301">單元66</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1321">單元67</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1341">單元68</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1361">單元69</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1381">單元70</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1401">單元71</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1421">單元72</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1441">單元73</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1461">單元74</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1481">單元75</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1501">單元76</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1521">單元77</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1541">單元78</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1561">單元79</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/garypen.png',moveTo:'test_template_odd'" class="select-test"test_id="1581">單元80</span> </li>
+		
+
+		
+		   </ul>
+		   
+		 </div>	 		 	 
+
+		 
+		 <div id="select_test_ch_5" data-dojo-type="dojox/mobile/View">
+		   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+		   <ul data-dojo-type="dojox/mobile/RoundRectList">
+
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1601">單元81</span> </li>		   
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1621">單元82</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1641">單元83</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1661">單元84</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1681">單元85</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1701">單元86</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1721">單元87</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1741">單元88</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1761">單元89</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1781">單元90</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1801">單元91</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1821">單元92</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1841">單元93</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1861">單元94</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1881">單元95</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1901">單元96</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1921">單元97</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1941">單元98</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1961">單元99</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/bluexpen.png',moveTo:'test_template_odd'" class="select-test"test_id="1981">單元100</span> </li>
+					
+
+		   </ul>
+		   
+		 </div>	 		 	 
+		 
+	     <div id="select_test_ch_6" data-dojo-type="dojox/mobile/View">
+		   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+		   <ul data-dojo-type="dojox/mobile/RoundRectList">
+						
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2001">單元101</span> </li>			
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2021">單元102</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2041">單元103</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2061">單元104</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2081">單元105</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2101">單元106</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2121">單元107</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2141">單元108</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2161">單元109</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2181">單元110</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2201">單元111</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2221">單元112</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2241">單元113</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2261">單元114</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2281">單元115</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2301">單元116</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2321">單元117</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2341">單元118</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2361">單元119</span> </li>
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/pinkpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2381">單元120</span> </li>
+
+		
+		   </ul>
+		   
+		 </div>	 		 	 
+		 
+		 <div id="select_test_ch_7" data-dojo-type="dojox/mobile/View">
+		   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+		   <ul data-dojo-type="dojox/mobile/RoundRectList">			
+			
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2401">單元121</span> </li>			
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2421">單元122</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2441">單元123</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2461">單元124</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2481">單元125</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2501">單元126</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2521">單元127</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2541">單元128</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2561">單元129</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2581">單元130</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2601">單元131</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2621">單元132</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2641">單元133</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2661">單元134</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2681">單元135</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2701">單元136</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2721">單元137</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2741">單元138</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2761">單元139</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/greenpen.png',moveTo:'test_template_odd'" class="select-test"test_id="2781">單元140</span> </li>
+		
+		   </ul>
+		   
+		 </div>	 		 	 	 
+		 
+	<div id="select_test_ch_8" data-dojo-type="dojox/mobile/View">
+		   <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'test list'">選擇測驗單元</h1>
+		   <ul data-dojo-type="dojox/mobile/RoundRectList">								
+			
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2801">單元141</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2821">單元142</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2841">單元143</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2861">單元144</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2881">單元145</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2901">單元146</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2921">單元147</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2941">單元148</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2961">單元149</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="2981">單元150</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3001">單元151</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3021">單元152</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3041">單元153</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3061">單元154</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3081">單元155</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3101">單元156</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3121">單元157</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3141">單元158</span> </li>
+				<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout:'left',icon:'images/orangepen.png',moveTo:'test_template_odd'" class="select-test"test_id="3161">單元159</span> </li>
+
+		   </ul>
+		   
+		 </div>	 		 	 	 
+		 	 
+<!-- ---------------------------------------------------- -->	 
+<div id="word_template" class="word_template" data-dojo-type="dojox/mobile/View">
+
+	<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Finish',moveTo:'learn list'">學習單字</h1>
+	<ul data-dojo-type="dojox/mobile/RoundRectList">
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="word_chinese"></div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="word_english"></div> </li>
+			<textarea class="word-note" word_id="" data-dojo-type="dojox/mobile/TextArea"rows="5" cols="45" placeHolder="Enter your note..."></textarea>
+			<span data-dojo-type="dojox/mobile/ToolBarButton"class="word-note-save" word_id="" data-dojo-props="layout: 'left'">儲存</span> </li>
+			
+			 <audio data-dojo-type="dojox/mobile/Audio" controls style="width:45px">
+			 <source src="audio/absentminded.wav" type="audio/wav">  
+		     </audio>
+			
+	</ul>
+			<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'word_template'" word_id="" class="back-word odd">上一個單字</span>
+			<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'word_template'" word_id="" class="next-word odd">下一個單字</span>
+			<span word_id="" class="current-word" />
+			
+	<ul data-dojo-type="dojox/mobile/TabBar"
+		data-dojo-props='iconBase:"images/tab-icons.png"'>
+	  <li data-dojo-type="dojox/mobile/TabBarButton"
+		  data-dojo-props='iconPos1:"0,0,29,29",
+						   iconPos2:"29,0,29,29",
+						   selected:true'>學習單字</li>
+	  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="test list"
+		  data-dojo-props='iconPos1:"0,29,29,29",
+						   iconPos2:"29,29,29,29"'>小試身手</li>					   
+	  <li data-dojo-type="dojox/mobile/TabBarButton" moveTo="setting"
+		  data-dojo-props= 'iconPos1:"0,116,29,29",
+						   iconPos2:"29,116,29,29"'>設定</li>
+	</ul>   	
+			
+</div>
+
+<!-- ---------------------------------------------------- -->	 
+
+<div id="word_template_even" class="word_template" data-dojo-type="dojox/mobile/View">
+
+	<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Finish ',moveTo:'learn list'">學習單字</h1>
+	<ul data-dojo-type="dojox/mobile/RoundRectList">
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="word_chinese"></div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="word_english"></div> </li>
+			<textarea class="word-note" word_id="" data-dojo-type="dojox/mobile/TextArea"rows="5" cols="45" placeHolder="Enter your note..."></textarea>
+			<span data-dojo-type="dojox/mobile/ToolBarButton"class="word-note-save" word_id="" data-dojo-props="layout: 'left'">儲存</span> </li>
+			<span class="word_english" word_english="" data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left'">發音</span> </li></ul>
+			<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'word_template_even'" word_id="" class="back-word odd">上一個單字</span> </li>
+			<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'word_template_even'" word_id="" class="next-word odd">下一個單字</span> </li>
+</div>
+
+
+
+<div id="word_template_odd" class="word_template" data-dojo-type="dojox/mobile/View">
+
+	<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Finish',moveTo:'learn list'">學習單字</h1>
+	<ul data-dojo-type="dojox/mobile/RoundRectList">
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="word_chinese"></div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="word_english"></div> </li>
+			<textarea class="word-note" word_id="" data-dojo-type="dojox/mobile/TextArea"rows="5" cols="45" placeHolder="Enter your note..."></textarea>
+			<span data-dojo-type="dojox/mobile/ToolBarButton"class="word-note-save" word_id="" data-dojo-props="layout: 'left'">儲存</span> </li>
+			<span class="word_english" word_english="" data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left'">發音</span> </li></ul>
+			<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'word_template_even'" word_id="" class="back-word even">上一個單字</span> </li>
+			<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'word_template_even'" word_id="" class="next-word even">下一個單字</span> </li>
+</div>
+
+<!-- ---------------------------------------------------- -->	 
+	 
+
+<!-- ----------------------------------------------------------------
+  -- test_template start 
+  -- ---------------------------------------------------------------- -->
+
+<div id="test_template_odd" class="test_template" data-dojo-type="dojox/mobile/View">
+<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'test list'">小試身手</h1>
+<ul data-dojo-type="dojox/mobile/RoundRectList">
+<li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">請選出正確的英文單字</li>
+<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="question_chinese"></div> </li>
+<li data-dojo-type="dojox/mobile/ListItem"><span class="question_english" question_english="" data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'center',moveTo:'xx'" >發音</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',alert:'xx'" class="option-0 option"></span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'xx'" class="option-1 option"></span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'xx'" class="option-2 option"></span> </li>
+</ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'test_template_even'" test_id="" class="next-test even">下一個單字</span> </li>
+</div>
+
+<div id="test_template_even" class="test_template" data-dojo-type="dojox/mobile/View">
+<h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'test list'">小試身手</h1>
+<ul data-dojo-type="dojox/mobile/RoundRectList">
+<li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">請選出正確的英文單字</li>
+<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center" class="question_chinese"></div> </li>
+<li data-dojo-type="dojox/mobile/ListItem"><span class="question_english" question_english="" data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'center',moveTo:'xx'" >發音</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',alert:'xx'" class="option-0 option"></span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'xx'" class="option-1 option"></span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'xx'" class="option-2 option"></span> </li>
+</ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'test_template_odd'" test_id="" class="next-test odd">下一個單字</span> </li>
+</div>
+
+
+<!-- ----------------------------------------------------------------
+  -- test_template end
+  -- ---------------------------------------------------------------- -->
+
+
+
+
+
+    </body>
+</html>

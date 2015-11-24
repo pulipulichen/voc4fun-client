@@ -1,0 +1,1 @@
+{"word_chinese":"用文火慢慢煨燉","word_english":"stew","test_options":["stew","stray","suffocate"]}

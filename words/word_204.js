@@ -1,0 +1,1 @@
+{"word_chinese":"查(帳)","word_english":"audit","test_options":["audit","backbone","beloved"]}

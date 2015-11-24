@@ -1,0 +1,1 @@
+{"word_chinese":"世界主義者","word_english":"cosmopolitan","test_options":["cosmopolitan","crackdown","custody"]}

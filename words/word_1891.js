@@ -1,0 +1,1 @@
+{"word_chinese":"景色;展望;觀點","word_english":"outlook","test_options":["outlook","oxide","patronage"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"髮型","word_english":"hairstyle","test_options":["hairstyle","hazard","homosexual"]}

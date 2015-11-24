@@ -1,0 +1,1 @@
+{"word_chinese":"連在外套上的)兜帽","word_english":"hood(","test_options":["hood(","hurdle","incline"]}

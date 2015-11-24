@@ -1,0 +1,1 @@
+{"word_chinese":"孔，裂口；通風孔；吐露","word_english":"vent","test_options":["vent","vice-president","ware"]}

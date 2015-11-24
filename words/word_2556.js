@@ -1,0 +1,1 @@
+{"word_chinese":"悶死，扼殺","word_english":"smother","test_options":["smother","soften","sponge"]}

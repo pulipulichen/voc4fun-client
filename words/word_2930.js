@@ -1,0 +1,1 @@
+{"word_chinese":"三重的","word_english":"triple","test_options":["triple","turbulent","unfair"]}

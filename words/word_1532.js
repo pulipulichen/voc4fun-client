@@ -1,0 +1,1 @@
+{"word_chinese":"降落","word_english":"landing","test_options":["landing","legislator","living"]}

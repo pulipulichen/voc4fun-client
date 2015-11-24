@@ -1,0 +1,1 @@
+{"word_chinese":"衷心的","word_english":"hearty","test_options":["hearty","heterosexual","hygiene"]}

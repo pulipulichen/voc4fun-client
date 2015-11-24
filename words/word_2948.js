@@ -1,0 +1,1 @@
+{"word_chinese":"渦)輪機","word_english":"turbine(","test_options":["turbine(","uncertainty","unusually"]}

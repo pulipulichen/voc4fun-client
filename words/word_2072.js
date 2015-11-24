@@ -1,0 +1,1 @@
+{"word_chinese":"偏見","word_english":"prejudice","test_options":["prejudice","pretext","propeller"]}

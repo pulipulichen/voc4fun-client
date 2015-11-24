@@ -1,0 +1,1 @@
+{"word_chinese":"裝置;安裝","word_english":"installation","test_options":["installation","intent","ivy"]}

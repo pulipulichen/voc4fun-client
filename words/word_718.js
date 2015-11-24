@@ -1,0 +1,1 @@
+{"word_chinese":"狂熱崇拜，迷信(偶像)","word_english":"cult","test_options":["cult","day-to-day","denote"]}

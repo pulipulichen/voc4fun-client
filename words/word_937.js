@@ -1,0 +1,1 @@
+{"word_chinese":"逐出;吐出","word_english":"eject","test_options":["eject","embryo","equilibrium"]}

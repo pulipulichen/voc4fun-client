@@ -1,0 +1,1 @@
+{"word_chinese":"不受歡迎的","word_english":"unpopular","test_options":["unpopular","urgency","vibrate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"特許的","word_english":"chartered","test_options":["chartered","circuit","collector"]}

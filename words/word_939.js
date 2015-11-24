@@ -1,0 +1,1 @@
+{"word_chinese":"選舉的；選舉人的","word_english":"electoral","test_options":["electoral","emigrant","erode"]}

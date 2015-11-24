@@ -1,0 +1,1 @@
+{"word_chinese":"分裂；脫離","word_english":"separatism","test_options":["separatism","shaped","sinister"]}

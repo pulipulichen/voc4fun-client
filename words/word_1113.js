@@ -1,0 +1,1 @@
+{"word_chinese":"配合;裝置;適當的","word_english":"fitting","test_options":["fitting","flutter","fruitful"]}

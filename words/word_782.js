@@ -1,0 +1,1 @@
+{"word_chinese":"損耗;用盡","word_english":"deplete","test_options":["deplete","deter","disciplinary"]}

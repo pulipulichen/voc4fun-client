@@ -1,0 +1,1 @@
+{"word_chinese":"空運","word_english":"airlift","test_options":["airlift","ally","appendix"]}

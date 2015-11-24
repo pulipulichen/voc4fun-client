@@ -1,0 +1,1 @@
+{"word_chinese":"課程提綱","word_english":"syllabus","test_options":["syllabus","tally","terrorist"]}

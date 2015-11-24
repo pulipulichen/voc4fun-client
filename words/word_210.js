@@ -1,0 +1,1 @@
+{"word_chinese":"親筆，自署","word_english":"autograph","test_options":["autograph","balanced","bewilder"]}

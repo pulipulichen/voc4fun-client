@@ -1,0 +1,1 @@
+{"word_chinese":"表示不同意、輕蔑、驚愕、焦躁等時)哼鼻子","word_english":"snort(","test_options":["snort(","someday","sprint"]}

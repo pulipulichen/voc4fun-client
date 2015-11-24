@@ -1,0 +1,1 @@
+{"word_chinese":"租借(土地)","word_english":"lease","test_options":["lease","liable","lollipop"]}

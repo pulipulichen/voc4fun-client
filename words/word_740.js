@@ -1,0 +1,1 @@
+{"word_chinese":"使聾","word_english":"deafen","test_options":["deafen","defendant","detection"]}

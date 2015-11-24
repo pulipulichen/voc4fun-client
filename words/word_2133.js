@@ -1,0 +1,1 @@
+{"word_chinese":"成)比例的","word_english":"proportional(","test_options":["proportional(","prune","rack"]}

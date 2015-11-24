@@ -1,0 +1,1 @@
+{"word_chinese":"損害重大的;不幸的","word_english":"disastrous","test_options":["disastrous","dismantle","dome"]}

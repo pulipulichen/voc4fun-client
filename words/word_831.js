@@ -1,0 +1,1 @@
+{"word_chinese":"直接地","word_english":"directly","test_options":["directly","discriminate","divorced"]}

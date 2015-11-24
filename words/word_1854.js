@@ -1,0 +1,1 @@
+{"word_chinese":"公開地","word_english":"openly","test_options":["openly","oriental","packaging"]}

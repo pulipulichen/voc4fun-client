@@ -1,0 +1,1 @@
+{"word_chinese":"專利(權)","word_english":"patent","test_options":["patent","penis","pier"]}

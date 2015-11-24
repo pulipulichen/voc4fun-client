@@ -1,0 +1,1 @@
+{"word_chinese":"在…之先","word_english":"precede","test_options":["precede","premise","profound"]}

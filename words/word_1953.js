@@ -1,0 +1,1 @@
+{"word_chinese":"孔雀","word_english":"peacock","test_options":["peacock","peril(","pipeline"]}

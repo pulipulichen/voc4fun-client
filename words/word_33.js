@@ -1,0 +1,1 @@
+{"word_chinese":"粉刺","word_english":"acne","test_options":["acne","administrator","aisle"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"扣除","word_english":"deduct","test_options":["deduct","deliberate","dew"]}

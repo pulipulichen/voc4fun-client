@@ -1,0 +1,1 @@
+{"word_chinese":"屠殺","word_english":"slaughter","test_options":["slaughter","sneer","specify"]}

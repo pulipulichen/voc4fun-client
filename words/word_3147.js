@@ -1,0 +1,1 @@
+{"word_chinese":"機智的","word_english":"witty","test_options":["witty","yacht","wholesome"]}

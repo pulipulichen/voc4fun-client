@@ -1,0 +1,1 @@
+{"word_chinese":"油膩的","word_english":"fatty","test_options":["fatty","finite","forthcoming"]}

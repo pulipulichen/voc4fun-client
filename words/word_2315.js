@@ -1,0 +1,1 @@
+{"word_chinese":"堅決的","word_english":"resolute","test_options":["resolute","retention","roach"]}

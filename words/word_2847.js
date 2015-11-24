@@ -1,0 +1,1 @@
+{"word_chinese":"王[帝]位；王權","word_english":"throne","test_options":["throne","toil","transition"]}

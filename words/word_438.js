@@ -1,0 +1,1 @@
+{"word_chinese":"龜裂的","word_english":"chapped","test_options":["chapped","cholesterol","coil"]}

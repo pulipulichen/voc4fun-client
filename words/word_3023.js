@@ -1,0 +1,1 @@
+{"word_chinese":"門房；引導","word_english":"usher","test_options":["usher","veil","visa"]}

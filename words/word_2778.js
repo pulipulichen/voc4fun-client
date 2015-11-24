@@ -1,0 +1,1 @@
+{"word_chinese":"曬成棕褐色","word_english":"tan","test_options":["tan","teens","thigh"]}

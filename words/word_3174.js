@@ -1,0 +1,1 @@
+{"word_chinese":"熱心，熱誠","word_english":"zeal","test_options":["zeal","worrying","ware"]}

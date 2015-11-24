@@ -1,0 +1,1 @@
+{"word_chinese":"口語的","word_english":"colloquial","test_options":["colloquial","communicative","concentrated"]}

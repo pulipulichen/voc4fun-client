@@ -1,0 +1,1 @@
+{"word_chinese":"精煉","word_english":"refine","test_options":["refine","rejoice","resent"]}

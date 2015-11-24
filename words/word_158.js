@@ -1,0 +1,1 @@
+{"word_chinese":"弧","word_english":"arc","test_options":["arc","assault","aviation"]}

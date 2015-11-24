@@ -1,0 +1,1 @@
+{"word_chinese":"實質上；大體上","word_english":"substantially","test_options":["substantially","superstition","takeaway"]}

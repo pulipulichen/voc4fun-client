@@ -1,0 +1,1 @@
+{"word_chinese":"憐憫","word_english":"compassion","test_options":["compassion","comprehensive","considering"]}

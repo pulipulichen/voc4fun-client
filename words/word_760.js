@@ -1,0 +1,1 @@
+{"word_chinese":"辯衛者","word_english":"defender","test_options":["defender","density","dictatorship"]}

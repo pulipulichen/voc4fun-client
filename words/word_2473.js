@@ -1,0 +1,1 @@
+{"word_chinese":"警官，巡官","word_english":"sergeant","test_options":["sergeant","sheer","skeptical"]}

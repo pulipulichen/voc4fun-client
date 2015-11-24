@@ -1,0 +1,1 @@
+{"word_chinese":"黑猩猩","word_english":"chimpanzee","test_options":["chimpanzee","clause","come-down"]}

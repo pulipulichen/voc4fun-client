@@ -1,0 +1,1 @@
+{"word_chinese":"幽暗;憂鬱","word_english":"gloom","test_options":["gloom","grate","harmonica"]}

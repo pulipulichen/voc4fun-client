@@ -1,0 +1,1 @@
+{"word_chinese":"可驚歎的人物","word_english":"marvel","test_options":["marvel","melancholy","mixed"]}

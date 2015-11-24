@@ -1,0 +1,1 @@
+{"word_chinese":"熟練的","word_english":"proficient","test_options":["proficient","proposition","quantum"]}

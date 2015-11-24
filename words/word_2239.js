@@ -1,0 +1,1 @@
+{"word_chinese":"招募新兵[人員]","word_english":"recruit","test_options":["recruit","regain","replacement"]}

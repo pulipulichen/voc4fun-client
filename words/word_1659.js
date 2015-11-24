@@ -1,0 +1,1 @@
+{"word_chinese":"大屠殺","word_english":"massacre","test_options":["massacre","mentality","mock"]}

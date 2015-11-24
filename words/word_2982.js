@@ -1,0 +1,1 @@
+{"word_chinese":"簽名承認[擔保]","word_english":"underwrite","test_options":["underwrite","unpleasant","vegetation"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"白膚金髮碧眼的","word_english":"blonde","test_options":["blonde","boost","brochure"]}

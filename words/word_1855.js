@@ -1,0 +1,1 @@
+{"word_chinese":"運轉的;正在使用的","word_english":"operational","test_options":["operational","Oriental","packed"]}

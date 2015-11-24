@@ -1,0 +1,1 @@
+{"word_chinese":"事件的)發生，出現","word_english":"occurrence(","test_options":["occurrence(","opt","overeat"]}

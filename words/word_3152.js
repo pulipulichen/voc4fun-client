@@ -1,0 +1,1 @@
+{"word_chinese":"勞動力","word_english":"workforce","test_options":["workforce","yield","winger"]}

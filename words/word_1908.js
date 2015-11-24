@@ -1,0 +1,1 @@
+{"word_chinese":"勢不可擋的","word_english":"overwhelming","test_options":["overwhelming","parameter","perceive"]}

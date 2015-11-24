@@ -1,0 +1,1 @@
+{"word_chinese":"專家","word_english":"pro","test_options":["pro","promptly","purity"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"調整","word_english":"adjustment","test_options":["adjustment","aerial","ally"]}

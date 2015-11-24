@@ -1,0 +1,1 @@
+{"word_chinese":"完全的，發出(聲音等)；講","word_english":"utter","test_options":["utter","ventilate","vocation"]}

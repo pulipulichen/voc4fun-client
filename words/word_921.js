@@ -1,0 +1,1 @@
+{"word_chinese":"居住","word_english":"dwell","test_options":["dwell","electorate","ensue"]}

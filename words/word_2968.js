@@ -1,0 +1,1 @@
+{"word_chinese":"依然如故的","word_english":"unchanged","test_options":["unchanged","unemployed","utmost"]}

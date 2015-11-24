@@ -1,0 +1,1 @@
+{"word_chinese":"委派;派遣","word_english":"delegation","test_options":["delegation","descriptive","directive"]}

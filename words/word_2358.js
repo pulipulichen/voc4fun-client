@@ -1,0 +1,1 @@
+{"word_chinese":"嘲笑，愚弄，揶揄","word_english":"ridicule","test_options":["ridicule","robust","saturate"]}

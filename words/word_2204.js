@@ -1,0 +1,1 @@
+{"word_chinese":"召集;重行集合","word_english":"rally","test_options":["rally","realm","rehabilitate"]}

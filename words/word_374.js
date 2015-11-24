@@ -1,0 +1,1 @@
+{"word_chinese":"胸像","word_english":"bust","test_options":["bust","carefree","challenging"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"香草","word_english":"vanilla","test_options":["vanilla","vertical","voucher"]}

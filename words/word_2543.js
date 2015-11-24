@@ -1,0 +1,1 @@
+{"word_chinese":"殺害；毀滅","word_english":"slay","test_options":["slay","sniff","specimen"]}

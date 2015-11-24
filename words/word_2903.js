@@ -1,0 +1,1 @@
+{"word_chinese":"一時的；過渡的","word_english":"transient","test_options":["transient","tribal","umpire"]}

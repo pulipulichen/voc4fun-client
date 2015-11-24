@@ -1,0 +1,1 @@
+{"word_chinese":"變數","word_english":"parameter","test_options":["parameter","pathetic","pertain"]}

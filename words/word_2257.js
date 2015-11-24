@@ -1,0 +1,1 @@
+{"word_chinese":"駁斥","word_english":"refute","test_options":["refute","reliance","resonance"]}

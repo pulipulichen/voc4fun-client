@@ -1,0 +1,1 @@
+{"word_chinese":"不一致;異議","word_english":"disagreement","test_options":["disagreement","disintegrate","domain"]}

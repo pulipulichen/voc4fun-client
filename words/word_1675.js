@@ -1,0 +1,1 @@
+{"word_chinese":"令人傷感的","word_english":"melancholy","test_options":["melancholy","mileage","moor("]}

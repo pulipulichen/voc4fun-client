@@ -1,0 +1,1 @@
+{"word_chinese":"眩目的光;用目光表示(嫌惡、輕視)","word_english":"glare","test_options":["glare","governmental","handicraft"]}

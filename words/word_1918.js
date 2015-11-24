@@ -1,0 +1,1 @@
+{"word_chinese":"異教徒","word_english":"pagan","test_options":["pagan","part-time","permissible"]}

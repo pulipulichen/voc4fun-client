@@ -1,0 +1,1 @@
+{"word_chinese":"惡臭","word_english":"stink","test_options":["stink","structural","superiority"]}

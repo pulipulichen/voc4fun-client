@@ -1,0 +1,1 @@
+{"word_chinese":"自動售貨機投錢口","word_english":"slot","test_options":["slot","sober","sperm"]}

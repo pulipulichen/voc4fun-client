@@ -1,0 +1,1 @@
+{"word_chinese":"刺","word_english":"dub","test_options":["dub","ego","engaged"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"煩惱","word_english":"annoyance","test_options":["annoyance","appreciable","asylum"]}

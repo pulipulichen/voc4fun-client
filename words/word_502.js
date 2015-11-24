@@ -1,0 +1,1 @@
+{"word_chinese":"集體的","word_english":"collective","test_options":["collective","commodity","con"]}

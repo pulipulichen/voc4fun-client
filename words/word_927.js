@@ -1,0 +1,1 @@
+{"word_chinese":"異常的","word_english":"eccentric","test_options":["eccentric","eligible","envisage"]}

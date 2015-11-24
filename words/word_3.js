@@ -1,0 +1,1 @@
+{"word_chinese":"縮寫(v.)","word_english":"abbreviate","test_options":["abbreviate","acclaim","advert"]}

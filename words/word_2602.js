@@ -1,0 +1,1 @@
+{"word_chinese":"標本","word_english":"specimen","test_options":["specimen","sprain","steep"]}

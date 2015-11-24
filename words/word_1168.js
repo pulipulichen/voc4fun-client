@@ -1,0 +1,1 @@
+{"word_chinese":"摩擦","word_english":"friction","test_options":["friction","garment","gorilla"]}

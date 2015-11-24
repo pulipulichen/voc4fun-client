@@ -1,0 +1,1 @@
+{"word_chinese":"機靈的；圓滑的","word_english":"slick","test_options":["slick","snort(","spectrum"]}

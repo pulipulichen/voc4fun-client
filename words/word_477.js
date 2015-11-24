@@ -1,0 +1,1 @@
+{"word_chinese":"握緊(拳頭)；咬緊(牙關)","word_english":"clench","test_options":["clench","coherent","compatible"]}

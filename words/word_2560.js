@@ -1,0 +1,1 @@
+{"word_chinese":"抓住；攫取","word_english":"snatch","test_options":["snatch","solicitor","spotlight"]}

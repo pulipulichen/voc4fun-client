@@ -1,0 +1,1 @@
+{"word_chinese":"冗長的","word_english":"lengthy","test_options":["lengthy","lightweight","lottery"]}

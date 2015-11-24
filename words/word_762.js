@@ -1,0 +1,1 @@
+{"word_chinese":"挑釁","word_english":"defiance","test_options":["defiance","depict","differentiate"]}

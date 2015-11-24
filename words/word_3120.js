@@ -1,0 +1,1 @@
+{"word_chinese":"楔形","word_english":"wedge","test_options":["wedge","widow","zoom"]}

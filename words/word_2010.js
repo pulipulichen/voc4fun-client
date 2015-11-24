@@ -1,0 +1,1 @@
+{"word_chinese":"捏","word_english":"pinch","test_options":["pinch","plunge","preface"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"虛偽","word_english":"hypocrisy","test_options":["hypocrisy","impetus","infectious"]}

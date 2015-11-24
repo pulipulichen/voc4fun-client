@@ -1,0 +1,1 @@
+{"word_chinese":"親愛的","word_english":"beloved","test_options":["beloved","bland","bowel"]}

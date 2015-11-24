@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html ng-app="unitApp">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        -->
+        <title>Hello World</title>  
+			
+<!--
+        <script type="text/javascript" src="js/dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+        <script type="text/javascript">
+            //dojo.require("dojox.mobile.parser");
+            //dojo.require("dojox.mobile");
+            //dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
+            require([
+              "dojox/mobile/parser", // (Optional) This mobile app uses declarative programming with fast mobile parser
+              "dojox/mobile",        // (Required) This is a mobile app.
+              "dojox/mobile/compat"  // (Optional) This mobile app supports running on desktop browsers
+            ], function(parser, mobile, compat){ Optional module aliases that can then be referenced inside callback block
+              // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
+            );
+        </script>
+        <link rel="stylesheet" type="text/css" href="js/dojox/mobile/themes/android/android.css" />
+    -->
+        <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
+        <!--<link href="js/dojox/mobile/themes/windows/windows.css" rel="stylesheet"></link>-->
+     <script src="dojo/dojo.js" data-dojo-config="async:true, parseOnLoad:true"></script>
+     <script>
+	 
+       require([
+         "dojox/mobile/parser",    // This mobile app uses declarative programming with fast mobile parser
+         "dojox/mobile",           // This is a mobile app.
+		 "dojox/mobile/TabBar", //shun find
+		 "dojox/mobile/TextArea", //shun find		 
+       ]); // Skip module alias and function block because we're not doing anything special...
+	   
+     </script>
+	  
+		<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="module.js"></script>	
+		
+		</head>
+    <body class="mblIOS6Stripes" style="visibility: hidden;"  ng-controller="UnitCtrl">
+        <!--
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Readya5555</p>
+                
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        -->
+
+	 <div id="login" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props=>Let's Learning English!</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <img alt="" src='images/homepage.png' style="width:60%" >
+				 
+       </ul>
+  <textarea id="username" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="30" placeHolder="請輸入帳號"></textarea>
+  <textarea id="userpassword" data-dojo-type="dojox/mobile/TextArea"  rows="1.5" cols="30" placeHolder="請輸入密碼"></textarea>
+  <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'home page'">登入</span> 
+     </div>
+
+		
+		
+     <div id="home page" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" id="index_heading">首頁</h1>
+   
+
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+		
+			<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'Center', preventTouch:'true'">Let's Learning English!</span></li>
+	        <img alt="" src='images/homepage.png' style="width:70%" >
+			 
+			<li data-dojo-type="dojox/mobile/ListItem">
+				<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'learn list'">學習單字</span> 
+				<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'look note'">查看標註</span> 
+			<li data-dojo-type="dojox/mobile/ListItem">
+			
+				<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'test list'">小試身手</span> 
+				<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'look rank'">我的排名</span> 
+				
+			
+			</li>
+		</ul>
+
+
+     </div>
+	 
+
+     <div id="bar" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'home page'">View 2</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">試試看有沒有成功？</li>		 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bard',label:'去第三頁'"></li>
+		 <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'" ><div id="jquery_jplayer_1" class="cp-jplayer"></div></span> 
+		</ul> 
+		
+
+哈哈!
+
+     </div>
+	 <div id="look note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現自己的所有標註</li>		
+       </ul>
+  
+     </div>
+	 
+	<div id="look rank" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以圖像表示</li>		
+       </ul>
+  
+     </div>
+	 
+	  <div id="learn list" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">選擇學習單元</h1>
+	   <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'Center', preventTouch:'true'">Center</span></li>
+		
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch1_01'">單元01</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch2 01'">單元02</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch3 01'">單元03</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch4 01'">單元04</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch5 01'">單元05</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch6 01'">單元06</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch7 01'">單元07</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch8 01'">單元08</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch9 01'">單元09</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch10 01'">單元10</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch11 01'">單元11</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch12 01'">單元12</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch13 01'">單元13</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch14 01'">單元14</span> </li>
+
+	   </ul>
+
+		 	   
+     </div>
+
+     <div id="test list" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">選擇測驗單元</h1>
+	   <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'Center', preventTouch:'true'">Center</span></li>
+		
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'bar'">單元01</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look note'">單元02</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'bar'">單元03</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元04</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元05</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元06</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元07</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元08</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元09</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元10</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元11</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元12</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元13</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單元14</span> </li>
+     
+	   </ul>
+	   
+     </div>
+
+<div id="ch1_01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元01</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <img alt="" src='images/icon-2.png'  style="width:100%" > 
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">放棄</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">abandon</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch1 01 addnote'" class="add-note">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch1 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch1 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch1 01 addnote" data-dojo-type="dojox/mobile/View">
+  
+	   <h1 data-dojo-type="dojox/mobile/Heading" id="addnote_back" data-dojo-props="back:'完成',moveTo:'ch1_01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  <textarea id="annotation_text" data-dojo-type="dojox/mobile/TextArea"  rows="30" cols="60" placeHolder="Enter comment"></textarea>
+     </div>
+	 
+	 <div id="ch1 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch1 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>
+
+
+<div id="ch1 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元01</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">修道院</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">abbey</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch1 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch1 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch1_01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch1 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch1 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch1 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch1 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch1 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+<div id="ch1 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元01</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">遵守</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">abide</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch1 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch1 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch1 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch1 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch1 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch1 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch1 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>		 
+	 
+	 
+<div id="ch2 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元02</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">嬰兒</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch2 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch2 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch2 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch2 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch2 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch2 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch2 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch2 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元02</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">臨時保姆</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch2 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch2 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch2 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch2 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch2 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch2 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch2 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch2 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch2 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元02</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">單身漢</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch2 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch2 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch2 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch2 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch2 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch2 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch2 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	  
+	 	 
+           
+	<div id="ch3 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元03</h1> 
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">31</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch3 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch3 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch3 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch3 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch3 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch3 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch3 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch3 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元03</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">32</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch3 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch3 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch3 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch3 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch3 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch3 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch3 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch3 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch3 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元03</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">33</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch3 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch3 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch3 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch3 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch3 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch3 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch3 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+	 
+
+	<div id="ch4 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元04</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">41</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch4 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch4 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch4 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch4 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch4 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch4 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch4 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch4 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元04</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">42</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch4 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch4 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch4 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch4 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch4 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch4 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch4 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch4 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch4 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元04</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">43</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch4 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch4 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch4 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch4 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch4 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch4 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch4 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+	 
+		 
+	<div id="ch5 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元05</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">51</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch5 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch5 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch5 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch5 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch5 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch5 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch5 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch5 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元05</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">52</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch5 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch5 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch5 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch5 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch5 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch5 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch5 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch5 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch5 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元05</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">53</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch5 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch5 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch5 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch5 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch5 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch5 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch5 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+	 
+		 
+	<div id="ch6 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元06</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">61</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch6 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch6 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch6 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch6 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch6 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch6 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch6 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch6 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元06</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">62</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch6 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch6 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch6 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch6 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch6 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch6 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch6 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch6 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch6 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元06</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">63</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch6 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch6 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch6 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch6 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch6 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch6 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch6 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+	 
+
+	 <div id="ch7 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元07</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">71</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch7 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch7 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch7 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch7 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch7 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch7 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch7 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch7 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元07</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">72</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch7 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch7 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch7 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch7 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch7 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch7 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch7 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch7 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch7 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元07</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">73</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch7 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch7 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch7 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch7 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch7 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch7 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch7 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+	 <div id="ch8 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元08</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">81</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch8 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch8 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch8 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch8 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch8 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch8 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch8 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch8 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元08</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">82</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch8 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch8 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch8 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch8 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch8 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch8 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch8 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch8 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch8 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元08</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">83</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch8 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch8 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch8 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch8 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch8 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch8 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch8 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+	 <div id="ch9 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元09</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">91</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch9 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch9 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch9 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch9 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch9 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch9 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch9 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch9 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元09</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">92</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch9 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch9 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch9 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch9 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch9 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch9 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch9 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch9 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch9 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元09</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">93</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch9 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch9 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch9 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch9 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch9 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch9 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch9 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+<div id="ch10 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元10</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">101</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch10 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch10 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch10 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch10 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch10 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch10 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch10 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch10 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元10</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">102</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch10 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch10 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch10 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch10 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch10 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch10 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch10 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch10 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch10 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元10</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">103</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch10 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch10 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch10 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch10 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch10 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch10 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch10 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+<div id="ch11 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元11</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">111</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch11 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch11 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch11 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch11 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch11 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch11 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch11 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch11 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元11</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">112</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch11 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch11 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch11 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch11 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch11 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch11 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch11 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch11 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch11 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元11</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">113</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch11 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch11 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch11 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch11 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch11 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch11 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch11 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+
+<div id="ch12 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元12</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">121</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch12 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch12 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch12 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch12 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch12 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch12 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch12 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch12 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元12</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">122</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch12 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch12 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch12 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch12 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch12 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch12 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch12 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch12 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch12 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元12</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">123</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch12 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch12 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch12 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch12 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch12 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch12 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch12 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+
+	 <div id="ch13 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元13</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">131</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch13 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch13 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch13 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch13 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch13 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch13 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch13 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch13 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元13</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">132</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch13 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch13 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch13 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch13 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch13 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch13 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch13 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch13 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch13 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元13</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">133</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch13 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch13 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch13 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch13 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch13 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch13 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch13 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+
+	 <div id="ch14 01" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元14</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">141</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch14 01 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch14 01 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch14 02'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch14 01 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch14 01'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch14 01 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch14 01'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	 <div id="ch14 02" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元14</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">142</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">baby-sister</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch14 02 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch14 02 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch14 01'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch14 03'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch14 02 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch14 02'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch14 02 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch14 02'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	 
+	 
+	  
+	 <div id="ch14 03" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'learn list'">單元14</h1>
+	    <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">143</div> </li>
+		<li data-dojo-type="dojox/mobile/ListItem"> <div data-mobile-layout="center">bachelor</div> </li>
+				
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch14 03 addnote'">新增標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'ch14 03 look all note'">大家的標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">發音●未完成</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'ch14 02'">上一個單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'xx'">下一個單字</span> </li>
+
+     </div>
+	 
+	 
+	 <div id="ch14 03 addnote" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'完成',moveTo:'ch14 03'">新增標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="rightText:">下方為text</li>	
+				 
+       </ul>
+  
+     </div>
+	 
+	 <div id="ch14 03 look all note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'ch14 03'">大家的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現大家的標註</li>		
+       
+	   </ul>
+  
+     </div>	
+
+
+	 
+ 
+    </body>
+</html>

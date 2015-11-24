@@ -1,0 +1,1 @@
+{"word_chinese":"系列(的)","word_english":"serial","test_options":["serial","sheriff","skilled"]}

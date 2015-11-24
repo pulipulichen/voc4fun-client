@@ -1,0 +1,1 @@
+{"word_chinese":"部落的","word_english":"tribal","test_options":["tribal","trustee","underway"]}

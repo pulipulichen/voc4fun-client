@@ -1,0 +1,1 @@
+{"word_chinese":"合併;使成為有限公司","word_english":"incorporate","test_options":["incorporate","inevitably","insulate"]}

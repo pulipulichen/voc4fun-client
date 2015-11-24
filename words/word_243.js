@@ -1,0 +1,1 @@
+{"word_chinese":"路障","word_english":"barricade","test_options":["barricade","belongings","bolster"]}

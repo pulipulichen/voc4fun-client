@@ -1,0 +1,1 @@
+{"word_chinese":"才能","word_english":"aptitude","test_options":["aptitude","aspiration","avert"]}

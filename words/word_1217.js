@@ -1,0 +1,1 @@
+{"word_chinese":"陰暗的;令人沮喪的","word_english":"gloomy","test_options":["gloomy","graze","harness"]}

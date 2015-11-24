@@ -1,0 +1,1 @@
+{"word_chinese":"與…結婚","word_english":"wed","test_options":["wed","wholly","zipper"]}

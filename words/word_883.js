@@ -1,0 +1,1 @@
+{"word_chinese":"打擾人的","word_english":"disturbing","test_options":["disturbing","dosage","elevate"]}

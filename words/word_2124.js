@@ -1,0 +1,1 @@
+{"word_chinese":"迅速的；即刻的","word_english":"promptly","test_options":["promptly","prototype","query"]}

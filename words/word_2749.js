@@ -1,0 +1,1 @@
+{"word_chinese":"易受影響的；易感染的","word_english":"susceptible","test_options":["susceptible","tackle","terminology"]}

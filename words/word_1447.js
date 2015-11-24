@@ -1,0 +1,1 @@
+{"word_chinese":"隔離;使絕緣","word_english":"insulate","test_options":["insulate","interruption","jeopardize"]}

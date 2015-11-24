@@ -1,0 +1,1 @@
+{"word_chinese":"胡桃","word_english":"walnut","test_options":["walnut","weird","wretched"]}

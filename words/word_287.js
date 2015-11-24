@@ -1,0 +1,1 @@
+{"word_chinese":"荒涼的","word_english":"bleak","test_options":["bleak","bondage","broadcaster"]}

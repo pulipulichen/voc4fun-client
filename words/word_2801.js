@@ -1,0 +1,1 @@
+{"word_chinese":"速度，拍子","word_english":"tempo","test_options":["tempo","testify","tinkle"]}

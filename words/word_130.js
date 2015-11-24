@@ -1,0 +1,1 @@
+{"word_chinese":"有生氣的;賦與…以生命","word_english":"animate","test_options":["animate","applicable","astronomer"]}

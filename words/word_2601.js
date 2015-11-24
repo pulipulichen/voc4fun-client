@@ -1,0 +1,1 @@
+{"word_chinese":"詳細說明","word_english":"specify","test_options":["specify","spouse","steamer"]}

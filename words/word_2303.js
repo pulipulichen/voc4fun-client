@@ -1,0 +1,1 @@
+{"word_chinese":"譴責","word_english":"reproach","test_options":["reproach","respective","rigid"]}

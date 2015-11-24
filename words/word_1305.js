@@ -1,0 +1,1 @@
+{"word_chinese":"隱者","word_english":"hermit","test_options":["hermit","honk","imminent"]}

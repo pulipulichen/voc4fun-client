@@ -1,0 +1,1 @@
+{"word_chinese":"惡化","word_english":"worsen","test_options":["worsen","zinc","withhold"]}

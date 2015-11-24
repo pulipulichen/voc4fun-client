@@ -1,0 +1,1 @@
+{"word_chinese":"傲慢的","word_english":"assuming","test_options":["assuming","auction","barricade"]}

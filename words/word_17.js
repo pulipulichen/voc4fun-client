@@ -1,0 +1,1 @@
+{"word_chinese":"豐富的","word_english":"abundant","test_options":["abundant","acting","aftermath"]}

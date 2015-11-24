@@ -1,0 +1,1 @@
+{"word_chinese":"實體;存在(物)","word_english":"entity","test_options":["entity","erupt(","existing"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"專長","word_english":"specialty","test_options":["specialty","spontaneous","statistics"]}

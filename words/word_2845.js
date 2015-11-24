@@ -1,0 +1,1 @@
+{"word_chinese":"興旺，繁榮","word_english":"thrive","test_options":["thrive","toddle(","transistor"]}

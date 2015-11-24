@@ -1,0 +1,1 @@
+{"word_chinese":"實現;親身體會","word_english":"realization","test_options":["realization","rectify","remaining"]}

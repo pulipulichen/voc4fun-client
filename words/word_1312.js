@@ -1,0 +1,1 @@
+{"word_chinese":"小山)山腰","word_english":"hillside(","test_options":["hillside(","horsepower","imposing"]}

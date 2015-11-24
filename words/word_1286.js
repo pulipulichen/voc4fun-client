@@ -1,0 +1,1 @@
+{"word_chinese":"迎頭的；(衝突等)正面的","word_english":"head-on","test_options":["head-on","hermit","hurdle"]}

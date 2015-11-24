@@ -1,0 +1,1 @@
+{"word_chinese":"思想等的)鍛煉;熔鐵爐","word_english":"forge(","test_options":["forge(","framework","geographical"]}

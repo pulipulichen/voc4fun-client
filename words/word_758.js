@@ -1,0 +1,1 @@
+{"word_chinese":"缺陷","word_english":"defect","test_options":["defect","denote","diameter"]}

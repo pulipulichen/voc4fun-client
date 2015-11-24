@@ -1,0 +1,1 @@
+{"word_chinese":"臭名昭彰的","word_english":"notorious","test_options":["notorious","oblige","oriental"]}

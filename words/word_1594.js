@@ -1,0 +1,1 @@
+{"word_chinese":"有負荷的，裝著貨的","word_english":"loaded","test_options":["loaded","lottery","marsh"]}

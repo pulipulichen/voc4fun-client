@@ -1,0 +1,1 @@
+{"word_chinese":"計數的簽籌，貨簽","word_english":"tally","test_options":["tally","tedious","thickness"]}

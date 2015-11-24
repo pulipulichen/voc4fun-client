@@ -1,0 +1,1 @@
+{"word_chinese":"槽；箱；貯水池，坦克","word_english":"tanker","test_options":["tanker","tempest","threshold"]}

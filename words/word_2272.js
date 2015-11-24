@@ -1,0 +1,1 @@
+{"word_chinese":"命令撤離","word_english":"relegate","test_options":["relegate","reorganize","retail"]}

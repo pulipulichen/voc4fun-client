@@ -1,0 +1,1 @@
+{"word_chinese":"錨","word_english":"anchor","test_options":["anchor","appalling","assured"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"訓令；指令","word_english":"mandate","test_options":["mandate","massage","millionaire"]}

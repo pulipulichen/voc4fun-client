@@ -1,0 +1,1 @@
+{"word_chinese":"脆弱的;易碎的","word_english":"fragile","test_options":["fragile","fume(","glitter"]}

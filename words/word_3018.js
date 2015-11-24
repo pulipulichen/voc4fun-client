@@ -1,0 +1,1 @@
+{"word_chinese":"升起；起義","word_english":"uprising","test_options":["uprising","vanity","vineyard"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"查明","word_english":"ascertain","test_options":["ascertain","athletics","banking"]}

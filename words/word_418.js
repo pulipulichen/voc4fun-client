@@ -1,0 +1,1 @@
+{"word_chinese":"名人","word_english":"celebrity","test_options":["celebrity","chapel","clench"]}

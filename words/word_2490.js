@@ -1,0 +1,1 @@
+{"word_chinese":"剪斷；搶奪；騙取","word_english":"shear","test_options":["shear","shrine","slot"]}

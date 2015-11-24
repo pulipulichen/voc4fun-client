@@ -1,0 +1,1 @@
+{"word_chinese":"百葉窗","word_english":"shutter","test_options":["shutter","skilled","sociology"]}

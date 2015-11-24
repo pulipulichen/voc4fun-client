@@ -1,0 +1,1 @@
+{"word_chinese":"可怕的","word_english":"monstrous","test_options":["monstrous","mouthpiece","newscast"]}

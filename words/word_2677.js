@@ -1,0 +1,1 @@
+{"word_chinese":"弄直；矯正","word_english":"straighten","test_options":["straighten","stun","superstitious"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"博覽會","word_english":"exposition","test_options":["exposition","facilitate","fitting"]}

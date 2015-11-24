@@ -1,0 +1,1 @@
+{"word_chinese":"可以允許的","word_english":"permissible","test_options":["permissible","pharmacy","poke("]}

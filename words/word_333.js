@@ -1,0 +1,1 @@
+{"word_chinese":"寬度","word_english":"breadth","test_options":["breadth","broker","cardinal"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"渴望","word_english":"yearn","test_options":["yearn","woo","would-be"]}

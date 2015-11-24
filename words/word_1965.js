@@ -1,0 +1,1 @@
+{"word_chinese":"退休金","word_english":"pension","test_options":["pension","personnel","plead"]}

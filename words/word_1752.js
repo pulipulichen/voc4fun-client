@@ -1,0 +1,1 @@
+{"word_chinese":"使人感動的;移動的","word_english":"moving","test_options":["moving","nanny","noticeable"]}

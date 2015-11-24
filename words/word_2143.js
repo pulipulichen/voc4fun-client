@@ -1,0 +1,1 @@
+{"word_chinese":"原型;試製型式","word_english":"prototype","test_options":["prototype","purely","raid"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"轟炸機","word_english":"bomber","test_options":["bomber","boxer","build-up"]}

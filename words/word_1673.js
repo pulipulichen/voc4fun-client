@@ -1,0 +1,1 @@
+{"word_chinese":"深思","word_english":"meditate","test_options":["meditate","migrate","monstrous"]}

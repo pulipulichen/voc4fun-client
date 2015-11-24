@@ -1,0 +1,1 @@
+{"word_chinese":"突破(難關)","word_english":"hurdle","test_options":["hurdle","imminent","industrialized"]}

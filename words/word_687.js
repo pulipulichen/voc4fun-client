@@ -1,0 +1,1 @@
+{"word_chinese":"束縛;受拘束的","word_english":"cramp","test_options":["cramp","crude","decimal"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"岩石多的","word_english":"rocky","test_options":["rocky","ruthless","sculpture"]}

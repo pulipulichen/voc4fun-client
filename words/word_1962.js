@@ -1,0 +1,1 @@
+{"word_chinese":"滲透;洞察","word_english":"penetrate","test_options":["penetrate","persevere","playful"]}

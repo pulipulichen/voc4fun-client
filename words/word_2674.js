@@ -1,0 +1,1 @@
+{"word_chinese":"彎身；彎腰","word_english":"stoop.","test_options":["stoop.","stuck","superpower"]}

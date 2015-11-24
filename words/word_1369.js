@@ -1,0 +1,1 @@
+{"word_chinese":"動力;推動","word_english":"impetus","test_options":["impetus","incorporate","innovation"]}

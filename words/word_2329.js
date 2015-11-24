@@ -1,0 +1,1 @@
+{"word_chinese":"作為最後結果的；合成的","word_english":"resultant","test_options":["resultant","revival","ruby"]}

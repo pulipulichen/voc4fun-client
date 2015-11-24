@@ -1,0 +1,1 @@
+{"word_chinese":"閃爍","word_english":"glisten","test_options":["glisten","grasshopper","hardy"]}

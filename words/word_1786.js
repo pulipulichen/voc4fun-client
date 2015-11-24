@@ -1,0 +1,1 @@
+{"word_chinese":"鄰近的","word_english":"neighboring","test_options":["neighboring","norm","offering"]}

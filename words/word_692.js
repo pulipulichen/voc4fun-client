@@ -1,0 +1,1 @@
+{"word_chinese":"創造者","word_english":"creator","test_options":["creator","crunch","dedicated"]}

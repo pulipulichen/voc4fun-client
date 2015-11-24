@@ -1,0 +1,1 @@
+{"word_chinese":"茂盛；興旺","word_english":"flourish","test_options":["flourish","forthcoming","gallop"]}

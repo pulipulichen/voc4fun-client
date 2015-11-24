@@ -1,0 +1,1 @@
+{"word_chinese":"大規模的","word_english":"large-scale","test_options":["large-scale","legislature","lizard"]}

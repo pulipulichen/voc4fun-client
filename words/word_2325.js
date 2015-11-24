@@ -1,0 +1,1 @@
+{"word_chinese":"受約束的；克制的","word_english":"restrained","test_options":["restrained","reveal","roughly"]}

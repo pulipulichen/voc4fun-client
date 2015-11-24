@@ -1,0 +1,1 @@
+{"word_chinese":"囚犯(＝convict)","word_english":"con","test_options":["con","conform","contingent"]}

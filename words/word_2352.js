@@ -1,0 +1,1 @@
+{"word_chinese":"華麗的文詞；花言巧語","word_english":"rhetoric","test_options":["rhetoric","rite","sandal"]}

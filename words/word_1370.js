@@ -1,0 +1,1 @@
+{"word_chinese":"含蓄的;內含的","word_english":"implicit","test_options":["implicit","incredible","innovative"]}

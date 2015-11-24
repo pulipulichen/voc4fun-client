@@ -1,0 +1,1 @@
+{"word_chinese":"遺產","word_english":"heritage","test_options":["heritage","homosexual","immigrate"]}

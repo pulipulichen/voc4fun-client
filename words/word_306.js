@@ -1,0 +1,1 @@
+{"word_chinese":"束縛","word_english":"bondage","test_options":["bondage","boxing","bulge"]}

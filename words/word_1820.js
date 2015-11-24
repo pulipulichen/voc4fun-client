@@ -1,0 +1,1 @@
+{"word_chinese":"討厭[有害]的東西","word_english":"nuisance","test_options":["nuisance","obsession","originate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"儀式的，禮儀的","word_english":"ritual","test_options":["ritual","ruling","scrape"]}

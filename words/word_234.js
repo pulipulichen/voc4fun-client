@@ -1,0 +1,1 @@
+{"word_chinese":"旗幟","word_english":"banner","test_options":["banner","bazaar","blues"]}

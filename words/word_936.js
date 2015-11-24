@@ -1,0 +1,1 @@
+{"word_chinese":"自我","word_english":"ego","test_options":["ego","embrace","equator"]}

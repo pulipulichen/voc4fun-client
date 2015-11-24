@@ -1,0 +1,1 @@
+{"word_chinese":"衰弱，懦弱","word_english":"weakness","test_options":["weakness","whiskey","zinc"]}

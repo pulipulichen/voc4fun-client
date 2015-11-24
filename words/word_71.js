@@ -1,0 +1,1 @@
+{"word_chinese":"美學","word_english":"aesthetics","test_options":["aesthetics","airtight","animate"]}

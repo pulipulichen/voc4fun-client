@@ -1,0 +1,1 @@
+{"word_chinese":"使散開","word_english":"disperse","test_options":["disperse","distributed","dwarf"]}

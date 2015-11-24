@@ -1,0 +1,1 @@
+{"word_chinese":"使)纏結","word_english":"tangle(","test_options":["tangle(","teller(","thorn"]}

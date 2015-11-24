@@ -1,0 +1,1 @@
+{"word_chinese":"缺乏;缺陷","word_english":"deficiency","test_options":["deficiency","deploy","dilemma"]}

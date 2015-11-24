@@ -1,0 +1,1 @@
+{"word_chinese":"樞紐;鉸鏈","word_english":"hinge","test_options":["hinge","hospitality","imprisonment"]}

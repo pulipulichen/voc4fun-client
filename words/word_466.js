@@ -1,0 +1,1 @@
+{"word_chinese":"公民的","word_english":"civic","test_options":["civic","clover","communicative"]}

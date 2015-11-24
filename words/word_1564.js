@@ -1,0 +1,1 @@
+{"word_chinese":"誹謗","word_english":"libel","test_options":["libel","linguist","lunchtime"]}

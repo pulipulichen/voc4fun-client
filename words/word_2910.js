@@ -1,0 +1,1 @@
+{"word_chinese":"透明的","word_english":"transparent","test_options":["transparent","trio","unclear"]}

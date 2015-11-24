@@ -1,0 +1,1 @@
+{"word_chinese":"使人身心爽快的","word_english":"refreshing","test_options":["refreshing","relegate","reside"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"狗、狼等)嚎;(風等)怒號;(人悲痛時的)號叫","word_english":"howl(","test_options":["howl(","ignite","indignant"]}

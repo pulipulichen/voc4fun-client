@@ -1,0 +1,1 @@
+{"word_chinese":"異性愛的","word_english":"heterosexual","test_options":["heterosexual","hoof","impart"]}

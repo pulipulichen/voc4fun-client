@@ -1,0 +1,1 @@
+{"word_chinese":"譴責;告發","word_english":"denounce","test_options":["denounce","detached","disbelief"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"定等級","word_english":"rating","test_options":["rating","recommendation","relentless"]}

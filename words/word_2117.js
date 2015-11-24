@@ -1,0 +1,1 @@
+{"word_chinese":"深遠的","word_english":"profound","test_options":["profound","prosecute","quart"]}

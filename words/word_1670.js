@@ -1,0 +1,1 @@
+{"word_chinese":"間接的;調停","word_english":"mediate","test_options":["mediate","middle-aged","monopoly"]}

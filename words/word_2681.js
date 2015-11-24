@@ -1,0 +1,1 @@
+{"word_chinese":"窄小的；海峽","word_english":"strait","test_options":["strait","stutter","supplementary"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"亂穿馬路","word_english":"jaywalk","test_options":["jaywalk","killer","liable"]}

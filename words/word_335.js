@@ -1,0 +1,1 @@
+{"word_chinese":"闖入","word_english":"break-in","test_options":["break-in","brooch","caress"]}

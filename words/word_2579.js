@@ -1,0 +1,1 @@
+{"word_chinese":"掮客，推銷員","word_english":"solicitor","test_options":["solicitor","specialty","stall"]}

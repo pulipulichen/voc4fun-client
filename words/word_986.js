@@ -1,0 +1,1 @@
+{"word_chinese":"面對(事實等)","word_english":"envisage","test_options":["envisage","escort","expel"]}

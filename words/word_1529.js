@@ -1,0 +1,1 @@
+{"word_chinese":"小夥子","word_english":"lad","test_options":["lad","legacy","literate"]}

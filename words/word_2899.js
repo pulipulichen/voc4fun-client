@@ -1,0 +1,1 @@
+{"word_chinese":"抄錄，記錄","word_english":"transcribe","test_options":["transcribe","trek(","ulcer"]}

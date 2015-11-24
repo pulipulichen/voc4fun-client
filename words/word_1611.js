@@ -1,0 +1,1 @@
+{"word_chinese":"掠奪物;掠奪","word_english":"loot","test_options":["loot","magistrate","mediate"]}

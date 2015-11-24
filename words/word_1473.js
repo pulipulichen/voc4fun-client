@@ -1,0 +1,1 @@
+{"word_chinese":"複雜的;精緻的","word_english":"intricate","test_options":["intricate","irresistible","landing"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"法西斯主義者","word_english":"fascist","test_options":["fascist","fin","formulate"]}

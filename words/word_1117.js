@@ -1,0 +1,1 @@
+{"word_chinese":"腰窩;側翼建築物","word_english":"flank","test_options":["flank","follow-up","fumes"]}

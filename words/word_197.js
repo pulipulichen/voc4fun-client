@@ -1,0 +1,1 @@
+{"word_chinese":"未遂的","word_english":"attempted","test_options":["attempted","aviary","beating"]}

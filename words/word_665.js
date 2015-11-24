@@ -1,0 +1,1 @@
+{"word_chinese":"喜劇的","word_english":"comic","test_options":["comic","cozy","curry"]}

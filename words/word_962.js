@@ -1,0 +1,1 @@
+{"word_chinese":"發，放(光等)","word_english":"emit","test_options":["emit","entail","evergreen"]}

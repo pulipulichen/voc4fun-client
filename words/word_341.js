@@ -1,0 +1,1 @@
+{"word_chinese":"簡短地","word_english":"briefly","test_options":["briefly","brute","carp"]}

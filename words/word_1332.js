@@ -1,0 +1,1 @@
+{"word_chinese":"殷勤的，好客的","word_english":"hospitable","test_options":["hospitable","hypocrite","incur"]}

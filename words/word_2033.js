@@ -1,0 +1,1 @@
+{"word_chinese":"詩的","word_english":"poetic","test_options":["poetic","potter","prevail"]}

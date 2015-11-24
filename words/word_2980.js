@@ -1,0 +1,1 @@
+{"word_chinese":"可理解的","word_english":"understandable","test_options":["understandable","unofficial","variation"]}

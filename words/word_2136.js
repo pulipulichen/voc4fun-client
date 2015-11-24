@@ -1,0 +1,1 @@
+{"word_chinese":"經營","word_english":"prosecute","test_options":["prosecute","psychiatry","radiator"]}

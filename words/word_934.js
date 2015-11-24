@@ -1,0 +1,1 @@
+{"word_chinese":"受過教育的","word_english":"educated","test_options":["educated","embed","equate"]}

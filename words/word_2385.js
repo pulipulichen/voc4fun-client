@@ -1,0 +1,1 @@
+{"word_chinese":"叫(人)起來；激勵激發(感情)","word_english":"rouse","test_options":["rouse","salon","secrecy"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"與…相對[相比]","word_english":"versus","test_options":["versus","villa","watertight"]}

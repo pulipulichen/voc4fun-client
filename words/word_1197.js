@@ -1,0 +1,1 @@
+{"word_chinese":"遺傳(學)上的","word_english":"genetic","test_options":["genetic","gloom","gunman"]}

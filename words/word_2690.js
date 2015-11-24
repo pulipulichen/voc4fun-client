@@ -1,0 +1,1 @@
+{"word_chinese":"條紋","word_english":"stripe","test_options":["stripe","subscribe","susceptible"]}

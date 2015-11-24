@@ -1,0 +1,1 @@
+{"word_chinese":"同志；夥伴","word_english":"comrade","test_options":["comrade","confined","contestant"]}

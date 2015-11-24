@@ -1,0 +1,1 @@
+{"word_chinese":"壓扁；壓碎","word_english":"squash","test_options":["squash","starch","streak"]}

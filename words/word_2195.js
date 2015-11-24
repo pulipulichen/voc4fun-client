@@ -1,0 +1,1 @@
+{"word_chinese":"輻射體;散熱器","word_english":"radiator","test_options":["radiator","rating","refreshment"]}

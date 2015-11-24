@@ -1,0 +1,1 @@
+{"word_chinese":"奢侈的，浪費的","word_english":"extravagant","test_options":["extravagant","Fascism","fling"]}

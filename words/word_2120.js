@@ -1,0 +1,1 @@
+{"word_chinese":"投射；投影","word_english":"projection","test_options":["projection","prospect","quartet"]}

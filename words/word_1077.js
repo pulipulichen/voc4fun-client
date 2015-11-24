@@ -1,0 +1,1 @@
+{"word_chinese":"華氏","word_english":"Fahrenheit","test_options":["Fahrenheit","feminism","follow-up"]}

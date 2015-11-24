@@ -1,0 +1,1 @@
+{"word_chinese":"誘出(回答等)","word_english":"elicit","test_options":["elicit","emphatic","eruption"]}

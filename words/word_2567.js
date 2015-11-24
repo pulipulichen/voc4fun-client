@@ -1,0 +1,1 @@
+{"word_chinese":"高飛，(物價)飛漲","word_english":"soar","test_options":["soar","sophisticated","squad"]}

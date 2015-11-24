@@ -1,0 +1,1 @@
+{"word_chinese":"侵蝕","word_english":"erode","test_options":["erode","evacuation","exquisite"]}

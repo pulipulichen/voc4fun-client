@@ -1,0 +1,1 @@
+{"word_chinese":"精神錯亂的","word_english":"lunatic","test_options":["lunatic","mandate","merely"]}

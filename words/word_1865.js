@@ -1,0 +1,1 @@
+{"word_chinese":"非強制的","word_english":"optional","test_options":["optional","outbreak(","par"]}

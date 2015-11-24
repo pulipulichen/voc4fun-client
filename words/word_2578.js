@@ -1,0 +1,1 @@
+{"word_chinese":"嚴肅的，莊嚴的","word_english":"solemn","test_options":["solemn","specially","stalk"]}

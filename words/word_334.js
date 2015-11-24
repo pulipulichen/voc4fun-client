@@ -1,0 +1,1 @@
+{"word_chinese":"崩潰","word_english":"breakdown","test_options":["breakdown","bronze","carefree"]}

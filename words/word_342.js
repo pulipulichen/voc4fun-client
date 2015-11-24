@@ -1,0 +1,1 @@
+{"word_chinese":"把…編成隊[組]","word_english":"brigade","test_options":["brigade","buck","carrier"]}

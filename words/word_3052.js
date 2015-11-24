@@ -1,0 +1,1 @@
+{"word_chinese":"證實；證明","word_english":"verify","test_options":["verify","viewer","wartime"]}

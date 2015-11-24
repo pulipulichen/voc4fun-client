@@ -1,0 +1,1 @@
+{"word_chinese":"概括地","word_english":"broadly","test_options":["broadly","bully","category"]}

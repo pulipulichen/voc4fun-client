@@ -1,0 +1,1 @@
+{"word_chinese":"儀器的;樂器(上)的","word_english":"instrumental","test_options":["instrumental","interior","jaywalk"]}

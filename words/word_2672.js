@@ -1,0 +1,1 @@
+{"word_chinese":"刺激物","word_english":"stimulus","test_options":["stimulus","stroll","superintendent"]}

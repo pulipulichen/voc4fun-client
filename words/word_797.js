@@ -1,0 +1,1 @@
+{"word_chinese":"脫離的","word_english":"detached","test_options":["detached","diagram","dismay"]}

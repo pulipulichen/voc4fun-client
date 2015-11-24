@@ -1,0 +1,1 @@
+{"word_chinese":"有義務的;有…傾向的","word_english":"liable","test_options":["liable","linger","lunatic"]}

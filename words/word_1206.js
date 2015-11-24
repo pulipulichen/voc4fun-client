@@ -1,0 +1,1 @@
+{"word_chinese":"冰河","word_english":"glacier","test_options":["glacier","gorge","half-time"]}

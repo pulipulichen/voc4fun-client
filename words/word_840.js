@@ -1,0 +1,1 @@
+{"word_chinese":"門徒","word_english":"disciple","test_options":["disciple","dispensable","doomed"]}

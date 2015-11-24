@@ -1,0 +1,1 @@
+{"word_chinese":"脫離(常軌);誤入歧途","word_english":"deviate","test_options":["deviate","diplomatic","disrupt"]}

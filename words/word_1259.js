@@ -1,0 +1,1 @@
+{"word_chinese":"吉普賽人","word_english":"gypsy","test_options":["gypsy","hasten","holder"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"結實的","word_english":"stout","test_options":["stout","stump","superstition"]}

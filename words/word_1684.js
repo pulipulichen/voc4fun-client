@@ -1,0 +1,1 @@
+{"word_chinese":"美人魚","word_english":"mermaid","test_options":["mermaid","miniature","motorist"]}

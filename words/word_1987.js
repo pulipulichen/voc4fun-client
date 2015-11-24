@@ -1,0 +1,1 @@
+{"word_chinese":"恰當的","word_english":"pertinent","test_options":["pertinent","piercing","pore"]}

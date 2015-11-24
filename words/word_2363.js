@@ -1,0 +1,1 @@
+{"word_chinese":"嚴肅；苛刻","word_english":"rigor","test_options":["rigor","rotation","scarecrow"]}

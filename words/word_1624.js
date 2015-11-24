@@ -1,0 +1,1 @@
+{"word_chinese":"誘惑","word_english":"lure","test_options":["lure","manifest","merger"]}

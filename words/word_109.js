@@ -1,0 +1,1 @@
+{"word_chinese":"杏仁","word_english":"almond","test_options":["almond","anecdote","arrogant"]}

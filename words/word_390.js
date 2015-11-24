@@ -1,0 +1,1 @@
+{"word_chinese":"碳水化合物","word_english":"carbohydrate","test_options":["carbohydrate","cater","check-up"]}

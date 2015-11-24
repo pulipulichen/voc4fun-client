@@ -1,0 +1,1 @@
+{"word_chinese":"採集者","word_english":"collector","test_options":["collector","commonplace","concede"]}

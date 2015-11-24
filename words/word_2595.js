@@ -1,0 +1,1 @@
+{"word_chinese":"專家","word_english":"specialist","test_options":["specialist","splendor","statistic"]}

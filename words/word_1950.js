@@ -1,0 +1,1 @@
+{"word_chinese":"保護人","word_english":"patronage","test_options":["patronage","perch","pimple"]}

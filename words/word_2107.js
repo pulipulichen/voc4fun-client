@@ -1,0 +1,1 @@
+{"word_chinese":"探測器","word_english":"probe","test_options":["probe","pronoun","putt"]}

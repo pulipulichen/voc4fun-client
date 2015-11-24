@@ -1,0 +1,1 @@
+{"word_chinese":"感情用事的；多愁善感的","word_english":"sentimental","test_options":["sentimental","sexuality","simulation"]}

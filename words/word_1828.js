@@ -1,0 +1,1 @@
+{"word_chinese":"服從；遵守","word_english":"obedience","test_options":["obedience","offshore","outgoing"]}

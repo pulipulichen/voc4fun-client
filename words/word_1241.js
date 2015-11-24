@@ -1,0 +1,1 @@
+{"word_chinese":"緊握","word_english":"grip","test_options":["grip","habitat","henceforth"]}

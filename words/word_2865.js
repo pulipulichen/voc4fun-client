@@ -1,0 +1,1 @@
+{"word_chinese":"剛學走的小孩子","word_english":"toddler","test_options":["toddler","tractor","tribute"]}

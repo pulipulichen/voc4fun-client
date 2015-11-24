@@ -1,0 +1,1 @@
+{"word_chinese":"妥協","word_english":"compromise","test_options":["compromise","confer","contend"]}

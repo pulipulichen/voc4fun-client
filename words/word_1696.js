@@ -1,0 +1,1 @@
+{"word_chinese":"好戰的","word_english":"militant","test_options":["militant","mixed","multinational"]}

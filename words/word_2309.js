@@ -1,0 +1,1 @@
+{"word_chinese":"憤慨","word_english":"resentment","test_options":["resentment","restructure","rip"]}

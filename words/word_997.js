@@ -1,0 +1,1 @@
+{"word_chinese":"公平","word_english":"equity","test_options":["equity","evacuate","expulsion"]}

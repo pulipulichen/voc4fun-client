@@ -1,0 +1,1 @@
+{"word_chinese":"無禮的，目中無人的","word_english":"defiant","test_options":["defiant","deplete","diffuse"]}

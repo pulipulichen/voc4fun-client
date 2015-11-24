@@ -1,0 +1,1 @@
+{"word_chinese":"獨創性","word_english":"originality","test_options":["originality","outset","partly"]}

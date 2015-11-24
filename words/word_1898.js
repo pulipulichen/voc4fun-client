@@ -1,0 +1,1 @@
+{"word_chinese":"郊區","word_english":"outskirts","test_options":["outskirts","paddle","pedestrian"]}

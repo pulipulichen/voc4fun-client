@@ -1,0 +1,1 @@
+{"word_chinese":"威嚴","word_english":"majesty","test_options":["majesty","marvel","militant"]}

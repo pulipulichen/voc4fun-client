@@ -1,0 +1,1 @@
+{"word_chinese":"支配；治理","word_english":"administer","test_options":["administer","aerospace","almond"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"規範","word_english":"norm","test_options":["norm","oar","optimum"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"主要的;校長","word_english":"principal","test_options":["principal","projection","punishment"]}

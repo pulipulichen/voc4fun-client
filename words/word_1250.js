@@ -1,0 +1,1 @@
+{"word_chinese":"保證的","word_english":"guaranteed","test_options":["guaranteed","handicraft","hierarchy"]}

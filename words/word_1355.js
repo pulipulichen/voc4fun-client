@@ -1,0 +1,1 @@
+{"word_chinese":"意識形態的","word_english":"ideological","test_options":["ideological","impulse","ingenuity"]}

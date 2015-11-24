@@ -1,0 +1,1 @@
+{"word_chinese":"節儉","word_english":"thrift","test_options":["thrift","tinkle","transcript"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"創始的","word_english":"initiative","test_options":["initiative","installment","invariable"]}

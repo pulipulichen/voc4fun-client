@@ -1,0 +1,1 @@
+{"word_chinese":"寂寞的;淒涼的","word_english":"lonesome","test_options":["lonesome","lure","mattress("]}

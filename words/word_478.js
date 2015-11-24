@@ -1,0 +1,1 @@
+{"word_chinese":"熱烈擁抱","word_english":"clinch","test_options":["clinch","coil","compel"]}

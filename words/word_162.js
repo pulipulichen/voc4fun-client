@@ -1,0 +1,1 @@
+{"word_chinese":"北極的","word_english":"Arctic","test_options":["Arctic","assignmen","axis"]}

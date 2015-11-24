@@ -1,0 +1,1 @@
+{"word_chinese":"能解釋的，能解決的","word_english":"soluble","test_options":["soluble","specimen","stand-up"]}

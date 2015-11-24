@@ -1,0 +1,1 @@
+{"word_chinese":"確定(稅款、罰款、賠款的)數額","word_english":"assess","test_options":["assess","attendance","barefoot"]}

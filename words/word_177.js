@@ -1,0 +1,1 @@
+{"word_chinese":"攻擊","word_english":"assault","test_options":["assault","attain","barbarian"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"桿，槓","word_english":"lever","test_options":["lever","linear","lumber"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"錦標賽","word_english":"tournament","test_options":["tournament","transcribe","truce"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"憤慨的","word_english":"indignant","test_options":["indignant","inhibit","intelligible"]}

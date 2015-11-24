@@ -1,0 +1,1 @@
+{"word_chinese":"多才多藝的","word_english":"versatile","test_options":["versatile","viewpoint","wary"]}

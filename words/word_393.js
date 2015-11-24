@@ -1,0 +1,1 @@
+{"word_chinese":"無憂無慮的","word_english":"carefree","test_options":["carefree","caution","chili"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"靜坐抗議","word_english":"sit-in","test_options":["sit-in","sloppy","sorrowful"]}

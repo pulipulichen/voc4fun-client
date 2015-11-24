@@ -1,0 +1,1 @@
+{"word_chinese":"範圍；視野","word_english":"scope","test_options":["scope","seduce","shaft"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"實際上地","word_english":"virtually","test_options":["virtually","wag","wig"]}

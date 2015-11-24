@@ -1,0 +1,1 @@
+{"word_chinese":"用公式表示","word_english":"formulate","test_options":["formulate","frankly","ghetto"]}

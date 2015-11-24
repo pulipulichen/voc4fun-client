@@ -1,0 +1,1 @@
+{"word_chinese":"贖金","word_english":"ransom","test_options":["ransom","rebellious","rejection"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"示範者","word_english":"demonstrator","test_options":["demonstrator","destined","disable"]}

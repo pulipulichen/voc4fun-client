@@ -1,0 +1,1 @@
+{"word_chinese":"驅逐","word_english":"expulsion","test_options":["expulsion","faculty","fixture"]}

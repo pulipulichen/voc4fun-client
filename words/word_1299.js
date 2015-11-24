@@ -1,0 +1,1 @@
+{"word_chinese":"半球","word_english":"hemisphere","test_options":["hemisphere","holder","ignite"]}

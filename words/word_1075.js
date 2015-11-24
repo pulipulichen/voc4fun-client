@@ -1,0 +1,1 @@
+{"word_chinese":"才能;(大學的)專科","word_english":"faculty","test_options":["faculty","fellowship","foil"]}

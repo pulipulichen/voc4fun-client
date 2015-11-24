@@ -1,0 +1,1 @@
+{"word_chinese":"擁護者","word_english":"prop","test_options":["prop","provision","quiver"]}

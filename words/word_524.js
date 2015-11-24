@@ -1,0 +1,1 @@
+{"word_chinese":"群居的","word_english":"communal","test_options":["communal","competing","congressman"]}

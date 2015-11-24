@@ -1,0 +1,1 @@
+{"word_chinese":"合唱團","word_english":"choir","test_options":["choir","clearance","commemorate"]}

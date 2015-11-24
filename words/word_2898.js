@@ -1,0 +1,1 @@
+{"word_chinese":"卓越的","word_english":"transcendent","test_options":["transcendent","treasury","tyrant"]}

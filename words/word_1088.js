@@ -1,0 +1,1 @@
+{"word_chinese":"嚇人的","word_english":"fearful","test_options":["fearful","firecracker","fortify"]}

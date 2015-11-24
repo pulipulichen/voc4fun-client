@@ -1,0 +1,1 @@
+{"word_chinese":"鬆脆的","word_english":"crunchy","test_options":["crunchy","dame","delegation"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"照慣例的","word_english":"customary","test_options":["customary","decent","deport"]}

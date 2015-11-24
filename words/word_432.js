@@ -1,0 +1,1 @@
+{"word_chinese":"挑戰者","word_english":"challenger","test_options":["challenger","chestnut","cocaine"]}

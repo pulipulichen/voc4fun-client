@@ -1,0 +1,1 @@
+{"word_chinese":"社會主義","word_english":"socialism","test_options":["socialism","soundtrack","stability"]}

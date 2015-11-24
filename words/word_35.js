@@ -1,0 +1,1 @@
+{"word_chinese":"取得","word_english":"acquisition","test_options":["acquisition","adolescence","algebra"]}

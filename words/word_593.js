@@ -1,0 +1,1 @@
+{"word_chinese":"就…而論","word_english":"considering","test_options":["considering","contemplate","corporation"]}

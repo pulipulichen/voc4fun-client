@@ -1,0 +1,1 @@
+{"word_chinese":"佔優勢","word_english":"prevail","test_options":["prevail","proclaim","proximity"]}

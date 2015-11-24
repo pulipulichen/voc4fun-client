@@ -1,0 +1,1 @@
+{"word_chinese":"孤立的","word_english":"isolated","test_options":["isolated","jumper","lesser"]}

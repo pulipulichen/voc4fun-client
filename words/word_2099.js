@@ -1,0 +1,1 @@
+{"word_chinese":"紮，刺，戳穿","word_english":"prick","test_options":["prick","prohibition","puff"]}

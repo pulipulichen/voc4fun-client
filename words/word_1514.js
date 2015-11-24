@@ -1,0 +1,1 @@
+{"word_chinese":"司法的，審判上的","word_english":"judicial","test_options":["judicial","large-scale","lightweight"]}

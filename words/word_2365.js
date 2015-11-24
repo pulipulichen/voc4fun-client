@@ -1,0 +1,1 @@
+{"word_chinese":"邊，緣","word_english":"rim","test_options":["rim","roughly","scenario"]}

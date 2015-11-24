@@ -1,0 +1,1 @@
+{"word_chinese":"窘迫","word_english":"embarrassment","test_options":["embarrassment","endorse","eternity"]}

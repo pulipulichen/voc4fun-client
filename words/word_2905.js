@@ -1,0 +1,1 @@
+{"word_chinese":"通行；渡越","word_english":"transit","test_options":["transit","tribute","unanimous"]}

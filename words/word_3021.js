@@ -1,0 +1,1 @@
+{"word_chinese":"迫切，緊急","word_english":"urgency","test_options":["urgency","varied","virtual"]}

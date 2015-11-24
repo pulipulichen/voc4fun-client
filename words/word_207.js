@@ -1,0 +1,1 @@
+{"word_chinese":"有權威的","word_english":"authoritative","test_options":["authoritative","badge","betray"]}

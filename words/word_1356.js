@@ -1,0 +1,1 @@
+{"word_chinese":"思想意識","word_english":"ideology","test_options":["ideology","impulsive","inhabit"]}

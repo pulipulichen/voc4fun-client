@@ -1,0 +1,1 @@
+{"word_chinese":"動畫的","word_english":"animated","test_options":["animated","appraisal","astronomy"]}

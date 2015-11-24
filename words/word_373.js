@@ -1,0 +1,1 @@
+{"word_chinese":"燃燒的","word_english":"burning","test_options":["burning","cardinal","challenger"]}

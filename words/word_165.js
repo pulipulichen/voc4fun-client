@@ -1,0 +1,1 @@
+{"word_chinese":"武裝著的","word_english":"armored","test_options":["armored","assuming","backing"]}

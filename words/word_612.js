@@ -1,0 +1,1 @@
+{"word_chinese":"熟思","word_english":"contemplate","test_options":["contemplate","convene","counselor"]}

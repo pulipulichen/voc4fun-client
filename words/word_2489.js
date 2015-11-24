@@ -1,0 +1,1 @@
+{"word_chinese":"使粉碎","word_english":"shatter","test_options":["shatter","shriek","sloppy"]}

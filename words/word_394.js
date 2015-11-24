@@ -1,0 +1,1 @@
+{"word_chinese":"愛撫","word_english":"caress","test_options":["caress","cautious","chimpanzee"]}

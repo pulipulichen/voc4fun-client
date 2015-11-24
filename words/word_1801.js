@@ -1,0 +1,1 @@
+{"word_chinese":"任命;提名","word_english":"nominate","test_options":["nominate","nuisance","opt"]}

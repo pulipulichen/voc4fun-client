@@ -1,0 +1,1 @@
+{"word_chinese":"危及","word_english":"jeopardize","test_options":["jeopardize","kin","liberalize"]}

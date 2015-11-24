@@ -1,0 +1,1 @@
+{"word_chinese":"不盡責的;懈怠者","word_english":"delinquent","test_options":["delinquent","desirable","directory"]}

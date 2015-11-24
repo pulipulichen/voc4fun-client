@@ -1,0 +1,1 @@
+{"word_chinese":"〔俚語〕電話","word_english":"tinkle","test_options":["tinkle","touchy","tremor"]}

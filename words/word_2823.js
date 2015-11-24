@@ -1,0 +1,1 @@
+{"word_chinese":"本文的；按照原文的","word_english":"textual","test_options":["textual","thrifty","toxic"]}

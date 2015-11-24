@@ -1,0 +1,1 @@
+{"word_chinese":"緊密的;隨身攜帶的粉盒","word_english":"compact","test_options":["compact","complication","consecutive"]}

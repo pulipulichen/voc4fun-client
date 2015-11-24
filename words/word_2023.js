@@ -1,0 +1,1 @@
+{"word_chinese":"懇求","word_english":"plea","test_options":["plea","popularity","present"]}

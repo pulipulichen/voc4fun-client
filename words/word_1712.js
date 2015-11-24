@@ -1,0 +1,1 @@
+{"word_chinese":"小氣鬼","word_english":"miser","test_options":["miser","monotony","nanny"]}

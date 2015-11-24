@@ -1,0 +1,1 @@
+{"word_chinese":"事先","word_english":"beforehand","test_options":["beforehand","bizarre","bound"]}

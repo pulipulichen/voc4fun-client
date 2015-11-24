@@ -1,0 +1,1 @@
+{"word_chinese":"被覆","word_english":"covering","test_options":["covering","crook","deafen"]}

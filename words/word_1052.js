@@ -1,0 +1,1 @@
+{"word_chinese":"明白的","word_english":"explicit","test_options":["explicit","fabulous","fiscal"]}

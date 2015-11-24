@@ -1,0 +1,1 @@
+{"word_chinese":"表面地；外表上地segment段落；部分；節","word_english":"seemingly","test_options":["seemingly","separatist","shrine"]}

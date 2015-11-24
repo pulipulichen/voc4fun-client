@@ -1,0 +1,1 @@
+{"word_chinese":"造反","word_english":"revolt","test_options":["revolt","ripple","salvation"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"創傷的","word_english":"traumatic","test_options":["traumatic","triumphant","unconditional"]}

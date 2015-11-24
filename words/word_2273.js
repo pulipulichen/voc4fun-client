@@ -1,0 +1,1 @@
+{"word_chinese":"毫不留情的","word_english":"relentless","test_options":["relentless","repatriate","retailer"]}

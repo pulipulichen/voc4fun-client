@@ -1,0 +1,1 @@
+{"word_chinese":"讚歌","word_english":"hymn","test_options":["hymn","imperative","infantry"]}

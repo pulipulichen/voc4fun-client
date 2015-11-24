@@ -1,0 +1,1 @@
+{"word_chinese":"垃圾，廢料","word_english":"crap","test_options":["crap","cruise","decisive"]}

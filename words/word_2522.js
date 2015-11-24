@@ -1,0 +1,1 @@
+{"word_chinese":"單純","word_english":"simplicity","test_options":["simplicity","slate","solitary"]}

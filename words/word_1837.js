@@ -1,0 +1,1 @@
+{"word_chinese":"觀察者","word_english":"observer","test_options":["observer","operative","outset"]}

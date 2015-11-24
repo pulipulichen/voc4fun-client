@@ -1,0 +1,1 @@
+{"word_chinese":"煤焦油瀝青","word_english":"tar","test_options":["tar","tempo","thrift"]}

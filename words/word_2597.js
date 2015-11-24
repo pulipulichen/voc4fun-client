@@ -1,0 +1,1 @@
+{"word_chinese":"特別地","word_english":"specially","test_options":["specially","sponsorship","statistician"]}

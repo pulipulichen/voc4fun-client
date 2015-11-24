@@ -1,0 +1,1 @@
+{"word_chinese":"可惡的東西","word_english":"brute","test_options":["brute","calcium","celery"]}

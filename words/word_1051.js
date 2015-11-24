@@ -1,0 +1,1 @@
+{"word_chinese":"吐氣(v.)","word_english":"expire","test_options":["expire","fabricate","first-class"]}

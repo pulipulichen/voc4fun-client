@@ -1,0 +1,1 @@
+{"word_chinese":"搏鬥","word_english":"combat","test_options":["combat","compact","concise"]}

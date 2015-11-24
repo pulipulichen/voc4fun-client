@@ -1,0 +1,1 @@
+{"word_chinese":"使者;預兆","word_english":"herald","test_options":["herald","homeless","illusion"]}

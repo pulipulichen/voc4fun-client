@@ -1,0 +1,1 @@
+{"word_chinese":"謀反，叛逆(罪)","word_english":"treason","test_options":["treason","tropic","undergraduate"]}

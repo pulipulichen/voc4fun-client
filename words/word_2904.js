@@ -1,0 +1,1 @@
+{"word_chinese":"電晶體","word_english":"transistor","test_options":["transistor","tribunal","unacceptable"]}

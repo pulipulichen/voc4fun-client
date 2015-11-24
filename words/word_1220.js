@@ -1,0 +1,1 @@
+{"word_chinese":"足球等的)守門員","word_english":"goalkeeper(","test_options":["goalkeeper(","grill(","hateful"]}

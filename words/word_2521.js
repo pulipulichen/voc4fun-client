@@ -1,0 +1,1 @@
+{"word_chinese":"慢慢燒滾；(危機等)處於醞釀中。","word_english":"simmer","test_options":["simmer","slash","solidarity"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"代替","word_english":"substitution","test_options":["substitution","superstitious","takeover"]}

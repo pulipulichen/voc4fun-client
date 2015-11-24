@@ -1,0 +1,1 @@
+{"word_chinese":"法官席；法庭","word_english":"tribunal","test_options":["tribunal","tuberculosis","underwrite"]}

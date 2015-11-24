@@ -1,0 +1,1 @@
+{"word_chinese":"吸引人的","word_english":"inviting","test_options":["inviting","jaywalk","lease"]}

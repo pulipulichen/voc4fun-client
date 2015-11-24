@@ -1,0 +1,1 @@
+{"word_chinese":"推進，驅使","word_english":"propel","test_options":["propel","provoke","racing"]}

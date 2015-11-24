@@ -1,0 +1,1 @@
+{"word_chinese":"啜泣；哀訴，訴怨","word_english":"whine","test_options":["whine","woodpecker","weird"]}

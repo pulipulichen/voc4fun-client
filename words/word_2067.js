@@ -1,0 +1,1 @@
+{"word_chinese":"佔優勢的","word_english":"predominant","test_options":["predominant","president-elect","pronoun"]}

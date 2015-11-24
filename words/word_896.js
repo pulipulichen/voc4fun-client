@@ -1,0 +1,1 @@
+{"word_chinese":"捐贈","word_english":"donation","test_options":["donation","drizzle","embrace"]}

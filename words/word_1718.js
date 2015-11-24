@@ -1,0 +1,1 @@
+{"word_chinese":"學樣子嘲弄","word_english":"mock","test_options":["mock","mortal","nationwide"]}

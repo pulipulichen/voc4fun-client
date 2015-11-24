@@ -1,0 +1,1 @@
+{"word_chinese":"藥劑師","word_english":"pharmacist","test_options":["pharmacist","piss","practicable"]}

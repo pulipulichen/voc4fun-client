@@ -1,0 +1,1 @@
+{"word_chinese":"膠囊","word_english":"capsule","test_options":["capsule","caste(","checkbook"]}

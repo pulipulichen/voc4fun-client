@@ -1,0 +1,1 @@
+{"word_chinese":"徒步)旅行(隊)，(科學考察，遊獵)遠征(隊)","word_english":"safari (","test_options":["safari (","savage","senate"]}

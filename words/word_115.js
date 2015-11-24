@@ -1,0 +1,1 @@
+{"word_chinese":"伏兵;埋伏","word_english":"ambush","test_options":["ambush","Antarctic","ascribe"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"鬥爭","word_english":"contend","test_options":["contend","conversion","counterpart"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"指控","word_english":"accusation","test_options":["accusation","adjoin","air-conditioner"]}

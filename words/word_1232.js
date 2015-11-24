@@ -1,0 +1,1 @@
+{"word_chinese":"用圖表示的","word_english":"graphic","test_options":["graphic","guerrilla","heating"]}

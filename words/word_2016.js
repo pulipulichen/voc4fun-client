@@ -1,0 +1,1 @@
+{"word_chinese":"瘟疫;折磨","word_english":"plague","test_options":["plague","poised","premier"]}

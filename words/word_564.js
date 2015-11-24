@@ -1,0 +1,1 @@
+{"word_chinese":"懷(胎);抱有(思想)","word_english":"conceive","test_options":["conceive","congressman","contradict"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"一定的;已知的","word_english":"given","test_options":["given","gore","hairstyle"]}

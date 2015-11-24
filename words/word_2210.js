@@ -1,0 +1,1 @@
+{"word_chinese":"掠奪;強姦","word_english":"rape","test_options":["rape","reciprocal","relativity"]}

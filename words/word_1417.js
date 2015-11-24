@@ -1,0 +1,1 @@
+{"word_chinese":"禁止;約束","word_english":"inhibit","test_options":["inhibit","insistence","intrinsic"]}

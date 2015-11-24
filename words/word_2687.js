@@ -1,0 +1,1 @@
+{"word_chinese":"大踏步走","word_english":"stride","test_options":["stride","submersion","surpass"]}

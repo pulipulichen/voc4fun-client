@@ -1,0 +1,1 @@
+{"word_chinese":"外形，外貌","word_english":"externals","test_options":["externals","falter","flare"]}

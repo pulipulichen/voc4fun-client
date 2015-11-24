@@ -1,0 +1,1 @@
+{"word_chinese":"起伏","word_english":"fluctuate","test_options":["fluctuate","fortify","garment"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"勝利者","word_english":"victor","test_options":["victor","vocational","whereabouts"]}

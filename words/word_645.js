@@ -1,0 +1,1 @@
+{"word_chinese":"著作權","word_english":"copyright","test_options":["copyright","cosmetic","crouch"]}

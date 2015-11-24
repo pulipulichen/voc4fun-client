@@ -1,0 +1,1 @@
+{"word_chinese":"租費","word_english":"rental","test_options":["rental","resent","revival"]}

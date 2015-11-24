@@ -1,0 +1,1 @@
+{"word_chinese":"一時流行的風尚","word_english":"fad","test_options":["fad","feminine","folklore"]}

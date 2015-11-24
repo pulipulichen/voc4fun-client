@@ -1,0 +1,1 @@
+{"word_chinese":"可預言的","word_english":"predictable","test_options":["predictable","presidency","prone"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"東方的","word_english":"Oriental","test_options":["Oriental","outrage","participation"]}

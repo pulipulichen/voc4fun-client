@@ -1,0 +1,1 @@
+{"word_chinese":"校準器","word_english":"regulator","test_options":["regulator","remaining","respectful"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"音調；語調","word_english":"tone","test_options":["tone","traitorous","triple"]}

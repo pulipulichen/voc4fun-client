@@ -1,0 +1,1 @@
+{"word_chinese":"反射的","word_english":"reflective","test_options":["reflective","relativity","resentment"]}

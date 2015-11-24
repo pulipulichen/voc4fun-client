@@ -1,0 +1,1 @@
+{"word_chinese":"疏離","word_english":"alienate","test_options":["alienate","ambush","apt"]}

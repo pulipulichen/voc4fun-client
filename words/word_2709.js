@@ -1,0 +1,1 @@
+{"word_chinese":"訂閱","word_english":"subscribe","test_options":["subscribe","summon","tackle"]}

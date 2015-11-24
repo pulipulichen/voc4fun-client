@@ -1,0 +1,1 @@
+{"word_chinese":"給人印象深刻的","word_english":"imposing","test_options":["imposing","incumbent","innumerable"]}

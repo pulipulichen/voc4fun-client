@@ -1,0 +1,1 @@
+{"word_chinese":"激烈的;敏銳的","word_english":"acute","test_options":["acute","advancement","allege"]}

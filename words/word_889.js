@@ -1,0 +1,1 @@
+{"word_chinese":"紅利，股息","word_english":"dividend","test_options":["dividend","drastic","eloquence"]}

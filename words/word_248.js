@@ -1,0 +1,1 @@
+{"word_chinese":"雜種","word_english":"bastard","test_options":["bastard","beverage","bonus"]}

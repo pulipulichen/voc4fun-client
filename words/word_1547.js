@@ -1,0 +1,1 @@
+{"word_chinese":"左翼的，急進的","word_english":"left-wing","test_options":["left-wing","liberation","longevity"]}

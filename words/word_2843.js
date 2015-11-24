@@ -1,0 +1,1 @@
+{"word_chinese":"一陣毛骨悚然的感覺，一陣激動的感覺","word_english":"thrill","test_options":["thrill","toad","transformation"]}

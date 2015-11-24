@@ -1,0 +1,1 @@
+{"word_chinese":"猥褻的","word_english":"obscure","test_options":["obscure","operational","outright"]}

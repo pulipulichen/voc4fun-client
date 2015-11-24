@@ -1,0 +1,1 @@
+{"word_chinese":"主要","word_english":"predominantly","test_options":["predominantly","prestige","prop"]}

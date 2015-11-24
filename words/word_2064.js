@@ -1,0 +1,1 @@
+{"word_chinese":"排除;阻斷(路等)","word_english":"preclude","test_options":["preclude","preservation","prolonged"]}

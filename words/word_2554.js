@@ -1,0 +1,1 @@
+{"word_chinese":"天花","word_english":"smallpox","test_options":["smallpox","sociology","spire"]}

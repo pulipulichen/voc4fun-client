@@ -1,0 +1,1 @@
+{"word_chinese":"傳染病","word_english":"epidemic","test_options":["epidemic","esteem","expertise"]}

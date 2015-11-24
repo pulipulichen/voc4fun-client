@@ -1,0 +1,1 @@
+{"word_chinese":"監督(n.)","word_english":"supervision","test_options":["supervision","swollen","teens"]}

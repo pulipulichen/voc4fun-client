@@ -1,0 +1,1 @@
+{"word_chinese":"回顧 ","word_english":"retrospect","test_options":["retrospect","rig","saddle"]}

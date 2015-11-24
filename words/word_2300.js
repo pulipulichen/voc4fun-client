@@ -1,0 +1,1 @@
+{"word_chinese":"據報導","word_english":"reportedly","test_options":["reportedly","respectable","rig"]}

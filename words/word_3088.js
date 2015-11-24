@@ -1,0 +1,1 @@
+{"word_chinese":"職業(上)的","word_english":"vocational","test_options":["vocational","warrant","witty"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"對等的","word_english":"co-ordinate","test_options":["co-ordinate","corrupt","cross-country"]}

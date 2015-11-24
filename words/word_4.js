@@ -1,0 +1,1 @@
+{"word_chinese":"縮寫","word_english":"abbreviation","test_options":["abbreviation","accomplished","advertiser"]}

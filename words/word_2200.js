@@ -1,0 +1,1 @@
+{"word_chinese":"抹布","word_english":"rag","test_options":["rag","rave","reggae"]}

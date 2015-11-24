@@ -1,0 +1,1 @@
+{"word_chinese":"使社會化","word_english":"socialize","test_options":["socialize","sovereignty","stack"]}

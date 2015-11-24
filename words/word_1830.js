@@ -1,0 +1,1 @@
+{"word_chinese":"使負義務","word_english":"obligate","test_options":["obligate","old-fashioned","outlaw"]}

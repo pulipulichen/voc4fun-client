@@ -1,0 +1,1 @@
+{"word_chinese":"愛遊戲的，愛開玩笑的","word_english":"playful","test_options":["playful","ponder","prescribe"]}

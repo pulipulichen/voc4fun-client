@@ -1,0 +1,1 @@
+{"word_chinese":"團結一致","word_english":"solidarity","test_options":["solidarity","specifically","stammer"]}

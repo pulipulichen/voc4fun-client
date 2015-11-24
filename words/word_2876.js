@@ -1,0 +1,1 @@
+{"word_chinese":"急流，(感情等的)爆發","word_english":"torrent","test_options":["torrent","tranquilizer","tropic"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"誇張的(文風)","word_english":"rhetorical","test_options":["rhetorical","ritual","sandy"]}

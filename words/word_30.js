@@ -1,0 +1,1 @@
+{"word_chinese":"習慣於","word_english":"accustom","test_options":["accustom","adjustment","airlift"]}

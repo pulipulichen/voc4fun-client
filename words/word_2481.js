@@ -1,0 +1,1 @@
+{"word_chinese":"裝配；佈景","word_english":"setting","test_options":["setting","shiver","slash"]}

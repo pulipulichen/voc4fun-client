@@ -1,0 +1,1 @@
+{"word_chinese":"固定的","word_english":"fixed","test_options":["fixed","foe","frustration"]}

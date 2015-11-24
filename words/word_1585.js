@@ -1,0 +1,1 @@
+{"word_chinese":"識字","word_english":"literacy","test_options":["literacy","lone","manipulate"]}

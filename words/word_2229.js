@@ -1,0 +1,1 @@
+{"word_chinese":"相互的","word_english":"reciprocal","test_options":["reciprocal","referendum)","renewal"]}

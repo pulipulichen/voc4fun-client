@@ -1,0 +1,1 @@
+{"word_chinese":"崇高的;巍峨的","word_english":"lofty","test_options":["lofty","luminous","massage"]}

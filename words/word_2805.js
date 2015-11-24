@@ -1,0 +1,1 @@
+{"word_chinese":"試驗(性質)的","word_english":"tentative","test_options":["tentative","texture(","toddle("]}

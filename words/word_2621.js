@@ -1,0 +1,1 @@
+{"word_chinese":"扭傷","word_english":"sprain","test_options":["sprain","stance","strained"]}

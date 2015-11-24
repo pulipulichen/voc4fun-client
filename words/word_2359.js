@@ -1,0 +1,1 @@
+{"word_chinese":"搗蛋，用不正當手段操縱","word_english":"rig","test_options":["rig","rocky","Saudi"]}

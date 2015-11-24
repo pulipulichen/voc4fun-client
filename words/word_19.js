@@ -1,0 +1,1 @@
+{"word_chinese":"促進","word_english":"acceleration","test_options":["acceleration","activist","aggravate"]}

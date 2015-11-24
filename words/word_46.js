@@ -1,0 +1,1 @@
+{"word_chinese":"黏附","word_english":"adhere","test_options":["adhere","advisable","alligator"]}

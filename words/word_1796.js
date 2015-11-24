@@ -1,0 +1,1 @@
+{"word_chinese":"夜總會","word_english":"nightclub","test_options":["nightclub","notwithstanding","operational"]}

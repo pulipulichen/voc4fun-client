@@ -1,0 +1,1 @@
+{"word_chinese":"高傳真度","word_english":"hi-fi","test_options":["hi-fi","horizontal","impetus"]}

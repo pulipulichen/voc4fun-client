@@ -1,0 +1,1 @@
+{"word_chinese":"收容所","word_english":"asylum","test_options":["asylum","autograph","battalion"]}

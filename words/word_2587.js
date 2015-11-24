@@ -1,0 +1,1 @@
+{"word_chinese":"大學[中學]二年級學生","word_english":"sophomore","test_options":["sophomore","speculate","starch"]}

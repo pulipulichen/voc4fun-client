@@ -1,0 +1,1 @@
+{"word_chinese":"聽覺的","word_english":"acoustic","test_options":["acoustic","admiral","alarming"]}

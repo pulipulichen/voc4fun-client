@@ -1,0 +1,1 @@
+{"word_chinese":"積累","word_english":"accumulation","test_options":["accumulation","adjacent","aide"]}

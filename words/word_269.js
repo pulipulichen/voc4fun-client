@@ -1,0 +1,1 @@
+{"word_chinese":"使手足無措","word_english":"bewilder","test_options":["bewilder","blizzard","bracket"]}

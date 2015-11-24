@@ -1,0 +1,1 @@
+{"word_chinese":"擴散","word_english":"diffuse","test_options":["diffuse","disciplinary","distributor"]}

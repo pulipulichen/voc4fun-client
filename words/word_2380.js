@@ -1,0 +1,1 @@
+{"word_chinese":"旋轉的","word_english":"rotary","test_options":["rotary","saddle","seasonable"]}

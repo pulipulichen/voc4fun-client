@@ -1,0 +1,1 @@
+{"word_chinese":"少數民族聚居區","word_english":"ghetto","test_options":["ghetto","good-looking","hacker"]}

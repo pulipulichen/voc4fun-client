@@ -1,0 +1,1 @@
+{"word_chinese":"擁護者","word_english":"advocate","test_options":["advocate","AI","analytical"]}

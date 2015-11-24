@@ -1,0 +1,1 @@
+{"word_chinese":"電影劇本","word_english":"scenario","test_options":["scenario","secondly","sewer"]}

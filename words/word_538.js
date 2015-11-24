@@ -1,0 +1,1 @@
+{"word_chinese":"強制性的","word_english":"compelling","test_options":["compelling","compulsory","consortium"]}

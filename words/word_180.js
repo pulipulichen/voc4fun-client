@@ -1,0 +1,1 @@
+{"word_chinese":"(價格的)評定","word_english":"assessment","test_options":["assessment","attendant","barge"]}

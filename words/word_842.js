@@ -1,0 +1,1 @@
+{"word_chinese":"揭發","word_english":"disclose","test_options":["disclose","disperse","doorway"]}

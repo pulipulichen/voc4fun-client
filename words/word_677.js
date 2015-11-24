@@ -1,0 +1,1 @@
+{"word_chinese":"優待券","word_english":"coupon","test_options":["coupon","creek","daybreak"]}

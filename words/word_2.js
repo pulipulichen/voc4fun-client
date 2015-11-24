@@ -1,0 +1,1 @@
+{"word_chinese":"修道院","word_english":"abbey","test_options":["abbey","accessory","adverse"]}

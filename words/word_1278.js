@@ -1,0 +1,1 @@
+{"word_chinese":"催促","word_english":"hasten","test_options":["hasten","heir","hound"]}

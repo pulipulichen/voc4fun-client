@@ -1,0 +1,1 @@
+{"word_chinese":"短暫的;簡短的","word_english":"briefing","test_options":["briefing","bruise","carol"]}

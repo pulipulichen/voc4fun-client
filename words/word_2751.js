@@ -1,0 +1,1 @@
+{"word_chinese":"維持","word_english":"sustain","test_options":["sustain","tact","terrace"]}

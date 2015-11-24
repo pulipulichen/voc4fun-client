@@ -1,0 +1,1 @@
+{"word_chinese":"基礎設施","word_english":"infrastructure","test_options":["infrastructure","insane","intimidate"]}

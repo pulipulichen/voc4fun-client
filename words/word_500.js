@@ -1,0 +1,1 @@
+{"word_chinese":"合作","word_english":"collaboration","test_options":["collaboration","commentator","computing"]}

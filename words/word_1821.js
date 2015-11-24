@@ -1,0 +1,1 @@
+{"word_chinese":"數位的","word_english":"numerical","test_options":["numerical","obstinate","ornament"]}

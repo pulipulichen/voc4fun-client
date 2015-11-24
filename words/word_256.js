@@ -1,0 +1,1 @@
+{"word_chinese":"打;心臟的跳動","word_english":"beating","test_options":["beating","biochemistry","bosom"]}

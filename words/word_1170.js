@@ -1,0 +1,1 @@
+{"word_chinese":"邊疆","word_english":"frontier","test_options":["frontier","gasp","governmental"]}

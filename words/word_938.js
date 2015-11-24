@@ -1,0 +1,1 @@
+{"word_chinese":"時間)經過，消失","word_english":"elapse(","test_options":["elapse(","emergence","equity"]}

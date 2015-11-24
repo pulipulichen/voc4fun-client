@@ -1,0 +1,1 @@
+{"word_chinese":"現實主義","word_english":"realism","test_options":["realism","rectangular","remainder"]}

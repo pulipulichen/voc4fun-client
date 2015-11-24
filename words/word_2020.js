@@ -1,0 +1,1 @@
+{"word_chinese":"好像有道理的","word_english":"plausible","test_options":["plausible","polytechnic","preposition"]}

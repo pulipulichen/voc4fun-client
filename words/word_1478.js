@@ -1,0 +1,1 @@
+{"word_chinese":"直覺","word_english":"intuition","test_options":["intuition","isle","lava"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"演變，變遷","word_english":"transition","test_options":["transition","trifle","unbeaten"]}

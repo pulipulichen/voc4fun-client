@@ -1,0 +1,1 @@
+{"word_chinese":"輕微地顫抖","word_english":"quiver","test_options":["quiver","ranch","reef"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"使一般化;概括","word_english":"generalize","test_options":["generalize","glee","guild"]}

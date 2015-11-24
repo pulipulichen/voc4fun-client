@@ -1,0 +1,1 @@
+{"word_chinese":"判斷(力);謹慎","word_english":"discretion","test_options":["discretion","disregard","drastic"]}

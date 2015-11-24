@@ -1,0 +1,1 @@
+{"word_chinese":"移居(外國)","word_english":"emigrate","test_options":["emigrate","enlighten","evaluation"]}

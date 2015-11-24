@@ -1,0 +1,1 @@
+{"word_chinese":"有組織的","word_english":"organized","test_options":["organized","outlaw","parliamentary"]}

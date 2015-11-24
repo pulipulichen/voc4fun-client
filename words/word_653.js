@@ -1,0 +1,1 @@
+{"word_chinese":"法人的;(大)公司的","word_english":"corporate","test_options":["corporate","countable","crunchy"]}

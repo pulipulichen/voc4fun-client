@@ -1,0 +1,1 @@
+{"word_chinese":"住宅","word_english":"dwelling","test_options":["dwelling","electron","entail"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"章魚","word_english":"octopus","test_options":["octopus","optical","overhear"]}

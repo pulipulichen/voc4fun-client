@@ -1,0 +1,1 @@
+{"word_chinese":"栗子","word_english":"chestnut","test_options":["chestnut","clarity","combat"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"暴動的","word_english":"riotous","test_options":["riotous","row(","scent"]}

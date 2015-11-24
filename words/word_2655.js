@@ -1,0 +1,1 @@
+{"word_chinese":"計學(上)的","word_english":"statistical","test_options":["statistical","stoop.","subsidy"]}

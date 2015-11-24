@@ -1,0 +1,1 @@
+{"word_chinese":"挫折","word_english":"frustration","test_options":["frustration","gel","graphic"]}

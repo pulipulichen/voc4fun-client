@@ -1,0 +1,1 @@
+{"word_chinese":"廣告商","word_english":"advertiser","test_options":["advertiser","agitate","amnesty"]}

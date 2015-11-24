@@ -1,0 +1,1 @@
+{"word_chinese":"半準決賽","word_english":"quarter-final","test_options":["quarter-final","radioactive","reconstruction"]}

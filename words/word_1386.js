@@ -1,0 +1,1 @@
+{"word_chinese":"傾斜的;傾向於…的","word_english":"inclined","test_options":["inclined","inefficient","instrumental"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"命令的","word_english":"imperative","test_options":["imperative","inclusive","inning("]}

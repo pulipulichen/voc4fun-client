@@ -1,0 +1,1 @@
+{"word_chinese":"聚精會神的","word_english":"concentrated","test_options":["concentrated","connected","contradiction"]}

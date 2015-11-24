@@ -1,0 +1,1 @@
+{"word_chinese":"四季不斷的","word_english":"perennial","test_options":["perennial","pesticide","plunge"]}

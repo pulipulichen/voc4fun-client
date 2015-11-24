@@ -1,0 +1,1 @@
+{"word_chinese":"把…弄清潔","word_english":"cleanse","test_options":["cleanse","cockpit(","compartment("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"矛盾；不符合","word_english":"discrepancy","test_options":["discrepancy","dispose","drainage"]}

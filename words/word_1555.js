@@ -1,0 +1,1 @@
+{"word_chinese":"女性同性戀的","word_english":"lesbian","test_options":["lesbian","likelihood","lotus"]}

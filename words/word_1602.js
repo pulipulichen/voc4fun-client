@@ -1,0 +1,1 @@
+{"word_chinese":"廣告的標識","word_english":"logo","test_options":["logo","lump","massive"]}

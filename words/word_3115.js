@@ -1,0 +1,1 @@
+{"word_chinese":"觀點激進的人","word_english":"way-out","test_options":["way-out","whisk","zeal"]}

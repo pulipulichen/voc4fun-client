@@ -1,0 +1,1 @@
+{"word_chinese":"村民","word_english":"villager","test_options":["villager","voltage","whirl"]}

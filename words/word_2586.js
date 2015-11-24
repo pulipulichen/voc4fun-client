@@ -1,0 +1,1 @@
+{"word_chinese":"世故深的，(技術、產品等)尖端的，精致的","word_english":"sophisticated","test_options":["sophisticated","spectrum","stapler"]}

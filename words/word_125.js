@@ -1,0 +1,1 @@
+{"word_chinese":"類推","word_english":"analogy","test_options":["analogy","apartheid","assuming"]}

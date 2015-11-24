@@ -1,0 +1,1 @@
+{"word_chinese":"償還;報答","word_english":"repay","test_options":["repay","reside","rhetoric"]}

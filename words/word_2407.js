@@ -1,0 +1,1 @@
+{"word_chinese":"向…敬禮","word_english":"salute","test_options":["salute","scent","separated"]}

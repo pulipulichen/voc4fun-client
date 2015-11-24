@@ -1,0 +1,1 @@
+{"word_chinese":"嚇人的","word_english":"startling","test_options":["startling","still","subscribe"]}

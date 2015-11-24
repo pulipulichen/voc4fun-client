@@ -1,0 +1,1 @@
+{"word_chinese":"不穩定性","word_english":"instability","test_options":["instability","intensity","isolated"]}

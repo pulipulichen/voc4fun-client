@@ -1,0 +1,1 @@
+{"word_chinese":"君主，元首","word_english":"sovereign","test_options":["sovereign","sphere","startle("]}

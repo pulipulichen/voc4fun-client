@@ -1,0 +1,1 @@
+{"word_chinese":"交叉點；十字街口","word_english":"crossing","test_options":["crossing","currency","defiance"]}

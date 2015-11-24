@@ -1,0 +1,1 @@
+{"word_chinese":"貪婪","word_english":"greed","test_options":["greed","gust","heir"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"使降低價值","word_english":"devalue","test_options":["devalue","dilemma","displease"]}

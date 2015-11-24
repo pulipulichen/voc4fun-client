@@ -1,0 +1,1 @@
+{"word_chinese":"賣國賊；叛徒","word_english":"traitor","test_options":["traitor","transmit","turbine("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"寬敞的;充足的","word_english":"ample","test_options":["ample","antonym","assimilate"]}

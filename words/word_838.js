@@ -1,0 +1,1 @@
+{"word_chinese":"辨別","word_english":"discern","test_options":["discern","dismissal","donor"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"固有的，生來的","word_english":"inherent","test_options":["inherent","insight","intriguing"]}

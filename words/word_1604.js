@@ -1,0 +1,1 @@
+{"word_chinese":"寂寞的;無人煙的","word_english":"lone","test_options":["lone","lunchtime","materialism"]}

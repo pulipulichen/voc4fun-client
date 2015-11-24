@@ -1,0 +1,1 @@
+{"word_chinese":"硬紙板","word_english":"cardboard","test_options":["cardboard","catering","chef"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"橫越(全國)的","word_english":"cross-country","test_options":["cross-country","curfew","defensible"]}

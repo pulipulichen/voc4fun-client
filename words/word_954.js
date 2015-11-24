@@ -1,0 +1,1 @@
+{"word_chinese":"使具體化","word_english":"embody","test_options":["embody","endowment","ethical"]}

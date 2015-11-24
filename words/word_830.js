@@ -1,0 +1,1 @@
+{"word_chinese":"方針;指揮的","word_english":"directive","test_options":["directive","discretion","dividend"]}

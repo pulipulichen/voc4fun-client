@@ -1,0 +1,1 @@
+{"word_chinese":"縱情，沈溺","word_english":"indulge","test_options":["indulge","initiative","intercourse"]}

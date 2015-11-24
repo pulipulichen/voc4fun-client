@@ -1,0 +1,1 @@
+{"word_chinese":"耳機","word_english":"earphones","test_options":["earphones","elicit","entrepreneur"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"蹂躪","word_english":"ravage","test_options":["ravage","recording","relic"]}

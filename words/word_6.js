@@ -1,0 +1,1 @@
+{"word_chinese":"遵守;保持","word_english":"abide","test_options":["abide","accordingly","advisable"]}

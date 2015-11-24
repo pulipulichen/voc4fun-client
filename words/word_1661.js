@@ -1,0 +1,1 @@
+{"word_chinese":"大的;大規模的","word_english":"massive","test_options":["massive","mercury","modernization"]}

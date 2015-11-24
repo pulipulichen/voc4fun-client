@@ -1,0 +1,1 @@
+{"word_chinese":"使惡化","word_english":"deteriorate","test_options":["deteriorate","differentiate","disperse"]}

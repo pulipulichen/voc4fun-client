@@ -1,0 +1,1 @@
+{"word_chinese":"地方長官","word_english":"magistrate","test_options":["magistrate","marginal","middle-aged"]}

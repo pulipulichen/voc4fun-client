@@ -1,0 +1,1 @@
+{"word_chinese":"致命的","word_english":"deadly","test_options":["deadly","defect","detain"]}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <!--
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        -->
+        <title>Hello World</title>  
+			
+<!--
+        <script type="text/javascript" src="js/dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+        <script type="text/javascript"
+            //dojo.require("dojox.mobile.parser");
+            //dojo.require("dojox.mobile");
+            //dojo.requireIf(!dojo.isWebKit, "dojox.mobile.compat");
+            require([
+              "dojox/mobile/parser", // (Optional) This mobile app uses declarative programming with fast mobile parser
+              "dojox/mobile",        // (Required) This is a mobile app.
+              "dojox/mobile/compat"  // (Optional) This mobile app supports running on desktop browsers
+            ], function(parser, mobile, compat){ Optional module aliases that can then be referenced inside callback block
+              // Do something with mobile api's.  At this point Dojo Mobile api's are ready for use.
+            );
+        ></script>
+        <link rel="stylesheet" type="text/css" href="js/dojox/mobile/themes/android/android.css" />
+    -->
+        <link href="dojox/mobile/themes/iphone/iphone.css" rel="stylesheet"></link>
+        <!--<link href="js/dojox/mobile/themes/windows/windows.css" rel="stylesheet"></link>-->
+     <script src="dojo/dojo.js" data-dojo-config="async:true, parseOnLoad:true"></script>
+     <script>
+       require([
+         "dojox/mobile/parser",    // This mobile app uses declarative programming with fast mobile parser
+         "dojox/mobile",           // This is a mobile app.
+       ]); // Skip module alias and function block because we're not doing anything special...
+     </script>
+    </head>
+    <body class="mblIOS6Stripes" style="visibility: hidden;">
+        <!--
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Readya5555</p>
+                
+            </div>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        -->
+     <div id="home page" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading">View 1</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'Center', preventTouch:'true'">Center</span></li>
+		
+	<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'learn list'">學習單字</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look note'">查看標註</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'test list'">小試身手</span> </li>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">我的排名</span> </li>
+ </ul>
+<span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'bar'">離開系統●未完成</span> </li>
+       </ul>
+	   
+
+     </div>
+
+     <div id="bar" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'Home',moveTo:'home page'">View 2</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">試試看有沒有成功？</li>		 
+		 <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="moveTo:'bard',label:'去第三頁'"></li>
+       </ul>
+
+哈哈!
+
+     </div>
+	 
+	 <div id="look note" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的標註</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以條列呈現自己的所有標註</li>		
+       </ul>
+  
+     </div>
+	 
+	  <div id="look rank" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">我的排名</h1>
+       <ul data-dojo-type="dojox/mobile/RoundRectList">
+         <li data-dojo-type="dojox/mobile/ListItem" data-dojo-pros="label:'World'">下方以圖像表示</li>		
+       </ul>
+  
+     </div>
+	 
+	  <div id="learn list" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">選擇學習單元</h1>
+	   <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'Center', preventTouch:'true'">Center</span></li>
+		
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'bar'">單字01</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look note'">單字02</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'bar'">單字03</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字04</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字05</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字06</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字07</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字08</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字09</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字10</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字11</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字12</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字13</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字14</span> </li>
+     
+	   </ul>
+	   
+     </div>
+
+<div id="test list" data-dojo-type="dojox/mobile/View">
+       <h1 data-dojo-type="dojox/mobile/Heading" data-dojo-props="back:'回前頁',moveTo:'home page'">選擇測驗單元</h1>
+	   <ul data-dojo-type="dojox/mobile/RoundRectList">
+        <li data-dojo-type="dojox/mobile/ListItem" data-dojo-props='icon:"images/close_dark.png",moveTo:"#bar"'></li>
+		<li data-dojo-type="dojox/mobile/ListItem" data-dojo-props="layout: 'Center', preventTouch:'true'">Center</span></li>
+		
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'bar'">單字01</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look note'">單字02</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'right',moveTo:'bar'">單字03</span> </li>
+         <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字04</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字05</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字06</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字07</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字08</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字09</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字10</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字11</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字12</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字13</span> </li>
+	     <span data-dojo-type="dojox/mobile/ToolBarButton" data-dojo-props="layout: 'left',moveTo:'look rank'">單字14</span> </li>
+     
+	   </ul>
+	   
+     </div>
+
+
+	 
+	 
+    </body>
+</html>

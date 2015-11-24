@@ -1,0 +1,1 @@
+{"word_chinese":"政權","word_english":"regime","test_options":["regime","relish","respectable"]}

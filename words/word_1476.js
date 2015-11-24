@@ -1,0 +1,1 @@
+{"word_chinese":"內在的;真正的","word_english":"intrinsic","test_options":["intrinsic","irritable","lasting"]}

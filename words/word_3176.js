@@ -1,0 +1,1 @@
+{"word_chinese":"拉鍊","word_english":"zip","test_options":["zip","worship","warrant"]}

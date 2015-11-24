@@ -1,0 +1,1 @@
+{"word_chinese":"無情的，殘忍的","word_english":"ruthless","test_options":["ruthless","satisfying","semiconductor"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"體育館，健身房","word_english":"gymnasium","test_options":["gymnasium","haste","hockey"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"詢問","word_english":"query","test_options":["query","raid","recur("]}

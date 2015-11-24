@@ -1,0 +1,1 @@
+{"word_chinese":"無能；殘疾","word_english":"disability","test_options":["disability","disgrace","documentary"]}

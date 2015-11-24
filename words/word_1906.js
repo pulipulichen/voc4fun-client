@@ -1,0 +1,1 @@
+{"word_chinese":"使)翻過來","word_english":"overturn(","test_options":["overturn(","paradox","pension"]}

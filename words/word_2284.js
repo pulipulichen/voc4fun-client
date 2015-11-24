@@ -1,0 +1,1 @@
+{"word_chinese":"剩餘;餘燼","word_english":"remnant","test_options":["remnant","reproach","reunion"]}

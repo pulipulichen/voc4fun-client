@@ -1,0 +1,1 @@
+{"word_chinese":"衝動","word_english":"impulse","test_options":["impulse","index","insecure"]}

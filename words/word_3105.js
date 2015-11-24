@@ -1,0 +1,1 @@
+{"word_chinese":"器皿，物件","word_english":"ware","test_options":["ware","well-being","written"]}

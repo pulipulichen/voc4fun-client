@@ -1,0 +1,1 @@
+{"word_chinese":"無家可歸的","word_english":"homeless","test_options":["homeless","howl(","inaugurate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"胭脂，唇膏","word_english":"rouge","test_options":["rouge","saint","seasoning"]}

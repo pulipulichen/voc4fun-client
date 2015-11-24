@@ -1,0 +1,1 @@
+{"word_chinese":"傳遞；傳染；移轉","word_english":"transmission","test_options":["transmission","trigger","uncertain"]}

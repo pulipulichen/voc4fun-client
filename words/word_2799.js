@@ -1,0 +1,1 @@
+{"word_chinese":"性情，脾氣","word_english":"temperament","test_options":["temperament","tertiary","timer"]}

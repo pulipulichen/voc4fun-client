@@ -1,0 +1,1 @@
+{"word_chinese":"總統[主席、議長等]的職位[任期]","word_english":"presidency","test_options":["presidency","privileged","provided"]}

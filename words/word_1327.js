@@ -1,0 +1,1 @@
+{"word_chinese":"蹄","word_english":"hoof","test_options":["hoof","hurl","inclined"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"傷痕；疤","word_english":"scar","test_options":["scar","seasonal","setback"]}

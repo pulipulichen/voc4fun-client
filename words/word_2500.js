@@ -1,0 +1,1 @@
+{"word_chinese":"發抖","word_english":"shiver","test_options":["shiver","silicon","snarl"]}

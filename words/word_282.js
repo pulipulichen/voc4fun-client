@@ -1,0 +1,1 @@
+{"word_chinese":"溫和的;不動感情的","word_english":"bland","test_options":["bland","boiling","briefly"]}

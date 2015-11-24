@@ -1,0 +1,1 @@
+{"word_chinese":"殺蟲劑","word_english":"pesticide","test_options":["pesticide","pillar","postulate("]}

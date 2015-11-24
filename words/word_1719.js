@@ -1,0 +1,1 @@
+{"word_chinese":"模，型；樣式","word_english":"mode","test_options":["mode","mortar","navel"]}

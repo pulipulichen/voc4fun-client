@@ -1,0 +1,1 @@
+{"word_chinese":"打擊者","word_english":"striker","test_options":["striker","submit","surplus"]}

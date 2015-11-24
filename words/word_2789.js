@@ -1,0 +1,1 @@
+{"word_chinese":"小旅館，酒館","word_english":"tavern","test_options":["tavern","terminology","throng"]}

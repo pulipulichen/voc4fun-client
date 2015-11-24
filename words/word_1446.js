@@ -1,0 +1,1 @@
+{"word_chinese":"不充分的","word_english":"insufficient","test_options":["insufficient","intermittent","jeer"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"奇跡般的","word_english":"miraculous","test_options":["miraculous","monetary","nadir"]}

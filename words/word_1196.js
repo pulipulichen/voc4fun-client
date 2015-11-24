@@ -1,0 +1,1 @@
+{"word_chinese":"產生者;發電機","word_english":"generator","test_options":["generator","glitter","gulp"]}

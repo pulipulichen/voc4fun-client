@@ -1,0 +1,1 @@
+{"word_chinese":"阿拉伯聯盟","word_english":"AI","test_options":["AI","alligator","appall"]}

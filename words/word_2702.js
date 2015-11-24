@@ -1,0 +1,1 @@
+{"word_chinese":"風格上的","word_english":"stylistic","test_options":["stylistic","succession","symmetrical"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"切斷","word_english":"cutting","test_options":["cutting","decimal","deprive"]}

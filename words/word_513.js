@@ -1,0 +1,1 @@
+{"word_chinese":"彗星","word_english":"comet","test_options":["comet","compartment(","condense"]}

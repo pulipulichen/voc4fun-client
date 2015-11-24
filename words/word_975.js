@@ -1,0 +1,1 @@
+{"word_chinese":"強制;厲行","word_english":"enforcement","test_options":["enforcement","equation","exclusion"]}

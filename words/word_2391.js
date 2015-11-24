@@ -1,0 +1,1 @@
+{"word_chinese":"統治的","word_english":"ruling","test_options":["ruling","sanctuary","seemingly"]}

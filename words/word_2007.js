@@ -1,0 +1,1 @@
+{"word_chinese":"虔敬","word_english":"piety","test_options":["piety","plight","predictable"]}

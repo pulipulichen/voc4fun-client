@@ -1,0 +1,1 @@
+{"word_chinese":"龐大的","word_english":"bulky","test_options":["bulky","capability","centered"]}

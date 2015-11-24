@@ -1,0 +1,1 @@
+{"word_chinese":"感覺；知覺","word_english":"sensation","test_options":["sensation","setback","silkworm"]}

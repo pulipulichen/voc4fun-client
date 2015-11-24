@@ -1,0 +1,1 @@
+{"word_chinese":"部分地","word_english":"partly","test_options":["partly","peddle","pharmacology"]}

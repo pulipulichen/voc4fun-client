@@ -1,0 +1,1 @@
+{"word_chinese":"季節(性)的","word_english":"seasonal","test_options":["seasonal","senate","shipping"]}

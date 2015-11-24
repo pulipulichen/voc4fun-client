@@ -1,0 +1,1 @@
+{"word_chinese":"倫理道德","word_english":"ethics","test_options":["ethics","exclude","facilitate"]}

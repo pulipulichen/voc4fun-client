@@ -1,0 +1,1 @@
+{"word_chinese":"反駁","word_english":"repel","test_options":["repel","resolute","rhythmic"]}

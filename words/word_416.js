@@ -1,0 +1,1 @@
+{"word_chinese":"停火","word_english":"ceasefire","test_options":["ceasefire","chant","clearance"]}

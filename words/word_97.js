@@ -1,0 +1,1 @@
+{"word_chinese":"斷言，主張","word_english":"allegation","test_options":["allegation","amend","aptitude"]}

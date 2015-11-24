@@ -1,0 +1,1 @@
+{"word_chinese":"看管者","word_english":"caretaker","test_options":["caretaker","cavalry","chirp("]}

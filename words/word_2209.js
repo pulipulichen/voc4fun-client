@@ -1,0 +1,1 @@
+{"word_chinese":"重敲;斥責","word_english":"rap","test_options":["rap","recipient","rejoice"]}

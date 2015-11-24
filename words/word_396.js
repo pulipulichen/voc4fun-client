@@ -1,0 +1,1 @@
+{"word_chinese":"關心的","word_english":"caring","test_options":["caring","cavity","chisel"]}

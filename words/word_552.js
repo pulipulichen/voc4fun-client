@@ -1,0 +1,1 @@
+{"word_chinese":"瞭解","word_english":"comprehend","test_options":["comprehend","condemnation","contaminate"]}

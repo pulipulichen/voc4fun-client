@@ -1,0 +1,1 @@
+{"word_chinese":"信賴;依靠","word_english":"reliance","test_options":["reliance","repeated","retired"]}

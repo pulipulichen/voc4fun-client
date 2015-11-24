@@ -1,0 +1,1 @@
+{"word_chinese":"擁抱","word_english":"embrace","test_options":["embrace","energize","ethics"]}

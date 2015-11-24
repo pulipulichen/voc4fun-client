@@ -1,0 +1,1 @@
+{"word_chinese":"售貨攤；棚店","word_english":"stall","test_options":["stall","statistics","stunning"]}

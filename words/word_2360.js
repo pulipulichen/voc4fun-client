@@ -1,0 +1,1 @@
+{"word_chinese":"右手的","word_english":"right-hand","test_options":["right-hand","roller","savage"]}

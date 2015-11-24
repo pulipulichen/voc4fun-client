@@ -1,0 +1,1 @@
+{"word_chinese":"絕望的","word_english":"hopeless","test_options":["hopeless","hybrid","inclusive"]}

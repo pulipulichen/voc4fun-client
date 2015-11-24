@@ -1,0 +1,1 @@
+{"word_chinese":"預言者","word_english":"prophet","test_options":["prophet","proximity","racist"]}

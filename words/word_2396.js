@@ -1,0 +1,1 @@
+{"word_chinese":"沙沙地[颯颯地]響","word_english":"rustle","test_options":["rustle","satisfied","self-esteem"]}

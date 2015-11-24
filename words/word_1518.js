@@ -1,0 +1,1 @@
+{"word_chinese":"連接(點)","word_english":"junction","test_options":["junction","lava","limousine"]}

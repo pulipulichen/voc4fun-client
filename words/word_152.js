@@ -1,0 +1,1 @@
+{"word_chinese":"理解(力)","word_english":"apprehension","test_options":["apprehension","artifact","automation"]}

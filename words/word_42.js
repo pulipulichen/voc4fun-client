@@ -1,0 +1,1 @@
+{"word_chinese":"使沈溺","word_english":"addict","test_options":["addict","adverse","allergy"]}

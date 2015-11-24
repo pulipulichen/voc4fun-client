@@ -1,0 +1,1 @@
+{"word_chinese":"病弱的;無效的","word_english":"invalid","test_options":["invalid","isolated","lavish"]}

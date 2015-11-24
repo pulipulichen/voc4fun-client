@@ -1,0 +1,1 @@
+{"word_chinese":"支出，花費","word_english":"expenditure","test_options":["expenditure","extremist","finite"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"不適當的，不健全的人","word_english":"unfit","test_options":["unfit","unwanted","verbal"]}

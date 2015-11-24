@@ -1,0 +1,1 @@
+{"word_chinese":"攤開","word_english":"unfold","test_options":["unfold","unwilling","verdict("]}

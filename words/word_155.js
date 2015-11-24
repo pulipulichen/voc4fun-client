@@ -1,0 +1,1 @@
+{"word_chinese":"有…傾向的","word_english":"apt","test_options":["apt","ascribe","avail"]}

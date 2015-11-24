@@ -1,0 +1,1 @@
+{"word_chinese":"夥伴關係;交情","word_english":"fellowship","test_options":["fellowship","fitting","fowl"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"外科的","word_english":"surgical","test_options":["surgical","tablespoon","tempted"]}

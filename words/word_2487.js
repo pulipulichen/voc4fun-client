@@ -1,0 +1,1 @@
+{"word_chinese":"成型的","word_english":"shaped","test_options":["shaped","shred","slick"]}

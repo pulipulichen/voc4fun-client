@@ -1,0 +1,1 @@
+{"word_chinese":"悲痛；災難","word_english":"woe","test_options":["woe","yarn","wholly"]}

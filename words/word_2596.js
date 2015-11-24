@@ -1,0 +1,1 @@
+{"word_chinese":"使)專門化","word_english":"specialize(","test_options":["specialize(","sponge","statistical"]}

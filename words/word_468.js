@@ -1,0 +1,1 @@
+{"word_chinese":"鉗，夾子","word_english":"clamp","test_options":["clamp","clutch","commute"]}

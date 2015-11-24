@@ -1,0 +1,1 @@
+{"word_chinese":"用力拉，拉緊","word_english":"strain","test_options":["strain","stunt","supervision"]}

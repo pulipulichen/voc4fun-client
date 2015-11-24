@@ -1,0 +1,1 @@
+{"word_chinese":"強調的","word_english":"emphatic","test_options":["emphatic","enthusiast","evidently"]}

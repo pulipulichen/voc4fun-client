@@ -1,0 +1,1 @@
+{"word_chinese":"旋轉(n.)","word_english":"rotation","test_options":["rotation","safeguard","seasoned"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"荒謬的","word_english":"absurd","test_options":["absurd","acoustic","affirm"]}

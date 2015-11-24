@@ -1,0 +1,1 @@
+{"word_chinese":"氧化物","word_english":"oxide","test_options":["oxide","parliamentary","perch"]}

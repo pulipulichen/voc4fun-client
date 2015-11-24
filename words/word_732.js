@@ -1,0 +1,1 @@
+{"word_chinese":"該死的","word_english":"damned","test_options":["damned","dedicated","designate"]}

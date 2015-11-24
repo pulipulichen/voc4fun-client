@@ -1,0 +1,1 @@
+{"word_chinese":"健壯的；不屈的","word_english":"sturdy","test_options":["sturdy","subtle","syllabus"]}

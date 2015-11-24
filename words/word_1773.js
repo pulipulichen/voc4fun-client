@@ -1,0 +1,1 @@
+{"word_chinese":"敘述的","word_english":"narrative","test_options":["narrative","newsreel","obligatory"]}

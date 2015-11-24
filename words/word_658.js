@@ -1,0 +1,1 @@
+{"word_chinese":"通信;符合","word_english":"correspondence","test_options":["correspondence","coupon","culminate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"運動參加者","word_english":"campaigner","test_options":["campaigner","carton","charter"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"加熱的;刺激的","word_english":"heating","test_options":["heating","hi-fi","hypocrisy"]}

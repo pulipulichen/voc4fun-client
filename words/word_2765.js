@@ -1,0 +1,1 @@
+{"word_chinese":"食具","word_english":"tableware","test_options":["tableware","tariff","texture("]}

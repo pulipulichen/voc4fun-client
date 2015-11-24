@@ -1,0 +1,1 @@
+{"word_chinese":"避開，躲開","word_english":"shun","test_options":["shun","skeptical","socialize"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"揮霍","word_english":"lavish","test_options":["lavish","lesser","locked"]}

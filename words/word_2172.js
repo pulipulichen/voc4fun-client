@@ -1,0 +1,1 @@
+{"word_chinese":"用數量表示","word_english":"quantify","test_options":["quantify","racist","reckon"]}

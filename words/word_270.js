@@ -1,0 +1,1 @@
+{"word_chinese":"成見","word_english":"bias","test_options":["bias","bloc","braid"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"肋骨","word_english":"rib","test_options":["rib","roam","satisfied"]}

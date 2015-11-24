@@ -1,0 +1,1 @@
+{"word_chinese":"鈾","word_english":"uranium","test_options":["uranium","variation","vinyl"]}

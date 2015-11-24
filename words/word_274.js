@@ -1,0 +1,1 @@
+{"word_chinese":"雙目的","word_english":"binoculars","test_options":["binoculars","blues","breadth"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"任命某人任某職","word_english":"designate","test_options":["designate","deviate","discriminate"]}

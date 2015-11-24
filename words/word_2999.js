@@ -1,0 +1,1 @@
+{"word_chinese":"非正式的","word_english":"unofficial","test_options":["unofficial","uprising","veto"]}

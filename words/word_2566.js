@@ -1,0 +1,1 @@
+{"word_chinese":"浸，泡","word_english":"soak","test_options":["soak","soothe","spur"]}

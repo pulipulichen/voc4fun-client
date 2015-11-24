@@ -1,0 +1,1 @@
+{"word_chinese":"猛推，衝","word_english":"thrust","test_options":["thrust","toll","transmit"]}

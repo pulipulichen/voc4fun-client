@@ -1,0 +1,1 @@
+{"word_chinese":"俯瞰","word_english":"oversee","test_options":["oversee","pane(","penetrate"]}

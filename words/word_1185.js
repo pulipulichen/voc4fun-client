@@ -1,0 +1,1 @@
+{"word_chinese":"銀河","word_english":"galaxy","test_options":["galaxy","gilt","groove"]}

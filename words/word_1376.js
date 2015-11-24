@@ -1,0 +1,1 @@
+{"word_chinese":"無能","word_english":"inability","test_options":["inability","indicator","insight"]}

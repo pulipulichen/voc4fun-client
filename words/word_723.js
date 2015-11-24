@@ -1,0 +1,1 @@
+{"word_chinese":"必修課程","word_english":"curriculum","test_options":["curriculum","dealing","deplete"]}

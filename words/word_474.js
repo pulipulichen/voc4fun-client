@@ -1,0 +1,1 @@
+{"word_chinese":"清掃","word_english":"clean-up","test_options":["clean-up","cocoa","compass"]}

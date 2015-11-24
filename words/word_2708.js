@@ -1,0 +1,1 @@
+{"word_chinese":"次級的；從屬的","word_english":"subordinate","test_options":["subordinate","sulfur","taboo"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"傳達；轉播","word_english":"relay","test_options":["relay","reopen","resume"]}

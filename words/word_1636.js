@@ -1,0 +1,1 @@
+{"word_chinese":"莊嚴的","word_english":"majestic","test_options":["majestic","martial","milestone"]}

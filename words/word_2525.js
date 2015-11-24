@@ -1,0 +1,1 @@
+{"word_chinese":"同時發生的","word_english":"simultaneous","test_options":["simultaneous","sled","someday"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"瑜伽","word_english":"yoga","test_options":["yoga","workman","walnut"]}

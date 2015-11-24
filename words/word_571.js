@@ -1,0 +1,1 @@
+{"word_chinese":"非難的理由","word_english":"condemnation","test_options":["condemnation","consent","controversy"]}

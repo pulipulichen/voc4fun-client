@@ -1,0 +1,1 @@
+{"word_chinese":"尖塔","word_english":"spire","test_options":["spire","stagger","stimulus"]}

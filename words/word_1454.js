@@ -1,0 +1,1 @@
+{"word_chinese":"整合","word_english":"integration","test_options":["integration","intricate","joyous"]}

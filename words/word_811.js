@@ -1,0 +1,1 @@
+{"word_chinese":"狼吞虎嚥","word_english":"devour","test_options":["devour","directive","dissent"]}

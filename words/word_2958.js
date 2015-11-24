@@ -1,0 +1,1 @@
+{"word_chinese":"潰瘍","word_english":"ulcer","test_options":["ulcer","underlying","upright"]}

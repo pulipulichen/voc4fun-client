@@ -1,0 +1,1 @@
+{"word_chinese":"沈思","word_english":"speculate","test_options":["speculate","spur","stern"]}

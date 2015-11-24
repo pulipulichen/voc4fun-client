@@ -1,0 +1,1 @@
+{"word_chinese":"表示…的","word_english":"indicative","test_options":["indicative","ingenious","integrate"]}

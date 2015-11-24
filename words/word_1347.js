@@ -1,0 +1,1 @@
+{"word_chinese":"雜種","word_english":"hybrid","test_options":["hybrid","impair","inertia"]}

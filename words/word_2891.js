@@ -1,0 +1,1 @@
+{"word_chinese":"踩，用沈重的腳步走","word_english":"tramp","test_options":["tramp","transparent","turmoil"]}

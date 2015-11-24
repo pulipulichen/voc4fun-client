@@ -1,0 +1,1 @@
+{"word_chinese":"把(某事)歸因於…","word_english":"attribute","test_options":["attribute","axis","behalf"]}

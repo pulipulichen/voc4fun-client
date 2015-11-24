@@ -1,0 +1,1 @@
+{"word_chinese":"零售(的)","word_english":"retail","test_options":["retail","revolt","rugged"]}

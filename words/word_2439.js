@@ -1,0 +1,1 @@
+{"word_chinese":"當令的；合時的","word_english":"seasonable","test_options":["seasonable","seminar","shipment"]}

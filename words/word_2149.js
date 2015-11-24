@@ -1,0 +1,1 @@
+{"word_chinese":"挑釁","word_english":"provoke","test_options":["provoke","quack","ransom"]}

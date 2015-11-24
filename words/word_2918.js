@@ -1,0 +1,1 @@
+{"word_chinese":"坐牛車)旅行","word_english":"trek(","test_options":["trek(","troubled","underlying"]}

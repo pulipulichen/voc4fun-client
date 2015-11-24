@@ -1,0 +1,1 @@
+{"word_chinese":"調(飲料)","word_english":"brew","test_options":["brew","brow","carnival"]}

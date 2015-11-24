@@ -1,0 +1,1 @@
+{"word_chinese":"撫養","word_english":"upbringing","test_options":["upbringing","vaccine","viewer"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"迷路的","word_english":"lost","test_options":["lost","magnify","medication"]}

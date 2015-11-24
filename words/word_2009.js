@@ -1,0 +1,1 @@
+{"word_chinese":"粉刺","word_english":"pimple","test_options":["pimple","pluck","predominantly"]}

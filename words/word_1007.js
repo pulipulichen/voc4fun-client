@@ -1,0 +1,1 @@
+{"word_chinese":"被認定了的","word_english":"established","test_options":["established","examinee","extremist"]}

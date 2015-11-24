@@ -1,0 +1,1 @@
+{"word_chinese":"迷信的","word_english":"superstitious","test_options":["superstitious","swarm(","teaspoon"]}

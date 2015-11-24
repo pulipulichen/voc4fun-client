@@ -1,0 +1,1 @@
+{"word_chinese":"用後就扔棄的","word_english":"disposable","test_options":["disposable","disturbing","dying"]}

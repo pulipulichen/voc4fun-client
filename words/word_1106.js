@@ -1,0 +1,1 @@
+{"word_chinese":"有限的","word_english":"finite","test_options":["finite","flop","fraud"]}

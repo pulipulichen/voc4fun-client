@@ -1,0 +1,1 @@
+{"word_chinese":"使煩惱;焦急，煩惱","word_english":"fret","test_options":["fret","gallop","gorgeous"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"誇大","word_english":"exaggeration","test_options":["exaggeration","expedition","Fascism"]}

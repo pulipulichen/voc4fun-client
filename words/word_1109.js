@@ -1,0 +1,1 @@
+{"word_chinese":"防火的","word_english":"fireproof","test_options":["fireproof","fluctuate","friction"]}

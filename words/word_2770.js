@@ -1,0 +1,1 @@
+{"word_chinese":"機敏；圓滑","word_english":"tact","test_options":["tact","tavern","thereby"]}

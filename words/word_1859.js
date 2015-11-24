@@ -1,0 +1,1 @@
+{"word_chinese":"壓迫","word_english":"oppression","test_options":["oppression","originally","pagan"]}

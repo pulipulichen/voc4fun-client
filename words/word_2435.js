@@ -1,0 +1,1 @@
+{"word_chinese":"細看；細讀","word_english":"scrutiny","test_options":["scrutiny","selective","sherry"]}

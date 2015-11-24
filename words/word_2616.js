@@ -1,0 +1,1 @@
+{"word_chinese":"贊助","word_english":"sponsorship","test_options":["sponsorship","stainless","storage"]}

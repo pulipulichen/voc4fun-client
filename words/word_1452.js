@@ -1,0 +1,1 @@
+{"word_chinese":"完全的;全體","word_english":"integral","test_options":["integral","intimidate","jockey("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"引誘的；誘惑的","word_english":"seductive","test_options":["seductive","separately","shrewd"]}

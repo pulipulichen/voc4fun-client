@@ -1,0 +1,1 @@
+{"word_chinese":"水下呼吸管","word_english":"snorkel","test_options":["snorkel","soluble","spring"]}

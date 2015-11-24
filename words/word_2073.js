@@ -1,0 +1,1 @@
+{"word_chinese":"初步的","word_english":"preliminary","test_options":["preliminary","prevail","prophet"]}

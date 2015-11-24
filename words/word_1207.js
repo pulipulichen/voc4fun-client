@@ -1,0 +1,1 @@
+{"word_chinese":"魔法;使對…著迷","word_english":"glamour","test_options":["glamour","gorgeous","halve"]}

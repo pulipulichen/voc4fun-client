@@ -1,0 +1,1 @@
+{"word_chinese":"給與…以活力","word_english":"energize","test_options":["energize","equate","exclude"]}

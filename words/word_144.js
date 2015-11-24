@@ -1,0 +1,1 @@
+{"word_chinese":"種族隔離(政策)","word_english":"apartheid","test_options":["apartheid","arena","auction"]}

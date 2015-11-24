@@ -1,0 +1,1 @@
+{"word_chinese":"自治","word_english":"autonomy","test_options":["autonomy","banking","bilateral"]}

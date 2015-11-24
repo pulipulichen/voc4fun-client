@@ -1,0 +1,1 @@
+{"word_chinese":"漫步;躺椅","word_english":"lounge","test_options":["lounge","mainstream","meditation"]}

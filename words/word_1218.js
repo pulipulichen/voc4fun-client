@@ -1,0 +1,1 @@
+{"word_chinese":"齒啃","word_english":"gnaw","test_options":["gnaw","grease","haste"]}

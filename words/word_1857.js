@@ -1,0 +1,1 @@
+{"word_chinese":"反對的，敵對的","word_english":"opposed","test_options":["opposed","oriented","pact"]}

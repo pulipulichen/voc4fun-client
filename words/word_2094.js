@@ -1,0 +1,1 @@
+{"word_chinese":"盛行的;廣布的","word_english":"prevalent","test_options":["prevalent","productivity","psychiatric"]}

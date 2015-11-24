@@ -1,0 +1,1 @@
+{"word_chinese":"小冊子","word_english":"brochure","test_options":["brochure","bunker","cater"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"顯露(v.)","word_english":"reveal","test_options":["reveal","rigor","salmon"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"有經驗的","word_english":"experienced","test_options":["experienced","eyelash","firecracker"]}

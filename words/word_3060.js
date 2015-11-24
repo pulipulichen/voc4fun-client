@@ -1,0 +1,1 @@
+{"word_chinese":"有生活力的；可行的","word_english":"viable","test_options":["viable","vinyl","wed"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"競爭，對抗","word_english":"rivalry","test_options":["rivalry","rumble","screwdriver"]}

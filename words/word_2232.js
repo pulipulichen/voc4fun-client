@@ -1,0 +1,1 @@
+{"word_chinese":"要求歸還…","word_english":"reclaim","test_options":["reclaim","reformer","reorganize"]}

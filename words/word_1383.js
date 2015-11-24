@@ -1,0 +1,1 @@
+{"word_chinese":"偶然的","word_english":"incidental","test_options":["incidental","induce","instantaneous"]}

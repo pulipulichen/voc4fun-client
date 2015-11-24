@@ -1,0 +1,1 @@
+{"word_chinese":"創新的","word_english":"innovative","test_options":["innovative","insure","ironic"]}

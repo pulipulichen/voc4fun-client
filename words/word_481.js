@@ -1,0 +1,1 @@
+{"word_chinese":"順時針方向轉動的","word_english":"clockwise","test_options":["clockwise","collaboration","compensation"]}

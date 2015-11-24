@@ -1,0 +1,1 @@
+{"word_chinese":"直立的，正直的","word_english":"upright","test_options":["upright","vanilla","vine"]}

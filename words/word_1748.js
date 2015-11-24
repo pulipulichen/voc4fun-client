@@ -1,0 +1,1 @@
+{"word_chinese":"騎在馬[自行車]上的","word_english":"mounted","test_options":["mounted","mythology","notable"]}

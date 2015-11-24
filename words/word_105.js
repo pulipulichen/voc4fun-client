@@ -1,0 +1,1 @@
+{"word_chinese":"短吻鱷","word_english":"alligator","test_options":["alligator","amplify","armor"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"把…編成團;大群","word_english":"regiment","test_options":["regiment","remainder","respected"]}

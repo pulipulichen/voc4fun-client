@@ -1,0 +1,1 @@
+{"word_chinese":"晴朗；平靜","word_english":"serenity","test_options":["serenity","shed","skeleton"]}

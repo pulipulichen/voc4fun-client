@@ -1,0 +1,1 @@
+{"word_chinese":"獵狗","word_english":"hound","test_options":["hound","ideology","indictment"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"互相爭奪；竭力搜求 (for)","word_english":"scramble","test_options":["scramble","seductive","shareholder"]}

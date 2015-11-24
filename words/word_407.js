@@ -1,0 +1,1 @@
+{"word_chinese":"災禍","word_english":"catastrophe","test_options":["catastrophe","centered","civic"]}

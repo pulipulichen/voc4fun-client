@@ -1,0 +1,1 @@
+{"word_chinese":"企業家","word_english":"entrepreneur","test_options":["entrepreneur","eruption","exotic"]}

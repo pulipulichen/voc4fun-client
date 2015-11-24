@@ -1,0 +1,1 @@
+{"word_chinese":"漫步","word_english":"stroll","test_options":["stroll","subscription","suspense"]}

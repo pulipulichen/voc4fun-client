@@ -1,0 +1,1 @@
+{"word_chinese":"精確地","word_english":"precisely","test_options":["precisely","prescription","proliferate"]}

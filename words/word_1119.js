@@ -1,0 +1,1 @@
+{"word_chinese":"閃爍的火光","word_english":"flare","test_options":["flare","footstep","fundamentalist"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"樹樁","word_english":"stump","test_options":["stump","subsidy","swap"]}

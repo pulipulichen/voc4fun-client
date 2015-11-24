@@ -1,0 +1,1 @@
+{"word_chinese":"平裝本","word_english":"paperback","test_options":["paperback","pastry","persistence"]}

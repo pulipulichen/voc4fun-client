@@ -1,0 +1,1 @@
+{"word_chinese":"避開","word_english":"avert","test_options":["avert","banner","binoculars"]}

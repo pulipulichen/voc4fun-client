@@ -1,0 +1,1 @@
+{"word_chinese":"被捕食的動物","word_english":"prey","test_options":["prey","profile","psychic"]}

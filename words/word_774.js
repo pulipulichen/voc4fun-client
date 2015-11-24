@@ -1,0 +1,1 @@
+{"word_chinese":"轉讓;讓(位)","word_english":"demise","test_options":["demise","despise","disability"]}

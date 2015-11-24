@@ -1,0 +1,1 @@
+{"word_chinese":"陸生的","word_english":"terrestrial","test_options":["terrestrial","thermometer","tone"]}

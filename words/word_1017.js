@@ -1,0 +1,1 @@
+{"word_chinese":"疏散","word_english":"evacuation","test_options":["evacuation","execute","fad"]}

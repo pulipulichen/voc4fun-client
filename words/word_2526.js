@@ -1,0 +1,1 @@
+{"word_chinese":"真摯，誠意","word_english":"sincerity","test_options":["sincerity","sleigh(","soothe"]}

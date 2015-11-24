@@ -1,0 +1,1 @@
+{"word_chinese":"假定的","word_english":"provisional","test_options":["provisional","putt","random"]}

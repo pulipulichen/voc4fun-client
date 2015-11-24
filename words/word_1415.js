@@ -1,0 +1,1 @@
+{"word_chinese":"居住","word_english":"inhabit","test_options":["inhabit","insider","intrigue"]}

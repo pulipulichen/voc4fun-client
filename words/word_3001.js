@@ -1,0 +1,1 @@
+{"word_chinese":"令人不愉快的","word_english":"unpleasant","test_options":["unpleasant","uranium","viable"]}

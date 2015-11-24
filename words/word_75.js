@@ -1,0 +1,1 @@
+{"word_chinese":"使苦惱","word_english":"afflict","test_options":["afflict","algebra","Antarctic"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"結構上的","word_english":"structural","test_options":["structural","subsequent","sustain"]}

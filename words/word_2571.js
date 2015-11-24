@@ -1,0 +1,1 @@
+{"word_chinese":"社會主義者","word_english":"socialist","test_options":["socialist","sovereign","stabilize"]}

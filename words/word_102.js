@@ -1,0 +1,1 @@
+{"word_chinese":"減輕(痛苦等)","word_english":"alleviate","test_options":["alleviate","ammunition","archives"]}

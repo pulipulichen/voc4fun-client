@@ -1,0 +1,1 @@
+{"word_chinese":"主席","word_english":"chairperson","test_options":["chairperson","check-up","coastal"]}

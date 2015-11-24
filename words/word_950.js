@@ -1,0 +1,1 @@
+{"word_chinese":"禁止(船隻)出入港口","word_english":"embargo","test_options":["embargo","endeavor","esteem"]}

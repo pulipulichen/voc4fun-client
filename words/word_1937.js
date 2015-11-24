@@ -1,0 +1,1 @@
+{"word_chinese":"兼職的","word_english":"part-time","test_options":["part-time","peddler","pharmacy"]}

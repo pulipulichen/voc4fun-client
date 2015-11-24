@@ -1,0 +1,1 @@
+{"word_chinese":"指導方針","word_english":"guideline","test_options":["guideline","harassment","highlight"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"與…一致","word_english":"coincide","test_options":["coincide","commend","compulsory"]}

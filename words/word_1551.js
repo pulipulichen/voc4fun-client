@@ -1,0 +1,1 @@
+{"word_chinese":"立法委員","word_english":"legislator","test_options":["legislator","lifelong","loom"]}

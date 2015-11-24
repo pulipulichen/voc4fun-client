@@ -1,0 +1,1 @@
+{"word_chinese":"矛盾的","word_english":"contradictory","test_options":["contradictory","cop","cozy"]}

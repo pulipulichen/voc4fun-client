@@ -1,0 +1,1 @@
+{"word_chinese":"同種的;均質的","word_english":"homogeneous","test_options":["homogeneous","humanitarian","incentive"]}

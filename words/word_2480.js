@@ -1,0 +1,1 @@
+{"word_chinese":"挫折","word_english":"setback","test_options":["setback","shipping","slap"]}

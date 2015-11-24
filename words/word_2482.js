@@ -1,0 +1,1 @@
+{"word_chinese":"處理好，安頓","word_english":"settle","test_options":["settle","shocking","slate"]}

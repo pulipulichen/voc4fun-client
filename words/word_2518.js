@@ -1,0 +1,1 @@
+{"word_chinese":"表示；意味","word_english":"signify","test_options":["signify","slack","solely"]}

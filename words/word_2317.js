@@ -1,0 +1,1 @@
+{"word_chinese":"能共鳴的","word_english":"resonant","test_options":["resonant","retirement","robin"]}

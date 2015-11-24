@@ -1,0 +1,1 @@
+{"word_chinese":"開場白","word_english":"lead-in","test_options":["lead-in","liability","logo"]}

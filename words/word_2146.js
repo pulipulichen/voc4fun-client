@@ -1,0 +1,1 @@
+{"word_chinese":"儲備物資;糧食","word_english":"provision","test_options":["provision","put-down","ranch"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"超過；優於，勝過。","word_english":"surpass","test_options":["surpass","tableware","tentative"]}

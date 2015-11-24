@@ -1,0 +1,1 @@
+{"word_chinese":"遺跡","word_english":"relic","test_options":["relic","repel","retirement"]}

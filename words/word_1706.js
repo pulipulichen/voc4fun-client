@@ -1,0 +1,1 @@
+{"word_chinese":"礦業","word_english":"mining","test_options":["mining","momentum","mutton"]}

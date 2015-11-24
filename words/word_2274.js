@@ -1,0 +1,1 @@
+{"word_chinese":"有關的","word_english":"relevant","test_options":["relevant","repay","retaliate("]}

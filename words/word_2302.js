@@ -1,0 +1,1 @@
+{"word_chinese":"鎮壓(叛亂等)","word_english":"repression","test_options":["repression","respectful","right-wing"]}

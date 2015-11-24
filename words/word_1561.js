@@ -1,0 +1,1 @@
+{"word_chinese":"徵收;扣押","word_english":"levy","test_options":["levy","liner","luminous"]}

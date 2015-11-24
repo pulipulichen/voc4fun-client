@@ -1,0 +1,1 @@
+{"word_chinese":"取回(v.)","word_english":"retrieve","test_options":["retrieve","ridicule","sacred"]}

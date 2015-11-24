@@ -1,0 +1,1 @@
+{"word_chinese":"靜止的","word_english":"still","test_options":["still","striker","summon"]}

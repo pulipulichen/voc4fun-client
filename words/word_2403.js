@@ -1,0 +1,1 @@
+{"word_chinese":"鮭","word_english":"salmon","test_options":["salmon","scarecrow","sensational"]}

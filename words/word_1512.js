@@ -1,0 +1,1 @@
+{"word_chinese":"新聞工作","word_english":"journalism","test_options":["journalism","lament","lifestyle"]}

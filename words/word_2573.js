@@ -1,0 +1,1 @@
+{"word_chinese":"社會學","word_english":"sociology","test_options":["sociology","spacious","stagger"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"頑固的","word_english":"obstinate","test_options":["obstinate","oppression","overdo"]}

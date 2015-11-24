@@ -1,0 +1,1 @@
+{"word_chinese":"搖擺","word_english":"sway","test_options":["sway","takeaway","territorial"]}

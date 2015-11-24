@@ -1,0 +1,1 @@
+{"word_chinese":"荷花;蓮","word_english":"lotus","test_options":["lotus","maiden","meditate"]}

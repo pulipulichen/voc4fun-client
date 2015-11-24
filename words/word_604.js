@@ -1,0 +1,1 @@
+{"word_chinese":"強迫;束縛","word_english":"constrain","test_options":["constrain","contradict","corruption"]}

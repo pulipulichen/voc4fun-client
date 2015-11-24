@@ -1,0 +1,1 @@
+{"word_chinese":"迫使;使負債務","word_english":"oblige","test_options":["oblige","ongoing","outnumber"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"惡棍","word_english":"bandit","test_options":["bandit","battalion","blockade"]}

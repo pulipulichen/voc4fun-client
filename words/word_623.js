@@ -1,0 +1,1 @@
+{"word_chinese":"抗辯;與…矛盾","word_english":"contradict","test_options":["contradict","co-operation","covet"]}

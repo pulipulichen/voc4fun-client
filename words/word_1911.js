@@ -1,0 +1,1 @@
+{"word_chinese":"蠔，牡蠣","word_english":"oyster","test_options":["oyster","parlor","perennial"]}

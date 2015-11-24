@@ -1,0 +1,1 @@
+{"word_chinese":"矯正","word_english":"rectify","test_options":["rectify","regime","reportedly"]}

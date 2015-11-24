@@ -1,0 +1,1 @@
+{"word_chinese":"腐化，墮落","word_english":"degenerate","test_options":["degenerate","descent","diplomacy"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"均衡","word_english":"equation","test_options":["equation","ethical","exploration"]}

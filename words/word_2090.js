@@ -1,0 +1,1 @@
+{"word_chinese":"假定","word_english":"presume","test_options":["presume","procession","provoke"]}

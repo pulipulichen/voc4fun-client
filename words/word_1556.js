@@ -1,0 +1,1 @@
+{"word_chinese":"減少;貶低","word_english":"lessen","test_options":["lessen","likewise","lounge"]}

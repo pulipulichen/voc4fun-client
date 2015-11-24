@@ -1,0 +1,1 @@
+{"word_chinese":"時髦的","word_english":"stylish","test_options":["stylish","suburban","symbolism"]}

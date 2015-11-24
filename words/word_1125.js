@@ -1,0 +1,1 @@
+{"word_chinese":"鼓翼;啪嗒[放下、坐下]","word_english":"flop","test_options":["flop","formulate","fuss"]}

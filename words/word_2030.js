@@ -1,0 +1,1 @@
+{"word_chinese":"肺炎","word_english":"pneumonia","test_options":["pneumonia","posture","presumably"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"盤繞;(一)卷","word_english":"coil","test_options":["coil","commence","compromise"]}

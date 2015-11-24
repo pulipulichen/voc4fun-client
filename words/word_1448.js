@@ -1,0 +1,1 @@
+{"word_chinese":"保險","word_english":"insure","test_options":["insure","intersection","jerk"]}

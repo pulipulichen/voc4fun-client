@@ -1,0 +1,1 @@
+{"word_chinese":"忍耐","word_english":"bearing","test_options":["bearing","binding","borough"]}

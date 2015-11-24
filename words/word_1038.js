@@ -1,0 +1,1 @@
+{"word_chinese":"舉例證明","word_english":"exemplify","test_options":["exemplify","exquisite","feminist"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"譴責","word_english":"condemn","test_options":["condemn","consensus(","controversial("]}

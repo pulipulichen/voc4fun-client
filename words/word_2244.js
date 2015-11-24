@@ -1,0 +1,1 @@
+{"word_chinese":"過多的，冗餘的","word_english":"redundant","test_options":["redundant","rehabilitate","reproach"]}

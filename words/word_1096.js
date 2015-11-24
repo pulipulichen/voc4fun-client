@@ -1,0 +1,1 @@
+{"word_chinese":"爭取女權運動","word_english":"feminism","test_options":["feminism","fixture","fracture"]}

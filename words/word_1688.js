@@ -1,0 +1,1 @@
+{"word_chinese":"都會的","word_english":"metropolitan","test_options":["metropolitan","ministerial","mount"]}

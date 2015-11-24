@@ -1,0 +1,1 @@
+{"word_chinese":"天鵝絨","word_english":"velvet","test_options":["velvet","vicar","walnut"]}

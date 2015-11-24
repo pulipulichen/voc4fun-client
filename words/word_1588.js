@@ -1,0 +1,1 @@
+{"word_chinese":"有學問的;識字的人","word_english":"literate","test_options":["literate","longitude","mar"]}

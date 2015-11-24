@@ -1,0 +1,1 @@
+{"word_chinese":"拍翅振翼；(旗幟)飄揚","word_english":"flutter","test_options":["flutter","foster","gauge"]}

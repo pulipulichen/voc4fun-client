@@ -1,0 +1,1 @@
+{"word_chinese":"貧民窟","word_english":"slum","test_options":["slum","so-called","sphere"]}

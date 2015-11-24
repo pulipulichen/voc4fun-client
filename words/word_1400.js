@@ -1,0 +1,1 @@
+{"word_chinese":"間接的","word_english":"indirect","test_options":["indirect","inhibition","intent"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"急馳","word_english":"gallop","test_options":["gallop","given","grope"]}

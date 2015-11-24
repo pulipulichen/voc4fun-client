@@ -1,0 +1,1 @@
+{"word_chinese":"反常的，奇特的","word_english":"freak","test_options":["freak","galaxy","gorge"]}

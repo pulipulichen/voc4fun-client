@@ -1,0 +1,1 @@
+{"word_chinese":"單調","word_english":"monotony","test_options":["monotony","mournful","newlywed"]}

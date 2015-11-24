@@ -1,0 +1,1 @@
+{"word_chinese":"模擬","word_english":"simulation","test_options":["simulation","slay","soluble"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"大牧場","word_english":"ranch","test_options":["ranch","reap","reign"]}

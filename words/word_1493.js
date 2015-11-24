@@ -1,0 +1,1 @@
+{"word_chinese":"不顧","word_english":"irrespective","test_options":["irrespective","journalism","legislature"]}

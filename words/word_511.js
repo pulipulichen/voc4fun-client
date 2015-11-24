@@ -1,0 +1,1 @@
+{"word_chinese":"轉好;重整旗鼓","word_english":"comeback","test_options":["comeback","companionship","condemn"]}

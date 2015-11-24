@@ -1,0 +1,1 @@
+{"word_chinese":"基本地","word_english":"basically","test_options":["basically","bent","bombard"]}

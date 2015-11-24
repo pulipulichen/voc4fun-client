@@ -1,0 +1,1 @@
+{"word_chinese":"魯莽的；性急的","word_english":"rash","test_options":["rash","reckon","relay"]}

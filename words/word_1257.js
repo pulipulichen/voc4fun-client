@@ -1,0 +1,1 @@
+{"word_chinese":"一陣狂風","word_english":"gust","test_options":["gust","harness","hoarse"]}

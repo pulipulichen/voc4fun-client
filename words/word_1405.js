@@ -1,0 +1,1 @@
+{"word_chinese":"效能差的","word_english":"inefficient","test_options":["inefficient","inland","interior"]}

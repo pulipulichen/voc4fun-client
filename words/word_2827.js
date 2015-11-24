@@ -1,0 +1,1 @@
+{"word_chinese":"治療學家","word_english":"therapist","test_options":["therapist","throb","trailer"]}

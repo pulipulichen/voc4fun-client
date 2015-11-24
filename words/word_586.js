@@ -1,0 +1,1 @@
+{"word_chinese":"有良心的","word_english":"conscientious","test_options":["conscientious","constraint","copyright"]}

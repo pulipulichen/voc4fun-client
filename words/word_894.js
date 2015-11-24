@@ -1,0 +1,1 @@
+{"word_chinese":"勢力範圍","word_english":"domain","test_options":["domain","dried","embed"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"自動化","word_english":"automation","test_options":["automation","ballot","bias"]}

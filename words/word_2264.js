@@ -1,0 +1,1 @@
+{"word_chinese":"統治;支配權","word_english":"reign","test_options":["reign","reminiscent","respectively"]}

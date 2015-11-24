@@ -1,0 +1,1 @@
+{"word_chinese":"機靈;巧妙","word_english":"ingenuity","test_options":["ingenuity","insecure","intricate"]}

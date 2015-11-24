@@ -1,0 +1,1 @@
+{"word_chinese":"共同體","word_english":"consortium","test_options":["consortium","contender","correction"]}

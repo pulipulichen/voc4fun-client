@@ -1,0 +1,1 @@
+{"word_chinese":"改編","word_english":"reorganize","test_options":["reorganize","reserved","revolt"]}

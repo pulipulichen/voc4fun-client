@@ -1,0 +1,1 @@
+{"word_chinese":"諷刺地","word_english":"ironically","test_options":["ironically","jersey","legacy"]}

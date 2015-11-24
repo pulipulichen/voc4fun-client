@@ -1,0 +1,1 @@
+{"word_chinese":"授與;協商","word_english":"confer","test_options":["confer","consolation","conversion"]}

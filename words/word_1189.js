@@ -1,0 +1,1 @@
+{"word_chinese":"喘氣;透不過氣","word_english":"gasp","test_options":["gasp","glamorous","growl"]}

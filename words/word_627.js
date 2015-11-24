@@ -1,0 +1,1 @@
+{"word_chinese":"設計;設法做到","word_english":"contrive","test_options":["contrive","coral","cracker"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"成人期","word_english":"adulthood","test_options":["adulthood","aftermath","amend"]}

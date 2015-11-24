@@ -1,0 +1,1 @@
+{"word_chinese":"彎曲的；歪扭的","word_english":"crooked","test_options":["crooked","curb","defender"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"跋涉，蹚水","word_english":"wade","test_options":["wade","website","would-be"]}

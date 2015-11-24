@@ -1,0 +1,1 @@
+{"word_chinese":"猛地一拉;肌肉痙攣","word_english":"jerk","test_options":["jerk","kindle","liberation"]}

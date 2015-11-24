@@ -1,0 +1,1 @@
+{"word_chinese":"預防的","word_english":"preventive","test_options":["preventive","proficiency","psychiatrist"]}

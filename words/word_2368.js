@@ -1,0 +1,1 @@
+{"word_chinese":"裂開，扯裂","word_english":"rip","test_options":["rip","royalty","scope"]}

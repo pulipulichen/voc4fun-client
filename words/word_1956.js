@@ -1,0 +1,1 @@
+{"word_chinese":"沿街叫賣的小販","word_english":"peddler","test_options":["peddler","perish","pitcher"]}

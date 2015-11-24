@@ -1,0 +1,1 @@
+{"word_chinese":"多種工藝的","word_english":"polytechnic","test_options":["polytechnic","precede","priceless"]}

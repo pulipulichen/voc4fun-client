@@ -1,0 +1,1 @@
+{"word_chinese":"隊員","word_english":"team-mate","test_options":["team-mate","terrestrial","tick("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"獸醫","word_english":"veterinarian","test_options":["veterinarian","vine","weakness"]}

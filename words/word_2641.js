@@ -1,0 +1,1 @@
+{"word_chinese":"立腳點；見地","word_english":"standpoint","test_options":["standpoint","steamer","stutter"]}

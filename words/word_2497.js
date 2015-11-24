@@ -1,0 +1,1 @@
+{"word_chinese":"發光的","word_english":"shining","test_options":["shining","sideways","smother"]}

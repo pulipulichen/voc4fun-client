@@ -1,0 +1,1 @@
+{"word_chinese":"遣送回國","word_english":"repatriate","test_options":["repatriate","reservoir","revolve"]}

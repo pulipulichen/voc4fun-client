@@ -1,0 +1,1 @@
+{"word_chinese":"孵出","word_english":"brood","test_options":["brood","bust","cavalry"]}

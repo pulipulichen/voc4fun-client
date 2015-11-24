@@ -1,0 +1,1 @@
+{"word_chinese":"肌肉發達的","word_english":"muscular","test_options":["muscular","navel","nucleus"]}

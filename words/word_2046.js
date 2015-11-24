@@ -1,0 +1,1 @@
+{"word_chinese":"注視;用心閱讀","word_english":"pore","test_options":["pore","predecessor","pro"]}

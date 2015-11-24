@@ -1,0 +1,1 @@
+{"word_chinese":"品質上的","word_english":"qualitative","test_options":["qualitative","racism","reckless"]}

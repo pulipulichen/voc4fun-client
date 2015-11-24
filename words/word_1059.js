@@ -1,0 +1,1 @@
+{"word_chinese":"外部的","word_english":"external","test_options":["external","faithfully","flap"]}

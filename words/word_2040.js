@@ -1,0 +1,1 @@
+{"word_chinese":"仔細考慮；沈思","word_english":"ponder","test_options":["ponder","precedent","prick"]}

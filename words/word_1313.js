@@ -1,0 +1,1 @@
+{"word_chinese":"妨害，妨礙","word_english":"hinder","test_options":["hinder","hospitable","imprison"]}

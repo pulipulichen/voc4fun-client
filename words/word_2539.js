@@ -1,0 +1,1 @@
+{"word_chinese":"一 巴掌","word_english":"slap","test_options":["slap","snare","specialty"]}

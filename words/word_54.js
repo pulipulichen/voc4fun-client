@@ -1,0 +1,1 @@
+{"word_chinese":"青春期","word_english":"adolescence","test_options":["adolescence","affiliate","ambiguity"]}

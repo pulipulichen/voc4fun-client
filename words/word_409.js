@@ -1,0 +1,1 @@
+{"word_chinese":"供應酒菜","word_english":"cater","test_options":["cater","certainty","clamp"]}

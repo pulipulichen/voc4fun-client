@@ -1,0 +1,1 @@
+{"word_chinese":"處理(n.)","word_english":"disposal","test_options":["disposal","diverse","dynamite"]}

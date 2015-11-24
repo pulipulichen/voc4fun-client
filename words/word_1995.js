@@ -1,0 +1,1 @@
+{"word_chinese":"藥理學","word_english":"pharmacology","test_options":["pharmacology","pistol","practitioner"]}

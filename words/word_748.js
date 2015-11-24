@@ -1,0 +1,1 @@
+{"word_chinese":"裝飾的","word_english":"decorative","test_options":["decorative","definitive","developed"]}

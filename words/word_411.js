@@ -1,0 +1,1 @@
+{"word_chinese":"大教堂","word_english":"cathedral","test_options":["cathedral","chairperson","clarity"]}

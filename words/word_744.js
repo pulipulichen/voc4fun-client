@@ -1,0 +1,1 @@
+{"word_chinese":"初次登場","word_english":"debut","test_options":["debut","defiant","deterioration"]}

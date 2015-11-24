@@ -1,0 +1,1 @@
+{"word_chinese":"鑿子","word_english":"chisel","test_options":["chisel","clean-up","comma"]}

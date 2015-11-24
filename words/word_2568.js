@@ -1,0 +1,1 @@
+{"word_chinese":"清醒的","word_english":"sober","test_options":["sober","sophomore","squash"]}

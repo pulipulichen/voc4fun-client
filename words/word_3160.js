@@ -1,0 +1,1 @@
+{"word_chinese":"扭轉；擰去","word_english":"wrench","test_options":["wrench","zoom","woodland"]}

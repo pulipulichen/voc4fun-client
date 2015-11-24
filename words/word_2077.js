@@ -1,0 +1,1 @@
+{"word_chinese":"前提","word_english":"premise","test_options":["premise","previously","prosecute"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"請願","word_english":"petition","test_options":["petition","pimple","posture"]}

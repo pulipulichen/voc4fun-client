@@ -1,0 +1,1 @@
+{"word_chinese":"廣告","word_english":"ad","test_options":["ad","advent","alleged"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"啞的","word_english":"mute","test_options":["mute","necessitate","nurture"]}

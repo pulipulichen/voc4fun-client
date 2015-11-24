@@ -1,0 +1,1 @@
+{"word_chinese":"糖尿病","word_english":"diabetes","test_options":["diabetes","directory","dissipate"]}

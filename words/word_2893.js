@@ -1,0 +1,1 @@
+{"word_chinese":"平靜的；鎮靜的","word_english":"tranquil","test_options":["tranquil","traumatic","twig"]}

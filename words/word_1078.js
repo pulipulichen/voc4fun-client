@@ -1,0 +1,1 @@
+{"word_chinese":"忠實地","word_english":"faithfully","test_options":["faithfully","feminist","footage("]}

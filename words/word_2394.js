@@ -1,0 +1,1 @@
+{"word_chinese":"助跑; 籌備期間","word_english":"run-up","test_options":["run-up","sane","segregation"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"舉起","word_english":"heave","test_options":["heave","highlight","hypocrite"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"背書;簽收","word_english":"endorse","test_options":["endorse","epidemic","excerpt"]}

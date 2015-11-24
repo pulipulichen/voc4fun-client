@@ -1,0 +1,1 @@
+{"word_chinese":"感情；情操","word_english":"sentiment","test_options":["sentiment","sewer","simulate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"一致","word_english":"accordance","test_options":["accordance","addicted","agitation(n.) "]}

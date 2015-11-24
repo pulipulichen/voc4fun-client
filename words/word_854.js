@@ -1,0 +1,1 @@
+{"word_chinese":"使崩潰，使瓦解","word_english":"disintegrate","test_options":["disintegrate","dissuade","dried"]}

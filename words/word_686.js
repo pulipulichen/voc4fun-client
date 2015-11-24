@@ -1,0 +1,1 @@
+{"word_chinese":"鞭炮","word_english":"cracker","test_options":["cracker","crucial","decent"]}

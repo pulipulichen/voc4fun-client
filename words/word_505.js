@@ -1,0 +1,1 @@
+{"word_chinese":"碰撞","word_english":"collision","test_options":["collision","communal","conceive"]}

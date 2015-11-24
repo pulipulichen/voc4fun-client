@@ -1,0 +1,1 @@
+{"word_chinese":"屏；遮罩；庇護者","word_english":"shield","test_options":["shield","shutter","smallpox"]}

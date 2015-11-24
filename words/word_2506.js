@@ -1,0 +1,1 @@
+{"word_chinese":"碎片；破布條","word_english":"shred","test_options":["shred","simultaneous","snort("]}

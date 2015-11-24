@@ -1,0 +1,1 @@
+{"word_chinese":"鎖起來的","word_english":"locked","test_options":["locked","loving","marvel"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"揭露","word_english":"unveil","test_options":["unveil","utmost","vicious"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"消遣","word_english":"pastime","test_options":["pastime","pending","pickle"]}

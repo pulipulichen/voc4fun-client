@@ -1,0 +1,1 @@
+{"word_chinese":"振動","word_english":"vibration","test_options":["vibration","virtually","wee"]}

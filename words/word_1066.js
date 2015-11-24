@@ -1,0 +1,1 @@
+{"word_chinese":"過激主義者","word_english":"extremist","test_options":["extremist","fascist","flop"]}

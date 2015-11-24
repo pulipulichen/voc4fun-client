@@ -1,0 +1,1 @@
+{"word_chinese":"衝動的","word_english":"impulsive","test_options":["impulsive","indicative","insider"]}

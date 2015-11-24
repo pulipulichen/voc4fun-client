@@ -1,0 +1,1 @@
+{"word_chinese":"逐出","word_english":"oust","test_options":["oust","overlap","pastry"]}

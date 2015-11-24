@@ -1,0 +1,1 @@
+{"word_chinese":"努力","word_english":"endeavor","test_options":["endeavor","enzyme","exceedingly"]}

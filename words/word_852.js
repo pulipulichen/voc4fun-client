@@ -1,0 +1,1 @@
+{"word_chinese":"出醜，丟臉","word_english":"disgrace","test_options":["disgrace","dissident","dreary"]}

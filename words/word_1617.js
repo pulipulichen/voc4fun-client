@@ -1,0 +1,1 @@
+{"word_chinese":"起潤滑作用","word_english":"lubricate","test_options":["lubricate","majestic","mellow"]}

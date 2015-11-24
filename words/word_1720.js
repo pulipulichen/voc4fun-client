@@ -1,0 +1,1 @@
+{"word_chinese":"現代化","word_english":"modernization","test_options":["modernization","mosque","navigate"]}

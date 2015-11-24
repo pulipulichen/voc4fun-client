@@ -1,0 +1,1 @@
+{"word_chinese":"懷疑的","word_english":"skeptical","test_options":["skeptical","slump","sovereignty"]}

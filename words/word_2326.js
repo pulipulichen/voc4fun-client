@@ -1,0 +1,1 @@
+{"word_chinese":"抑制(n.)","word_english":"restraint","test_options":["restraint","revelation","rouse"]}

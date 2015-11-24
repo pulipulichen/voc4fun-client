@@ -1,0 +1,1 @@
+{"word_chinese":"免除，豁免","word_english":"exempt","test_options":["exempt","exterior","fertility"]}

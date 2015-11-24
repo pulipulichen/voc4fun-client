@@ -1,0 +1,1 @@
+{"word_chinese":"迷住;使煩擾","word_english":"obsess","test_options":["obsess","opposed","outsider"]}

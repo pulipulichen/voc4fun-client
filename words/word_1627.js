@@ -1,0 +1,1 @@
+{"word_chinese":"歌詞","word_english":"lyric","test_options":["lyric","maple","metaphor"]}

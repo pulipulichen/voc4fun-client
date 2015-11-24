@@ -1,0 +1,1 @@
+{"word_chinese":"就職","word_english":"inaugurate","test_options":["inaugurate","indignant","inspection"]}

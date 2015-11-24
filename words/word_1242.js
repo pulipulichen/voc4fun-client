@@ -1,0 +1,1 @@
+{"word_chinese":"呻吟","word_english":"groan","test_options":["groan","hack","herald"]}

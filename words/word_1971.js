@@ -1,0 +1,1 @@
+{"word_chinese":"完美的","word_english":"perfect","test_options":["perfect","petition","pneumonia"]}

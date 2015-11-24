@@ -1,0 +1,1 @@
+{"word_chinese":"攤子","word_english":"booth","test_options":["booth","brand-new","bureaucracy"]}

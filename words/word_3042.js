@@ -1,0 +1,1 @@
+{"word_chinese":"面紗","word_english":"veil","test_options":["veil","vibrate","wail"]}

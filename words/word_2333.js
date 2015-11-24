@@ -1,0 +1,1 @@
+{"word_chinese":"向某人)報復","word_english":"retaliate(","test_options":["retaliate(","rhetoric","rumble"]}

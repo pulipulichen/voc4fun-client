@@ -1,0 +1,1 @@
+{"word_chinese":"認為自明之理而)假定","word_english":"postulate(","test_options":["postulate(","predominant","probe"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"有柄的大水罐","word_english":"pitcher","test_options":["pitcher","pointed","premature"]}

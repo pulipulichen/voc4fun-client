@@ -1,0 +1,1 @@
+{"word_chinese":"合格的人","word_english":"qualifier","test_options":["qualifier","racing","reciprocal"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"近視的","word_english":"nearsighted","test_options":["nearsighted","nominal","obstinate"]}

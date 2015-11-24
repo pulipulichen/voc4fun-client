@@ -1,0 +1,1 @@
+{"word_chinese":"巡航;巡邏","word_english":"cruise","test_options":["cruise","customary","definitely"]}

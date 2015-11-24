@@ -1,0 +1,1 @@
+{"word_chinese":"尖銳的","word_english":"pointed","test_options":["pointed","practicable","prevailing"]}

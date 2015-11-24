@@ -1,0 +1,1 @@
+{"word_chinese":"銀行的)出納員","word_english":"teller(","test_options":["teller(","terrorist","time-out"]}

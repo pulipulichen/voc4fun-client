@@ -1,0 +1,1 @@
+{"word_chinese":"理論(上)的","word_english":"theoretical","test_options":["theoretical","thrive","trade-in"]}

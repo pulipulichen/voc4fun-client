@@ -1,0 +1,1 @@
+{"word_chinese":"舊習，成規","word_english":"stereotype","test_options":["stereotype","strangle","successive"]}

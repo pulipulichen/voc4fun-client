@@ -1,0 +1,1 @@
+{"word_chinese":"回顧的，懷舊的","word_english":"retrospective","test_options":["retrospective","right-wing","safeguard"]}

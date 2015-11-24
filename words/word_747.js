@@ -1,0 +1,1 @@
+{"word_chinese":"決定性的;斷然的","word_english":"decisive","test_options":["decisive","definitely","devastating"]}

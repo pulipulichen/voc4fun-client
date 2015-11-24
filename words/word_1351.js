@@ -1,0 +1,1 @@
+{"word_chinese":"偽善者","word_english":"hypocrite","test_options":["hypocrite","implicit","infinite"]}

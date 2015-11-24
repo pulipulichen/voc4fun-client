@@ -1,0 +1,1 @@
+{"word_chinese":"犀牛","word_english":"rhinoceros","test_options":["rhinoceros","rivalry","sane"]}

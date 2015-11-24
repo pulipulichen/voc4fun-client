@@ -1,0 +1,1 @@
+{"word_chinese":"嗅，蔑視","word_english":"sniff","test_options":["sniff","solitary","sprain"]}

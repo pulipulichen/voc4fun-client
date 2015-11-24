@@ -1,0 +1,1 @@
+{"word_chinese":"令人不愉快的，古怪的","word_english":"weird","test_options":["weird","windshield","wary"]}

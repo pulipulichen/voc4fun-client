@@ -1,0 +1,1 @@
+{"word_chinese":"鐘擺;猶豫不決的人","word_english":"pendulum","test_options":["pendulum","perseverance","plausible"]}

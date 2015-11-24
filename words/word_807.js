@@ -1,0 +1,1 @@
+{"word_chinese":"已開發的","word_english":"developed","test_options":["developed","dimension","dispose"]}

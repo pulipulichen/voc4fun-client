@@ -1,0 +1,1 @@
+{"word_chinese":"猛擊","word_english":"bash","test_options":["bash","beloved","bolt"]}

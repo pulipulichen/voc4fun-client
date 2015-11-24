@@ -1,0 +1,1 @@
+{"word_chinese":"補助金","word_english":"subsidy","test_options":["subsidy","superpower","tactics"]}

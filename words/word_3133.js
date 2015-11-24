@@ -1,0 +1,1 @@
+{"word_chinese":"旋轉","word_english":"whirl","test_options":["whirl","workforce","weld"]}

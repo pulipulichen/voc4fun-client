@@ -1,0 +1,1 @@
+{"word_chinese":"最小的","word_english":"minimal","test_options":["minimal","mold","mute"]}

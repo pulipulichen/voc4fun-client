@@ -1,0 +1,1 @@
+{"word_chinese":"閥，活門","word_english":"valve","test_options":["valve","versus","vomit"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"耕耘機；牽引車","word_english":"tractor","test_options":["tractor","transient","tuck"]}

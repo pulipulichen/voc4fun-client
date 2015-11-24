@@ -1,0 +1,1 @@
+{"word_chinese":"約會;婚約","word_english":"engagement","test_options":["engagement","equilibrium","execute"]}

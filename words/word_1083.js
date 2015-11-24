@@ -1,0 +1,1 @@
+{"word_chinese":"魅力;迷戀","word_english":"fascination","test_options":["fascination","fidelity","format("]}

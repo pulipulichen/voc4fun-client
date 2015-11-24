@@ -1,0 +1,1 @@
+{"word_chinese":"殖民(地)的","word_english":"colonial","test_options":["colonial","commute","concerned"]}

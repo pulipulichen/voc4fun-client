@@ -1,0 +1,1 @@
+{"word_chinese":"誓言，起誓","word_english":"vow","test_options":["vow","way-out","worrying"]}

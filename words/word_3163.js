@@ -1,0 +1,1 @@
+{"word_chinese":"絞，擰，扭","word_english":"wring","test_options":["wring","withdrawal","workman"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"考古學","word_english":"archaeology","test_options":["archaeology","assert","awe"]}

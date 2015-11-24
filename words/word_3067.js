@@ -1,0 +1,1 @@
+{"word_chinese":"惡劣的；不道德的","word_english":"vicious","test_options":["vicious","vocals","whatsoever"]}

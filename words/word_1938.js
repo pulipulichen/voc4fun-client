@@ -1,0 +1,1 @@
+{"word_chinese":"經過的","word_english":"passing","test_options":["passing","pedestrian","phase"]}

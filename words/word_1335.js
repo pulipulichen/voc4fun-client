@@ -1,0 +1,1 @@
+{"word_chinese":"懷有敵意的","word_english":"hostile","test_options":["hostile","ideally","indicative"]}

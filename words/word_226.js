@@ -1,0 +1,1 @@
+{"word_chinese":"徽章","word_english":"badge","test_options":["badge","basically","blaze"]}

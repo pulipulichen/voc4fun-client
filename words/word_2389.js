@@ -1,0 +1,1 @@
+{"word_chinese":"橄欖球","word_english":"rugby","test_options":["rugby","salvage","seductive"]}

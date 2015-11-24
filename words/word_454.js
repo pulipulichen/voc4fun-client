@@ -1,0 +1,1 @@
+{"word_chinese":"鳥的)啁啾聲","word_english":"chirp(","test_options":["chirp(","cleanse","comet"]}

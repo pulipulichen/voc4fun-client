@@ -1,0 +1,1 @@
+{"word_chinese":"歡喜","word_english":"rejoice","test_options":["rejoice","render","restricted"]}

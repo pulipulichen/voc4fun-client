@@ -1,0 +1,1 @@
+{"word_chinese":"離婚的","word_english":"divorced","test_options":["divorced","draught","eloquent"]}

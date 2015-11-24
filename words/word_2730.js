@@ -1,0 +1,1 @@
+{"word_chinese":"膚淺的","word_english":"superficial","test_options":["superficial","susceptible","tavern"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"壯觀的；驚人的","word_english":"spectacular","test_options":["spectacular","spring","stereotype"]}

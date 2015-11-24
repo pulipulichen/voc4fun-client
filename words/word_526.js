@@ -1,0 +1,1 @@
+{"word_chinese":"共產主義","word_english":"communism","test_options":["communism","complement","conquest"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"胸針","word_english":"brooch","test_options":["brooch","burning","cautious"]}

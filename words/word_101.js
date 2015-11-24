@@ -1,0 +1,1 @@
+{"word_chinese":"過敏","word_english":"allergy","test_options":["allergy","amicable","architectural"]}

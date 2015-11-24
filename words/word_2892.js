@@ -1,0 +1,1 @@
+{"word_chinese":"踩(爛、碎)；摧殘；蔑視","word_english":"trample","test_options":["trample","trauma","turnover"]}

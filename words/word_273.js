@@ -1,0 +1,1 @@
+{"word_chinese":"有束縛力的","word_english":"binding","test_options":["binding","blot","breach"]}

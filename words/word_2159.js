@@ -1,0 +1,1 @@
+{"word_chinese":"脈搏","word_english":"pulse","test_options":["pulse","quarterly","ravage"]}

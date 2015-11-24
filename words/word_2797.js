@@ -1,0 +1,1 @@
+{"word_chinese":"十多歲","word_english":"teens","test_options":["teens","terrorism","timely"]}

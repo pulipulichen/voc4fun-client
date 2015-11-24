@@ -1,0 +1,1 @@
+{"word_chinese":"手冊，指南","word_english":"handbook","test_options":["handbook","healthful","hoof"]}

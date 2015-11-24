@@ -1,0 +1,1 @@
+{"word_chinese":"全國的","word_english":"nationwide","test_options":["nationwide","nightclub","obscure"]}

@@ -1,0 +1,1 @@
+{"word_chinese":""燦爛, 光輝"","word_english":"splendor","test_options":["splendor","staggering","stink"]}

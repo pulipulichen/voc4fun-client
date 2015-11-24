@@ -1,0 +1,1 @@
+{"word_chinese":"已完成的","word_english":"accomplished","test_options":["accomplished","addict","agitate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"切實可行的","word_english":"practicable","test_options":["practicable","prejudice","produce"]}

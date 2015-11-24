@@ -1,0 +1,1 @@
+{"word_chinese":"變化；變形transformer變壓器","word_english":"transformation","test_options":["transformation","trespass","ultraviolet"]}

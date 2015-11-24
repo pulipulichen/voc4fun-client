@@ -1,0 +1,1 @@
+{"word_chinese":"最適條件;最適宜的","word_english":"optimum","test_options":["optimum","oust","paperback"]}

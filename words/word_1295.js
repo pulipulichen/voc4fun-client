@@ -1,0 +1,1 @@
+{"word_chinese":"注意到，留心","word_english":"heed","test_options":["heed","hinge","ideally"]}

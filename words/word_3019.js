@@ -1,0 +1,1 @@
+{"word_chinese":"最新(式)的","word_english":"up-to-date","test_options":["up-to-date","variable","vintage("]}

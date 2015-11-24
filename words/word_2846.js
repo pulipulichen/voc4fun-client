@@ -1,0 +1,1 @@
+{"word_chinese":"悸動，搏動","word_english":"throb","test_options":["throb","toddler","transit"]}

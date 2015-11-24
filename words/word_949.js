@@ -1,0 +1,1 @@
+{"word_chinese":"口才好的","word_english":"eloquent","test_options":["eloquent","encyclopedia","establishment"]}

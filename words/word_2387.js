@@ -1,0 +1,1 @@
+{"word_chinese":"皇族","word_english":"royalty","test_options":["royalty","salutation","seduce"]}

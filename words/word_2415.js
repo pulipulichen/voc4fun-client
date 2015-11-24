@@ -1,0 +1,1 @@
+{"word_chinese":"滿意的","word_english":"satisfied","test_options":["satisfied","scroll","serial"]}

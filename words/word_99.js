@@ -1,0 +1,1 @@
+{"word_chinese":"聲稱的","word_english":"alleged","test_options":["alleged","amends","arc"]}

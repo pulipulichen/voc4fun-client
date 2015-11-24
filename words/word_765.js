@@ -1,0 +1,1 @@
+{"word_chinese":"不足的;有缺陷的","word_english":"deficient","test_options":["deficient","deployment","diligence"]}

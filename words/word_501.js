@@ -1,0 +1,1 @@
+{"word_chinese":"鎮定的","word_english":"collected","test_options":["collected","commissioner","comrade"]}

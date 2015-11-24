@@ -1,0 +1,1 @@
+{"word_chinese":"小牛","word_english":"calf","test_options":["calf","carp","charcoal("]}

@@ -1,0 +1,1 @@
+{"word_chinese":"令人滿意的","word_english":"desirable","test_options":["desirable","devour","discrimination"]}

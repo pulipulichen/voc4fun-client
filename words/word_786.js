@@ -1,0 +1,1 @@
+{"word_chinese":"剝奪","word_english":"deprive","test_options":["deprive","devastate","discredit"]}

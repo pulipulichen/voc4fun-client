@@ -1,0 +1,1 @@
+{"word_chinese":"完整無損的","word_english":"intact","test_options":["intact","intervention","jingle"]}

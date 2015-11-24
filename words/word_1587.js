@@ -1,0 +1,1 @@
+{"word_chinese":"字面上地","word_english":"literally","test_options":["literally","longevity","maple"]}

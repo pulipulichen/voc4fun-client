@@ -1,0 +1,1 @@
+{"word_chinese":"女性的","word_english":"feminine","test_options":["feminine","fixed","fraction"]}

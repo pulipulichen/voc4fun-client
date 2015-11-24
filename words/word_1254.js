@@ -1,0 +1,1 @@
+{"word_chinese":"吉他手","word_english":"guitarist","test_options":["guitarist","hardy","hinder"]}

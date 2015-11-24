@@ -1,0 +1,1 @@
+{"word_chinese":"苦難的經驗","word_english":"ordeal","test_options":["ordeal","outfit","paralyze"]}

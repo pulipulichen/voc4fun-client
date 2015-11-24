@@ -1,0 +1,1 @@
+{"word_chinese":"蛤","word_english":"clam","test_options":["clam","cluster","communism"]}

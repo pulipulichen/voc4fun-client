@@ -1,0 +1,1 @@
+{"word_chinese":"證明…有道理","word_english":"justify","test_options":["justify","lawsuit","liner"]}

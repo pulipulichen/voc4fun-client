@@ -1,0 +1,1 @@
+{"word_chinese":"合併","word_english":"coalition","test_options":["coalition","colonel","complexity"]}

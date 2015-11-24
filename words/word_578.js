@@ -1,0 +1,1 @@
+{"word_chinese":"配置;結構","word_english":"configuration","test_options":["configuration","consortium","convict"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"瑣事","word_english":"trifle","test_options":["trifle","tug-of-war","undoubted"]}

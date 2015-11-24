@@ -1,0 +1,1 @@
+{"word_chinese":"壟斷[獨佔](權)","word_english":"monopoly","test_options":["monopoly","mounted","neutral"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"被說服的","word_english":"convinced","test_options":["convinced","correspondence","criterion("]}

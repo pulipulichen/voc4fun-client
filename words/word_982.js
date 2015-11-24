@@ -1,0 +1,1 @@
+{"word_chinese":"熱衷者","word_english":"enthusiast","test_options":["enthusiast","erroneous","exile"]}

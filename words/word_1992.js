@@ -1,0 +1,1 @@
+{"word_chinese":"不足道的","word_english":"petty","test_options":["petty","pious","potent"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"狂歡","word_english":"carnival","test_options":["carnival","celebrated","cholesterol"]}

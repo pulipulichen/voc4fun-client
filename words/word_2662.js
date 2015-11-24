@@ -1,0 +1,1 @@
+{"word_chinese":"夫[妻]和前妻[前夫]所生的子女","word_english":"stepchild","test_options":["stepchild","strait","succession"]}

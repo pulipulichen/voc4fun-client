@@ -1,0 +1,1 @@
+{"word_chinese":"傳授;通知","word_english":"impart","test_options":["impart","inclined","inmate"]}

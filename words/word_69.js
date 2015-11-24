@@ -1,0 +1,1 @@
+{"word_chinese":"宇宙","word_english":"aerospace","test_options":["aerospace","air-conditioner","anecdote"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"長壽","word_english":"longevity","test_options":["longevity","lush","mayonnaise"]}

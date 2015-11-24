@@ -1,0 +1,1 @@
+{"word_chinese":"立法機關","word_english":"legislature","test_options":["legislature","lifestyle","loot"]}

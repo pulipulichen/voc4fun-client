@@ -1,0 +1,1 @@
+{"word_chinese":"到來，出現","word_english":"advent","test_options":["advent","aggravate","amends"]}

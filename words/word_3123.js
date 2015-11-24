@@ -1,0 +1,1 @@
+{"word_chinese":"焊接(點)","word_english":"weld","test_options":["weld","winger","watertight"]}

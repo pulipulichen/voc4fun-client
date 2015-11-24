@@ -1,0 +1,1 @@
+{"word_chinese":"使減到最少","word_english":"minimize","test_options":["minimize","molecule","mutter"]}

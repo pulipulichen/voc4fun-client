@@ -1,0 +1,1 @@
+{"word_chinese":"再生，復活(v.)","word_english":"revive","test_options":["revive","rip","salvage"]}

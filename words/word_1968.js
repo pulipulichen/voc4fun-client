@@ -1,0 +1,1 @@
+{"word_chinese":"感受；知覺","word_english":"perception","test_options":["perception","pertinent","plow"]}

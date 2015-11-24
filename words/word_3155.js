@@ -1,0 +1,1 @@
+{"word_chinese":"煩悶的，發愁的","word_english":"worrying","test_options":["worrying","zeal","wither"]}

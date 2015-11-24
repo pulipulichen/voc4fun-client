@@ -1,0 +1,1 @@
+{"word_chinese":"名義上的","word_english":"nominal","test_options":["nominal","nude","oppression"]}

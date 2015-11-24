@@ -1,0 +1,1 @@
+{"word_chinese":"天文學家","word_english":"astronomer","test_options":["astronomer","authorize","bastard"]}

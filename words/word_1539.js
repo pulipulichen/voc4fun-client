@@ -1,0 +1,1 @@
+{"word_chinese":"立法委員","word_english":"lawmaker","test_options":["lawmaker","lest","locomotive"]}

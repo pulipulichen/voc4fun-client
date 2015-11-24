@@ -1,0 +1,1 @@
+{"word_chinese":"外交手腕","word_english":"diplomacy","test_options":["diplomacy","discrepancy","diversity"]}

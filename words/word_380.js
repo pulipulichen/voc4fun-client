@@ -1,0 +1,1 @@
+{"word_chinese":"有計劃的","word_english":"calculated","test_options":["calculated","carol","characterize"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"嵌進","word_english":"embed","test_options":["embed","endow","ethic"]}

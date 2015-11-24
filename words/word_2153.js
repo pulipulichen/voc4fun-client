@@ -1,0 +1,1 @@
+{"word_chinese":"精神病學的","word_english":"psychiatric","test_options":["psychiatric","quantify","rash"]}

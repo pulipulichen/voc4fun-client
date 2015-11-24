@@ -1,0 +1,1 @@
+{"word_chinese":"孤獨的；寂寞的solitude孤獨，獨居","word_english":"solitary","test_options":["solitary","specification","stance"]}

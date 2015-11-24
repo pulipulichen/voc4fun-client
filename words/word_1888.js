@@ -1,0 +1,1 @@
+{"word_chinese":"外出；出遊","word_english":"outing","test_options":["outing","overwhelm","patriot"]}

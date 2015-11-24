@@ -1,0 +1,1 @@
+{"word_chinese":"聚集;採集","word_english":"gathering","test_options":["gathering","gland","grumble"]}

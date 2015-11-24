@@ -1,0 +1,1 @@
+{"word_chinese":"憤世嫉俗的","word_english":"cynical","test_options":["cynical","decorative","descent"]}

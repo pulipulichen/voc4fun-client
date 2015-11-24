@@ -1,0 +1,1 @@
+{"word_chinese":"滲入;彌漫","word_english":"permeate","test_options":["permeate","pharmacology","poised"]}

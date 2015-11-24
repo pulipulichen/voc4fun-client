@@ -1,0 +1,1 @@
+{"word_chinese":"代(名)詞","word_english":"pronoun","test_options":["pronoun","provincial","questionnaire"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"主要的;深紅色的","word_english":"cardinal","test_options":["cardinal","cathedral","chestnut"]}

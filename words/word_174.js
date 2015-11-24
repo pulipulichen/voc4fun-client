@@ -1,0 +1,1 @@
+{"word_chinese":"把…歸於","word_english":"ascribe","test_options":["ascribe","ATM","bankruptcy"]}

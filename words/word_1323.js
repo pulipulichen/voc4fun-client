@@ -1,0 +1,1 @@
+{"word_chinese":"同性戀的","word_english":"homosexual","test_options":["homosexual","humiliate","incidence"]}

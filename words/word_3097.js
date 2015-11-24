@@ -1,0 +1,1 @@
+{"word_chinese":"庸俗的","word_english":"vulgar","test_options":["vulgar","weakness","worsen"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"否決；禁止","word_english":"veto","test_options":["veto","vineyard","weary"]}

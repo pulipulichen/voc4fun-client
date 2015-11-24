@@ -1,0 +1,1 @@
+{"word_chinese":"能辯護的","word_english":"defensible","test_options":["defensible","dental","diesel"]}

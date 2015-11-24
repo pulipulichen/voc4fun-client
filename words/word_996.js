@@ -1,0 +1,1 @@
+{"word_chinese":"均衡;(心情的)平靜","word_english":"equilibrium","test_options":["equilibrium","ethnic","expressive"]}

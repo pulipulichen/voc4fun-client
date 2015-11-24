@@ -1,0 +1,1 @@
+{"word_chinese":"主要產物","word_english":"staple","test_options":["staple","stereotype","sub "]}

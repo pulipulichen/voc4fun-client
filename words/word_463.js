@@ -1,0 +1,1 @@
+{"word_chinese":"電路","word_english":"circuit","test_options":["circuit","clone","commonplace"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"結結巴巴地說出","word_english":"stutter","test_options":["stutter","subtlety","symbolic"]}

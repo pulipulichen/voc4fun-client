@@ -1,0 +1,1 @@
+{"word_chinese":"支票簿","word_english":"checkbook","test_options":["checkbook","cite","collision"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"使勁猛推","word_english":"shove","test_options":["shove","simulation","snorkel"]}

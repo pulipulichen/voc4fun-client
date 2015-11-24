@@ -1,0 +1,1 @@
+{"word_chinese":"洞察力;見識","word_english":"insight","test_options":["insight","integration","irrigation"]}

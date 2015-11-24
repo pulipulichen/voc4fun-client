@@ -1,0 +1,1 @@
+{"word_chinese":"使傾斜;傾向於","word_english":"incline","test_options":["incline","industrialized","institutional"]}

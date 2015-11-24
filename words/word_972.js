@@ -1,0 +1,1 @@
+{"word_chinese":"授與","word_english":"endow","test_options":["endow","episode","excess"]}

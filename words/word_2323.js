@@ -1,0 +1,1 @@
+{"word_chinese":"各自地","word_english":"respectively","test_options":["respectively","retrospective","rotation"]}

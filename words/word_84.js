@@ -1,0 +1,1 @@
+{"word_chinese":"痛苦","word_english":"agony","test_options":["agony","alliance","anymore"]}

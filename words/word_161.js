@@ -1,0 +1,1 @@
+{"word_chinese":"檔案館[室]","word_english":"archives","test_options":["archives","assessment","awhile"]}

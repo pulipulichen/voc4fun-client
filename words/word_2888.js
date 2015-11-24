@@ -1,0 +1,1 @@
+{"word_chinese":"特色","word_english":"trait","test_options":["trait","transmission","tuna"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"振動","word_english":"vibrate","test_options":["vibrate","virtual","wedge"]}

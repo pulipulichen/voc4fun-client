@@ -1,0 +1,1 @@
+{"word_chinese":"全速奔跑","word_english":"sprint","test_options":["sprint","stanza(","strap"]}

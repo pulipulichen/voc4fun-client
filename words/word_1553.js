@@ -1,0 +1,1 @@
+{"word_chinese":"合法的","word_english":"legitimate","test_options":["legitimate","lighting","lost"]}

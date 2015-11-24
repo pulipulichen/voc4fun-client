@@ -1,0 +1,1 @@
+{"word_chinese":"精神上有負擔的","word_english":"costing","test_options":["costing","cracker","customary"]}

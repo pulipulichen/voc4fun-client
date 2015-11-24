@@ -1,0 +1,1 @@
+{"word_chinese":"獨裁","word_english":"dictatorship","test_options":["dictatorship","discern","distraction"]}

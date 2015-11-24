@@ -1,0 +1,1 @@
+{"word_chinese":"適應","word_english":"adaptation","test_options":["adaptation","adverb","allergic"]}

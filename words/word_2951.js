@@ -1,0 +1,1 @@
+{"word_chinese":"翻倒","word_english":"turnover","test_options":["turnover","uncomfortable","unwilling"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"著魔;迷念","word_english":"obsession","test_options":["obsession","oppress","outskirts"]}

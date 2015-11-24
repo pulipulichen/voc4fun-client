@@ -1,0 +1,1 @@
+{"word_chinese":"繼承人","word_english":"successor","test_options":["successor","supportive","tar"]}

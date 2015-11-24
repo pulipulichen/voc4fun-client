@@ -1,0 +1,1 @@
+{"word_chinese":"加味的;增加趣味的","word_english":"seasoned","test_options":["seasoned","senator","shiver"]}

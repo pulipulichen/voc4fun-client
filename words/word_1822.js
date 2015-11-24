@@ -1,0 +1,1 @@
+{"word_chinese":"養育；培育","word_english":"nurture","test_options":["nurture","occurrence(","orthodox"]}

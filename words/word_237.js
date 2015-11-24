@@ -1,0 +1,1 @@
+{"word_chinese":"理髮店","word_english":"barbershop","test_options":["barbershop","beating","blur"]}

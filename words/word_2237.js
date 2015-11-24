@@ -1,0 +1,1 @@
+{"word_chinese":"記錄","word_english":"recording","test_options":["recording","refund","repel"]}

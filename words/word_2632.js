@@ -1,0 +1,1 @@
+{"word_chinese":"搖搖晃晃，猶豫","word_english":"stagger","test_options":["stagger","statesman","stroll"]}

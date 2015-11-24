@@ -1,0 +1,1 @@
+{"word_chinese":"注定的","word_english":"destined","test_options":["destined","diabetes","disgraceful"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"忠誠;逼真度","word_english":"fidelity","test_options":["fidelity","fleet(","Franc"]}

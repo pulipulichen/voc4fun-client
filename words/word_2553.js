@@ -1,0 +1,1 @@
+{"word_chinese":"用掌拍打(聲)；鞭聲","word_english":"smack","test_options":["smack","socialize","spiral"]}

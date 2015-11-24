@@ -1,0 +1,1 @@
+{"word_chinese":"奉獻的","word_english":"dedicated","test_options":["dedicated","degrade","deviate"]}

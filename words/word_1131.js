@@ -1,0 +1,1 @@
+{"word_chinese":"考試等)失敗","word_english":"flunk(","test_options":["flunk(","fossil","gathering"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"發呆;抽出","word_english":"abstraction","test_options":["abstraction","acne","affiliate"]}

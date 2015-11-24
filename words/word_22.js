@@ -1,0 +1,1 @@
+{"word_chinese":"歡呼","word_english":"acclaim","test_options":["acclaim","adaptation","aging"]}

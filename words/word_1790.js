@@ -1,0 +1,1 @@
+{"word_chinese":"新婚之人","word_english":"newlywed","test_options":["newlywed","notation","old-fashioned"]}

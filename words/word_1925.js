@@ -1,0 +1,1 @@
+{"word_chinese":"似非而是的論點paralysis癱瘓","word_english":"paradox","test_options":["paradox","patch","personnel"]}

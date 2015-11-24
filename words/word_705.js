@@ -1,0 +1,1 @@
+{"word_chinese":"嚴酷的;極緊要的","word_english":"crucial","test_options":["crucial","curry","deficiency"]}

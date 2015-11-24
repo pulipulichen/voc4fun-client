@@ -1,0 +1,1 @@
+{"word_chinese":"立法","word_english":"legislation","test_options":["legislation","lifeboat","long-standing"]}

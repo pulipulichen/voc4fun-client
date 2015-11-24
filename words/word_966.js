@@ -1,0 +1,1 @@
+{"word_chinese":"包圍;附件","word_english":"enclosure","test_options":["enclosure","environmentalist","exaggeration"]}

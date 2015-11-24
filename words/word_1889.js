@@ -1,0 +1,1 @@
+{"word_chinese":"剝奪…的法律保護","word_english":"outlaw","test_options":["outlaw","overwhelming","patrol"]}

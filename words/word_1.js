@@ -1,0 +1,1 @@
+{"word_chinese":"遺棄的;無人的","word_english":"abandoned","test_options":["abandoned","accessible","adverb"]}

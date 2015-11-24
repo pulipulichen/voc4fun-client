@@ -1,0 +1,1 @@
+{"word_chinese":"抑制，扣住withstand耐得住","word_english":"withhold","test_options":["withhold","Xerox","wholesale"]}

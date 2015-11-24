@@ -1,0 +1,1 @@
+{"word_chinese":"粉碎;崩潰","word_english":"crumble","test_options":["crumble","cynical","degenerate"]}

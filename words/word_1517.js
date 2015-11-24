@@ -1,0 +1,1 @@
+{"word_chinese":"工作服","word_english":"jumper","test_options":["jumper","latent","lime"]}

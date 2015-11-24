@@ -1,0 +1,1 @@
+{"word_chinese":"慣性;遲鈍","word_english":"inertia","test_options":["inertia","inlet","intermittent"]}

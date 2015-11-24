@@ -1,0 +1,1 @@
+{"word_chinese":"傳教(士)的;傳教士","word_english":"missionary","test_options":["missionary","monstrous","narrate"]}

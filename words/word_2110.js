@@ -1,0 +1,1 @@
+{"word_chinese":"資訊處理機","word_english":"processor","test_options":["processor","propagate","quake"]}

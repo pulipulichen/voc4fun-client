@@ -1,0 +1,1 @@
+{"word_chinese":"強調","word_english":"highlight","test_options":["highlight","hormone","implicit"]}

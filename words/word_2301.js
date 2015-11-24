@@ -1,0 +1,1 @@
+{"word_chinese":"鎮壓(叛亂等)","word_english":"repress","test_options":["repress","respected","right-hand"]}

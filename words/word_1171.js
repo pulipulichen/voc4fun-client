@@ -1,0 +1,1 @@
+{"word_chinese":"轟動的;把…登在頭版上","word_english":"front-page","test_options":["front-page","gathering","grammatical"]}

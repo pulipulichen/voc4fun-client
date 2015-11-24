@@ -1,0 +1,1 @@
+{"word_chinese":"搖搖欲墜，倒塌","word_english":"topple","test_options":["topple","tranquil","trolley"]}

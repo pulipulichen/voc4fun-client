@@ -1,0 +1,1 @@
+{"word_chinese":"牧場;牧草","word_english":"pasture","test_options":["pasture","penetrate","pick-up"]}

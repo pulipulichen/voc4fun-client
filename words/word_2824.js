@@ -1,0 +1,1 @@
+{"word_chinese":"織物的)織法，結構","word_english":"texture(","test_options":["texture(","thrill","tract"]}

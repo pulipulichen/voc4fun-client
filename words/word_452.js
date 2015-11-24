@@ -1,0 +1,1 @@
+{"word_chinese":"乾辣椒","word_english":"chili","test_options":["chili","clasp","comeback"]}

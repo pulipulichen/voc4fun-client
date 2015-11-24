@@ -1,0 +1,1 @@
+{"word_chinese":"輕蔑","word_english":"contempt","test_options":["contempt","conversely","counterclockwise"]}

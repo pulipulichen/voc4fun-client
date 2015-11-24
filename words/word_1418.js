@@ -1,0 +1,1 @@
+{"word_chinese":"被約束的","word_english":"inhibited","test_options":["inhibited","insistent","intrusion"]}

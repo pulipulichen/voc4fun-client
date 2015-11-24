@@ -1,0 +1,1 @@
+{"word_chinese":"薄片;火花","word_english":"flake","test_options":["flake","folklore","fume("]}

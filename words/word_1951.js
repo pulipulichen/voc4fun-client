@@ -1,0 +1,1 @@
+{"word_chinese":"人行道","word_english":"pavement","test_options":["pavement","perennial","pinch"]}

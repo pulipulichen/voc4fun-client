@@ -1,0 +1,1 @@
+{"word_chinese":"把…猛然扔下;促成","word_english":"precipitate","test_options":["precipitate","prescribe","projection"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"站立的","word_english":"stand-up","test_options":["stand-up","steep","stylish"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"轟隆轟隆響的","word_english":"thunderous","test_options":["thunderous","tonic","transparent"]}

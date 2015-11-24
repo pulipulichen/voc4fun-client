@@ -1,0 +1,1 @@
+{"word_chinese":"形勢","word_english":"odds","test_options":["odds","optimism","overlap"]}

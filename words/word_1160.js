@@ -1,0 +1,1 @@
+{"word_chinese":"框架;組織","word_english":"framework","test_options":["framework","funding","go-ahead"]}

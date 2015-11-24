@@ -1,0 +1,1 @@
+{"word_chinese":"滅(火)","word_english":"extinguish","test_options":["extinguish","familiarity","flaw"]}

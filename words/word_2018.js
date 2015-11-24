@@ -1,0 +1,1 @@
+{"word_chinese":"灰泥","word_english":"plaster","test_options":["plaster","polar(","premise"]}

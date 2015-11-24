@@ -1,0 +1,1 @@
+{"word_chinese":"舒適的","word_english":"cozy","test_options":["cozy","crossing","debris("]}

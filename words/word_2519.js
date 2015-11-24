@@ -1,0 +1,1 @@
+{"word_chinese":"矽","word_english":"silicon","test_options":["silicon","slam","solemn"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"卷軸","word_english":"reel","test_options":["reel","rein","reproduction"]}

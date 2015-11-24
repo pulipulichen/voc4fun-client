@@ -1,0 +1,1 @@
+{"word_chinese":"周期的;定期刊物","word_english":"periodical","test_options":["periodical","pharmaceutical","poetic"]}

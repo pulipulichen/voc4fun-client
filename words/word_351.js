@@ -1,0 +1,1 @@
+{"word_chinese":"大聲爭吵","word_english":"broil","test_options":["broil","bureaucracy","catering"]}

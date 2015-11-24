@@ -1,0 +1,1 @@
+{"word_chinese":"出賣朋友的；不忠的","word_english":"traitorous","test_options":["traitorous","transparency","turbulent"]}

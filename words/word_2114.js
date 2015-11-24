@@ -1,0 +1,1 @@
+{"word_chinese":"精通，熟練","word_english":"proficiency","test_options":["proficiency","proportional(","quantitative"]}

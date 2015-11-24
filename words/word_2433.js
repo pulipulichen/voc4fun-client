@@ -1,0 +1,1 @@
+{"word_chinese":"稿本","word_english":"script","test_options":["script","segregated","sheer"]}

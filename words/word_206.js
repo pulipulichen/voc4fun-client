@@ -1,0 +1,1 @@
+{"word_chinese":"確實的；有根據的","word_english":"authentic","test_options":["authentic","backpack","besiege"]}

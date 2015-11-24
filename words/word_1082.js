@@ -1,0 +1,1 @@
+{"word_chinese":"耕作；飼養(家禽)","word_english":"farming","test_options":["farming","fiddle","forge("]}

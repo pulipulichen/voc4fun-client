@@ -1,0 +1,1 @@
+{"word_chinese":"連續；結果","word_english":"sequence","test_options":["sequence","shatter","sit-in"]}

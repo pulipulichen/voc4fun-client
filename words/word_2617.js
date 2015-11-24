@@ -1,0 +1,1 @@
+{"word_chinese":"自發的，本能的，自動的","word_english":"spontaneous","test_options":["spontaneous","stale","stout"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"解雇;遣散","word_english":"dismissal","test_options":["dismissal","distort","dual"]}

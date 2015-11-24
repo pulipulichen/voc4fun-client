@@ -1,0 +1,1 @@
+{"word_chinese":"加重(病情等)","word_english":"aggravate","test_options":["aggravate","allegation","antibiotic"]}

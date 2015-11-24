@@ -1,0 +1,1 @@
+{"word_chinese":"新聞片","word_english":"newsreel","test_options":["newsreel","noticeable","one-time"]}

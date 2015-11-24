@@ -1,0 +1,1 @@
+{"word_chinese":"全長，從一頭到一頭","word_english":"span","test_options":["span","spiral","static"]}

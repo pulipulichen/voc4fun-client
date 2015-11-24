@@ -1,0 +1,1 @@
+{"word_chinese":"球體，行星","word_english":"sphere","test_options":["sphere","squat","stick"]}

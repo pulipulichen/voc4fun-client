@@ -1,0 +1,1 @@
+{"word_chinese":"沉思","word_english":"contemplation","test_options":["contemplation","converge","countable"]}

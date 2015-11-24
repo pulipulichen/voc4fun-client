@@ -1,0 +1,1 @@
+{"word_chinese":"各種擱架","word_english":"rack","test_options":["rack","rascal","reformer"]}

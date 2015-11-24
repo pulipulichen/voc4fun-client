@@ -1,0 +1,1 @@
+{"word_chinese":"極好的","word_english":"stunning","test_options":["stunning","substantially","sway"]}

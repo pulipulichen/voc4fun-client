@@ -1,0 +1,1 @@
+{"word_chinese":"一人[一家，一集團]操縱的政治團體","word_english":"borough","test_options":["borough","breach","burial"]}

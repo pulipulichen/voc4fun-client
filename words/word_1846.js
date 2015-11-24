@@ -1,0 +1,1 @@
+{"word_chinese":"抵銷，抵銷物","word_english":"offset","test_options":["offset","optional","overt"]}

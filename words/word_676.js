@@ -1,0 +1,1 @@
+{"word_chinese":"突然的一擊","word_english":"coup","test_options":["coup","creditor","dart"]}

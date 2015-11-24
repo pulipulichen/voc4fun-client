@@ -1,0 +1,1 @@
+{"word_chinese":"急速發展","word_english":"boom","test_options":["boom","bracket","bully"]}

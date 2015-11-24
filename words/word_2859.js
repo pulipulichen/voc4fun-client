@@ -1,0 +1,1 @@
+{"word_chinese":"計時","word_english":"timing","test_options":["timing","touching","trek("]}

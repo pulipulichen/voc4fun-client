@@ -1,0 +1,1 @@
+{"word_chinese":"過量；過剩","word_english":"excess","test_options":["excess","expiration","feat"]}

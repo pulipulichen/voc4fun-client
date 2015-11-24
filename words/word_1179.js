@@ -1,0 +1,1 @@
+{"word_chinese":"為…提供基金","word_english":"funding","test_options":["funding","genetics","greed"]}

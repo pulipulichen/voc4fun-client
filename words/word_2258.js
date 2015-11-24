@@ -1,0 +1,1 @@
+{"word_chinese":"取回","word_english":"regain","test_options":["regain","relic","resonant"]}

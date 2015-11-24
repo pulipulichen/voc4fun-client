@@ -1,0 +1,1 @@
+{"word_chinese":""稻草人, 骨瘦如柴的人"","word_english":"scarecrow","test_options":["scarecrow","seasoned","setting"]}

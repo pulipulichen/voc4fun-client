@@ -1,0 +1,1 @@
+{"word_chinese":"馬力","word_english":"horsepower","test_options":["horsepower","hypocrisy","incumbent"]}

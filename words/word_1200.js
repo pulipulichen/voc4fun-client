@@ -1,0 +1,1 @@
+{"word_chinese":"地理學的","word_english":"geographical","test_options":["geographical","go-ahead","gypsy"]}

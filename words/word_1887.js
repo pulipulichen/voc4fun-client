@@ -1,0 +1,1 @@
+{"word_chinese":"開朗的","word_english":"outgoing","test_options":["outgoing","overturn(","pathetic"]}

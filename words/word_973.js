@@ -1,0 +1,1 @@
+{"word_chinese":"捐款；基金","word_english":"endowment","test_options":["endowment","epoch","excessive"]}

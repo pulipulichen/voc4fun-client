@@ -1,0 +1,1 @@
+{"word_chinese":"反響；共鳴","word_english":"resonance","test_options":["resonance","retired","roam"]}

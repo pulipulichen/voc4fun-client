@@ -1,0 +1,1 @@
+{"word_chinese":"破爛的;凹凸不平的","word_english":"ragged","test_options":["ragged","reactor","regime"]}

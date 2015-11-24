@@ -1,0 +1,1 @@
+{"word_chinese":"震動;地震","word_english":"quake","test_options":["quake","quotation","recipient"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"槳","word_english":"oar","test_options":["oar","odds","oust"]}

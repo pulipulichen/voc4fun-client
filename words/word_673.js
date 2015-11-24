@@ -1,0 +1,1 @@
+{"word_chinese":"逆時針；反時針方向的(地)","word_english":"counterclockwise","test_options":["counterclockwise","creator","damned"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"莖；柄","word_english":"shaft","test_options":["shaft","shove","sleigh("]}

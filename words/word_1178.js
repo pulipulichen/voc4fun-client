@@ -1,0 +1,1 @@
+{"word_chinese":"原教旨主義者","word_english":"fundamentalist","test_options":["fundamentalist","genetic","grease"]}

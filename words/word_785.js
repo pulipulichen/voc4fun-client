@@ -1,0 +1,1 @@
+{"word_chinese":"輸送;把…驅逐出境","word_english":"deport","test_options":["deport","devalue","discomfort"]}

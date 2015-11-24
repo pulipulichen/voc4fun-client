@@ -1,0 +1,1 @@
+{"word_chinese":"親密","word_english":"intimacy","test_options":["intimacy","ironically","lad"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"把…送入醫院治療","word_english":"hospitalize","test_options":["hospitalize","hysterical","index"]}

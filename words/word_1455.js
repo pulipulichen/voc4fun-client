@@ -1,0 +1,1 @@
+{"word_chinese":"誠實;完整","word_english":"integrity","test_options":["integrity","intrigue","judicial"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"真空的","word_english":"airtight","test_options":["airtight","almond","applicable"]}

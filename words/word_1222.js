@@ -1,0 +1,1 @@
+{"word_chinese":"標緻的","word_english":"good-looking","test_options":["good-looking","grip","haunt"]}

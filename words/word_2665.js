@@ -1,0 +1,1 @@
+{"word_chinese":"嚴厲的","word_english":"stern","test_options":["stern","strategic","sue"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"滋補的，補藥","word_english":"tonic","test_options":["tonic","traitor","trio"]}

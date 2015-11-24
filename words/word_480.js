@@ -1,0 +1,1 @@
+{"word_chinese":"診所的","word_english":"clinical","test_options":["clinical","cola","compensate"]}

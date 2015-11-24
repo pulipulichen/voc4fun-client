@@ -1,0 +1,1 @@
+{"word_chinese":"發牢騷","word_english":"grumble","test_options":["grumble","handbook","heterosexual"]}

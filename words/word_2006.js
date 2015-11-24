@@ -1,0 +1,1 @@
+{"word_chinese":"刺穿的","word_english":"piercing","test_options":["piercing","pledge","predecessor"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"好轉;載客","word_english":"pick-up","test_options":["pick-up","playful","precipitate"]}

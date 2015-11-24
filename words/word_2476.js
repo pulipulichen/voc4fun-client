@@ -1,0 +1,1 @@
+{"word_chinese":"佈道；講道","word_english":"sermon","test_options":["sermon","shield","skirt"]}

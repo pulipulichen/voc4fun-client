@@ -1,0 +1,1 @@
+{"word_chinese":"開(門、箱等的)鎖","word_english":"unlock","test_options":["unlock","upload","veteran"]}

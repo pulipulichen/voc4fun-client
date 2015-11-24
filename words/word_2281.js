@@ -1,0 +1,1 @@
+{"word_chinese":"剩餘的","word_english":"remaining","test_options":["remaining","reportedly","retrospect"]}

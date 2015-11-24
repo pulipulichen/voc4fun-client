@@ -1,0 +1,1 @@
+{"word_chinese":"寄宿","word_english":"lodge","test_options":["lodge","lumber","massacre"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"撤退；提款","word_english":"withdrawal","test_options":["withdrawal","wring","whisk"]}

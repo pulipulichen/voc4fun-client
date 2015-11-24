@@ -1,0 +1,1 @@
+{"word_chinese":"輪船、飛機、旅館等的)服務員","word_english":"steward(","test_options":["steward(","streak","suite"]}

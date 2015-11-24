@@ -1,0 +1,1 @@
+{"word_chinese":"濃縮","word_english":"condense","test_options":["condense","conservation","convene"]}

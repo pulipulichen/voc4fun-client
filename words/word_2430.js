@@ -1,0 +1,1 @@
+{"word_chinese":"碎片，碎屑","word_english":"scrap","test_options":["scrap","seeming","shatter"]}

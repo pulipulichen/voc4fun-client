@@ -1,0 +1,1 @@
+{"word_chinese":"尖聲叫喊","word_english":"shriek","test_options":["shriek","sinister","soar"]}

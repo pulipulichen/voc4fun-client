@@ -1,0 +1,1 @@
+{"word_chinese":"同居人","word_english":"inmate","test_options":["inmate","instrumental","inviting"]}

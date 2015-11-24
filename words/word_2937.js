@@ -1,0 +1,1 @@
+{"word_chinese":"不安的，困惑的trout鮭魚","word_english":"troubled","test_options":["troubled","tyranny","unload"]}

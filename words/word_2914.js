@@ -1,0 +1,1 @@
+{"word_chinese":"背叛的，不忠的","word_english":"treacherous","test_options":["treacherous","trolley","underestimate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"被打擊的","word_english":"beaten","test_options":["beaten","binoculars","borrowing"]}

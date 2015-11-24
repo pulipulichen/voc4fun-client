@@ -1,0 +1,1 @@
+{"word_chinese":"誓言","word_english":"oath","test_options":["oath","offering","outdo"]}

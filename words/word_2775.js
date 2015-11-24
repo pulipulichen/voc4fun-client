@@ -1,0 +1,1 @@
+{"word_chinese":"外帶食物","word_english":"takeaway","test_options":["takeaway","teamwork","thesis"]}

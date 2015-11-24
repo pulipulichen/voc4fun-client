@@ -1,0 +1,1 @@
+{"word_chinese":"乾燥的","word_english":"dried","test_options":["dried","ecstatic","endow"]}

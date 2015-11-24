@@ -1,0 +1,1 @@
+{"word_chinese":"有影響的人","word_english":"heavyweight","test_options":["heavyweight","hillside(","hypothesis"]}

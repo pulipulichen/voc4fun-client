@@ -1,0 +1,1 @@
+{"word_chinese":"寡婦","word_english":"widow","test_options":["widow","would-be","whereas"]}

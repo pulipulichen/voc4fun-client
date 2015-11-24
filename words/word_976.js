@@ -1,0 +1,1 @@
+{"word_chinese":"忙於…;訂婚了的","word_english":"engaged","test_options":["engaged","equator","exclusively"]}

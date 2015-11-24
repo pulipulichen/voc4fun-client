@@ -1,0 +1,1 @@
+{"word_chinese":"癱瘓","word_english":"paralyze","test_options":["paralyze","patent","perspective"]}

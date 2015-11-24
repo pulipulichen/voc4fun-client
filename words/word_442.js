@@ -1,0 +1,1 @@
+{"word_chinese":"慈善的","word_english":"charitable","test_options":["charitable","chuckle","collected"]}

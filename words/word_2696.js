@@ -1,0 +1,1 @@
+{"word_chinese":"使目瞪口呆","word_english":"stun","test_options":["stun","substantial","swarm("]}

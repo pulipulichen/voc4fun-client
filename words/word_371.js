@@ -1,0 +1,1 @@
+{"word_chinese":"官僚主義者","word_english":"bureaucrat","test_options":["bureaucrat","carbohydrate","chairperson"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"回顧(n.)","word_english":"retrospection","test_options":["retrospection","right-hand","safari ("]}

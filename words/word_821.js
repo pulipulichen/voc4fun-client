@@ -1,0 +1,1 @@
+{"word_chinese":"使有差別","word_english":"differentiate","test_options":["differentiate","disciple","distributed"]}

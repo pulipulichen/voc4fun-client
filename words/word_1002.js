@@ -1,0 +1,1 @@
+{"word_chinese":"火山等)迸發","word_english":"erupt(","test_options":["erupt(","evergreen","extinguish"]}

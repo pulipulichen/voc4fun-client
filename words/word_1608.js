@@ -1,0 +1,1 @@
+{"word_chinese":"經年累月的","word_english":"long-standing","test_options":["long-standing","lyric","mechanics"]}

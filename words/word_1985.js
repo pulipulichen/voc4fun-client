@@ -1,0 +1,1 @@
+{"word_chinese":"觀點","word_english":"perspective","test_options":["perspective","pier","porcelain"]}

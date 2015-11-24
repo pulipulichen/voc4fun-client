@@ -1,0 +1,1 @@
+{"word_chinese":"彎曲的","word_english":"bent","test_options":["bent","blare","bowler"]}

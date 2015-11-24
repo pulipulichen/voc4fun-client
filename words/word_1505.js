@@ -1,0 +1,1 @@
+{"word_chinese":"嘲笑","word_english":"jeer","test_options":["jeer","killing","libel"]}

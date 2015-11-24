@@ -1,0 +1,1 @@
+{"word_chinese":"不顧;輕視","word_english":"disregard","test_options":["disregard","diversity","eccentric"]}

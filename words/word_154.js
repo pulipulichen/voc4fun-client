@@ -1,0 +1,1 @@
+{"word_chinese":"接近","word_english":"approximate","test_options":["approximate","ascertain","autonomy"]}

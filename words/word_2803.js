@@ -1,0 +1,1 @@
+{"word_chinese":"誘惑(n.)","word_english":"temptation","test_options":["temptation","textile","toad"]}

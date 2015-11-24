@@ -1,0 +1,1 @@
+{"word_chinese":"瘀傷","word_english":"bruise","test_options":["bruise","caffeine","celebrity"]}

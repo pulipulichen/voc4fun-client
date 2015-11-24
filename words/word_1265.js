@@ -1,0 +1,1 @@
+{"word_chinese":"半工半薪;半場休息時間","word_english":"half-time","test_options":["half-time","hazardous","honk"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"匍匐的","word_english":"reptile","test_options":["reptile","restrained","rim"]}

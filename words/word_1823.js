@@ -1,0 +1,1 @@
+{"word_chinese":"滋養的","word_english":"nutritious","test_options":["nutritious","octopus","ostrich"]}

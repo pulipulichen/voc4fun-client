@@ -1,0 +1,1 @@
+{"word_chinese":"不穩；不安","word_english":"unrest","test_options":["unrest","utensil","vice"]}

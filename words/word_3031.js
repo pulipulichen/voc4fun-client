@@ -1,0 +1,1 @@
+{"word_chinese":"預防疫苗的","word_english":"vaccine","test_options":["vaccine","verdict(","void"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"醜聞","word_english":"scandal","test_options":["scandal","seasonable","serving"]}

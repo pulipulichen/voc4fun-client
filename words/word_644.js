@@ -1,0 +1,1 @@
+{"word_chinese":"〔俚語〕警察","word_english":"cop","test_options":["cop","corruption","crossing"]}

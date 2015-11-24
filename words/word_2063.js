@@ -1,0 +1,1 @@
+{"word_chinese":"精確","word_english":"precision","test_options":["precision","present","prolong"]}

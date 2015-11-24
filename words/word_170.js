@@ -1,0 +1,1 @@
+{"word_chinese":"發音清晰的","word_english":"articulate","test_options":["articulate","astronomer","balanced"]}

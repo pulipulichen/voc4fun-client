@@ -1,0 +1,1 @@
+{"word_chinese":"銀行業","word_english":"banking","test_options":["banking","batter","blonde"]}

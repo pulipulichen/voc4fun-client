@@ -1,0 +1,1 @@
+{"word_chinese":"異國情調的","word_english":"exotic","test_options":["exotic","extract","fidelity"]}

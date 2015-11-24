@@ -1,0 +1,1 @@
+{"word_chinese":"種族的","word_english":"ethnic","test_options":["ethnic","exclusion","faction"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"動機","word_english":"motive","test_options":["motive","mustache (","nominate"]}

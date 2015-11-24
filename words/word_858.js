@@ -1,0 +1,1 @@
+{"word_chinese":"發送","word_english":"dispatch","test_options":["dispatch","distract","dub"]}

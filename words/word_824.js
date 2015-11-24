@@ -1,0 +1,1 @@
+{"word_chinese":"勤勉","word_english":"diligence","test_options":["diligence","disclosure(n.)","disturbing"]}

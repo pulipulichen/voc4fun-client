@@ -1,0 +1,1 @@
+{"word_chinese":"斷言","word_english":"affirm","test_options":["affirm","alarming","anonymous"]}

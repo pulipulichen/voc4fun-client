@@ -1,0 +1,1 @@
+{"word_chinese":"兩星期","word_english":"fortnight","test_options":["fortnight","fret","glamour"]}

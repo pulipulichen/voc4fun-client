@@ -1,0 +1,1 @@
+{"word_chinese":"濾紙;過濾","word_english":"filter","test_options":["filter","flick(","franchise"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"加熱的;激昂的","word_english":"heated","test_options":["heated","hierarchy","hymn"]}

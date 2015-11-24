@@ -1,0 +1,1 @@
+{"word_chinese":"冰雹;為…歡呼","word_english":"hail","test_options":["hail","haven","homogeneous"]}

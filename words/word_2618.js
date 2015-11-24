@@ -1,0 +1,1 @@
+{"word_chinese":"運動的","word_english":"sporting","test_options":["sporting","stalk","straighten"]}

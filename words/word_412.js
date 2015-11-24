@@ -1,0 +1,1 @@
+{"word_chinese":"小心","word_english":"caution","test_options":["caution","challenged","clasp"]}

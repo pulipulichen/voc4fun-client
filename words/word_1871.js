@@ -1,0 +1,1 @@
+{"word_chinese":"東方的","word_english":"orient","test_options":["orient","outlet","parlor"]}

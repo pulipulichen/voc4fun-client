@@ -1,0 +1,1 @@
+{"word_chinese":"強度","word_english":"intensity","test_options":["intensity","intrusion","jumper"]}

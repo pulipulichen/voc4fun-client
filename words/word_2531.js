@@ -1,0 +1,1 @@
+{"word_chinese":"骨骼，骷髏","word_english":"skeleton","test_options":["skeleton","slum","sovereign"]}

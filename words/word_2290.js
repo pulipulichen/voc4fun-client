@@ -1,0 +1,1 @@
+{"word_chinese":"重開","word_english":"reopen","test_options":["reopen","resentment","revive"]}

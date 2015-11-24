@@ -1,0 +1,1 @@
+{"word_chinese":"敵人","word_english":"foe","test_options":["foe","foul","gel"]}

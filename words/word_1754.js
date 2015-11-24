@@ -1,0 +1,1 @@
+{"word_chinese":"騾子","word_english":"mule","test_options":["mule","narrative","notion"]}

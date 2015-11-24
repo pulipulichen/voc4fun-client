@@ -1,0 +1,1 @@
+{"word_chinese":"降級;使墮落","word_english":"degrade","test_options":["degrade","descendant","diplomatic"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"鼻孔","word_english":"nostril","test_options":["nostril","oasis","optional"]}

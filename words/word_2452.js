@@ -1,0 +1,1 @@
+{"word_chinese":"被分離的","word_english":"segregated","test_options":["segregated","serene","shudder"]}

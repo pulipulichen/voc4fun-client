@@ -1,0 +1,1 @@
+{"word_chinese":"使加倍","word_english":"duplicate","test_options":["duplicate","elapse(","enlighten"]}

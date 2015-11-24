@@ -1,0 +1,1 @@
+{"word_chinese":"創傷；外傷症狀","word_english":"trauma","test_options":["trauma","triple","uncomfortable"]}

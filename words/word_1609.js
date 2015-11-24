@@ -1,0 +1,1 @@
+{"word_chinese":"長期的","word_english":"long-time","test_options":["long-time","made-up","mechanism"]}

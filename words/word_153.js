@@ -1,0 +1,1 @@
+{"word_chinese":"學徒","word_english":"apprentice","test_options":["apprentice","artillery","autonomous"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"鄰近的","word_english":"adjacent","test_options":["adjacent","advisory","allocate"]}

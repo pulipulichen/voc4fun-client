@@ -1,0 +1,1 @@
+{"word_chinese":"精細的；巧妙的","word_english":"subtle","test_options":["subtle","supervise","tally"]}

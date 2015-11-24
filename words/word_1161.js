@@ -1,0 +1,1 @@
+{"word_chinese":"法郎","word_english":"Franc","test_options":["Franc","furnace","goalkeeper("]}

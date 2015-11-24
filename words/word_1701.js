@@ -1,0 +1,1 @@
+{"word_chinese":"模仿","word_english":"mimic","test_options":["mimic","modernization","muse"]}

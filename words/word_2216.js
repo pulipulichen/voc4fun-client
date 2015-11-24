@@ -1,0 +1,1 @@
+{"word_chinese":"有理性的;合理的","word_english":"rational","test_options":["rational","reconciliation","reliability"]}

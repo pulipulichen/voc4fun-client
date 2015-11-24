@@ -1,0 +1,1 @@
+{"word_chinese":"標準規格","word_english":"gauge","test_options":["gauge","glare","guaranteed"]}

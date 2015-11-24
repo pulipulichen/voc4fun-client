@@ -1,0 +1,1 @@
+{"word_chinese":"分發的，配給的","word_english":"distributed","test_options":["distributed","doomed","electoral"]}

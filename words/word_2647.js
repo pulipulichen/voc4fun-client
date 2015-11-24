@@ -1,0 +1,1 @@
+{"word_chinese":"僵硬的","word_english":"stark","test_options":["stark","stew","submersion"]}

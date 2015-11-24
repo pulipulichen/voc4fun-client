@@ -1,0 +1,1 @@
+{"word_chinese":"講堂","word_english":"auditorium","test_options":["auditorium","backing","bent"]}

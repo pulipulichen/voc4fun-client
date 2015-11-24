@@ -1,0 +1,1 @@
+{"word_chinese":"敏捷的，機靈的","word_english":"shrewd","test_options":["shrewd","sincerity","soak"]}

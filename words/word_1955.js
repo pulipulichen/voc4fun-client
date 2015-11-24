@@ -1,0 +1,1 @@
+{"word_chinese":"沿街叫賣","word_english":"peddle","test_options":["peddle","periodical","pistol"]}

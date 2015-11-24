@@ -1,0 +1,1 @@
+{"word_chinese":"羅馬教皇","word_english":"pope","test_options":["pope","preceding","primarily"]}

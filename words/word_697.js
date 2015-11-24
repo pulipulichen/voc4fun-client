@@ -1,0 +1,1 @@
+{"word_chinese":"搖籃","word_english":"crib","test_options":["crib","cuisine","deepen"]}

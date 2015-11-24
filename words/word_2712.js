@@ -1,0 +1,1 @@
+{"word_chinese":"輔助的，次要的","word_english":"subsidiary","test_options":["subsidiary","superintendent","tactic"]}

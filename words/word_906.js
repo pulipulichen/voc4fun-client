@@ -1,0 +1,1 @@
+{"word_chinese":"排水;排水系統","word_english":"drainage","test_options":["drainage","earphones","enact"]}

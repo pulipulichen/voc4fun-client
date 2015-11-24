@@ -1,0 +1,1 @@
+{"word_chinese":"攪動","word_english":"agitation(n.) ","test_options":["agitation(n.) ","alleviate","antonym"]}

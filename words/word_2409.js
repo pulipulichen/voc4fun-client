@@ -1,0 +1,1 @@
+{"word_chinese":"救助","word_english":"salvation","test_options":["salvation","scorn","separatism"]}

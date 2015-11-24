@@ -1,0 +1,1 @@
+{"word_chinese":"沙龍","word_english":"salon","test_options":["salon","scattered","sensitivity"]}

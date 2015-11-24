@@ -1,0 +1,1 @@
+{"word_chinese":"子孫","word_english":"descendant","test_options":["descendant","developer","discrete"]}

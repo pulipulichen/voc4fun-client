@@ -1,0 +1,1 @@
+{"word_chinese":"口頭的","word_english":"verbal","test_options":["verbal","victimize","warranty"]}

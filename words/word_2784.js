@@ -1,0 +1,1 @@
+{"word_chinese":"價目表","word_english":"tariff","test_options":["tariff","temptation","thrill"]}

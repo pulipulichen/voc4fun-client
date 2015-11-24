@@ -1,0 +1,1 @@
+{"word_chinese":"超過(限度、範圍)","word_english":"exceed","test_options":["exceed","expend","fatigue"]}

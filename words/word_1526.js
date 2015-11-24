@@ -1,0 +1,1 @@
+{"word_chinese":"點燃;煽動","word_english":"kindle","test_options":["kindle","lee","literacy"]}

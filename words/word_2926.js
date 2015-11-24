@@ -1,0 +1,1 @@
+{"word_chinese":"觸發，激起 ","word_english":"trigger","test_options":["trigger","tuition","undoubtedly"]}

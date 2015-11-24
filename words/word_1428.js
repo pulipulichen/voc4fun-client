@@ -1,0 +1,1 @@
+{"word_chinese":"創新;改革","word_english":"innovation","test_options":["innovation","insulate","inward"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"緩衝","word_english":"buffer","test_options":["buffer","calligraphy","cell-phone"]}

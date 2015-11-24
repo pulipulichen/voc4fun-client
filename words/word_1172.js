@@ -1,0 +1,1 @@
+{"word_chinese":"果實累累的;收益多的","word_english":"fruitful","test_options":["fruitful","gauge","graph"]}

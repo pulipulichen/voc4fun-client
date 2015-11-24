@@ -1,0 +1,1 @@
+{"word_chinese":"監禁","word_english":"imprison","test_options":["imprison","incur","insane"]}

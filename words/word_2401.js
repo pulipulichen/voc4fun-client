@@ -1,0 +1,1 @@
+{"word_chinese":"衛兵；警衛","word_english":"safeguard","test_options":["safeguard","scandal","senator"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"謹慎的","word_english":"cautious","test_options":["cautious","challenger","clause"]}

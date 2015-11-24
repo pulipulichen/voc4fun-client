@@ -1,0 +1,1 @@
+{"word_chinese":"雷鬼(音樂)","word_english":"reggae","test_options":["reggae","relieved","resort"]}

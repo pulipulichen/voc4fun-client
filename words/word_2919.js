@@ -1,0 +1,1 @@
+{"word_chinese":"震顫；發抖","word_english":"tremor","test_options":["tremor","truant","undermine"]}

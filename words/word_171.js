@@ -1,0 +1,1 @@
+{"word_chinese":"人工製品〔尤指原始工具〕","word_english":"artifact","test_options":["artifact","astronomy","ballot"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"開藥方","word_english":"prescribe","test_options":["prescribe","prick","prospect"]}

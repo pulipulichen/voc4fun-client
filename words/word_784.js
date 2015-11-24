@@ -1,0 +1,1 @@
+{"word_chinese":"部署","word_english":"deployment","test_options":["deployment","deterioration","disclosure"]}

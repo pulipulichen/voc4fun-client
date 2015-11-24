@@ -1,0 +1,1 @@
+{"word_chinese":"阻礙…的發育，特技","word_english":"stunt","test_options":["stunt","substitution","swollen"]}

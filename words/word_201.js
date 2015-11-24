@@ -1,0 +1,1 @@
+{"word_chinese":"辯護律師","word_english":"attorney","test_options":["attorney","awhile","beforehand"]}

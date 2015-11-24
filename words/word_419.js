@@ -1,0 +1,1 @@
+{"word_chinese":"芹菜","word_english":"celery","test_options":["celery","chapped","clinch"]}

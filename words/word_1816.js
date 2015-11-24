@@ -1,0 +1,1 @@
+{"word_chinese":"新奇的東西","word_english":"novelty","test_options":["novelty","obscene","orientation"]}

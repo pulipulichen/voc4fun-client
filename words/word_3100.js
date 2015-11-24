@@ -1,0 +1,1 @@
+{"word_chinese":"搖，擺動(特指尾巴等)","word_english":"wag","test_options":["wag","wed","wreath"]}

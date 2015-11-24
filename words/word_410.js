@@ -1,0 +1,1 @@
+{"word_chinese":"包辦宴席","word_english":"catering","test_options":["catering","certify","clan"]}

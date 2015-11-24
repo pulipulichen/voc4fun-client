@@ -1,0 +1,1 @@
+{"word_chinese":"描寫；敘述","word_english":"depict","test_options":["depict","detention","disciple"]}

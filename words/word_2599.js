@@ -1,0 +1,1 @@
+{"word_chinese":"明確地；尤其","word_english":"specifically","test_options":["specifically","sporting","stature"]}

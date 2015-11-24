@@ -1,0 +1,1 @@
+{"word_chinese":"清澈的；寧靜的","word_english":"serene","test_options":["serene","shear","situated"]}

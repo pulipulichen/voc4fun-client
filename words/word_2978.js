@@ -1,0 +1,1 @@
+{"word_chinese":"掘地道","word_english":"undermine","test_options":["undermine","unlock","vanity"]}

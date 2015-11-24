@@ -1,0 +1,1 @@
+{"word_chinese":"使復權","word_english":"rehabilitate","test_options":["rehabilitate","remains","respective"]}

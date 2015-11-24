@@ -1,0 +1,1 @@
+{"word_chinese":"刺激人的","word_english":"stimulating","test_options":["stimulating","striking","sunshine"]}

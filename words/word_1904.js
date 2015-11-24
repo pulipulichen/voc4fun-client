@@ -1,0 +1,1 @@
+{"word_chinese":"睡過頭","word_english":"oversleep","test_options":["oversleep","paperback","peninsula"]}

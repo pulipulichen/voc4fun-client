@@ -1,0 +1,1 @@
+{"word_chinese":"軼事","word_english":"anecdote","test_options":["anecdote","apparatus","asthma"]}

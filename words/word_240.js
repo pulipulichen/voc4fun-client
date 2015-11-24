@@ -1,0 +1,1 @@
+{"word_chinese":"氣壓計","word_english":"barometer","test_options":["barometer","beep","bodyguard"]}

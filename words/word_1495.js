@@ -1,0 +1,1 @@
+{"word_chinese":"易怒的","word_english":"irritable","test_options":["irritable","judicial","lengthy"]}

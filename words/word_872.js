@@ -1,0 +1,1 @@
+{"word_chinese":"使(雲霧等)消散，驅散(憂慮等)","word_english":"dissipate","test_options":["dissipate","doctrine","ecstasy"]}

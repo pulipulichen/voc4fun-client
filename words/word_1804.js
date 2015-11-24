@@ -1,0 +1,1 @@
+{"word_chinese":"非暴力的","word_english":"non-violent","test_options":["non-violent","nutritious","optimistic"]}

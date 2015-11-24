@@ -1,0 +1,1 @@
+{"word_chinese":"金字塔","word_english":"pyramid","test_options":["pyramid","quiver","rebellion"]}

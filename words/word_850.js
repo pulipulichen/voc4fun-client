@@ -1,0 +1,1 @@
+{"word_chinese":"區別;歧視","word_english":"discriminate","test_options":["discriminate","disrupt","draught"]}

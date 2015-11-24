@@ -1,0 +1,1 @@
+{"word_chinese":"模擬","word_english":"simulate","test_options":["simulate","slaughter","solo"]}

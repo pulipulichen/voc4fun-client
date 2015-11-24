@@ -1,0 +1,1 @@
+{"word_chinese":"愛國者","word_english":"patriot","test_options":["patriot","pensioner","piercing"]}

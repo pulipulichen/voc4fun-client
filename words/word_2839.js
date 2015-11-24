@@ -1,0 +1,1 @@
+{"word_chinese":"多刺的","word_english":"thorny","test_options":["thorny","timer","transcendent"]}

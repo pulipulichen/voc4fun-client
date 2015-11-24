@@ -1,0 +1,1 @@
+{"word_chinese":"純粹的","word_english":"sheer","test_options":["sheer","shudder","slump"]}

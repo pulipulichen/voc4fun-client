@@ -1,0 +1,1 @@
+{"word_chinese":"自治的","word_english":"autonomous","test_options":["autonomous","bandit","bibliography"]}

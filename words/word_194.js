@@ -1,0 +1,1 @@
+{"word_chinese":"凶暴","word_english":"atrocity","test_options":["atrocity","autonomy","bazaar"]}

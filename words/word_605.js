@@ -1,0 +1,1 @@
+{"word_chinese":"約束","word_english":"constraint","test_options":["constraint","contradiction","cosmetic"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"有形的;肉體上","word_english":"bodily","test_options":["bodily","botany","brotherhood"]}

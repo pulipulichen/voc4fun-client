@@ -1,0 +1,1 @@
+{"word_chinese":"一瘸一拐地走","word_english":"limp","test_options":["limp","locked","majesty"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"礦石","word_english":"ore","test_options":["ore","outgoing","parameter"]}

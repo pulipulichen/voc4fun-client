@@ -1,0 +1,1 @@
+{"word_chinese":"新聞廣播","word_english":"newscast","test_options":["newscast","noted","olive"]}

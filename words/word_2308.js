@@ -1,0 +1,1 @@
+{"word_chinese":"憎恨","word_english":"resent","test_options":["resent","restricted","riotous"]}

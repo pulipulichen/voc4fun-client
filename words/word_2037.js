@@ -1,0 +1,1 @@
+{"word_chinese":"南、北)極的","word_english":"polar(","test_options":["polar(","preach","previously"]}

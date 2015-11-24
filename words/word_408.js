@@ -1,0 +1,1 @@
+{"word_chinese":"類別","word_english":"category","test_options":["category","ceramic","clam"]}

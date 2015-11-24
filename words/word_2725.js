@@ -1,0 +1,1 @@
+{"word_chinese":"使窒息","word_english":"suffocate","test_options":["suffocate","surge","tariff"]}

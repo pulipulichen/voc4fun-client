@@ -1,0 +1,1 @@
+{"word_chinese":"使窘困;使混亂","word_english":"perplex","test_options":["perplex","physiological","pollutant"]}

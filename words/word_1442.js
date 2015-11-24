@@ -1,0 +1,1 @@
+{"word_chinese":"即刻的，瞬間的","word_english":"instantaneous","test_options":["instantaneous","interaction","jade"]}

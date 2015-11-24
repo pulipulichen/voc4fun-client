@@ -1,0 +1,1 @@
+{"word_chinese":"沈思，默想","word_english":"muse","test_options":["muse","navigate","nude"]}

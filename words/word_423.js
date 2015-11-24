@@ -1,0 +1,1 @@
+{"word_chinese":"攝氏的","word_english":"Celsius","test_options":["Celsius","charitable","clone"]}

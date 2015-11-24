@@ -1,0 +1,1 @@
+{"word_chinese":"迫近的","word_english":"pending","test_options":["pending","perplex","plateau"]}

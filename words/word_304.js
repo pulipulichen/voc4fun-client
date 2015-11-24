@@ -1,0 +1,1 @@
+{"word_chinese":"炮擊","word_english":"bombard","test_options":["bombard","bowler","buffer"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"互相關聯","word_english":"correlate","test_options":["correlate","coup","cuisine"]}

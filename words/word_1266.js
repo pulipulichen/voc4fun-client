@@ -1,0 +1,1 @@
+{"word_chinese":"把…分成相等的兩部分","word_english":"halve","test_options":["halve","heading","honorary"]}

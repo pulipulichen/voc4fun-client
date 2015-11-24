@@ -1,0 +1,1 @@
+{"word_chinese":"處理；交易；業務","word_english":"transaction","test_options":["transaction","tread","typically"]}

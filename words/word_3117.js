@@ -1,0 +1,1 @@
+{"word_chinese":"疲倦的，感到厭倦的","word_english":"weary","test_options":["weary","wholesale","zip"]}

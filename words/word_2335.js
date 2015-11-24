@@ -1,0 +1,1 @@
+{"word_chinese":"退休的","word_english":"retired","test_options":["retired","rhinoceros","run-up"]}

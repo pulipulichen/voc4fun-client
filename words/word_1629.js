@@ -1,0 +1,1 @@
+{"word_chinese":"黑手黨","word_english":"mafia","test_options":["mafia","mare","metropolitan"]}

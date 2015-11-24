@@ -1,0 +1,1 @@
+{"word_chinese":"精神病醫生","word_english":"psychiatrist","test_options":["psychiatrist","quantitative","ratify"]}

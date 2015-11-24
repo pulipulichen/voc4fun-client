@@ -1,0 +1,1 @@
+{"word_chinese":"計算","word_english":"computing","test_options":["computing","configuration","contentment"]}

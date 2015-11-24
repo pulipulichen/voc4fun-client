@@ -1,0 +1,1 @@
+{"word_chinese":"上癮的","word_english":"addicted","test_options":["addicted","advert","alleviate"]}

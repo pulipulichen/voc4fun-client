@@ -1,0 +1,1 @@
+{"word_chinese":"偶然地","word_english":"incidentally","test_options":["incidentally","indulge","instinctive"]}

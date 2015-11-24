@@ -1,0 +1,1 @@
+{"word_chinese":"失業的","word_english":"unemployed","test_options":["unemployed","unsuccessful","vent"]}

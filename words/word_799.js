@@ -1,0 +1,1 @@
+{"word_chinese":"發現，發覺","word_english":"detection","test_options":["detection","diaper","dispatch"]}

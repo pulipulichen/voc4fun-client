@@ -1,0 +1,1 @@
+{"word_chinese":"落雷；恐嚇，怒喝","word_english":"thunderbolt","test_options":["thunderbolt","tollbooth","transparency"]}

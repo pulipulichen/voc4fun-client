@@ -1,0 +1,1 @@
+{"word_chinese":"掮客","word_english":"broker","test_options":["broker","bureaucrat","cathedral"]}

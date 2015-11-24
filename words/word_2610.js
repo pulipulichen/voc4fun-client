@@ -1,0 +1,1 @@
+{"word_chinese":"長釘","word_english":"spike","test_options":["spike","stability","still"]}

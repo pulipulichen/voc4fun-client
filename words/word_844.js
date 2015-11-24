@@ -1,0 +1,1 @@
+{"word_chinese":"不舒適，不方便","word_english":"discomfort","test_options":["discomfort","displease","doubtless"]}

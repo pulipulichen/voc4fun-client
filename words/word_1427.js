@@ -1,0 +1,1 @@
+{"word_chinese":"棒球、板球的)一局;當權時期","word_english":"inning(","test_options":["inning(","insufficient","involvement"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"春季，水源，跳躍","word_english":"spring","test_options":["spring","stand-up","strangle"]}

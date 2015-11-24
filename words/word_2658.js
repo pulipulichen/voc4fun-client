@@ -1,0 +1,1 @@
+{"word_chinese":"身材；才幹","word_english":"stature","test_options":["stature","straighten","substitution"]}

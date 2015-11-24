@@ -1,0 +1,1 @@
+{"word_chinese":"獨特的;鑒別性的","word_english":"distinctive","test_options":["distinctive","domain","educated"]}

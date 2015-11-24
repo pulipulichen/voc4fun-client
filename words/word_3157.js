@@ -1,0 +1,1 @@
+{"word_chinese":"崇拜，敬仰","word_english":"worship","test_options":["worship","zip","witty"]}

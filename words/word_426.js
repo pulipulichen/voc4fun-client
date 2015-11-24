@@ -1,0 +1,1 @@
+{"word_chinese":"位於中心的","word_english":"centered","test_options":["centered","chatter","clover"]}

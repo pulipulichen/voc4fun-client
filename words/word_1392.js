@@ -1,0 +1,1 @@
+{"word_chinese":"不明確的","word_english":"indefinite","test_options":["indefinite","inflict","intake"]}

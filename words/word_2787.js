@@ -1,0 +1,1 @@
+{"word_chinese":"不好吃的，乏味的tattoo紋身","word_english":"tasteless","test_options":["tasteless","terminate","throb"]}

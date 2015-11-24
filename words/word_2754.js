@@ -1,0 +1,1 @@
+{"word_chinese":"交換","word_english":"swap","test_options":["swap","tactics","terrified"]}

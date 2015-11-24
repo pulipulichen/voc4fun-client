@@ -1,0 +1,1 @@
+{"word_chinese":"野蠻的；未開化的","word_english":"savage","test_options":["savage","seam","serviceman"]}

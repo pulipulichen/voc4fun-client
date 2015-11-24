@@ -1,0 +1,1 @@
+{"word_chinese":"戰爭的;好戰的","word_english":"martial","test_options":["martial","meditation","mistaken"]}

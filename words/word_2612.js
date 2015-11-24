@@ -1,0 +1,1 @@
+{"word_chinese":"螺旋形的","word_english":"spiral","test_options":["spiral","stack","stimulation"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"鬼鬼祟祟地蕩來蕩去","word_english":"prowl","test_options":["prowl","quake","rap"]}

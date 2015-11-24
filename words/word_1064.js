@@ -1,0 +1,1 @@
+{"word_chinese":"引渡(外國的罪犯)","word_english":"extradite","test_options":["extradite","fascination","flicker"]}

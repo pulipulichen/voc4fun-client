@@ -1,0 +1,1 @@
+{"word_chinese":"豁免(義務等);發放(施捨物等)","word_english":"dispense","test_options":["dispense","distress","duplicate"]}

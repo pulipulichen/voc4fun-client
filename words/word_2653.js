@@ -1,0 +1,1 @@
+{"word_chinese":"不動的，靜止的","word_english":"stationary","test_options":["stationary","stimulus","subsidiary"]}

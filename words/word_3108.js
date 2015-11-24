@@ -1,0 +1,1 @@
+{"word_chinese":"保證(書)","word_english":"warranty","test_options":["warranty","wheelchair","yarn"]}

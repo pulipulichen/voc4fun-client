@@ -1,0 +1,1 @@
+{"word_chinese":"持異議;異議","word_english":"dissent","test_options":["dissent","dividend","ecological"]}

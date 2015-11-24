@@ -1,0 +1,1 @@
+{"word_chinese":"拳擊","word_english":"boxing","test_options":["boxing","brisk","campaigner"]}

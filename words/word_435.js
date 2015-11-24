@@ -1,0 +1,1 @@
+{"word_chinese":"讚揚","word_english":"chant","test_options":["chant","chirp(","cocoon"]}

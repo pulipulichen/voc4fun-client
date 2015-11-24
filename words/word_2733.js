@@ -1,0 +1,1 @@
+{"word_chinese":"超級大國","word_english":"superpower","test_options":["superpower","swallow","taxpayer"]}

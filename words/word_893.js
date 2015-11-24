@@ -1,0 +1,1 @@
+{"word_chinese":"躲開","word_english":"dodge","test_options":["dodge","dressed","embarrassment"]}

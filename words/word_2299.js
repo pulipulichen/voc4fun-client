@@ -1,0 +1,1 @@
+{"word_chinese":"再播放","word_english":"replay","test_options":["replay","resort","ridicule"]}

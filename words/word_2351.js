@@ -1,0 +1,1 @@
+{"word_chinese":"繞轉；運行","word_english":"revolve","test_options":["revolve","risky","sanctuary"]}

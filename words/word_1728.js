@@ -1,0 +1,1 @@
+{"word_chinese":"金錢的","word_english":"monetary","test_options":["monetary","mount","neon"]}

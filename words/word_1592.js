@@ -1,0 +1,1 @@
+{"word_chinese":"蜥蜴","word_english":"lizard","test_options":["lizard","loot","marked"]}

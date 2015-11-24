@@ -1,0 +1,1 @@
+{"word_chinese":"分期付款中的每期應付款","word_english":"installment","test_options":["installment","inter-","jack"]}

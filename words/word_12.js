@@ -1,0 +1,1 @@
+{"word_chinese":"突然的;陡峭的","word_english":"abrupt","test_options":["abrupt","ace","aesthetics"]}

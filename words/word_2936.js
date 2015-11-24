@@ -1,0 +1,1 @@
+{"word_chinese":"快步走過","word_english":"trot","test_options":["trot","typically","unleash"]}

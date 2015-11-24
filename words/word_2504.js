@@ -1,0 +1,1 @@
+{"word_chinese":"短期的","word_english":"short-term","test_options":["short-term","simulate","snore"]}

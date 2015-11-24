@@ -1,0 +1,1 @@
+{"word_chinese":"啄起","word_english":"peck","test_options":["peck","periodic","piss"]}

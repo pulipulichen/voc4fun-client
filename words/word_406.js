@@ -1,0 +1,1 @@
+{"word_chinese":"世襲的)階級","word_english":"caste(","test_options":["caste(","census","cite"]}

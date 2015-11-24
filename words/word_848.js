@@ -1,0 +1,1 @@
+{"word_chinese":"分離的;不連續的","word_english":"discrete","test_options":["discrete","disposition","drape"]}

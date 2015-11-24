@@ -1,0 +1,1 @@
+{"word_chinese":"追蹤;接著的","word_english":"follow-up","test_options":["follow-up","fracture","generate"]}

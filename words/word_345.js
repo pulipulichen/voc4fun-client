@@ -1,0 +1,1 @@
+{"word_chinese":"易碎的","word_english":"brittle","test_options":["brittle","build-up","cashier"]}

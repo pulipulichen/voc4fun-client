@@ -1,0 +1,1 @@
+{"word_chinese":"有特權的","word_english":"privileged","test_options":["privileged","prolonged","purify"]}

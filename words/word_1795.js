@@ -1,0 +1,1 @@
+{"word_chinese":"五分鎳幣","word_english":"nickel","test_options":["nickel","notorious","openly"]}

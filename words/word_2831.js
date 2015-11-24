@@ -1,0 +1,1 @@
+{"word_chinese":"溫度計","word_english":"thermometer","test_options":["thermometer","thunderbolt","traitorous"]}

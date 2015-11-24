@@ -1,0 +1,1 @@
+{"word_chinese":"使告終","word_english":"culminate","test_options":["culminate","daybreak","denial"]}

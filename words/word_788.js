@@ -1,0 +1,1 @@
+{"word_chinese":"下降;下坡","word_english":"descent","test_options":["descent","developed","discrepancy"]}

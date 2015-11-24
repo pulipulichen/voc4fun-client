@@ -1,0 +1,1 @@
+{"word_chinese":"傳染性的","word_english":"contagious","test_options":["contagious","controller","councilor"]}

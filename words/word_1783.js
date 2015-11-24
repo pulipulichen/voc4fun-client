@@ -1,0 +1,1 @@
+{"word_chinese":"領帶","word_english":"necktie","test_options":["necktie","nomination","octopus"]}

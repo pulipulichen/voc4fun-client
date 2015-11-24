@@ -1,0 +1,1 @@
+{"word_chinese":"懇摯的","word_english":"cordial","test_options":["cordial","cosmopolitan","crude"]}

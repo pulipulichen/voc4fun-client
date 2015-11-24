@@ -1,0 +1,1 @@
+{"word_chinese":"閃閃發光","word_english":"glitter","test_options":["glitter","grassy","harmless"]}

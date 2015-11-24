@@ -1,0 +1,1 @@
+{"word_chinese":"重新","word_english":"newly","test_options":["newly","notably","offspring"]}

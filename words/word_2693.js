@@ -1,0 +1,1 @@
+{"word_chinese":"被困住的","word_english":"stuck","test_options":["stuck","subsidiary","swallow"]}

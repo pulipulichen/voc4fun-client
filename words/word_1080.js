@@ -1,0 +1,1 @@
+{"word_chinese":"熟悉","word_english":"familiarity","test_options":["familiarity","fianc","forbidden"]}

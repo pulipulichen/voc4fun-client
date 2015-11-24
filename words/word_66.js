@@ -1,0 +1,1 @@
+{"word_chinese":"忠告的","word_english":"advisory","test_options":["advisory","agricultural","analogy"]}

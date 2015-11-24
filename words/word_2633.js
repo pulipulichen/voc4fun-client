@@ -1,0 +1,1 @@
+{"word_chinese":"搖晃的；令人吃驚的","word_english":"staggering","test_options":["staggering","static","structural"]}

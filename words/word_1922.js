@@ -1,0 +1,1 @@
+{"word_chinese":"棋盤等式的)長方格","word_english":"pane(","test_options":["pane(","pastime","persevere"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"一飲;匯票；付款通知","word_english":"draught","test_options":["draught","eclipse","encyclopedia"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"蒸發","word_english":"evaporation","test_options":["evaporation","exempt","falter"]}

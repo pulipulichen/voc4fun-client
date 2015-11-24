@@ -1,0 +1,1 @@
+{"word_chinese":"標槍","word_english":"dart","test_options":["dart","deduction","destined"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"偷獵","word_english":"poach","test_options":["poach","post-war","presume"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"意志薄弱的","word_english":"frail","test_options":["frail","fundamentalist","gnaw"]}

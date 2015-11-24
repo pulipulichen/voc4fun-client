@@ -1,0 +1,1 @@
+{"word_chinese":"唯物主義","word_english":"materialism","test_options":["materialism","merge","modify"]}

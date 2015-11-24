@@ -1,0 +1,1 @@
+{"word_chinese":"枯燥的","word_english":"dreary","test_options":["dreary","ecology","endless"]}

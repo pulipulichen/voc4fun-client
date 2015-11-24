@@ -1,0 +1,1 @@
+{"word_chinese":"誇大的","word_english":"exaggerated","test_options":["exaggerated","exotic","fascination"]}

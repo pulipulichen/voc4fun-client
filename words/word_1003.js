@@ -1,0 +1,1 @@
+{"word_chinese":"噴發","word_english":"eruption","test_options":["eruption","evidently","extract"]}

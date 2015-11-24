@@ -1,0 +1,1 @@
+{"word_chinese":"儀式，典禮","word_english":"rite","test_options":["rite","rugged","scrap"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"破壞物的)碎片","word_english":"debris(","test_options":["debris(","defiance","deteriorate"]}

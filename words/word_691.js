@@ -1,0 +1,1 @@
+{"word_chinese":"創造力","word_english":"creativity","test_options":["creativity","crumble","dedicate"]}

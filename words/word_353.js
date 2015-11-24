@@ -1,0 +1,1 @@
+{"word_chinese":"青銅","word_english":"bronze","test_options":["bronze","burial","caution"]}

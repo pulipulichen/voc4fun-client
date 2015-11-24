@@ -1,0 +1,1 @@
+{"word_chinese":"頭腦清楚的；精神健全的","word_english":"sane","test_options":["sane","screwdriver","serenity"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"理想地","word_english":"ideally","test_options":["ideally","imprisonment","ingenious"]}

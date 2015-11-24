@@ -1,0 +1,1 @@
+{"word_chinese":"前輩","word_english":"predecessor","test_options":["predecessor","preside","promptly"]}

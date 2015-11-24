@@ -1,0 +1,1 @@
+{"word_chinese":"局外人","word_english":"outsider","test_options":["outsider","pact","peddler"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"外部的","word_english":"exterior","test_options":["exterior","Fahrenheit","flank"]}

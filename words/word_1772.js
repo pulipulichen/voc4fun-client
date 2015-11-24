@@ -1,0 +1,1 @@
+{"word_chinese":"敘述，講(故事)","word_english":"narrate","test_options":["narrate","newscast","obligation"]}

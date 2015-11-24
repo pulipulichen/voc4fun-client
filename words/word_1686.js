@@ -1,0 +1,1 @@
+{"word_chinese":"隱喻","word_english":"metaphor","test_options":["metaphor","minimize","motto"]}

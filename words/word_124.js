@@ -1,0 +1,1 @@
+{"word_chinese":"擴大","word_english":"amplify","test_options":["amplify","anymore","associated"]}

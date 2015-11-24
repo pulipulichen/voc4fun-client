@@ -1,0 +1,1 @@
+{"word_chinese":"大浪","word_english":"surge","test_options":["surge","symposium","temptation"]}

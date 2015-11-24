@@ -1,0 +1,1 @@
+{"word_chinese":"踉蹌;結巴","word_english":"falter","test_options":["falter","fertility","footstep"]}

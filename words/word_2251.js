@@ -1,0 +1,1 @@
+{"word_chinese":"改革者","word_english":"reformer","test_options":["reformer","relaxed","reserved"]}

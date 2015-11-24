@@ -1,0 +1,1 @@
+{"word_chinese":"拔河(遊戲)；激戰","word_english":"tug-of-war","test_options":["tug-of-war","unacceptable","unprecedented"]}

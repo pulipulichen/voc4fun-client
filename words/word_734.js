@@ -1,0 +1,1 @@
+{"word_chinese":"膽大的","word_english":"daring","test_options":["daring","deduct","despise"]}

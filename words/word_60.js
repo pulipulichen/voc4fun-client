@@ -1,0 +1,1 @@
+{"word_chinese":"副詞","word_english":"adverb","test_options":["adverb","aggregate","amiable"]}

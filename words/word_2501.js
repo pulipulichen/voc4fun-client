@@ -1,0 +1,1 @@
+{"word_chinese":"使人震驚的","word_english":"shocking","test_options":["shocking","silkworm","snatch"]}

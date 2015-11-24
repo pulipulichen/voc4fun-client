@@ -1,0 +1,1 @@
+{"word_chinese":"歧視","word_english":"discrimination","test_options":["discrimination","dissent","drawback"]}

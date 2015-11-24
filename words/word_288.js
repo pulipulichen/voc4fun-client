@@ -1,0 +1,1 @@
+{"word_chinese":"雪暴","word_english":"blizzard","test_options":["blizzard","bonus","broadcasting"]}

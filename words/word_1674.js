@@ -1,0 +1,1 @@
+{"word_chinese":"冥想","word_english":"meditation","test_options":["meditation","migration","moody"]}

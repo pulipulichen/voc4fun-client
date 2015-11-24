@@ -1,0 +1,1 @@
+{"word_chinese":"不可抗拒的","word_english":"irresistible","test_options":["irresistible","jockey(","legislator"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"景色畫似的","word_english":"picturesque","test_options":["picturesque","playwright","precisely"]}

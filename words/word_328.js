@@ -1,0 +1,1 @@
+{"word_chinese":"托架","word_english":"bracket","test_options":["bracket","broadcasting","capsule"]}

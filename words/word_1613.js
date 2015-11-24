@@ -1,0 +1,1 @@
+{"word_chinese":"彩票","word_english":"lottery","test_options":["lottery","magnitude","medieval"]}

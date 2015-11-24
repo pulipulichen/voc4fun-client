@@ -1,0 +1,1 @@
+{"word_chinese":"變)鎮定，(變)安定","word_english":"tranquilize(","test_options":["tranquilize(","traverse","twilight"]}

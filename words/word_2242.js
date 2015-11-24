@@ -1,0 +1,1 @@
+{"word_chinese":"思想等)重新浮現在心上","word_english":"recur(","test_options":["recur(","regiment","repress"]}

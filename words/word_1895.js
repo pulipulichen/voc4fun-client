@@ -1,0 +1,1 @@
+{"word_chinese":"徹底地;明白的","word_english":"outright","test_options":["outright","packed","peck"]}

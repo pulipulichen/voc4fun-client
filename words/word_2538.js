@@ -1,0 +1,1 @@
+{"word_chinese":"猛打","word_english":"slam","test_options":["slam","smuggle","specially"]}

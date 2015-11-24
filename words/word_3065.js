@@ -1,0 +1,1 @@
+{"word_chinese":"副總統；副會長","word_english":"vice-president","test_options":["vice-president","vitality","well-being"]}

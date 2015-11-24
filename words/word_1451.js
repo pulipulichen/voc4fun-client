@@ -1,0 +1,1 @@
+{"word_chinese":"攝入量;被收納的東西","word_english":"intake","test_options":["intake","intimacy","jobless"]}

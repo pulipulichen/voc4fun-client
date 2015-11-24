@@ -1,0 +1,1 @@
+{"word_chinese":"先令","word_english":"shilling","test_options":["shilling","side-effect","smash"]}

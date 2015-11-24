@@ -1,0 +1,1 @@
+{"word_chinese":"腐敗的","word_english":"corrupt","test_options":["corrupt","covering","curfew"]}

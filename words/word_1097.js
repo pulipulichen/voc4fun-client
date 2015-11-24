@@ -1,0 +1,1 @@
+{"word_chinese":"爭取女權運動的人","word_english":"feminist","test_options":["feminist","flake","fragile"]}

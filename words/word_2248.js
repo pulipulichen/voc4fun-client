@@ -1,0 +1,1 @@
+{"word_chinese":"公民表決","word_english":"referendum)","test_options":["referendum)","rejection","resemblance"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"秘書長","word_english":"secretary-general","test_options":["secretary-general","sentiment","short-term"]}

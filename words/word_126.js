@@ -1,0 +1,1 @@
+{"word_chinese":"分析的","word_english":"analytical","test_options":["analytical","appall","assumption"]}

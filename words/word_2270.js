@@ -1,0 +1,1 @@
+{"word_chinese":"放鬆的;隨意的","word_english":"relaxed","test_options":["relaxed","rental","resultant"]}

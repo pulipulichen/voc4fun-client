@@ -1,0 +1,1 @@
+{"word_chinese":"空調設備","word_english":"air-conditioner","test_options":["air-conditioner","alloy","apparatus"]}

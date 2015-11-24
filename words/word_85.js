@@ -1,0 +1,1 @@
+{"word_chinese":"農業的","word_english":"agricultural","test_options":["agricultural","allied","apartheid"]}

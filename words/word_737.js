@@ -1,0 +1,1 @@
+{"word_chinese":"日常的","word_english":"day-to-day","test_options":["day-to-day","deepen","detach"]}

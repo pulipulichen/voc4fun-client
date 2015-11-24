@@ -1,0 +1,1 @@
+{"word_chinese":"具破壞性的","word_english":"devastating","test_options":["devastating","dilute","disposal"]}

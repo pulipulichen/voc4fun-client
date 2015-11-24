@@ -1,0 +1,1 @@
+{"word_chinese":"模擬兩可","word_english":"ambiguity","test_options":["ambiguity","annoyance","artillery"]}

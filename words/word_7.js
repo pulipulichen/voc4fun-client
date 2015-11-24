@@ -1,0 +1,1 @@
+{"word_chinese":"廢除","word_english":"abolish","test_options":["abolish","accounting","advisory"]}

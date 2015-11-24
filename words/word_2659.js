@@ -1,0 +1,1 @@
+{"word_chinese":"法令的","word_english":"statutory","test_options":["statutory","straightforward","subtle"]}

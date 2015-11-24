@@ -1,0 +1,1 @@
+{"word_chinese":"拚命吃;峽谷","word_english":"gorge","test_options":["gorge","groove","hazardous"]}

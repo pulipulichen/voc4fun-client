@@ -1,0 +1,1 @@
+{"word_chinese":"縫工；成衣師。","word_english":"sewer","test_options":["sewer","shooting","slaughter"]}

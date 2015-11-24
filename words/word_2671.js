@@ -1,0 +1,1 @@
+{"word_chinese":"刺激(作用)，激勵","word_english":"stimulation","test_options":["stimulation","stripe","superficial"]}

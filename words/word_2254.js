@@ -1,0 +1,1 @@
+{"word_chinese":"提神物;點心","word_english":"refreshment","test_options":["refreshment","relentless","residential"]}

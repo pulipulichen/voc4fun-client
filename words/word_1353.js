@@ -1,0 +1,1 @@
+{"word_chinese":"歇斯底里的","word_english":"hysterical","test_options":["hysterical","imprison","infrastructure"]}

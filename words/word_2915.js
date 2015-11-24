@@ -1,0 +1,1 @@
+{"word_chinese":"踩，踏","word_english":"tread","test_options":["tread","trophy","undergo"]}

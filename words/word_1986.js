@@ -1,0 +1,1 @@
+{"word_chinese":"附屬;適合","word_english":"pertain","test_options":["pertain","pierce","porch"]}

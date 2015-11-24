@@ -1,0 +1,1 @@
+{"word_chinese":"指示物","word_english":"indicator","test_options":["indicator","ingenuity","integration"]}

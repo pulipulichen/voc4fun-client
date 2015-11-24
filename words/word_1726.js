@@ -1,0 +1,1 @@
+{"word_chinese":"帝王","word_english":"monarch","test_options":["monarch","motto","negotiator"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"洋芫荽","word_english":"parsley","test_options":["parsley","patronage","petition"]}

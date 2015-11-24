@@ -1,0 +1,1 @@
+{"word_chinese":"小組，小隊","word_english":"squad","test_options":["squad","stapler","stray"]}

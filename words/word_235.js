@@ -1,0 +1,1 @@
+{"word_chinese":"宴會","word_english":"banquet","test_options":["banquet","bearing","blunder"]}

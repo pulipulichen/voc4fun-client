@@ -1,0 +1,1 @@
+{"word_chinese":"紀念柱","word_english":"pillar","test_options":["pillar","plow","predominant"]}

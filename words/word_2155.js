@@ -1,0 +1,1 @@
+{"word_chinese":"精神病學","word_english":"psychiatry","test_options":["psychiatry","quantum","rating"]}

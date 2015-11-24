@@ -1,0 +1,1 @@
+{"word_chinese":"碼頭","word_english":"wharf","test_options":["wharf","withdrawal","way-out"]}

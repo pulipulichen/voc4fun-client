@@ -1,0 +1,1 @@
+{"word_chinese":"堅持的","word_english":"insistent","test_options":["insistent","intellect","irritate"]}

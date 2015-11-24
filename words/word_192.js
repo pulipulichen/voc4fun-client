@@ -1,0 +1,1 @@
+{"word_chinese":"體育(運動)","word_english":"athletics","test_options":["athletics","automation","batter"]}

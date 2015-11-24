@@ -1,0 +1,1 @@
+{"word_chinese":"被嚇壞的","word_english":"terrified","test_options":["terrified","thermos","topical"]}

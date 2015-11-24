@@ -1,0 +1,1 @@
+{"word_chinese":"暴躁的；棘手的；過分敏感的；","word_english":"touchy","test_options":["touchy","transcendent","truant"]}

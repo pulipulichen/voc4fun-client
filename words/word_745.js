@@ -1,0 +1,1 @@
+{"word_chinese":"莊重的","word_english":"decent","test_options":["decent","deficiency","devalue"]}

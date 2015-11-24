@@ -1,0 +1,1 @@
+{"word_chinese":"拍賣","word_english":"auction","test_options":["auction","bachelor","belongings"]}

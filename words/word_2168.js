@@ -1,0 +1,1 @@
+{"word_chinese":"嘎嘎〔鴨叫聲〕","word_english":"quack","test_options":["quack","quota","rebellious"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"雪橇","word_english":"sled","test_options":["sled","snore","spectacle"]}

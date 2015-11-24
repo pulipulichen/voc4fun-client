@@ -1,0 +1,1 @@
+{"word_chinese":"袖珍本","word_english":"pocketbook","test_options":["pocketbook","potent","pretext"]}

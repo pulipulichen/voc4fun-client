@@ -1,0 +1,1 @@
+{"word_chinese":"老手","word_english":"veteran","test_options":["veteran","villain","way-out"]}

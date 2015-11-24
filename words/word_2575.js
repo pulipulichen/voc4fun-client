@@ -1,0 +1,1 @@
+{"word_chinese":"使軟化","word_english":"soften","test_options":["soften","spatial","stain"]}

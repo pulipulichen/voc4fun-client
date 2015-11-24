@@ -1,0 +1,1 @@
+{"word_chinese":"把船)繫住","word_english":"moor(","test_options":["moor(","mower","nibble"]}

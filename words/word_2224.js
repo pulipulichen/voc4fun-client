@@ -1,0 +1,1 @@
+{"word_chinese":"採收","word_english":"reap","test_options":["reap","redundancy","reminiscent"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"引起驚慌的","word_english":"alarming","test_options":["alarming","alternatively","apprehension"]}

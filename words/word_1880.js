@@ -1,0 +1,1 @@
+{"word_chinese":"裝飾","word_english":"ornament","test_options":["ornament","overdo","passionate"]}

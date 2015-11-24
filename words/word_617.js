@@ -1,0 +1,1 @@
+{"word_chinese":"鬥爭","word_english":"contention","test_options":["contention","convertible","coup"]}

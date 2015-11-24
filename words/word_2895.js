@@ -1,0 +1,1 @@
+{"word_chinese":"鎮靜劑","word_english":"tranquilizer","test_options":["tranquilizer","treacherous","two-thirds"]}

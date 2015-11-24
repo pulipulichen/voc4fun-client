@@ -1,0 +1,1 @@
+{"word_chinese":"油酥麵皮","word_english":"pastry","test_options":["pastry","pendulum","pickpocket"]}

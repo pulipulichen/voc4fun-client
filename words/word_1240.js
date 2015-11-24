@@ -1,0 +1,1 @@
+{"word_chinese":"冷酷的;堅強的","word_english":"grim","test_options":["grim","gypsy","hemisphere"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"遵照","word_english":"conform","test_options":["conform","conspiracy","convinced"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"山脊","word_english":"ridge","test_options":["ridge","robin","satisfying"]}

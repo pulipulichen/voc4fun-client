@@ -1,0 +1,1 @@
+{"word_chinese":"數量上勝過","word_english":"outnumber","test_options":["outnumber","oyster","pavement"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"量的","word_english":"quantitative","test_options":["quantitative","rack","reclaim"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"門階","word_english":"doorstep","test_options":["doorstep","duplicate","emigrate"]}

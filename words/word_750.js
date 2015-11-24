@@ -1,0 +1,1 @@
+{"word_chinese":"奉獻","word_english":"dedicate","test_options":["dedicate","degenerate","developing"]}

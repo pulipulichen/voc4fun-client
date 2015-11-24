@@ -1,0 +1,1 @@
+{"word_chinese":"引起興趣的","word_english":"intriguing","test_options":["intriguing","irrigation","lash"]}

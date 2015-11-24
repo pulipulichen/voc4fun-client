@@ -1,0 +1,1 @@
+{"word_chinese":"幸福，福利","word_english":"well-being","test_options":["well-being","winning","watt"]}

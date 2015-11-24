@@ -1,0 +1,1 @@
+{"word_chinese":"心理(現象)的","word_english":"psychic","test_options":["psychic","quarrelsome","ratio"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"座右銘","word_english":"motto","test_options":["motto","mutter","non-violent"]}

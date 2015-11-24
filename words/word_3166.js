@@ -1,0 +1,1 @@
+{"word_chinese":"遊艇","word_english":"yacht","test_options":["yacht","witty","worsen"]}

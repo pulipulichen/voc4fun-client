@@ -1,0 +1,1 @@
+{"word_chinese":"寬敞的","word_english":"spacious","test_options":["spacious","spine","statesman"]}

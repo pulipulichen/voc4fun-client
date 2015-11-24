@@ -1,0 +1,1 @@
+{"word_chinese":"拳擊家","word_english":"boxer","test_options":["boxer","brink","calorie"]}

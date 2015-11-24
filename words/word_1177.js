@@ -1,0 +1,1 @@
+{"word_chinese":"原教旨主義","word_english":"fundamentalism","test_options":["fundamentalism","generator","graze"]}

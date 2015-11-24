@@ -1,0 +1,1 @@
+{"word_chinese":"亂砍","word_english":"slash","test_options":["slash","snarl","specifically"]}

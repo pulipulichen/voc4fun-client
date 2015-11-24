@@ -1,0 +1,1 @@
+{"word_chinese":"累積","word_english":"accumulate","test_options":["accumulate","adhere","AI"]}

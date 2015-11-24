@@ -1,0 +1,1 @@
+{"word_chinese":"通知;布告","word_english":"notify","test_options":["notify","obligation","orient"]}

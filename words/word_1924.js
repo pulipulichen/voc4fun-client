@@ -1,0 +1,1 @@
+{"word_chinese":"與票面價值相等的","word_english":"par","test_options":["par","pasture","persistent"]}

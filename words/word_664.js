@@ -1,0 +1,1 @@
+{"word_chinese":"化妝品","word_english":"cosmetic","test_options":["cosmetic","cowardly","curriculum"]}

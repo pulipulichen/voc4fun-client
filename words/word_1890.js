@@ -1,0 +1,1 @@
+{"word_chinese":"出口","word_english":"outlet","test_options":["outlet","overwork","patron"]}

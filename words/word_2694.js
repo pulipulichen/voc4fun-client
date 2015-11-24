@@ -1,0 +1,1 @@
+{"word_chinese":"絆倒；說不出話來","word_english":"stumble","test_options":["stumble","subsidize","swamp"]}

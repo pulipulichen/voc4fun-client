@@ -1,0 +1,1 @@
+{"word_chinese":"宣傳","word_english":"propaganda","test_options":["propaganda","provisional","quota"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"冷淡;不關心indifferent不關心的","word_english":"indifference","test_options":["indifference","inherent","intellect"]}

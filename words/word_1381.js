@@ -1,0 +1,1 @@
+{"word_chinese":"鼓勵性質的;誘因","word_english":"incentive","test_options":["incentive","indirect","installation"]}

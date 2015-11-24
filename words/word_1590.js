@@ -1,0 +1,1 @@
+{"word_chinese":"家畜","word_english":"livestock","test_options":["livestock","long-time","marginal"]}

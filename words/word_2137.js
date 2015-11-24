@@ -1,0 +1,1 @@
+{"word_chinese":"執行，貫徹","word_english":"prosecution","test_options":["prosecution","psychic","radioactive"]}

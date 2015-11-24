@@ -1,0 +1,1 @@
+{"word_chinese":"飛機上的)座艙","word_english":"cockpit(","test_options":["cockpit(","comeback","composite"]}

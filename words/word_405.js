@@ -1,0 +1,1 @@
+{"word_chinese":"可跳舞賭博的夜總會","word_english":"casino","test_options":["casino","cemetery","circumference"]}

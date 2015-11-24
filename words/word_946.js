@@ -1,0 +1,1 @@
+{"word_chinese":"適任的","word_english":"eligible","test_options":["eligible","enact","escort"]}

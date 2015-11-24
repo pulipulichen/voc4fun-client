@@ -1,0 +1,1 @@
+{"word_chinese":"復興","word_english":"renaissance","test_options":["renaissance","reproduction","revelation"]}

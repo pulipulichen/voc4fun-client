@@ -1,0 +1,1 @@
+{"word_chinese":"股份持有者","word_english":"shareholder","test_options":["shareholder","shrewd","slit"]}

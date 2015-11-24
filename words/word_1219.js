@@ -1,0 +1,1 @@
+{"word_chinese":"有冒險精神的","word_english":"go-ahead","test_options":["go-ahead","greed","hasten"]}

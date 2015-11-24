@@ -1,0 +1,1 @@
+{"word_chinese":"神聖的","word_english":"sacred","test_options":["sacred","saturate","semi-final"]}

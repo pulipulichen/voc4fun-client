@@ -1,0 +1,1 @@
+{"word_chinese":"轉化(v.)","word_english":"convert","test_options":["convert","corps","credible"]}

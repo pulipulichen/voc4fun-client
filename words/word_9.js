@@ -1,0 +1,1 @@
+{"word_chinese":"原住民","word_english":"aborigine","test_options":["aborigine","accumulation","aerial"]}

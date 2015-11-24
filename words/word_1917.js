@@ -1,0 +1,1 @@
+{"word_chinese":"槳狀物;腳踏板","word_english":"paddle","test_options":["paddle","partly","permeate"]}

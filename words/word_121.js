@@ -1,0 +1,1 @@
+{"word_chinese":"軍需品","word_english":"ammunition","test_options":["ammunition","anticipation","assessment"]}

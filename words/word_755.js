@@ -1,0 +1,1 @@
+{"word_chinese":"想，以為","word_english":"deem","test_options":["deem","demise","diagnose"]}

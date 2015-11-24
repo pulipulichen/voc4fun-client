@@ -1,0 +1,1 @@
+{"word_chinese":"建築上的","word_english":"architectural","test_options":["architectural","assess","awesome"]}

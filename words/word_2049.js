@@ -1,0 +1,1 @@
+{"word_chinese":"姿勢;心境","word_english":"posture","test_options":["posture","predominantly","proceeding"]}

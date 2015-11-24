@@ -1,0 +1,1 @@
+{"word_chinese":"競爭的","word_english":"competing","test_options":["competing","concede","constituent"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"景象，壯觀，〔pl.〕眼鏡","word_english":"spectacle","test_options":["spectacle","sprawl","stepchild"]}

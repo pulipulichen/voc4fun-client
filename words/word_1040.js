@@ -1,0 +1,1 @@
+{"word_chinese":"發揮(威力等)，使受(影響等)","word_english":"exert","test_options":["exert","external","fiance"]}

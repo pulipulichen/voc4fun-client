@@ -1,0 +1,1 @@
+{"word_chinese":"咆哮","word_english":"blare","test_options":["blare","bolster","brigade"]}

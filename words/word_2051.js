@@ -1,0 +1,1 @@
+{"word_chinese":"有力的;(藥)有效力的","word_english":"potent","test_options":["potent","preference","processor"]}

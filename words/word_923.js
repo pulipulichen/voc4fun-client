@@ -1,0 +1,1 @@
+{"word_chinese":"快死的","word_english":"dying","test_options":["dying","elevate","enthusiast"]}

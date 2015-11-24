@@ -1,0 +1,1 @@
+{"word_chinese":"英國貨幣","word_english":"sterling","test_options":["sterling","strap","successor"]}

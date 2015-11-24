@@ -1,0 +1,1 @@
+{"word_chinese":"核","word_english":"nucleus","test_options":["nucleus","observer","originality"]}

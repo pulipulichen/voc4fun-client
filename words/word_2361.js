@@ -1,0 +1,1 @@
+{"word_chinese":"右翼的","word_english":"right-wing","test_options":["right-wing","rotary","scandal"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"選擇性的","word_english":"selective","test_options":["selective","sergeant","shun"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"對稱的","word_english":"symmetrical","test_options":["symmetrical","tango ","testify"]}

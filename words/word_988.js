@@ -1,0 +1,1 @@
+{"word_chinese":"酵","word_english":"enzyme","test_options":["enzyme","established","expenditure"]}

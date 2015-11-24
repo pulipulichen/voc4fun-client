@@ -1,0 +1,1 @@
+{"word_chinese":"啟動","word_english":"activate","test_options":["activate","adore","alienate"]}

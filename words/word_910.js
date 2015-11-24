@@ -1,0 +1,1 @@
+{"word_chinese":"障礙;弊端;退款","word_english":"drawback","test_options":["drawback","ecological","endeavor"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"毀損","word_english":"mar","test_options":["mar","measurement","mining"]}

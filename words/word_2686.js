@@ -1,0 +1,1 @@
+{"word_chinese":"條紋","word_english":"streak","test_options":["streak","submerge","surgical"]}

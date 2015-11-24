@@ -1,0 +1,1 @@
+{"word_chinese":"繼承","word_english":"succession","test_options":["succession","supplementary","tango "]}

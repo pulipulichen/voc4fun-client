@@ -1,0 +1,1 @@
+{"word_chinese":"壓迫","word_english":"oppress","test_options":["oppress","originality","paddle"]}

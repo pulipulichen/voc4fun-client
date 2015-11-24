@@ -1,0 +1,1 @@
+{"word_chinese":"渴望","word_english":"aspiration","test_options":["aspiration","atrocity","banner"]}

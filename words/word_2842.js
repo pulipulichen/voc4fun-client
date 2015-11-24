@@ -1,0 +1,1 @@
+{"word_chinese":"節約的","word_english":"thrifty","test_options":["thrifty","tint","transcription"]}

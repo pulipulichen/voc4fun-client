@@ -1,0 +1,1 @@
+{"word_chinese":"核心","word_english":"core","test_options":["core","councilor","cruiser"]}

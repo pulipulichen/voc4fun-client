@@ -1,0 +1,1 @@
+{"word_chinese":"蝗蟲","word_english":"locust","test_options":["locust","lucrative","mash"]}

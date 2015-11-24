@@ -1,0 +1,1 @@
+{"word_chinese":"生活方式","word_english":"lifestyle","test_options":["lifestyle","livestock","magistrate"]}

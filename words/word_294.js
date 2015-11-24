@@ -1,0 +1,1 @@
+{"word_chinese":"大錯","word_english":"blunder","test_options":["blunder","borough","bronze"]}

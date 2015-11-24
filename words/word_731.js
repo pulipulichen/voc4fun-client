@@ -1,0 +1,1 @@
+{"word_chinese":"婦女","word_english":"dame","test_options":["dame","dedicate","descriptive"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"橫越；通過","word_english":"traverse","test_options":["traverse","trivial","uncover"]}

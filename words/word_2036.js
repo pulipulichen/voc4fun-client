@@ -1,0 +1,1 @@
+{"word_chinese":"用手指、棍子等)戳;撥，添(火等)","word_english":"poke(","test_options":["poke(","prairie","preventive"]}

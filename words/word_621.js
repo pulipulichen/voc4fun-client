@@ -1,0 +1,1 @@
+{"word_chinese":"連續(性)","word_english":"continuity","test_options":["continuity","convincing","coverage"]}

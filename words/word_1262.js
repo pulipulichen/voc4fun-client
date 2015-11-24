@@ -1,0 +1,1 @@
+{"word_chinese":"駭客","word_english":"hacker","test_options":["hacker","haunt","hometown"]}

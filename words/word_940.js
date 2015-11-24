@@ -1,0 +1,1 @@
+{"word_chinese":"選民(全體)","word_english":"electorate","test_options":["electorate","emigrate","erosion"]}

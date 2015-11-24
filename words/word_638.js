@@ -1,0 +1,1 @@
+{"word_chinese":"定罪","word_english":"conviction","test_options":["conviction","correlate","crib"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"招致","word_english":"incur","test_options":["incur","infinite","intact"]}

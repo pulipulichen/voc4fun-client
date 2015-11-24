@@ -1,0 +1,1 @@
+{"word_chinese":"能力","word_english":"competence","test_options":["competence","comrade","constable"]}

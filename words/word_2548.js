@@ -1,0 +1,1 @@
+{"word_chinese":"懶散的；邋遢的","word_english":"sloppy","test_options":["sloppy","soar","speculation"]}

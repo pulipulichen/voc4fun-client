@@ -1,0 +1,1 @@
+{"word_chinese":"認為","word_english":"reckon","test_options":["reckon","reflective","reopen"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"依次排列的","word_english":"tactic","test_options":["tactic","taxation","thermal"]}

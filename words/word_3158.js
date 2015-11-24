@@ -1,0 +1,1 @@
+{"word_chinese":"想要成為某種人物的人","word_english":"would-be","test_options":["would-be","code","woe"]}

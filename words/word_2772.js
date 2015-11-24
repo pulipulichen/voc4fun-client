@@ -1,0 +1,1 @@
+{"word_chinese":"戰術(上)的","word_english":"tactical","test_options":["tactical","tax-free","thermometer"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"防水的","word_english":"watertight","test_options":["watertight","whine","yoga"]}

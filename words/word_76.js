@@ -1,0 +1,1 @@
+{"word_chinese":"餘波","word_english":"aftermath","test_options":["aftermath","alien","antenna"]}

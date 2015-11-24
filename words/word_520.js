@@ -1,0 +1,1 @@
+{"word_chinese":"專員(某些地方或機構的)長官","word_english":"commissioner","test_options":["commissioner","compensate","confined"]}

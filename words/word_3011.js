@@ -1,0 +1,1 @@
+{"word_chinese":"上面，興盛","word_english":"up","test_options":["up","vacancy","victorious"]}

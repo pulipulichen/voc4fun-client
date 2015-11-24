@@ -1,0 +1,1 @@
+{"word_chinese":"周期的","word_english":"periodic","test_options":["periodic","petty","pocketbook"]}

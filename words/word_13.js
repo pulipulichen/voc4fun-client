@@ -1,0 +1,1 @@
+{"word_chinese":"心不在焉的","word_english":"absent-minded","test_options":["absent-minded","acknowledge","affectionate"]}

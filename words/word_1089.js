@@ -1,0 +1,1 @@
+{"word_chinese":"行得通的;適宜的","word_english":"feasible","test_options":["feasible","firefighter","fortnight"]}

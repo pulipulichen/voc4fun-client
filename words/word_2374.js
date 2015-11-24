@@ -1,0 +1,1 @@
+{"word_chinese":"蟑螂 ","word_english":"roach","test_options":["roach","runner-up","script"]}

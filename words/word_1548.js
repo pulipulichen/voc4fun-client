@@ -1,0 +1,1 @@
+{"word_chinese":"遺贈；遺產","word_english":"legacy","test_options":["legacy","lieutenant","longitude"]}

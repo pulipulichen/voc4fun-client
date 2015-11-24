@@ -1,0 +1,1 @@
+{"word_chinese":"分派","word_english":"allocate","test_options":["allocate","analogy","armored"]}

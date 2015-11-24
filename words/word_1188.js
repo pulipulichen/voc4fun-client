@@ -1,0 +1,1 @@
+{"word_chinese":"氣體的;空虛的","word_english":"gaseous","test_options":["gaseous","glamour","grove"]}

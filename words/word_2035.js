@@ -1,0 +1,1 @@
+{"word_chinese":"沈著的;懸空的","word_english":"poised","test_options":["poised","practitioner","prevalent"]}

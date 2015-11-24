@@ -1,0 +1,1 @@
+{"word_chinese":"帶，皮[布、鐵]帶","word_english":"strap","test_options":["strap","stylistic","supportive"]}

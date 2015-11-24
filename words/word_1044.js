@@ -1,0 +1,1 @@
+{"word_chinese":"遠征","word_english":"expedition","test_options":["expedition","extracurricular","filter"]}

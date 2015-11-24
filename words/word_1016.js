@@ -1,0 +1,1 @@
+{"word_chinese":"撤走","word_english":"evacuate","test_options":["evacuate","exclusively","faculty"]}

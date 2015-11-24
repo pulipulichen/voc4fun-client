@@ -1,0 +1,1 @@
+{"word_chinese":"起始於","word_english":"originate","test_options":["originate","outskirts","passing"]}

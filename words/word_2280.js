@@ -1,0 +1,1 @@
+{"word_chinese":"剩餘物","word_english":"remainder","test_options":["remainder","replay","retrieve"]}

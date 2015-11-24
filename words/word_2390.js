@@ -1,0 +1,1 @@
+{"word_chinese":"崎嶇的","word_english":"rugged","test_options":["rugged","salvation","seeming"]}

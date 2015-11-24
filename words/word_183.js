@@ -1,0 +1,1 @@
+{"word_chinese":"聯合的","word_english":"associated","test_options":["associated","attribute","barren"]}

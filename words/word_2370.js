@@ -1,0 +1,1 @@
+{"word_chinese":"冒險的，孤注一擲的","word_english":"risky","test_options":["risky","rugby","scramble"]}

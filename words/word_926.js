@@ -1,0 +1,1 @@
+{"word_chinese":"落潮;衰落","word_english":"ebb","test_options":["ebb","eligibility","environmentalist"]}

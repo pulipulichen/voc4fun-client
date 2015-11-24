@@ -1,0 +1,1 @@
+{"word_chinese":"奇怪的","word_english":"queer","test_options":["queer","rag","rectangular"]}

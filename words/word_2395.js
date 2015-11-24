@@ -1,0 +1,1 @@
+{"word_chinese":"破裂；決裂","word_english":"rupture","test_options":["rupture","sanitation","selective"]}

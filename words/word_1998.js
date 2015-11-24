@@ -1,0 +1,1 @@
+{"word_chinese":"生理的","word_english":"physiological","test_options":["physiological","plantation","precaution"]}

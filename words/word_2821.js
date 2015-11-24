@@ -1,0 +1,1 @@
+{"word_chinese":"聲明，宣言，表明","word_english":"testimony","test_options":["testimony","threshold","tournament"]}

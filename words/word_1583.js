@@ -1,0 +1,1 @@
+{"word_chinese":"語言學家","word_english":"linguist","test_options":["linguist","logo","maneuver"]}

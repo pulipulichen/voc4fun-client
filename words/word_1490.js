@@ -1,0 +1,1 @@
+{"word_chinese":"譏諷","word_english":"irony","test_options":["irony","jingle","legislation"]}

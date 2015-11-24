@@ -1,0 +1,1 @@
+{"word_chinese":"聯盟","word_english":"alliance","test_options":["alliance","amnesty","Arctic"]}

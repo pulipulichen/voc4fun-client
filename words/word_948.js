@@ -1,0 +1,1 @@
+{"word_chinese":"雄辯；口才","word_english":"eloquence","test_options":["eloquence","encouraging","established"]}

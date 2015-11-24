@@ -1,0 +1,1 @@
+{"word_chinese":"三角形地帶;刺破","word_english":"gore","test_options":["gore","grocer","hazard"]}

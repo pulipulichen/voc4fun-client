@@ -1,0 +1,1 @@
+{"word_chinese":"確實","word_english":"truly","test_options":["truly","ultimate","unofficial"]}

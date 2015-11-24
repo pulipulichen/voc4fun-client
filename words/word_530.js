@@ -1,0 +1,1 @@
+{"word_chinese":"同伴情誼","word_english":"companionship","test_options":["companionship","comply","consensus("]}

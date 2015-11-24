@@ -1,0 +1,1 @@
+{"word_chinese":"結核病","word_english":"tuberculosis","test_options":["tuberculosis","ultraviolet","unpleasant"]}

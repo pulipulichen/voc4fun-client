@@ -1,0 +1,1 @@
+{"word_chinese":"蜷著，縮著","word_english":"crouch","test_options":["crouch","curriculum","defiant"]}

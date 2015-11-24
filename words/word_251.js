@@ -1,0 +1,1 @@
+{"word_chinese":"擊球員","word_english":"batter","test_options":["batter","bias","boost"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"不屈不撓","word_english":"perseverance","test_options":["perseverance","physiology","polytechnic"]}

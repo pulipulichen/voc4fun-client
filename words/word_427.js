@@ -1,0 +1,1 @@
+{"word_chinese":"陶器的","word_english":"ceramic","test_options":["ceramic","checkbook","cluster"]}

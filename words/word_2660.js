@@ -1,0 +1,1 @@
+{"word_chinese":"汽船，輪船","word_english":"steamer","test_options":["steamer","strain","subtlety"]}

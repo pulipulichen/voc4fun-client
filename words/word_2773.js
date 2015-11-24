@@ -1,0 +1,1 @@
+{"word_chinese":"戰術","word_english":"tactics","test_options":["tactics","taxpayer","thermos"]}

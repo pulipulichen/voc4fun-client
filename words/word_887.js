@@ -1,0 +1,1 @@
+{"word_chinese":"差異;多樣","word_english":"diversity","test_options":["diversity","drainage","eligible"]}

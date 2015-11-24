@@ -1,0 +1,1 @@
+{"word_chinese":"精緻的","word_english":"exquisite","test_options":["exquisite","fad","flake"]}

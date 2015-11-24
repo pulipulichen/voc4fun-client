@@ -1,0 +1,1 @@
+{"word_chinese":"電壓，伏特數","word_english":"voltage","test_options":["voltage","wary","workforce"]}

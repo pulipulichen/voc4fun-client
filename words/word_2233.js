@@ -1,0 +1,1 @@
+{"word_chinese":"推薦","word_english":"recommendation","test_options":["recommendation","refrain","repatriate"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"拍馬屁(的人)","word_english":"toady","test_options":["toady","toxic","tribal"]}

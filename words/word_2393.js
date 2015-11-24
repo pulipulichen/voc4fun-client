@@ -1,0 +1,1 @@
+{"word_chinese":"第二名","word_english":"runner-up","test_options":["runner-up","sandy","segregated"]}

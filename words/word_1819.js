@@ -1,0 +1,1 @@
+{"word_chinese":"赤裸裸的","word_english":"nude","test_options":["nude","obsess","originally"]}

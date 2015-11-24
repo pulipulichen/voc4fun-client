@@ -1,0 +1,1 @@
+{"word_chinese":"形形色色的","word_english":"diverse","test_options":["diverse","doubtless","elevation"]}

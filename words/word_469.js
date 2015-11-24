@@ -1,0 +1,1 @@
+{"word_chinese":"黨派，小集團","word_english":"clan","test_options":["clan","coalition","commuter"]}

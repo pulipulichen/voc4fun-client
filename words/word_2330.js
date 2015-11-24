@@ -1,0 +1,1 @@
+{"word_chinese":"取回","word_english":"resume","test_options":["resume","revive","rugby"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"最低點","word_english":"nadir","test_options":["nadir","neon","oatmeal"]}

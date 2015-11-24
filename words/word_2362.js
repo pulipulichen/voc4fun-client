@@ -1,0 +1,1 @@
+{"word_chinese":"堅硬的，嚴格的，","word_english":"rigid","test_options":["rigid","rotate","scar"]}

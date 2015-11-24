@@ -1,0 +1,1 @@
+{"word_chinese":"榮譽的","word_english":"honorary","test_options":["honorary","hunch","incidentally"]}

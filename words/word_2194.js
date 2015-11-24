@@ -1,0 +1,1 @@
+{"word_chinese":"發光；輻射","word_english":"radiate","test_options":["radiate","ratify","refreshing"]}

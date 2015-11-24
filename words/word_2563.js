@@ -1,0 +1,1 @@
+{"word_chinese":"鼾聲，打鼾","word_english":"snore","test_options":["snore","solo","sprawl"]}

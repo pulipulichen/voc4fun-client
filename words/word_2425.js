@@ -1,0 +1,1 @@
+{"word_chinese":"風景的","word_english":"scenic","test_options":["scenic","secrecy","sexuality"]}

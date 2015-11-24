@@ -1,0 +1,1 @@
+{"word_chinese":"撫慰","word_english":"soothe","test_options":["soothe","spectacular","staple"]}

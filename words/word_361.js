@@ -1,0 +1,1 @@
+{"word_chinese":"元","word_english":"buck","test_options":["buck","calculated","cellar"]}

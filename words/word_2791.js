@@ -1,0 +1,1 @@
+{"word_chinese":"免稅的","word_english":"tax-free","test_options":["tax-free","terrace","thunderbolt"]}

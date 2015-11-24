@@ -1,0 +1,1 @@
+{"word_chinese":"私刑","word_english":"lynch","test_options":["lynch","manuscript","metallic"]}

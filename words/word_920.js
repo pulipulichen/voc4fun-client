@@ -1,0 +1,1 @@
+{"word_chinese":"侏儒","word_english":"dwarf","test_options":["dwarf","electoral","enrich"]}

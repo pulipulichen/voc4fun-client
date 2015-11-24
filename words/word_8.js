@@ -1,0 +1,1 @@
+{"word_chinese":"原住民的","word_english":"aboriginal","test_options":["aboriginal","accumulate","advocate"]}

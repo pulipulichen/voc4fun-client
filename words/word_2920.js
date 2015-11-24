@@ -1,0 +1,1 @@
+{"word_chinese":"掘溝，開畦溝","word_english":"trench","test_options":["trench","truce","underneath"]}

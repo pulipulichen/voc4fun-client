@@ -1,0 +1,1 @@
+{"word_chinese":"密謀","word_english":"intrigue","test_options":["intrigue","irrespective","large-scale"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"把…除外","word_english":"exclude","test_options":["exclude","explicit","feeble"]}

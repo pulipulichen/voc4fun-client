@@ -1,0 +1,1 @@
+{"word_chinese":"交替地","word_english":"alternatively","test_options":["alternatively","animated","artifact"]}

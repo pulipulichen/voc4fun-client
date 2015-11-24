@@ -1,0 +1,1 @@
+{"word_chinese":"有叛變傾向的","word_english":"rebellious","test_options":["rebellious","reel","renaissance"]}

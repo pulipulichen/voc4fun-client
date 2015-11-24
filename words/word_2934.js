@@ -1,0 +1,1 @@
+{"word_chinese":"戰利品；紀念盃","word_english":"trophy","test_options":["trophy","twilight","unification"]}

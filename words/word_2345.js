@@ -1,0 +1,1 @@
+{"word_chinese":"顯露(n.)","word_english":"revelation","test_options":["revelation","rigorous.","salon"]}

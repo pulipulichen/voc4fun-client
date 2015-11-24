@@ -1,0 +1,1 @@
+{"word_chinese":"開發者","word_english":"developer","test_options":["developer","diminish","disposition"]}

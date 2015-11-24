@@ -1,0 +1,1 @@
+{"word_chinese":"保證人；證書","word_english":"voucher","test_options":["voucher","watt","workplace"]}

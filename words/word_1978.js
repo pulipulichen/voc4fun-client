@@ -1,0 +1,1 @@
+{"word_chinese":"不斷的","word_english":"perpetual","test_options":["perpetual","phase","polar("]}

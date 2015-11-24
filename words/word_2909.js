@@ -1,0 +1,1 @@
+{"word_chinese":"透明(性)","word_english":"transparency","test_options":["transparency","trim","unchanged"]}

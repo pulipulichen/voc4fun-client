@@ -1,0 +1,1 @@
+{"word_chinese":"吸塵器；真空的","word_english":"vacuum","test_options":["vacuum","verge","volatile"]}

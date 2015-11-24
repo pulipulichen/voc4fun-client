@@ -1,0 +1,1 @@
+{"word_chinese":"分散的，散亂的","word_english":"scattered","test_options":["scattered","seasoning","settle"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"被打擾的","word_english":"disturbed","test_options":["disturbed","doorway","electron"]}

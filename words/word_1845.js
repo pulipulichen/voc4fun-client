@@ -1,0 +1,1 @@
+{"word_chinese":"提供;供品","word_english":"offering","test_options":["offering","optimum","oversleep"]}

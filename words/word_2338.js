@@ -1,0 +1,1 @@
+{"word_chinese":"取回(n.)","word_english":"retrieval","test_options":["retrieval","ridge","ruthless"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"英勇的，強健的","word_english":"valiant","test_options":["valiant","verify","volt"]}

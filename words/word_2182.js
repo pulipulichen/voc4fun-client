@@ -1,0 +1,1 @@
+{"word_chinese":"撲滅;遏制","word_english":"quench","test_options":["quench","ragged","rectify"]}

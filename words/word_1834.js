@@ -1,0 +1,1 @@
+{"word_chinese":"橢圓形(的)","word_english":"oblong","test_options":["oblong","opaque","outrage"]}

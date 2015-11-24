@@ -1,0 +1,1 @@
+{"word_chinese":"猛投","word_english":"hurl","test_options":["hurl","immune","inefficient"]}

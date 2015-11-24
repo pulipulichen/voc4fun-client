@@ -1,0 +1,1 @@
+{"word_chinese":"咆哮","word_english":"snarl","test_options":["snarl","solemn","sporting"]}

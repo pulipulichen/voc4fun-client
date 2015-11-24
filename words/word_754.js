@@ -1,0 +1,1 @@
+{"word_chinese":"扣除額","word_english":"deduction","test_options":["deduction","delinquent","diabetes"]}

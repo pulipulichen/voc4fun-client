@@ -1,0 +1,1 @@
+{"word_chinese":"領年金的人","word_english":"pensioner","test_options":["pensioner","perspective","pledge"]}

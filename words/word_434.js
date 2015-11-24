@@ -1,0 +1,1 @@
+{"word_chinese":"香檳","word_english":"champagne","test_options":["champagne","chimpanzee","cocoa"]}

@@ -1,0 +1,1 @@
+{"word_chinese":"直接的；坦率的","word_english":"straightforward","test_options":["straightforward","stunning","supervise"]}

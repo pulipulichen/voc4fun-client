@@ -1,0 +1,1 @@
+{"word_chinese":"叫賣(小商品)","word_english":"vend","test_options":["vend","vice","wardrobe"]}

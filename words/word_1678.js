@@ -1,0 +1,1 @@
+{"word_chinese":"精神；心理","word_english":"mentality","test_options":["mentality","militia","mortal"]}

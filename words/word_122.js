@@ -1,0 +1,1 @@
+{"word_chinese":"大赦","word_english":"amnesty","test_options":["amnesty","antique","assignment"]}

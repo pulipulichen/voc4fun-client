@@ -1,0 +1,1 @@
+{"word_chinese":"廣告業","word_english":"advertising","test_options":["advertising","agitation(n.) ","ample"]}

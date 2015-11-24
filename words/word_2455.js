@@ -1,0 +1,1 @@
+{"word_chinese":"自尊","word_english":"self-esteem","test_options":["self-esteem","serial","shutter"]}

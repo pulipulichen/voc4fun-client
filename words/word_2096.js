@@ -1,0 +1,1 @@
+{"word_chinese":"預先","word_english":"previously","test_options":["previously","proficient","psychiatry"]}

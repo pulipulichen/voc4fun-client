@@ -1,0 +1,1 @@
+{"word_chinese":"腐敗","word_english":"corruption","test_options":["corruption","covet","currency"]}

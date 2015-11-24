@@ -1,0 +1,1 @@
+{"word_chinese":"合作","word_english":"co-operation","test_options":["co-operation","corrode","crooked"]}

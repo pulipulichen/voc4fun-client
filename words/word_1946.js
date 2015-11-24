@@ -1,0 +1,1 @@
+{"word_chinese":"可憐的，悲慘的","word_english":"pathetic","test_options":["pathetic","pension","pierce"]}
