@@ -1,6 +1,9 @@
 var db_profile = function ($scope) {
     
     $scope.profile_table_name = "profile";
+    
+    $scope.user_id = undefined;
+    
     $scope.profile = {
         name: "John Doe"
     };

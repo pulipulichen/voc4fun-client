@@ -21,6 +21,7 @@ var _app_ready = function ($scope) {
         }
         app.navi.replacePage(_navi_html, {animation: 'none'});
         
+        $scope.log("app_ready.js", "ons.ready()", {"ok": true});
     });
 
 };

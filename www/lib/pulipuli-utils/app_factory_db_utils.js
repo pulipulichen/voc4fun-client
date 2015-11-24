@@ -82,7 +82,7 @@ var _app_factory_db_utils = function ($scope) {
                 
                 var _value = _data[_field];
                 if (typeof(_value) !== "number") {
-                    _value = '"' + _value + '"';
+                    _value = "'" + _value + "'";
                 }
                 _set_sql = _set_sql + _field + " = " + _value;
             }
@@ -136,6 +136,9 @@ var _app_factory_db_utils = function ($scope) {
             //console.log(_data);
             for (var _field in _data) {
                 var _value = _data[_field];
+                if (typeof(_value) === "undefined") {
+                    continue;
+                }
                 
                 if (_field_sql !== "") {
                     _field_sql = _field_sql + ",";
@@ -147,7 +150,7 @@ var _app_factory_db_utils = function ($scope) {
                     _value_sql = _value_sql + _value;
                 }
                 else {
-                    _value_sql = _value_sql + '"' + _value + '"';
+                    _value_sql = _value_sql + "'" + _value + "'";
                 }
             }
             return {
