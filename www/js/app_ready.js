@@ -21,7 +21,13 @@ var _app_ready = function ($scope) {
         }
         app.navi.replacePage(_navi_html, {animation: 'none'});
         
-        $scope.log("app_ready.js", "ons.ready()", {"ok": true});
+        //$scope.log("app_ready.js", "ons.ready()", {"ok": true});
+        //setTimeout(function () {
+            //$scope.profile.name = _navi_html;
+            //$scope.$digest();
+            //alert( $scope.profile_name);
+        //}, 1000);
+        
     });
-
+    
 };

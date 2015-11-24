@@ -2,10 +2,11 @@ var db_profile = function ($scope) {
     
     $scope.profile_table_name = "profile";
     
-    $scope.user_id = undefined;
+    //$scope.profile_name = "AAAA";
     
     $scope.profile = {
-        name: "John Doe"
+        name: "John Doe",
+        uuid: new Fingerprint().get()
     };
     
     $scope.profile_exists = function (_callback) {

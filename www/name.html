@@ -9,17 +9,19 @@
     <ons-row>
         Voc4Fun ICON
     </ons-row>
-    
+
     <ons-row>
-        請輸入您的姓名
+        請輸入您的姓名 
     </ons-row>
-    
-    <ons-row>
-        <input type="text" value="{{ user_name }}" name="user_name" id="user_name" />
-    </ons-row>
-    
-    <ons-row>
-        <ons-button>{{ "ONS_OK" | translate }}</ons-button>
-    </ons-row>
+
+    <form id="name_html_profile">
+        <ons-row>
+            <input type="text" value="{{ profile.name}}" name="name" />
+        </ons-row>
+
+        <ons-row>
+            <ons-button>{{ "ONS_OK" | translate }}</ons-button>
+        </ons-row>
+    </form>
 
 </ons-page>
