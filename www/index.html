@@ -68,6 +68,8 @@
     <script src="config.js"></script>
     
     <script src="lib/fingerprint/fingerprint.min.js"></script>
+    <script type="text/javascript" src="lib/js-xlsx/xlsx.core.min.js"></script>
+    
     <script src="lib/pulipuli-utils/app_factory_db_utils.js"></script>
     <script src="lib/pulipuli-utils/app_factory_ons_view.js"></script>
     <script src="lib/pulipuli-utils/app_factory_ons_utils.js"></script>
@@ -80,6 +82,8 @@
     
     <script src="js/app_factory_db.js"></script>
     <script src="js/app_factory_book_cart.js"></script>
+    <script src="js/controller_name.js"></script>
+    <script src="js/controller_flashcard.js"></script>
     <script src="js/app_ready.js"></script>
     
     <script type="text/javascript">
@@ -117,7 +121,8 @@
             db_log($scope);
             
             _app_factory_book_cart($scope, $filter);
-
+            controller_name($scope);
+            controller_flashcard($scope);
             
             // -----------------------------------
 

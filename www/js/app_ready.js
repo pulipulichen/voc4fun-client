@@ -27,7 +27,12 @@ var _app_ready = function ($scope) {
             //$scope.$digest();
             //alert( $scope.profile_name);
         //}, 1000);
-        
+        $scope.DB.drop_table("flashcard");
+        $scope.flashcard_setup();
+        $scope.DB.exec("select * from flashcard", function (_data) {
+            $.console_log(_data);
+        })
+        //$scope.DB.exec("INSERT INTO flashcard (q,a) VALUES ('ma\\\\'am','[名]女士')");
     });
     
 };

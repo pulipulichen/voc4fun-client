@@ -55,7 +55,18 @@ var _app_factory_db_utils = function ($scope) {
             this.db.transaction(function (_tx) {
                 _tx.executeSql(_sql, [], function (_tx, _results) {
                     if (typeof (_success_callback) === "function") {
-                        _success_callback(_results.rows);
+                        var _data = [];
+                        for (var _r in _results.rows) {
+                            var _row = _results.rows[_r];
+                            var _d = {};
+                            for (var _c in _row) {
+                                var _value = _row[_c];
+                                _value = $.unescape_quotation(_value);
+                                _d[_c] = _value;
+                            }
+                            _data.push(_d);
+                        };
+                        _success_callback(_d);
                     }
                 }, function (_tx, _error) {
                     _.error_handler(_tx, _error, _sql);
@@ -64,6 +75,22 @@ var _app_factory_db_utils = function ($scope) {
             return this;
         },
         insert: function (_table, _data, _success_callback) {
+            if ($.is_array(_data)) {
+                var _loop = function (_i) {
+                    if (_i < _data.length) {
+                        $scope.DB.insert(_table, _data[_i], function () {
+                            _i++;
+                            _loop(_i);
+                        });
+                    }
+                    else {
+                        $.trigger_callback(_success_callback);
+                    }
+                };
+                _loop(0);
+                return this;
+            }
+            
             var _data_sql = $scope.DB._encode_data_sql(_data);
             
             var _sql = 'INSERT INTO ' + _table 
@@ -72,6 +99,7 @@ var _app_factory_db_utils = function ($scope) {
             
             // @TODO 需要增加取得剛剛新增資料的方法？不用好了
             $scope.DB.exec(_sql, _success_callback);
+            return this;
         },
         update: function (_table, _data, _where_sql, _success_callback) {
             var _set_sql = '';
@@ -81,9 +109,7 @@ var _app_factory_db_utils = function ($scope) {
                 }
                 
                 var _value = _data[_field];
-                if (typeof(_value) !== "number") {
-                    _value = "'" + _value + "'";
-                }
+                _value = $scope.DB._escape_value(_value);
                 _set_sql = _set_sql + _field + " = " + _value;
             }
             
@@ -110,6 +136,13 @@ var _app_factory_db_utils = function ($scope) {
                 }
             });
             return this;
+        },
+        _escape_value: function (_value) {
+            if (typeof(_value) !== "number") {
+                    //_value = "'" + $.addslashes(_value) + "'";
+                    _value = "'" + $.escape_quotation(_value) + "'";
+            }
+            return _value;
         },
         insert_or_update_one: function (_table, _data, _success_callback) {
             return $scope.DB.insert_or_update(_table, _data, 
@@ -146,12 +179,8 @@ var _app_factory_db_utils = function ($scope) {
                 }
                 
                 _field_sql = _field_sql + _field;
-                if (typeof(_value) === "number") {
-                    _value_sql = _value_sql + _value;
-                }
-                else {
-                    _value_sql = _value_sql + "'" + _value + "'";
-                }
+                _value = $scope.DB._escape_value(_value);
+                _value_sql = _value_sql + _value;
             }
             return {
                 field: _field_sql,
