@@ -1,0 +1,79 @@
+<ons-page id="main_html" ng-device-backbutton="main_back()">
+
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <i class="ion-navicon"></i>
+                </span>
+            </ons-toolbar-button>
+        </div>
+
+        <div class="center">{{ 'TODO_LIST' | translate}}</div>
+
+        <div class="right" ng-click="clear_todo_list()">
+            <ons-toolbar-button>
+                <i class="icon ion-close-circled"></i>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <form id="scan_barcode" ng-submit="add();">
+        <ons-row style="width: calc(100% - 20px);margin: 0 auto;">
+
+            <ons-col width="120px" ng-click="scan_barcode()">
+                <ons-button id="search_barcode_button" modifier="cta">
+                    <ons-icon icon="ion-qr-scanner" ></ons-icon>
+                    {{ 'SCAN_BARCODE' | translate }}
+                </ons-button>
+            </ons-col>
+            <ons-col>
+                <input type="number" class="search-input" id="isbn" name="isbn"
+                       value="{{isbn}}"
+                       placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}" />
+                <!--autofocus--> 
+            </ons-col>
+
+            <ons-col width="40px">
+                <ons-button modifier="cta" ng-click="search()">
+                    <ons-icon icon="fa-search"></ons-icon>
+                </ons-button>
+            </ons-col>
+
+        </ons-row>
+    </form>
+
+
+    <ons-list ng-repeat="location in todo_list">
+        <ons-list-item class="location" modifier="tappable chevron" class="list-item-container"  
+                       ng-click="open_map(location.location)" ng-show="location.location !== ''">
+            <div class="list-item-left">
+                {{location.location}}
+            </div>
+            <div class="list-item-right">    
+            </div>
+        </ons-list-item>
+
+        <ons-list-item modifier="tappable chevron" 
+                       ng-repeat="item in location.items"
+                       ng-click="open_item_page(item.isbn)"
+                       class="list-item-container">
+            <ons-icon icon="ion-ios-circle-outline" size="20px" ng-click="complete_item(item.id, $event)"></ons-icon>
+            <span class="title">
+                {{item.title}}
+            </span>
+            <span class="call_number">
+                {{item.call_number}}
+            </span>
+        </ons-list-item>
+    </ons-list>
+
+    <!-- ------------------------------------------- -->
+
+    <ons-fab class="fab" style="">
+        <label for="isbn" class="fab__icon">
+            <ons-ripple class="ripple"><span class="rippledisplay: block; position: absolute;__wave"></span></ons-ripple>
+            <ons-icon icon="ion-search" ></ons-icon>
+        </label></ons-fab>
+
+</ons-page>

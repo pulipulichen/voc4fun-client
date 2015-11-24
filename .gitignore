@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+build
+custom
+npm-debug.log
+.idea
+myapp.*.zip
+[TRASH]/*
+cht-eip.zip
+server/book_list.sqlite

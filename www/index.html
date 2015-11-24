@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- CSP support mode (required for Windows Universal apps): https://docs.angularjs.org/api/ng/directive/ngCsp -->
+<html lang="en" ng-csp>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- ---------------------------------------- 
+      -- Library
+      -- ---------------------------------------- -->
+        <!-- JS dependencies (order matters!) -->
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular/angular-translate.min.js"></script>
+        <script src="lib/angular/angular-translate-loader-static-files.min.js"></script>
+
+        <script src="lib/onsen/js/onsenui.min.js"></script>
+        <script src="lib/zepto/zepto.min.js"></script>
+        
+        <!-- CSS dependencies -->
+        <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
+
+        <!-- CSP support mode (required for Windows Universal apps) -->
+        <link rel="stylesheet" href="lib/angular/angular-csp.css" />
+
+        <link rel="stylesheet" href="css/onsen-css-components.css" />
+    <!-- ---------------------------------------- 
+      -- Style
+      -- ---------------------------------------- -->
+        <link rel="stylesheet" href="css/float-action-button.css" />
+        <link rel="stylesheet" href="css/page-main_html.css" />
+        <link rel="stylesheet" href="css/page-about_html.css" />
+        <link rel="stylesheet" href="css/ons-view.css" />
+        <link rel="stylesheet" href="css/ons.css" />
+
+        <script src="js/database_utils.js"></script>
+        
+        
+        <title>{{ 'TITLE' | translate }}</title>
+
+    </head>
+
+    <!-- ---------------------------------------- 
+      -- View
+      -- ---------------------------------------- -->
+    <body ng-controller="app_controller">
+
+    <div ons-loading-placeholder="menu" style="text-align:center;">
+        <img src="img/loading.svg" style="position:fixed;top: calc(50% - 60px);left: calc(50% - 60px)" /> 
+    </div>
+
+
+    <ons-modal var="modal" class="now-loading-modal">
+        <ons-icon icon="ion-load-c" spin="true"></ons-icon>
+    </ons-modal>
+
+    <ons-sliding-menu id="menu" var="app.menu" 
+                      main-page="main" menu-page="menu.html" max-slide-distance="200px" 
+                      type="reveal" side="left" ons-preopen="menu_open()" ons-preclose="menu_close()" ></ons-sliding-menu>
+
+
+    <ons-template id="main">
+        <ons-navigator var="app.navi" page="main.html"></ons-navigator> 
+    </ons-template>
+
+
+    
+    <!-- ---------------------------------------- 
+      -- Controller
+      -- ---------------------------------------- -->
+    <script src="js/app_factory_config.js"></script>
+    <script src="js/app_factory_db_utils.js"></script>
+    <script src="js/app_factory_db.js"></script>
+    <script src="js/app_factory_book_cart.js"></script>
+    <script src="js/app_factory_ons_view.js"></script>
+    <script src="js/app_factory_ons_utils.js"></script>
+    <script src="js/app_factory_jquery.js"></script>
+    <script src="js/app_ready.js"></script>
+    <script src="js/cordova_barcode_scan.js"></script>
+    <script src="js/cordova_social_share.js"></script>
+    <script src="js/cordova_inappbrowser_submit.js"></script>
+    
+    <script type="text/javascript">
+        var app = ons.bootstrap('app', ['onsen', 'pascalprecht.translate']);
+
+        /**
+         * 翻譯
+         * @param {type} param
+         */
+        app.config(function ($translateProvider) {
+            $translateProvider.preferredLanguage('zh_TW');
+            $translateProvider.useStaticFilesLoader({
+                prefix: 'i18n/',
+                suffix: '.json'
+            });
+        });
+
+        app.controller('app_controller'
+                , ['$scope',
+                    '$filter',
+                    function ($scope, $filter) {
+
+
+            _app_factory_config($scope);
+
+            _app_factory_db_utils($scope);
+            _app_factory_db($scope);
+
+            _app_factory_book_cart($scope, $filter);
+
+            _app_factory_ons_view($scope);
+
+            _app_factory_ons_utils($scope, $filter);
+            _app_factory_jquery_utils($scope);
+
+            cordova_barcode_scan($scope, $filter);
+            cordova_social_share($scope, $filter);
+            cordova_inappbrowser_submit($scope);
+            // -----------------------------------
+
+            _app_ready($scope);
+        }]);
+    </script>
+
+    <!-- cordova -->
+    <script src="cordova.js"></script>
+    <script type="text/javascript" src="js/paypal-mobile-js-helper.js"></script>
+</body>
+</html>
