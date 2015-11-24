@@ -32,7 +32,7 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
  * RWD
  */
 @media screen and (min-width: 550px) {
-    .onsen-sliding-menu__menu {
+    body:not(.main-full) .onsen-sliding-menu__menu {
         display: block !important;
         z-index: 3;
         position: absolute;
@@ -40,32 +40,32 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
         transform:none !important;
     }
 
-    .onsen-sliding-menu__main {
+    body:not(.main-full) .onsen-sliding-menu__main {
         width: calc(100% - 200px);
         left: 200px;
         z-index: 4;
     }
 
-    ons-toolbar-button.menu-open,
+    body:not(.main-full) ons-toolbar-button.menu-open,
     #menu_html ons-toolbar-button.menu-close {
         display:none;
     }
-    .onsen-sliding-menu__main.menu-open {
+    body:not(.main-full) .onsen-sliding-menu__main.menu-open {
         left: 0;
     }
 
     /**
      * 選單背景反白
      */
-    .page--menu-page__background {
+    body:not(.main-full) .page--menu-page__background {
         background-color: #FFF;
     }
-    #menu_html ons-list-item,
-    #menu_html ons-toolbar .center {
+    body:not(.main-full) #menu_html ons-list-item,
+    body:not(.main-full) #menu_html ons-toolbar .center {
         color: black;
     }
     
-    #menu_html .menu-active {
+    body:not(.main-full) #menu_html .menu-active {
         background-color: #CCC;
     }
 
@@ -76,7 +76,7 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
 
 @media screen and (min-width: 400px) and (max-width: 550px) {
 
-    .onsen-sliding-menu__menu {
+    body:not(.main-full) .onsen-sliding-menu__menu {
         display: block !important;
         z-index: 3;
         position: absolute;
@@ -85,25 +85,26 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
         width: 40px;
     }
 
-    .onsen-sliding-menu__menu .menu-label {
+    body:not(.main-full) .onsen-sliding-menu__menu .menu-label {
         display: none;
     }
 
-    .onsen-sliding-menu__main {
+    body:not(.main-full) .onsen-sliding-menu__main {
         width: calc(100% - 40px);
         left: 40px;
         z-index: 4;
     }
 
-    ons-toolbar-button.menu-open,
-    #menu_html ons-toolbar-button.menu-close {
+    body:not(.main-full) ons-toolbar-button.menu-open,
+    body:not(.main-full) #menu_html ons-toolbar-button.menu-close {
         display:none;
     }
-    .onsen-sliding-menu__main.menu-open {
+    
+    body:not(.main-full) .onsen-sliding-menu__main.menu-open {
         left: 0;
     }
     
-    #menu_html ons-toolbar .center {
+    body:not(.main-full) #menu_html ons-toolbar .center {
         display:none;
     }
 }   /* @media screen and (min-width: 400px) and (max-width: 700px) { */

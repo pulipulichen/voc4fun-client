@@ -68,17 +68,21 @@
     <!-- ---------------------------------------- 
       -- Controller
       -- ---------------------------------------- -->
-    <script src="js/app_factory_config.js"></script>
-    <script src="js/app_factory_db_utils.js"></script>
+    <script src="config.js"></script>
+    
+    <script src="lib/pulipuli-utils/app_factory_db_utils.js"></script>
+    <script src="lib/pulipuli-utils/app_factory_ons_view.js"></script>
+    <script src="lib/pulipuli-utils/app_factory_ons_utils.js"></script>
+    <script src="lib/pulipuli-utils/app_factory_jquery.js"></script>
+    
+    <script src="lib/pulipuli-utils/cordova_barcode_scan.js"></script>
+    <script src="lib/pulipuli-utils/cordova_social_share.js"></script>
+    <script src="lib/pulipuli-utils/cordova_inappbrowser_submit.js"></script>
+    
     <script src="js/app_factory_db.js"></script>
+    <script src="js/controller_name.js"></script>
     <script src="js/app_factory_book_cart.js"></script>
-    <script src="js/app_factory_ons_view.js"></script>
-    <script src="js/app_factory_ons_utils.js"></script>
-    <script src="js/app_factory_jquery.js"></script>
     <script src="js/app_ready.js"></script>
-    <script src="js/cordova_barcode_scan.js"></script>
-    <script src="js/cordova_social_share.js"></script>
-    <script src="js/cordova_inappbrowser_submit.js"></script>
     
     <script type="text/javascript">
         var app = ons.bootstrap('app', ['onsen', 'pascalprecht.translate']);
@@ -104,18 +108,17 @@
             _app_factory_config($scope);
 
             _app_factory_db_utils($scope);
-            _app_factory_db($scope);
-
-            _app_factory_book_cart($scope, $filter);
-
+            cordova_social_share($scope, $filter);
+            cordova_inappbrowser_submit($scope);
             _app_factory_ons_view($scope);
-
             _app_factory_ons_utils($scope, $filter);
             _app_factory_jquery_utils($scope);
 
-            cordova_barcode_scan($scope, $filter);
-            cordova_social_share($scope, $filter);
-            cordova_inappbrowser_submit($scope);
+            _app_factory_db($scope);
+            controller_name($scope);
+            _app_factory_book_cart($scope, $filter);
+
+            
             // -----------------------------------
 
             _app_ready($scope);

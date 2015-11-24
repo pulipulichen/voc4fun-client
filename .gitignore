@@ -6,5 +6,6 @@ npm-debug.log
 .idea
 myapp.*.zip
 [TRASH]/*
+[TRASH]/
 cht-eip.zip
 server/book_list.sqlite

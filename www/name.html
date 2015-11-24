@@ -1,0 +1,25 @@
+<ons-page id="name_html" ng-device-backbutton="exit_app()">
+
+    <ons-toolbar>
+
+        <div class="center">{{ 'TITLE' | translate }}</div>
+
+    </ons-toolbar>
+
+    <ons-row>
+        Voc4Fun ICON
+    </ons-row>
+    
+    <ons-row>
+        請輸入您的姓名
+    </ons-row>
+    
+    <ons-row>
+        <input type="text" value="{{ user_name }}" name="user_name" id="user_name" />
+    </ons-row>
+    
+    <ons-row>
+        <ons-button>{{ "ONS_OK" | translate }}</ons-button>
+    </ons-row>
+
+</ons-page>

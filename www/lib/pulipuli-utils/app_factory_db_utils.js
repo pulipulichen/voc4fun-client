@@ -2,7 +2,7 @@ var _app_factory_db_utils = function ($scope) {
     $scope.DB = {
         db: null,
         open_db: function () {
-            this.db = openDatabase('book_list', '1.0', 'Book List DB', 2 * 1024 * 1024);
+            this.db = openDatabase('open_database', '1.0', 'Pulipuli Open Database', 2 * 1024 * 1024);
             //console.log(typeof(_DB.transaction));
             return this;
         },

@@ -39,7 +39,6 @@ var _app_factory_ons_view = function ($scope) {
             window.close();
         }
     };
-
     // -------------------------
 
     $scope.main_back = function () {
@@ -109,5 +108,33 @@ var _app_factory_ons_view = function ($scope) {
         $(window).resize(_set_menu_swipeable);
         _set_menu_swipeable();
     };
-
+    
+    /**
+     * 設定退回的事件
+     * @param {function} _callback
+     */
+    $scope.setup_back_hotkey = function (_callback) {
+        
+        $(document).keyup(function (_event) {
+            //alert(_event.keyCode);
+            if (_event.keyCode === 27) {
+                // 好吧，我也不確定
+                //document.backbutton();
+                $.trigger_callback(_callback);
+            }
+        });
+    };
+    
+    $scope.setSwipeable = function (_swipeable) {
+        app.menu.setSwipeable(_swipeable);
+        var _body = $("body");
+        var _classname = "main-full";
+        if (_swipeable === false) {
+            _body.addClass(_classname);
+        }
+        else {
+            _body.removeClass(_classname);
+        }
+        return this;
+    };
 };
