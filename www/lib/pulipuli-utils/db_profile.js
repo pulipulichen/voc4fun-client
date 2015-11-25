@@ -11,18 +11,6 @@ var db_profile = function ($scope) {
         uuid: 0
     };
 
-    /**
-     * 把$scope.user_name存進DB
-     * 
-     * 在名稱改變時使用，或是按下確定時使用
-     */
-    $scope.save_profile_to_db = function () {
-        $scope.profile.uuid = new Fingerprint().get();
-        $scope.$digest();
-        $.console_trace("準備儲存", $scope.profile);
-        //$scope.DB.insert_or_update_one(_table_name, $scope.profile);
-    };
-
     $scope.profile_reset = function () {
         $scope.DB.drop_table(_table_name);
     };
@@ -60,9 +48,21 @@ var db_profile = function ($scope) {
     };
 
 
-    $scope.db_profile.setup_profile = function () {
-        $scope.DB.create_table(_table_name, $.array_keys($scope.profile), function () {
-            $scope.save_profile_to_db();
+    $scope.db_profile.setup_profile = function (_callback) {
+        return $scope.DB.create_table(_table_name, $.array_keys($scope.profile), function () {
+            $scope.db_profile.save_profile_to_db(_callback);
         });
+    };
+    
+    /**
+     * 把$scope.user_name存進DB
+     * 
+     * 在名稱改變時使用，或是按下確定時使用
+     */
+    $scope.db_profile.save_profile_to_db = function (_callback) {
+        $scope.profile.uuid = new Fingerprint().get();
+        //$scope.$digest();
+        //$.console_trace("準備儲存", $scope.profile);
+        $scope.DB.insert_or_update_one(_table_name, $scope.profile, _callback);
     };
 };

@@ -15,13 +15,13 @@
         </ons-row>
 
         <ons-row>
-            <input type="text" value="{{ profile.name }}" 
+            <input type="text" ng-model="profile.name"
                    class="text-input text-input--underbar"
                    placeholder="請輸入您的名字">
         </ons-row>
 
-        <div class="bottom-bar" style="text-align: center">
-            <div class="bottom-bar__line-height" ng-click="$('#profile_html form').submit();">
+        <div class="bottom-bar bottom-bar-button">
+            <div class="bottom-bar__line-height" onclick="$(this).parents('form').submit();">
                 {{ "ONS_OK" | translate }}
             </div>
         </div>

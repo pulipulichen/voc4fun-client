@@ -5,7 +5,8 @@ var _app_ready = function ($scope) {
 
         $scope.setSwipeable(false);
         
-        $scope.profile_reset();
+        // 如果要刪除profile，則執行這個
+        //$scope.profile_reset();
         
         $scope.flashcard_setup(function () {
             $scope.db_profile.load_from_db(function () {

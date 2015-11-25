@@ -118,3 +118,8 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
 ons-toolbar + .page__background + .page__content {
     top: 50px;
 }
+
+ons-page .bottom-bar-button {
+    cursor: pointer;
+    text-align: center;
+}
