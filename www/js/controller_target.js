@@ -13,7 +13,7 @@ var controller_target = function ($scope) {
     // 目標的類型，可以修改
     $scope.target_setting = [
         {
-            "key": "learn",
+            "key": "learn_flashcard",
             "default_target": 30,
             "min": 0,
             "max": 100,
@@ -22,7 +22,7 @@ var controller_target = function ($scope) {
             "help": "設定每天目標學習的單字數量。"
         },
         {
-            "key": "note",
+            "key": "take_note",
             "default_target": 20,
             "min": 0,
             "max": 100,
@@ -31,7 +31,7 @@ var controller_target = function ($scope) {
             "help": "設定每天要撰寫的筆記數量。\n針對不同單字，寫下你對不同單字的筆記與想法。\n字數及內容不拘，可隨意發揮。"
         },
         {
-            "key": "test",
+            "key": "test_select",
             "default_target": 30,
             "min": 0,
             "max": 100,
@@ -65,8 +65,6 @@ var controller_target = function ($scope) {
             };
         }
     };
-        
-    $scope.ctl_target._init_target_data();
     
     /**
      * 
@@ -84,12 +82,16 @@ var controller_target = function ($scope) {
                 animation: "slide"
             };
         }
-        $.console_trace($scope.target_data);
+        
+        $.console_trace("enter_from_profile", $scope.target_data);
+        
         $scope.ctl_target.target_exists(function (_exists) {
             var _page = "target_view.html";
             if (_exists === false) {
+                $scope.ctl_target._init_target_data();
                 _page = "target_set.html";
             }
+            $scope.target_data.learn_flashcard.done = 50;
             //$.console_trace(_animation);
             app.navi.replacePage(_page, _animation);
         });
@@ -102,17 +104,32 @@ var controller_target = function ($scope) {
      * @returns {undefined}
      */
     $scope.ctl_target.target_exists = function (_callback) {
-        var _exists = false;
+        var _exists = true;
         $.trigger_callback(_callback, _exists);
     };
-    $scope.ctl_target.get_set_title = function () {
+    
+    $scope.ctl_target._get_date = function () {
         var _date = new Date(new Date().getTime() - _target_offset_hours * 60 * 60 * 1000);
         var _month = _date.getMonth() + 1;
         var _day = _date.getDate();
-        var _title = "設定" + _month + "月" + _day + "日目標";
+        return {
+            month: _month,
+            day: _day
+        };
+    };
+    
+    $scope.ctl_target.get_set_title = function () {
+        var _date = $scope.ctl_target._get_date();
+        var _title = "設定 " + _date.month + "月" + _date.day + "日 的目標";
         return _title;
-    }
-    ;
+    };
+    
+    $scope.ctl_target.get_view_title = function () {
+        var _date = $scope.ctl_target._get_date();
+        var _title = _date.month + "月" + _date.day + "日的目標與進度";
+        return _title;
+    };
+    
     $scope.ctl_target.set_target = function ($event) {
         var _form = $($event.target);
         var _log_data = {};
@@ -125,7 +142,7 @@ var controller_target = function ($scope) {
         $scope.log("controller_target.js", "$scope.ctl_target.set_target()", _log_data);
         //$.console_trace(_log_data);
         
-        $scope.ctl_activity.enter_from_target();
+        //$scope.ctl_activity.enter_from_target();
         
         // 把現在的狀態儲存進資料表中
         $scope.db_status.save_status(_status_key);
@@ -193,4 +210,5 @@ var controller_target = function ($scope) {
         }
         return this;
     };
+    
 };
