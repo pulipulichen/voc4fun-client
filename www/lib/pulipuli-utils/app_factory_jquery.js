@@ -92,5 +92,14 @@ var _app_factory_jquery_utils = function ($scope) {
     $.array_shuffle = function (o){
         for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
         return o;
-    }
+    };
+    
+    $.parse_opt = function (_opt, _field, _default_value) {
+        if (typeof(_opt[_field]) !== "undefined") {
+            return _opt[_field];
+        } else if (typeof(_default_value) !== "undefined") {
+            return _default_value;
+        }
+        return;
+    };
 };

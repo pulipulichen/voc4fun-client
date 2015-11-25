@@ -85,15 +85,23 @@ var controller_target = function ($scope) {
         
         $.console_trace("enter_from_profile", $scope.target_data);
         
-        $scope.ctl_target.current_period_target_exists(function (_exists) {
-            var _page = "target_view.html";
-            if (_exists === false) {
-                $scope.ctl_target._init_target_data();
-                _page = "target_set.html";
-            }
-            //$scope.target_data.learn_flashcard.done = 50;
-            //$.console_trace(_animation);
-            app.navi.replacePage(_page, _animation);
+        $scope.ctl_target.period_target_exists(function (_today_exists) {
+            $scope.ctl_target.period_target_exists(-1, function(_yesterday_exists) {
+                var _page = "target_view.html";
+                if (_today_exists === false) {
+                    $scope.ctl_target._init_target_data();
+                    if (_yesterday_exists === false) {
+                        _page = "target_init.html";
+                    }
+                    else {
+                        _page = "target_recommend.html";
+                    }
+                }
+                
+                //$scope.target_data.learn_flashcard.done = 50;
+                //$.console_trace(_animation);
+                app.navi.replacePage(_page, _animation);
+            });
         });
         return this;
     };
@@ -103,25 +111,53 @@ var controller_target = function ($scope) {
      * @param {type} _callback
      * @returns {undefined}
      */
-    $scope.ctl_target.current_period_target_exists = function (_callback) {
-        var _exists = true;
+    $scope.ctl_target.period_target_exists = function (_offset, _callback) {
+        if (typeof(_offset) === "function") {
+            _callback = _offset;
+            _offset = 0;
+        }
+        
         var _file_name = "controller_target.js";
         var _function_name = "$scope.ctl_target.set_target()";
-        var _where_sql = 'timestamp > ' + $scope.ctl_target._get_period_start_timestamp();
-        $scope.db_log.get_last_log(_file_name, _function_name, _where_sql, function (_data) {
-            if (_data === undefined) {
-                _exists = false;
+        
+        $scope.db_log.get_last_log({
+            "file_name": _file_name,
+            "function_name": _function_name,
+            "min_timestamp": $scope.ctl_target.get_period_start_timestamp(_offset),
+            "max_timestamp": $scope.ctl_target.get_period_end_timestamp(_offset),
+            "callback": function (_data) {
+                if (_data === undefined) {
+                    _exists = false;
+                }
+                $.trigger_callback(_callback, _exists);
             }
-            $.trigger_callback(_callback, _exists);
         });
         
         return this;
     };
     
-    $scope.ctl_target._get_period_start_timestamp = function () {
-        var _date = new Date(new Date().getTime() - _target_offset_hours * 60 * 60 * 1000);
+    /**
+     * @param {Number} _offset 偏移天數
+     * @returns {Number}
+     */
+    $scope.ctl_target.get_period_start_timestamp = function (_offset) {
+        var _timestamp = new Date().getTime() - _target_offset_hours * 60 * 60 * 1000;
+        if (typeof(_offset) === "number") {
+            _timestamp = _timestamp +  _offset * 24 * 60 * 60 * 1000;
+        }
+        var _date = new Date(_timestamp);
         _date.setHours(_target_offset_hours);
         return _date.getTime();
+    };
+    
+    /**
+     * @param {Number} _offset 偏移天數
+     * @returns {Number}
+     */
+    $scope.ctl_target.get_period_end_timestamp = function (_offset) {
+        var _timestamp = $scope.ctl_target.get_period_start_timestamp(_offset);
+        _timestamp = _timestamp + 24 * 60 * 60 * 1000;
+        return _timestamp;
     };
     
     $scope.ctl_target._get_period_date = function () {

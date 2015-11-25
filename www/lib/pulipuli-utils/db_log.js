@@ -7,7 +7,20 @@
  */
 var db_log = function ($scope) {
 
+    /**
+     * 測試用，讓記錄時間偏倚的參數，單位是天
+     * 例如設定_debug_log_day_offset = -1
+     * 那記錄的時間就會是-1天
+     * @type Number
+     */
+    var _debug_log_day_offset = 0;
+    
+    setTimeout(function () {
+        //$scope.db_log.reset();
+    }, 0);
+
     var _log_db = "log";
+    
     var _log_db_fields = [
         "timestamp",
         "file_name",
@@ -35,7 +48,7 @@ var db_log = function ($scope) {
             _data = null;
         }
 
-        var _timestamp = (new Date()).getTime();
+        var _timestamp = $scope.db_log.get_timestamp();
         var _insert_data = {
             timestamp: _timestamp,
             file_name: _file_name,
@@ -51,21 +64,36 @@ var db_log = function ($scope) {
 
     $scope.db_log = {};
 
-    $scope.db_log.get_last_log = function (_file_name, _function_name, _qualifier, _where_sql, _callback) {
-        if (typeof(_qualifier) === "string" 
-                && typeof(_where_sql) === "function" 
-                && typeof(_callback) === "undefined") {
-            _callback = _where_sql;
-            _where_sql = _qualifier;
-            
-            _qualifier = undefined;
+    /**
+     * @param {type} _opt = {
+     *      "file_name"
+     *      "function_name"
+     *      "qualifier"
+     *      "where_sql"
+     *      "min_timestamp"
+     *      "max_timestamp"
+     *      "callback"
+     * }
+     */
+    $scope.db_log.get_last_log = function (_opt) {
+        var _file_name = $.parse_opt(_opt, "file_name");
+        var _function_name = $.parse_opt(_opt, "function_name");
+        var _qualifier = $.parse_opt(_opt, "qualifier");
+        var _where_sql = $.parse_opt(_opt, "where_sql");
+        var _min_timestamp = $.parse_opt(_opt, "min_timestamp");
+        var _max_timestamp = $.parse_opt(_opt, "max_timestamp");
+        var _callback = $.parse_opt(_opt, "callback");
+        
+        if (typeof(_min_timestamp) === "number" 
+                || typeof(_max_timestamp) === "number" ) {
+            var _timestamp_where_sql = $scope.db_log.create_timestamp_where_sql(_min_timestamp, _max_timestamp);
+            if (_where_sql === undefined) {
+                _where_sql = _timestamp_where_sql;
+            }
+            else {
+                _where_sql = _where_sql + " AND " + _timestamp_where_sql;
+            }
         }
-        else if (typeof(_qualifier) === "function") {
-            _callback = _qualifier;
-            
-            _where_sql = undefined;
-            _qualifier = undefined;
-        };
         
         var _sql = "SELECT data FROM log "
             + " WHERE file_name = '" +  _file_name + "'"
@@ -91,5 +119,35 @@ var db_log = function ($scope) {
         $scope.DB.empty_table(_log_db);
     };
     
-    //$scope.db_log.reset();
+    /**
+     * @param {number} _offset 偏移天數
+     * @returns {Number}
+     */
+    $scope.db_log.get_timestamp = function (_offset) {
+        var _timestamp = (new Date()).getTime();
+        
+        if (_debug_log_day_offset > 0) {
+            _timestamp = _timestamp + _debug_log_day_offset * 24 * 60 * 60 * 1000;
+        }
+        if (typeof(_offset) === "number") {
+            _timestamp = _timestamp + _offset * 24 * 60 * 60 * 1000;
+        }
+        
+        return _timestamp;
+    };
+    
+    $scope.db_log.create_timestamp_where_sql = function (_min_time, _max_time) {
+        var _where_sql = "";
+        if (typeof(_min_time) === "number") {
+            _where_sql = _where_sql + " timestamp > " + _min_time;
+        }
+        if (typeof(_max_time) === "number") {
+            
+            if (_where_sql !== "") {
+                _where_sql = _where_sql + " AND ";
+            }
+            _where_sql = _where_sql + " timestamp > " + _max_time;
+        }
+        return _where_sql;
+    };
 };
