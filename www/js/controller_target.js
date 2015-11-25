@@ -85,13 +85,13 @@ var controller_target = function ($scope) {
         
         $.console_trace("enter_from_profile", $scope.target_data);
         
-        $scope.ctl_target.target_exists(function (_exists) {
+        $scope.ctl_target.current_period_target_exists(function (_exists) {
             var _page = "target_view.html";
             if (_exists === false) {
                 $scope.ctl_target._init_target_data();
                 _page = "target_set.html";
             }
-            $scope.target_data.learn_flashcard.done = 50;
+            //$scope.target_data.learn_flashcard.done = 50;
             //$.console_trace(_animation);
             app.navi.replacePage(_page, _animation);
         });
@@ -103,12 +103,28 @@ var controller_target = function ($scope) {
      * @param {type} _callback
      * @returns {undefined}
      */
-    $scope.ctl_target.target_exists = function (_callback) {
+    $scope.ctl_target.current_period_target_exists = function (_callback) {
         var _exists = true;
-        $.trigger_callback(_callback, _exists);
+        var _file_name = "controller_target.js";
+        var _function_name = "$scope.ctl_target.set_target()";
+        var _where_sql = 'timestamp > ' + $scope.ctl_target._get_period_start_timestamp();
+        $scope.db_log.get_last_log(_file_name, _function_name, _where_sql, function (_data) {
+            if (_data === undefined) {
+                _exists = false;
+            }
+            $.trigger_callback(_callback, _exists);
+        });
+        
+        return this;
     };
     
-    $scope.ctl_target._get_date = function () {
+    $scope.ctl_target._get_period_start_timestamp = function () {
+        var _date = new Date(new Date().getTime() - _target_offset_hours * 60 * 60 * 1000);
+        _date.setHours(_target_offset_hours);
+        return _date.getTime();
+    };
+    
+    $scope.ctl_target._get_period_date = function () {
         var _date = new Date(new Date().getTime() - _target_offset_hours * 60 * 60 * 1000);
         var _month = _date.getMonth() + 1;
         var _day = _date.getDate();
@@ -119,13 +135,13 @@ var controller_target = function ($scope) {
     };
     
     $scope.ctl_target.get_set_title = function () {
-        var _date = $scope.ctl_target._get_date();
+        var _date = $scope.ctl_target._get_period_date();
         var _title = "設定 " + _date.month + "月" + _date.day + "日 的目標";
         return _title;
     };
     
     $scope.ctl_target.get_view_title = function () {
-        var _date = $scope.ctl_target._get_date();
+        var _date = $scope.ctl_target._get_period_date();
         var _title = _date.month + "月" + _date.day + "日的目標與進度";
         return _title;
     };
