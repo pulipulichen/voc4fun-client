@@ -19,7 +19,7 @@ var _app_ready = function ($scope) {
                 _navi_html = "target_set.html";
             }
         }
-        app.navi.replacePage(_navi_html, {animation: 'none'});
+        
         
         //$scope.log("app_ready.js", "ons.ready()", {"ok": true});
         //setTimeout(function () {
@@ -27,11 +27,9 @@ var _app_ready = function ($scope) {
             //$scope.$digest();
             //alert( $scope.profile_name);
         //}, 1000);
-        $scope.DB.drop_table("flashcard");
+        //$scope.DB.drop_table("flashcard");
         $scope.flashcard_setup(function () {
-            $scope.DB.exec("select * from flashcard", function (_data) {
-                $.console_log(_data);
-            });
+            app.navi.replacePage(_navi_html, {animation: 'none'});
         });
         
         //$scope.DB.exec("INSERT INTO flashcard (q,a) VALUES ('ma\\\\'am','[名]女士')");

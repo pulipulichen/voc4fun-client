@@ -6,8 +6,8 @@ var controller_name = function ($scope) {
         $scope.setup_profile();
         
         // 設定讀取xlsx
-        $scope.flashcard_setup();
+        //$scope.flashcard_setup();
         
-        //$scope.move_to_target_page();
+        $scope.ctl_target.enter_from_profile();
     };
 };

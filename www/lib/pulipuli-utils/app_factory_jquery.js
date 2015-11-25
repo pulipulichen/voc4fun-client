@@ -5,13 +5,13 @@ var _app_factory_jquery_utils = function ($scope) {
      * @author Pudding 20151123
      * @param {String} _msg
      */
-    $.console_log = function (_msg) {
+    $.console_trace = function (_msg) {
         console.trace(_msg);
     };
 
-    $.trigger_callback = function (_callback) {
+    $.trigger_callback = function (_callback, _parameter) {
         if (typeof (_callback) === "function") {
-            _callback();
+            _callback(_parameter);
         }
     };
 
