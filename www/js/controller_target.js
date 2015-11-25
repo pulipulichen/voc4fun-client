@@ -100,7 +100,14 @@ var controller_target = function ($scope) {
                 
                 //$scope.target_data.learn_flashcard.done = 50;
                 //$.console_trace(_animation);
-                app.navi.replacePage(_page, _animation);
+                if (_page === "target_recommend.html") {
+                    $scope.ctl_target.init_recommend_target_data(function () {
+                        app.navi.replacePage(_page, _animation);
+                    });
+                }
+                else {
+                    app.navi.replacePage(_page, _animation);
+                }
             });
         });
         return this;
@@ -265,4 +272,28 @@ var controller_target = function ($scope) {
         return this;
     };
     
+    $scope.recommend_target_data;
+    
+    $scope._recommend_target_data_mock = {
+            "learn_flashcard": {
+                last_done: 12,
+                last_target: 30,
+                recommend_target: 31
+            },
+            "take_note": {
+                last_done: 5,
+                last_target: 20,
+                recommend_target: 21
+            },
+            "test_select": {
+                last_done: 7,
+                last_target: 30,
+                recommend_target: 27
+            }
+        };
+    
+    $scope.ctl_target.init_recommend_target_data = function (_callback) {
+        $scope.recommend_target_data = $scope._recommend_target_data_mock;
+        $.trigger_callback(_callback);
+    };
 };

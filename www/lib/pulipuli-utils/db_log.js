@@ -13,7 +13,7 @@ var db_log = function ($scope) {
      * 那記錄的時間就會是-1天
      * @type Number
      */
-    var _debug_log_day_offset = -1;
+    var _debug_log_day_offset = 0;
     
     setTimeout(function () {
         //$scope.db_log.reset();

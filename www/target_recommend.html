@@ -6,7 +6,10 @@
 
         <ons-list modifier="inset">
             <ons-list-item ng-repeat="data in target_data">
-                <ons-row ng-init="setting = target_setting[$index]">
+                <ons-row ng-init="setting = target_setting[$index];
+                    last_done = recommend_target_data[setting.key].last_done;
+                    last_target = recommend_target_data[setting.key].last_target;
+                    recommend_target = recommend_target_data[setting.key].recommend_target;">
                     <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">
                         {{ setting.title}}
                         <ons-icon icon="ion-ios-help-outline" fixed-width="true"></ons-icon>
@@ -16,7 +19,7 @@
                         <ons-icon icon="ion-ios-minus-outline" fixed-width="true" 
                                   ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
                         <input min="{{ setting.min}}" max="{{ setting.max}}" type="number" 
-                               value="{{ data.target}}"
+                               value="{{ recommend_target }}"
                                target_key="{{setting.key}}"
                                style="width: 3rem;font-size: 1rem;text-align: center;" />
                         <ons-icon icon="ion-ios-plus-outline" fixed-width="true" 
@@ -26,13 +29,13 @@
                 <ons-row style="border-top: 1px dashed #ddd;">
                     <ons-col width="50%" class="yesterday-target-status" style="text-align: center;">
                         昨天的進度: 
-                        1
+                        {{ last_done }}
                         /
-                        30
+                        {{ last_target }}
                     </ons-col>
                     <ons-col width="50%" class="recommend-target" style="text-align: center;">
                         推薦的目標: 
-                        33
+                        {{ recommend_target }}
                     </ons-col>
                 </ons-row>
             </ons-list-item>
