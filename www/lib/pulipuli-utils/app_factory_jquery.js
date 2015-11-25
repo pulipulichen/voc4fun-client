@@ -5,8 +5,14 @@ var _app_factory_jquery_utils = function ($scope) {
      * @author Pudding 20151123
      * @param {String} _msg
      */
-    $.console_trace = function (_msg) {
-        console.trace(_msg);
+    $.console_trace = function (_heading, _msg) {
+        if (typeof(_msg) !== "undefined") {
+            _heading = "[" + _heading + "]";
+        }
+        console.trace(_heading);
+        if (typeof(_msg) !== "undefined") {
+            console.trace(_msg);
+        }
     };
 
     $.trigger_callback = function (_callback, _parameter) {

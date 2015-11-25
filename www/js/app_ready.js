@@ -1,19 +1,16 @@
 /*global ons:false */
 /*global app:false */
 var _app_ready = function ($scope) {
-
     ons.ready(function () {
-        
-        $scope.setup_menu_swipeable();
-        $scope.setup_back_hotkey(document.backbutton);
-        
-        // ---------------------
-        
+
         $scope.setSwipeable(false);
+        
+        $scope.profile_reset();
+        
         $scope.flashcard_setup(function () {
-            //$scope.profile_reset();
-            $scope.profile_exists(function (_exists) {
-                if (_exists === false) {
+            $scope.db_profile.load_from_db(function () {
+                if ($scope.profile === undefined) {
+                    $scope.profile = $scope.profile_mock;
                     app.navi.replacePage("profile.html", {animation: 'none'});
                 }
                 else {
@@ -21,7 +18,5 @@ var _app_ready = function ($scope) {
                 }
             });
         });
-        
     });
-    
 };

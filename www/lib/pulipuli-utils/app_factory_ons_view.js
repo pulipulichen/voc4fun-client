@@ -137,4 +137,10 @@ var _app_factory_ons_view = function ($scope) {
         }
         return this;
     };
+    
+    ons.ready(function () {
+        //$.console_trace("有設定");
+        $scope.setup_menu_swipeable();
+        $scope.setup_back_hotkey(document.backbutton);
+    });
 };

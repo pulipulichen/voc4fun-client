@@ -1,5 +1,5 @@
-<ons-page id="name_html" ng-device-backbutton="exit_app()">
-    <form ng-submit="ctl_name.name_submit()">
+<ons-page id="profile_html" ng-device-backbutton="exit_app()">
+    <form ng-submit="ctl_profile.submit()">
         <ons-toolbar>
 
             <div class="center">{{ 'TITLE' | translate }}</div>
@@ -15,11 +15,13 @@
         </ons-row>
 
         <ons-row>
-            <input type="text" value="{{ profile.name}}" name="name" />
+            <input type="text" value="{{ profile.name }}" 
+                   class="text-input text-input--underbar"
+                   placeholder="請輸入您的名字">
         </ons-row>
 
         <div class="bottom-bar" style="text-align: center">
-            <div class="bottom-bar__line-height" onclick="$(this).parents('form').submit();">
+            <div class="bottom-bar__line-height" ng-click="$('#profile_html form').submit();">
                 {{ "ONS_OK" | translate }}
             </div>
         </div>
