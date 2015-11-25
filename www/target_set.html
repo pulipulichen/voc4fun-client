@@ -15,7 +15,7 @@
                 <ons-col width="50" style="text-align: right">
                     <ons-icon icon="ion-ios-minus-outline" fixed-width="true" 
                               ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
-                    <input type="number" value="{{ ctl_target.get_target(target_item.key) }}"
+                    <input min="{{ target_item.min }}" max="{{ target_item.max }}" type="number" value="{{ ctl_target.get_target(target_item.key) }}"
                            style="width: 3rem;font-size: 1rem;text-align: center;" />
                     <ons-icon icon="ion-ios-plus-outline" fixed-width="true" 
                               ng-click="ctl_target.change_target_number($event, 1)"></ons-icon>

@@ -114,3 +114,7 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
     top: calc(50% - 60px);
     left: calc(50% - 60px);
 }
+
+ons-toolbar + .page__background + .page__content {
+    top: 50px;
+}

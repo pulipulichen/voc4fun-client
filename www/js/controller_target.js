@@ -13,6 +13,8 @@ var controller_target = function ($scope) {
         {
             "key": "learn",
             "default_target": 30,
+            "min": 0,
+            "max": 100,
             "title": "學習單字",
             "help_img": "img/loading.svg",
             "help": "設定每天目標學習的單字數量。"
@@ -20,6 +22,8 @@ var controller_target = function ($scope) {
         {
             "key": "note",
             "default_target": 20,
+            "min": 0,
+            "max": 100,
             "title": "撰寫筆記",
             "help_img": "img/loading.svg",
             "help": "設定每天要撰寫的筆記數量。\n針對不同單字，寫下你對不同單字的筆記與想法。\n字數及內容不拘，可隨意發揮。"
@@ -27,6 +31,8 @@ var controller_target = function ($scope) {
         {
             "key": "test",
             "default_target": 30,
+            "min": 0,
+            "max": 100,
             "title": "答對測驗",
             "help_img": "img/loading.svg",
             "help": "設定每天目標答對的題目數量。\n題目都是三選一的選擇題。"
@@ -135,7 +141,14 @@ var controller_target = function ($scope) {
     
     $scope.ctl_target.get_target = function (_key) {
         var _setting = $scope.ctl_target._get_setting(_key);
-        return _setting.default_target;
+        var _target = _setting.default_target;
+        if (_target < _setting.min) {
+            _target = _setting.min;
+        }
+        else if (_target > _setting.max) {
+            _target = _setting.max;
+        }
+        return _target;
     };
     
     $scope.ctl_target.change_target_number = function ($event, _interval) {
@@ -147,7 +160,13 @@ var controller_target = function ($scope) {
         var _val = _input.val();
         _val = parseInt(_val, 10);
         _val = _val + _interval;
-        _input.val(_val);
+        
+        var _min = _input.attr("min");
+        var _max = _input.attr("max");
+        
+        if (!(_val < _min || _val > _max)) {
+            _input.val(_val);
+        }
         return this;
     };
 };
