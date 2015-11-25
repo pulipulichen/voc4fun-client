@@ -23,7 +23,7 @@ var db_profile = function ($scope) {
                 $scope.DB.get(_table_name, function (_data) {
                     if (_data.length > 0) {
                         $scope.profile = _data[0];
-                        $.console_trace("load_from_db", _data[0]);
+                        //$.console_trace("load_from_db", _data[0]);
                     }
                     $.trigger_callback(_callback);
                 });
@@ -43,7 +43,7 @@ var db_profile = function ($scope) {
         if (typeof (_callback) !== "function") {
             return this;
         }
-        $.console_trace("profile_exists");
+        //$.console_trace("profile_exists");
         return $scope.DB.row_exists(_table_name, _callback);
     };
 

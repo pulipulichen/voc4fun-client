@@ -1,4 +1,6 @@
 var controller_target = function ($scope) {
+    
+    var _status_key = "target";
 
     /**
      * 重新計算的偏差值，單位是小時
@@ -124,7 +126,19 @@ var controller_target = function ($scope) {
         //$.console_trace(_log_data);
         
         $scope.ctl_activity.enter_from_target();
+        
+        // 把現在的狀態儲存進資料表中
+        $scope.db_status.save_status(_status_key);
     };
+    
+    // 註冊
+    $scope.db_status.add_listener(_status_key
+        , function (_status) {
+            $scope.target_data = _status;
+        }
+        , function () {
+            return $scope.target_data;
+    });
     
     $scope.target_help = {
         help_img: "img/loading.svg",
@@ -149,7 +163,7 @@ var controller_target = function ($scope) {
     };
     
     $scope.ctl_target.get_target = function (_key) {
-        $.console_trace(_key);
+        //$.console_trace(_key);
         var _setting = $scope.ctl_target._get_setting(_key);
         var _target = _setting.default_target;
         if (_target < _setting.min) {
