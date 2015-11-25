@@ -57,12 +57,13 @@ var controller_target = function ($scope) {
             var _item = $scope.target_setting[_i];
             var _key = _item.key;
             var _target = _item.default_target;
-            $scope.ctl_target[_key] = {
+            $scope.target_data[_key] = {
                 "done": 0,
                 "target": _target
             };
         }
     };
+        
     $scope.ctl_target._init_target_data();
     
     /**
@@ -81,7 +82,7 @@ var controller_target = function ($scope) {
                 animation: "slide"
             };
         }
-        
+        $.console_trace($scope.target_data);
         $scope.ctl_target.target_exists(function (_exists) {
             var _page = "target_view.html";
             if (_exists === false) {
@@ -110,11 +111,19 @@ var controller_target = function ($scope) {
         return _title;
     }
     ;
-    $scope.ctl_target.set_target = function () {
+    $scope.ctl_target.set_target = function ($event) {
+        var _form = $($event.target);
         var _log_data = {};
-        $scope.log("controller_target.js", "$scope.ctl_target.set_target()", _log_data);
+        for (var _key in $scope.target_data) {
+            var _target = _form.find('input[target_key="' + _key + '"]').val();
+            $scope.target_data[_key].target = _target;
+            _log_data[_key] = _target;
+        }
         
-        $.console_trace("設定目標");
+        $scope.log("controller_target.js", "$scope.ctl_target.set_target()", _log_data);
+        //$.console_trace(_log_data);
+        
+        $scope.ctl_activity.enter_from_target();
     };
     
     $scope.target_help = {
@@ -140,6 +149,7 @@ var controller_target = function ($scope) {
     };
     
     $scope.ctl_target.get_target = function (_key) {
+        $.console_trace(_key);
         var _setting = $scope.ctl_target._get_setting(_key);
         var _target = _setting.default_target;
         if (_target < _setting.min) {
