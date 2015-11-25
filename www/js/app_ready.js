@@ -11,13 +11,13 @@ var _app_ready = function ($scope) {
         
         $scope.setSwipeable(false);
         $scope.flashcard_setup(function () {
-            $scope.profile_reset();
+            //$scope.profile_reset();
             $scope.profile_exists(function (_exists) {
                 if (_exists === false) {
                     app.navi.replacePage("profile.html", {animation: 'none'});
                 }
                 else {
-                    $scope.ctl_target.enter_from_profile();
+                    $scope.ctl_target.enter_from_profile(false);
                 }
             });
         });

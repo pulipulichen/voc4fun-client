@@ -1,20 +1,39 @@
 <ons-page id="target_set_html" class="target-page" ng-device-backbutton="exit_app()">
+    <form ng-submit="ctl_target.set_target()">
+        <ons-toolbar>
+            <div class="center">{{ ctl_target.get_set_title()}}</div>
+        </ons-toolbar>
 
-    <ons-toolbar>
+        <ons-list modifier="inset">
+            <ons-list-item ng-repeat="target_item in target_setting">
+                <ons-row>
+                <ons-col class="title" ng-click="ctl_target.show_help(target_item.key)">
+                    {{ target_item.title}}
+                    <ons-icon icon="ion-ios-help-outline" fixed-width="true"></ons-icon>
+                </ons-col>
+                    
+                <ons-col width="50" style="text-align: right">
+                    <ons-icon icon="ion-ios-minus-outline" fixed-width="true" 
+                              ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
+                    <input type="number" value="{{ ctl_target.get_target(target_item.key) }}"
+                           style="width: 3rem;font-size: 1rem;text-align: center;" />
+                    <ons-icon icon="ion-ios-plus-outline" fixed-width="true" 
+                              ng-click="ctl_target.change_target_number($event, 1)"></ons-icon>
+                </ons-col>
+                    </ons-row>
+            </ons-list-item>
+        </ons-list>
 
-        <div class="center">{{ ctl_target.get_set_title() }}</div>
+        <div class="bottom-bar" style="text-align: center">
+            <div class="bottom-bar__line-height" onclick="$(this).parents('form').submit();">
+                {{ "ONS_OK" | translate }}
+            </div>
+        </div>
 
-    </ons-toolbar>
-
-    <ons-list modifier="inset" class="-list">
-        <ons-list-item>
-            
-        </ons-list-item>
-    </ons-list>
-
-    <ons-tabbar ng-click="">
-        <ons-tab>
-            {{ "ONS_OK" | translate }}
-        </ons-tab>
-    </ons-tabbar>
+        <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()">
+            <img src="{{ target_help.help_img }}" />
+            <div style="margin: 1rem;white-space: pre;">{{ target_help.help }}</div>
+            <ons-button>{{ "ONS_OK" | translate }}</ons-button>
+        </ons-modal>
+    </form>
 </ons-page>
