@@ -1,5 +1,13 @@
 var controller_target = function ($scope) {
     
+    /**
+     * 重新計算的偏差值，單位是小時
+     * 
+     * 如果是偏差8小時，意思是每天早上8點重新計算
+     * @type Number
+     */
+    var _target_offset_hours = 8;
+    
     // 目標的類型，可以修改
     $scope.target_setting = {
         "learn": {
@@ -34,7 +42,7 @@ var controller_target = function ($scope) {
         enter_from_profile: function () {
             $scope.ctl_target.target_exists(function (_exists) {
                 var _page = "target_view.html";
-                if (_exists === true) {
+                if (_exists === false) {
                     _page = "target_set.html";
                 }
                 app.navi.replacePage(_page);
@@ -49,6 +57,13 @@ var controller_target = function ($scope) {
         target_exists: function (_callback) {
             var _exists = false;
             $.trigger_callback(_callback, _exists);
+        },
+        get_set_title: function () {
+            var _date = new Date(new Date().getTime() - _target_offset_hours * 60 * 60 * 1000);
+            var _month = _date.getMonth() + 1;
+            var _day = _date.getDate();
+            var _title = "設定" + _month + "月" + _day + "日目標";
+            return _title;
         }
     };
 };

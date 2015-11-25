@@ -1,6 +1,6 @@
 var db_profile = function ($scope) {
     
-    $scope.profile_table_name = "profile";
+    var _table_name = "profile";
     
     //$scope.profile_name = "AAAA";
     
@@ -14,7 +14,7 @@ var db_profile = function ($scope) {
             return this;
         }
         
-        $scope.DB.table_exists($scope.profile_table_name, function (_result) {
+        $scope.DB.table_exists(_table_name, function (_result) {
             _callback(_result);
         });
         return this;
@@ -26,12 +26,16 @@ var db_profile = function ($scope) {
      * 在名稱改變時使用，或是按下確定時使用
      */
     $scope.set_profile_to_db = function () {
-        $scope.DB.insert_or_update_one($scope.profile_table_name, $scope.profile);
+        $scope.DB.insert_or_update_one(_table_name, $scope.profile);
     };
     
     $scope.setup_profile = function () {
-        $scope.DB.create_table($scope.profile_table_name, $.array_keys($scope.profile), function () {
+        $scope.DB.create_table(_table_name, $.array_keys($scope.profile), function () {
             $scope.set_profile_to_db();
         });
+    };
+    
+    $scope.profile_reset = function () {
+        $scope.DB.drop_table(_table_name);
     };
 };
