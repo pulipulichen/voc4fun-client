@@ -83,7 +83,7 @@ var controller_target = function ($scope) {
             };
         }
         
-        $.console_trace("enter_from_profile", $scope.target_data);
+        //$.console_trace("enter_from_profile", $scope.target_data);
         
         $scope.ctl_target.period_target_exists(function (_today_exists) {
             $scope.ctl_target.period_target_exists(-1, function(_yesterday_exists) {
@@ -112,6 +112,7 @@ var controller_target = function ($scope) {
      * @returns {undefined}
      */
     $scope.ctl_target.period_target_exists = function (_offset, _callback) {
+        
         if (typeof(_offset) === "function") {
             _callback = _offset;
             _offset = 0;
@@ -120,6 +121,7 @@ var controller_target = function ($scope) {
         var _file_name = "controller_target.js";
         var _function_name = "$scope.ctl_target.set_target()";
         
+        var _exists = true;
         $scope.db_log.get_last_log({
             "file_name": _file_name,
             "function_name": _function_name,

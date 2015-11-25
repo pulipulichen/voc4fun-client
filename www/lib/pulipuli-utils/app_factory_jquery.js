@@ -7,7 +7,7 @@ var _app_factory_jquery_utils = function ($scope) {
      */
     $.console_trace = function (_heading, _msg) {
         if (typeof(_msg) !== "undefined") {
-            _heading = "[" + _heading + "]";
+            _heading = "===" + _heading + "====================================";
         }
         console.trace(_heading);
         if (typeof(_msg) !== "undefined") {

@@ -13,7 +13,7 @@ var db_log = function ($scope) {
      * 那記錄的時間就會是-1天
      * @type Number
      */
-    var _debug_log_day_offset = 0;
+    var _debug_log_day_offset = -1;
     
     setTimeout(function () {
         //$scope.db_log.reset();
@@ -126,7 +126,7 @@ var db_log = function ($scope) {
     $scope.db_log.get_timestamp = function (_offset) {
         var _timestamp = (new Date()).getTime();
         
-        if (_debug_log_day_offset > 0) {
+        if (_debug_log_day_offset !== 0) {
             _timestamp = _timestamp + _debug_log_day_offset * 24 * 60 * 60 * 1000;
         }
         if (typeof(_offset) === "number") {
@@ -146,7 +146,7 @@ var db_log = function ($scope) {
             if (_where_sql !== "") {
                 _where_sql = _where_sql + " AND ";
             }
-            _where_sql = _where_sql + " timestamp > " + _max_time;
+            _where_sql = _where_sql + " timestamp < " + _max_time;
         }
         return _where_sql;
     };
