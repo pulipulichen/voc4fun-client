@@ -3,7 +3,7 @@
 var _app_ready = function ($scope) {
     ons.ready(function () {
 
-        $scope.setSwipeable(false);
+        $scope.set_swipeable(false);
         
         // 如果要刪除profile，則執行這個
         //$scope.profile_reset();
@@ -15,7 +15,9 @@ var _app_ready = function ($scope) {
                     app.navi.replacePage("profile.html", {animation: 'none'});
                 }
                 else {
-                    $scope.ctl_target.enter_from_profile(false);
+                    //$scope.ctl_target.enter_from_profile(false);
+                    $scope.set_swipeable(true);
+                    app.navi.replacePage("learn_flashcard.html", {animation: 'none'});
                 }
             });
         });

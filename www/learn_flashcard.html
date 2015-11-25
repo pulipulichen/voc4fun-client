@@ -1,0 +1,36 @@
+<ons-page id="learn_flashcard_html" ng-device-backbutton="app.menu.open()">
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <i class="ion-navicon"></i>
+                </span>
+            </ons-toolbar-button>
+        </div>
+
+        <div class="center">單字學習</div>
+
+        <div class="right">
+            {{ target_data.learn_flashcard.done }} / {{ target_data.learn_flashcard.target }}
+        </div>
+
+    </ons-toolbar>
+
+    <div class="flashcard" style="margin: 0 22px; border: 1px solid #DDD; border-radius: 5px;">
+        <ons-row class="q" style="padding:1rem; text-align: center;display: block;">
+            {{ learn_flashcard.q }}
+        </ons-row>
+        <ons-row class="a" style="border-top: 1px solid #DDD; background-color: #EEE;padding: 1rem;text-align: center;display: block;">
+            {{ learn_flashcard.a }}
+        </ons-row>
+    </div>
+    
+    <ons-row class="note" style="">
+        {{ learn_flashcard.note }}
+    </ons-row>
+    
+    <span>{{ learn_flashcard.other_note_count }}</span>
+    
+    
+    
+</ons-page>

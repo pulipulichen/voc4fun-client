@@ -75,7 +75,7 @@ var db_log = function ($scope) {
      *      "callback"
      * }
      */
-    $scope.db_log.get_last_log = function (_opt) {
+    $scope.db_log.get_latest_log = function (_opt) {
         var _file_name = $.parse_opt(_opt, "file_name");
         var _function_name = $.parse_opt(_opt, "function_name");
         var _qualifier = $.parse_opt(_opt, "qualifier");
@@ -112,6 +112,52 @@ var db_log = function ($scope) {
                 _data = JSON.parse(_row[0].data);
             }
             $.trigger_callback(_callback, _data);
+        });
+    };
+    
+    /**
+     * @param {type} _opt = {
+     *      "file_name"
+     *      "function_name"
+     *      "qualifier"
+     *      "where_sql"
+     *      "min_timestamp"
+     *      "max_timestamp"
+     *      "callback"
+     * }
+     */
+    $scope.db_log.count_log = function (_opt) {
+        var _file_name = $.parse_opt(_opt, "file_name");
+        var _function_name = $.parse_opt(_opt, "function_name");
+        var _qualifier = $.parse_opt(_opt, "qualifier");
+        var _where_sql = $.parse_opt(_opt, "where_sql");
+        var _min_timestamp = $.parse_opt(_opt, "min_timestamp");
+        var _max_timestamp = $.parse_opt(_opt, "max_timestamp");
+        var _callback = $.parse_opt(_opt, "callback");
+        
+        if (typeof(_min_timestamp) === "number" 
+                || typeof(_max_timestamp) === "number" ) {
+            var _timestamp_where_sql = $scope.db_log.create_timestamp_where_sql(_min_timestamp, _max_timestamp);
+            if (_where_sql === undefined) {
+                _where_sql = _timestamp_where_sql;
+            }
+            else {
+                _where_sql = _where_sql + " AND " + _timestamp_where_sql;
+            }
+        }
+        
+        var _sql = "SELECT id FROM log "
+            + " WHERE file_name = '" +  _file_name + "'"
+            + " AND function_name = '" + _function_name + "' ";
+        if (_qualifier !== undefined) {
+            _sql = _sql + " AND qualifier = '" + _qualifier + "'";
+        }
+        if (_where_sql !== undefined) {
+            _sql = _sql + " AND " + _where_sql;
+        }
+        
+        $scope.DB.exec(_sql, function (_row) {
+            $.trigger_callback(_callback, _row.length);
         });
     };
     

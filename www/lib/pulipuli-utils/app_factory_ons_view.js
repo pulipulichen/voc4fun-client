@@ -125,7 +125,7 @@ var _app_factory_ons_view = function ($scope) {
         });
     };
     
-    $scope.setSwipeable = function (_swipeable) {
+    $scope.set_swipeable = function (_swipeable) {
         app.menu.setSwipeable(_swipeable);
         var _body = $("body");
         var _classname = "main-full";
