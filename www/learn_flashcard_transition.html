@@ -20,12 +20,12 @@
         <ons-row class="q"
                  style="padding:1rem; text-align: center;display: block;background-color: white; cursor: pointer">
             <i class="ion-radio-waves" style="float:right;font-size: 1.5rem;margin-right: 0.5rem;color:#999"></i>
-            {{ learn_flashcard_flip.q}}
+            {{ ctl_learn_flashcard.var.learn_flashcard_transition.q}}
         </ons-row>
         <ons-row class="a"
                  style="border-top: 1px solid #DDD; background-color: #EEE;padding: 1rem;text-align: center;display: block;cursor: pointer" >
             <i class="ion-radio-waves" style="float:right;font-size: 1.5rem;margin-right: 0.5rem;color:#999"></i>
-            {{ learn_flashcard_flip.a}}
+            {{ ctl_learn_flashcard.var.learn_flashcard_transition.a}}
         </ons-row>
     </div>
 
@@ -34,12 +34,12 @@
          background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;">
         <div style="clear: both;">
             <i class="ion-compose" style="float:left;font-size: 2rem;margin-right: 0.5rem;"></i>
-            {{ learn_flashcard_flip.note}}
+            {{ ctl_learn_flashcard.var.learn_flashcard_transition.note}}
         </div>
 
         <span class="notification" style="float: right;margin-top: 0.5rem;">
             其他人的筆記:
-            {{ learn_flashcard_flip.other_note_count}}
+            {{ ctl_learn_flashcard.var.learn_flashcard_transition.other_note_count}}
         </span>
     </div>
 
