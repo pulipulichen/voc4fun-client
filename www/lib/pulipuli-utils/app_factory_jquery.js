@@ -115,11 +115,36 @@ var _app_factory_jquery_utils = function ($scope) {
      * @param {type} _ary
      * @returns {$.array_random_splice._ary}
      */
-    $.array_random_splice = function (_ary) {
+    $.array_random_splice = function (_ary, _exclude_item) {
         // 先取的陣列中隨機的ID
         var _index = $.array_get_random_index(_ary);
         var _item = _ary[_index];
+        if (_exclude_count !== undefined) {
+            var _exclude_count = 0;
+            while (_item === _exclude_item) {
+                _exclude_count++;
+                if (_exclude_count === _ary.length) {
+                    // 表示陣列全部都是重複的
+                    break;
+                }
+
+                _index++;
+                if (_index === _ary.length) {
+                    _index = 0;
+                }
+                _item = _ary[_index];
+            }
+        }
+            
+        
         _ary.splice(_index, 1);
         return _item;
     };
+    
+    $.clone_json = function (_json, _from_json) {
+        for (var _j in _from_json) {
+            _json[_j] = _from_json[_j];
+        }
+        return _json;
+    }
 };

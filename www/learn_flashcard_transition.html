@@ -1,4 +1,4 @@
-<ons-page id="learn_flashcard_flip_html" ng-device-backbutton="app.menu.open()">
+<ons-page id="learn_flashcard_transition_html" ng-device-backbutton="app.menu.open()">
     <ons-toolbar>
         <div class="left">
             <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
@@ -19,13 +19,15 @@
     <div class="flashcard" style="margin: 0 1rem; border: 1px solid #DDD; border-radius: 4px;">
         <ons-row class="q"
                  style="padding:1rem; text-align: center;display: block;background-color: white; cursor: pointer">
-            <i class="ion-radio-waves" style="float:right;font-size: 1.5rem;margin-right: 0.5rem;color:#999"></i>
+            <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
             {{ ctl_learn_flashcard.var.learn_flashcard_transition.q}}
+            <i class="ion-radio-waves" style="float:right;font-size: 1.5rem;margin-right: 0.5rem;color:#999"></i>
         </ons-row>
         <ons-row class="a"
                  style="border-top: 1px solid #DDD; background-color: #EEE;padding: 1rem;text-align: center;display: block;cursor: pointer" >
-            <i class="ion-radio-waves" style="float:right;font-size: 1.5rem;margin-right: 0.5rem;color:#999"></i>
+            <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
             {{ ctl_learn_flashcard.var.learn_flashcard_transition.a}}
+            <i class="ion-radio-waves" style="float:right;font-size: 1.5rem;margin-right: 0.5rem;color:#999"></i>
         </ons-row>
     </div>
 
@@ -44,12 +46,11 @@
     </div>
 
     <ons-tabbar>
-        <ons-tab label="上一個單字" icon="ion-arrow-up-b" 
-                 ng-click="ctl_learn_flashcard.prev();"></ons-tab>
+        <ons-tab label="上一個單字" icon="ion-arrow-up-b"
+                 ng-show="(ctl_learn_flashcard.status.history_index > 0)"></ons-tab>
         <ons-tab label="進入測驗" icon="ion-ios-compose" 
                  ng-show="(ctl_activity.is_learn_enough() === true)"></ons-tab>
-        <ons-tab label="下一個單字" icon="ion-arrow-down-b" active="true" 
-                 ng-click="ctl_learn_flashcard.next();"></ons-tab>
+        <ons-tab label="下一個單字" icon="ion-arrow-down-b" active="true"></ons-tab>
     </ons-tabbar>
 
 </ons-page>

@@ -44,13 +44,14 @@
             {{ ctl_learn_flashcard.var.learn_flashcard.other_note_count}}
         </span>
     </div>
-
+    
     <ons-tabbar>
         <ons-tab label="上一個單字" icon="ion-arrow-up-b" 
-                 ng-click="ctl_learn_flashcard.prev();"></ons-tab>
+                 ng-click="ctl_learn_flashcard.prev();" 
+                 ng-show="(ctl_learn_flashcard.status.history_index > 0)"></ons-tab>
         <ons-tab label="進入測驗" icon="ion-ios-compose" 
                  ng-show="(ctl_activity.is_learn_enough() === true)"></ons-tab>
-        <ons-tab label="下一個單字" icon="ion-arrow-down-b" active="true" 
+        <ons-tab label="下一個單字" icon="ion-arrow-down-b" 
                  ng-click="ctl_learn_flashcard.next();"></ons-tab>
     </ons-tabbar>
 

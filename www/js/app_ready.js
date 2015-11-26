@@ -16,6 +16,7 @@ var _app_ready = function ($scope) {
                 //app.navi.replacePage("note.html", {animation: 'none'}); return this;
 
                 // 20151126
+                //$scope.ctl_learn_flashcard.status.review_stack = [6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11];
                 $scope.ctl_activity.enter_from_target();
                 return this;
                 
