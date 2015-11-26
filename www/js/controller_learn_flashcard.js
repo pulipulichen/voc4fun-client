@@ -82,16 +82,22 @@ var controller_learn_flashcard = function ($scope) {
 
     _ctl.next = function (_callback, _do_animation) {
         //var _flashcard = _var._learn_flashcard_mock_b;
+
+        var _trans_callback = function (_flashcard) {
+            if (_do_animation === undefined || _do_animation !== false) {
+                _ctl._transition_next(_flashcard, _callback);
+            }
+            else {
+                _var.learn_flashcard = _flashcard;
+                $.trigger_callback(_callback);
+            }
+        };
+
         if (_ctl.is_last_of_stack() === true) {
             var _push_history_stack = function (_flashcard) {
                 _status.history_stack.push(_flashcard.id);
                 _status.history_index++;
-                if (_do_animation === undefined || _do_animation !== false) {
-                    _ctl._transition_next(_flashcard, _callback);
-                }
-                else {
-                    $.trigger_callback(_callback);
-                }
+                _trans_callback(_flashcard);
                 //$.trigger_callback(_callback);
             };
             if (_ctl.get_new_flashcard_type() === "new") {
@@ -102,40 +108,31 @@ var controller_learn_flashcard = function ($scope) {
             }
         }
         else {
+            $.console_trace("不是最後一個的情況")
             _status.history_index++;
-            var _id = _status.history_index;
-            _ctl.set_flashcard(_id, function (_flashcard) {
-                if (_do_animation === undefined || _do_animation !== false) {
-                    _ctl._transition_next(_flashcard, _callback);
-                }
-                else {
-                    $.trigger_callback(_callback);
-                }
+            _ctl.set_history_flashcard(function (_flashcard) {
+                _trans_callback(_flashcard);
             });
         }
     };
 
+    var _page = "learn_flashcard.html";
+    var _trans_page = "learn_flashcard_transition.html";
+
     _ctl._transition_next = function (_flashcard, _callback) {
-        //$.console_trace("_transition_next");
-        //$.clone_json(_var.learn_flashcard_transition, _flashcard);
-        _var.learn_flashcard_transition = _flashcard;
-        //setTimeout(function () {
-            
-        
-        app.navi.replacePage("learn_flashcard_transition.html", {
-            "animation": "lift",
-            "onTransitionEnd": function () {
-                //$.clone_json(_var.learn_flashcard, _flashcard);
+
+        $scope.ons_view.transition_next({
+            "page": _page,
+            "trans_page": _trans_page,
+            "set_trans_page": function () {
+                _var.learn_flashcard_transition = _flashcard;
+            },
+            "set_page": function () {
                 _var.learn_flashcard = _flashcard;
-                app.navi.replacePage("learn_flashcard.html", {
-                    "animation": "none",
-                    "onTransitionEnd": _callback
-                });
-            }
+            },
+            "animtation": "lift",
+            "callback": _callback
         });
-        
-        //}, 100);
-        //$.trigger_callback(_callback);
     };
 
     _ctl.prev = function (_callback) {
@@ -148,18 +145,18 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     _ctl._transition_prev = function (_flashcard, _callback) {
-        _var.learn_flashcard_transition = _var.learn_flashcard;
 
-        app.navi.pushPage("learn_flashcard_transition.html", {
-            "animation": "none",
-            "onTransitionEnd": function () {
+        $scope.ons_view.transition_prev({
+            "page": _page,
+            "trans_page": _trans_page,
+            "set_trans_page": function () {
+                _var.learn_flashcard_transition = _var.learn_flashcard;
+            },
+            "set_page": function () {
                 _var.learn_flashcard = _flashcard;
-                $scope.$digest();
-                app.navi.popPage({
-                    "animation": "lift",
-                    "onTransitionEnd": _callback
-                });
-            }
+            },
+            "animtation": "lift",
+            "callback": _callback
         });
     };
 
@@ -243,20 +240,20 @@ var controller_learn_flashcard = function ($scope) {
         $scope.DB.exec(_sql, function (_data) {
             var _flashcard;
             if (_data.length > 0) {
-                _var.learn_flashcard.q = _data[0].q;
-                _var.learn_flashcard.a = _data[0].a;
-                _var.learn_flashcard.note = _data[0].note;
+                //_var.learn_flashcard.q = _data[0].q;
+                //_var.learn_flashcard.a = _data[0].a;
+                //_var.learn_flashcard.note = _data[0].note;
                 _flashcard = _data[0];
             }
             $.trigger_callback(_callback, _flashcard);
         });
     };
-    
+
     _ctl.set_history_flashcard = function (_callback) {
         var _id = _ctl.get_current_flashcard_id();
         return _ctl.set_flashcard(_id, _callback);
     };
-    
+
     _ctl.get_current_flashcard_id = function () {
         return _status.history_stack[_status.history_index];
     };

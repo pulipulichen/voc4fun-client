@@ -1,29 +1,42 @@
 var controller_test_select = function ($scope) {
     
-    $scope.test_select_status = {
+    var _ctl = {};
+    
+    // ------------------------------
+    
+    var _var = {
+        "question": "",
+        "answer": [],
+        "correct_index": 0
+    };
+    
+    _ctl.var = _var;
+    
+    // ----------------------------------------
+    
+    var _status = {
         stack: [],
         error_stack: [],
         index: 0
     };
     
+    _ctl.status = _status;
+    
     // --------------------
     
-    $scope.ctl_test_select = {};
-    
-    $scope.ctl_test_select.enter = function () {
-        app.navi.replacePage("test_select.html");
+    _ctl.enter = function () {
+        _ctl.next(function () {
+            app.navi.replacePage("test_select.html");
+        }, false);
     };
     
-    $scope.ctl_test_select.init = function (_callback) {
+    _ctl.next = function (_callback, _do_animation) {
         $.trigger_callback(_callback);
     };
     
-    $scope.ctl_test_select.next = function (_callback) {
+    _ctl.prev = function (_callback) {
         $.trigger_callback(_callback);
     };
     
-    $scope.ctl_test_select.prev = function (_callback) {
-        $.trigger_callback(_callback);
-    };
-    
+    $scope.ctl_test_select = _ctl;
 };

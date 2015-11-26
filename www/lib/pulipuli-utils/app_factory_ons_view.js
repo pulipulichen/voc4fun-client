@@ -143,4 +143,73 @@ var _app_factory_ons_view = function ($scope) {
         $scope.setup_menu_swipeable();
         $scope.setup_back_hotkey(document.backbutton);
     });
+    
+    // --------------------------------
+    
+    var _ons_view = {};
+    
+    /**
+     * @TODO 20151127 轉變特效失敗 #46
+     * @param {JSON} _opt
+     */
+    _ons_view.transition_next = function (_opt) {
+        var _page = $.parse_opt(_opt, "page");
+        var _trans_page = $.parse_opt(_opt, "trans_page");
+        var _set_trans_page = $.parse_opt(_opt, "set_trans_page");
+        var _set_page = $.parse_opt(_opt, "set_page");
+        var _animation = $.parse_opt(_opt, "animation", "lift");
+        var _callback = $.parse_opt(_opt, "callback");
+        
+        $.trigger_callback(_set_trans_page);
+        
+        
+        app.navi.replacePage(_trans_page, {
+            "animation": _animation,
+            "onTransitionEnd": function () {    
+                $.trigger_callback(_set_page);
+                app.navi.replacePage(_page, {
+                    "animation": "none",
+                    "onTransitionEnd": _callback
+                });
+            }
+        });
+        
+        
+        setTimeout(function () {
+            //$scope.$digest();
+        }, 500);
+    };
+    
+    /**
+     * @TODO 20151127 轉變特效失敗 #46
+     * @param {JSON} _opt
+     */
+    _ons_view.transition_prev = function (_opt) {
+        var _page = $.parse_opt(_opt, "page");
+        var _trans_page = $.parse_opt(_opt, "trans_page");
+        var _set_trans_page = $.parse_opt(_opt, "set_trans_page");
+        var _set_page = $.parse_opt(_opt, "set_page");
+        var _animation = $.parse_opt(_opt, "animation", "lift");
+        var _callback = $.parse_opt(_opt, "callback");
+        
+        $.trigger_callback(_set_trans_page);
+        
+        app.navi.pushPage(_trans_page, {
+            "animation": "none",
+            "onTransitionEnd": function () {
+                //$.trigger_callback(_set_page);
+                //$scope.$digest();
+                app.navi.popPage({
+                    "animation": _animation,
+                    "onTransitionEnd": _callback
+                });
+            }
+        });
+        setTimeout(function () {
+            $.trigger_callback(_set_page);
+            $scope.$digest();
+        }, 100);
+    };
+    
+    $scope.ons_view = _ons_view;
 };
