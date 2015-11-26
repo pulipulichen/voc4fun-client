@@ -4,9 +4,7 @@ var controller_flashcard = function ($scope) {
     var _source_file_name = "data/flashcard.xlsx";
 
     var _db_name = "flashcard";
-    var _db_fields = [
-        "q", "a"
-    ];
+    var _db_fields = ["q", "a", "note"];
 
     $scope.flashcard_setup = function (_callback) {
         // 從xlsx讀取資料
