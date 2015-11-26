@@ -10,27 +10,38 @@
 
         <div class="center">單字學習</div>
 
-        <div class="right">
-            {{ target_data.learn_flashcard.done }} / {{ target_data.learn_flashcard.target }}
+        <div class="right" style="line-height: 44px;">
+            {{ target_data.learn_flashcard.done}} / {{ target_data.learn_flashcard.target}}
         </div>
 
     </ons-toolbar>
 
-    <div class="flashcard" style="margin: 0 22px; border: 1px solid #DDD; border-radius: 5px;">
-        <ons-row class="q" style="padding:1rem; text-align: center;display: block;">
-            {{ learn_flashcard.q }}
+    <div class="flashcard" style="margin: 0 1rem; border: 1px solid #DDD; border-radius: 4px;">
+        <ons-row class="q" style="padding:1rem; text-align: center;display: block;background-color: white;">
+            {{ learn_flashcard.q}}
         </ons-row>
         <ons-row class="a" style="border-top: 1px solid #DDD; background-color: #EEE;padding: 1rem;text-align: center;display: block;">
-            {{ learn_flashcard.a }}
+            {{ learn_flashcard.a}}
         </ons-row>
     </div>
-    
-    <ons-row class="note" style="">
-        {{ learn_flashcard.note }}
-    </ons-row>
-    
-    <span>{{ learn_flashcard.other_note_count }}</span>
-    
-    
+
+    <div class="note" style=" margin:1rem;   padding: 1rem;    border-radius: 4px;border: 1px solid #ddd;
+         background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;">
+        <div style="clear: both;">
+            <i class="ion-compose" style="float:left;font-size: 2rem;margin-right: 0.5rem;"></i>
+            {{ learn_flashcard.note}}
+        </div>
+
+        <span class="notification" style="float: right;margin-top: 0.5rem;">
+            其他人的筆記:
+            {{ learn_flashcard.other_note_count}}
+        </span>
+    </div>
+
+    <ons-tabbar>
+        <ons-tab label="上一個單字" icon="ion-arrow-left-b"></ons-tab>
+        <ons-tab label="進入測驗" icon="ion-ios-compose"></ons-tab>
+        <ons-tab label="下一個單字" icon="ion-arrow-right-b" active="true"></ons-tab>
+    </ons-tabbar>
     
 </ons-page>

@@ -3,6 +3,9 @@
 var _app_ready = function ($scope) {
     ons.ready(function () {
 
+        app.navi.replacePage("test_select.html", {animation: 'none'});
+        return this;
+        
         $scope.set_swipeable(false);
         
         // 如果要刪除profile，則執行這個
@@ -15,9 +18,9 @@ var _app_ready = function ($scope) {
                     app.navi.replacePage("profile.html", {animation: 'none'});
                 }
                 else {
-                    //$scope.ctl_target.enter_from_profile(false);
-                    $scope.set_swipeable(true);
-                    app.navi.replacePage("learn_flashcard.html", {animation: 'none'});
+                    $scope.ctl_target.enter_from_profile(false);
+                    //$scope.set_swipeable(true);
+                    //app.navi.replacePage("learn_flashcard.html", {animation: 'none'});
                 }
             });
         });

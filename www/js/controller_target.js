@@ -129,7 +129,7 @@ var controller_target = function ($scope) {
         var _function_name = "$scope.ctl_target.set_target()";
         
         var _exists = true;
-        $scope.db_log.get_lastest_log({
+        $scope.db_log.get_latest_log({
             "file_name": _file_name,
             "function_name": _function_name,
             "min_timestamp": $scope.ctl_target.get_period_start_timestamp(_offset),

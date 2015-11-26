@@ -95,11 +95,15 @@ var db_log = function ($scope) {
             }
         }
         
+        _file_name = $scope.db_log._create_where_sql("file_name", _file_name);
+        _function_name = $scope.db_log._create_where_sql("function_name", _function_name);
+        _qualifier = $scope.db_log._create_where_sql("qualifier", _qualifier);
+        
         var _sql = "SELECT data FROM log "
-            + " WHERE file_name = '" +  _file_name + "'"
-            + " AND function_name = '" + _function_name + "' ";
-        if (_qualifier !== undefined) {
-            _sql = _sql + " AND qualifier = '" + _qualifier + "'";
+            + " WHERE " + _file_name
+            + " AND " + _function_name;
+        if (_qualifier !== "") {
+            _sql = _sql + " AND " + _qualifier;
         }
         if (_where_sql !== undefined) {
             _sql = _sql + " AND " + _where_sql;
@@ -113,6 +117,24 @@ var db_log = function ($scope) {
             }
             $.trigger_callback(_callback, _data);
         });
+    };
+    
+    $scope.db_log._create_where_sql = function (_field_name, _data) {
+        var _sql = "";
+        if (typeof(_data) === "string") {
+            _sql = " " + _field_name + " = '" +  _data + "' ";
+        }
+        else if ($.is_array(_data)) {
+            var _sql = " (";
+            for (var _i = 0; _i < _data.length; _i++) {
+                if (_i > 0) {
+                    _sql = _sql + " OR ";
+                }
+                _sql = _sql + " " + _field_name + " = '" + _data[_i] + "' ";
+            }
+            _sql = _sql + ") ";
+        }
+        return _sql;
     };
     
     /**
@@ -146,11 +168,15 @@ var db_log = function ($scope) {
             }
         }
         
-        var _sql = "SELECT id FROM log "
-            + " WHERE file_name = '" +  _file_name + "'"
-            + " AND function_name = '" + _function_name + "' ";
-        if (_qualifier !== undefined) {
-            _sql = _sql + " AND qualifier = '" + _qualifier + "'";
+        _file_name = $scope.db_log._create_where_sql("file_name", _file_name);
+        _function_name = $scope.db_log._create_where_sql("function_name", _function_name);
+        _qualifier = $scope.db_log._create_where_sql("qualifier", _qualifier);
+        
+        var _sql = "SELECT data FROM log "
+            + " WHERE " + _file_name
+            + " AND " + _function_name;
+        if (_qualifier !== "") {
+            _sql = _sql + " AND " + _qualifier;
         }
         if (_where_sql !== undefined) {
             _sql = _sql + " AND " + _where_sql;

@@ -1,0 +1,23 @@
+<ons-page ng-device-backbutton="app.navi.popPage('main.html')">
+
+    <ons-toolbar>
+        
+        <div class="left">
+            <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <i class="ion-navicon"></i>
+                </span>
+            </ons-toolbar-button>
+        </div>
+
+        <div class="center">測驗</div>
+        
+        <div class="right" style="line-height: 44px;">
+            {{ target_data.learn_flashcard.done}} / {{ target_data.learn_flashcard.target}}
+        </div>
+    </ons-toolbar>
+    
+    
+
+
+</ons-page>

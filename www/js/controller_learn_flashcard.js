@@ -17,7 +17,7 @@ var controller_learn_flashcard = function ($scope) {
             app.navi.replacePage("learn_flashcard.html");
         });
     };
-    
+     
     $scope.ctl_learn_flashcard.init = function (_callback) {
         $.trigger_callback(_callback);
     };
