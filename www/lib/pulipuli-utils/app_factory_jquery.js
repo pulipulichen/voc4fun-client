@@ -102,4 +102,24 @@ var _app_factory_jquery_utils = function ($scope) {
         }
         return;
     };
+    
+    $.array_get_random_index = function (_ary) {
+        return Math.floor(Math.random()*_ary.length);
+    };
+    
+    /**
+     * 從陣列中取出隨機的一個，然後把它從陣列中移除
+     * 例如陣列是 [1, 2, 3, 4]
+     * 隨機取出3
+     * 陣列被修改為 [1, 2, 4]
+     * @param {type} _ary
+     * @returns {$.array_random_splice._ary}
+     */
+    $.array_random_splice = function (_ary) {
+        // 先取的陣列中隨機的ID
+        var _index = $.array_get_random_index(_ary);
+        var _item = _ary[_index];
+        _ary.splice(_index, 1);
+        return _item;
+    };
 };
