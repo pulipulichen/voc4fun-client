@@ -1,0 +1,25 @@
+<ons-page id="note_html" ng-device-backbutton="app.navi.popPage('main.html')">
+
+    <ons-toolbar>
+        
+        <div class="left">
+            <ons-toolbar-button ng-click="app.navi.popPage()">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <i class="ion-android-arrow-back"></i>
+                </span>
+            </ons-toolbar-button>
+        </div>
+
+        <div class="center">筆記</div>
+        
+        <div class="right" style="line-height: 44px;">
+            {{ target_data.take_note.done}} / {{ target_data.take_note.target}}
+        </div>
+    </ons-toolbar>
+    
+    <ons-row>
+        {{ learn_flashcard.q }} / {{ learn_flashcard.a }}
+    </ons-row>
+
+
+</ons-page>

@@ -24,8 +24,8 @@
         </ons-list-item>
     </ons-list>
 
-    <div class="bottom-bar bottom-bar-button">
-        <div class="bottom-bar__line-height button-ok" onclick="$(this).parents('form').submit();">
+    <div class="bottom-bar bottom-bar-button" ng-click="ctl_activity.enter_from_target();">
+        <div class="bottom-bar__line-height button-ok">
             {{ "ONS_OK" | translate }}
         </div>
     </div>

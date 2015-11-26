@@ -196,6 +196,7 @@ var controller_target = function ($scope) {
         var _log_data = {};
         for (var _key in $scope.target_data) {
             var _target = _form.find('input[target_key="' + _key + '"]').val();
+            _target = parseInt(_target, 10);
             $scope.target_data[_key].target = _target;
             _log_data[_key] = _target;
         }

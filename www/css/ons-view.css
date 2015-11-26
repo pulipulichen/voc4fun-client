@@ -123,3 +123,7 @@ ons-page .bottom-bar-button {
     cursor: pointer;
     text-align: center;
 }
+
+ons-tabbar {
+    z-index: -1;
+}

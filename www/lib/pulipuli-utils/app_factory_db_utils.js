@@ -25,15 +25,32 @@ var _app_factory_db_utils = function ($scope) {
     };
 
     $scope.DB.drop_table = function (_table_name, _success_callback) {
-        return $scope.DB.table_exists(_table_name, function (_exists) {
-            if (_exists === true) {
-                var _sql = 'DROP TABLE ' + _table_name;
-                $scope.DB.exec(_sql, _success_callback);
-            }
-            else {
-                $.trigger_callback(_success_callback);
-            }
-        });
+        if ($.is_array(_table_name)) {
+            var _loop = function (_i) {
+                if (_i < _table_name.length) {
+                    $scope.DB.drop_table(_table_name[_i], function () {
+                        _i++;
+                        _loop(_i);
+                    });
+                }
+                else {
+                    $.trigger_callback(_success_callback);
+                }
+            };
+            _loop(0);
+            return this;
+        }
+        else {
+            return $scope.DB.table_exists(_table_name, function (_exists) {
+                if (_exists === true) {
+                    var _sql = 'DROP TABLE ' + _table_name;
+                    $scope.DB.exec(_sql, _success_callback);
+                }
+                else {
+                    $.trigger_callback(_success_callback);
+                }
+            });
+        }
     };
 
     $scope.DB.empty_table = function (_table_name, _success_callback) {
@@ -47,7 +64,7 @@ var _app_factory_db_utils = function ($scope) {
             }
         });
     };
-    
+
     $scope.DB.table_exists = function (_table_name, _success_callback) {
         if (typeof (_success_callback) !== "function") {
             return this;
@@ -65,7 +82,7 @@ var _app_factory_db_utils = function ($scope) {
         });
         return this;
     };
-    
+
     $scope.DB.row_exists = function (_table_name, _callback) {
         return $scope.DB.table_exists(_table_name, function (_exists) {
             if (_exists === false) {
@@ -78,7 +95,7 @@ var _app_factory_db_utils = function ($scope) {
             });
         });
     };
-    
+
     $scope.DB.exec = function (_sql, _success_callback) {
         var _ = this;
         console.log(_sql);
@@ -185,12 +202,12 @@ var _app_factory_db_utils = function ($scope) {
             if (_exists === false) {
                 return $.trigger_callback(_success_callback, 0);
             }
-            
-            if (typeof(_where_sql) === "function") {
+
+            if (typeof (_where_sql) === "function") {
                 _success_callback = _where_sql;
                 _where_sql = "";
             }
-            if (typeof(_where_sql) === "string" && _where_sql !== "") {
+            if (typeof (_where_sql) === "string" && _where_sql !== "") {
                 _where_sql = " WHERE " + _where_sql;
             }
             var _sql = "SELECT id FROM " + _table + _where_sql;
