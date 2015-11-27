@@ -14,6 +14,13 @@ var _app_factory_ons_utils = function ($scope, $filter) {
                 buttonLabel: $filter('translate')('ONS_OK')
             };
         }
+        
+        if (typeof(_opt.title) !== "string") {
+            _opt.title = $filter('translate')('ONS_TITLE');
+        }
+        if (typeof(_opt.buttonLabel) !== "string") {
+            _opt.buttonLabel = $filter('translate')('ONS_OK');
+        }
 
         ons.notification._alert(_opt);
     };
@@ -32,6 +39,13 @@ var _app_factory_ons_utils = function ($scope, $filter) {
                 message: _opt,
                 callback: _callback
             };
+        }
+        
+        if (typeof(_opt.title) !== "string") {
+            _opt.title = $filter('translate')('ONS_TITLE');
+        }
+        if (typeof(_opt.buttonLabels) !== "object") {
+            _opt.buttonLabels = [$filter('translate')('ONS_NO'), $filter('translate')('ONS_YES')];
         }
 
         ons.notification._confirm(_opt);

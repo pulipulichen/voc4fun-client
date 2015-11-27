@@ -56,6 +56,7 @@ var db_log = function ($scope) {
             qualifier: _qualifier,
             data: JSON.stringify(_data)
         };
+        $.console_trace(_insert_data);
         $scope.DB.insert(_log_db, _insert_data);
         return this;
     };

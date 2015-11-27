@@ -4,6 +4,8 @@ var controller_learn_flashcard = function ($scope) {
 
     var _ctl = {};
 
+    var _log_file = "controller_learn_flashcard.js";
+
     // ------------------------------
 
     var _var = {};
@@ -69,6 +71,7 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     _ctl.init = function (_callback) {
+        $scope.log(_log_file, "init()", undefined, _status);
         if (_status.history_stack.length > 0) {
             if (_status.history_index < 0) {
                 _status.history_index = 0;
@@ -83,12 +86,22 @@ var controller_learn_flashcard = function ($scope) {
     _ctl.next = function (_callback, _do_animation) {
         //var _flashcard = _var._learn_flashcard_mock_b;
 
+        var _log = function (_flashcard) {
+            $scope.log(_log_file, "next()", undefined, {
+                flashcard_q: _flashcard.q,
+                flashcard_index: _status.flashcard_index,
+                history_index: _status.history_index
+            });
+        };
+
         var _trans_callback = function (_flashcard) {
             if (_do_animation === undefined || _do_animation !== false) {
+                _log(_flashcard);
                 _ctl._transition_next(_flashcard, _callback);
             }
             else {
                 _var.learn_flashcard = _flashcard;
+                _log(_flashcard);
                 $.trigger_callback(_callback);
             }
         };
@@ -136,11 +149,23 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     _ctl.prev = function (_callback) {
+
+        var _log = function (_flashcard) {
+            $scope.log(_log_file, "prev()", undefined, {
+                flashcard_q: _flashcard.q,
+                flashcard_index: _status.flashcard_index,
+                history_index: _status.history_index
+            });
+        };
+
         //var _flashcard = _var._learn_flashcard_mock_a;
         _status.history_index--;
-        $.console_trace(_status.history_index);
+        //$.console_trace(_status.history_index);
         _ctl.set_history_flashcard(function (_flashcard) {
-            _ctl._transition_prev(_flashcard, _callback);
+            _ctl._transition_prev(_flashcard, function () {
+                _log(_flashcard);
+                $.trigger_callback(_callback);
+            });
         });
     };
 
@@ -161,17 +186,29 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     // 註冊
-    var _status_key = "learn_flashcard_status";
+    var _status_key = "learn_flashcard";
     _status_init = function () {
         return $scope.db_status.add_listener(_status_key
-                , function (_status) {
-                    _ctl.status = _status;
+                , function (_s) {
+                    $.clone_json(_ctl.status, _s);
                 }
         , function () {
+            _ctl.clean_history_stack();
             return _status;
         });
     };
     _status_init();
+
+    var _max_history_stack_length = 50;
+    _ctl.clean_history_stack = function () {
+        if (_status.history_stack.length > _max_history_stack_length) {
+            var _stk = [];
+            for (var _h = _status.history_stack.length - _max_history_stack_length; _h < _status.history_stack.length; _h++) {
+                _stk.push(_status.history_stack[_h]);
+            }
+            _status.history_stack = _stk;
+        }
+    };
 
     // --------------------------------------------------------
 
@@ -184,6 +221,7 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     _ctl.get_new_flashcard_type = function () {
+        $.console_trace($scope.ctl_target.status);
         var _target = $scope.ctl_target.get_target_data("learn_flashcard");
         var _add_proportion = (_target.target - _target.done);
         if (_add_proportion < 0) {
@@ -193,7 +231,7 @@ var controller_learn_flashcard = function ($scope) {
         var _review_proportion = _status.review_stack.length;
 
         $.console_trace([_target, _add_probability, _review_proportion]);
-        $.console_trace($scope.ctl_target.status);
+
         if ((_add_probability + _review_proportion) === 0) {
             return "new";
         }
@@ -226,8 +264,9 @@ var controller_learn_flashcard = function ($scope) {
             }
             else {
                 // 完成新增
-                $scope.ctl_target.done_plus("learnflashcard");
-                
+                $scope.ctl_target.done_plus("learn_flashcard");
+                $scope.$digest();
+
                 $.trigger_callback(_callback, _row);
             }
         });
