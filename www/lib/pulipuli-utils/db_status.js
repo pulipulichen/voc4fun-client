@@ -11,6 +11,7 @@ var db_status = function ($scope) {
     var _ctl = {};
 
     _ctl.add_listener = function (_key, _open_callback, _close_callback) {
+        //$.console_trace("status add_listener", [_key]);
         var _listener = {};
         _listener.key = _key;
         if (typeof (_open_callback) === "function") {
@@ -63,7 +64,7 @@ var db_status = function ($scope) {
 
         var _status;
         for (var _l = 0; _l < _listeners.length; _l++) {
-            if (typeof (_listeners[_l].close_callback) === "function") {
+            if (typeof (_listeners[_l].close_callback) === "function" && _listeners[_l].key === _key) {
                 _status = _listeners[_l].close_callback();
                 _status = JSON.stringify(_status);
                 break;

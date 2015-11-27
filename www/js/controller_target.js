@@ -21,7 +21,8 @@ var controller_target = function ($scope) {
         },
         {
             "key": "take_note",
-            "default_target": 20,
+            //"default_target": 20,
+            "default_target": 2,
             "min": 0,
             "max": 100,
             "title": "撰寫筆記",
@@ -31,7 +32,8 @@ var controller_target = function ($scope) {
         },
         {
             "key": "test_select",
-            "default_target": 30,
+            //"default_target": 30,
+            "default_target": 3,
             "min": 0,
             "max": 100,
             "title": "答對測驗",
@@ -237,20 +239,19 @@ var controller_target = function ($scope) {
     };
 
     // 註冊
-    _ctl.status_init = function () {
+    var _init_status = function () {
         return $scope.db_status.add_listener(
                 _status_key,
                 function (_s) {
-
-                    $.clone_json(_ctl.status, _s);
-                    //_ctl.status = _s;
-                    //_status = _s;
+                    //$.clone_json(_ctl.status, _s);
+                    _ctl.status = _s;
+                    _status = _s;
                 },
                 function () {
                     return _ctl.status;
                 });
     };
-    _ctl.status_init();
+    _init_status();
 
     _ctl.show_help = function (_key) {
         var _setting = $scope.ctl_target._get_setting(_key);
@@ -272,7 +273,8 @@ var controller_target = function ($scope) {
     _ctl.get_target = function (_key) {
         //$.console_trace(_key);
         var _setting = _ctl._get_setting(_key);
-        var _target = _setting.default_target;
+        var _target_data = _ctl.get_target_data(_key);
+        var _target = _target_data.target;
         if (_target < _setting.min) {
             _target = _setting.min;
         }
@@ -365,6 +367,12 @@ var controller_target = function ($scope) {
         //$.console_trace(typeof(_status[_key]), _key);
         if (typeof (_status[_key]) === "object") {
             return _status[_key];
+        }
+        else {
+            // 如果沒有資料
+            $.console_trace("Lost target status");
+            //app.navi.replacePage("target_init.html");
+            $scope.ctl_target.enter_from_profile(false);
         }
     };
 

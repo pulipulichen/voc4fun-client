@@ -18,7 +18,7 @@
     </ons-toolbar>
 
     <div class="question" style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; cursor: pointer;
-         background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;">
+         background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;text-align: center;">
         {{ _test_select.question }}
         
     </div>
@@ -40,7 +40,7 @@
                           ng-show="ctl_test_select.is_answered() === false || _test_select.answer !== $index"></ons-icon>
                 <ons-icon icon="ion-ios-circle-filled" fixed-width="true"
                           ng-show="ctl_test_select.is_answered() && _test_select.answer === $index"></ons-icon>
-                {{ option }}
+                {{ option.q }}
         </ons-list-item>
     </ons-list>
 
@@ -60,14 +60,18 @@
         </div>
     </div>
     
-    <div>{{ _test_select }}</div>
-    <div>{{ ctl_test_select.status }}</div>
+    <!--
+    <div style="border: 1px solid red; margin-bottom: 1rem;">_test_select: {{ _test_select }}</div>
+    <div style="border: 1px solid red; margin-bottom: 1rem;">ctl_test_select.status: {{ ctl_test_select.status }}</div>
+    <div style="border: 1px solid red; margin-bottom: 1rem;">ctl_learn_flashcard.status: {{ ctl_learn_flashcard.status }}</div>
+    -->
 
     <ons-tabbar ng-show="ctl_test_select.is_answered()">
         <ons-tab label="回到單字學習" icon="ion-ios-browsers-outline" 
-                 ng-show="(ctl_activity.is_test_enough() === true)"></ons-tab>
-        <ons-tab label="下一個測驗" icon="ion-arrow-down-b" 
-                 ng-click="ctl_learn_flashcard.next();"></ons-tab>
+                 ng-show="(ctl_activity.is_test_enough() === true || (ctl_test_select.status.stack.length === 0))"
+                 ng-click="ctl_learn_flashcard.enter()"></ons-tab>
+        <ons-tab label="下一個測驗" icon="ion-arrow-down-b"
+                 ng-click="ctl_test_select.next();"></ons-tab>
     </ons-tabbar>
 
 </ons-page>

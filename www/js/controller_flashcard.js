@@ -15,6 +15,7 @@ var controller_flashcard = function ($scope) {
                 XLSX.ajax_loader(_source_file_name, function (_data) {
                     //$.console_log(_data);
                     _status.flashcard_count = _data.length;
+                    $scope.db_status.save_status(_status_key);
                     _data = $.array_shuffle(_data);
                     //$.console_log(_data);
                     $scope.DB.insert(_db_name, _data, _callback);
@@ -49,7 +50,8 @@ var controller_flashcard = function ($scope) {
         return $scope.db_status.add_listener(
                 _status_key,
                 function (_s) {
-                    $.clone_json(_ctl.status, _s);
+                    _ctl.status = _s;
+                    _status = _s;
                 },
                 function () {
                     return _ctl.status;
@@ -70,6 +72,53 @@ var controller_flashcard = function ($scope) {
             }
             $.trigger_callback(_callback, _flashcard);
         });
+    };
+    
+    _ctl.get_other_flashcards = function (_exclude_id, _length, _callback) {
+        
+        var _other_cards = [];
+        
+        var _random_index = [];
+        var _max_index = _status.flashcard_count - 1;
+        
+        if (_max_index > _length) {
+            while (_random_index.length < _length) {
+                var _i = Math.floor(Math.random() * _max_index);
+                
+                while ($.inArray(_i, _random_index) !== -1) {
+                    _i++;
+                    if (_i === _max_index) {
+                        _i = 0;
+                    }
+                }
+                
+                _random_index.push(_i);
+            }
+        }
+        else {
+            for (var _i = 0; _i < _max_index; _i++) {
+                _random_index.push(_i + 1);
+            }
+        }
+        
+        //_random_index = [0, 5];
+        //$.console_trace("random_index", _random_index);
+        
+        var _loop = function (_i) {
+            if (_i < _random_index.length) {
+                var _sql = "SELECT * FROM flashcard WHERE id != " + _exclude_id + " LIMIT " + _random_index[_i] + ", 1";
+                $scope.DB.exec(_sql, function (_row) {
+                    _other_cards.push(_row[0]);
+                    _i++;
+                    _loop(_i);
+                });
+            }
+            else {
+                $.trigger_callback(_callback, _other_cards);
+            }
+        };
+        
+        _loop(0);
     };
     
     // -----------------------

@@ -28,7 +28,7 @@ var controller_activity = function ($scope) {
         if (typeof(_target_data) === "undefined") {
             return false;
         }
-        //$.console_trace("enter_from_target", _target_data);
+        //$.console_trace("is_test_enough", _target_data);
         return !(_target_data.test_select.done < _target_data.test_select.target);
     };
     

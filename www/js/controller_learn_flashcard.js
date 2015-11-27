@@ -14,8 +14,8 @@ var controller_learn_flashcard = function ($scope) {
         q: "",
         a: "",
         note: "",
-        other_note_count: 0,
-        other_note: []
+        other_note: [],
+        other_note_loaded: false
     };
 
     _var.learn_flashcard_transition = {};
@@ -35,6 +35,21 @@ var controller_learn_flashcard = function ($scope) {
         other_note_count: 0,
         other_note: []
     };
+
+    _var._other_note_mock = [
+        {
+            "name": "同學A",
+            "note": "心得A"
+        },
+        {
+            "name": "同學B",
+            "note": "心得B"
+        },
+        {
+            "name": "同學C",
+            "note": "心得C"
+        }
+    ];
 
     _ctl.var = _var;
 
@@ -76,7 +91,12 @@ var controller_learn_flashcard = function ($scope) {
             if (_status.history_index < 0) {
                 _status.history_index = 0;
             }
-            _ctl.set_history_flashcard(_callback);
+            $.console_trace("init get from history");
+            _ctl.set_history_flashcard(function (_flashcard) {
+                _var.learn_flashcard = _flashcard;
+                $.trigger_callback(_callback);
+            });
+            _ctl.other_note_ajax();
         }
         else {
             _ctl.next(_callback, false);
@@ -86,12 +106,15 @@ var controller_learn_flashcard = function ($scope) {
     _ctl.next = function (_callback, _do_animation) {
         //var _flashcard = _var._learn_flashcard_mock_b;
 
+        _ctl.other_note_reset();
         var _log = function (_flashcard) {
             $scope.log(_log_file, "next()", undefined, {
                 flashcard_q: _flashcard.q,
                 flashcard_index: _status.flashcard_index,
                 history_index: _status.history_index
             });
+            $scope.db_status.save_status(_status_key);
+            _ctl.other_note_ajax();
         };
 
         var _trans_callback = function (_flashcard) {
@@ -147,15 +170,20 @@ var controller_learn_flashcard = function ($scope) {
             "callback": _callback
         });
     };
+    
+    // -----------------------------
 
     _ctl.prev = function (_callback) {
 
+        _ctl.other_note_reset();
         var _log = function (_flashcard) {
             $scope.log(_log_file, "prev()", undefined, {
                 flashcard_q: _flashcard.q,
                 flashcard_index: _status.flashcard_index,
                 history_index: _status.history_index
             });
+            $scope.db_status.save_status(_status_key);
+            _ctl.other_note_ajax();
         };
 
         //var _flashcard = _var._learn_flashcard_mock_a;
@@ -179,6 +207,7 @@ var controller_learn_flashcard = function ($scope) {
             },
             "set_page": function () {
                 _var.learn_flashcard = _flashcard;
+                $.console_trace("_transition_prev 設定完了");
             },
             "animtation": "lift",
             "callback": _callback
@@ -191,7 +220,9 @@ var controller_learn_flashcard = function ($scope) {
         return $scope.db_status.add_listener(
                 _status_key,
                 function (_s) {
-                    $.clone_json(_ctl.status, _s);
+                    //$.clone_json(_ctl.status, _s);
+                    _ctl.status = _s;
+                    _status = _s;
                 },
                 function () {
                     _ctl.clean_history_stack();
@@ -297,11 +328,37 @@ var controller_learn_flashcard = function ($scope) {
 
     _ctl.set_history_flashcard = function (_callback) {
         var _id = _ctl.get_current_flashcard_id();
+//        return $scope.ctl_flashcard.get_flashcard(_id, function (_flashcard) {
+//            if (_flashcard !== undefined) {
+//                _var.learn_flashcard.q = _flashcard.q;
+//                _var.learn_flashcard.a = _flashcard.a;
+//                _var.learn_flashcard.note = _flashcard.note;
+//            }
+//            $.trigger_callback(_callback, _flashcard);
+//        });
         return $scope.ctl_flashcard.get_flashcard(_id, _callback);
     };
 
     _ctl.get_current_flashcard_id = function () {
         return _status.history_stack[_status.history_index];
+    };
+
+    // --------------------------------------------------
+
+    _ctl.other_note_ajax = function (_callback) {
+        var _id = _ctl.get_current_flashcard_id();
+        setTimeout(function () {
+            _var.learn_flashcard.other_note = _var._other_note_mock;
+            _var.learn_flashcard.other_note_loaded = true;
+            $scope.$digest();
+            $.console_trace("other_note_ajax " + _var.learn_flashcard.other_note_loaded);
+            $.trigger_callback(_callback);
+        }, 1000);
+    };
+
+    _ctl.other_note_reset = function () {
+        _var.learn_flashcard.other_note = [];
+        _var.learn_flashcard.other_note_loaded = false;
     };
 
     $scope.ctl_learn_flashcard = _ctl;

@@ -98,7 +98,7 @@ var _app_factory_db_utils = function ($scope) {
 
     $scope.DB.exec = function (_sql, _success_callback) {
         var _ = this;
-        $.console_trace(_sql);
+        //$.console_trace(_sql);
         this.db.transaction(function (_tx) {
             _tx.executeSql(_sql, [], function (_tx, _results) {
                 if (typeof (_success_callback) === "function") {

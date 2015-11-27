@@ -106,6 +106,20 @@ var _app_factory_jquery_utils = function ($scope) {
     $.array_get_random_index = function (_ary) {
         return Math.floor(Math.random()*_ary.length);
     };
+
+    /**
+     * max = 3
+     * min = 0
+     * math = 1
+     *  
+     */
+    $.get_random = function (_min, _max) {
+        if (_min !== 0 && _max === undefined) {
+            _max = _min;
+            _min = 0;
+        }
+        return (Math.floor(Math.random()* (_max - _min) ) + min);
+    };
     
     /**
      * 從陣列中取出隨機的一個，然後把它從陣列中移除
@@ -146,7 +160,7 @@ var _app_factory_jquery_utils = function ($scope) {
         var _index = $.array_get_random_index(_ary);
         var _item = _ary[_index];
         
-        if (_exclude_count !== undefined) {
+        if (_exclude_item !== undefined) {
             var _exclude_count = 0;
             while (_item === _exclude_item) {
                 _exclude_count++;
@@ -170,5 +184,32 @@ var _app_factory_jquery_utils = function ($scope) {
             _json[_j] = _from_json[_j];
         }
         return _json;
-    }
+    };
+    
+    $.array_slice_element = function (_ele, _ary) {
+        var _i = $.inArray(_ele, _ary);
+        if (_i > -1) {
+            _ary.splice(_i, 1);
+        }
+        return _ary;
+    };
+
+    $.array_merge_if_same = function (_ary) {
+        if (_ary.length > 1) {
+            var _first_ele = _ary[0];
+            var _all_same = true;
+
+            for (var _i = 1; _i < _ary.length; _i++) {
+                if (_first_ele !== _ary[_i]) {
+                    _all_same = false;
+                    break;
+                }
+            } 
+
+            if (_all_same === true) {
+                _ary = [_first_ele];
+            }
+        }
+        return _ary;
+    };
 };
