@@ -14,8 +14,8 @@ var controller_activity = function ($scope) {
     };
     
     $scope.ctl_activity.is_learn_enough = function () {
-        var _target_data = $scope.ctl_target.get_target_data("learn_flashcard");
-        if (typeof(_target_data.learn_flashcard) === "undefined") {
+        var _target_data = $scope.ctl_target.status;
+        if (typeof(_target_data) === "undefined") {
             return false;
         }
         //$.console_trace("enter_from_target", _target_data);

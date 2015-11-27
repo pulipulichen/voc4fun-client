@@ -322,7 +322,7 @@ var controller_target = function ($scope) {
         if (typeof(_status[_key]) === "object") {
             _status[_key].done++;
             
-            $scope.log(_log_file, "done_plus", undefined, _status[_key]);
+            $scope.log(_log_file, "done_plus", undefined, _status[_key].done);
         }
         return this;
     };
@@ -337,11 +337,9 @@ var controller_target = function ($scope) {
     };
     
     _ctl.get_target_data = function (_key) {
+        $.console_trace(typeof(_status[_key]), _key);
         if (typeof(_status[_key]) === "object") {
             return _status[_key];
-        }
-        else {
-            return 0;
         }
     };
     

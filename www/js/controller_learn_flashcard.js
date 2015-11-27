@@ -192,6 +192,8 @@ var controller_learn_flashcard = function ($scope) {
 
         var _review_proportion = _status.review_stack.length;
 
+        $.console_trace([_target, _add_probability, _review_proportion]);
+        $.console_trace($scope.ctl_target.status);
         if ((_add_probability + _review_proportion) === 0) {
             return "new";
         }

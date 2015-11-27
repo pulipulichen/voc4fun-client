@@ -36,7 +36,14 @@
          background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;">
         <div style="clear: both;">
             <i class="ion-compose" style="float:left;font-size: 2rem;margin-right: 0.5rem;"></i>
-            {{ ctl_learn_flashcard.var.learn_flashcard.note}}
+            <span class="your-note">
+                {{ ctl_learn_flashcard.var.learn_flashcard.note }}
+            </span>
+            <span class="note-empty" style="color: gray;" ng-show="(ctl_learn_flashcard.var.learn_flashcard.note === '')">
+                您還沒有撰寫筆記
+            </span>
+            
+            
         </div>
 
         <span class="notification" style="float: right;margin-top: 0.5rem;">
