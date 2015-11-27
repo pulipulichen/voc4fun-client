@@ -1,17 +1,13 @@
 var controller_target = function ($scope) {
     
-    var _status_key = "target";
-
-    /**
-     * 重新計算的偏差值，單位是小時
-     * 
-     * 如果是偏差8小時，意思是每天早上8點重新計算
-     * @type Number
-     */
-    var _target_offset_hours = 8;
+    var _ctl = {};
+    
+    // ---------------------------
+    
+    var _var = {};
 
     // 目標的類型，可以修改
-    $scope.target_setting = [
+    _var.target_setting = [
         {
             "key": "learn_flashcard",
             "default_target": 30,
@@ -40,26 +36,52 @@ var controller_target = function ($scope) {
             "help": "設定每天目標答對的題目數量。\n題目都是三選一的選擇題。"
         }
     ];
-
-    $scope.target_data = {};
+        
     
-    $scope._target_data_mock = {
-        "learn": {
-            done: 0,
-            target: 30
-            
-        }
+    _var.target_help = {
+        help_img: "img/loading.svg",
+        help: ""
     };
 
-    // --------------------------
+    _ctl.var = _var;
+    
+    // ----------------------------------
+    
+    var _status = {};
+    
+    _ctl.status = _status;
+    
+    var _status_key = "target";
+    var _log_file = "controller_target.js";
+    
+    // -------------------------------------
+    
+    /**
+     * 重新計算的偏差值，單位是小時
+     * 
+     * 如果是偏差8小時，意思是每天早上8點重新計算
+     * @type Number
+     */
+    
+    
+//    $scope._target_data_mock = {
+//        "learn": {
+//            done: 0,
+//            target: 30
+//            
+//        }
+//    };
 
-    $scope.ctl_target = {};
-    $scope.ctl_target._init_target_data = function () {
-        for (var _i = 0; _i < $scope.target_setting.length; _i++) {
-            var _item = $scope.target_setting[_i];
+    // --------------------------
+    
+    var _target_offset_hours = 8;
+    
+    _ctl._init_target_data = function () {
+        for (var _i = 0; _i < _var.target_setting.length; _i++) {
+            var _item = _var.target_setting[_i];
             var _key = _item.key;
             var _target = _item.default_target;
-            $scope.target_data[_key] = {
+            _status[_key] = {
                 "done": 0,
                 "target": _target
             };
@@ -70,7 +92,7 @@ var controller_target = function ($scope) {
      * 
      * @param {boolean} _animate 是否要動畫
      */
-    $scope.ctl_target.enter_from_profile = function (_animation) {
+    _ctl.enter_from_profile = function (_animation) {
         
         if (_animation === false) {
             _animation = {
@@ -85,11 +107,11 @@ var controller_target = function ($scope) {
         
         //$.console_trace("enter_from_profile", $scope.target_data);
         
-        $scope.ctl_target.period_target_exists(function (_today_exists) {
-            $scope.ctl_target.period_target_exists(-1, function(_yesterday_exists) {
+        _ctl.period_target_exists(function (_today_exists) {
+            _ctl.period_target_exists(-1, function(_yesterday_exists) {
                 var _page = "target_view.html";
                 if (_today_exists === false) {
-                    $scope.ctl_target._init_target_data();
+                    _ctl._init_target_data();
                     if (_yesterday_exists === false) {
                         _page = "target_init.html";
                     }
@@ -101,7 +123,7 @@ var controller_target = function ($scope) {
                 //$scope.target_data.learn_flashcard.done = 50;
                 //$.console_trace(_animation);
                 if (_page === "target_recommend.html") {
-                    $scope.ctl_target.init_recommend_target_data(function () {
+                    _ctl.init_recommend_target_data(function () {
                         app.navi.replacePage(_page, _animation);
                     });
                 }
@@ -118,7 +140,7 @@ var controller_target = function ($scope) {
      * @param {type} _callback
      * @returns {undefined}
      */
-    $scope.ctl_target.period_target_exists = function (_offset, _callback) {
+    _ctl.period_target_exists = function (_offset, _callback) {
         
         if (typeof(_offset) === "function") {
             _callback = _offset;
@@ -132,8 +154,8 @@ var controller_target = function ($scope) {
         $scope.db_log.get_latest_log({
             "file_name": _file_name,
             "function_name": _function_name,
-            "min_timestamp": $scope.ctl_target.get_period_start_timestamp(_offset),
-            "max_timestamp": $scope.ctl_target.get_period_end_timestamp(_offset),
+            "min_timestamp": _ctl.get_period_start_timestamp(_offset),
+            "max_timestamp": _ctl.get_period_end_timestamp(_offset),
             "callback": function (_data) {
                 if (_data === undefined) {
                     _exists = false;
@@ -149,7 +171,7 @@ var controller_target = function ($scope) {
      * @param {Number} _offset 偏移天數
      * @returns {Number}
      */
-    $scope.ctl_target.get_period_start_timestamp = function (_offset) {
+    _ctl.get_period_start_timestamp = function (_offset) {
         var _timestamp = new Date().getTime() - _target_offset_hours * 60 * 60 * 1000;
         if (typeof(_offset) === "number") {
             _timestamp = _timestamp +  _offset * 24 * 60 * 60 * 1000;
@@ -163,13 +185,13 @@ var controller_target = function ($scope) {
      * @param {Number} _offset 偏移天數
      * @returns {Number}
      */
-    $scope.ctl_target.get_period_end_timestamp = function (_offset) {
-        var _timestamp = $scope.ctl_target.get_period_start_timestamp(_offset);
+    _ctl.get_period_end_timestamp = function (_offset) {
+        var _timestamp = _ctl.get_period_start_timestamp(_offset);
         _timestamp = _timestamp + 24 * 60 * 60 * 1000;
         return _timestamp;
     };
     
-    $scope.ctl_target._get_period_date = function () {
+    _ctl._get_period_date = function () {
         var _date = new Date(new Date().getTime() - _target_offset_hours * 60 * 60 * 1000);
         var _month = _date.getMonth() + 1;
         var _day = _date.getDate();
@@ -179,25 +201,25 @@ var controller_target = function ($scope) {
         };
     };
     
-    $scope.ctl_target.get_set_title = function () {
-        var _date = $scope.ctl_target._get_period_date();
+    _ctl.get_set_title = function () {
+        var _date = _ctl._get_period_date();
         var _title = "設定 " + _date.month + "月" + _date.day + "日 的目標";
         return _title;
     };
     
-    $scope.ctl_target.get_view_title = function () {
-        var _date = $scope.ctl_target._get_period_date();
+    _ctl.get_view_title = function () {
+        var _date = _ctl._get_period_date();
         var _title = _date.month + "月" + _date.day + "日的目標與進度";
         return _title;
     };
     
-    $scope.ctl_target.set_target = function ($event) {
+    _ctl.set_target = function ($event) {
         var _form = $($event.target);
         var _log_data = {};
-        for (var _key in $scope.target_data) {
+        for (var _key in _status) {
             var _target = _form.find('input[target_key="' + _key + '"]').val();
             _target = parseInt(_target, 10);
-            $scope.target_data[_key].target = _target;
+            _status[_key].target = _target;
             _log_data[_key] = _target;
         }
         
@@ -211,43 +233,37 @@ var controller_target = function ($scope) {
     };
     
     // 註冊
-    $scope.ctl_target.status_init = function () {
+    _ctl.status_init = function () {
         return $scope.db_status.add_listener(_status_key
             , function (_status) {
-                $scope.target_data = _status;
+                _ctl.status = _status;
             }
             , function () {
-                return $scope.target_data;
+                return _status;
         });
     };
-    $scope.ctl_target.status_init();
-        
+    _ctl.status_init();
     
-    $scope.target_help = {
-        help_img: "img/loading.svg",
-        help: ""
-    };
-    
-    $scope.ctl_target.show_help = function(_key) {
+    _ctl.show_help = function(_key) {
         var _setting = $scope.ctl_target._get_setting(_key);
-        $scope.target_help.help_img = _setting.help_img;
-        $scope.target_help.help = _setting.help;
+        _var.help_img = _setting.help_img;
+        _var.help = _setting.help;
         
         target_help_modal.show();
     };
     
-    $scope.ctl_target._get_setting = function (_key) {
-        for (var _i = 0; _i < $scope.target_setting.length; _i++) {
-            var _setting = $scope.target_setting[_i];
+    _ctl._get_setting = function (_key) {
+        for (var _i = 0; _i < _var.target_setting.length; _i++) {
+            var _setting = _var.target_setting[_i];
             if (_setting.key === _key) {
                 return _setting;
             }
         }
     };
     
-    $scope.ctl_target.get_target = function (_key) {
+    _ctl.get_target = function (_key) {
         //$.console_trace(_key);
-        var _setting = $scope.ctl_target._get_setting(_key);
+        var _setting = _ctl._get_setting(_key);
         var _target = _setting.default_target;
         if (_target < _setting.min) {
             _target = _setting.min;
@@ -258,7 +274,7 @@ var controller_target = function ($scope) {
         return _target;
     };
     
-    $scope.ctl_target.change_target_number = function ($event, _interval) {
+    _ctl.change_target_number = function ($event, _interval) {
         if (typeof(_interval) !== "number") {
             _interval = 1;
         }
@@ -277,9 +293,9 @@ var controller_target = function ($scope) {
         return this;
     };
     
-    $scope.recommend_target_data;
+    _var.recommend_target_data;
     
-    $scope._recommend_target_data_mock = {
+    _var._recommend_target_data_mock = {
             "learn_flashcard": {
                 last_done: 12,
                 last_target: 30,
@@ -297,8 +313,37 @@ var controller_target = function ($scope) {
             }
         };
     
-    $scope.ctl_target.init_recommend_target_data = function (_callback) {
-        $scope.recommend_target_data = $scope._recommend_target_data_mock;
+    _ctl.init_recommend_target_data = function (_callback) {
+        _var.recommend_target_data = _var._recommend_target_data_mock;
         $.trigger_callback(_callback);
     };
+    
+    _ctl.done_plus = function (_key) {
+        if (typeof(_status[_key]) === "object") {
+            _status[_key].done++;
+            
+            $scope.log(_log_file, "done_plus", undefined, _status[_key]);
+        }
+        return this;
+    };
+    
+    _ctl.get_done = function (_key) {
+        if (typeof(_status[_key]) === "object") {
+            return _status[_key].done;
+        }
+        else {
+            return 0;
+        }
+    };
+    
+    _ctl.get_target_data = function (_key) {
+        if (typeof(_status[_key]) === "object") {
+            return _status[_key];
+        }
+        else {
+            return 0;
+        }
+    };
+    
+    $scope.ctl_target = _ctl;
 };

@@ -184,7 +184,8 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     _ctl.get_new_flashcard_type = function () {
-        var _add_proportion = ($scope.target_data.learn_flashcard.target - $scope.target_data.learn_flashcard.done);
+        var _target = $scope.ctl_target.get_target_data("learn_flashcard");
+        var _add_proportion = (_target.target - _target.done);
         if (_add_proportion < 0) {
             _add_proportion = 0;
         }
@@ -222,7 +223,9 @@ var controller_learn_flashcard = function ($scope) {
                 _ctl.add_new_flashcard(_callback);
             }
             else {
-
+                // 完成新增
+                $scope.ctl_target.done_plus("learnflashcard");
+                
                 $.trigger_callback(_callback, _row);
             }
         });

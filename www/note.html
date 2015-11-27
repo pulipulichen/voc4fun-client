@@ -13,12 +13,12 @@
         <div class="center">筆記</div>
         
         <div class="right" style="line-height: 44px;">
-            {{ target_data.take_note.done}} / {{ target_data.take_note.target}}
+            {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
         </div>
     </ons-toolbar>
     
     <ons-row>
-        {{ learn_flashcard.q }} / {{ learn_flashcard.a }}
+        {{ ctl_learn_flashcard.var.q }} / {{ learn_flashcard.a }}
     </ons-row>
 
 
