@@ -5,11 +5,11 @@
         </ons-toolbar>
 
         <ons-list modifier="inset">
-            <ons-list-item ng-repeat="data in target_data">
-                <ons-row ng-init="setting = target_setting[$index];
-                    last_done = recommend_target_data[setting.key].last_done;
-                    last_target = recommend_target_data[setting.key].last_target;
-                    recommend_target = recommend_target_data[setting.key].recommend_target;">
+            <ons-list-item ng-repeat="data in ctl_target.status">
+                <ons-row ng-init="setting = ctl_target.var.target_setting[$index];
+                    last_done = ctl_target.var.recommend_target_data[setting.key].last_done;
+                    last_target = ctl_target.var.recommend_target_data[setting.key].last_target;
+                    recommend_target = ctl_target.var.recommend_target_data[setting.key].recommend_target;">
                     <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">
                         {{ setting.title}}
                         <ons-icon icon="ion-ios-help-outline" fixed-width="true"></ons-icon>

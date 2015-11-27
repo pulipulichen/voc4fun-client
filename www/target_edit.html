@@ -5,8 +5,8 @@
         </ons-toolbar>
 
         <ons-list modifier="inset">
-            <ons-list-item ng-repeat="data in target_data">
-                <ons-row ng-init="setting = target_setting[$index]">
+            <ons-list-item ng-repeat="data in ctl_target.status">
+                <ons-row ng-init="setting = ctl_target.var.target_setting[$index]">
                     <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">
                         {{ setting.title}}
                         <ons-icon icon="ion-ios-help-outline" fixed-width="true"></ons-icon>
