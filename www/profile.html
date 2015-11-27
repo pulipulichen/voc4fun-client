@@ -1,5 +1,5 @@
-<ons-page id="profile_html" ng-device-backbutton="exit_app()">
-    <form ng-submit="ctl_profile.submit()">
+<ons-page id="profile_html" ng-device-backbutton="exit_app()" ng-init="profile = db_profile.status">
+    <form ng-submit="db_profile.submit()">
         <ons-toolbar>
 
             <div class="center">{{ 'TITLE' | translate }}</div>

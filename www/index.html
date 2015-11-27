@@ -81,11 +81,11 @@
     <script src="lib/pulipuli-utils/db_log.js"></script>
     <script src="lib/pulipuli-utils/db_status.js"></script>
     
+    <script src="lib/pulipuli-utils/cordova_utils.js"></script>
     <script src="lib/pulipuli-utils/cordova_social_share.js"></script>
     <script src="lib/pulipuli-utils/cordova_inappbrowser_submit.js"></script>
     
     <script src="js/app_factory_db.js"></script>
-    <script src="js/controller_profile.js"></script>
     <script src="js/controller_flashcard.js"></script>
     <script src="js/controller_target.js"></script>
     <script src="js/controller_activity.js"></script>
@@ -119,6 +119,7 @@
             _app_factory_config($scope);
 
             _app_factory_db_utils($scope);
+            cordova_utils($scope);
             cordova_social_share($scope, $filter);
             cordova_inappbrowser_submit($scope);
             _app_factory_ons_view($scope);
@@ -126,11 +127,11 @@
             _app_factory_jquery_utils($scope);
 
             _app_factory_db($scope);
-            db_profile($scope);
+            
             db_log($scope);
             db_status($scope);
+            db_profile($scope);
             
-            controller_profile($scope);
             controller_flashcard($scope);
             controller_target($scope);
             controller_activity($scope);
@@ -139,8 +140,12 @@
             controller_test_select($scope);
             
             // -----------------------------------
-
-            _app_ready($scope);
+            
+            $scope.db_status.ready(function () {
+                ons.ready(function () {
+                    _app_ready($scope);
+                });
+            });
         }]);
     </script>
 
