@@ -257,7 +257,7 @@ var controller_learn_flashcard = function ($scope) {
         // 更新status
         _status.flashcard_index++;
         var _id = _status.flashcard_index;
-        _ctl.set_flashcard(_id, function (_flashcard) {
+        $scope.ctl_flashcard.get_flashcard(_id, function (_flashcard) {
             if (_flashcard === undefined) {
                 // 表示已經到了最後一列
                 _status.flashcard_index = 0;
@@ -278,26 +278,26 @@ var controller_learn_flashcard = function ($scope) {
         // 隨機從陣列中取出資料，並且移除該資料
         var _exclude_id = _ctl.get_current_flashcard_id();
         var _index = $.array_random_splice(_status.review_stack, _exclude_id);
-        _ctl.set_flashcard(_index, _callback);
+        $scope.ctl_flashcard.get_flashcard(_index, _callback);
     };
 
-    _ctl.set_flashcard = function (_id, _callback) {
-        var _sql = "SELECT * FROM flashcard WHERE id = " + _id;
-        $scope.DB.exec(_sql, function (_data) {
-            var _flashcard;
-            if (_data.length > 0) {
-                //_var.learn_flashcard.q = _data[0].q;
-                //_var.learn_flashcard.a = _data[0].a;
-                //_var.learn_flashcard.note = _data[0].note;
-                _flashcard = _data[0];
-            }
-            $.trigger_callback(_callback, _flashcard);
-        });
-    };
+//    _ctl.set_flashcard = function (_id, _callback) {
+//        var _sql = "SELECT * FROM flashcard WHERE id = " + _id;
+//        $scope.DB.exec(_sql, function (_data) {
+//            var _flashcard;
+//            if (_data.length > 0) {
+//                //_var.learn_flashcard.q = _data[0].q;
+//                //_var.learn_flashcard.a = _data[0].a;
+//                //_var.learn_flashcard.note = _data[0].note;
+//                _flashcard = _data[0];
+//            }
+//            $.trigger_callback(_callback, _flashcard);
+//        });
+//    };
 
     _ctl.set_history_flashcard = function (_callback) {
         var _id = _ctl.get_current_flashcard_id();
-        return _ctl.set_flashcard(_id, _callback);
+        return $scope.ctl_flashcard.get_flashcard(_id, _callback);
     };
 
     _ctl.get_current_flashcard_id = function () {

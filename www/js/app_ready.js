@@ -18,8 +18,9 @@ var _app_ready = function ($scope) {
 
                     // 20151126
                     //$scope.ctl_learn_flashcard.status.review_stack = [6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11];
-                    //$scope.ctl_test_select.status.stack = [1, 2, 3];
                     //$scope.ctl_activity.enter_from_target();return this;
+                    
+                    $scope.ctl_test_select.status.stack = [1, 2, 3];
                     $scope.ctl_test_select.next(false);return this;
                     
 

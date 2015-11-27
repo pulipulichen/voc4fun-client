@@ -31,9 +31,9 @@ var controller_test_select = function ($scope) {
     var _status_key = "test_select";
 
     var _status = {
-        stack: [],
+        stack: []
         //error_stack: [],
-        index: 0
+        //index: 0
     };
 
     var _init_status = function () {
@@ -154,6 +154,20 @@ var controller_test_select = function ($scope) {
             return true;
         }
     };
+    
+    _ctl.get_test_flashcard = function (_callback) {
+        // 從陣列中讀取
+        var _flashcard_id = $.array_get_random(_status.stack);
+        var _test_select = _var.test_select;
+        var _options = [];
+        $scope.ctl_flashcard.get_flashcard(_flashcard_id, function (_flashcard) {
+            _test_select.question = _flashcard.a;
+            _options.push(_flashcard.q);
+            
+        });
+    };
+
+    // -----------------------------------
 
     $scope.ctl_test_select = _ctl;
 };
