@@ -1,0 +1,74 @@
+<ons-page id="test_select_transition_html" ng-init="_test_select = ctl_test_select.var.test_select_transition">
+
+    <ons-toolbar>
+
+        <div class="left">
+            <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <i class="ion-navicon"></i>
+                </span>
+            </ons-toolbar-button>
+        </div>
+
+        <div class="center">測驗</div>
+
+        <div class="right" style="line-height: 44px;">
+            {{ ctl_target.status.test_select.done}} / {{ ctl_target.status.test_select.target}}
+        </div>
+    </ons-toolbar>
+
+    <div class="question" style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; cursor: pointer;
+         background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;text-align: center;">
+        {{ _test_select.question }}
+        
+    </div>
+
+    <ons-list class="options">
+        <ons-list-header>
+            請選擇答案：
+        </ons-list-header>
+
+        <ons-list-item modifier="tappable"
+                       ng-repeat="option in ctl_test_select.var.test_select.options"
+                       ng-class="
+                           {
+                               'correct': ctl_test_select.is_correct_answer($index), 
+                               'incorrect': ctl_test_select.is_incorrect_answer($index), 
+                           }">
+                <ons-icon icon="ion-ios-circle-outline" fixed-width="true"
+                          ng-show="ctl_test_select.is_answered() === false || _test_select.answer !== $index"></ons-icon>
+                <ons-icon icon="ion-ios-circle-filled" fixed-width="true"
+                          ng-show="ctl_test_select.is_answered() && _test_select.answer === $index"></ons-icon>
+                {{ option.q }}
+        </ons-list-item>
+    </ons-list>
+
+    <div ng-show="(ctl_test_select.var.test_select.answer !== undefined)">
+        <div class="result correct" 
+             ng-show="(ctl_test_select.var.test_select.answer === ctl_test_select.var.test_select.correct)"
+             style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd;
+             background-color: green;color:white;max-height: 10rem; overflow-y: auto;">
+            答對了！
+        </div>
+
+        <div class="result incorrect" 
+             ng-show="(ctl_test_select.var.test_select.answer !== ctl_test_select.var.test_select.correct)"
+             style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd;
+             background-color: red;color:white;max-height: 10rem; overflow-y: auto;">
+            答錯了！
+        </div>
+    </div>
+    
+    <!--
+    <div style="border: 1px solid red; margin-bottom: 1rem;">_test_select: {{ _test_select }}</div>
+    <div style="border: 1px solid red; margin-bottom: 1rem;">ctl_test_select.status: {{ ctl_test_select.status }}</div>
+    <div style="border: 1px solid red; margin-bottom: 1rem;">ctl_learn_flashcard.status: {{ ctl_learn_flashcard.status }}</div>
+    -->
+
+    <ons-tabbar ng-show="ctl_test_select.is_answered()">
+        <ons-tab label="回到單字學習" icon="ion-ios-browsers-outline" 
+                 ng-show="(ctl_activity.is_test_enough() === true || (ctl_test_select.status.stack.length === 0))"></ons-tab>
+        <ons-tab label="下一個測驗" icon="ion-arrow-down-b"></ons-tab>
+    </ons-tabbar>
+
+</ons-page>

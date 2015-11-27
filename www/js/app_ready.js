@@ -1,8 +1,7 @@
 /*global ons:false */
 /*global app:false */
 var _app_ready = function ($scope) {
-//    ons.ready(function () {
-
+    
     $scope.set_swipeable(false);
 
     // 如果要刪除profile，則執行這個

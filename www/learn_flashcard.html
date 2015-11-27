@@ -10,8 +10,10 @@
 
         <div class="center">單字學習</div>
 
-        <div class="right" style="line-height: 44px;">
-            {{ ctl_target.status.learn_flashcard.done}} / {{ ctl_target.status.learn_flashcard.target}}
+        <div class="right" style="line-height: 44px;" 
+             ng-init="_target_data = ctl_target.status.learn_flashcard" 
+             ng-class="{'target-completed': (ctl_target.status.learn_flashcard.done > ctl_target.status.learn_flashcard.target-1)}">
+            {{ _target_data.done}} / {{ _target_data.target}}
         </div>
 
     </ons-toolbar>
@@ -58,9 +60,11 @@
         </span>
     </div>
 
+    <!--
     <div>_learn_flashcard.other_note_loaded: {{_learn_flashcard.other_note_loaded}} </div>
     <div style="border: 1px solid red; margin-bottom: 1rem;">_learn_flashcard: {{ _learn_flashcard}}</div>
     <div style="border: 1px solid red; margin-bottom: 1rem;">ctl_learn_flashcard.status: {{ ctl_learn_flashcard.status}}</div>
+    -->
 
     <ons-tabbar>
         <ons-tab label="上一個單字" icon="ion-arrow-up-b" 
