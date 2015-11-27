@@ -1,3 +1,6 @@
+# GITHUB Issues
+https://github.com/pulipulichen/voc4fun-client/issues
+
 # Onsen UI 快速參照
 http://onsen.io/2/reference/css.html
 

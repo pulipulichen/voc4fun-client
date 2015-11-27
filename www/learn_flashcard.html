@@ -1,4 +1,4 @@
-<ons-page id="learn_flashcard_html" ng-device-backbutton="main_back()" ng-init="_learn_flashcard = ctl_learn_flashcard.var.learn_flashcard">
+<ons-page id="learn_flashcard_html" class="learn-flashcard-page" ng-device-backbutton="main_back()" ng-init="_learn_flashcard = ctl_learn_flashcard.var.learn_flashcard">
     <ons-toolbar>
         <div class="left">
             <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
@@ -48,12 +48,12 @@
         </div>
 
         <span class="notification" style="float: right;margin-top: 0.5rem;">
-            <span ng-show="_learn_flashcard.other_note_loaded === false" >
+            <span class="load-icon">
                 <ons-icon icon="ion-load-a"/>
             </span>
-            <span ng-show="_learn_flashcard.other_note_loaded !== false">
+            <span class="notification-text" style="display: none;">
                 其他人的筆記:
-                {{ _learn_flashcard.other_note.length}}
+                <span class="count"></span>
             </span>
         </span>
     </div>
