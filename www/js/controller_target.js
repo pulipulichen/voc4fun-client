@@ -238,16 +238,17 @@ var controller_target = function ($scope) {
 
     // 註冊
     _ctl.status_init = function () {
-        return $scope.db_status.add_listener(_status_key
-                , function (_s) {
+        return $scope.db_status.add_listener(
+                _status_key,
+                function (_s) {
 
                     $.clone_json(_ctl.status, _s);
                     //_ctl.status = _s;
                     //_status = _s;
-                }
-        , function () {
-            return _ctl.status;
-        });
+                },
+                function () {
+                    return _ctl.status;
+                });
     };
     _ctl.status_init();
 

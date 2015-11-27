@@ -188,14 +188,15 @@ var controller_learn_flashcard = function ($scope) {
     // 註冊
     var _status_key = "learn_flashcard";
     _status_init = function () {
-        return $scope.db_status.add_listener(_status_key
-                , function (_s) {
+        return $scope.db_status.add_listener(
+                _status_key,
+                function (_s) {
                     $.clone_json(_ctl.status, _s);
-                }
-        , function () {
-            _ctl.clean_history_stack();
-            return _status;
-        });
+                },
+                function () {
+                    _ctl.clean_history_stack();
+                    return _status;
+                });
     };
     _status_init();
 
@@ -256,8 +257,8 @@ var controller_learn_flashcard = function ($scope) {
         // 更新status
         _status.flashcard_index++;
         var _id = _status.flashcard_index;
-        _ctl.set_flashcard(_id, function (_row) {
-            if (_row === undefined) {
+        _ctl.set_flashcard(_id, function (_flashcard) {
+            if (_flashcard === undefined) {
                 // 表示已經到了最後一列
                 _status.flashcard_index = 0;
                 _ctl.add_new_flashcard(_callback);
@@ -265,9 +266,10 @@ var controller_learn_flashcard = function ($scope) {
             else {
                 // 完成新增
                 $scope.ctl_target.done_plus("learn_flashcard");
+                $scope.ctl_test_select.add_test_stack(_flashcard.id);
                 $scope.$digest();
 
-                $.trigger_callback(_callback, _row);
+                $.trigger_callback(_callback, _flashcard);
             }
         });
     };
