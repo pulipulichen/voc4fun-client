@@ -4,5 +4,8 @@ http://onsen.io/2/reference/css.html
 ## JavaScript
 http://onsen.io/reference/javascript.html
 
+## Patterns
+http://onsen.io/patterns.html
+
 ## IonIcons
 http://ionicons.com/

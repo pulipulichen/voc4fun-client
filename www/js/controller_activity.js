@@ -5,7 +5,7 @@ var controller_activity = function ($scope) {
         $scope.set_swipeable(true);
         
         if ( $scope.ctl_activity.is_learn_enough() ) {
-            $scope.ctl_test_select.enter();
+            $scope.ctl_test_select.next(false);
         }
         else {
             $scope.ctl_learn_flashcard.enter();
@@ -21,6 +21,15 @@ var controller_activity = function ($scope) {
         //$.console_trace("enter_from_target", _target_data);
         return (!(_target_data.learn_flashcard.done < _target_data.learn_flashcard.target)
                 || (_target_data.test_select.done > _target_data.test_select.target));
+    };
+    
+    $scope.ctl_activity.is_test_enough = function () {
+        var _target_data = $scope.ctl_target.status;
+        if (typeof(_target_data) === "undefined") {
+            return false;
+        }
+        //$.console_trace("enter_from_target", _target_data);
+        return !(_target_data.test_select.done < _target_data.test_select.target);
     };
     
     /**

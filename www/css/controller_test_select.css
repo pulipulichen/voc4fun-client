@@ -1,0 +1,7 @@
+#test_select_html .options .correct {
+    background-color: green;
+}
+
+#test_select_html .options .incorrect {
+    background-color: red;
+}
