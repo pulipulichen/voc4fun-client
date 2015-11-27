@@ -68,7 +68,7 @@
                  ng-show="(ctl_learn_flashcard.status.history_index > 0)"></ons-tab>
         <ons-tab label="進入測驗" icon="ion-ios-compose" 
                  ng-show="(ctl_activity.is_learn_enough() === true)"
-                 ng-click="ctl_test_select.next();" ></ons-tab>
+                 ng-click="ctl_test_select.next(true);" ></ons-tab>
         <ons-tab label="下一個單字" icon="ion-arrow-down-b" 
                  ng-click="ctl_learn_flashcard.next();"></ons-tab>
     </ons-tabbar>

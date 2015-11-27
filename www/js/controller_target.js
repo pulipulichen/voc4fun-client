@@ -11,7 +11,7 @@ var controller_target = function ($scope) {
         {
             "key": "learn_flashcard",
             //"default_target": 30,
-            "default_target": 5,
+            "default_target": 3,
             "min": 0,
             "max": 100,
             "title": "學習單字",
@@ -336,6 +336,8 @@ var controller_target = function ($scope) {
                 key: _key,
                 done: _status[_key].done
             });
+            
+            $scope.db_status.save_status(_status_key);
 
             _ctl.complate_target(_key);
         }
@@ -346,10 +348,12 @@ var controller_target = function ($scope) {
         if (_status[_key].done === _status[_key].target) {
             var _setting = _ctl._get_setting(_key);
             var _title = _setting.title + "已經完成";
-            ons.notification.alert({
-                title: _title,
-                message: _setting.complete_message
-            });
+            setTimeout(function () {
+                ons.notification.alert({
+                    title: _title,
+                    message: _setting.complete_message
+                });
+            }, 500);
             $scope.log(_log_file, "complate_target", undefined, _status[_key]);
         }
     };

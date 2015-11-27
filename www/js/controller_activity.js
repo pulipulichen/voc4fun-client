@@ -4,7 +4,8 @@ var controller_activity = function ($scope) {
     $scope.ctl_activity.enter_from_target = function () {
         $scope.set_swipeable(true);
         
-        if ( $scope.ctl_activity.is_learn_enough() ) {
+        if ( $scope.ctl_activity.is_learn_enough() 
+                && $scope.ctl_activity.is_test_enough() === false ) {
             $scope.ctl_test_select.next(false);
         }
         else {
