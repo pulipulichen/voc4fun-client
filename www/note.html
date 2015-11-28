@@ -1,4 +1,5 @@
-<ons-page id="note_html" ng-device-backbutton="app.navi.popPage('main.html')">
+<ons-page id="note_html" ng-device-backbutton="app.navi.popPage()"
+          ng-init="_learn_flashcard = ctl_learn_flashcard.var.learn_flashcard">
 
     <ons-toolbar>
         
@@ -10,16 +11,24 @@
             </ons-toolbar-button>
         </div>
 
-        <div class="center">筆記</div>
+        <div class="center">{{ _learn_flashcard.q }} 筆記</div>
         
         <div class="right" style="line-height: 44px;">
             {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
         </div>
     </ons-toolbar>
     
-    <ons-row>
-        {{ ctl_learn_flashcard.var.q }} / {{ learn_flashcard.a }}
-    </ons-row>
+    <div class="flashcard" 
+         style="margin: 0 1rem; border: 1px solid #DDD; border-radius: 4px; text-align: center;">
+        {{ _learn_flashcard.q }} / {{ _learn_flashcard.a }}
+    </div>
 
+    <ons-row>
+        <textarea class="note textarea textarea--transparent" placeholder="撰寫筆記..."
+                  ng-keyup="ctl_note.auto_grow($event)"
+         style=" margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #000; 
+         background-color: #f9f9f9; overflow-y: auto;width: 100%;">{{ _learn_flashcard.note }}</textarea>
+    </ons-row>
+    
 
 </ons-page>

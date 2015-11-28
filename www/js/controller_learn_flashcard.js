@@ -91,7 +91,7 @@ var controller_learn_flashcard = function ($scope) {
             if (_status.history_index < 0) {
                 _status.history_index = 0;
             }
-            $.console_trace("init get from history");
+            //$.console_trace("init get from history");
             _ctl.set_history_flashcard(function (_flashcard) {
                 _var.learn_flashcard = _flashcard;
                 $.trigger_callback(_callback);
