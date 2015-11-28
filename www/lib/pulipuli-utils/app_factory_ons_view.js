@@ -104,12 +104,12 @@ var _app_factory_ons_view = function ($scope) {
             app.menu.close();
         }
     };
-    
+
+    var _swipeable_width = $scope.swipeable_width;
+    var _menu_swipeable = true;
     $scope.setup_menu_swipeable = function () {
-        var _swipeable_width = $scope.swipeable_width;
-        var _menu_swipeable = true;
         $(window).resize(_detect_menu_swipeable);
-        _set_menu_swipeable();
+        _detect_menu_swipeable();
     };
 
     /**
