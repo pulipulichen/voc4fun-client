@@ -282,8 +282,8 @@ var controller_target = function ($scope) {
 
     _ctl.show_help = function (_key) {
         var _setting = $scope.ctl_target._get_setting(_key);
-        _var.help_img = _setting.help_img;
-        _var.help = _setting.help;
+        _var.target_help.help_img = _setting.help_img;
+        _var.target_help.help = _setting.help;
 
         target_help_modal.show();
     };

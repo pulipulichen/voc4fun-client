@@ -17,7 +17,7 @@ var _app_ready = function ($scope) {
         //$scope.ctl_activity.enter_from_target();return this;
 
         // 測試：進入單字學習頁面
-        $scope.ctl_learn_flashcard.enter();return this;
+        //$scope.ctl_learn_flashcard.enter();return this;
         
 //        setTimeout(function () {
 //
