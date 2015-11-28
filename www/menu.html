@@ -5,12 +5,13 @@
              ng-click="ctl_target.enter_from_menu();menu_click($event);">
             {{ db_profile.status.name}} 
             <br />
-            進度完成 <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 
+            {{ 'TARGET_MENU_STATUS' | translate }}
+            <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 
         </div>
 
         <div class="right" style="position: absolute;right: 0;">
             <ons-toolbar-button class="menu-close" ng-click="app.menu.close()">
-                <i class="icon ion-arrow-left-a"></i>
+                <ons-icon icon="ion-arrow-left-a" fixed-width="true"></ons-icon>
             </ons-toolbar-button>
         </div>
 
@@ -21,40 +22,40 @@
     <ons-list>
         <ons-list-item ng-click="ctl_target.enter_from_menu();
             menu_click($event);">
-            <i class="icon ion-ios-pie-outline"></i>
+            <ons-icon icon="ion-ios-pie-outline" fixed-width="true"></ons-icon>
             <span class="menu-label">
-                目標檢視
+                {{ 'TARGET_MENU_TITLE' | translate }}
             </span>
         </ons-list-item>
 
         <ons-list-item ng-click="ctl_learn_flashcard.enter(false);
                            menu_click($event);">
-            <i class="icon ion-ios-browsers-outline"></i>
+            <ons-icon icon="ios-browsers-outline" fixed-width="true"></ons-icon>
             <span class="menu-label">
-                學習單字
+                {{ 'LEARN_FLASHCARD_TITLE' | translate }}
             </span>
         </ons-list-item>
 
         <ons-list-item ng-click="ctl_test_select.enter();
             menu_click($event);">
-            <i class="icon ion-ios-compose-outline"></i>
+            <ons-icon icon="ion-ios-compose-outline" fixed-width="true"></ons-icon>
             <span class="menu-label">
-                測驗
+                {{ 'TEST_SELECT_TITLE' | translate }}
             </span>
         </ons-list-item>
 
         <ons-list-item ng-click="app.navi.replacePage('setting.html', {animation: 'none'});
             menu_click($event);">
-            <i class="icon ion-ios-settings"></i>
+            <ons-icon icon="ion-ios-settings" fixed-width="true"></ons-icon>
             <span class="menu-label">
-                {{ 'SETTING' | translate}}
+                {{ 'SETTING' | translate }}
             </span>
         </ons-list-item>
 
         <ons-list-item ng-click="exit_app();">
-            <i class="icon ion-android-exit"></i>
+            <ons-icon icon="ion-android-exit" fixed-width="true"></ons-icon>
             <span class="menu-label">
-                {{ 'EXIT_APP' | translate}}
+                {{ 'EXIT_APP' | translate }}
             </span>
         </ons-list-item>
     </ons-list>

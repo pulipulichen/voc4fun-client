@@ -1,6 +1,9 @@
 {
     "TITLE": "全民樂單字",
     
+    "TARGET_MENU_TITLE": "目標檢視",
+    "TARGET_MENU_STATUS": "進度完成",
+    
     "LEARN_FLASHCARD_TITLE": "單字學習",
     "LEARN_FLASHCARD_NOTE_EMPTY": "您還沒有撰寫筆記",
     "LEARN_FLASHCARD_OTHER_NOTE": "其他人的筆記:",
