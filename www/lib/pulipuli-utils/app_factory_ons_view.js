@@ -87,36 +87,37 @@ var _app_factory_ons_view = function ($scope) {
 
     $scope.swipeable_width = 400;
 
+    var _detect_menu_swipeable = function () {
+        // This will execute whenever the window is resized
+        //$(window).height(); // New height
+        var _width = $(window).width(); // New width
+        if (_width > _swipeable_width && _menu_swipeable === true) {
+            _menu_swipeable = false;
+            app.menu.setSwipeable(false);
+        }
+        else if (_width < _swipeable_width + 1 && _menu_swipeable === false) {
+            _menu_swipeable = true;
+            app.menu.setSwipeable(true);
+        }
+
+        if (app.menu.isMenuOpened()) {
+            app.menu.close();
+        }
+    };
+    
     $scope.setup_menu_swipeable = function () {
         var _swipeable_width = $scope.swipeable_width;
         var _menu_swipeable = true;
-        var _set_menu_swipeable = function () {
-            // This will execute whenever the window is resized
-            //$(window).height(); // New height
-            var _width = $(window).width(); // New width
-            if (_width > _swipeable_width && _menu_swipeable === true) {
-                _menu_swipeable = false;
-                app.menu.setSwipeable(false);
-            }
-            else if (_width < _swipeable_width + 1 && _menu_swipeable === false) {
-                _menu_swipeable = true;
-                app.menu.setSwipeable(true);
-            }
-            
-            if (app.menu.isMenuOpened()) {
-                app.menu.close();
-            }
-        };
-        $(window).resize(_set_menu_swipeable);
+        $(window).resize(_detect_menu_swipeable);
         _set_menu_swipeable();
     };
-    
+
     /**
      * 設定退回的事件
      * @param {function} _callback
      */
     $scope.setup_back_hotkey = function (_callback) {
-        
+
         $(document).keyup(function (_event) {
             //alert(_event.keyCode);
             if (_event.keyCode === 27) {
@@ -126,7 +127,7 @@ var _app_factory_ons_view = function ($scope) {
             }
         });
     };
-    
+
     $scope.set_swipeable = function (_swipeable) {
         app.menu.setSwipeable(_swipeable);
         var _body = $("body");
@@ -135,21 +136,22 @@ var _app_factory_ons_view = function ($scope) {
             _body.addClass(_classname);
         }
         else {
+            _detect_menu_swipeable();
             _body.removeClass(_classname);
         }
         return this;
     };
-    
+
     ons.ready(function () {
         //$.console_trace("有設定");
         $scope.setup_menu_swipeable();
         $scope.setup_back_hotkey(document.backbutton);
     });
-    
+
     // --------------------------------
-    
+
     var _ons_view = {};
-    
+
     /**
      * @TODO 20151127 轉變特效失敗 #46
      * @param {JSON} _opt
@@ -161,13 +163,13 @@ var _app_factory_ons_view = function ($scope) {
         var _set_page = $.parse_opt(_opt, "set_page");
         var _animation = $.parse_opt(_opt, "animation", "lift");
         var _callback = $.parse_opt(_opt, "callback");
-        
+
         $.trigger_callback(_set_trans_page);
-        
-        
+
+
         app.navi.replacePage(_trans_page, {
             "animation": _animation,
-            "onTransitionEnd": function () {    
+            "onTransitionEnd": function () {
                 $.trigger_callback(_set_page);
                 app.navi.replacePage(_page, {
                     "animation": "none",
@@ -175,13 +177,13 @@ var _app_factory_ons_view = function ($scope) {
                 });
             }
         });
-        
-        
+
+
         setTimeout(function () {
             //$scope.$digest();
         }, 500);
     };
-    
+
     /**
      * @TODO 20151127 轉變特效失敗 #46
      * @param {JSON} _opt
@@ -193,9 +195,9 @@ var _app_factory_ons_view = function ($scope) {
         var _set_page = $.parse_opt(_opt, "set_page");
         var _animation = $.parse_opt(_opt, "animation", "lift");
         var _callback = $.parse_opt(_opt, "callback");
-        
+
         $.trigger_callback(_set_trans_page);
-        
+
         app.navi.pushPage(_trans_page, {
             "animation": "none",
             "onTransitionEnd": function () {
@@ -212,6 +214,6 @@ var _app_factory_ons_view = function ($scope) {
             $scope.$digest();
         }, 100);
     };
-    
+
     $scope.ons_view = _ons_view;
 };
