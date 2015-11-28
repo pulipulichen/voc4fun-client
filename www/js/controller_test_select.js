@@ -275,6 +275,10 @@ var controller_test_select = function ($scope) {
         }
         return this;
     };
+    
+    _ctl.get_tested_count = function () {
+        return _status.history_stack.length;
+    };
 
     // -----------------------------------
 

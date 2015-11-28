@@ -5,7 +5,7 @@ var controller_learn_flashcard = function ($scope) {
     var _ctl = {};
 
     var _log_file = "controller_learn_flashcard.js";
-    
+
     var _server_url = $scope.CONFIG.server_url;
 
     // ------------------------------
@@ -63,6 +63,10 @@ var controller_learn_flashcard = function ($scope) {
          */
         history_stack: [],
         /**
+         * 已經學習過的單字
+         */
+        learned_stack: [],
+        /**
          * 歷史記錄的索引
          */
         history_index: -1,
@@ -83,10 +87,10 @@ var controller_learn_flashcard = function ($scope) {
     _ctl.enter = function (_do_animation) {
         // 讓選單保持在選取的狀態
         $scope.ons_view.active_menu(1);
-        
+
         _ctl.init(function () {
             //$.console_trace("enter");
-            
+
             if (_do_animation === false) {
                 app.navi.replacePage("learn_flashcard.html", {
                     "animation": "none"
@@ -148,7 +152,13 @@ var controller_learn_flashcard = function ($scope) {
                 _status.history_index++;
                 _trans_callback(_flashcard);
                 //$.trigger_callback(_callback);
+
+                // 如果是新單字，則加入learned_stack中
+                if ($.inArray(_flashcard.id, _status.learned_stack) === -1) {
+                    _status.learned_stack.push(_flashcard.id);
+                }
             };
+
             if (_ctl.get_new_flashcard_type() === "new") {
                 _ctl.add_new_flashcard(_push_history_stack);
             }
@@ -396,6 +406,15 @@ var controller_learn_flashcard = function ($scope) {
             _var.more_menu.show(_event);
         }
         return this;
+    };
+
+    // ---------------------------------
+
+    _ctl.get_learned_count = function () {
+        if (typeof(_status.learned_stack) === "undefined") {
+            return 0;
+        }
+        return _status.learned_stack.length;
     };
 
     // ---------------------------------

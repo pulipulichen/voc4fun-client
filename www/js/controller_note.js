@@ -110,6 +110,10 @@ var controller_note = function ($scope) {
         //$.console_trace(_id, _note);
         $scope.ctl_flashcard.set_note(_id, _note);
     };
+    
+    _ctl.get_noted_count = function () {
+        return _status.history.length;
+    };
 
     // -------------------------------
 

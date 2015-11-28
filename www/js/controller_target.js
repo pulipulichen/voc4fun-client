@@ -330,32 +330,6 @@ var controller_target = function ($scope) {
         return this;
     };
 
-    _var.recommend_target_data;
-
-    _var._recommend_target_data_mock = {
-        "learn_flashcard": {
-            last_done: 12,
-            last_target: 30,
-            recommend_target: 31
-        },
-        "take_note": {
-            last_done: 5,
-            last_target: 20,
-            recommend_target: 21
-        },
-        "test_select": {
-            last_done: 7,
-            last_target: 30,
-            recommend_target: 27
-        }
-    };
-
-    _ctl.init_recommend_target_data = function (_callback) {
-        // @TODO target在隔日重新計算 #57
-        _var.recommend_target_data = _var._recommend_target_data_mock;
-        $.trigger_callback(_callback);
-    };
-
     _ctl.done_plus = function (_key) {
         //$.console_trace("done_plus", _status);
         if (typeof (_status[_key]) === "object") {
@@ -427,7 +401,7 @@ var controller_target = function ($scope) {
     _ctl.get_complete_percent = function () {
         var _done = 0;
         var _target = 0;
-        var _percent = 0;
+        var _percent;
         
         for (var _i in _status) {
             _done = _done + _status[_i].done;
@@ -456,9 +430,147 @@ var controller_target = function ($scope) {
     
     _ctl.get_max_target = function (_key) {
         var _flashcard_count = $scope.ctl_flashcard.status.flashcard_count;
+        _flashcard_count = _flashcard_count - _ctl.get_remained_target(_key);
+        
         var _setting = _ctl._get_setting(_key);
         var _default_max = _setting.default_max;
-        return Math.max(_flashcard_count, _default_max);
+        
+        return Math.min(_flashcard_count, _default_max);
+    };
+    
+    _ctl.get_remained_target = function (_key) {
+        if (_key === "learn_flashcard") {
+            return $scope.ctl_learn_flashcard.get_learned_count();
+        }
+        else if (_key === "take_note") {
+            return $scope.ctl_note.get_noted_count();
+        }
+        else if (_key === "test_select") {
+            return $scope.ctl_test_select.get_tested_count();
+        }
+        else {
+            return 0;
+        }
+    };
+    
+    // ------------------------------------------
+    // 推薦資料的計算
+    // ----------------------------------------- 
+
+    _var.recommend_target_data;
+
+    _var._recommend_target_data_mock = {
+        "learn_flashcard": {
+            last_done: 12,
+            last_target: 30,
+            recommend_target: 31
+        },
+        "take_note": {
+            last_done: 5,
+            last_target: 20,
+            recommend_target: 21
+        },
+        "test_select": {
+            last_done: 7,
+            last_target: 30,
+            recommend_target: 27
+        }
+    };
+
+    _ctl.init_recommend_target_data = function (_callback) {
+        // @TODO target在隔日重新計算 #57
+        //_var.recommend_target_data = _var._recommend_target_data_mock;
+        
+        var _calculate_recommend_target_data = function (_target, _prev_target) {
+            
+            var _recommend_target_data = {};
+            
+            for (var _i in _target) {
+                var _t = _target[_i];
+                var _p = _prev_target[_i];
+                _recommend_target_data[_i] = {
+                    last_done: _t.done,
+                    last_target: _t.target
+                };
+                
+                var _recommend_target;
+                
+                if (_t.done < _t.target) {
+                    _recommend_target = Math.floor((_t.target - _t.done)/2) + _t.done;
+                }
+                else if (_t.done > _t.target) {
+                    _recommend_target = _t.done;
+                }
+                else {
+                    if (_t.done === _p.done) {
+                        // 今天做的量，跟昨天相同
+                        if (_p.target > _p.done) {
+                            _recommend_target = _p.done + Math.floor((_p.target - _p.done)/2);
+                        }
+                        else {
+                            // p.d = 10
+                            // p.t = 6
+                            // r = 12
+                            _recommend_target = _p.done + Math.floor((_p.done - _p.target) / 2);
+                        }
+                    }
+                    else if (_t.done < _p.done ) {
+                        _recommend_target = _p.done;
+                    }
+                    else {
+                        _recommend_target = Math.max(_t.done, _p.target);
+                    }
+                }
+                
+                _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
+            }   //for (var _i in _target) {
+            _var.recommend_target_data = _recommend_target_data;
+            $.trigger_callback(_callback);
+        };
+        
+        _ctl.get_yesterday_target_data(function (_target) {
+            _ctl.get_before_yesterday_target_data(function (_prev_target) {
+                _calculate_recommend_target_data(_target, _prev_target);
+            });
+        });
+    };
+    
+    var _yesterday_target_data_mock = {
+        "learn_flashcard": {
+            done: 0,
+            target: 30
+        },
+        "take_note": {
+            done: 40,
+            target: 30
+        },
+        "test_select": {
+            done: 30,
+            target: 30
+        }
+    };
+    
+    _ctl.get_yesterday_target_data = function (_callback) {
+        $.trigger_callback(_callback, _yesterday_target_data_mock);
+    };
+    
+    var _before_yesterday_target_data_mock = {
+        "learn_flashcard": {
+            done: 0,
+            target: 30
+        },
+        "take_note": {
+            done: 40,
+            target: 30
+        },
+        "test_select": {
+            done: 30,
+            target: 40
+        }
+    };
+    
+    _ctl.get_before_yesterday_target_data = function (_callback) {
+        $.trigger_callback(_callback, _before_yesterday_target_data_mock);
     };
     
     // ------------------------------------------

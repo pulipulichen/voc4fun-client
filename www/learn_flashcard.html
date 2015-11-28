@@ -18,7 +18,8 @@
         <div class="right" >
             <span ng-init="_target_data = ctl_target.status.learn_flashcard" 
                   ng-class="{'target-completed': (_target_data.done > _target_data.target - 1)}"
-                  ng-click="ctl_target.enter_for_view()">
+                  ng-click="ctl_target.enter_for_view()"
+                  ng-show="_target_data.target !== 0">
                 {{ _target_data.done}} / {{ _target_data.target}}
             </span>
 

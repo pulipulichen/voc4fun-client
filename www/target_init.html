@@ -3,23 +3,25 @@
     <form ng-submit="ctl_target.set_target($event);
             ctl_activity.enter_from_target();">
         <ons-toolbar>
-            <div class="center">{{ ctl_target.get_set_title()}}</div>
+            <div class="center">{{ctl_target.get_set_title()}}</div>
         </ons-toolbar>
 
         <!-- ======================================= -->
 
         <ons-list modifier="inset">
-            <ons-list-item ng-repeat="data in ctl_target.status">
-                <ons-row ng-init="setting = ctl_target.var.target_setting[$index]">
+            <ons-list-item ng-repeat="data in ctl_target.status" 
+                           ng-init="setting = ctl_target.var.target_setting[$index]"
+                           ng-show="ctl_target.get_max_target(setting.key) > 0">
+                <ons-row>
                     <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">
-                        {{ setting.title}}
+                        {{setting.title}}
                         <ons-icon icon="ion-ios-help-outline" fixed-width="true"></ons-icon>
                     </ons-col>
 
                     <ons-col width="50" style="text-align: right">
                         <ons-icon icon="ion-ios-minus-outline" fixed-width="true" 
                                   ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
-                        <input min="{{ setting.min}}" max="{{ setting.max}}" type="number" 
+                        <input min="{{setting.min}}" max="{{ ctl_target.get_max_target(setting.key)}}" type="number" 
                                value="{{ data.target}}"
                                target_key="{{setting.key}}"
                                style="width: 3rem;font-size: 1rem;text-align: center;" />
