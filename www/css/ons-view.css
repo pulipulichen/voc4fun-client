@@ -136,3 +136,8 @@ ons-tabbar {
 .right .more-button {
     cursor: pointer;
 }
+
+.ons-loading-placeholder {
+    position: absolute;
+    z-index: 1;
+}

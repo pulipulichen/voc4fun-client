@@ -419,8 +419,12 @@ var controller_target = function ($scope) {
             _target = _target + _status[_i].target;
         }
         
+        //$.console_trace("get_complete_percent", {
+        //    done: _done, target: _target, percent: Math.floor(_done / _target * 100)
+        //});
+        
         if (_target !== 0) {
-            _percent = Math.floor(_done / _target);
+            _percent = Math.floor(_done / _target * 100);
         }
         
         return _percent;
