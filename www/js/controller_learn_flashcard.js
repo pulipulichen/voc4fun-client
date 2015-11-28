@@ -170,7 +170,7 @@ var controller_learn_flashcard = function ($scope) {
             "callback": _callback
         });
     };
-    
+
     // -----------------------------
 
     _ctl.prev = function (_callback) {
@@ -349,7 +349,7 @@ var controller_learn_flashcard = function ($scope) {
         var _id = _ctl.get_current_flashcard_id();
         setTimeout(function () {
             _var.learn_flashcard.other_note = _var._other_note_mock;
-            
+
             var _notification = $(".learn-flashcard-page .notification")
             _notification.find(".load-icon").hide();
             _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
@@ -366,6 +366,25 @@ var controller_learn_flashcard = function ($scope) {
         _notification.find(".load-icon").show();
         _notification.find(".notification-text").hide();
     };
+
+    // ---------------------------------
+
+    _var.more_menu;
+    var _more_menu_html = "learn_flashcard_more.html";
+    _ctl.open_more_menu = function (_event) {
+        if (_var.more_menu === undefined) {
+            ons.createPopover(_more_menu_html).then(function (popover) {
+                _var.more_menu = popover;
+                _var.more_menu.show(_event);
+            });
+        }
+        else {
+            _var.more_menu.show(_event);
+        }
+        return this;
+    };
+
+    // ---------------------------------
 
     $scope.ctl_learn_flashcard = _ctl;
 };

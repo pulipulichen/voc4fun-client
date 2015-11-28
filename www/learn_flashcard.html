@@ -10,21 +10,28 @@
 
         <div class="center">單字學習</div>
 
-        <div class="right" style="line-height: 44px;" 
-             ng-init="_target_data = ctl_target.status.learn_flashcard" 
-             ng-class="{'target-completed': (ctl_target.status.learn_flashcard.done > ctl_target.status.learn_flashcard.target-1)}">
-            {{ _target_data.done}} / {{ _target_data.target}}
+        <div class="right" style="line-height: 44px;" >
+            <span ng-init="_target_data = ctl_target.status.learn_flashcard" 
+                 ng-class="{'target-completed': (_target_data.done > _target_data.target-1)}">
+                {{ _target_data.done}} / {{ _target_data.target}}
+            </span>
+            
+            <ons-icon icon='ion-android-more-vertical' fixed-width="true" class="more-button" 
+                      ng-click="ctl_learn_flashcard.open_more_menu($event)"></ons-icon>
         </div>
-
     </ons-toolbar>
 
     <div class="flashcard" style="margin: 0 1rem; border: 1px solid #DDD; border-radius: 4px;">
+        
+        <!-- 英文的部分 -->
         <ons-row class="q" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q)"
                  style="padding:1rem; text-align: center;display: block;background-color: white; cursor: pointer">
             <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
             {{ ctl_learn_flashcard.var.learn_flashcard.q}}
             <i class="ion-radio-waves" style="float:right;font-size: 1.5rem;margin-right: 0.5rem;color:#999"></i>
         </ons-row>
+        
+        <!-- 中文的部分 -->
         <ons-row class="a" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.a)"
                  style="border-top: 1px solid #DDD; background-color: #EEE;padding: 1rem;text-align: center;display: block;cursor: pointer" >
             <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
@@ -33,7 +40,7 @@
         </ons-row>
     </div>
 
-    <div class="note" ng-click="ctl_note.enter(ctl_learn_flashcard.var.learn_flashcard.q)"
+    <div class="note" ng-click="ctl_note.enter()"
          style=" margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; cursor: pointer;
          background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;">
         <div style="clear: both;">

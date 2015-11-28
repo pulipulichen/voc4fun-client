@@ -127,3 +127,7 @@ ons-page .bottom-bar-button {
 ons-tabbar {
     z-index: -1;
 }
+
+.right .more-button {
+    cursor: pointer;
+}

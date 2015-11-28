@@ -12,8 +12,10 @@
 
         <div class="center">測驗</div>
 
-        <div class="right" style="line-height: 44px;">
-            {{ ctl_target.status.test_select.done}} / {{ ctl_target.status.test_select.target}}
+        <div class="right" style="line-height: 44px;" 
+             ng-init="_target_data = ctl_target.status.test_select" 
+             ng-class="{'target-completed': (_target_data.done > _target_data.target-1)}">
+            {{ _target_data.done}} / {{ _target_data.target}}
         </div>
     </ons-toolbar>
 
