@@ -5,6 +5,8 @@ var controller_learn_flashcard = function ($scope) {
     var _ctl = {};
 
     var _log_file = "controller_learn_flashcard.js";
+    
+    var _server_url = $scope.CONFIG.server_url;
 
     // ------------------------------
 

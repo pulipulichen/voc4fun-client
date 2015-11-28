@@ -15,6 +15,8 @@ var db_log = function ($scope) {
      */
     var _debug_log_day_offset = 0;
     
+    var _server_url = $scope.CONFIG.server_url;
+    
     setTimeout(function () {
         //$scope.db_log.reset();
     }, 0);

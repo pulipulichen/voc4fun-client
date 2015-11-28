@@ -209,7 +209,8 @@ var controller_test_select = function ($scope) {
         }
     };
 
-    var _option_length = 3;
+    var _option_length = $scope.CONFIG.test_select_option_learn;
+    
     _ctl.get_test_flashcard = function (_callback) {
         _var.show_note = false;
         

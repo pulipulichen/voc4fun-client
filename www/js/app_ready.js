@@ -33,8 +33,9 @@ var _app_ready = function ($scope) {
         //app.navi.replacePage("setting.html");
         //return this;
 
-        //$scope.ctl_test_select.status.stack = [1, 2, 3];
-        //$scope.ctl_test_select.next(false);return this;
+        // debug: 進入測試頁面
+        $scope.ctl_test_select.status.stack = [1, 2, 3];
+        $scope.ctl_test_select.next(false);return this;
 
 
         if ($scope.db_profile.is_exists() === false) {
