@@ -6,25 +6,109 @@ var controller_note = function ($scope) {
 
     // ------------------------------
 
+//    var _var = {};
+//
+//    _var.note = "AAAAAAAAAAAAAAA";
+//
+//    _ctl.var = _var;
+
+    // ------------------------------
+
+    var _status = {};
+
+    _status.history = [];
+
+    _ctl.status = _status;
+
+    var _status_key = "note";
+    _init_status = function () {
+        return $scope.db_status.add_listener(
+                _status_key,
+                function (_s) {
+                    _ctl.status = _s;
+                    _status = _s;
+                },
+                function () {
+                    return _status;
+                });
+    };
+    _init_status();
+
+    // ------------------------------
+
     _ctl.enter = function () {
+//        _var.note = $scope.ctl_learn_flashcard.var.learn_flashcard.note;
+//        $.console_trace(_var.note);
+//        $scope.$digest();
         app.navi.pushPage(
                 "note.html",
                 {"onTransitionEnd": function () {
                         var _textarea = $("#note_html textarea");
-                        $.console_trace(_textarea.length);
-                        _textarea.css("height", "auto");
-                        _textarea.css("height", _textarea.attr("scrollHeight") + "px");
+                        _ctl._set_auto_grow(_textarea);
                     }});
     };
 
     _ctl.auto_grow = function ($event) {
         var _textarea = $($event.target);
+        _ctl._set_auto_grow(_textarea);
+    };
+
+    _ctl._set_auto_grow = function (_textarea) {
         setTimeout(function () {
             //_textarea.css("padding", "0");
             _textarea.css("height", "auto");
             _textarea.css("height", _textarea.attr("scrollHeight") + "px");
-            $.console_trace("auto_grow: " + _textarea.attr("scrollHeight"));
+            //$.console_trace("auto_grow: " + _textarea.attr("scrollHeight"));
         }, 0);
+    };
+
+    _ctl.copy = function (_note) {
+        _note = $.trim(_note);
+//        _var.note = _note;
+        var _textarea = $("#note_html textarea").val(_note);
+        _ctl._set_auto_grow(_textarea);
+        _textarea.focus();
+    };
+
+    _ctl.submit = function () {
+//        var _note = _var.note;
+        var _note = $("#note_html textarea").val();
+        _note = $.trim(_note);
+
+        if ($scope.ctl_learn_flashcard.var.learn_flashcard.note !== _note) {
+            _ctl.save_note_to_db(_note);
+
+            if (_note !== "") {
+                _ctl.check_note_edited();
+            }
+        }
+
+        app.navi.popPage();
+    };
+
+    _ctl.check_note_edited = function () {
+        var _id = $scope.ctl_learn_flashcard.get_current_flashcard_id();
+        if ($.inArray(_id, _status.history) === -1) {
+            _status.history.push(_id);
+
+            $scope.db_status.save_status(_status_key);
+            $scope.ctl_target.done_plus("note");
+        }
+    };
+
+    _ctl.save_note_to_db = function (_note) {
+        $scope.ctl_learn_flashcard.var.learn_flashcard.note = _note;
+        
+        $scope.log(_log_file, "submit()", undefined, {
+            q: $scope.ctl_learn_flashcard.var.learn_flashcard.q,
+            a: $scope.ctl_learn_flashcard.var.learn_flashcard.a,
+            note: $scope.ctl_learn_flashcard.var.learn_flashcard.note
+        });
+        //$scope.db_status.save_status("learn_flashcard");
+        
+        var _id = $scope.ctl_learn_flashcard.get_current_flashcard_id();
+        //$.console_trace(_id, _note);
+        $scope.ctl_flashcard.set_note(_id, _note);
     };
 
     // -------------------------------

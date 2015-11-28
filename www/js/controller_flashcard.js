@@ -123,6 +123,17 @@ var controller_flashcard = function ($scope) {
     
     // -----------------------
     
+    _ctl.set_note = function (_id, _note, _callback) {
+        var _data = {
+            note: _note
+        };
+        var _where_sql = 'id = ' + _id;
+        
+        $scope.DB.update(_db_name, _data, _where_sql, _callback);
+    };
+    
+    // -----------------------
+    
     $scope.ctl_flashcard = _ctl;
         
 };

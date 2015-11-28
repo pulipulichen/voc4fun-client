@@ -29,8 +29,10 @@ var db_profile = function ($scope) {
                 function (_s) {
                     _ctl.status = _s;
                     _status = _s;
+                    _ctl.setup_uuid();
                 },
                 function () {
+                    _ctl.setup_uuid();
                     return _ctl.status;
                 }
         );

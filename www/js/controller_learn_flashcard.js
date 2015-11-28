@@ -39,15 +39,15 @@ var controller_learn_flashcard = function ($scope) {
     _var._other_note_mock = [
         {
             "name": "同學A",
-            "note": "心得A"
+            "note": "心得A\n\n\n\n\n\n心得心得"
         },
         {
             "name": "同學B",
-            "note": "心得B"
+            "note": "心得B\n\n\n\n\n\n心得心得"
         },
         {
             "name": "同學C",
-            "note": "心得C"
+            "note": "心得C\n\n\n\n\n\n心得心得"
         }
     ];
 
@@ -356,6 +356,7 @@ var controller_learn_flashcard = function ($scope) {
             _notification.find(".notification-text").show();
             //_var.learn_flashcard.other_note_loaded = true;
             //$scope.$digest();
+            $scope.$digest();
             $.console_trace("other_note_ajax 尚未完成");
             $.trigger_callback(_callback);
         }, 1000);

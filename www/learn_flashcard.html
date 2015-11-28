@@ -49,9 +49,8 @@
         <div style="clear: both;">
             <i class="ion-compose" style="float:left;font-size: 2rem;margin-right: 0.5rem;"></i>
             
-            <span class="your-note" ng-show="(_learn_flashcard.note !== null)">
-                {{ _learn_flashcard.note}}
-            </span>
+            <span class="your-note" ng-show="(_learn_flashcard.note !== null)"
+                  style="white-space: pre;">{{ _learn_flashcard.note}}</span>
             <span class="note-empty" style="color: gray;" ng-show="(_learn_flashcard.note === null)">
                 您還沒有撰寫筆記
             </span>
@@ -59,7 +58,9 @@
 
         </div>
 
-        <span class="notification" style="float: right;margin-top: 0.5rem;">
+        
+    </div>
+    <div class="notification" style="float: right;margin-top: 0.5rem;position: relative;top: -3rem;right: 1.5rem;">
             <span class="load-icon">
                 <ons-icon icon="ion-load-a"/>
             </span>
@@ -67,8 +68,7 @@
                 其他人的筆記:
                 <span class="count"></span>
             </span>
-        </span>
-    </div>
+        </div>
 
     <!--
     <div>_learn_flashcard.other_note_loaded: {{_learn_flashcard.other_note_loaded}} </div>
