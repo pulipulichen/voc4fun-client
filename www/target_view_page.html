@@ -1,6 +1,14 @@
 <ons-page id="target_view_html" class="target-page" 
           ng-device-backbutton="main_back()">
     <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <ons-icon icon="ion-navicon" fixed-width="true"></ons-icon>
+                </span>
+            </ons-toolbar-button>
+        </div>
+        
         <div class="center">{{ ctl_target.get_view_title()}}</div>
 
         <div class="right" ng-click="app.navi.pushPage('target_edit.html')">

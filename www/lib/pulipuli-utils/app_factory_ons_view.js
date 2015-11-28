@@ -51,6 +51,9 @@ var _app_factory_ons_view = function ($scope) {
         if ($(window).width() < 400) {
             app.menu.close();
         }
+        else {
+            $.console_trace("視窗寬度" + $(window).width() + ", 不關閉");
+        }
 
         $("#menu_html .menu-active").removeClass("menu-active");
         var _item = $($event.target);
