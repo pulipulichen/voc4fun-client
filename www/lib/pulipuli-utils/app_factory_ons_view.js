@@ -1,28 +1,9 @@
 /*global cordova:false */
 /*global app:false */
 var _app_factory_ons_view = function ($scope) {
-//    $scope.presplit = function () {
-//        $("#split").addClass("split");
-//    };
-//
-//    $scope.precollapse = function () {
-//        $("#split").removeClass("split");
-//    };
-
     var _log_file = "app_factory_ons_view.js";
 
     $scope.menu_open = function () {
-        //$(".onsen-split-view__secondary").css({
-        //    "display": "block",
-        //    "position": "absolute",
-        //    "width": "200px",
-        //    "left": "0px",
-        //    "z-index": "3",
-        //    "opacity": "1"
-        //});
-        //$(".onsen-split-view__secondary").animate({
-        //    left: "0"
-        //}, 1000000, "ease-out");
         $(".onsen-sliding-menu__main").addClass("menu-open");
     };
 
@@ -57,11 +38,6 @@ var _app_factory_ons_view = function ($scope) {
             $scope.exit_app();
         }
     };
-
-//    $scope.menu_back = function () {
-//        app.menu.close();
-//    };
-//    
 
     // -------------------
     $scope.menu_click = function ($event) {
