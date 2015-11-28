@@ -430,6 +430,12 @@ var controller_target = function ($scope) {
         return _percent;
     };
     
+    // ------------------------------------------
+    
+    _ctl.get_notification_message = function () {
+        var _msg = "您的進度是" + _ctl.get_complete_percent() + "%";
+        return _msg;
+    };
     
     // ------------------------------------------
 

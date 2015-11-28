@@ -14,8 +14,15 @@ var _app_factory_ons_view = function ($scope) {
         $(".onsen-sliding-menu__main").removeClass("menu-open");
     };
 
+    var _exit_app_listeners = [];
+
     $scope.exit_app = function () {
+        for (var _i = 0; _i < _exit_app_listeners.length; _i++) {
+            $.trigger_callback(_exit_app_listeners[_i]);
+        }
+        
         $scope.log(_log_file, "exit_app()");
+        
         if (typeof (cordova) !== "undefined") {
             navigator.app.exitApp();
         }
@@ -202,6 +209,12 @@ var _app_factory_ons_view = function ($scope) {
         //$.console_trace("active_menu", _menu_item.length);
         if (_index < _menu_item.length) {
             _menu_item.eq(_index).addClass(_classname);
+        }
+    };
+    
+    _ctl.exit_app_add_listener = function (_evt) {
+        if (typeof(_evt) === "function") {
+            _exit_app_listeners.push(_evt);
         }
     };
 

@@ -6,9 +6,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- ---------------------------------------- 
-      -- Library
-      -- ---------------------------------------- -->
+    <!-- ======================================== 
+         Library
+         ======================================== -->
     <!-- JS dependencies (order matters!) -->
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular/angular-translate.min.js"></script>
@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="lib/angular/angular-csp.css" />
 
     <link rel="stylesheet" href="css/onsen-css-components.css" />
-    <!-- ---------------------------------------- 
-      -- Style
-      -- ---------------------------------------- -->
+    <!-- ======================================== 
+         Style
+         ======================================== -->
     <link rel="stylesheet" href="css/float-action-button.css" />
     <link rel="stylesheet" href="css/page-main_html.css" />
     <link rel="stylesheet" href="css/page-about_html.css" />
@@ -41,9 +41,9 @@
 
 </head>
 
-    <!-- ---------------------------------------- 
-      -- View
-      -- ---------------------------------------- -->
+    <!-- ======================================== 
+         View
+         ======================================== -->
 <body ng-controller="app_controller">
 
 <ons-sliding-menu id="menu" var="app.menu" 
@@ -56,9 +56,9 @@
     <ons-navigator var="app.navi" page="splash_screen.html"></ons-navigator> 
 </ons-template>
 
-<!-- ---------------------------------------- 
-  -- Controller
-  -- ---------------------------------------- -->
+<!-- ======================================= 
+     Controller
+     ======================================= -->
 <script src="config.js"></script>
 
 <script src="lib/fingerprint/fingerprint.min.js"></script>
@@ -85,6 +85,7 @@
 <script src="js/controller_activity.js"></script>
 <script src="js/controller_learn_flashcard.js"></script>
 <script src="js/controller_note.js"></script>
+<script src="js/controller_notification.js"></script>
 
 <script src="js/controller_test_select.js"></script>
 
@@ -98,11 +99,16 @@
 <!-- ========================================= -->
 
 <script type="text/javascript">
+/*global ons:false */
+/*global $translateProvider:false */
+/*global $scope:false */
+/*global $filter:false */
 var app = ons.bootstrap('app', ['onsen', 'pascalprecht.translate']);
 
 /**
  * 翻譯
- * @param {type} param
+ * @link https://angular-translate.github.io/
+ * @param {Object} $translateProvider 翻譯的工具
  */
 app.config(function ($translateProvider) {
     $translateProvider.preferredLanguage('zh_TW');
@@ -138,6 +144,7 @@ var _app_controller = function ($scope, $filter) {
     controller_learn_flashcard($scope);
     controller_note($scope);
     controller_test_select($scope);
+    controller_notification($scope, $filter);
 
     // -----------------------------------
 
@@ -154,7 +161,7 @@ app.controller('app_controller',
             _app_controller]);
 </script>
 
-<!-- ------------------------------- -->
+<!-- ============================= -->
 
 </body>
 </html>
