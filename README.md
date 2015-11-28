@@ -13,4 +13,5 @@ http://onsen.io/patterns.html
 ## IonIcons
 http://ionicons.com/
 
-* PhoneGap Plugin: https://build.phonegap.com/plugins
+## PhoneGap Plugin
+https://build.phonegap.com/plugins

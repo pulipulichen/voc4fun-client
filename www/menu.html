@@ -7,37 +7,37 @@
         </div>
         
         <div class="center">{{ 'TITLE' | translate}}</div>
-        
     </ons-toolbar>
+    
+    <!-- ======================================================= -->
+    
     <ons-list>
-        <ons-list-item ng-click="app.navi.replacePage('main.html', {animation: 'none'});
-        load_todo_list();
-        menu_click($event);" class="menu-active">
-            <i class="icon ion-ios-list-outline"></i>
+        <ons-list-item ng-click="ctl_target.enter_from_menu();menu_click($event);">
+            <i class="icon ion-ios-pie-outline"></i>
             <span class="menu-label">
-                {{ 'TODO_LIST' | translate}}
+                目標檢視
             </span>
         </ons-list-item>
-        <ons-list-item ng-click="app.navi.replacePage('completed_list.html', {animation: 'none'});
-        load_completed_list();
-        menu_click($event);">
-            <i class="icon ion-ios-checkmark-outline"></i>
+        
+        <ons-list-item class="menu-active"
+                ng-click="ctl_learn_flashcard.enter();menu_click($event);">
+            <i class="icon ion-ios-browsers-outline"></i>
             <span class="menu-label">
-                {{ 'COMPLETED_LIST' | translate}}
+                學習單字
             </span>
         </ons-list-item>
-        <ons-list-item ng-click="app.navi.replacePage('setting.html', {animation: 'none'});
-        menu_click($event);">
+        
+        <ons-list-item ng-click="ctl_test_select.next();menu_click($event);">
+            <i class="icon ion-ios-compose-outline"></i>
+            <span class="menu-label">
+                測驗
+            </span>
+        </ons-list-item>
+        
+        <ons-list-item ng-click="app.navi.replacePage('setting.html', {animation: 'none'});menu_click($event);">
             <i class="icon ion-ios-settings"></i>
             <span class="menu-label">
                 {{ 'SETTING' | translate}}
-            </span>
-        </ons-list-item>
-        <ons-list-item ng-click="app.navi.replacePage('about.html', {animation: 'none'});
-        menu_click($event);">
-            <i class="icon ion-ios-information-outline"></i>
-            <span class="menu-label">
-                {{ 'ABOUT' | translate}}
             </span>
         </ons-list-item>
 

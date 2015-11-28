@@ -1,0 +1,34 @@
+<ons-page id="target_view_html" class="target-page" ng-device-backbutton="main_back()">
+    <ons-toolbar>
+        <div class="center">{{ ctl_target.get_view_title()}}</div>
+
+        <div class="right" ng-click="app.navi.pushPage('target_edit.html')">
+            <ons-toolbar-button>
+                <i class="icon ion-edit"></i>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <ons-list modifier="inset">
+        <ons-list-item ng-repeat="data in ctl_target.status" ng-class="{completed: data.done > data.target}">
+            <ons-row ng-init="setting = ctl_target.var.target_setting[$index]">
+                <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">
+                    {{ setting.title}}
+                    <ons-icon icon="ion-ios-help-outline" fixed-width="true"></ons-icon>
+                </ons-col>
+
+                <ons-col width="50" style="text-align: right">
+                    {{ data.done}} / {{ data.target}}
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+
+    <!----------------------------------------->
+
+    <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()">
+        <img src="{{ target_help.help_img}}" />
+        <div style="margin: 1rem;white-space: pre;">{{ target_help.help}}</div>
+        <ons-button>{{ "ONS_OK" | translate }}</ons-button>
+    </ons-modal>
+</ons-page>
