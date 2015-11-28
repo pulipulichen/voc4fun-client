@@ -46,21 +46,14 @@
       -- ---------------------------------------- -->
 <body ng-controller="app_controller">
 
-<div class="ons-loading-placeholder">
-    <img src="img/loading.svg" /> 
-</div>
-
-<ons-modal var="modal" class="now-loading-modal">
-    <ons-icon icon="ion-load-c" spin="true"></ons-icon>
-</ons-modal>
-
 <ons-sliding-menu id="menu" var="app.menu" 
                   main-page="main" menu-page="menu.html" max-slide-distance="200px" 
-                  type="reveal" side="left" ons-preopen="menu_open()" ons-preclose="menu_close()" ></ons-sliding-menu>
+                  type="reveal" side="left" ons-preopen="menu_open()" ons-preclose="menu_close()" >
+</ons-sliding-menu>
 
 
 <ons-template id="main">
-    <ons-navigator var="app.navi"></ons-navigator> 
+    <ons-navigator var="app.navi" page="splash_screen.html"></ons-navigator> 
 </ons-template>
 
 <!-- ---------------------------------------- 

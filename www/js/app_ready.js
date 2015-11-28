@@ -28,7 +28,7 @@ var _app_ready = function ($scope) {
         //}, 500);
 
         //app.navi.replacePage("setting.html");
-        return this;
+        //return this;
 
         //$scope.ctl_test_select.status.stack = [1, 2, 3];
         //$scope.ctl_test_select.next(false);return this;

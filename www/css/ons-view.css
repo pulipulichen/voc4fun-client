@@ -120,6 +120,13 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
     left: calc(50% - 60px);
 }
 
+.ons-loading-placeholder .message {
+    position:fixed;
+    top: calc(50% + 60px);
+    text-align: center;
+    width: 100%;
+}
+
 ons-toolbar + .page__background + .page__content {
     top: 50px;
 }
