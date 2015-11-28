@@ -16,7 +16,9 @@ var _app_ready = function ($scope) {
         //$scope.ctl_learn_flashcard.status.review_stack = [6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11];
         //$scope.ctl_activity.enter_from_target();return this;
 
-//        $scope.ctl_learn_flashcard.enter();
+        // 測試：進入單字學習頁面
+        $scope.ctl_learn_flashcard.enter();return this;
+        
 //        setTimeout(function () {
 //
 //            $scope.ctl_learn_flashcard.var.learn_flashcard.note = "121212\n121212\n121212\n121212\n121212\n121212\n121212\n121212\n";
@@ -27,6 +29,7 @@ var _app_ready = function ($scope) {
         //    app.menu.open();
         //}, 500);
 
+        // 測試：進入設定頁面
         //app.navi.replacePage("setting.html");
         //return this;
 

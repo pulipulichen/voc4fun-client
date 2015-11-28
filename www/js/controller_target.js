@@ -378,11 +378,25 @@ var controller_target = function ($scope) {
             setTimeout(function () {
                 ons.notification.alert({
                     title: _title,
-                    message: _setting.complete_message
+                    message: _setting.complete_message,
+                    callback: function () {
+                        if (_ctl.get_complete_percent() === 100) {
+                            _ctl.complate_all_target();
+                        }
+                    }
                 });
             }, 500);
             $scope.log(_log_file, "complate_target", undefined, _status[_key]);
         }
+    };
+    
+    _ctl.complate_all_target = function () {
+        setTimeout(function () {
+                ons.notification.alert({
+                    title: "太厲害了！",
+                    message: "您達成了全部的目標了！"
+                });
+            }, 500);
     };
 
     _ctl.get_done = function (_key) {

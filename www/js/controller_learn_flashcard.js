@@ -218,7 +218,7 @@ var controller_learn_flashcard = function ($scope) {
             },
             "set_page": function () {
                 _var.learn_flashcard = _flashcard;
-                $.console_trace("_transition_prev 設定完了");
+                //$.console_trace("_transition_prev 設定完了");
             },
             "animtation": "lift",
             "callback": _callback
@@ -264,7 +264,7 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     _ctl.get_new_flashcard_type = function () {
-        $.console_trace($scope.ctl_target.status);
+        //$.console_trace($scope.ctl_target.status);
         var _target = $scope.ctl_target.get_target_data("learn_flashcard");
         var _add_proportion = (_target.target - _target.done);
         if (_add_proportion < 0) {
@@ -273,7 +273,7 @@ var controller_learn_flashcard = function ($scope) {
 
         var _review_proportion = _status.review_stack.length;
 
-        $.console_trace([_target, _add_proportion, _review_proportion]);
+        //$.console_trace([_target, _add_proportion, _review_proportion]);
 
         if ((_add_proportion + _review_proportion) === 0) {
             return "new";

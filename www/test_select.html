@@ -1,5 +1,5 @@
 <ons-page id="test_select_html" 
-          class="test-select"
+          class="test-select-page"
           ng-device-backbutton="main_back()" 
           ng-init="_test_select = ctl_test_select.var.test_select">
 
@@ -8,7 +8,7 @@
         <div class="left">
             <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
                 <span class="toolbar-button--quiet navigation-bar__line-height" >
-                    <i class="ion-navicon"></i>
+                    <ons-icon icon="ion-navicon" fixed-width="true"></ons-icon>
                 </span>
             </ons-toolbar-button>
         </div>
@@ -27,8 +27,9 @@
     <div class="question"
          ng-click="ctl_activity.speak(_test_select.question)">
         
-        <i class="ion-radio-waves hide speak"></i>
+        <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak hide"></ons-icon>
         {{ _test_select.question }}
+        <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak"></ons-icon>
         
     </div>
 

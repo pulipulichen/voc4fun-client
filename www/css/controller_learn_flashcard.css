@@ -1,0 +1,58 @@
+.learn-flashcard-page .flashcard {
+    margin: 0 1rem; border: 1px solid #DDD; border-radius: 4px;
+}
+
+.learn-flashcard-page .flashcard .side {
+    padding:1rem; 
+    text-align: center;
+    display: block;
+    background-color: white; 
+    cursor: pointer
+
+}
+
+.learn-flashcard-page .flashcard .a {
+    border-top: 1px solid #DDD; 
+    background-color: #EEE;
+}
+
+ons-page .speak {
+    float:right;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color:#999;
+}
+
+ons-page .speak.hide {
+    visibility: hidden;
+    float: left;
+}
+
+.learn-flashcard-page .note {
+    margin:1rem;   
+    padding: 1rem; 
+    border-radius: 4px;
+    border: 1px solid #ddd; 
+    cursor: pointer;
+    background-color: #f9f9f9;
+    max-height: 10rem;
+    overflow-y: auto;
+}
+
+.learn-flashcard-page .note .compose {
+    float:left;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.learn-flashcard-page .note .note-empty {
+    color: gray;
+}
+
+.learn-flashcard-page .notification {
+    float: right;margin-top: 0.5rem;position: relative;top: -3rem;right: 1.5rem;
+}
+
+.learn-flashcard-page .notification .notification-text {
+    display: none;
+}

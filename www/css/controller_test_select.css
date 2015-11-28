@@ -6,11 +6,7 @@
     background-color: red;
 }
 
-.test-select ons-toolbar .right {
-    line-height: 44px;
-}
-
-.test-select .question {
+.test-select-page .question {
     margin:1rem;   
     padding: 1rem;  
     border-radius: 4px;
@@ -22,7 +18,7 @@
     text-align: center;
 }
 
-.test-select .question .speak {
+.test-select-page .question .speak {
     float:left;
     font-size: 1.5rem;
     margin-right: 0.5rem;
@@ -30,16 +26,16 @@
     visibility: hidden;
 }
 
-.test-select .hint {
+.test-select-page .hint {
     text-align: center;
     margin-top: 1rem;
 }
 
-.test-select .hint .pre {
+.test-select-page .hint .pre {
     white-space: pre;
 }
 
-.test-select .result {
+.test-select-page .result {
     margin:1rem;   
     padding: 1rem; 
     border-radius: 4px;
@@ -50,10 +46,10 @@
     text-align: center;
 }
 
-.test-select .result.correct {
+.test-select-page .result.correct {
     background-color: green;
 }
 
-.test-select .result.incorrect {
+.test-select-page .result.incorrect {
     background-color: red;
 }

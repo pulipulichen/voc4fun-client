@@ -5,3 +5,7 @@
 label.checkbox input[type="checkbox"] {
     display:none;
 }
+
+one-page .pre {
+    white-space: pre;
+}

@@ -1,6 +1,13 @@
 {
     "TITLE": "全民樂單字",
     
+    "LEARN_FLASHCARD_TITLE": "單字學習",
+    "LEARN_FLASHCARD_NOTE_EMPTY": "您還沒有撰寫筆記",
+    "LEARN_FLASHCARD_OTHER_NOTE": "其他人的筆記:",
+    "LEARN_FLASHCARD_GO_PREV": "上一個單字",
+    "LEARN_FLASHCARD_GO_TEST": "進入測驗",
+    "LEARN_FLASHCARD_GO_NEXT": "下一個單字",
+    
     "TEST_SELECT_TITLE": "測驗",
     "TEST_SELECT_OPTIONS_HEADING": "請選擇答案：",
     "TEST_SELECT_HINT_BUTTON": "查看筆記",
