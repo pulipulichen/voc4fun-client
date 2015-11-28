@@ -38,9 +38,9 @@ var _app_ready = function ($scope) {
         //$scope.ctl_test_select.next(false);return this;
         
         // debug: 進入推薦頁面
-        $scope.ctl_target.init_recommend_target_data(function () {
-            app.navi.replacePage("target_recommend.html");
-        }); return this;
+        //$scope.ctl_target.init_recommend_target_data(function () {
+        //    app.navi.replacePage("target_recommend.html");
+        //}); return this;
 
         if ($scope.db_profile.is_exists() === false) {
             //$scope.profile = $scope.profile_mock;
