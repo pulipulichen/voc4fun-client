@@ -9,6 +9,8 @@ var _app_factory_ons_view = function ($scope) {
 //        $("#split").removeClass("split");
 //    };
 
+    var _log_file = "app_factory_ons_view.js";
+
     $scope.menu_open = function () {
         //$(".onsen-split-view__secondary").css({
         //    "display": "block",
@@ -32,6 +34,7 @@ var _app_factory_ons_view = function ($scope) {
     };
 
     $scope.exit_app = function () {
+        $scope.log(_log_file, "exit_app()");
         if (typeof (cordova) !== "undefined") {
             navigator.app.exitApp();
         }
@@ -53,7 +56,6 @@ var _app_factory_ons_view = function ($scope) {
         else {
             $scope.exit_app();
         }
-
     };
 
 //    $scope.menu_back = function () {
