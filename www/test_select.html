@@ -10,7 +10,9 @@
             </ons-toolbar-button>
         </div>
 
-        <div class="center">測驗</div>
+        <div class="center">
+            測驗
+        </div>
 
         <div class="right" style="line-height: 44px;" 
              ng-init="_target_data = ctl_target.status.test_select" 
@@ -96,7 +98,7 @@
                  ng-show="(ctl_activity.is_test_enough() === true || (ctl_test_select.status.stack.length === 0))"
                  ng-click="ctl_learn_flashcard.enter()"></ons-tab>
         <ons-tab label="下一個測驗" icon="ion-arrow-down-b"
-                 ng-click="ctl_test_select.next();"></ons-tab>
+                 ng-click="ctl_test_select.next(true);"></ons-tab>
     </ons-tabbar>
 
 </ons-page>

@@ -3,14 +3,16 @@
     <ons-toolbar>
 
         <div class="left">
-            <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
+            <ons-toolbar-button class="menu-open">
                 <span class="toolbar-button--quiet navigation-bar__line-height" >
                     <i class="ion-navicon"></i>
                 </span>
             </ons-toolbar-button>
         </div>
 
-        <div class="center">測驗</div>
+        <div class="center">
+            測驗
+        </div>
 
         <div class="right" style="line-height: 44px;" 
              ng-init="_target_data = ctl_target.status.test_select" 
@@ -21,6 +23,8 @@
 
     <div class="question" style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; cursor: pointer;
          background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;text-align: center;">
+        
+        <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
         {{ _test_select.question }}
         
     </div>
@@ -44,6 +48,20 @@
                 {{ option.q }}
         </ons-list-item>
     </ons-list>
+
+    <!-- ===================================== -->
+        
+    <div class="hint" ng-show="_text_select.note !== null"
+         style="text-align: center;margin-top: 1rem;">
+        <ons-button  ng-show="ctl_test_select.var.show_note === false"
+                     ng-click="ctl_test_select.var.show_note = true">
+            查看筆記
+        </ons-button>
+        <div ng-show="ctl_test_select.var.show_note === true"
+            style="white-space: pre">{{ _test_select.note }}</div>
+    </div>
+    
+    <!-- ===================================== -->
 
     <div ng-show="(ctl_test_select.var.test_select.answer !== undefined)">
         <div class="result correct" 
