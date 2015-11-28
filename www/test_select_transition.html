@@ -1,4 +1,6 @@
-<ons-page id="test_select_transition_html" ng-init="_test_select = ctl_test_select.var.test_select_transition">
+<ons-page id="test_select_transition_html" 
+          class="test-select"
+          ng-init="_test_select = ctl_test_select.var.test_select_transition">
 
     <ons-toolbar>
 
@@ -11,27 +13,26 @@
         </div>
 
         <div class="center">
-            測驗
+            {{ "TEST_SELECT_TITLE" | translate }}
         </div>
 
-        <div class="right" style="line-height: 44px;" 
+        <div class="right"
              ng-init="_target_data = ctl_target.status.test_select" 
              ng-class="{'target-completed': (_target_data.done > _target_data.target-1)}">
             {{ _target_data.done}} / {{ _target_data.target}}
         </div>
     </ons-toolbar>
 
-    <div class="question" style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; cursor: pointer;
-         background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;text-align: center;">
+    <div class="question">
         
-        <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
+        <i class="ion-radio-waves hide speak"></i>
         {{ _test_select.question }}
         
     </div>
 
     <ons-list class="options">
         <ons-list-header>
-            請選擇答案：
+            {{ "TEST_SELECT_OPTIONS_HEADING" | translate }}
         </ons-list-header>
 
         <ons-list-item modifier="tappable"
@@ -51,34 +52,16 @@
 
     <!-- ===================================== -->
         
-    <div class="hint" ng-show="_text_select.note !== null"
-         style="text-align: center;margin-top: 1rem;">
+    <div class="hint" ng-show="_text_select.note !== null">
         <ons-button  ng-show="ctl_test_select.var.show_note === false"
                      ng-click="ctl_test_select.var.show_note = true">
-            查看筆記
+            {{ "TEST_SELECT_HINT_BUTTON" | translate }}
         </ons-button>
-        <div ng-show="ctl_test_select.var.show_note === true"
-            style="white-space: pre">{{ _test_select.note }}</div>
+        <div ng-show="ctl_test_select.var.show_note === true" class="pre">{{ _test_select.note }}</div>
     </div>
     
     <!-- ===================================== -->
 
-    <div ng-show="(ctl_test_select.var.test_select.answer !== undefined)">
-        <div class="result correct" 
-             ng-show="(ctl_test_select.var.test_select.answer === ctl_test_select.var.test_select.correct)"
-             style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd;
-             background-color: green;color:white;max-height: 10rem; overflow-y: auto;">
-            答對了！
-        </div>
-
-        <div class="result incorrect" 
-             ng-show="(ctl_test_select.var.test_select.answer !== ctl_test_select.var.test_select.correct)"
-             style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd;
-             background-color: red;color:white;max-height: 10rem; overflow-y: auto;">
-            答錯了！
-        </div>
-    </div>
-    
     <!--
     <div style="border: 1px solid red; margin-bottom: 1rem;">_test_select: {{ _test_select }}</div>
     <div style="border: 1px solid red; margin-bottom: 1rem;">ctl_test_select.status: {{ ctl_test_select.status }}</div>
@@ -86,9 +69,9 @@
     -->
 
     <ons-tabbar ng-show="ctl_test_select.is_answered()">
-        <ons-tab label="回到單字學習" icon="ion-ios-browsers-outline" 
+        <ons-tab label="{{ 'TEST_SELECT_GO_TO_LEARN' | translate }}" icon="ion-ios-browsers-outline" 
                  ng-show="(ctl_activity.is_test_enough() === true || (ctl_test_select.status.stack.length === 0))"></ons-tab>
-        <ons-tab label="下一個測驗" icon="ion-arrow-down-b"></ons-tab>
+        <ons-tab label="{{ 'TEST_SELECT_NEXT' | translate }}" icon="ion-arrow-down-b"></ons-tab>
     </ons-tabbar>
 
 </ons-page>

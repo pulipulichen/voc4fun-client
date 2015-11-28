@@ -5,3 +5,55 @@
 #test_select_html .options .incorrect {
     background-color: red;
 }
+
+.test-select ons-toolbar .right {
+    line-height: 44px;
+}
+
+.test-select .question {
+    margin:1rem;   
+    padding: 1rem;  
+    border-radius: 4px;
+    border: 1px solid #ddd; 
+    cursor: pointer;
+    background-color: #f9f9f9;
+    max-height: 10rem;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.test-select .question .speak {
+    float:left;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color:#999;
+    visibility: hidden;
+}
+
+.test-select .hint {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.test-select .hint .pre {
+    white-space: pre;
+}
+
+.test-select .result {
+    margin:1rem;   
+    padding: 1rem; 
+    border-radius: 4px;
+    border: 1px solid #ddd;    
+    color:white;
+    max-height: 10rem;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.test-select .result.correct {
+    background-color: green;
+}
+
+.test-select .result.incorrect {
+    background-color: red;
+}
