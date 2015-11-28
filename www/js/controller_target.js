@@ -231,6 +231,14 @@ var controller_target = function ($scope) {
         var _title = _date.month + "月" + _date.day + "日的目標與進度";
         return _title;
     };
+    
+    _ctl.get_menu_title = function () {
+        var _date = _ctl._get_period_date();
+        var _title = "您" + _date.month + "月" + _date.day + "日的進度是";
+        return _title;
+    };
+    
+    
 
     _ctl.set_target = function ($event) {
         var _form = $($event.target);
@@ -392,6 +400,28 @@ var controller_target = function ($scope) {
             $scope.ctl_target.enter_from_profile(false);
         }
     };
+    
+    // -----------------------------------------
+    
+    _ctl.get_complete_percent = function () {
+        var _done = 0;
+        var _target = 0;
+        var _percent = 0;
+        
+        for (var _i in _status) {
+            _done = _done + _status[_i].done;
+            _target = _target + _status[_i].target;
+        }
+        
+        if (_target !== 0) {
+            _percent = Math.floor(_done / _target);
+        }
+        
+        return _percent;
+    };
+    
+    
+    // ------------------------------------------
 
     $scope.ctl_target = _ctl;
 };

@@ -19,8 +19,10 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
 }
 
 #menu_html ons-list-item,
+#menu_html ons-row,
 #menu_html ons-toolbar-button .toolbar-button,
-#menu_html ons-toolbar .center {
+#menu_html ons-toolbar .center,
+#menu_html ons-toolbar .left {
     color: white;
 }
 
@@ -61,7 +63,9 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
         background-color: #FFF;
     }
     body:not(.main-full) #menu_html ons-list-item,
-    body:not(.main-full) #menu_html ons-toolbar .center {
+    body:not(.main-full) #menu_html ons-row,
+    body:not(.main-full) #menu_html ons-toolbar .center,
+    body:not(.main-full) #menu_html ons-toolbar .left {
         color: black;
     }
     
@@ -104,7 +108,8 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
         left: 0;
     }
     
-    body:not(.main-full) #menu_html ons-toolbar .center {
+    body:not(.main-full) #menu_html ons-toolbar .center,
+    body:not(.main-full) #menu_html ons-toolbar .left {
         display:none;
     }
 }   /* @media screen and (min-width: 400px) and (max-width: 700px) { */
