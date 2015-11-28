@@ -92,7 +92,7 @@ var controller_note = function ($scope) {
             _status.history.push(_id);
 
             $scope.db_status.save_status(_status_key);
-            $scope.ctl_target.done_plus("note");
+            $scope.ctl_target.done_plus("take_note");
         }
     };
 

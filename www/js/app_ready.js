@@ -16,19 +16,19 @@ var _app_ready = function ($scope) {
         //$scope.ctl_learn_flashcard.status.review_stack = [6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11, 6, 10, 11];
         //$scope.ctl_activity.enter_from_target();return this;
 
-        $scope.ctl_learn_flashcard.enter();
-        setTimeout(function () {
-
-            $scope.ctl_learn_flashcard.var.learn_flashcard.note = "121212\n121212\n121212\n121212\n121212\n121212\n121212\n121212\n";
-            $scope.$digest();
-            $scope.ctl_note.enter();
-        }, 500);
+//        $scope.ctl_learn_flashcard.enter();
+//        setTimeout(function () {
+//
+//            $scope.ctl_learn_flashcard.var.learn_flashcard.note = "121212\n121212\n121212\n121212\n121212\n121212\n121212\n121212\n";
+//            $scope.$digest();
+//            $scope.ctl_note.enter();
+//        }, 500);
         //setTimeout(function () {
         //    app.menu.open();
         //}, 500);
 
         //app.navi.replacePage("setting.html");
-        return this;
+        //return this;
 
         //$scope.ctl_test_select.status.stack = [1, 2, 3];
         //$scope.ctl_test_select.next(false);return this;

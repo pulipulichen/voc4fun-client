@@ -356,7 +356,7 @@ var controller_target = function ($scope) {
     };
 
     _ctl.done_plus = function (_key) {
-        $.console_trace("done_plus", _status);
+        //$.console_trace("done_plus", _status);
         if (typeof (_status[_key]) === "object") {
             _status[_key].done++;
             $scope.log(_log_file, "done_plus", undefined, {

@@ -144,7 +144,7 @@ var controller_learn_flashcard = function ($scope) {
             }
         }
         else {
-            $.console_trace("不是最後一個的情況")
+            //$.console_trace("不是最後一個的情況")
             _status.history_index++;
             _ctl.set_history_flashcard(function (_flashcard) {
                 _trans_callback(_flashcard);
