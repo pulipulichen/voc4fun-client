@@ -27,6 +27,8 @@ var controller_test_select = function ($scope) {
         "correct": 0,
         "flashcard_id": 0
     };
+    
+    _var.show_note = false;
 
     _ctl.var = _var;
 
@@ -57,6 +59,13 @@ var controller_test_select = function ($scope) {
     _ctl.status = _status;
 
     // --------------------
+
+    _ctl.enter = function (_callback, _do_animation) {
+        // 讓選單保持在選取的狀態
+        $scope.ons_view.active_menu(2);
+        
+        return _ctl.next(_callback, _do_animation);
+    };
 
     _ctl.next = function (_callback, _do_animation) {
         if (typeof (_callback) === "boolean") {
@@ -202,6 +211,8 @@ var controller_test_select = function ($scope) {
 
     var _option_length = 3;
     _ctl.get_test_flashcard = function (_callback) {
+        _var.show_note = false;
+        
         var _test_select = _var.test_select;
         // 從陣列中讀取
 
@@ -224,6 +235,10 @@ var controller_test_select = function ($scope) {
         $scope.ctl_flashcard.get_flashcard(_flashcard_id, function (_flashcard) {
             _test_select.flashcard_id = _flashcard.id;
             _test_select.question = _flashcard.a;
+            _test_select.note = _flashcard.note;
+            
+            //_test_select.note = "AAA";
+            
             _options.push(_flashcard);
 
             $scope.ctl_flashcard.get_other_flashcards(

@@ -78,10 +78,21 @@ var controller_learn_flashcard = function ($scope) {
 
     // -----------------------------------------
 
-    _ctl.enter = function () {
+    _ctl.enter = function (_do_animation) {
+        // 讓選單保持在選取的狀態
+        $scope.ons_view.active_menu(1);
+        
         _ctl.init(function () {
             //$.console_trace("enter");
-            app.navi.replacePage("learn_flashcard.html");
+            
+            if (_do_animation === false) {
+                app.navi.replacePage("learn_flashcard.html", {
+                    "animation": "none"
+                });
+            }
+            else {
+                app.navi.replacePage("learn_flashcard.html");
+            }
         });
     };
 

@@ -126,13 +126,13 @@ var _app_factory_ons_view = function ($scope) {
 
     // --------------------------------
 
-    var _ons_view = {};
+    var _ctl = {};
 
     /**
      * @TODO 20151127 轉變特效失敗 #46
      * @param {JSON} _opt
      */
-    _ons_view.transition_next = function (_opt) {
+    _ctl.transition_next = function (_opt) {
         var _page = $.parse_opt(_opt, "page");
         var _trans_page = $.parse_opt(_opt, "trans_page");
         var _set_trans_page = $.parse_opt(_opt, "set_trans_page");
@@ -164,7 +164,7 @@ var _app_factory_ons_view = function ($scope) {
      * @TODO 20151127 轉變特效失敗 #46
      * @param {JSON} _opt
      */
-    _ons_view.transition_prev = function (_opt) {
+    _ctl.transition_prev = function (_opt) {
         var _page = $.parse_opt(_opt, "page");
         var _trans_page = $.parse_opt(_opt, "trans_page");
         var _set_trans_page = $.parse_opt(_opt, "set_trans_page");
@@ -191,5 +191,21 @@ var _app_factory_ons_view = function ($scope) {
         }, 100);
     };
 
-    $scope.ons_view = _ons_view;
+    /**
+     * 讓menu保持在點選的狀態
+     * @param {number} _index
+     */
+    _ctl.active_menu = function (_index) {
+        var _classname = "menu-active";
+        $("#menu_html .menu-active").removeClass(_classname);
+        var _menu_item = $("#menu_html ons-list-item");
+        //$.console_trace("active_menu", _menu_item.length);
+        if (_index < _menu_item.length) {
+            _menu_item.eq(_index).addClass(_classname);
+        }
+    };
+
+    // -------------------------------
+
+    $scope.ons_view = _ctl;
 };

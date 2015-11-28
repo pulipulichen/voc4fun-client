@@ -11,7 +11,7 @@ var controller_activity = function ($scope) {
         
         if ( _ctl.is_learn_enough() 
                 && _ctl.is_test_enough() === false ) {
-            $scope.ctl_test_select.next(false);
+            $scope.ctl_test_select.enter(false);
         }
         else {
             $scope.ctl_learn_flashcard.enter();

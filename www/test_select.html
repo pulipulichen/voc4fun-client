@@ -54,6 +54,20 @@
                 </span>
         </ons-list-item>
     </ons-list>
+    
+    <!-- ===================================== -->
+        
+    <div class="hint" ng-show="_text_select.note !== null"
+         style="text-align: center;margin-top: 1rem;">
+        <ons-button  ng-show="ctl_test_select.var.show_note === false"
+                     ng-click="ctl_test_select.var.show_note = true">
+            查看筆記
+        </ons-button>
+        <div ng-show="ctl_test_select.var.show_note === true"
+            style="white-space: pre">{{ _test_select.note }}</div>
+    </div>
+    
+    <!-- ===================================== -->
 
     <div ng-show="(ctl_test_select.var.test_select.answer !== undefined)">
         <div class="result correct" 

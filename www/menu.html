@@ -27,8 +27,7 @@
             </span>
         </ons-list-item>
 
-        <ons-list-item class="menu-active"
-                       ng-click="ctl_learn_flashcard.enter();
+        <ons-list-item ng-click="ctl_learn_flashcard.enter(false);
                            menu_click($event);">
             <i class="icon ion-ios-browsers-outline"></i>
             <span class="menu-label">
@@ -36,7 +35,7 @@
             </span>
         </ons-list-item>
 
-        <ons-list-item ng-click="ctl_test_select.next();
+        <ons-list-item ng-click="ctl_test_select.enter();
             menu_click($event);">
             <i class="icon ion-ios-compose-outline"></i>
             <span class="menu-label">
