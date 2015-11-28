@@ -35,10 +35,10 @@ var controller_activity = function ($scope) {
     
     /**
      * 發音
-     * @TODO 1126 未完成，留待舜閔研究
      * @param {String} _text
      */
-    $scope.ctl_activity.speak = function (_text) {
-        alert("發音：" + _text + "(未完成)");
+    $scope.ctl_activity.speak = function (_text, _lang) {
+        //alert("發音：" + _text + "(未完成)");
+        $scope.cordova_text_to_speech.speak(_text, _lang);
     };
 };

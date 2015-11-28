@@ -89,6 +89,8 @@
 <script src="lib/pulipuli-utils/cordova_utils.js"></script>
 <script src="lib/pulipuli-utils/cordova_social_share.js"></script>
 <script src="lib/pulipuli-utils/cordova_inappbrowser_submit.js"></script>
+
+<script src='lib/responsivevoice/responsivevoice.js'></script>
 <script src="lib/pulipuli-utils/cordova_text_to_speech.js"></script>
 
 <script src="js/app_factory_db.js"></script>
@@ -98,8 +100,6 @@
 <script src="js/controller_learn_flashcard.js"></script>
 <script src="js/controller_note.js"></script>
 
-<script src="lib/google-tts/google-tts.min.js"></script>
-<script src="lib/google-tts/soundmanager2.js"></script>
 <script src="js/controller_test_select.js"></script>
 
 <script src="js/app_ready.js"></script>
@@ -132,12 +132,13 @@ var _app_controller = function ($scope, $filter) {
 
     _app_factory_db_utils($scope);
     cordova_utils($scope);
+    _app_factory_jquery_utils($scope);
+    
     cordova_social_share($scope, $filter);
     cordova_inappbrowser_submit($scope);
     cordova_text_to_speech($scope);
     _app_factory_ons_view($scope);
     _app_factory_ons_utils($scope, $filter);
-    _app_factory_jquery_utils($scope);
 
     _app_factory_db($scope);
 

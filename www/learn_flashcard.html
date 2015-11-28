@@ -24,7 +24,7 @@
     <div class="flashcard" style="margin: 0 1rem; border: 1px solid #DDD; border-radius: 4px;">
         
         <!-- 英文的部分 -->
-        <ons-row class="q" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q)"
+        <ons-row class="q" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"
                  style="padding:1rem; text-align: center;display: block;background-color: white; cursor: pointer">
             <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
             {{ ctl_learn_flashcard.var.learn_flashcard.q}}
@@ -32,7 +32,7 @@
         </ons-row>
         
         <!-- 中文的部分 -->
-        <ons-row class="a" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.a)"
+        <ons-row class="a" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.a, 'zh')"
                  style="border-top: 1px solid #DDD; background-color: #EEE;padding: 1rem;text-align: center;display: block;cursor: pointer" >
             <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
             {{ ctl_learn_flashcard.var.learn_flashcard.a}}

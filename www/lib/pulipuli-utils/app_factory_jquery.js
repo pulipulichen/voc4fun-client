@@ -212,4 +212,14 @@ var _app_factory_jquery_utils = function ($scope) {
         }
         return _ary;
     };
+    
+    $.getScript = function(_src, _func) {
+        var _script = document.createElement('script');
+        //_script.async = "async";
+        _script.src = _src;
+        if (_func) {
+           _script.onload = _func;
+        }
+        document.getElementsByTagName("head")[0].appendChild( _script );
+    };
 };

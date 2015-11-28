@@ -26,48 +26,54 @@ var cordova_text_to_speech = function ($scope) {
         }, false);
     }
     else {
-        //var _tts = new GoogleTTS('zh-CN');
+        // <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+        // 支持語言：http://responsivevoice.org/text-to-speech-languages/
         
-        soundManager.setup({
-            url: 'lib/google-tts/',
-            preferFlash: false,
-            onready: function () {
-                if (!window.GoogleTTS) {
-                    $.console_trace("Sorry, the google-tts script couldn't be loaded.");
-                    return;
-                }
-                
-                var _googleTTS = new window.GoogleTTS();
-                
-                _ctl.speak = function (_text, _lang) {
-                    _googleTTS.play(_text, _lang, function (err) {
-                        if (err) {
-                            $.console_trace(err.toString());
-                        }
-                        $.console_trace('Finished playing');
-                    });
-                };
-                
-                setTimeout(function () {
-                    _ctl.speak("test", "en-US");
-                    _ctl.speak("test2", "en_US");
-                    _ctl.speak("test3", "en");
-                }, 1000);
-                
-                // available player
-                _googleTTS.getPlayer(function (err, player) {
-                    if (err) {
-                        return $.console_trace(err.toString());
-                    }
-                    if (player) {
-                        $.console_trace(player.toString());
-                    } else {
-                        $.console_trace('None available');
-                    }
-                });
+        
+        var _filter_lang = function (_lang) {
+            if (_lang === "en") {
+                _lang = $.array_get_random([
+                    "UK English Female",
+                    "UK English Male",
+                    "US English Female"
+                ]);
             }
-        });
-    }
+            else if (_lang === "en-US" || _lang === "en_US") {
+                _lang = "US English Female";
+            }
+            else if (_lang === "en-UK" || _lang === "en_UK") {
+                _lang = $.array_get_random([
+                    "UK English Female",
+                    "UK English Male"
+                ]);
+            }
+            else if ($.inArray(_lang, ["zh", "zh_CN", "zh-CN", "zh_TW", "zh-TW"]) > -1) {
+                _lang = "Chinese Female";
+            }
+            return _lang;
+        };
+        
+        _ctl.speak = function (_text, _lang) {
+            if (_lang === undefined) {
+                _lang = "UK English Male";
+            }
+            else {
+                _lang = _filter_lang(_lang);
+            }
+            // <input onclick='responsiveVoice.speak("Hello World");' type='button' value='🔊 Play' />
+            if (typeof(responsiveVoice) === "object" 
+                    && responsiveVoice.isPlaying() === false) {
+                responsiveVoice.speak(_text, _lang);
+                $.console_trace("Speak: " + _text + " (" + _lang + ")");
+            }
+            else {
+                setTimeout(function () {
+                    _ctl.speak(_text, _lang);
+                }, 1000);
+            }
+        };
+
+    }   //else {
     
     // --------------------------------
 
