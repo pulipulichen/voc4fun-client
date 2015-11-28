@@ -24,7 +24,7 @@
                                   ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
                         <input min="{{ setting.min}}" max="{{ setting.max}}" type="number" 
                                value="{{ recommend_target}}"
-                               target_key="{{setting.key}}"
+                               target_key="{{ setting.key }}"
                                style="width: 3rem;font-size: 1rem;text-align: center;" />
                         <ons-icon icon="ion-ios-plus-outline" fixed-width="true" 
                                   ng-click="ctl_target.change_target_number($event, 1)"></ons-icon>
@@ -39,7 +39,7 @@
                     </ons-col>
                     <ons-col width="50%" class="recommend-target" style="text-align: center;">
                         推薦的目標: 
-                        {{ recommend_target}}
+                        {{ recommend_target }}
                     </ons-col>
                 </ons-row>
             </ons-list-item>

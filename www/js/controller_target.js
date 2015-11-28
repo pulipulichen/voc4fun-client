@@ -13,7 +13,7 @@ var controller_target = function ($scope) {
             //"default_target": 30,
             "default_target": 3,
             "min": 0,
-            //"max": $scope.ctl_flashcard.status.flashcard_count, // 最大只能設定所有卡片的數量
+            "default_max": 100,
             "title": "學習單字",
             "help_img": "img/loading.svg",
             "help": "設定每天目標學習的單字數量。",
@@ -24,7 +24,7 @@ var controller_target = function ($scope) {
             //"default_target": 20,
             "default_target": 2,
             "min": 0,
-            //"max": $scope.ctl_flashcard.status.flashcard_count, // 最大只能設定所有卡片的數量
+            "default_max": 100,
             "title": "撰寫筆記",
             "help_img": "img/loading.svg",
             "help": "設定每天要撰寫的筆記數量。\n針對不同單字，寫下你對不同單字的筆記與想法。\n字數及內容不拘，可隨意發揮。",
@@ -35,7 +35,7 @@ var controller_target = function ($scope) {
             //"default_target": 30,
             "default_target": 3,
             "min": 0,
-            //"max": $scope.ctl_flashcard.status.flashcard_count, // 最大只能設定所有卡片的數量
+            "default_max": 100,
             "title": "答對測驗",
             "help_img": "img/loading.svg",
             "help": "設定每天目標答對的題目數量。\n題目都是三選一的選擇題。",
@@ -305,8 +305,8 @@ var controller_target = function ($scope) {
         if (_target < _setting.min) {
             _target = _setting.min;
         }
-        else if (_target > _ctl.get_max_target()) {
-            _target = _ctl.get_max_target();
+        else if (_target > _ctl.get_max_target(_key)) {
+            _target = _ctl.get_max_target(_key);
         }
         return _target;
     };
@@ -351,6 +351,7 @@ var controller_target = function ($scope) {
     };
 
     _ctl.init_recommend_target_data = function (_callback) {
+        // @TODO target在隔日重新計算 #57
         _var.recommend_target_data = _var._recommend_target_data_mock;
         $.trigger_callback(_callback);
     };
@@ -453,8 +454,11 @@ var controller_target = function ($scope) {
     
     // ------------------------------------------
     
-    _ctl.get_max_target = function () {
-        return $scope.ctl_flashcard.status.flashcard_count;
+    _ctl.get_max_target = function (_key) {
+        var _flashcard_count = $scope.ctl_flashcard.status.flashcard_count;
+        var _setting = _ctl._get_setting(_key);
+        var _default_max = _setting.default_max;
+        return Math.max(_flashcard_count, _default_max);
     };
     
     // ------------------------------------------
