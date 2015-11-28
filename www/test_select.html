@@ -20,7 +20,10 @@
     </ons-toolbar>
 
     <div class="question" style="margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; cursor: pointer;
-         background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;text-align: center;">
+         background-color: #f9f9f9;max-height: 10rem; overflow-y: auto;text-align: center;"
+         ng-click="ctl_activity.speak(_test_select.question)">
+        
+        <i class="ion-radio-waves hide" style="float:left;font-size: 1.5rem;margin-right: 0.5rem;color:#999;visibility: hidden;"></i>
         {{ _test_select.question }}
         
     </div>
@@ -42,7 +45,13 @@
                           ng-show="ctl_test_select.is_answered() === false || _test_select.answer !== $index"></ons-icon>
                 <ons-icon icon="ion-ios-circle-filled" fixed-width="true"
                           ng-show="ctl_test_select.is_answered() && _test_select.answer === $index"></ons-icon>
+                
                 {{ option.q }}
+                
+                <span ng-show="ctl_test_select.is_answered()">
+                    /
+                    {{ option.a }}
+                </span>
         </ons-list-item>
     </ons-list>
 
