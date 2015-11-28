@@ -19,16 +19,15 @@
 
     <ons-list modifier="inset" class="settings-list">
         <ons-list-item modifier="chevron" ng-click="clear_list()">
-            <i class="icon ion-close-circled" size="20px"></i>
-            {{ 'CLEAR_ALL_LIST' | translate}}
-        </ons-list-item>
-        <ons-list-item modifier="chevron" onclick="location.href = 'mailto:pulipuli.chen@gmail.com?subject=[NCCU-BOOK-CART]'">
-            <ons-icon icon="ion-android-mail" size="20px"></ons-icon>
-            {{ 'SUGGESTION' | translate}}
+            您的名稱
         </ons-list-item>
         <ons-list-item modifier="chevron" ng-click="share_app()">
             <ons-icon icon="ion-android-share-alt" size="20px"></ons-icon>
             {{ 'SHARE_APP' | translate}}
+        </ons-list-item>
+        <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('about.html')">
+            <ons-icon icon="ion-android-mail" size="20px"></ons-icon>
+            {{ 'ABOUT' | translate}}
         </ons-list-item>
     </ons-list>
 </ons-page>
