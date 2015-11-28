@@ -29,7 +29,6 @@
          Style
          ======================================== -->
     <link rel="stylesheet" href="css/float-action-button.css" />
-    <link rel="stylesheet" href="css/page-main_html.css" />
     <link rel="stylesheet" href="css/page-about_html.css" />
     <link rel="stylesheet" href="css/ons-view.css" />
     <link rel="stylesheet" href="css/ons.css" />
@@ -66,22 +65,21 @@
 <script src="lib/fingerprint/fingerprint.min.js"></script>
 <script type="text/javascript" src="lib/js-xlsx/xlsx.core.min.js"></script>
 
-<script src="lib/pulipuli-utils/app_factory_db_utils.js"></script>
-<script src="lib/pulipuli-utils/app_factory_ons_view.js"></script>
-<script src="lib/pulipuli-utils/app_factory_ons_utils.js"></script>
-<script src="lib/pulipuli-utils/app_factory_jquery.js"></script>
-<script src="lib/pulipuli-utils/db_profile.js"></script>
-<script src="lib/pulipuli-utils/db_log.js"></script>
-<script src="lib/pulipuli-utils/db_status.js"></script>
+<script src="pulipuli-utils/app_factory_db_utils.js"></script>
+<script src="pulipuli-utils/app_factory_ons_view.js"></script>
+<script src="pulipuli-utils/app_factory_ons_utils.js"></script>
+<script src="pulipuli-utils/app_factory_jquery.js"></script>
+<script src="pulipuli-utils/db_profile.js"></script>
+<script src="pulipuli-utils/db_log.js"></script>
+<script src="pulipuli-utils/db_status.js"></script>
 
-<script src="lib/pulipuli-utils/cordova_utils.js"></script>
-<script src="lib/pulipuli-utils/cordova_social_share.js"></script>
-<script src="lib/pulipuli-utils/cordova_inappbrowser_submit.js"></script>
+<script src="pulipuli-utils/cordova_utils.js"></script>
+<script src="pulipuli-utils/cordova_social_share.js"></script>
+<script src="pulipuli-utils/cordova_inappbrowser_submit.js"></script>
 
 <script src='lib/responsivevoice/responsivevoice.js'></script>
-<script src="lib/pulipuli-utils/cordova_text_to_speech.js"></script>
+<script src="pulipuli-utils/cordova_text_to_speech.js"></script>
 
-<script src="js/app_factory_db.js"></script>
 <script src="js/controller_flashcard.js"></script>
 <script src="js/controller_target.js"></script>
 <script src="js/controller_activity.js"></script>
@@ -91,7 +89,7 @@
 
 <script src="js/controller_test_select.js"></script>
 
-<script src="js/app_ready.js"></script>
+<script src="app_ready.js"></script>
 
 
 <!-- cordova -->
@@ -133,8 +131,6 @@ var _app_controller = function ($scope, $filter) {
     cordova_text_to_speech($scope);
     _app_factory_ons_view($scope);
     _app_factory_ons_utils($scope, $filter);
-
-    _app_factory_db($scope);
 
     db_log($scope);
     db_status($scope);

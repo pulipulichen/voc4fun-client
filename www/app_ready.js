@@ -7,7 +7,7 @@ var _app_ready = function ($scope) {
     // 如果要刪除profile，則執行這個
     //$scope.DB.drop_table(["profile", "log", "flashcard", "status", "list"]); return this;
 
-    $scope.flashcard_setup(function () {
+    $scope.ctl_flashcard.setup(function () {
         // 測試用
         //                $scope.set_swipeable(true);
         //app.navi.replacePage("note.html", {animation: 'none'}); return this;

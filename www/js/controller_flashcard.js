@@ -5,34 +5,6 @@ var controller_flashcard = function ($scope) {
 
     var _db_name = "flashcard";
     var _db_fields = ["q", "a", "note"];
-
-    $scope.flashcard_setup = function (_callback) {
-        // 從xlsx讀取資料
-
-        //$.console_log(typeof(XLSXReader));
-        var _create_table = function () {
-            $scope.DB.create_table(_db_name, _db_fields, function () {
-                XLSX.ajax_loader(_source_file_name, function (_data) {
-                    //$.console_log(_data);
-                    _status.flashcard_count = _data.length;
-                    $scope.db_status.save_status(_status_key);
-                    _data = $.array_shuffle(_data);
-                    //$.console_log(_data);
-                    $scope.DB.insert(_db_name, _data, _callback);
-                });
-            });
-        };
-            
-        $scope.DB.table_exists(_db_name, function (_result) {
-            if (_result === true) {
-                //$.console_trace("已經建立了");
-                $.trigger_callback(_callback);
-            }
-            else {
-                _create_table();
-            }
-        });
-    };
     
     // -----------------------
     
@@ -62,6 +34,35 @@ var controller_flashcard = function ($scope) {
     _ctl.status = _status;
     
     // -----------------------
+    
+
+    _ctl.setup = function (_callback) {
+        // 從xlsx讀取資料
+
+        //$.console_log(typeof(XLSXReader));
+        var _create_table = function () {
+            $scope.DB.create_table(_db_name, _db_fields, function () {
+                XLSX.ajax_loader(_source_file_name, function (_data) {
+                    //$.console_log(_data);
+                    _status.flashcard_count = _data.length;
+                    $scope.db_status.save_status(_status_key);
+                    _data = $.array_shuffle(_data);
+                    //$.console_log(_data);
+                    $scope.DB.insert(_db_name, _data, _callback);
+                });
+            });
+        };
+            
+        $scope.DB.table_exists(_db_name, function (_result) {
+            if (_result === true) {
+                //$.console_trace("已經建立了");
+                $.trigger_callback(_callback);
+            }
+            else {
+                _create_table();
+            }
+        });
+    };
     
     _ctl.get_flashcard = function(_id, _callback) {
         var _sql = "SELECT * FROM flashcard WHERE id = " + _id;
