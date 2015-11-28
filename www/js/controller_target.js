@@ -153,6 +153,12 @@ var controller_target = function ($scope) {
         app.navi.popPage();
     };
     
+    _ctl.enter_from_menu = function () {
+        app.navi.replacePage("target_view_page.html", {"animation": "none"});
+    };
+    
+    // ---------------------------
+    
     /**
      * 未完成
      * @TODO #
