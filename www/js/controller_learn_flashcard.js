@@ -40,14 +40,17 @@ var controller_learn_flashcard = function ($scope) {
 
     _var._other_note_mock = [
         {
+            "uuid": 1,
             "name": "同學A",
             "note": "心得A\n\n\n\n\n\n心得心得"
         },
         {
+            "uuid": 2,
             "name": "同學B",
             "note": "心得B\n\n\n\n\n\n心得心得"
         },
         {
+            "uuid": 3,
             "name": "同學C",
             "note": "心得C\n\n\n\n\n\n心得心得"
         }

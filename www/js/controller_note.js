@@ -62,12 +62,17 @@ var controller_note = function ($scope) {
         }, 0);
     };
 
-    _ctl.copy = function (_note) {
+    _ctl.copy = function (_note, _uuid) {
         _note = $.trim(_note);
 //        _var.note = _note;
         var _textarea = $("#note_html textarea").val(_note);
         _ctl._set_auto_grow(_textarea);
         _textarea.focus();
+        
+        $scope.log(_log_file, "copy()", _uuid, {
+            uuid: _uuid,
+            note: _note
+        });
     };
 
     _ctl.submit = function () {
