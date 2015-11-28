@@ -48,6 +48,8 @@ var controller_target = function ($scope) {
         help_img: "img/loading.svg",
         help: ""
     };
+    
+    _var.use_pop_page = false;
 
     _ctl.var = _var;
 
@@ -140,6 +142,17 @@ var controller_target = function ($scope) {
         });
         return this;
     };
+    
+    _ctl.enter_for_view = function () {
+        _var.use_pop_page = true;
+        app.navi.pushPage("target_view.html");
+    };
+    
+    _ctl.exit_from_view = function () {
+        _var.use_pop_page = false;
+        app.navi.popPage();
+    };
+    
     /**
      * 未完成
      * @TODO #

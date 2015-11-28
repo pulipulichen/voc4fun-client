@@ -1,11 +1,16 @@
 var controller_activity = function ($scope) {
-    $scope.ctl_activity = {};
     
-    $scope.ctl_activity.enter_from_target = function () {
+    var _ctl = {};
+    
+    var _log_file = "controller_activity.js";
+    
+    // --------------------------
+    
+    _ctl.enter_from_target = function () {
         $scope.set_swipeable(true);
         
-        if ( $scope.ctl_activity.is_learn_enough() 
-                && $scope.ctl_activity.is_test_enough() === false ) {
+        if ( _ctl.is_learn_enough() 
+                && _ctl.is_test_enough() === false ) {
             $scope.ctl_test_select.next(false);
         }
         else {
@@ -14,7 +19,7 @@ var controller_activity = function ($scope) {
         return this;
     };
     
-    $scope.ctl_activity.is_learn_enough = function () {
+    _ctl.is_learn_enough = function () {
         var _target_data = $scope.ctl_target.status;
         if (typeof(_target_data) === "undefined") {
             return false;
@@ -24,7 +29,7 @@ var controller_activity = function ($scope) {
                 || (_target_data.test_select.done > _target_data.test_select.target));
     };
     
-    $scope.ctl_activity.is_test_enough = function () {
+    _ctl.is_test_enough = function () {
         var _target_data = $scope.ctl_target.status;
         if (typeof(_target_data) === "undefined") {
             return false;
@@ -37,8 +42,17 @@ var controller_activity = function ($scope) {
      * 發音
      * @param {String} _text
      */
-    $scope.ctl_activity.speak = function (_text, _lang) {
+    _ctl.speak = function (_text, _lang) {
         //alert("發音：" + _text + "(未完成)");
+        $scope.log(_log_file, "speck", undefined, {
+            "text": _text,
+            "lang": _lang
+        });
+        
         $scope.cordova_text_to_speech.speak(_text, _lang);
     };
+    
+    // ---------------------
+    
+    $scope.ctl_activity = _ctl;
 };

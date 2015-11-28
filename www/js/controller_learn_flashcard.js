@@ -356,7 +356,7 @@ var controller_learn_flashcard = function ($scope) {
             _notification.find(".notification-text").show();
             //_var.learn_flashcard.other_note_loaded = true;
             //$scope.$digest();
-            $.console_trace("other_note_ajax ");
+            $.console_trace("other_note_ajax 尚未完成");
             $.trigger_callback(_callback);
         }, 1000);
     };

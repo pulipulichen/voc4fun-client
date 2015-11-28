@@ -24,7 +24,17 @@
         </ons-list-item>
     </ons-list>
 
-    <div class="bottom-bar bottom-bar-button" ng-click="ctl_activity.enter_from_target();">
+    <div class="bottom-bar bottom-bar-button" 
+         ng-click="ctl_activity.enter_from_target();"
+         ng-show="ctl_target.var.use_pop_page === false">
+        <div class="bottom-bar__line-height button-ok">
+            {{ "ONS_OK" | translate }}
+        </div>
+    </div>
+    
+    <div class="bottom-bar bottom-bar-button" 
+         ng-click="ctl_target.exit_from_view()"
+         ng-show="ctl_target.var.use_pop_page === true">
         <div class="bottom-bar__line-height button-ok">
             {{ "ONS_OK" | translate }}
         </div>
