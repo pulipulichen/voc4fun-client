@@ -7,23 +7,27 @@
         </ons-toolbar>
 
         <ons-row>
-            [Voc4Fun ICON]
+          <ons-col width="45%"></ons-col>
+         <img src="img/Voc4Fun-icon256.png" /> 
         </ons-row>
 
         <ons-row>
-            請輸入您的姓名 
+            <ons-col width="45%"></ons-col>
+            請輸入您的姓名
         </ons-row>
-
+      
         <ons-row>
+             <ons-col width="45%"></ons-col>
             <input type="text" ng-model="profile.name"
-                   class="text-input text-input--underbar"
-                   placeholder="請輸入您的名字">
+                   class=" text-input text-input--underbar"
+                   placeholder="   請輸入您的名字">
         </ons-row>
-
+             
         <div class="bottom-bar bottom-bar-button">
             <div class="bottom-bar__line-height" onclick="$(this).parents('form').submit();">
                 {{ "ONS_OK" | translate }}
             </div>
         </div>
+     
     </form>
 </ons-page>
