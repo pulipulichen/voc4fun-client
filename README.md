@@ -2,7 +2,11 @@
 # GITHUB URL
 https://github.com/pulipulichen/voc4fun-client
 
+* Server端
+https://github.com/pulipulichen/voc4fun-server
+
 # Quick Link
+
 * GITHUB Issues
 https://github.com/pulipulichen/voc4fun-client/issues
 
@@ -12,11 +16,14 @@ http://onsen.io/2/reference/css.html
 * JavaScript
 http://onsen.io/reference/javascript.html
 
-## Patterns
+* Patterns
 http://onsen.io/patterns.html
 
-## IonIcons
+* IonIcons
 http://ionicons.com/
 
-## PhoneGap Plugin
+* PhoneGap Plugin
 https://build.phonegap.com/plugins
+
+* QUnit
+https://github.com/hank7444/qunitTutorialTW

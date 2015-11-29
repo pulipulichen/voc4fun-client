@@ -11,7 +11,7 @@ test("get_set_title()", function () {
 });
 
 test("get_yesterday_target_data()", function (_assert) {
-    var _done = _assert.async();
+    var _done = _assert.async(1);
     
     // 新增昨天的記錄，要怎麼做好呢
     $scope.db_log.set_debug_log_day_offset(-1, function () {
@@ -55,11 +55,11 @@ test("get_before_yesterday_target_data()", function (_assert) {
         $scope.log("controller_target.js", "done()", "test_select", {
             done: 7
         });
-    });
     
-    _ctl.get_before_yesterday_target_data(function (_target_data) {
-        $.console_trace(_target_data);
-        equal(typeof(_target_data), "object", JSON.stringify(_target_data));
-        _done();
+        _ctl.get_before_yesterday_target_data(function (_target_data) {
+            $.console_trace(_target_data);
+            equal(typeof(_target_data), "object", JSON.stringify(_target_data));
+            _done();
+        });
     });
 });

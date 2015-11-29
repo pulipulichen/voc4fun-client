@@ -234,4 +234,24 @@ var _app_factory_jquery_utils = function ($scope) {
             }
         }
     };
+    
+    $.int_to_letters = function (_int) {
+        var _code = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$-_.+!*'()".split("");
+        //$.console_trace(_code.length);  // 72
+        // 72*72 = 5184
+        var _output = "";
+        while (_int > _code.length - 1) {
+            //var _division = Math.floor(_int / _code.length)-1;
+            //$.console_trace(_division);
+            
+            var _mode = _int % _code.length;
+            //_mode = _mode - 1;
+            _output = _code[_mode] + _output;
+            
+            _int = (_int - _mode) / _code.length;
+        }
+        _output = _code[_int] + _output;
+        //_output = _output + _code[_int];
+        return _output;
+    };
 };

@@ -17,7 +17,7 @@ var db_profile = function ($scope) {
     var _status = {};
     
     _status.name;
-    _status.uuid = 0;
+    _status.uuid;
     
     _ctl.status = _status;
     
@@ -97,10 +97,11 @@ var db_profile = function ($scope) {
     };
     
     _ctl.setup_uuid = function () {
-        
-        if (_status.uuid === undefined) {
-            _status.uuid = new Fingerprint().get();
+        if (_status.uuid === undefined || _status.uuid === 0) {
+            var _fingerprint = new Fingerprint().get();
+            _status.uuid = $.int_to_letters(_fingerprint);
         }
+        return _status.uuid;
     };
     
     _ctl.submit = function () {
@@ -115,6 +116,10 @@ var db_profile = function ($scope) {
     
     _ctl.init = function () {
         _status.name = $scope.cordova_utils.get_device_name();
+    };
+    
+    _ctl.get_uuid = function () {
+        return _ctl.setup_uuid();
     };
     
     // -----------------------------------

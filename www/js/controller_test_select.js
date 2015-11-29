@@ -76,10 +76,10 @@ var controller_test_select = function ($scope) {
         //$.trigger_callback(_callback);
 
         //var _test = _var._test_select_mock;
-        _ctl.get_test_flashcard(function (_test) {
+        _ctl.get_test_flashcard(function (_test, _mode) {
             _ctl.add_history_stack(_test.flashcard_id);
 
-            $scope.log(_log_file, "next()", undefined, _test);
+            $scope.log(_log_file, "next()", _mode, _test);
             if (_do_animation === true) {
                 _ctl._transition_next(_test, _callback);
             }
@@ -213,6 +213,7 @@ var controller_test_select = function ($scope) {
     
     _ctl.get_test_flashcard = function (_callback) {
         _var.show_note = false;
+        var _qualifier = "review";
         
         var _test_select = _var.test_select;
         // 從陣列中讀取
@@ -230,6 +231,7 @@ var controller_test_select = function ($scope) {
             _flashcard_id = $.array_get_random(_status.history_stack
                     , _test_select.flashcard_id);
             $.console_trace("get from history_stack", [_flashcard_id, _test_select.flashcard_id]);
+            _qualifier = "history";
         }
         var _options = [];
 
@@ -264,7 +266,7 @@ var controller_test_select = function ($scope) {
                         _test_select.correct = _correct;
                         _test_select.answer = undefined;
 
-                        $.trigger_callback(_callback, _test_select);
+                        $.trigger_callback(_callback, _test_select, _qualifier);
                     });
         });
     };
