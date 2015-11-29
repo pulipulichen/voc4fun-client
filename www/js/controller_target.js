@@ -1,6 +1,16 @@
+/*global ons:false */
+/*global app:false */
+/*global target_help_modal:false */
+/**
+ * 目標的相關控制器
+ * @param {Object} $scope Angular.js的$scope
+ * @returns {controller_target}
+ */
 var controller_target = function ($scope) {
 
     var _ctl = {};
+
+    var _log_file = "controller_target.js";
 
     // ---------------------------
 
@@ -48,7 +58,7 @@ var controller_target = function ($scope) {
         help_img: "img/loading.svg",
         help: ""
     };
-    
+
     _var.use_pop_page = false;
 
     _ctl.var = _var;
@@ -60,7 +70,21 @@ var controller_target = function ($scope) {
     _ctl.status = _status;
 
     var _status_key = "target";
-    var _log_file = "controller_target.js";
+
+    // 註冊
+    var _init_status = function () {
+        return $scope.db_status.add_listener(
+                _status_key,
+                function (_s) {
+                    //$.clone_json(_ctl.status, _s);
+                    _ctl.status = _s;
+                    _status = _s;
+                },
+                function () {
+                    return _ctl.status;
+                });
+    };
+    _init_status();
 
     // -------------------------------------
 
@@ -97,8 +121,7 @@ var controller_target = function ($scope) {
     };
 
     /**
-     * 
-     * @param {boolean} _animate 是否要動畫
+     * @param {boolean} _animation 是否要動畫
      */
     _ctl.enter_from_profile = function (_animation) {
 
@@ -117,13 +140,16 @@ var controller_target = function ($scope) {
 
         _ctl.period_target_exists(function (_today_exists) {
             _ctl.period_target_exists(-1, function (_yesterday_exists) {
+                // 有今天資料的情況
                 var _page = "target_view.html";
                 if (_today_exists === false) {
                     _ctl._init_target_data();
                     if (_yesterday_exists === false) {
+                        // 沒有今天，也沒有昨天資料的情況
                         _page = "target_init.html";
                     }
                     else {
+                        // 沒有今天，有昨天資料的情況
                         _page = "target_recommend.html";
                     }
                 }
@@ -131,6 +157,7 @@ var controller_target = function ($scope) {
                 //$scope.target_data.learn_flashcard.done = 50;
                 //$.console_trace(_animation);
                 if (_page === "target_recommend.html") {
+                    _ctl.add_target_history(_ctl.get_yesterday_target_data());
                     _ctl.init_recommend_target_data(function () {
                         app.navi.replacePage(_page, _animation);
                     });
@@ -142,28 +169,28 @@ var controller_target = function ($scope) {
         });
         return this;
     };
-    
+
     _ctl.enter_for_view = function () {
         _var.use_pop_page = true;
         app.navi.pushPage("target_view.html");
     };
-    
+
     _ctl.exit_from_view = function () {
         _var.use_pop_page = false;
         app.navi.popPage();
     };
-    
+
     _ctl.enter_from_menu = function () {
         app.navi.replacePage("target_view_page.html", {"animation": "none"});
     };
-    
+
     // ---------------------------
-    
+
     /**
      * 未完成
      * @TODO #
-     * @param {type} _callback
-     * @returns {undefined}
+     * @param {number} _offset
+     * @param {function} _callback
      */
     _ctl.period_target_exists = function (_offset, _callback) {
 
@@ -216,11 +243,19 @@ var controller_target = function ($scope) {
         return _timestamp;
     };
 
-    _ctl._get_period_date = function () {
-        var _date = new Date(new Date().getTime() - _target_offset_hours * 60 * 60 * 1000);
+    _ctl._get_period_date = function (_day_offset) {
+        if (_day_offset === undefined) {
+            _day_offset = 0;
+        }
+        
+        var _timestamp = new Date().getTime() - _target_offset_hours * 60 * 60 * 1000;
+        _timestamp = _timestamp + _day_offset * 24 * 60 * 60 * 1000;
+        var _date = new Date(_timestamp);
+        var _year = _date.getFullYear();
         var _month = _date.getMonth() + 1;
         var _day = _date.getDate();
         return {
+            year: _year,
             month: _month,
             day: _day
         };
@@ -237,14 +272,14 @@ var controller_target = function ($scope) {
         var _title = _date.month + "月" + _date.day + "日的目標與進度";
         return _title;
     };
-    
+
     _ctl.get_menu_title = function () {
         var _date = _ctl._get_period_date();
         var _title = "您" + _date.month + "月" + _date.day + "日的進度是";
         return _title;
     };
-    
-    
+
+
 
     _ctl.set_target = function ($event) {
         var _form = $($event.target);
@@ -264,21 +299,6 @@ var controller_target = function ($scope) {
         // 把現在的狀態儲存進資料表中
         $scope.db_status.save_status(_status_key);
     };
-
-    // 註冊
-    var _init_status = function () {
-        return $scope.db_status.add_listener(
-                _status_key,
-                function (_s) {
-                    //$.clone_json(_ctl.status, _s);
-                    _ctl.status = _s;
-                    _status = _s;
-                },
-                function () {
-                    return _ctl.status;
-                });
-    };
-    _init_status();
 
     _ctl.show_help = function (_key) {
         var _setting = $scope.ctl_target._get_setting(_key);
@@ -338,7 +358,7 @@ var controller_target = function ($scope) {
                 key: _key,
                 done: _status[_key].done
             });
-            
+
             $scope.db_status.save_status(_status_key);
 
             _ctl.complate_target(_key);
@@ -364,14 +384,14 @@ var controller_target = function ($scope) {
             $scope.log(_log_file, "complate_target", undefined, _status[_key]);
         }
     };
-    
+
     _ctl.complate_all_target = function () {
         setTimeout(function () {
-                ons.notification.alert({
-                    title: "太厲害了！",
-                    message: "您達成了全部的目標了！"
-                });
-            }, 500);
+            ons.notification.alert({
+                title: "太厲害了！",
+                message: "您達成了全部的目標了！"
+            });
+        }, 500);
     };
 
     _ctl.get_done = function (_key) {
@@ -395,49 +415,53 @@ var controller_target = function ($scope) {
             $scope.ctl_target.enter_from_profile(false);
         }
     };
-    
+
     // -----------------------------------------
-    
+
     _ctl.get_complete_percent = function () {
+        return _ctl._calc_complete_percent(_status);
+    };
+    
+    _ctl._calc_complete_percent = function (_target_data) {
         var _done = 0;
         var _target = 0;
         var _percent;
-        
+
         for (var _i in _status) {
-            _done = _done + _status[_i].done;
-            _target = _target + _status[_i].target;
+            _done = _done + _target_data[_i].done;
+            _target = _target + _target_data[_i].target;
         }
-        
+
         //$.console_trace("get_complete_percent", {
         //    done: _done, target: _target, percent: Math.floor(_done / _target * 100)
         //});
-        
+
         if (_target !== 0) {
             _percent = Math.floor(_done / _target * 100);
         }
-        
+
         return _percent;
     };
-    
+
     // ------------------------------------------
-    
+
     _ctl.get_notification_message = function () {
         var _msg = "您的進度是" + _ctl.get_complete_percent() + "%";
         return _msg;
     };
-    
+
     // ------------------------------------------
-    
+
     _ctl.get_max_target = function (_key) {
         var _flashcard_count = $scope.ctl_flashcard.status.flashcard_count;
         _flashcard_count = _flashcard_count - _ctl.get_remained_target(_key);
-        
+
         var _setting = _ctl._get_setting(_key);
         var _default_max = _setting.default_max;
-        
+
         return Math.min(_flashcard_count, _default_max);
     };
-    
+
     _ctl.get_remained_target = function (_key) {
         if (_key === "learn_flashcard") {
             return $scope.ctl_learn_flashcard.get_learned_count();
@@ -452,7 +476,7 @@ var controller_target = function ($scope) {
             return 0;
         }
     };
-    
+
     // ------------------------------------------
     // 推薦資料的計算
     // ----------------------------------------- 
@@ -480,61 +504,63 @@ var controller_target = function ($scope) {
     _ctl.init_recommend_target_data = function (_callback) {
         // @TODO target在隔日重新計算 #57
         //_var.recommend_target_data = _var._recommend_target_data_mock;
-        
-        var _calculate_recommend_target_data = function (_target, _prev_target) {
-            
-            var _recommend_target_data = {};
-            
-            for (var _i in _target) {
-                var _t = _target[_i];
-                var _p = _prev_target[_i];
-                _recommend_target_data[_i] = {
-                    last_done: _t.done,
-                    last_target: _t.target
-                };
-                
-                var _recommend_target;
-                
-                if (_t.done < _t.target) {
-                    _recommend_target = Math.floor((_t.target - _t.done)/2) + _t.done;
-                }
-                else if (_t.done > _t.target) {
-                    _recommend_target = _t.done;
-                }
-                else {
-                    if (_t.done === _p.done) {
-                        // 今天做的量，跟昨天相同
-                        if (_p.target > _p.done) {
-                            _recommend_target = _p.done + Math.floor((_p.target - _p.done)/2);
-                        }
-                        else {
-                            // p.d = 10
-                            // p.t = 6
-                            // r = 12
-                            _recommend_target = _p.done + Math.floor((_p.done - _p.target) / 2);
-                        }
-                    }
-                    else if (_t.done < _p.done ) {
-                        _recommend_target = _p.done;
-                    }
-                    else {
-                        _recommend_target = Math.max(_t.done, _p.target);
-                    }
-                }
-                
-                _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
-            }   //for (var _i in _target) {
-            _var.recommend_target_data = _recommend_target_data;
-            $.trigger_callback(_callback);
-        };
-        
+
+
+
         _ctl.get_yesterday_target_data(function (_target) {
             _ctl.get_before_yesterday_target_data(function (_prev_target) {
-                _calculate_recommend_target_data(_target, _prev_target);
+                _ctl._calculate_recommend_target_data(_target, _prev_target, _callback);
             });
         });
     };
-    
+
+    _ctl_calculate_recommend_target_data = function (_target, _prev_target, _callback) {
+
+        var _recommend_target_data = {};
+
+        for (var _i in _target) {
+            var _t = _target[_i];
+            var _p = _prev_target[_i];
+            _recommend_target_data[_i] = {
+                last_done: _t.done,
+                last_target: _t.target
+            };
+
+            var _recommend_target;
+
+            if (_t.done < _t.target) {
+                _recommend_target = Math.floor((_t.target - _t.done) / 2) + _t.done;
+            }
+            else if (_t.done > _t.target) {
+                _recommend_target = _t.done;
+            }
+            else {
+                if (_t.done === _p.done) {
+                    // 今天做的量，跟昨天相同
+                    if (_p.target > _p.done) {
+                        _recommend_target = _p.done + Math.floor((_p.target - _p.done) / 2);
+                    }
+                    else {
+                        // p.d = 10
+                        // p.t = 6
+                        // r = 12
+                        _recommend_target = _p.done + Math.floor((_p.done - _p.target) / 2);
+                    }
+                }
+                else if (_t.done < _p.done) {
+                    _recommend_target = _p.done;
+                }
+                else {
+                    _recommend_target = Math.max(_t.done, _p.target);
+                }
+            }
+
+            _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
+        }   //for (var _i in _target) {
+        _var.recommend_target_data = _recommend_target_data;
+        $.trigger_callback(_callback);
+    };
+
     var _yesterday_target_data_mock = {
         "learn_flashcard": {
             done: 0,
@@ -549,11 +575,11 @@ var controller_target = function ($scope) {
             target: 30
         }
     };
-    
+
     _ctl.get_yesterday_target_data = function (_callback) {
         $.trigger_callback(_callback, _yesterday_target_data_mock);
     };
-    
+
     var _before_yesterday_target_data_mock = {
         "learn_flashcard": {
             done: 0,
@@ -568,11 +594,17 @@ var controller_target = function ($scope) {
             target: 40
         }
     };
-    
+
     _ctl.get_before_yesterday_target_data = function (_callback) {
         $.trigger_callback(_callback, _before_yesterday_target_data_mock);
     };
     
+    _ctl.add_target_history = function (_target_data) {
+        var _date = _ctl._get_period_date(-1);  //取得昨天的期間
+        var _complete_percent = _ctl._calc_complete_percent(_target_data);
+        $scope.db_target_history.add(_date, _complete_percent, _target_data);
+    };
+
     // ------------------------------------------
 
     $scope.ctl_target = _ctl;

@@ -1,12 +1,15 @@
 var _app_factory_db_utils = function ($scope) {
     $scope.DB = {};
-    $scope.DB.db = null;
+    var _db;
 
-    $scope.DB.open_db = function () {
-        this.db = openDatabase('open_database', '1.0', 'Pulipuli Open Database', 2 * 1024 * 1024);
-        //console.log(typeof(_DB.transaction));
-        return this;
+    var _init_db = function () {
+        if (_db === undefined) {
+            _db = openDatabase('open_database', '1.0', 'Pulipuli Open Database', 2 * 1024 * 1024);
+            //console.log(typeof(_db.transaction));
+        }
+        return _db;
     };
+
     $scope.DB.create_table = function (_table_name, _field_name_list, _success_callback) {
         var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + " (";
 
@@ -20,7 +23,7 @@ var _app_factory_db_utils = function ($scope) {
             }
         }
         _sql = _sql + ")";
-        this.exec(_sql, _success_callback);
+        $scope.DB.exec(_sql, _success_callback);
         return this;
     };
 
@@ -71,7 +74,8 @@ var _app_factory_db_utils = function ($scope) {
         }
         var _ = this;
         var _sql = "select * from " + _table_name + " limit 0, 1";
-        this.db.transaction(function (_tx) {
+        _init_db();
+        _db.transaction(function (_tx) {
             _tx.executeSql(_sql, [], function (_tx, _results) {
                 if (typeof (_success_callback) === "function") {
                     _success_callback(true);
@@ -99,7 +103,8 @@ var _app_factory_db_utils = function ($scope) {
     $scope.DB.exec = function (_sql, _success_callback) {
         var _ = this;
         //$.console_trace(_sql);
-        this.db.transaction(function (_tx) {
+        _init_db();
+        _db.transaction(function (_tx) {
             _tx.executeSql(_sql, [], function (_tx, _results) {
                 if (typeof (_success_callback) === "function") {
                     var _data = [];
