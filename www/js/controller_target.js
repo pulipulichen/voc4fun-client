@@ -106,7 +106,7 @@ var controller_target = function ($scope) {
 
     // --------------------------
 
-    var _target_offset_hours = 8;
+    var _target_offset_hours = $scope.CONFIG.target_offset_hours;
 
     _ctl._init_target_data = function () {
         for (var _i = 0; _i < _var.target_setting.length; _i++) {
@@ -637,8 +637,9 @@ var controller_target = function ($scope) {
                         max_timestamp: _max_timestamp,
                         qualifier: _key,
                         callback: function (_data) {
-                            _target_data[_key].done = _data.done;
-                            
+                            if (_data !== undefined) {
+                                _target_data[_key].done = _data.done;
+                            }
                             _i++;
                             _loop(_i);
                         }

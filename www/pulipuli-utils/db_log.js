@@ -17,9 +17,9 @@ var db_log = function ($scope) {
     
     var _server_url = $scope.CONFIG.server_url;
     
-    setTimeout(function () {
-        //$scope.db_log.reset();
-    }, 0);
+//    setTimeout(function () {
+//        //$scope.db_log.reset();
+//    }, 0);
 
     var _log_db = "log";
     
@@ -64,8 +64,10 @@ var db_log = function ($scope) {
     };
 
     $scope.DB.create_table(_log_db, _log_db_fields);
+    
+    // -------------------------------------------------
 
-    $scope.db_log = {};
+    var _ctl = {};
 
     /**
      * @param {type} _opt = {
@@ -78,7 +80,7 @@ var db_log = function ($scope) {
      *      "callback"
      * }
      */
-    $scope.db_log.get_latest_log = function (_opt) {
+    _ctl.get_latest_log = function (_opt) {
         var _file_name = $.parse_opt(_opt, "file_name");
         var _function_name = $.parse_opt(_opt, "function_name");
         var _qualifier = $.parse_opt(_opt, "qualifier");
@@ -89,7 +91,7 @@ var db_log = function ($scope) {
         
         if (typeof(_min_timestamp) === "number" 
                 || typeof(_max_timestamp) === "number" ) {
-            var _timestamp_where_sql = $scope.db_log.create_timestamp_where_sql(_min_timestamp, _max_timestamp);
+            var _timestamp_where_sql = _ctl.create_timestamp_where_sql(_min_timestamp, _max_timestamp);
             if (_where_sql === undefined) {
                 _where_sql = _timestamp_where_sql;
             }
@@ -98,9 +100,9 @@ var db_log = function ($scope) {
             }
         }
         
-        _file_name = $scope.db_log._create_where_sql("file_name", _file_name);
-        _function_name = $scope.db_log._create_where_sql("function_name", _function_name);
-        _qualifier = $scope.db_log._create_where_sql("qualifier", _qualifier);
+        _file_name = _ctl._create_where_sql("file_name", _file_name);
+        _function_name = _ctl._create_where_sql("function_name", _function_name);
+        _qualifier = _ctl._create_where_sql("qualifier", _qualifier);
         
         var _sql = "SELECT data FROM log "
             + " WHERE " + _file_name
@@ -122,7 +124,7 @@ var db_log = function ($scope) {
         });
     };
     
-    $scope.db_log._create_where_sql = function (_field_name, _data) {
+    _ctl._create_where_sql = function (_field_name, _data) {
         var _sql = "";
         if (typeof(_data) === "string") {
             _sql = " " + _field_name + " = '" +  _data + "' ";
@@ -151,7 +153,7 @@ var db_log = function ($scope) {
      *      "callback"
      * }
      */
-    $scope.db_log.count_log = function (_opt) {
+    _ctl.count_log = function (_opt) {
         var _file_name = $.parse_opt(_opt, "file_name");
         var _function_name = $.parse_opt(_opt, "function_name");
         var _qualifier = $.parse_opt(_opt, "qualifier");
@@ -190,7 +192,7 @@ var db_log = function ($scope) {
         });
     };
     
-    $scope.db_log.reset = function () {
+    _ctl.reset = function () {
         $scope.DB.empty_table(_log_db);
     };
     
@@ -198,7 +200,7 @@ var db_log = function ($scope) {
      * @param {number} _offset 偏移天數
      * @returns {Number}
      */
-    $scope.db_log.get_timestamp = function (_offset) {
+    _ctl.get_timestamp = function (_offset) {
         var _timestamp = (new Date()).getTime();
         
         if (_debug_log_day_offset !== 0) {
@@ -211,7 +213,7 @@ var db_log = function ($scope) {
         return _timestamp;
     };
     
-    $scope.db_log.create_timestamp_where_sql = function (_min_time, _max_time) {
+    _ctl.create_timestamp_where_sql = function (_min_time, _max_time) {
         var _where_sql = "";
         if (typeof(_min_time) === "number") {
             _where_sql = _where_sql + " timestamp > " + _min_time;
@@ -225,4 +227,16 @@ var db_log = function ($scope) {
         }
         return _where_sql;
     };
+    
+    _ctl.set_debug_log_day_offset = function (_offset, _callback) {
+        _debug_log_day_offset = _offset;
+        if (typeof(_callback) === "function") {
+            _callback();
+            _debug_log_day_offset = 0;
+        }
+    };
+    
+    // ----------------------------------
+    
+    $scope.db_log = _ctl;
 };
