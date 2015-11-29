@@ -12,18 +12,32 @@ var controller_target_history = function ($scope) {
     _ctl.add = function (_date, _complete_percent, _target_data, _callback) {
         _ctl._init_db();
         
-        var _data = {
-            year: _date.year,
-            month: _date.month,
-            day: _date.day,
-            complete_percent: _complete_percent,
-            target_date: _target_data
+        var _add_process = function () {
+            var _data = {
+                year: _date.year,
+                month: _date.month,
+                day: _date.day,
+                complete_percent: _complete_percent,
+                target_date: _target_data
+            };
+
+            $scope.DB.insert(_table_name, _data, _callback);
+
+            // ------------------
+
+            $scope.log(_log_file, "add()", _complete_percent, _target_data);
         };
-        $scope.DB.insert(_table_name, _data, _callback);
+
+        var _where_sql = " year = " + _date.year
+                + " AND month = " + _date.month
+                + " AND day = " + _date.day;
         
-        // ------------------
-        
-        $scope.log(_log_file, "add", _complete_percent, _target_data);
+        // 不要重複記錄啊
+        $scope.DB.count(_table_name, _where_sql, function (_result) {
+            if (_result === 0) {
+                _add_process();
+            }
+        });
     };
 
 
@@ -31,7 +45,7 @@ var controller_target_history = function ($scope) {
     _ctl._init_db = function (_callback) {
         if (_table_inited === false) {
             _table_inited = true;
-            
+
             $scope.DB.create_table(_table_name, _field_list, _callback);
         }
         else {

@@ -202,12 +202,11 @@ var controller_target = function ($scope) {
             _offset = 0;
         }
 
-        var _file_name = "controller_target.js";
-        var _function_name = "$scope.ctl_target.set_target()";
+        var _function_name = "set_target()";
 
         var _exists = true;
         $scope.db_log.get_latest_log({
-            "file_name": _file_name,
+            "file_name": _log_file,
             "function_name": _function_name,
             "min_timestamp": _ctl.get_period_start_timestamp(_offset),
             "max_timestamp": _ctl.get_period_end_timestamp(_offset),
@@ -294,7 +293,7 @@ var controller_target = function ($scope) {
             _log_data[_key] = _target;
         }
 
-        $scope.log("controller_target.js", "$scope.ctl_target.set_target()", _log_data);
+        $scope.log(_log_file, "set_target()", _log_data);
         //$.console_trace(_log_data);
 
         //$scope.ctl_activity.enter_from_target();
@@ -357,7 +356,7 @@ var controller_target = function ($scope) {
         //$.console_trace("done_plus", _status);
         if (typeof (_status[_key]) === "object") {
             _status[_key].done++;
-            $scope.log(_log_file, "done_plus", undefined, {
+            $scope.log(_log_file, "done_plus()", _key, {
                 key: _key,
                 done: _status[_key].done
             });
@@ -384,7 +383,7 @@ var controller_target = function ($scope) {
                     }
                 });
             }, 500);
-            $scope.log(_log_file, "complate_target", undefined, _status[_key]);
+            $scope.log(_log_file, "complate_target()", _key, _status[_key]);
         }
     };
 
@@ -580,6 +579,9 @@ var controller_target = function ($scope) {
     };
 
     _ctl.get_yesterday_target_data = function (_callback) {
+        // 先取得開始與結束時間點
+        
+        
         $.trigger_callback(_callback, _yesterday_target_data_mock);
     };
 

@@ -104,10 +104,12 @@ var controller_note = function ($scope) {
     _ctl.save_note_to_db = function (_note) {
         $scope.ctl_learn_flashcard.var.learn_flashcard.note = _note;
         
-        $scope.log(_log_file, "submit()", undefined, {
-            q: $scope.ctl_learn_flashcard.var.learn_flashcard.q,
-            a: $scope.ctl_learn_flashcard.var.learn_flashcard.a,
-            note: $scope.ctl_learn_flashcard.var.learn_flashcard.note
+        var _learn_flashcard = $scope.ctl_learn_flashcard.var.learn_flashcard;
+        var _q = _learn_flashcard.q;
+        $scope.log(_log_file, "submit()", _q, {
+            q: _q,
+            a: _learn_flashcard.a,
+            note: _learn_flashcard.note
         });
         //$scope.db_status.save_status("learn_flashcard");
         

@@ -106,12 +106,13 @@ var controller_learn_flashcard = function ($scope) {
     };
 
     _ctl.init = function (_callback) {
-        $scope.log(_log_file, "init()", undefined, _status);
+        var _qualifier;
         if (_status.history_stack.length > 0) {
             if (_status.history_index < 0) {
                 _status.history_index = 0;
             }
             //$.console_trace("init get from history");
+            _qualifier = "history";
             _ctl.set_history_flashcard(function (_flashcard) {
                 _var.learn_flashcard = _flashcard;
                 $.trigger_callback(_callback);
@@ -119,16 +120,20 @@ var controller_learn_flashcard = function ($scope) {
             _ctl.other_note_ajax();
         }
         else {
+            _qualifier = "next";
             _ctl.next(_callback, false);
         }
+        
+        $scope.log(_log_file, "init()", _qualifier, _status);
     };
 
     _ctl.next = function (_callback, _do_animation) {
         //var _flashcard = _var._learn_flashcard_mock_b;
+        var _qualifier;
 
         _ctl.other_note_reset();
         var _log = function (_flashcard) {
-            $scope.log(_log_file, "next()", undefined, {
+            $scope.log(_log_file, "next()", _qualifier, {
                 flashcard_q: _flashcard.q,
                 flashcard_index: _status.flashcard_index,
                 history_index: _status.history_index
@@ -163,14 +168,17 @@ var controller_learn_flashcard = function ($scope) {
             };
 
             if (_ctl.get_new_flashcard_type() === "new") {
+                _qualifier = "new";
                 _ctl.add_new_flashcard(_push_history_stack);
             }
             else {
+                _qualifier = "review";
                 _ctl.add_review_flashcard(_push_history_stack);
             }
         }
         else {
             //$.console_trace("不是最後一個的情況")
+            _qualifier = "history";
             _status.history_index++;
             _ctl.set_history_flashcard(function (_flashcard) {
                 _trans_callback(_flashcard);
