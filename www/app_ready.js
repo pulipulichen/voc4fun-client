@@ -5,7 +5,7 @@ var _app_ready = function ($scope) {
     $scope.set_swipeable(false);
 
     // 如果要刪除profile，則執行這個
-    //$scope.DB.drop_table(["profile", "log", "flashcard", "status", "list"]); return this;
+    //$scope.DB.drop_table(["profile", "log", "flashcard", "status", "list", "target_history"]); return this;
 
     $scope.ctl_flashcard.setup(function () {
         // 測試用

@@ -149,7 +149,7 @@
                     // -----------------------------------
 
                     $scope.db_status.ready(function () {
-                        if ($._GET("qunit") !== "1") {
+                        if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
                             ons.ready(function () {
                                 _app_ready($scope);
                             });
