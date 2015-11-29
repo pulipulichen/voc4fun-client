@@ -6,11 +6,11 @@ var _app_factory_jquery_utils = function ($scope) {
      * @param {String} _msg
      */
     $.console_trace = function (_heading, _msg) {
-        if (typeof(_msg) !== "undefined") {
+        if (typeof (_msg) !== "undefined") {
             _heading = "===" + _heading + "====================================";
         }
         console.trace(_heading);
-        if (typeof(_msg) !== "undefined") {
+        if (typeof (_msg) !== "undefined") {
             console.trace(_msg);
         }
     };
@@ -74,37 +74,38 @@ var _app_factory_jquery_utils = function ($scope) {
         _str = _str.replace(/\\\\/g, '\\');
         return _str;
     };
-    
+
     $.escape_quotation = function (_str) {
-        if (typeof(_str) !== "string") {
+        if (typeof (_str) !== "string") {
             return _str;
         }
         return _str.replace(/\'/g, '%27');
     };
-    
+
     $.unescape_quotation = function (_str) {
-        if (typeof(_str) !== "string") {
+        if (typeof (_str) !== "string") {
             return _str;
         }
         return _str.replace(/%27/g, "'");
     };
-    
-    $.array_shuffle = function (o){
-        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+
+    $.array_shuffle = function (o) {
+        for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x)
+            ;
         return o;
     };
-    
+
     $.parse_opt = function (_opt, _field, _default_value) {
-        if (typeof(_opt[_field]) !== "undefined") {
+        if (typeof (_opt[_field]) !== "undefined") {
             return _opt[_field];
-        } else if (typeof(_default_value) !== "undefined") {
+        } else if (typeof (_default_value) !== "undefined") {
             return _default_value;
         }
         return;
     };
-    
+
     $.array_get_random_index = function (_ary) {
-        return Math.floor(Math.random()*_ary.length);
+        return Math.floor(Math.random() * _ary.length);
     };
 
     /**
@@ -118,9 +119,9 @@ var _app_factory_jquery_utils = function ($scope) {
             _max = _min;
             _min = 0;
         }
-        return (Math.floor(Math.random()* (_max - _min) ) + min);
+        return (Math.floor(Math.random() * (_max - _min)) + min);
     };
-    
+
     /**
      * 從陣列中取出隨機的一個，然後把它從陣列中移除
      * 例如陣列是 [1, 2, 3, 4]
@@ -149,17 +150,17 @@ var _app_factory_jquery_utils = function ($scope) {
                 _item = _ary[_index];
             }
         }
-            
-        
+
+
         _ary.splice(_index, 1);
         return _item;
     };
-    
+
     $.array_get_random = function (_ary, _exclude_item) {
         // 先取的陣列中隨機的ID
         var _index = $.array_get_random_index(_ary);
         var _item = _ary[_index];
-        
+
         if (_exclude_item !== undefined) {
             var _exclude_count = 0;
             while (_item === _exclude_item) {
@@ -178,14 +179,14 @@ var _app_factory_jquery_utils = function ($scope) {
         }
         return _item;
     };
-    
+
     $.clone_json = function (_json, _from_json) {
         for (var _j in _from_json) {
             _json[_j] = _from_json[_j];
         }
         return _json;
     };
-    
+
     $.array_slice_element = function (_ele, _ary) {
         var _i = $.inArray(_ele, _ary);
         if (_i > -1) {
@@ -204,7 +205,7 @@ var _app_factory_jquery_utils = function ($scope) {
                     _all_same = false;
                     break;
                 }
-            } 
+            }
 
             if (_all_same === true) {
                 _ary = [_first_ele];
@@ -212,14 +213,25 @@ var _app_factory_jquery_utils = function ($scope) {
         }
         return _ary;
     };
-    
-    $.getScript = function(_src, _func) {
+
+    $.getScript = function (_src, _func) {
         var _script = document.createElement('script');
         //_script.async = "async";
         _script.src = _src;
         if (_func) {
-           _script.onload = _func;
+            _script.onload = _func;
         }
-        document.getElementsByTagName("head")[0].appendChild( _script );
+        document.getElementsByTagName("head")[0].appendChild(_script);
+    };
+
+    $._GET = function (_key) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] === _key) {
+                return pair[1];
+            }
+        }
     };
 };

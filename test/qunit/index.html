@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quick Start</title>
+
+        <!-- Qunit css檔案 -->
+        <link href="lib/qunit/qunit-git.css" type="text/css" rel="stylesheet">
+
+        <!-- Qunit js檔案 -->
+        <script type="text/javascript" src="lib/qunit/qunit-git.js"></script>
+        <script src="../../www/lib/angular/angular.min.js"></script>
+    </head>
+    <body>
+
+        <!-- Qunit測試結果會使用到的div -->
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+
+        <!-- 單元測試部分的程式碼 -->
+        <script>
+            var myApp = angular.module('myApp', []);
+            myApp.controller('myCtrl', function ($scope) {
+                //angular client side code
+
+                $scope.canSubmit = function () {
+                    //some logic
+                    return true;
+                };
+            });
+            module('Hello Qunit Test', {
+                setup: function () {
+                    angular.module('myApp');
+                    injector = angular.injector(['ng', 'myApp']);
+                    ctrlScope = injector.get('$rootScope').$new();
+                    ctrl = injector.get('$controller')('myCtrl', {$scope: ctrlScope});
+                    ctrlScope.model = {
+                        //model object
+                    };
+                }
+            }
+            );
+            test("Given something happened then allow submit", function () {
+                //ok(, "some functionality happened");
+                equal(true, ctrlScope.canSubmit());
+            });
+        </script>
+
+    </body>
+</html>

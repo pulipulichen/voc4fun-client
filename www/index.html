@@ -1,167 +1,174 @@
 <!DOCTYPE html>
 <!-- CSP support mode (required for Windows Universal apps): https://docs.angularjs.org/api/ng/directive/ngCsp -->
 <html lang="en" ng-csp>
-<head>
-    <meta charset="utf-8" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
 
-    <!-- ======================================== 
-         Library
-         ======================================== -->
-    <!-- JS dependencies (order matters!) -->
-    <script src="lib/angular/angular.min.js"></script>
-    <script src="lib/angular/angular-translate.min.js"></script>
-    <script src="lib/angular/angular-translate-loader-static-files.min.js"></script>
+        <!-- ======================================== 
+             Library
+             ======================================== -->
+        <!-- JS dependencies (order matters!) -->
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular/angular-translate.min.js"></script>
+        <script src="lib/angular/angular-translate-loader-static-files.min.js"></script>
 
-    <script src="lib/onsen/js/onsenui.min.js"></script>
-    <script src="lib/zepto/zepto.min.js"></script>
-    <script src="lib/zepto/jquery-autogrow.min.js"></script>
+        <script src="lib/onsen/js/onsenui.min.js"></script>
+        <script src="lib/zepto/zepto.min.js"></script>
+        <script src="lib/zepto/jquery-autogrow.min.js"></script>
 
-    <!-- CSS dependencies -->
-    <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
+        <!-- CSS dependencies -->
+        <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
 
-    <!-- CSP support mode (required for Windows Universal apps) -->
-    <link rel="stylesheet" href="lib/angular/angular-csp.css" />
+        <!-- CSP support mode (required for Windows Universal apps) -->
+        <link rel="stylesheet" href="lib/angular/angular-csp.css" />
 
-    <link rel="stylesheet" href="css/onsen-css-components.css" />
-    <!-- ======================================== 
-         Style
-         ======================================== -->
-    <link rel="stylesheet" href="css/float-action-button.css" />
-    <link rel="stylesheet" href="css/page-about_html.css" />
-    <link rel="stylesheet" href="css/ons-view.css" />
-    <link rel="stylesheet" href="css/ons.css" />
-    
-    <link rel="stylesheet" href="css/controller_target.css" />
-    <link rel="stylesheet" href="css/controller_learn_flashcard.css" />
-    <link rel="stylesheet" href="css/controller_note.css" />
-    <link rel="stylesheet" href="css/controller_test_select.css" />
+        <link rel="stylesheet" href="css/onsen-css-components.css" />
+        <!-- ======================================== 
+             Style
+             ======================================== -->
+        <link rel="stylesheet" href="css/float-action-button.css" />
+        <link rel="stylesheet" href="css/page-about_html.css" />
+        <link rel="stylesheet" href="css/ons-view.css" />
+        <link rel="stylesheet" href="css/ons.css" />
 
-    <title>{{ 'TITLE' | translate }}</title>
+        <link rel="stylesheet" href="css/controller_target.css" />
+        <link rel="stylesheet" href="css/controller_learn_flashcard.css" />
+        <link rel="stylesheet" href="css/controller_note.css" />
+        <link rel="stylesheet" href="css/controller_test_select.css" />
 
-</head>
+        <title>{{ 'TITLE' | translate }}</title>
+
+    </head>
 
     <!-- ======================================== 
          View
          ======================================== -->
-<body ng-controller="app_controller">
+    <body ng-controller="app_controller">
 
-<ons-sliding-menu id="menu" var="app.menu" 
-                  main-page="main" menu-page="menu.html" max-slide-distance="200px" 
-                  type="reveal" side="left" ons-preopen="menu_open()" ons-preclose="menu_close()" >
-</ons-sliding-menu>
-
-
-<ons-template id="main">
-    <ons-navigator var="app.navi" page="splash_screen.html"></ons-navigator> 
-</ons-template>
-
-<!-- ======================================= 
-     Controller
-     ======================================= -->
-<script src="config.js"></script>
-
-<script src="lib/fingerprint/fingerprint.min.js"></script>
-<script type="text/javascript" src="lib/js-xlsx/xlsx.core.min.js"></script>
-
-<script src="pulipuli-utils/app_factory_db_utils.js"></script>
-<script src="pulipuli-utils/app_factory_ons_view.js"></script>
-<script src="pulipuli-utils/app_factory_ons_utils.js"></script>
-<script src="pulipuli-utils/app_factory_jquery.js"></script>
-<script src="pulipuli-utils/db_profile.js"></script>
-<script src="pulipuli-utils/db_log.js"></script>
-<script src="pulipuli-utils/db_status.js"></script>
-
-<script src="pulipuli-utils/cordova_utils.js"></script>
-<script src="pulipuli-utils/cordova_social_share.js"></script>
-<script src="pulipuli-utils/cordova_inappbrowser_submit.js"></script>
-
-<script src='lib/responsivevoice/responsivevoice.js'></script>
-<script src="pulipuli-utils/cordova_text_to_speech.js"></script>
-
-<script src="js/controller_flashcard.js"></script>
-<script src="js/controller_target.js"></script>
-<script src="js/controller_activity.js"></script>
-<script src="js/controller_learn_flashcard.js"></script>
-<script src="js/controller_note.js"></script>
-<script src="js/controller_notification.js"></script>
-<script src="js/controller_target_history.js"></script>
-
-<script src="js/controller_test_select.js"></script>
-
-<script src="app_ready.js"></script>
+    <ons-sliding-menu id="menu" var="app.menu" 
+                      main-page="main" menu-page="menu.html" max-slide-distance="200px" 
+                      type="reveal" side="left" ons-preopen="menu_open()" ons-preclose="menu_close()" >
+    </ons-sliding-menu>
 
 
-<!-- cordova -->
-<script src="cordova.js"></script>
-<script type="text/javascript" charset="utf-8" src="tts.js"></script>
+    <ons-template id="main">
+        <ons-navigator var="app.navi" page="splash_screen.html"></ons-navigator> 
+    </ons-template>
 
-<!-- ========================================= -->
+    <!-- ======================================= 
+         Controller
+         ======================================= -->
+    <script src="config.js"></script>
 
-<script type="text/javascript">
-/*global ons:false */
-/*global $translateProvider:false */
-/*global $scope:false */
-/*global $filter:false */
-var app = ons.bootstrap('app', ['onsen', 'pascalprecht.translate']);
+    <script src="lib/fingerprint/fingerprint.min.js"></script>
+    <script type="text/javascript" src="lib/js-xlsx/xlsx.core.min.js"></script>
 
-/**
- * 翻譯
- * @link https://angular-translate.github.io/
- * @param {Object} $translateProvider 翻譯的工具
- */
-app.config(function ($translateProvider) {
-    $translateProvider.preferredLanguage('zh_TW');
-    $translateProvider.useStaticFilesLoader({
-        prefix: 'i18n/',
-        suffix: '.json'
-    });
-});
+    <script src="pulipuli-utils/app_factory_db_utils.js"></script>
+    <script src="pulipuli-utils/app_factory_ons_view.js"></script>
+    <script src="pulipuli-utils/app_factory_ons_utils.js"></script>
+    <script src="pulipuli-utils/app_factory_jquery.js"></script>
+    <script src="pulipuli-utils/db_profile.js"></script>
+    <script src="pulipuli-utils/db_log.js"></script>
+    <script src="pulipuli-utils/db_status.js"></script>
 
-var _app_controller = function ($scope, $filter) {
+    <script src="pulipuli-utils/cordova_utils.js"></script>
+    <script src="pulipuli-utils/cordova_social_share.js"></script>
+    <script src="pulipuli-utils/cordova_inappbrowser_submit.js"></script>
 
-    app_config($scope);
+    <script src='lib/responsivevoice/responsivevoice.js'></script>
+    <script src="pulipuli-utils/cordova_text_to_speech.js"></script>
 
-    _app_factory_db_utils($scope);
-    cordova_utils($scope);
-    _app_factory_jquery_utils($scope);
-    
-    cordova_social_share($scope, $filter);
-    cordova_inappbrowser_submit($scope);
-    cordova_text_to_speech($scope);
-    _app_factory_ons_view($scope);
-    _app_factory_ons_utils($scope, $filter);
+    <script src="js/controller_flashcard.js"></script>
+    <script src="js/controller_target.js"></script>
+    <script src="js/controller_activity.js"></script>
+    <script src="js/controller_learn_flashcard.js"></script>
+    <script src="js/controller_note.js"></script>
+    <script src="js/controller_notification.js"></script>
+    <script src="js/controller_target_history.js"></script>
 
-    db_log($scope);
-    db_status($scope);
-    db_profile($scope);
+    <script src="js/controller_test_select.js"></script>
 
-    controller_flashcard($scope);
-    controller_target($scope);
-    controller_activity($scope);
-    controller_learn_flashcard($scope);
-    controller_note($scope);
-    controller_test_select($scope);
-    controller_notification($scope, $filter);
-    controller_target_history($scope);
+    <script src="app_ready.js"></script>
 
-    // -----------------------------------
 
-    $scope.db_status.ready(function () {
-        ons.ready(function () {
-            _app_ready($scope);
-        });
-    });
-};
+    <!-- cordova -->
+    <script src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="tts.js"></script>
 
-app.controller('app_controller',
-        ['$scope',
-            '$filter',
-            _app_controller]);
-</script>
+    <!-- ========================================= -->
 
-<!-- ============================= -->
+    <script type="text/javascript">
+                /*global ons:false */
+                /*global $translateProvider:false */
+                /*global $scope:false */
+                /*global $filter:false */
+                var app = ons.bootstrap('app', ['onsen', 'pascalprecht.translate']);
+
+                /**
+                 * 翻譯
+                 * @link https://angular-translate.github.io/
+                 * @param {Object} $translateProvider 翻譯的工具
+                 */
+                app.config(function ($translateProvider) {
+                    $translateProvider.preferredLanguage('zh_TW');
+                    $translateProvider.useStaticFilesLoader({
+                        prefix: 'i18n/',
+                        suffix: '.json'
+                    });
+                });
+
+                var _app_controller = function ($scope, $filter) {
+
+                    app_config($scope);
+
+                    _app_factory_db_utils($scope);
+                    cordova_utils($scope);
+                    _app_factory_jquery_utils($scope);
+
+                    cordova_social_share($scope, $filter);
+                    cordova_inappbrowser_submit($scope);
+                    cordova_text_to_speech($scope);
+                    _app_factory_ons_view($scope);
+                    _app_factory_ons_utils($scope, $filter);
+
+                    db_log($scope);
+                    db_status($scope);
+                    db_profile($scope);
+
+                    controller_flashcard($scope);
+                    controller_target($scope);
+                    controller_activity($scope);
+                    controller_learn_flashcard($scope);
+                    controller_note($scope);
+                    controller_test_select($scope);
+                    controller_notification($scope, $filter);
+                    controller_target_history($scope);
+
+                    // -----------------------------------
+
+                    $scope.db_status.ready(function () {
+                        if ($._GET("qunit") !== "1") {
+                            ons.ready(function () {
+                                _app_ready($scope);
+                            });
+                        }
+                        else {
+                            if (typeof(QUNIT_INITED) === "undefined") {
+                                $.getScript("pulipuli-utils/qunit.js");
+                            }
+                        }
+                    });
+                };
+
+                app.controller('app_controller',
+                        ['$scope',
+                            '$filter',
+                            _app_controller]);
+    </script>
+
+    <!-- ============================= -->
 
 </body>
 </html>
