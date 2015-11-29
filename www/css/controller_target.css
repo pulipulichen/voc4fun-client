@@ -5,3 +5,22 @@
 .target-completed {
     color: green;
 }
+
+.target-page .target-help-modal .message {
+    margin: 1rem;
+    white-space: pre;
+}
+
+.target-page .target-input {
+    width: 3rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.target-page .recommend {
+    border-top: 1px dashed #ddd;
+}
+
+.target-page .recommend ons-row {
+    text-align: center;
+}

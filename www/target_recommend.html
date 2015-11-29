@@ -11,8 +11,8 @@
         <ons-list modifier="inset">
             <ons-list-item ng-repeat="data in ctl_target.status" 
                            ng-init="setting = ctl_target.var.target_setting[$index];
-                            recommend = ctl_target.var.recommend_target_data[setting.key];"
-                         ng-show="ctl_target.get_max_target(setting.key) > 0">
+                                       recommend = ctl_target.var.recommend_target_data[setting.key];"
+                           ng-show="ctl_target.get_max_target(setting.key) > 0">
                 <ons-row>
                     <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">
                         {{ setting.title}}
@@ -22,28 +22,28 @@
                     <ons-col width="50" style="text-align: right">
                         <ons-icon icon="ion-ios-minus-outline" fixed-width="true" 
                                   ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
-                        <input min="{{ setting.min}}" max="{{ ctl_target.get_max_target(setting.key) }}" type="number" 
+                        <input min="{{ setting.min}}" max="{{ ctl_target.get_max_target(setting.key)}}" type="number" 
                                value="{{ recommend.recommend_target}}"
-                               target_key="{{ setting.key }}"
-                               style="width: 3rem;font-size: 1rem;text-align: center;" />
+                               target_key="{{ setting.key}}"
+                               class="target-input" />
                         <ons-icon icon="ion-ios-plus-outline" fixed-width="true" 
                                   ng-click="ctl_target.change_target_number($event, 1)"></ons-icon>
                     </ons-col>
                 </ons-row>
-                <ons-row style="border-top: 1px dashed #ddd;">
-                    <ons-col class="yesterday-target-status" style="text-align: center;">
+                <ons-row class="recommend">
+                    <ons-col class="yesterday-target-status">
                         昨天的進度: 
-                        {{ recommend.last_done }}
+                        {{ recommend.last_done}}
                         /
-                        {{ recommend.last_target }}
+                        {{ recommend.last_target}}
                     </ons-col>
-                    <ons-col class="yesterday-target-status" style="text-align: center;">
+                    <ons-col class="yesterday-target-status">
                         未完成的數量: 
-                        {{ ctl_target.get_remained_target(setting.key) }}
+                        {{ ctl_target.get_remained_target(setting.key)}}
                     </ons-col>
-                    <ons-col class="recommend-target" style="text-align: center;">
+                    <ons-col class="recommend-target">
                         推薦的目標: 
-                        {{ recommend.recommend_target }}
+                        {{ recommend.recommend_target}}
                     </ons-col>
                 </ons-row>
             </ons-list-item>
@@ -58,9 +58,9 @@
 
         <!-- ======================================= -->
 
-        <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()">
+        <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()" class="target-help-modal">
             <img src="{{ ctl_target.var.target_help.help_img}}" />
-            <div style="margin: 1rem;white-space: pre;">{{ ctl_target.var.target_help.help}}</div>
+            <div class="message">{{ ctl_target.var.target_help.help}}</div>
             <ons-button>{{ "ONS_OK" | translate }}</ons-button>
         </ons-modal>
     </form>

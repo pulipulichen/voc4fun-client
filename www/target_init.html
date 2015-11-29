@@ -24,7 +24,7 @@
                         <input min="{{setting.min}}" max="{{ ctl_target.get_max_target(setting.key)}}" type="number" 
                                value="{{ data.target}}"
                                target_key="{{setting.key}}"
-                               style="width: 3rem;font-size: 1rem;text-align: center;" />
+                               class="target-input" />
                         <ons-icon icon="ion-ios-plus-outline" fixed-width="true" 
                                   ng-click="ctl_target.change_target_number($event, 1)"></ons-icon>
                     </ons-col>
@@ -41,9 +41,9 @@
 
         <!-- ======================================= -->
 
-        <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()">
+        <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()" class="target-help-modal">
             <img src="{{ ctl_target.var.target_help.help_img}}" />
-            <div style="margin: 1rem;white-space: pre;">{{ ctl_target.var.target_help.help}}</div>
+            <div class="message">{{ ctl_target.var.target_help.help}}</div>
             <ons-button>{{ "ONS_OK" | translate }}</ons-button>
         </ons-modal>
     </form>
