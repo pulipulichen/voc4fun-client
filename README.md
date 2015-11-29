@@ -3,12 +3,11 @@
 https://github.com/pulipulichen/voc4fun-client
 
 # Quick Link
-* GITHUB Issues: https://github.com/pulipulichen/voc4fun-client/issues
-
-# Onsen UI 快速參照
+* GITHUB Issues
+https://github.com/pulipulichen/voc4fun-client/issues
+* Onsen UI 快速參照
 http://onsen.io/2/reference/css.html
-
-## JavaScript
+* JavaScript
 http://onsen.io/reference/javascript.html
 
 ## Patterns
