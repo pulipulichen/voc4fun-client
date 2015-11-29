@@ -160,7 +160,7 @@ var controller_target = function ($scope) {
                     _ctl.get_yesterday_target_data(function (_target_data) {
                         _ctl.add_target_history(_target_data);
                     });
-                    
+
                     _ctl.init_recommend_target_data(function () {
                         app.navi.replacePage(_page, _animation);
                     });
@@ -249,7 +249,7 @@ var controller_target = function ($scope) {
         if (_day_offset === undefined) {
             _day_offset = 0;
         }
-        
+
         var _timestamp = new Date().getTime() - _target_offset_hours * 60 * 60 * 1000;
         _timestamp = _timestamp + _day_offset * 24 * 60 * 60 * 1000;
         var _date = new Date(_timestamp);
@@ -423,7 +423,7 @@ var controller_target = function ($scope) {
     _ctl.get_complete_percent = function () {
         return _ctl._calc_complete_percent(_status);
     };
-    
+
     _ctl._calc_complete_percent = function (_target_data) {
         var _done = 0;
         var _target = 0;
@@ -580,9 +580,9 @@ var controller_target = function ($scope) {
 
     _ctl.get_yesterday_target_data = function (_callback) {
         // 先取得開始與結束時間點
-        
-        
-        $.trigger_callback(_callback, _yesterday_target_data_mock);
+        //$.trigger_callback(_callback, _yesterday_target_data_mock);
+        return _ctl.get_period_target_data(-1, _callback);
+
     };
 
     var _before_yesterday_target_data_mock = {
@@ -601,9 +601,68 @@ var controller_target = function ($scope) {
     };
 
     _ctl.get_before_yesterday_target_data = function (_callback) {
-        $.trigger_callback(_callback, _before_yesterday_target_data_mock);
+        //$.trigger_callback(_callback, _before_yesterday_target_data_mock);
+        return _ctl.get_period_target_data(-2, _callback);
     };
-    
+
+    _ctl.get_period_target_data = function (_offset_day, _callback) {
+        var _min_timestamp = _ctl.get_period_start_timestamp(_offset_day);
+        var _max_timestamp = _ctl.get_period_end_timestamp(_offset_day);
+
+        var _target_data = {};
+
+        var _get_target_data_callback = function (_data) {
+            if (_data === undefined) {
+                $.trigger_callback(_callback);
+                return;
+            }
+
+            for (var _key in _data) {
+                _target_data[_key] = {
+                    done: 0,
+                    target: _data[_key]
+                };
+            }
+
+            // 一個一個查詢大家的log
+            var _ary_keys = $.array_keys(_target_data);
+
+            var _loop = function (_i) {
+                if (_i < _ary_keys.length) {
+                    var _key = _ary_keys[_i];
+                    $scope.db_log.get_latest_log({
+                        file_name: _log_file,
+                        function_name: "done()",
+                        min_timestamp: _min_timestamp,
+                        max_timestamp: _max_timestamp,
+                        qualifier: _key,
+                        callback: function (_data) {
+                            _target_data[_key].done = _data.done;
+                            
+                            _i++;
+                            _loop(_i);
+                        }
+                    });
+                }
+                else {
+                    $.trigger_callback(_callback, _target_data);
+                }
+            };
+            _loop(0);
+        };
+
+        // 先取得target的部分
+        $scope.db_log.get_latest_log({
+            file_name: _log_file,
+            function_name: "set_target()",
+            min_timestamp: _min_timestamp,
+            max_timestamp: _max_timestamp,
+            callback: _get_target_data_callback
+        });
+    };
+
+    // ------------------------------------------
+
     _ctl.add_target_history = function (_target_data) {
         var _date = _ctl._get_period_date(-1);  //取得昨天的期間
         var _complete_percent = _ctl._calc_complete_percent(_target_data);
