@@ -69,6 +69,7 @@ var controller_note = function ($scope) {
         _ctl._set_auto_grow(_textarea);
         _textarea.focus();
         
+        // 把copy加入log事件
         $scope.log(_log_file, "copy()", _uuid, {
             uuid: _uuid,
             note: _note
