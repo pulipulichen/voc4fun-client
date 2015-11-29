@@ -157,7 +157,10 @@ var controller_target = function ($scope) {
                 //$scope.target_data.learn_flashcard.done = 50;
                 //$.console_trace(_animation);
                 if (_page === "target_recommend.html") {
-                    _ctl.add_target_history(_ctl.get_yesterday_target_data());
+                    _ctl.get_yesterday_target_data(function (_target_data) {
+                        _ctl.add_target_history(_target_data);
+                    });
+                    
                     _ctl.init_recommend_target_data(function () {
                         app.navi.replacePage(_page, _animation);
                     });
@@ -514,7 +517,7 @@ var controller_target = function ($scope) {
         });
     };
 
-    _ctl_calculate_recommend_target_data = function (_target, _prev_target, _callback) {
+    _ctl._calculate_recommend_target_data = function (_target, _prev_target, _callback) {
 
         var _recommend_target_data = {};
 
@@ -602,7 +605,7 @@ var controller_target = function ($scope) {
     _ctl.add_target_history = function (_target_data) {
         var _date = _ctl._get_period_date(-1);  //取得昨天的期間
         var _complete_percent = _ctl._calc_complete_percent(_target_data);
-        $scope.db_target_history.add(_date, _complete_percent, _target_data);
+        $scope.ctl_target_history.add(_date, _complete_percent, _target_data);
     };
 
     // ------------------------------------------
