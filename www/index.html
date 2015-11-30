@@ -69,7 +69,7 @@
     <script src="pulipuli-utils/app_factory_ons_view.js"></script>
     <script src="pulipuli-utils/app_factory_ons_utils.js"></script>
     <script src="pulipuli-utils/app_factory_jquery.js"></script>
-    <script src="pulipuli-utils/db_profile.js"></script>
+    
     <script src="pulipuli-utils/db_log.js"></script>
     <script src="pulipuli-utils/db_status.js"></script>
 
@@ -80,6 +80,7 @@
     <script src='lib/responsivevoice/responsivevoice.js'></script>
     <script src="pulipuli-utils/cordova_text_to_speech.js"></script>
 
+    <script src="js/controller_profile.js"></script>
     <script src="js/controller_flashcard.js"></script>
     <script src="js/controller_target.js"></script>
     <script src="js/controller_activity.js"></script>
@@ -135,8 +136,8 @@
 
                     db_log($scope);
                     db_status($scope);
-                    db_profile($scope);
-
+                    
+                    controller_profile($scope);
                     controller_flashcard($scope);
                     controller_target($scope);
                     controller_activity($scope);

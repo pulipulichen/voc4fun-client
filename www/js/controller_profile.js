@@ -1,8 +1,8 @@
-var db_profile = function ($scope) {
+var controller_profile = function ($scope) {
 
     var _ctl = {};
     
-    var _log_file = "db_profile.js";
+    var _log_file = "controller_profile.js";
 
     // --------------------------
     
@@ -98,8 +98,9 @@ var db_profile = function ($scope) {
     
     _ctl.setup_uuid = function () {
         if (_status.uuid === undefined || _status.uuid === 0) {
-            var _fingerprint = new Fingerprint().get();
-            _status.uuid = $.int_to_letters(_fingerprint);
+//            var _fingerprint = new Fingerprint().get();
+//            _status.uuid = $.int_to_letters(_fingerprint);
+            _status.uuid = $scope.db_log.get_uuid();
         }
         return _status.uuid;
     };
@@ -124,5 +125,5 @@ var db_profile = function ($scope) {
     
     // -----------------------------------
     
-    $scope.db_profile = _ctl;
+    $scope.ctl_profile = _ctl;
 };

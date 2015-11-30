@@ -1,6 +1,6 @@
 var _qunit_list = [
     'pulipuli-utils/app_factory_jquery.qunit.js',
-    'pulipuli-utils/db_profile.qunit.js',
+    'js/controller_profile.qunit.js',
     'pulipuli-utils/db_log.qunit.js',
     'js/controller_target.qunit.js',
 ];

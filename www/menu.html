@@ -4,7 +4,7 @@
         <div class="left" style="padding: 0.5rem; font-size: 12pt;" 
              ng-click="ctl_target.enter_from_menu();menu_click($event);"
              ng-show"ctl_target.get_complete_percent() !== undefined">
-            {{ db_profile.status.name}} 
+            {{ ctl_profile.status.name}} 
             <br />
             {{ 'TARGET_MENU_STATUS' | translate }}
             <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 

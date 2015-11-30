@@ -257,7 +257,7 @@ var db_log = function ($scope) {
     _ctl.sync = function (_callback) {
         var _url = $scope.CONFIG.server_url + "model/sync.php";
         var _data = {
-            uuid: $scope.db_profile.get_uuid(),
+            uuid: $scope.ctl_profile.get_uuid(),
             timestamp: 0
         };
 
@@ -311,7 +311,7 @@ var db_log = function ($scope) {
                     _logs.push(_log);
                     
                     var _data = {
-                        uuid: $scope.db_profile.get_uuid(),
+                        uuid: $scope.ctl_profile.get_uuid(),
                         logs: JSON.stringify(_logs)
                     };
                     $.post(_url, _data, function () {
@@ -337,7 +337,7 @@ var db_log = function ($scope) {
                 $.console_trace("sync_pull", _log);
                 
                 var _data = {
-                    uuid: $scope.db_profile.get_uuid(),
+                    uuid: $scope.ctl_profile.get_uuid(),
                     logs: JSON.stringify(_log)
                 };
                 
@@ -361,6 +361,12 @@ var db_log = function ($scope) {
                 $.trigger_callback(_callback, _log);
             });
         });
+    };
+    
+    
+    _ctl.get_uuid = function () {
+        var _fingerprint = new Fingerprint().get();
+        return $.int_to_letters(_fingerprint);
     };
 
     // ----------------------------------

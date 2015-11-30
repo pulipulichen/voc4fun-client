@@ -3,7 +3,7 @@
 /* global _ctl:false */
 /* global _var:false */
 /* global _status:false */
-module("db_profile.js", QUNIT_UTILS.module_setup("db_profile"));
+module("controller_profile.js", QUNIT_UTILS.module_setup("ctl_profile"));
 
 test("get_uuid()", function (_assert) {
     var _done = _assert.async(1);

@@ -42,10 +42,10 @@ var _app_ready = function ($scope) {
         //    app.navi.replacePage("target_recommend.html");
         //}); return this;
 
-        if ($scope.db_profile.is_exists() === false) {
+        if ($scope.ctl_profile.is_exists() === false) {
             //$scope.profile = $scope.profile_mock;
 
-            $scope.db_profile.init();
+            $scope.ctl_profile.init();
             app.navi.replacePage("profile.html", {animation: 'none'});
         }
         else {
