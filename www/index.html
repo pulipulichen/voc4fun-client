@@ -151,6 +151,7 @@
                     
                     if ($scope.CONFIG.empty_dabase === true) {
                         $scope.DB.drop_table(["profile", "log", "flashcard", "status", "list", "target_history"]); 
+                        $.getJSON($scope.CONFIG.server_url + "reset.php");
                         alert("資料庫已經清空");
                         return this;
                     }

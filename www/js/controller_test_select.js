@@ -72,27 +72,47 @@ var controller_test_select = function ($scope) {
             _do_animation = _callback;
             _callback = undefined;
         }
+        
+        var _do_callback = function () {
+            _ctl.setup_hint();
+            $.trigger_callback(_callback);
+        };
 
         //$.trigger_callback(_callback);
 
         //var _test = _var._test_select_mock;
         _ctl.get_test_flashcard(function (_test, _mode) {
             _ctl.add_history_stack(_test.flashcard_id);
+            
 
             $scope.log(_log_file, "next()", _mode, _test);
             if (_do_animation === true) {
-                _ctl._transition_next(_test, _callback);
+                _ctl._transition_next(_test, _do_callback);
             }
             else {
                 _var.test_select = _test;
                 $scope.$digest();
                 app.navi.replacePage("test_select.html", {
                     "animation": "none",
-                    "onTransitionEnd": _callback
+                    "onTransitionEnd": _do_callback
                 });
             }
         });
 
+    };
+    
+    _ctl.setup_hint = function () {
+        var _note = _var.test_select.note;
+        var _hint = $(".test-select-page .hint");
+        $.console_trace("setup_hint() " + _hint.length, _var.test_select.note);
+        if (_note === null || _note === undefined || $.trim(_note) === "") {
+            $.console_trace("關閉");
+            _hint.hide();
+        }
+        else {
+            $.console_trace("開啟");
+            _hint.show();
+        }
     };
 
     var _page = "test_select.html";
@@ -119,6 +139,7 @@ var controller_test_select = function ($scope) {
 
     _ctl.add_test_stack = function (_id) {
         _status.stack.push(_id);
+        $scope.db_status.save_status(_status_key);
         return this;
     };
 
@@ -239,6 +260,10 @@ var controller_test_select = function ($scope) {
             _test_select.flashcard_id = _flashcard.id;
             _test_select.question = _flashcard.a;
             _test_select.note = _flashcard.note;
+//            _test_select.note = null;
+//            _test_select.note = "";
+//            $.console_trace("note", _test_select.note);
+//            $scope.$digest();
             
             //_test_select.note = "AAA";
             

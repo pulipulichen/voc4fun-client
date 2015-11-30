@@ -157,6 +157,8 @@ var controller_target = function ($scope) {
                 //$scope.target_data.learn_flashcard.done = 50;
                 //$.console_trace(_animation);
                 if (_page === "target_recommend.html") {
+                    
+                    // 把昨天的資料加入
                     _ctl.get_yesterday_target_data(function (_target_data) {
                         _ctl.add_target_history(_target_data);
                     });
@@ -166,6 +168,7 @@ var controller_target = function ($scope) {
                     });
                 }
                 else {
+                    $.console_trace(_page, _animation);
                     app.navi.replacePage(_page, _animation);
                 }
             });

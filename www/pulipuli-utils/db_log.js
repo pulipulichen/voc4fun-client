@@ -254,12 +254,26 @@ var db_log = function ($scope) {
 
     // ----------------------------------
 
+    var _syncing = false;
     _ctl.sync = function (_callback) {
         var _url = $scope.CONFIG.server_url + "model/sync.php";
+        
+        if (_syncing === true) {
+            // 防止重複同步
+            $.trigger_callback(_callback);
+            return;
+        }
+        _syncing = true;
+        
         var _data = {
             uuid: $scope.ctl_profile.get_uuid(),
             timestamp: 0
         };
+        
+        var _sync_complete = function () {
+            _syncing = false;
+            $.trigger_callback(_callback);
+        }
 
         _ctl.get_latest_log_timestamp(function (_timestamp) {
             _data.timestamp = _timestamp;
@@ -267,17 +281,17 @@ var db_log = function ($scope) {
                 //$.console_trace("getJSON", _result);
                 if (typeof (_result) === "boolean" && _result === true) {
                     // 表示沒有資料需要更新
-                    $.trigger_callback(_callback);
+                    _sync_complete();
                 }
                 else if (typeof (_result) === "number") {
                     // push 模式
-                    _ctl.sync_push(_result, _callback);
+                    _ctl.sync_push(_result, _sync_complete);
                 }
                 else if ($.is_array(_result) 
                         || (typeof(_result) === "object" && typeof(_result.timestamp) !== "undefined")) {
                     // pull 模式
-                    $.console_trace("pull模式", _result);
-                    _ctl.sync_pull(_result, _callback);
+                    //$.console_trace("pull模式", _result);
+                    _ctl.sync_pull(_result, _sync_complete);
                 }
             });
         });
@@ -289,7 +303,7 @@ var db_log = function ($scope) {
             var _timestamp = 0;
             if (_data.length > 0) {
                 _timestamp = _data[0].timestamp;
-                $.console_trace("")
+                //$.console_trace("")
                 //_timestamp = parseInt(_timestamp, 10);
             }
             $.trigger_callback(_callback, _timestamp);
@@ -363,6 +377,49 @@ var db_log = function ($scope) {
         });
     };
     
+    // ----------------------------------
+    
+    /**
+     * 監聽sync的事件
+     */
+    _ctl.sync_init = function () {
+        var _sync = function (_callback) {
+            _ctl.sync(_callback);
+        };
+        
+        if (typeof(cordova) === "undefined") {
+            // 桌面版的情況
+            
+            // 開啟
+            $(window).on("load",_sync);
+            
+            // 暫離
+            $(window).on("blur", _sync);
+            
+            // 關閉
+            $(window).on("unload", _sync);
+        }
+        else {
+            // 手機版的情況
+            document.addEventListener("deviceready", function () {
+                _sync();
+                
+                // 暫離
+                document.addEventListener("pause", _sync, false);
+
+                // 連線時
+                document.addEventListener("online", _sync, false);
+                
+            }, false);
+            
+        }
+        
+        // 離開的情況
+        $scope.ons_view.exit_app_add_listener(_sync);
+    };
+    _ctl.sync_init();
+    
+    // ----------------------------------
     
     _ctl.get_uuid = function () {
         var _fingerprint = new Fingerprint().get();

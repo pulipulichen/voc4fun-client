@@ -50,9 +50,8 @@
 
     <!-- ==================================== -->
 
-    <ons-tabbar>
-        <ons-tab label="{{ 'ONS_OK' | translate }}" 
-                 onclick="ctl_note.submit()"></ons-tab>
+    <ons-tabbar ng-click="ctl_note.submit()">
+        <ons-tab label="{{ 'ONS_OK' | translate }}" ></ons-tab>
     </ons-tabbar>
 
 </ons-page>

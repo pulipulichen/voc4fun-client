@@ -29,10 +29,16 @@
 .test-select-page .hint {
     text-align: center;
     margin-top: 1rem;
+    display: none;
 }
+/*.test-select-page .hint.show {
+    display: block
+}*/
 
 .test-select-page .hint .pre {
     white-space: pre;
+    border: 1px solid #DDD;
+    border-radius: 4px;
 }
 
 .test-select-page .result {
