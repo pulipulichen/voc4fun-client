@@ -6,7 +6,8 @@
                  menu_click($event);"
              ng-show"ctl_target.get_complete_percent() !== undefined" >
              {{ ctl_profile.status.name}} 
-            <div ng-show="ctl_target.is_target_setted()">
+            <div ng-show="ctl_target.is_target_setted()"
+                 ng-class="{'target-completed': (ctl_target.get_complete_percent() > 99)}">
                 {{ 'TARGET_MENU_STATUS' | translate }}
                 <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 
             </div>
@@ -29,7 +30,9 @@
             <span class="menu-label">
                 {{ 'TARGET_MENU_TITLE' | translate }}
             </span>
-            <span  class="right" style="float:right" ng-show="ctl_target.is_target_setted()">
+            <span  class="right" style="float:right" 
+                   ng-class="{'target-completed': (ctl_target.get_complete_percent() > 99)}"
+                   ng-show="ctl_target.is_target_setted()">
                 {{ ctl_target.get_complete_percent()}}%
             </span>
         </ons-list-item>

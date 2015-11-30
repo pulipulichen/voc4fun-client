@@ -19,11 +19,12 @@
 }
 
 .test-select-page .question .speak {
-    float:left;
+    /*float:left;*/
+    /*
     font-size: 1.5rem;
     margin-right: 0.5rem;
-    color:#999;
-    visibility: hidden;
+    color:#999;*/
+    /*visibility: hidden;*/
 }
 
 .test-select-page .hint {

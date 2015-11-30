@@ -431,18 +431,29 @@ var controller_target = function ($scope) {
         var _done = 0;
         var _target = 0;
         var _percent;
+        var _p = 0;
+        var _target_count = 0;
 
         for (var _i in _status) {
             _done = _done + _target_data[_i].done;
             _target = _target + _target_data[_i].target;
+            _p = _p + Math.min(100, Math.floor(_target_data[_i].done / _target_data[_i].target * 100));
+            _target_count++;
         }
+        
+        _p = Math.floor(_p / _target_count);
 
         //$.console_trace("get_complete_percent", {
         //    done: _done, target: _target, percent: Math.floor(_done / _target * 100)
         //});
 
         if (_target !== 0) {
-            _percent = Math.floor(_done / _target * 100);
+            if (_p < 100) {
+                _percent = _p;
+            }
+            else {
+                _percent = Math.floor(_done / _target * 100);
+            }
         }
 
         return _percent;
