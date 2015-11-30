@@ -13,7 +13,7 @@ var controller_notification = function ($scope, $filter) {
     // ---------------------------------------------
 
     _ctl.show_notification = function (_data) {
-        alert(1212);
+        //alert(1212);
         if (_data === undefined) {
             _data = _ctl.get_notification_message();
         }

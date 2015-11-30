@@ -530,6 +530,12 @@ var controller_target = function ($scope) {
         });
     };
 
+    /**
+     * 推薦目標數量的演算法
+     * @param {type} _target
+     * @param {type} _prev_target
+     * @param {type} _callback
+     */
     _ctl._calculate_recommend_target_data = function (_target, _prev_target, _callback) {
 
         var _recommend_target_data = {};
@@ -545,12 +551,16 @@ var controller_target = function ($scope) {
             var _recommend_target;
 
             if (_t.done < _t.target) {
+                // 昨天未完成目標
                 _recommend_target = Math.floor((_t.target - _t.done) / 2) + _t.done;
             }
             else if (_t.done > _t.target) {
+                // 昨天超過目標的情況
                 _recommend_target = _t.done;
             }
             else {
+                // 昨天剛好達成目標
+                
                 if (_t.done === _p.done) {
                     // 今天做的量，跟昨天相同
                     if (_p.target > _p.done) {

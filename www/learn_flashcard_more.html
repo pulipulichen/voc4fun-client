@@ -2,17 +2,17 @@
              ng-init="_learn_flashcard = ctl_learn_flashcard.var.learn_flashcard">
     <ons-list>
         <ons-list-item 
-            ng-click="ctl_activity.speak(_learn_flashcard.q);
+            ng-click="ctl_activity.speak(_learn_flashcard.q, 'en');
             ctl_learn_flashcard.var.more_menu.hide();">
             英文發音
         </ons-list-item>
         <ons-list-item 
-            ng-click="ctl_activity.speak(_learn_flashcard.a);
+            ng-click="ctl_activity.speak(_learn_flashcard.a, 'zh');
             ctl_learn_flashcard.var.more_menu.hide();">
             中文發音
         </ons-list-item>
         <ons-list-item 
-            ng-click="ctl_note.enter()
+            ng-click="ctl_note.enter();
             ctl_learn_flashcard.var.more_menu.hide();">
             撰寫筆記
         </ons-list-item>
