@@ -431,6 +431,11 @@ var controller_learn_flashcard = function ($scope) {
         }
         return _status.learned_stack.length;
     };
+    
+    _ctl.add_incorrect_answer_to_review_stack = function(_flashcard_id) {
+        _status.review_stack.push(_flashcard_id);
+        $scope.db_status.save_status(_status_key);
+    };
 
     // ---------------------------------
 

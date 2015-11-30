@@ -118,7 +118,9 @@ ons-page ons-toolbar .right {
     
     body:not(.main-full) #menu_html ons-toolbar .center,
     body:not(.main-full) #menu_html ons-toolbar .left,
-    body:not(.main-full) #menu_html .menu-heading {
+    body:not(.main-full) #menu_html .menu-heading,
+    body:not(.main-full) #menu_html .right,
+    body:not(.main-full) #menu_html .bottom-bar {
         display:none;
     }
     

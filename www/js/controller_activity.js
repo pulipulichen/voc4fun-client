@@ -7,6 +7,7 @@ var controller_activity = function ($scope) {
     // --------------------------
     
     _ctl.enter_from_target = function () {
+        //$.console_trace("設定swipeable");
         $scope.set_swipeable(true);
         
         if ( _ctl.is_learn_enough() 

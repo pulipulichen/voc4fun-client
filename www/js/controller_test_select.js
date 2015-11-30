@@ -162,7 +162,6 @@ var controller_test_select = function ($scope) {
             question: _question,
             answer: _answer
         });
-        $scope.db_status.save_status(_status_key);
 
         if (_correct === true) {
             _ctl._give_correct_answer();
@@ -171,6 +170,7 @@ var controller_test_select = function ($scope) {
             _ctl._give_incorrect_answer();
         }
 
+        $scope.db_status.save_status(_status_key);
     };
 
     _ctl._give_correct_answer = function () {
@@ -198,7 +198,8 @@ var controller_test_select = function ($scope) {
         // 把答錯的選項也加入待答的範圍
         var _answer = _test_select.answer;
         var _answered_option_flashcard_id = _test_select.options[_answer].id;
-        $scope.ctl_learn_flashcard.status.review_stack.push(_answered_option_flashcard_id);
+        //$scope.ctl_learn_flashcard.status.review_stack.push(_answered_option_flashcard_id);
+        $scope.ctl_learn_flashcard.add_incorrect_answer_to_review_stack(_answered_option_flashcard_id);
         _status.stack.push(_answered_option_flashcard_id);
         
         _status.stack = $.array_merge_if_same(_status.stack);

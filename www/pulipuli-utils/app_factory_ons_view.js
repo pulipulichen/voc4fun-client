@@ -73,17 +73,21 @@ var _app_factory_ons_view = function ($scope) {
 
     $scope.swipeable_width = 400;
 
-    var _detect_menu_swipeable = function () {
+    var _detect_menu_swipeable = function (_force) {
         // This will execute whenever the window is resized
         //$(window).height(); // New height
         var _width = $(window).width(); // New width
-        if (_width > _swipeable_width && _menu_swipeable === true) {
+        if (_width > _swipeable_width 
+                && ( _menu_swipeable === true || _force === true)) {
             _menu_swipeable = false;
             app.menu.setSwipeable(false);
+            //$.console_trace("關閉");
         }
-        else if (_width < _swipeable_width + 1 && _menu_swipeable === false) {
+        else if (_width < _swipeable_width + 1 
+                && (_menu_swipeable === false || _force === true)) {
             _menu_swipeable = true;
             app.menu.setSwipeable(true);
+            //$.console_trace("開啟");
         }
 
         if (app.menu.isMenuOpened()) {
@@ -115,14 +119,14 @@ var _app_factory_ons_view = function ($scope) {
     };
 
     $scope.set_swipeable = function (_swipeable) {
-        app.menu.setSwipeable(_swipeable);
         var _body = $("body");
         var _classname = "main-full";
         if (_swipeable === false) {
             _body.addClass(_classname);
+            app.menu.setSwipeable(_swipeable);
         }
         else {
-            _detect_menu_swipeable();
+            _detect_menu_swipeable(true);
             _body.removeClass(_classname);
         }
         return this;

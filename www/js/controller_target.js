@@ -168,7 +168,7 @@ var controller_target = function ($scope) {
                     });
                 }
                 else {
-                    $.console_trace(_page, _animation);
+                    //$.console_trace(_page, _animation);
                     app.navi.replacePage(_page, _animation);
                 }
             });
