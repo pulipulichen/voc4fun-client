@@ -76,9 +76,10 @@ var controller_note = function ($scope) {
         });
     };
 
-    _ctl.submit = function () {
+    _ctl.submit = function ($event) {
 //        var _note = _var.note;
-        var _note = $("#note_html textarea").val();
+        //var _note = $("#note_html textarea").val();
+        var _note = $($event.target).parents("ons-page").eq(0).find("textarea.note").val();
         _note = $.trim(_note);
 
         if ($scope.ctl_learn_flashcard.var.learn_flashcard.note !== _note) {
@@ -92,8 +93,10 @@ var controller_note = function ($scope) {
         app.navi.popPage();
     };
 
-    _ctl.check_note_edited = function () {
-        var _id = $scope.ctl_learn_flashcard.get_current_flashcard_id();
+    _ctl.check_note_edited = function (_id) {
+        if (_id === undefined) {
+            _id = $scope.ctl_learn_flashcard.get_current_flashcard_id();
+        }
         if ($.inArray(_id, _status.history) === -1) {
             _status.history.push(_id);
 

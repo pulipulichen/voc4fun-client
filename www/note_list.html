@@ -1,0 +1,46 @@
+<ons-page id="note_list_html" 
+          ng-device-backbutton="main_back()" 
+          ng-init="profile = ctl_profile.status">
+
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <ons-icon icon="ion-navicon" fixed-width="true"></ons-icon>
+                </span>
+            </ons-toolbar-button>
+        </div>
+
+        <div class="center">
+            筆記列表
+        </div>
+
+        <div class="right"
+             ng-class="{'target-completed': (ctl_target.status.take_note.done > ctl_target.status.take_note.target-1)}"
+             ng-click="ctl_target.enter_for_view()"
+             ng-show="ctl_target.status.take_note.target !== 0">
+            {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
+        </div>
+    </ons-toolbar>
+
+    <!-- --------------------------------------------------------- -->
+
+    <ons-list modifier="inset" class="note-list">
+        <ons-list-item ng-repeat="note in ctl_note_list.var.list"
+                        modifier="chevron" ng-click="ctl_note_list.view($index)">
+            <ons-row>
+                <ons-col width="30%">
+                    <div class="q" style="line-height: normal;margin-top: 10px;">
+                    {{ note.q }}
+                    </div>
+                    <div class="a" style="font-size:small;line-height: normal;margin-bottom: 10px;">
+                    {{ ctl_note_list.note_abstract(note.a, 10) }}
+                    </div>
+                </ons-col>
+                <ons-col class="pre">
+                    {{ ctl_note_list.note_abstract(note.note, 30) }}
+                </ons-col>
+            </ons-row>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

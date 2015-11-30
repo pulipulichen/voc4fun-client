@@ -1,5 +1,4 @@
-<ons-page id="note_html" ng-device-backbutton="app.navi.popPage()"
-          ng-init="_learn_flashcard = ctl_learn_flashcard.var.learn_flashcard">
+<ons-page id="note_list_view_html" class="note" ng-device-backbutton="app.navi.popPage()">
 
     <ons-toolbar>
 
@@ -11,7 +10,7 @@
             </ons-toolbar-button>
         </div>
 
-        <div class="center">{{ _learn_flashcard.q}} 筆記</div>
+        <div class="center">{{ ctl_note_list.var.q }} 筆記</div>
 
         <div class="right"
              ng-class="{'target-completed': (ctl_target.status.take_note.done > ctl_target.status.take_note.target-1)}"
@@ -25,7 +24,7 @@
 
     <div class="flashcard" 
          style="margin: 0 1rem; border: 1px solid #DDD; border-radius: 4px; text-align: center;">
-        {{ _learn_flashcard.q}} / {{ _learn_flashcard.a}}
+        {{ ctl_note_list.var.q}} / {{ ctl_note_list.var.a}}
     </div>
 
     <div style="max-height: calc(100% - 140px); overflow-y: auto;">
@@ -33,12 +32,12 @@
             <textarea class="note textarea textarea--transparent" placeholder="撰寫筆記..."
                       ng-keyup="ctl_note.auto_grow($event)"
                       style=" margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; 
-                      background-color: #f9f9f9; overflow-y: auto;width: 100%;">{{ _learn_flashcard.note}}</textarea>
+                      background-color: #f9f9f9; overflow-y: auto;width: 100%;">{{ ctl_note_list.var.note}}</textarea>
         </ons-row>
 
         <ons-list modifier="inset">
             <ons-list-item 
-                ng-repeat="other_note in ctl_learn_flashcard.var.learn_flashcard.other_note" 
+                ng-repeat="other_note in ctl_note_list.var.other_note" 
                 ng-click="ctl_note.copy(other_note.note, other_note.uuid)"
                 style="cursor: pointer;">
                 <span class="user" style="font-weight: bold;">
@@ -53,7 +52,7 @@
 
     <!-- ==================================== -->
 
-    <ons-tabbar ng-click="ctl_note.submit($event)">
+    <ons-tabbar ng-click="ctl_note_list.submit($event);">
         <ons-tab label="{{ 'ONS_OK' | translate }}" ></ons-tab>
     </ons-tabbar>
 

@@ -50,6 +50,20 @@
                 {{ ctl_target.status.learn_flashcard.done}} / {{ ctl_target.status.learn_flashcard.target}}
             </span>
         </ons-list-item>
+        
+        <ons-list-item ng-click="ctl_note_list.enter();
+            menu_click($event);">
+            <ons-icon icon="ion-ios-compose-outline" fixed-width="true"></ons-icon>
+            <span class="menu-label">
+                筆記列表
+            </span>
+
+            <span  class="right" style="float:right"
+                   ng-class="{'target-completed': (ctl_target.status.take_note.done > ctl_target.status.take_note.target - 1)}"
+                   ng-show="ctl_target.status.take_note.target !== 0">
+                {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
+            </span>
+        </ons-list-item>
 
         <ons-list-item ng-click="ctl_test_select.enter();
             menu_click($event);">

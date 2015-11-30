@@ -45,7 +45,7 @@ var controller_activity = function ($scope) {
      */
     _ctl.speak = function (_text, _lang) {
         //alert("發音：" + _text + "(未完成)");
-        $scope.log(_log_file, "speck", undefined, {
+        $scope.log(_log_file, "speck", _lang, {
             "text": _text,
             "lang": _lang
         });
