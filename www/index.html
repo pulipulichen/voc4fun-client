@@ -147,6 +147,12 @@
                     controller_target_history($scope);
 
                     // -----------------------------------
+                    
+                    if ($scope.CONFIG.empty_dabase === true) {
+                        $scope.DB.drop_table(["profile", "log", "flashcard", "status", "list", "target_history"]); 
+                        alert("資料庫已經清空");
+                        return this;
+                    }
 
                     $scope.db_status.ready(function () {
                         if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {

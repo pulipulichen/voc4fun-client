@@ -39,7 +39,7 @@ var db_log = function ($scope) {
      * @param {JSON} _data 可以省略
      * @returns {db_log.$scope}
      */
-    $scope.log = function (_file_name, _function_name, _qualifier, _data) {
+    $scope.log = function (_file_name, _function_name, _qualifier, _data, _callback) {
 
         if (typeof (_qualifier) === "object"
                 && typeof (_data) === "undefined") {
@@ -59,7 +59,7 @@ var db_log = function ($scope) {
             data: JSON.stringify(_data)
         };
         //$.console_trace(_insert_data);
-        $scope.DB.insert(_log_db, _insert_data);
+        $scope.DB.insert(_log_db, _insert_data, _callback);
         return this;
     };
 
@@ -264,6 +264,7 @@ var db_log = function ($scope) {
         _ctl.get_latest_log_timestamp(function (_timestamp) {
             _data.timestamp = _timestamp;
             $.getJSON(_url, _data, function (_result) {
+                //$.console_trace("getJSON", _result);
                 if (typeof (_result) === "boolean" && _result === true) {
                     // 表示沒有資料需要更新
                     $.trigger_callback(_callback);
@@ -272,8 +273,10 @@ var db_log = function ($scope) {
                     // push 模式
                     _ctl.sync_push(_result, _callback);
                 }
-                else if ($.is_array(_result)) {
+                else if ($.is_array(_result) 
+                        || (typeof(_result) === "object" && typeof(_result.timestamp) !== "undefined")) {
                     // pull 模式
+                    $.console_trace("pull模式", _result);
                     _ctl.sync_pull(_result, _callback);
                 }
             });
@@ -286,6 +289,8 @@ var db_log = function ($scope) {
             var _timestamp = 0;
             if (_data.length > 0) {
                 _timestamp = _data[0].timestamp;
+                $.console_trace("")
+                //_timestamp = parseInt(_timestamp, 10);
             }
             $.trigger_callback(_callback, _timestamp);
         });
@@ -295,23 +300,26 @@ var db_log = function ($scope) {
         var _url = $scope.CONFIG.server_url + "model/sync.php";
         //$.console_trace("sync_push: " + _server_timestamp);
         
-        // 先準備好要傳過去的資料
+        
+            // 先準備好要傳過去的資料
         var _sql = "SELECT timestamp, file_name, function_name, qualifier, data "
             + " FROM log WHERE timestamp > " + _server_timestamp 
             + " ORDER BY timestamp ASC";
         $scope.DB.exec(_sql, function (_logs) {
             if (_logs.length > 0) {
-                var _data = {
-                    uuid: $scope.db_profile.get_uuid(),
-                    logs: JSON.stringify(_logs)
-                };
-                $.post(_url, _data, function () {
-                    _ctl.sync_complete("push");
-                    $.trigger_callback(_callback);
+                _ctl.sync_complete("push",function (_log) {
+                    _logs.push(_log);
+                    
+                    var _data = {
+                        uuid: $scope.db_profile.get_uuid(),
+                        logs: JSON.stringify(_logs)
+                    };
+                    $.post(_url, _data, function () {
+                        $.trigger_callback(_callback);
+                    });
                 });
             }
             else {
-                _ctl.sync_complete("push");
                 $.trigger_callback(_callback);
             }
         });
@@ -323,13 +331,36 @@ var db_log = function ($scope) {
      */
     _ctl.sync_pull = function (_logs, _callback) {
         $scope.DB.insert("log", _logs, function () {
-            _ctl.sync_complete("pull");
-            $.trigger_callback(_callback);
+            _ctl.sync_complete("pull", function (_log) {
+                var _url = $scope.CONFIG.server_url + "model/sync.php";
+                
+                $.console_trace("sync_pull", _log);
+                
+                var _data = {
+                    uuid: $scope.db_profile.get_uuid(),
+                    logs: JSON.stringify(_log)
+                };
+                
+                $.post(_url, _data, function () {
+                    $.trigger_callback(_callback);
+                });
+            });
         });
     };
     
-    _ctl.sync_complete = function (_qualifier) {
-        $scope.log("db_log.js", "sync_complete()", _qualifier, undefined);
+    _ctl.sync_complete = function (_qualifier, _callback) {
+        return $scope.log("db_log.js", "sync_complete()", _qualifier, undefined, function () {
+            // 查詢最新插入的log?
+            var _sql = "SELECT timestamp, file_name, function_name, qualifier, data "
+                + " FROM log " 
+                + " WHERE file_name = 'db_log.js' AND function_name = 'sync_complete()' "
+                + " ORDER BY timestamp DESC limit 1";
+            
+            $scope.DB.exec(_sql, function (_row) {
+                var _log = _row[0];
+                $.trigger_callback(_callback, _log);
+            });
+        });
     };
 
     // ----------------------------------

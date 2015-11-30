@@ -24,7 +24,7 @@ test("get_latest_log_timestamp()", function (_assert) {
 });
 
 test("sync()", function (_assert) {
-    $scope.log("db_log.qunit.js", "sync()", "test");
+    //$scope.log("db_log.qunit.js", "sync()", "test");
     var _done = _assert.async(1);
     _ctl.sync(function () {
         //equal(typeof (_timestamp), "number", _timestamp);
