@@ -158,13 +158,21 @@ var controller_learn_flashcard = function ($scope) {
             var _push_history_stack = function (_flashcard) {
                 _status.history_stack.push(_flashcard.id);
                 _status.history_index++;
-                _trans_callback(_flashcard);
                 //$.trigger_callback(_callback);
+                
+                $scope.ctl_test_select.add_test_stack(_flashcard.id);
 
                 // 如果是新單字，則加入learned_stack中
                 if ($.inArray(_flashcard.id, _status.learned_stack) === -1) {
                     _status.learned_stack.push(_flashcard.id);
+                    
+                    // 完成新增
+                    $scope.ctl_target.done_plus("learn_flashcard");
                 }
+                
+                $scope.$digest();
+                
+                _trans_callback(_flashcard);
             };
 
             if (_ctl.get_new_flashcard_type() === "new") {
@@ -329,10 +337,6 @@ var controller_learn_flashcard = function ($scope) {
                 _ctl.add_new_flashcard(_callback);
             }
             else {
-                // 完成新增
-                $scope.ctl_target.done_plus("learn_flashcard");
-                $scope.ctl_test_select.add_test_stack(_flashcard.id);
-                $scope.$digest();
 
                 $.trigger_callback(_callback, _flashcard);
             }
