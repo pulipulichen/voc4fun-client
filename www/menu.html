@@ -2,12 +2,14 @@
     <ons-row class="target-status menu-heading" style="cursor: pointer;">
 
         <div class="left" style="padding: 0.5rem; font-size: 12pt;" 
-             ng-click="ctl_target.enter_from_menu();menu_click($event);"
-             ng-show"ctl_target.get_complete_percent() !== undefined">
-            {{ ctl_profile.status.name}} 
-            <br />
-            {{ 'TARGET_MENU_STATUS' | translate }}
-            <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 
+             ng-click="ctl_target.enter_from_menu();
+                 menu_click($event);"
+             ng-show"ctl_target.get_complete_percent() !== undefined" >
+             {{ ctl_profile.status.name}} 
+            <div ng-show="ctl_target.is_target_setted()">
+                {{ 'TARGET_MENU_STATUS' | translate }}
+                <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 
+            </div>
         </div>
 
         <div class="right" style="position: absolute;right: 0;">
@@ -27,13 +29,22 @@
             <span class="menu-label">
                 {{ 'TARGET_MENU_TITLE' | translate }}
             </span>
+            <span  class="right" style="float:right" ng-show="ctl_target.is_target_setted()">
+                {{ ctl_target.get_complete_percent()}}%
+            </span>
         </ons-list-item>
 
         <ons-list-item ng-click="ctl_learn_flashcard.enter(false);
-                           menu_click($event);">
+            menu_click($event);">
             <ons-icon icon="ion-ios-browsers-outline" fixed-width="true"></ons-icon>
             <span class="menu-label">
                 {{ 'LEARN_FLASHCARD_TITLE' | translate }}
+            </span>
+
+            <span  class="right" style="float:right"
+                   ng-class="{'target-completed': (ctl_target.status.learn_flashcard.done > ctl_target.status.learn_flashcard.target - 1)}"
+                   ng-show="ctl_target.status.learn_flashcard.target !== 0">
+                {{ ctl_target.status.learn_flashcard.done}} / {{ ctl_target.status.learn_flashcard.target}}
             </span>
         </ons-list-item>
 
@@ -43,21 +54,35 @@
             <span class="menu-label">
                 {{ 'TEST_SELECT_TITLE' | translate }}
             </span>
-        </ons-list-item>
-
-        <ons-list-item ng-click="app.navi.replacePage('setting.html', {animation: 'none'});
-            menu_click($event);">
-            <ons-icon icon="ion-ios-settings" fixed-width="true"></ons-icon>
-            <span class="menu-label">
-                {{ 'SETTING' | translate }}
-            </span>
-        </ons-list-item>
-
-        <ons-list-item ng-click="exit_app();">
-            <ons-icon icon="ion-android-exit" fixed-width="true"></ons-icon>
-            <span class="menu-label">
-                {{ 'EXIT_APP' | translate }}
+            <span class="right" style="float:right"
+                  ng-class="{'target-completed': (ctl_target.status.test_select.done > ctl_target.status.test_select.target - 1)}"
+                  ng-show="ctl_target.status.test_select.target !== 0">
+                {{ ctl_target.status.test_select.done}} / {{ ctl_target.status.test_select.target}}
             </span>
         </ons-list-item>
     </ons-list>
+
+    <div class="bottom-bar" style="text-align: center">
+        <ons-row class="bottom-bar__line-height">
+            <ons-col ng-click="exit_app();">
+                <ons-icon icon="ion-android-exit" fixed-width="true"></ons-icon>
+                <!--
+                <span>
+                    {{ 'EXIT_APP' | translate }}
+                </span>
+                -->
+            </ons-col>
+            <ons-col style="text-align: right;"
+                     ng-click="app.navi.replacePage('setting.html', {animation: 'none'});
+                         menu_click($event);">
+                <ons-icon icon="ion-android-settings" fixed-width="true"></ons-icon>
+                <!--
+                <span>
+                    {{ 'SETTING' | translate }}
+                </span>
+                -->
+            </ons-col>
+        </ons-row>
+    </div>
+
 </ons-page>

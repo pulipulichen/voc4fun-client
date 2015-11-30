@@ -13,7 +13,10 @@
 
         <div class="center">{{ _learn_flashcard.q}} 筆記</div>
 
-        <div class="right" style="line-height: 44px;">
+        <div class="right"
+             ng-class="{'target-completed': (ctl_target.status.take_note.done > ctl_target.status.take_note.target-1)}"
+             ng-click="ctl_target.enter_for_view()"
+             ng-show="ctl_target.status.take_note.target !== 0">
             {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
         </div>
     </ons-toolbar>

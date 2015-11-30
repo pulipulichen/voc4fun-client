@@ -672,6 +672,14 @@ var controller_target = function ($scope) {
         var _complete_percent = _ctl._calc_complete_percent(_target_data);
         $scope.ctl_target_history.add(_date, _complete_percent, _target_data);
     };
+    
+    _ctl.is_target_setted = function () {
+        var _target = 0;
+        for (var _i in _status) {
+            _target = _target + _status[_i].target;
+        }
+        return (_target > 0);
+    };
 
     // ------------------------------------------
 
