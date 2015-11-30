@@ -152,7 +152,7 @@ var _app_factory_jquery_utils = function ($scope) {
         }
 
 
-        _ary.splice(_index, 1);
+        _ary = _ary.splice(_index, 1);
         return _item;
     };
 
@@ -190,6 +190,14 @@ var _app_factory_jquery_utils = function ($scope) {
     $.array_slice_element = function (_ele, _ary) {
         var _i = $.inArray(_ele, _ary);
         if (_i > -1) {
+            _ary.splice(_i, 1);
+        }
+        return _ary;
+    };
+    
+    $.array_slice_all_element = function (_ele, _ary) {
+        while ($.inArray(_ele, _ary) > -1) {
+            var _i = $.inArray(_ele, _ary);
             _ary.splice(_i, 1);
         }
         return _ary;

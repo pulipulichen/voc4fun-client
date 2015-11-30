@@ -189,6 +189,7 @@ var controller_learn_flashcard = function ($scope) {
             _qualifier = "history";
             _status.history_index++;
             _ctl.set_history_flashcard(function (_flashcard) {
+                
                 _trans_callback(_flashcard);
             });
         }
@@ -302,8 +303,16 @@ var controller_learn_flashcard = function ($scope) {
             _add_proportion = 0;
         }
 
-        var _review_proportion = _status.review_stack.length;
-
+        // 排除掉現在的卡片
+        var _review_stack = [];
+        var _current_flashcard_id = _ctl.get_current_flashcard_id();
+        for (var _i in _status.review_stack) {
+            if (_status.review_stack[_i] !== _current_flashcard_id) {
+                _review_stack.push(_status.review_stack[_i]);
+            }
+        }
+        var _review_proportion = _review_stack.length;
+        
         //$.console_trace([_target, _add_proportion, _review_proportion]);
 
         if ((_add_proportion + _review_proportion) === 0) {
@@ -347,6 +356,8 @@ var controller_learn_flashcard = function ($scope) {
         // 隨機從陣列中取出資料，並且移除該資料
         var _exclude_id = _ctl.get_current_flashcard_id();
         var _index = $.array_random_splice(_status.review_stack, _exclude_id);
+        //_status.review_stack = $.array_slice_element(_status.review_stack, _exclude_id);
+        _ctl.remove_from_review_stack(_exclude_id);
         $scope.ctl_flashcard.get_flashcard(_index, _callback);
     };
 
@@ -374,6 +385,7 @@ var controller_learn_flashcard = function ($scope) {
 //            }
 //            $.trigger_callback(_callback, _flashcard);
 //        });
+        _ctl.remove_from_review_stack(_id);
         return $scope.ctl_flashcard.get_flashcard(_id, _callback);
     };
 
@@ -434,6 +446,15 @@ var controller_learn_flashcard = function ($scope) {
     
     _ctl.add_incorrect_answer_to_review_stack = function(_flashcard_id) {
         _status.review_stack.push(_flashcard_id);
+        $scope.db_status.save_status(_status_key);
+    };
+    
+    _ctl.remove_from_review_stack = function(_flashcard_id) {
+        if ($.inArray(_flashcard_id, _status.review_stack)) {
+            // 如果是在複習名單裡面
+            _status.review_stack = $.array_slice_element(_flashcard_id, _status.review_stack);
+            $scope.ctl_test_select.add_test_stack(_flashcard_id);
+        }
         $scope.db_status.save_status(_status_key);
     };
 

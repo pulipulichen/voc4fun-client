@@ -178,7 +178,7 @@ var controller_test_select = function ($scope) {
         $scope.ctl_target.done_plus("test_select");
 
         // 把這個答案從stack中移除
-        $.array_slice_element(_test_select.flashcard_id, _status.stack);
+        _status.stack = $.array_slice_all_element(_test_select.flashcard_id, _status.stack);
 
         // 如果剩下的問題都相同，則合併
         _status.stack = $.array_merge_if_same(_status.stack);

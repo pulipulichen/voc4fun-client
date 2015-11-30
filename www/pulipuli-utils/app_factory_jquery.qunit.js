@@ -23,3 +23,9 @@ test("int_to_letters()", function (_assert) {
     equal(_str, "1U)_cq", _str);
     //_done();
 });
+
+//test("array_slice_element()", function (_assert) {
+//    var _done = _assert.async(1);
+//    
+//    var _ary 
+//});
