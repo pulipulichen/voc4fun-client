@@ -45,8 +45,9 @@ var _app_ready = function ($scope) {
         if ($scope.ctl_profile.is_exists() === false) {
             //$scope.profile = $scope.profile_mock;
 
-            $scope.ctl_profile.init();
-            app.navi.replacePage("profile.html", {animation: 'none'});
+            $scope.ctl_profile.enter();
+            
+            //app.navi.replacePage("profile.html", {animation: 'none'});
         }
         else {
             $scope.ctl_target.enter_from_profile(false);

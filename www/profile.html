@@ -19,11 +19,10 @@
                    class="text-input text-input--underbar"
                    placeholder="請輸入您的名字">
         </ons-row>
-
-        <div class="bottom-bar bottom-bar-button">
-            <div class="bottom-bar__line-height" onclick="$(this).parents('form').submit();">
-                {{ "ONS_OK" | translate }}
-            </div>
-        </div>
+        
+        <ons-tabbar>
+            <ons-tab label="{{ 'ONS_OK' | translate }}" 
+                     onclick="$(this).parents('form').submit();"></ons-tab>
+        </ons-tabbar>
     </form>
 </ons-page>

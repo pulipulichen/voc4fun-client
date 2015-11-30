@@ -115,12 +115,26 @@ var controller_profile = function ($scope) {
         $scope.ctl_target.enter_from_profile();
     };
     
-    _ctl.init = function () {
-        _status.name = $scope.cordova_utils.get_device_name();
+    _ctl.init = function (_callback) {
+        if (_status.name === undefined) {
+            _status.name = $scope.cordova_utils.get_device_name();
+        }
+        $.trigger_callback(_callback);
     };
     
     _ctl.get_uuid = function () {
         return _ctl.setup_uuid();
+    };
+    
+    _ctl.enter = function (_callback) {
+        _ctl.init(function () {
+            $scope.log(_log_file, "enter()", undefined, {name: _status.name});
+            app.navi.replacePage("profile.html", {
+                animation: 'none',
+                onTransitionEnd: _callback
+            });
+        });
+        
     };
     
     // -----------------------------------
