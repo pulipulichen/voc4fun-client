@@ -1,0 +1,85 @@
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #337ab7;
+    border-radius: 0;
+}
+
+/* --------------------------- */
+
+.bg-primary {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.bg-success {
+    background-color: #dff0d8;
+}
+
+.bg-info {
+    background-color: #d9edf7;
+}
+
+.bg-warning {
+    background-color: #fcf8e3;
+}
+
+.bg-danger {
+    background-color: #f2dede;
+}
+
+/* -------------------------- */
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+.bs-callout-danger {
+    border-left-color: #ce4844;
+}
+
+.bs-callout-warning {
+    border-left-color: #aa6708;
+}
+
+.bs-callout-info {
+    border-left-color: #1b809e;
+}

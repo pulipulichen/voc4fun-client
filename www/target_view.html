@@ -43,7 +43,7 @@
     <!-- ======================================= -->
 
     <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()" class="target-help-modal">
-        <img src="{{ ctl_target.var.target_help.help_img}}" />
+        <img ng-src="{{ ctl_target.var.target_help.help_img}}" />
         <div class="message">{{ ctl_target.var.target_help.help}}</div>
         <ons-button>{{ "ONS_OK" | translate }}</ons-button>
     </ons-modal>
