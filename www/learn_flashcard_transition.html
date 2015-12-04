@@ -13,15 +13,17 @@
             {{ 'LEARN_FLASHCARD_TITLE' | translate }}
         </div>
 
-        <div class="right" 
-             ng-init="_target_data = ctl_target.status.learn_flashcard" 
-             ng-class="{'target-incompleted': (_target_data.done < _target_data.target)}"
-             ng-show="_target_data.target !== 0">
-            {{ _target_data.done}} / {{ _target_data.target}}
-        </div>
-        
-        <ons-icon icon='ion-android-more-vertical' fixed-width="true" class="more-button" 
+        <div class="right" >
+            <span ng-init="_target_data = ctl_target.status.learn_flashcard" 
+                  ng-class="{'target-incompleted': (_target_data.done < _target_data.target)}"
+                  ng-click="ctl_target.enter_for_view()"
+                  ng-show="_target_data.target !== 0">
+                {{ _target_data.done}} / {{ _target_data.target}}
+            </span>
+
+            <ons-icon icon='ion-android-more-vertical' fixed-width="true" class="more-button" 
                       ng-click="ctl_learn_flashcard.open_more_menu($event)"></ons-icon>
+        </div>
     </ons-toolbar>
 
     <div class="flashcard">

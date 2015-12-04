@@ -338,7 +338,13 @@ var controller_learn_flashcard = function ($scope) {
     _ctl.add_new_flashcard = function (_callback) {
         // 更新status
         _status.flashcard_index++;
+        while (_status.flashcard_index === _ctl.get_current_flashcard_id()) {
+            _status.flashcard_index++;
+        }
         var _id = _status.flashcard_index;
+        
+        // 如果跟現在的id相同，則繼續下一個
+        
         $scope.ctl_flashcard.get_flashcard(_id, function (_flashcard) {
             if (_flashcard === undefined) {
                 // 表示已經到了最後一列
