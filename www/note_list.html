@@ -43,4 +43,13 @@
             </ons-row>
         </ons-list-item>
     </ons-list>
+    
+    <div ng-show="ctl_note_list.var.list.length === 0" style="margin:1rem;   
+    padding: 1rem;  
+    text-align: center;">
+        <div style="margin:1rem">您還沒有撰寫筆記</div>
+        <ons-button ng-click="ctl_learn_flashcard.enter();">
+            進入{{ 'LEARN_FLASHCARD_TITLE' | translate }}
+        </ons-button>
+    </div>
 </ons-page>

@@ -1,5 +1,5 @@
 <ons-page id="profile_html" ng-device-backbutton="exit_app()" ng-init="profile = ctl_profile.status">
-    <form ng-submit="ctl_profile.submit()">
+    <form ng-submit="ctl_profile.submit()" style="text-align: center;">
         <ons-toolbar>
 
             <div class="center">{{ 'TITLE' | translate }}</div>
@@ -7,19 +7,26 @@
         </ons-toolbar>
 
         <ons-row>
-            [Voc4Fun ICON]
+            <ons-col align="center">
+                <img src="img/Voc4Fun-icon256.png" /> 
+            </ons-col>
         </ons-row>
 
         <ons-row>
-            請輸入您的姓名 
+            <ons-col align="center">
+                請輸入您的姓名 
+            </ons-col>
         </ons-row>
 
         <ons-row>
+            <ons-col align="center">
             <input type="text" ng-model="profile.name"
                    class="text-input text-input--underbar"
+                   style="text-align:center;font-size: x-large;margin-top: 1rem;"
                    placeholder="請輸入您的名字">
+            </ons-col>
         </ons-row>
-        
+
         <ons-tabbar>
             <ons-tab label="{{ 'ONS_OK' | translate }}" ></ons-tab>
         </ons-tabbar>

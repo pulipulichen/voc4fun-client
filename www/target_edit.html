@@ -1,7 +1,7 @@
 <ons-page id="target_edit_html" class="target-page" 
-          ng-device-backbutton="$($event.target).find('.button-ok').click()">
+          ng-device-backbutton="$($event.target).find('form').submit()">
     <form ng-submit="ctl_target.set_target($event);
-            app.navi.popPage()">
+            app.navi.popPage();">
         <ons-toolbar>
             <div class="center">{{ ctl_target.get_set_title()}}</div>
         </ons-toolbar>
@@ -23,7 +23,8 @@
                                   ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
                         <input min="{{ setting.min}}" max="{{ ctl_target.get_max_target(setting.key)}}" type="number" 
                                value="{{ data.target}}"
-                               target_key="{{ setting.key }}"
+                               target_key="{{ setting.key}}"
+                               name="target_{{ setting.key}}"
                                class="target-input" />
                         <ons-icon icon="ion-ios-plus-outline" fixed-width="true" 
                                   ng-click="ctl_target.change_target_number($event, 1)"></ons-icon>
@@ -43,16 +44,17 @@
 
         <!-- ======================================= -->
 
-        <ons-tabbar>
-            <ons-tab label="{{ 'ONS_OK' | translate }}"></ons-tab>
-        </ons-tabbar>
-
         <!-- ======================================= -->
 
-        <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()" class="target-help-modal">
-            <img ng-src="{{ ctl_target.var.target_help.help_img }}" />
-            <div class="message">{{ ctl_target.var.target_help.help }}</div>
-            <ons-button>{{ "ONS_OK" | translate }}</ons-button>
-        </ons-modal>
     </form>
+
+    <ons-tabbar onclick="$(this).parents('ons-page').eq(0).find('form').submit();">
+        <ons-tab label="{{ 'ONS_OK' | translate }}"></ons-tab>
+    </ons-tabbar>
+
+    <ons-modal var="target_help_modal" ng-click="target_help_modal.hide()" class="target-help-modal">
+        <img ng-src="{{ ctl_target.var.target_help.help_img}}" />
+        <div class="message">{{ ctl_target.var.target_help.help}}</div>
+        <ons-button>{{ "ONS_OK" | translate }}</ons-button>
+    </ons-modal>
 </ons-page>
