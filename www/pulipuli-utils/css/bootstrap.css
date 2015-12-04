@@ -1,3 +1,6 @@
+/**
+ * http://getbootstrap.com/css/#buttons-options
+ */
 .btn-default {
     color: #333;
     background-color: #fff;
@@ -40,6 +43,9 @@
 }
 
 /* --------------------------- */
+/**
+ * http://getbootstrap.com/css/#helper-classes-backgrounds
+ */
 
 .bg-primary {
     color: #fff;
