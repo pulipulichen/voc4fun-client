@@ -26,7 +26,7 @@
         </div>
     </ons-toolbar>
 
-    <div class="question"
+    <div class="question bg-info"
          ng-click="ctl_activity.speak(_test_select.question, 'zh')">
         
         <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak hide"></ons-icon>
@@ -45,8 +45,8 @@
                        ng-click="ctl_test_select.set_answer($index);"
                        ng-class="
                            {
-                               'correct': ctl_test_select.is_correct_answer($index), 
-                               'incorrect': ctl_test_select.is_incorrect_answer($index), 
+                               'bg-success': ctl_test_select.is_correct_answer($index), 
+                               'bg-danger': ctl_test_select.is_incorrect_answer($index), 
                            }">
                 <ons-icon icon="ion-ios-circle-outline" fixed-width="true"
                           ng-show="ctl_test_select.is_answered() === false || _test_select.answer !== $index"></ons-icon>
@@ -64,12 +64,12 @@
     
     <!-- ===================================== -->
         
-    <div class="hint">
+    <div class="hint" ng-class="{'opened': ctl_test_select.var.show_note !== false}">
         <ons-button  ng-show="ctl_test_select.var.show_note === false"
                      ng-click="ctl_test_select.var.show_note = true">
             {{ "TEST_SELECT_HINT_BUTTON" | translate }}
         </ons-button>
-        <div ng-show="ctl_test_select.var.show_note === true" class="pre">{{ _test_select.note }}</div>
+        <div ng-show="ctl_test_select.var.show_note === true" class="pre bg-info">{{ _test_select.note }}</div>
     </div>
         
     <!-- ===================================== -->

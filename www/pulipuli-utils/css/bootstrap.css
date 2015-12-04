@@ -48,23 +48,28 @@
  */
 
 .bg-primary {
+    /* 藍 */
     color: #fff;
     background-color: #337ab7;
 }
 
 .bg-success {
+    /* 綠 */
     background-color: #dff0d8;
 }
 
 .bg-info {
+    /* 淡藍 */
     background-color: #d9edf7;
 }
 
 .bg-warning {
+    /* 黃 */
     background-color: #fcf8e3;
 }
 
 .bg-danger {
+    /* 紅 */
     background-color: #f2dede;
 }
 

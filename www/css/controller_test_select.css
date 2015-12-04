@@ -12,7 +12,7 @@
     border-radius: 4px;
     border: 1px solid #ddd; 
     cursor: pointer;
-    background-color: #f9f9f9;
+    /*background-color: #f9f9f9;*/
     max-height: 10rem;
     overflow-y: auto;
     text-align: center;
@@ -29,8 +29,10 @@
 
 .test-select-page .hint {
     text-align: center;
-    margin-top: 1rem;
+    margin: 1rem;
     display: none;
+    max-height: 7rem;
+    overflow-y: auto;
 }
 /*.test-select-page .hint.show {
     display: block
@@ -38,6 +40,11 @@
 
 .test-select-page .hint .pre {
     white-space: pre;
+    /*border: 1px solid #DDD;
+    border-radius: 4px;*/
+}
+
+.test-select-page .hint.opened {
     border: 1px solid #DDD;
     border-radius: 4px;
 }

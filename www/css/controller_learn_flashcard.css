@@ -6,14 +6,17 @@
     padding:1rem; 
     text-align: center;
     display: block;
-    background-color: white; 
     cursor: pointer
 
 }
 
+.learn-flashcard-page .flashcard .q {
+    background-color: white; 
+}
+
 .learn-flashcard-page .flashcard .a {
     border-top: 1px solid #DDD; 
-    background-color: #EEE;
+    /*background-color: #EEE;*/
 }
 
 ons-page .speak {
