@@ -10,6 +10,7 @@ ons-page ons-toolbar ons-toolbar-button .ion-navicon {
 
 ons-page ons-toolbar .right {
     line-height: 44px;
+    padding-right: 10px; 
 }
 
 #menu_html ons-list-item {
