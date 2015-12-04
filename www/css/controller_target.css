@@ -5,9 +5,17 @@
 .target-completed {
     color: #f0ad4e;
 }
+
+.target-incompleted {
+    color: #d9534f;
+}
+
 @media screen and (max-width: 550px) {
     #menu_html .target-completed {
         color: #F4FF77;
+    }
+    #menu_html .target-incompleted {
+        color: #d9534f;
     }
 }
 

@@ -7,7 +7,7 @@
              ng-show"ctl_target.get_complete_percent() !== undefined" >
              {{ ctl_profile.status.name}} 
             <div ng-show="ctl_target.is_target_setted()"
-                 ng-class="{'target-completed': (ctl_target.get_complete_percent() > 99)}">
+                 ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100)}">
                 {{ 'TARGET_MENU_STATUS' | translate }}
                 <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 
             </div>
@@ -31,7 +31,7 @@
                 {{ 'TARGET_MENU_TITLE' | translate }}
             </span>
             <span  class="right" style="float:right" 
-                   ng-class="{'target-completed': (ctl_target.get_complete_percent() > 99)}"
+                   ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100)}"
                    ng-show="ctl_target.is_target_setted()">
                 {{ ctl_target.get_complete_percent()}}%
             </span>
@@ -45,7 +45,7 @@
             </span>
 
             <span  class="right" style="float:right"
-                   ng-class="{'target-completed': (ctl_target.status.learn_flashcard.done > ctl_target.status.learn_flashcard.target - 1)}"
+                   ng-class="{'target-incompleted': (ctl_target.status.learn_flashcard.done < ctl_target.status.learn_flashcard.target)}"
                    ng-show="ctl_target.status.learn_flashcard.target !== 0">
                 {{ ctl_target.status.learn_flashcard.done}} / {{ ctl_target.status.learn_flashcard.target}}
             </span>
@@ -59,7 +59,7 @@
             </span>
 
             <span  class="right" style="float:right"
-                   ng-class="{'target-completed': (ctl_target.status.take_note.done > ctl_target.status.take_note.target - 1)}"
+                   ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target)}"
                    ng-show="ctl_target.status.take_note.target !== 0">
                 {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
             </span>
@@ -72,7 +72,7 @@
                 {{ 'TEST_SELECT_TITLE' | translate }}
             </span>
             <span class="right" style="float:right"
-                  ng-class="{'target-completed': (ctl_target.status.test_select.done > ctl_target.status.test_select.target - 1)}"
+                  ng-class="{'target-incompleted': (ctl_target.status.test_select.done < ctl_target.status.test_select.target)}"
                   ng-show="ctl_target.status.test_select.target !== 0">
                 {{ ctl_target.status.test_select.done}} / {{ ctl_target.status.test_select.target}}
             </span>

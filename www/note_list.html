@@ -16,7 +16,7 @@
         </div>
 
         <div class="right"
-             ng-class="{'target-completed': (ctl_target.status.take_note.done > ctl_target.status.take_note.target-1)}"
+             ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target)}"
              ng-click="ctl_target.enter_for_view()"
              ng-show="ctl_target.status.take_note.target !== 0">
             {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
