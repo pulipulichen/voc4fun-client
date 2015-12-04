@@ -9,3 +9,7 @@ label.checkbox input[type="checkbox"] {
 one-page .pre {
     white-space: pre;
 }
+
+.alert-dialog {
+    background-color: white;
+}

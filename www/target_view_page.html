@@ -22,7 +22,7 @@
 
     <ons-list modifier="inset">
         <ons-list-item ng-repeat="data in ctl_target.status" 
-                       ng-class="{completed: (data.done > data.target - 1)}"
+                       ng-class="{bg-danger: (data.done < data.target)}"
                        ng-show="data.target > 0">
             <ons-row ng-init="setting = ctl_target.var.target_setting[$index]">
                 <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">

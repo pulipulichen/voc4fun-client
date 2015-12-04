@@ -30,7 +30,7 @@ var app_config = function ($scope) {
         /**
          * 清空資料庫的模式
          */
-        //"empty_dabase": true,
+        "empty_dabase": true,
         //"empty_dabase": true
 
         /**
