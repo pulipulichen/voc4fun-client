@@ -123,7 +123,7 @@ var controller_learn_flashcard = function ($scope) {
             _qualifier = "next";
             _ctl.next(_callback, false);
         }
-        
+
         $scope.log(_log_file, "init()", _qualifier, _status);
     };
 
@@ -159,19 +159,19 @@ var controller_learn_flashcard = function ($scope) {
                 _status.history_stack.push(_flashcard.id);
                 _status.history_index++;
                 //$.trigger_callback(_callback);
-                
+
                 $scope.ctl_test_select.add_test_stack(_flashcard.id);
 
                 // 如果是新單字，則加入learned_stack中
                 if ($.inArray(_flashcard.id, _status.learned_stack) === -1) {
                     _status.learned_stack.push(_flashcard.id);
-                    
+
                     // 完成新增
                     $scope.ctl_target.done_plus("learn_flashcard");
                 }
-                
+
                 $scope.$digest();
-                
+
                 _trans_callback(_flashcard);
             };
 
@@ -189,7 +189,7 @@ var controller_learn_flashcard = function ($scope) {
             _qualifier = "history";
             _status.history_index++;
             _ctl.set_history_flashcard(function (_flashcard) {
-                
+
                 _trans_callback(_flashcard);
             });
         }
@@ -312,7 +312,7 @@ var controller_learn_flashcard = function ($scope) {
             }
         }
         var _review_proportion = _review_stack.length;
-        
+
         //$.console_trace([_target, _add_proportion, _review_proportion]);
 
         if ((_add_proportion + _review_proportion) === 0) {
@@ -342,9 +342,9 @@ var controller_learn_flashcard = function ($scope) {
             _status.flashcard_index++;
         }
         var _id = _status.flashcard_index;
-        
+
         // 如果跟現在的id相同，則繼續下一個
-        
+
         $scope.ctl_flashcard.get_flashcard(_id, function (_flashcard) {
             if (_flashcard === undefined) {
                 // 表示已經到了最後一列
@@ -403,17 +403,33 @@ var controller_learn_flashcard = function ($scope) {
 
     _ctl.other_note_ajax = function (_callback) {
         var _id = _ctl.get_current_flashcard_id();
-        
+
         var _data = {
             q: _var.learn_flashcard.q,
             uuid: $scope.db_log.get_uuid()
-        }
-        
+        };
+
         var _url = $scope.CONFIG.server_url + "model/note.php";
-//        $.getJSON(_url, _data, function (_other_note) {
-//            $.console_trace(_other_note);
-//            _var.learn_flashcard.other_note = _other_note;
-//            
+        setTimeout(function () {
+            $.getJSON(_url, _data, function (_other_note) {
+                //$.console_trace(_other_note);
+                _var.learn_flashcard.other_note = _other_note;
+
+                var _notification = $(".learn-flashcard-page .notification")
+                _notification.find(".load-icon").hide();
+                _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
+                _notification.find(".notification-text").show();
+                //_var.learn_flashcard.other_note_loaded = true;
+                //$scope.$digest();
+                $scope.$digest();
+                //$.console_trace("other_note_ajax 尚未完成");
+                $.trigger_callback(_callback);
+            });
+        }, 1000);
+
+//        setTimeout(function () {
+//            _var.learn_flashcard.other_note = _var._other_note_mock;
+//
 //            var _notification = $(".learn-flashcard-page .notification")
 //            _notification.find(".load-icon").hide();
 //            _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
@@ -423,20 +439,7 @@ var controller_learn_flashcard = function ($scope) {
 //            $scope.$digest();
 //            $.console_trace("other_note_ajax 尚未完成");
 //            $.trigger_callback(_callback);
-//        });
-        setTimeout(function () {
-            _var.learn_flashcard.other_note = _var._other_note_mock;
-
-            var _notification = $(".learn-flashcard-page .notification")
-            _notification.find(".load-icon").hide();
-            _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
-            _notification.find(".notification-text").show();
-            //_var.learn_flashcard.other_note_loaded = true;
-            //$scope.$digest();
-            $scope.$digest();
-            $.console_trace("other_note_ajax 尚未完成");
-            $.trigger_callback(_callback);
-        }, 1000);
+//        }, 1000);
     };
 
     _ctl.other_note_reset = function () {
@@ -465,18 +468,18 @@ var controller_learn_flashcard = function ($scope) {
     // ---------------------------------
 
     _ctl.get_learned_count = function () {
-        if (typeof(_status.learned_stack) === "undefined") {
+        if (typeof (_status.learned_stack) === "undefined") {
             return 0;
         }
         return _status.learned_stack.length;
     };
-    
-    _ctl.add_incorrect_answer_to_review_stack = function(_flashcard_id) {
+
+    _ctl.add_incorrect_answer_to_review_stack = function (_flashcard_id) {
         _status.review_stack.push(_flashcard_id);
         $scope.db_status.save_status(_status_key);
     };
-    
-    _ctl.remove_from_review_stack = function(_flashcard_id) {
+
+    _ctl.remove_from_review_stack = function (_flashcard_id) {
         if ($.inArray(_flashcard_id, _status.review_stack)) {
             // 如果是在複習名單裡面
             _status.review_stack = $.array_slice_element(_flashcard_id, _status.review_stack);
