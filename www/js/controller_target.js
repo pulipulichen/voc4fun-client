@@ -335,12 +335,12 @@ var controller_target = function ($scope) {
 
             $scope.db_status.save_status(_status_key);
 
-            _ctl.complate_target(_key);
+            _ctl.complete_target(_key);
         }
         return this;
     };
 
-    _ctl.complate_target = function (_key) {
+    _ctl.complete_target = function (_key) {
         if (_status[_key].done === _status[_key].target) {
             var _setting = _ctl._get_setting(_key);
             var _title = _setting.title + "已經完成";
@@ -350,16 +350,16 @@ var controller_target = function ($scope) {
                     message: _setting.complete_message,
                     callback: function () {
                         if (_ctl.get_complete_percent() === 100) {
-                            _ctl.complate_all_target();
+                            _ctl.complete_all_target();
                         }
                     }
                 });
             }, 500);
-            $scope.log(_log_file, "complate_target()", _key, _status[_key]);
+            $scope.log(_log_file, "complete_target()", _key, _status[_key]);
         }
     };
 
-    _ctl.complate_all_target = function () {
+    _ctl.complete_all_target = function () {
         setTimeout(function () {
             ons.notification.alert({
                 title: "太厲害了！",
