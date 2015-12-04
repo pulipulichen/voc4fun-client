@@ -112,7 +112,16 @@ var controller_profile = function ($scope) {
         // 設定log
         $scope.log(_log_file, "submit()", _status);
         
+        _ctl.change_user_name(_status.name);
+        
         $scope.ctl_target.enter_from_profile();
+    };
+    
+    _ctl.change_user_name = function (_name) {
+        if (_name === undefined) {
+            _name = _status.name;
+        }
+        $scope.log(_log_file, "change_user_name()", undefined, _name);
     };
     
     _ctl.init = function (_callback) {

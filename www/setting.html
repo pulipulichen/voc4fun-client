@@ -28,7 +28,7 @@
                 </ons-col>
                 <ons-col style="text-align: right;">
                     <input type="text" ng-model="profile.name"
-                           ng-change="db_status.save_status('profile')"
+                           ng-change="ctl_profile.change_user_name();db_status.save_status('profile')"
                            class="text-input text-input--transparent"
                            placeholder="請輸入您的名字"
                            name="name"
