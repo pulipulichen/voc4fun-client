@@ -17,6 +17,7 @@ var controller_target = function ($scope) {
     var _var = {};
 
     // 目標的類型，可以修改
+    //$.console_trace("controller_target", $scope.CONFIG.target_setting);
     _var.target_setting = $scope.CONFIG.target_setting;
 
     _var.target_help = {
@@ -82,7 +83,10 @@ var controller_target = function ($scope) {
                 "done": 0,
                 "target": _target
             };
+            $scope.$digest();
+            //$.console_trace(_i);
         }
+        //$scope.$digest();
     };
 
     /**
@@ -105,9 +109,9 @@ var controller_target = function ($scope) {
 
         _ctl.period_target_exists(function (_today_exists) {
             _ctl.period_target_exists(-1, function (_yesterday_exists) {
-                // 有今天資料的情況
                 var _page = "target_view.html";
                 if (_today_exists === false) {
+                    $.console_trace("今天沒有資料的情況", _yesterday_exists);
                     _ctl._init_target_data();
                     if (_yesterday_exists === false) {
                         // 沒有今天，也沒有昨天資料的情況

@@ -54,7 +54,7 @@ var controller_flashcard = function ($scope) {
             //});
         };
             
-        $scope.DB.table_exists(_db_name, function (_result) {
+        $scope.DB.row_exists(_db_name, function (_result) {
             if (_result === true) {
                 //$.console_trace("已經建立了");
                 $.trigger_callback(_callback);
