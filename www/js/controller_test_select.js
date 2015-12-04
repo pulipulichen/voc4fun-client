@@ -104,7 +104,7 @@ var controller_test_select = function ($scope) {
     _ctl.setup_hint = function () {
         var _note = _var.test_select.note;
         var _hint = $(".test-select-page .hint");
-        $.console_trace("setup_hint() " + _hint.length, _var.test_select.note);
+        //$.console_trace("setup_hint() " + _hint.length, _var.test_select.note);
         if (_note === null || _note === undefined || $.trim(_note) === "") {
             $.console_trace("關閉");
             _hint.hide();
@@ -274,7 +274,7 @@ var controller_test_select = function ($scope) {
                     _flashcard_id,
                     (_option_length - 1),
                     function (_other_cards) {
-                        $.console_trace("get_other_flash_card " + (_option_length - 1), _other_cards);
+                        //$.console_trace("get_other_flash_card " + (_option_length - 1), _other_cards);
                         for (var _o = 0; _o < _other_cards.length; _o++) {
                             _options.push(_other_cards[_o]);
                         }

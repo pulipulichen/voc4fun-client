@@ -3,6 +3,8 @@
     
     "TARGET_MENU_TITLE": "目標檢視",
     "TARGET_MENU_STATUS": "進度完成",
+    "TARGET_MENU_IMCOMPLETE": "進度完成",
+    "TARGET_MENU_YESTERDAY_TARGET_STATUS": "昨天進度",
     
     "LEARN_FLASHCARD_TITLE": "單字學習",
     "LEARN_FLASHCARD_NOTE_EMPTY": "您還沒有撰寫筆記",

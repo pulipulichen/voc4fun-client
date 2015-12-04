@@ -18,9 +18,10 @@
 }
 
 .target-page .recommend {
-    border-top: 1px dashed #ddd;
+    font-size: small;
+    /*border-bottom: 1px dashed #ddd;*/
 }
 
-.target-page .recommend ons-row {
+.target-page ons-row.recommend {
     text-align: center;
 }

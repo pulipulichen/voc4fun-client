@@ -29,6 +29,12 @@
                                   ng-click="ctl_target.change_target_number($event, 1)"></ons-icon>
                     </ons-col>
                 </ons-row>
+                <ons-row class="recommend">
+                    <ons-col align="right">
+                        {{ ctl_target.get_remained_target(setting.key)}}
+                        {{ 'TARGET_MENU_IMCOMPLETE' | translate }}
+                    </ons-col>
+                </ons-row>
             </ons-list-item>
         </ons-list>
 

@@ -31,19 +31,15 @@
                     </ons-col>
                 </ons-row>
                 <ons-row class="recommend">
-                    <ons-col class="yesterday-target-status">
-                        昨天的進度: 
+                    <ons-col class="yesterday-target-status" align="left">
+                        {{ 'TARGET_MENU_YESTERDAY_TARGET_STATUS' | translate }}
                         {{ recommend.last_done}}
                         /
                         {{ recommend.last_target}}
                     </ons-col>
-                    <ons-col class="yesterday-target-status">
-                        未完成的數量: 
+                    <ons-col class="recommend-target" align="right">
                         {{ ctl_target.get_remained_target(setting.key)}}
-                    </ons-col>
-                    <ons-col class="recommend-target">
-                        推薦的目標: 
-                        {{ recommend.recommend_target}}
+                        {{ 'TARGET_MENU_IMCOMPLETE' | translate }}
                     </ons-col>
                 </ons-row>
             </ons-list-item>

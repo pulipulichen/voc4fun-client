@@ -111,7 +111,7 @@ var controller_target = function ($scope) {
             _ctl.period_target_exists(-1, function (_yesterday_exists) {
                 var _page = "target_view.html";
                 if (_today_exists === false) {
-                    $.console_trace("今天沒有資料的情況", _yesterday_exists);
+                    //$.console_trace("今天沒有資料的情況", _yesterday_exists);
                     _ctl._init_target_data();
                     if (_yesterday_exists === false) {
                         // 沒有今天，也沒有昨天資料的情況
