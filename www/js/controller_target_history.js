@@ -10,7 +10,7 @@ var controller_target_history = function ($scope) {
     // -------------------------------------------------
 
     _ctl.add = function (_date, _complete_percent, _target_data, _callback) {
-        _ctl._init_db();
+//        _ctl._init_db();
         
         var _add_process = function () {
             var _data = {
@@ -41,18 +41,21 @@ var controller_target_history = function ($scope) {
     };
 
 
-    var _table_inited = false;
-    _ctl._init_db = function (_callback) {
-        if (_table_inited === false) {
-            _table_inited = true;
-
-            $scope.DB.create_table(_table_name, _field_list, _callback);
-        }
-        else {
-            $.trigger_callback(_callback);
-        }
-        return this;
-    };
+//    var _table_inited = false;
+////    _ctl._init_db = function (_callback) {
+//        if (_table_inited === false) {
+//            _table_inited = true;
+//
+//            //$scope.DB.create_table(_table_name, _field_list, _callback);
+//            //$scope.DB.register_table(_table_name, _field_list, _callback);
+//        }
+//        else {
+//            $.trigger_callback(_callback);
+//        }
+//        return this;
+//    };
+//    //_ctl._init_db();
+    $scope.DB.register_table(_table_name, _field_list);
 
     // -------------------------------------------------
 

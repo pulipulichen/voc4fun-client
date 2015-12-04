@@ -10,6 +10,88 @@ var _app_factory_db_utils = function ($scope) {
         return _db;
     };
 
+    var _register_data = {};
+
+    /**
+     * 註冊
+     * @param {String} _table 表格名稱
+     * @param {String[]} _fields 欄位名稱
+     */
+    $scope.DB.register_table = function (_table, _fields, _callback) {
+        _register_data[_table] = _fields;
+        $.trigger_callback(_callback);
+        return this;
+    };
+
+    // ----------------------------------
+
+    $scope.DB.exec = function (_sql, _success_callback) {
+
+        //$.console_trace("exec", _sql);
+        if (typeof (_sql) !== "string") {
+            $.console_trace("$scope.DB.exec error: _sql is not string");
+            return;
+        }
+
+        _init_tables(function () {
+            _db.transaction(function (_tx) {
+                _tx.executeSql(_sql, [], function (_tx, _results) {
+                    if (typeof (_success_callback) === "function") {
+                        var _data = [];
+                        for (var _r = 0; _r < _results.rows.length; _r++) {
+                            var _row = _results.rows[_r];
+                            var _d = {};
+                            for (var _c in _row) {
+                                var _value = _row[_c];
+                                _value = $.unescape_quotation(_value);
+                                _d[_c] = _value;
+                            }
+                            _data.push(_d);
+                        }
+                        ;
+                        _success_callback(_data);
+                    }
+                }, function (_tx, _error) {
+                    $scope.DB.error_handler(_tx, _error, _sql);
+                });
+            });
+        });
+        return this;
+    };
+
+    // ----------------------------------
+
+    var _tables_inited = false;
+
+    var _init_tables = function (_callback) {
+        if (_tables_inited === false) {
+            _init_db();
+            var _keys = $.array_keys(_register_data);
+            
+            //$.console_trace("_init_tables", _keys);
+            var _loop = function (_i) {
+                if (_i < _keys.length) {
+                    var _table_name = _keys[_i];
+                    var _fields = _register_data[_table_name];
+                    $scope.DB.create_table(_table_name, _fields, function () {
+                        _i++;
+                        _loop(_i);
+                    });
+                }
+                else {
+                    _tables_inited = true;
+                    $.trigger_callback(_callback);
+                }
+            };
+            _loop(0);
+        }
+        else {
+            $.trigger_callback(_callback);
+        }
+    };
+
+    // ----------------------------------
+
     $scope.DB.create_table = function (_table_name, _field_name_list, _success_callback) {
         var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + " (";
 
@@ -23,11 +105,17 @@ var _app_factory_db_utils = function ($scope) {
             }
         }
         _sql = _sql + ")";
-        $scope.DB.exec(_sql, _success_callback);
+        //$scope.DB.exec(_sql, _success_callback);
+        //$.console_trace("create table_name", _table_name);
+        _init_db();
+        _db.transaction(function (_tx) {
+            _tx.executeSql(_sql, [], _success_callback);
+        });
         return this;
     };
 
     $scope.DB.drop_table = function (_table_name, _success_callback) {
+        _tables_inited = false;
         if ($.is_array(_table_name)) {
             var _loop = function (_i) {
                 if (_i < _table_name.length) {
@@ -44,10 +132,15 @@ var _app_factory_db_utils = function ($scope) {
             return this;
         }
         else {
+            //$.console_trace("drop_table", _table_name);
+            _init_db();
             return $scope.DB.table_exists(_table_name, function (_exists) {
                 if (_exists === true) {
                     var _sql = 'DROP TABLE ' + _table_name;
-                    $scope.DB.exec(_sql, _success_callback);
+                    //$scope.DB.exec(_sql, _success_callback);
+                    _db.transaction(function (_tx) {
+                        _tx.executeSql(_sql, [], _success_callback);
+                    });
                 }
                 else {
                     $.trigger_callback(_success_callback);
@@ -100,38 +193,6 @@ var _app_factory_db_utils = function ($scope) {
         });
     };
 
-    $scope.DB.exec = function (_sql, _success_callback) {
-        var _ = this;
-        //$.console_trace("exec", _sql);
-        if (typeof(_sql) !== "string") {
-            $.console_trace("$scope.DB.exec error: _sql is not string");
-            return;
-        }
-        
-        _init_db();
-        _db.transaction(function (_tx) {
-            _tx.executeSql(_sql, [], function (_tx, _results) {
-                if (typeof (_success_callback) === "function") {
-                    var _data = [];
-                    for (var _r = 0; _r < _results.rows.length; _r++) {
-                        var _row = _results.rows[_r];
-                        var _d = {};
-                        for (var _c in _row) {
-                            var _value = _row[_c];
-                            _value = $.unescape_quotation(_value);
-                            _d[_c] = _value;
-                        }
-                        _data.push(_d);
-                    }
-                    ;
-                    _success_callback(_data);
-                }
-            }, function (_tx, _error) {
-                _.error_handler(_tx, _error, _sql);
-            });
-        });
-        return this;
-    };
     $scope.DB.insert = function (_table, _data, _success_callback) {
         if ($.is_array(_data)) {
             var _loop = function (_i) {

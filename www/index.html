@@ -135,8 +135,8 @@
                     _app_factory_ons_view($scope);
                     _app_factory_ons_utils($scope, $filter);
 
-                    db_log($scope);
                     db_status($scope);
+                    db_log($scope);
 
                     controller_profile($scope);
                     controller_flashcard($scope);
@@ -152,24 +152,31 @@
                     // -----------------------------------
 
                     var _ready = function () {
-                        if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
-                            ons.ready(function () {
-                                _app_ready($scope);
-                            });
-                        }
-                        else {
-                            if (typeof (QUNIT_INITED) === "undefined") {
-                                $.getScript("pulipuli-utils/qunit.js");
+                        $scope.db_status.ready(function () {
+                            if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
+                                ons.ready(function () {
+                                    _app_ready($scope);
+                                });
                             }
-                        }
+                            else {
+                                if (typeof (QUNIT_INITED) === "undefined") {
+                                    $.getScript("pulipuli-utils/qunit.js");
+                                }
+                            }
+                        });
+
                     };
 
                     if ($scope.CONFIG.empty_dabase === true) {
                         $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
                             if (_is_exists === true) {
                                 // 偵測是否有Table
-                                $scope.DB.drop_table($scope.CONFIG.tables);
-                                $.getJSON($scope.CONFIG.server_url + "reset.php", _ready);
+                                $scope.DB.drop_table($scope.CONFIG.tables, function () {
+                                    $.getJSON($scope.CONFIG.server_url + "reset.php", function () {
+                                        // 網頁重新整理
+                                        location.reload();
+                                    });
+                                });
                             }
                             else {
                                 _ready();
@@ -177,7 +184,7 @@
                         });
                     }
                     else {
-                        $scope.db_status.ready(_ready);
+                        _ready();
                     }
                 };
 

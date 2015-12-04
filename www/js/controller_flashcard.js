@@ -35,13 +35,14 @@ var controller_flashcard = function ($scope) {
     
     // -----------------------
     
-
+    $scope.DB.register_table(_db_name, _db_fields);
     _ctl.setup = function (_callback) {
         // 從xlsx讀取資料
 
         //$.console_log(typeof(XLSXReader));
         var _create_table = function () {
-            $scope.DB.create_table(_db_name, _db_fields, function () {
+            //$scope.DB.create_table(_db_name, _db_fields, function () {
+            //$scope.DB.register_table(_db_name, _db_fields, function () {
                 XLSX.ajax_loader(_source_file_name, function (_data) {
                     //$.console_log(_data);
                     _status.flashcard_count = _data.length;
@@ -50,7 +51,7 @@ var controller_flashcard = function ($scope) {
                     //$.console_log(_data);
                     $scope.DB.insert(_db_name, _data, _callback);
                 });
-            });
+            //});
         };
             
         $scope.DB.table_exists(_db_name, function (_result) {

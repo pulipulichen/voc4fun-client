@@ -29,6 +29,7 @@ var _app_factory_jquery_utils = function ($scope) {
         for (var _field in _json) {
             _keys.push(_field);
         }
+        //$.console_trace("$.array_keys", _json);
         return _keys;
     };
 

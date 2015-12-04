@@ -24,10 +24,11 @@ var db_status = function ($scope) {
         return this;
     };
 
-    _ctl._init = function () {
-        $scope.DB.create_table(_table_name, _field_list);
-    };
-    _ctl._init();
+    //_ctl._init = function () {
+        //$scope.DB.create_table(_table_name, _field_list);
+        $scope.DB.register_table(_table_name, _field_list);
+    //};
+    //_ctl._init();
 
     _ctl.save_to_db = function (_callback) {
         var _data = [];
@@ -119,7 +120,7 @@ var db_status = function ($scope) {
     
     _ctl._trigger_ready = function () {
         //$.console_trace("_trgger_ready", _ready_listener.length);
-        _is_ready = true;
+        //_is_ready = true;
         for (var _r = 0; _r < _ready_listener.length; _r++) {
             $.trigger_callback(_ready_listener[_r]);
         }
