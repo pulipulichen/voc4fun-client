@@ -106,11 +106,11 @@ var controller_test_select = function ($scope) {
         var _hint = $(".test-select-page .hint");
         //$.console_trace("setup_hint() " + _hint.length, _var.test_select.note);
         if (_note === null || _note === undefined || $.trim(_note) === "") {
-            $.console_trace("關閉");
+            //$.console_trace("關閉");
             _hint.hide();
         }
         else {
-            $.console_trace("開啟");
+            //$.console_trace("開啟");
             _hint.show();
         }
     };
