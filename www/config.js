@@ -37,5 +37,7 @@ var app_config = function ($scope) {
          */
         //"empty_dabase": true
         //"empty_dabase": true
+        
+        "tables": ["log", "flashcard", "status", "target_history"]
     };
 };

@@ -69,7 +69,7 @@
     <script src="pulipuli-utils/app_factory_ons_view.js"></script>
     <script src="pulipuli-utils/app_factory_ons_utils.js"></script>
     <script src="pulipuli-utils/app_factory_jquery.js"></script>
-    
+
     <script src="pulipuli-utils/db_log.js"></script>
     <script src="pulipuli-utils/db_status.js"></script>
 
@@ -137,7 +137,7 @@
 
                     db_log($scope);
                     db_status($scope);
-                    
+
                     controller_profile($scope);
                     controller_flashcard($scope);
                     controller_target($scope);
@@ -150,26 +150,35 @@
                     controller_target_history($scope);
 
                     // -----------------------------------
-                    
-                    if ($scope.CONFIG.empty_dabase === true) {
-                        $scope.DB.drop_table(["profile", "log", "flashcard", "status", "list", "target_history"]); 
-                        $.getJSON($scope.CONFIG.server_url + "reset.php");
-                        alert("資料庫已經清空");
-                        return this;
-                    }
 
-                    $scope.db_status.ready(function () {
+                    var _ready = function () {
                         if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
                             ons.ready(function () {
                                 _app_ready($scope);
                             });
                         }
                         else {
-                            if (typeof(QUNIT_INITED) === "undefined") {
+                            if (typeof (QUNIT_INITED) === "undefined") {
                                 $.getScript("pulipuli-utils/qunit.js");
                             }
                         }
-                    });
+                    };
+
+                    if ($scope.CONFIG.empty_dabase === true) {
+                        $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
+                            if (_is_exists === true) {
+                                // 偵測是否有Table
+                                $scope.DB.drop_table($scope.CONFIG.tables);
+                                $.getJSON($scope.CONFIG.server_url + "reset.php", _ready);
+                            }
+                            else {
+                                _ready();
+                            }
+                        });
+                    }
+                    else {
+                        $scope.db_status.ready(_ready);
+                    }
                 };
 
                 app.controller('app_controller',
