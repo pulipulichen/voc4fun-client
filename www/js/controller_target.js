@@ -17,42 +17,7 @@ var controller_target = function ($scope) {
     var _var = {};
 
     // 目標的類型，可以修改
-    _var.target_setting = [
-        {
-            "key": "learn_flashcard",
-            //"default_target": 30,
-            "default_target": 3,
-            "min": 0,
-            "default_max": 100,
-            "title": "學習單字",
-            "help_img": "img/loading.svg",
-            "help": "設定每天目標學習的單字數量。",
-            "complete_message": "恭喜您完成了今日目標！"
-        },
-        {
-            "key": "take_note",
-            //"default_target": 20,
-            "default_target": 2,
-            "min": 0,
-            "default_max": 100,
-            "title": "撰寫筆記",
-            "help_img": "img/loading.svg",
-            "help": "設定每天要撰寫的筆記數量。\n針對不同單字，寫下你對不同單字的筆記與想法。\n字數及內容不拘，可隨意發揮。",
-            "complete_message": "恭喜您完成了今日目標！"
-        },
-        {
-            "key": "test_select",
-            //"default_target": 30,
-            "default_target": 3,
-            "min": 0,
-            "default_max": 100,
-            "title": "答對測驗",
-            "help_img": "img/loading.svg",
-            "help": "設定每天目標答對的題目數量。\n題目都是三選一的選擇題。",
-            "complete_message": "恭喜您完成了今日目標！"
-        }
-    ];
-
+    _var.target_setting = $scope.CONFIG.target_setting;
 
     _var.target_help = {
         help_img: "img/loading.svg",
