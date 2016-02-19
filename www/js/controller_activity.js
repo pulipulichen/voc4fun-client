@@ -52,7 +52,21 @@ var controller_activity = function ($scope) {
         
         $scope.cordova_text_to_speech.speak(_text, _lang);
     };
-    
+	
+	/**
+	 * 字典搜尋
+     * @param {String} _text
+	 * https://tw.dictionary.yahoo.com/dictionary?p=diction
+	 */
+	 _ctl.dictionary = function ( _text ){
+		var _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text;
+		window.open( _search_url, '_system');
+ 
+	 
+	 };
+	 
+	 
+	 
     // ---------------------
     
     $scope.ctl_activity = _ctl;

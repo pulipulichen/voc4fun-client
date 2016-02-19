@@ -31,13 +31,25 @@
     <div class="flashcard">
 
         <!-- 英文的部分 -->
-        <ons-row class="side q" 
-                 ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')">
-            <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak"></ons-icon>
-            {{ ctl_learn_flashcard.var.learn_flashcard.q}}
-            <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak"></ons-icon>
-        </ons-row>
+        <ons-row style="display: flex;" class="side q "> 
+			<ons-col  align="top" width="10%">		
+				
+			</ons-col>	 
+			<ons-col align="top" >	
+				<ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak"></ons-icon>
 
+				{{ ctl_learn_flashcard.var.learn_flashcard.q}}
+	
+				<ons-icon icon="ion-radio-waves" fixed-width="true" class="speak" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"></ons-icon>
+			</ons-col>
+			<!--加入字典-0128-wyfan-->
+			<ons-col  align="top" width="10%">		
+				<ons-icon icon="ion-ios-book" fixed-width="true" class="dictionary"  ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q)"(></ons-icon>
+			</ons-col>
+        </ons-row>
+		
+		
+        			
         <!-- 中文的部分 -->
         <ons-row class="side a bg-info" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.a, 'zh')">
             <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak"></ons-icon>

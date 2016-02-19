@@ -103,8 +103,8 @@ var controller_flashcard = function ($scope) {
             }
         }
         
-        //_random_index = [0, 5];
-        //$.console_trace("random_index", _random_index);
+        _random_index = [0, 5];
+        $.console_trace("random_index", _random_index);
         
         var _loop = function (_i) {
             if (_i < _random_index.length) {

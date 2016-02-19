@@ -449,7 +449,7 @@ var controller_target = function ($scope) {
 
     _ctl.get_remained_target = function (_key) {
         if (_key === "learn_flashcard") {
-            return $scope.ctl_learn_flashcard.get_learned_count();
+		    return $scope.ctl_learn_flashcard.get_learned_count();
         }
         else if (_key === "take_note") {
             return $scope.ctl_note.get_noted_count();
@@ -494,6 +494,7 @@ var controller_target = function ($scope) {
 
         _ctl.get_yesterday_target_data(function (_target) {
             _ctl.get_before_yesterday_target_data(function (_prev_target) {
+				console.log(5+5);
                 _ctl._calculate_recommend_target_data(_target, _prev_target, _callback);
             });
         });
@@ -511,7 +512,9 @@ var controller_target = function ($scope) {
 
         for (var _i in _target) {
             var _t = _target[_i];
-            var _p = _prev_target[_i];
+            //------不確定是不是因為沒有DB，_prev_target[_i]為null會出錯-------------
+			var _p = 1212;//_prev_target[_i];
+			//----------------------
             _recommend_target_data[_i] = {
                 last_done: _t.done,
                 last_target: _t.target
