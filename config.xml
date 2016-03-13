@@ -12,7 +12,7 @@
     <content src="index.html"/>
     <icon src="icon.png"/>
   
-    <preference name="phonegap-version" value="5.0.2"/>
+    <!-- preference name="phonegap-version" value="5.0.2"/ -->
     
     <!-- 防止太多權限 -->
     <preference name="permissions" value="none" />
