@@ -25,8 +25,8 @@ var controller_notification = function ($scope, $filter) {
                 text: _data.text,
                 sound: "file://sound/silent.ogg",
                 ongoing: true,   // 避免被關掉
-                smallIcon: "file://img/Voc4Fun-icon256.png",
-                icon: "file://img/Voc4Fun-icon256.png"
+                smallIcon: "res://img/ic_stat_voc4fun_icon256/res",
+                //icon: "file://img/Voc4Fun-icon256.png"
             };
 
             // 好吧，先假設她可以使用好了，按下去應該會打開app吧，我猜
