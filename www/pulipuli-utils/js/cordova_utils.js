@@ -5,13 +5,13 @@ var cordova_utils = function ($scope) {
     // ---------------------------------------
     
     _ctl.get_device_name = function (_callback) {
-        var _default_name = "John";
+        var _default_name = $scope.CONFIG.default_name;
         if (typeof(device) !== "undefined"
                 && typeof(device.name) === "string") {
             $.trigger_callback(_callback, device.name);
             //return device.name;
         }
-        else {
+        else if (typeof(cordova) !== "undefined") {
             var _telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
             if (typeof(_telephoneNumber) === "object") {
                 _telephoneNumber.get(function(_result) {
@@ -24,7 +24,9 @@ var cordova_utils = function ($scope) {
             else {
                 $.trigger_callback(_callback, _default_name);
             }
-            
+        }
+        else {
+            $.trigger_callback(_callback, _default_name);
         }
     };
     

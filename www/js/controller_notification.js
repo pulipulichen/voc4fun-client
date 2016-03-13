@@ -23,9 +23,9 @@ var controller_notification = function ($scope, $filter) {
                 id: _notification_id,
                 title: _data.title,
                 text: _data.text,
-                sound: "file://sound/alert.caf",
+                sound: "file://sound/silent.ogg",
                 ongoing: true,   // 避免被關掉
-                smallIcon: "file://www/img/Voc4Fun-icon256.png",
+                smallIcon: "file://img/Voc4Fun-icon256.png",
                 icon: "file://img/Voc4Fun-icon256.png"
             };
 

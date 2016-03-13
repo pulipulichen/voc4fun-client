@@ -3,7 +3,7 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        "server_url": "http://www.pulipuli.tk/voc4fun/voc4fun-server/",
+        //"server_url": "http://www.pulipuli.tk/voc4fun/voc4fun-server/",
         /**
          * 選擇題考試的選項數量
          */
@@ -37,6 +37,8 @@ var app_config = function ($scope) {
          * 設定時間偏移，單位是天數
          */
         day_offset: 0,
+        
+        default_name: "Voc4Fun",
         
         /**
          * 表格名稱
