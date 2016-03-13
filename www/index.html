@@ -187,7 +187,8 @@
                                 // 偵測是否有Table
                                 $scope.DB.drop_table($scope.CONFIG.tables, function () {
                                     if (typeof($scope.CONFIG.server_url) === "string") {
-                                        $.getJSON($scope.CONFIG.server_url + "reset.php", function () {
+                                        //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
+                                        $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
                                             // 網頁重新整理
                                             location.reload();
                                         });
