@@ -4,13 +4,27 @@ var cordova_utils = function ($scope) {
     
     // ---------------------------------------
     
-    _ctl.get_device_name = function () {
+    _ctl.get_device_name = function (_callback) {
+        var _default_name = "John";
         if (typeof(device) !== "undefined"
                 && typeof(device.name) === "string") {
-            return device.name;
+            $.trigger_callback(_callback, device.name);
+            //return device.name;
         }
         else {
-            return "John Doe";
+            var _telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
+            if (typeof(_telephoneNumber) === "object") {
+                _telephoneNumber.get(function(_result) {
+                    //console.log("result = " + result);
+                    $.trigger_callback(_callback, _result);
+                }, function() {
+                    $.trigger_callback(_callback, _default_name);
+                });
+            }
+            else {
+                $.trigger_callback(_callback, _default_name);
+            }
+            
         }
     };
     

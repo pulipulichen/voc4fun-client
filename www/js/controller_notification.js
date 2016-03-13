@@ -23,9 +23,9 @@ var controller_notification = function ($scope, $filter) {
                 id: _notification_id,
                 title: _data.title,
                 text: _data.text,
-                sound: "res://",
+                sound: "res://www/img/notification.ogg",
                 ongoing: true,   // 避免被關掉
-                smallIcon: "img/Voc4Fun-icon256.png",
+                smallIcon: "res://img/Voc4Fun-icon256.png",
                 //icon: "img/Voc4Fun-icon256.png"
             };
 
