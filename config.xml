@@ -25,6 +25,7 @@
     <plugin name="org.apache.cordova.inappbrowser" spec="0.3.3" source="pgb" />
     <plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
     <gap:plugin name="de.appplant.cordova.plugin.local-notification"/>
+    <plugin name="de.appplant.cordova.plugin.local-notification" spec="0.8.1" source="pgb" />
     
     <plugin name="org.tt.plugin.tts" spec="1" source="pgb" />
     <!-- 操作說明: https://github.com/macdonst/TTS
