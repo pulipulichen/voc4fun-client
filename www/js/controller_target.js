@@ -497,6 +497,7 @@ var controller_target = function ($scope) {
     // ------------------------------------------
 
     _ctl.get_notification_message = function () {
+        // @TODO 語系
         var _msg = "您的進度是" + _ctl.get_complete_percent() + "%";
         return _msg;
     };
@@ -944,6 +945,10 @@ var controller_target = function ($scope) {
         }
         return (_target > 0);
     };
+    
+    // -----------------------------------------------------------------
+    
+    
 
     // ------------------------------------------
 

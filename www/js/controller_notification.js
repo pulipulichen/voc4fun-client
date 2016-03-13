@@ -22,8 +22,8 @@ var controller_notification = function ($scope, $filter) {
             var _opt = {
                 id: _notification_id,
                 title: _data.title,
-                text: _notification_id,
-                sound: null,
+                text: _data.text,
+                //sound: undefined,
                 ongoing: true   // 避免被關掉
             };
 
@@ -57,8 +57,10 @@ var controller_notification = function ($scope, $filter) {
     };
 
     _ctl.get_notification_message = function () {
+        // @TODO 語系
         return {
             title: "全民樂單字",
+            sound: "",
             text: $scope.ctl_target.get_notification_message()
         };
     };

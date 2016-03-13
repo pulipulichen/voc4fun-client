@@ -1,6 +1,7 @@
 /*global ons:false */
 /*global app:false */
 var _app_ready = function ($scope) {
+    //$.console_trace($scope.ctl_target.get_notification_message());
 
     $scope.set_swipeable(false);
 
