@@ -169,15 +169,20 @@
 
                     };
 
-                    if ($scope.CONFIG.empty_dabase === true) {
+                    if ($scope.CONFIG.empty_database === true) {
                         $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
                             if (_is_exists === true) {
                                 // 偵測是否有Table
                                 $scope.DB.drop_table($scope.CONFIG.tables, function () {
-                                    $.getJSON($scope.CONFIG.server_url + "reset.php", function () {
-                                        // 網頁重新整理
+                                    if (typeof($scope.CONFIG.server_url) === "string") {
+                                        $.getJSON($scope.CONFIG.server_url + "reset.php", function () {
+                                            // 網頁重新整理
+                                            location.reload();
+                                        });
+                                    }
+                                    else {
                                         location.reload();
-                                    });
+                                    }
                                 });
                             }
                             else {

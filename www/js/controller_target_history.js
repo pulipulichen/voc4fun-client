@@ -5,7 +5,7 @@ var controller_target_history = function ($scope) {
     var _log_file = "controller_target_history.js";
 
     var _table_name = "target_history";
-    var _field_list = ["year", "month", "day", "target_data"];
+    var _field_list = ["year", "month", "day", "target_data", "complete_percent"];
 
     // -------------------------------------------------
 
@@ -18,7 +18,7 @@ var controller_target_history = function ($scope) {
                 month: _date.month,
                 day: _date.day,
                 complete_percent: _complete_percent,
-                target_date: _target_data
+                target_data: _target_data
             };
 
             $scope.DB.insert(_table_name, _data, _callback);

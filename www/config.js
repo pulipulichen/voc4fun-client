@@ -30,9 +30,14 @@ var app_config = function ($scope) {
         /**
          * 清空資料庫的模式
          */
-        //"empty_dabase": true,
-        //"empty_dabase": true
-
+        //"empty_database": false,
+        //"empty_database": true,
+        
+        /**
+         * 設定時間偏移，單位是天數
+         */
+        day_offset: 0,
+        
         /**
          * 表格名稱
          * @params String[]
@@ -72,6 +77,6 @@ var app_config = function ($scope) {
                 "help": "設定每天目標答對的題目數量。\n題目都是三選一的選擇題。",
                 "complete_message": "恭喜您完成了今日目標！"
             }
-        ],
-    }
+        ]
+    };
 };

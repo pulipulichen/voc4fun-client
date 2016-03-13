@@ -49,7 +49,9 @@ var controller_notification = function ($scope, $filter) {
     };
 
     _ctl.hide_notification = function () {
-        if (typeof (cordova) === "object" && typeof(cordova.plugins.notification) !== "undefined") {
+        if (typeof (cordova) === "object"
+            && typeof(cordova.plugins) !== "undefined"
+            && typeof(cordova.plugins.notification) !== "undefined") {
             cordova.plugins.notification.local.cancel(_notification_id);
         }
     };

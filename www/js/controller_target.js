@@ -87,6 +87,18 @@ var controller_target = function ($scope) {
             //$.console_trace(_i);
         }
         //$scope.$digest();
+        return this;
+    };
+
+    _ctl.get_setting_target = function () {
+        var _target = {};
+        for (var _i = 0; _i < _var.target_setting.length; _i++) {
+            var _item = _var.target_setting[_i];
+            var _key = _item.key;
+            var _target = _item.default_target;
+            _target[_key] = _target;
+        }
+        return _target;
     };
 
     /**
@@ -108,7 +120,7 @@ var controller_target = function ($scope) {
         //$.console_trace("enter_from_profile", $scope.target_data);
 
         _ctl.period_target_exists(function (_today_exists) {
-            _ctl.period_target_exists(-1, function (_yesterday_exists) {
+            _ctl.before_target_exists(-1, function (_yesterday_exists) {
                 var _page = "target_view.html";
                 if (_today_exists === false) {
                     //$.console_trace("今天沒有資料的情況", _yesterday_exists);
@@ -125,15 +137,17 @@ var controller_target = function ($scope) {
 
                 //$scope.target_data.learn_flashcard.done = 50;
                 //$.console_trace(_animation);
+                //$.console_trace("enter_from_profile()", _page);
                 if (_page === "target_recommend.html") {
-                    
+
                     // 把昨天的資料加入
                     _ctl.get_yesterday_target_data(function (_target_data) {
+                        $.console_trace("!!", _target_data);
                         _ctl.add_target_history(_target_data);
-                    });
 
-                    _ctl.init_recommend_target_data(function () {
-                        app.navi.replacePage(_page, _animation);
+                        _ctl.init_recommend_target_data(function () {
+                            app.navi.replacePage(_page, _animation);
+                        });
                     });
                 }
                 else {
@@ -194,16 +208,59 @@ var controller_target = function ($scope) {
     };
 
     /**
+     * 未完成
+     * @TODO #
+     * @param {number} _offset
+     * @param {function} _callback
+     */
+    _ctl.before_target_exists = function (_offset, _callback) {
+
+        if (typeof (_offset) === "function") {
+            _callback = _offset;
+            _offset = 0;
+        }
+
+        var _function_name = "set_target()";
+
+        var _exists = true;
+        $scope.db_log.get_latest_log({
+            "file_name": _log_file,
+            "function_name": _function_name,
+            "max_timestamp": _ctl.get_period_end_timestamp(_offset),
+            "callback": function (_data) {
+                if (_data === undefined) {
+                    _exists = false;
+                }
+                $.trigger_callback(_callback, _exists);
+            }
+        });
+
+        return this;
+    };
+
+    /**
      * @param {Number} _offset 偏移天數
      * @returns {Number}
      */
-    _ctl.get_period_start_timestamp = function (_offset) {
-        var _timestamp = new Date().getTime() - _target_offset_hours * 60 * 60 * 1000;
-        if (typeof (_offset) === "number") {
-            _timestamp = _timestamp + _offset * 24 * 60 * 60 * 1000;
+    _ctl.get_period_start_timestamp = function (_offset, _refer_timestamp) {
+        if (typeof (_offset) !== "number") {
+            _offset = 0;
         }
+        //_offset = _offset + $scope.CONFIG.day_offset;
+
+        var _timestamp = new Date().getTime();
+        _timestamp = _timestamp + $scope.CONFIG.day_offset * 24 * 60 * 60 * 1000;
+        if (_refer_timestamp !== undefined) {
+            _timestamp = _refer_timestamp;
+        }
+        
+        _timestamp = _timestamp - _target_offset_hours * 60 * 60 * 1000;
+        _timestamp = _timestamp + _offset * 24 * 60 * 60 * 1000;
+
         var _date = new Date(_timestamp);
         _date.setHours(_target_offset_hours);
+        _date.setMinutes(0);
+        _date.setSeconds(0);
         return _date.getTime();
     };
 
@@ -211,18 +268,25 @@ var controller_target = function ($scope) {
      * @param {Number} _offset 偏移天數
      * @returns {Number}
      */
-    _ctl.get_period_end_timestamp = function (_offset) {
-        var _timestamp = _ctl.get_period_start_timestamp(_offset);
+    _ctl.get_period_end_timestamp = function (_offset, _refer_timestamp) {
+        var _timestamp = _ctl.get_period_start_timestamp(_offset, _refer_timestamp);
         _timestamp = _timestamp + 24 * 60 * 60 * 1000;
         return _timestamp;
     };
 
-    _ctl._get_period_date = function (_day_offset) {
+    _ctl._get_period_date = function (_day_offset, _refer_timestamp) {
         if (_day_offset === undefined) {
             _day_offset = 0;
         }
 
-        var _timestamp = new Date().getTime() - _target_offset_hours * 60 * 60 * 1000;
+        _day_offset = _day_offset + $scope.CONFIG.day_offset;
+
+        var _timestamp = _refer_timestamp;
+        if (typeof (_timestamp) !== "number") {
+            _timestamp = new Date().getTime();
+        }
+
+        _timestamp = _timestamp - _target_offset_hours * 60 * 60 * 1000;
         _timestamp = _timestamp + _day_offset * 24 * 60 * 60 * 1000;
         var _date = new Date(_timestamp);
         var _year = _date.getFullYear();
@@ -289,6 +353,8 @@ var controller_target = function ($scope) {
                 return _setting;
             }
         }
+
+        $.console_trace("Cannot found setting: " + _key);
     };
 
     _ctl.get_target = function (_key) {
@@ -409,7 +475,7 @@ var controller_target = function ($scope) {
             _p = _p + Math.min(100, Math.floor(_target_data[_i].done / _target_data[_i].target * 100));
             _target_count++;
         }
-        
+
         _p = Math.floor(_p / _target_count);
 
         //$.console_trace("get_complete_percent", {
@@ -449,7 +515,7 @@ var controller_target = function ($scope) {
 
     _ctl.get_remained_target = function (_key) {
         if (_key === "learn_flashcard") {
-		    return $scope.ctl_learn_flashcard.get_learned_count();
+            return $scope.ctl_learn_flashcard.get_learned_count();
         }
         else if (_key === "take_note") {
             return $scope.ctl_note.get_noted_count();
@@ -490,14 +556,60 @@ var controller_target = function ($scope) {
         // @TODO target在隔日重新計算 #57
         //_var.recommend_target_data = _var._recommend_target_data_mock;
 
+        //$.console_trace("init_recommend_target_data");
+//        _ctl.get_yesterday_target_data(function (_target) {
+//            _ctl.get_before_yesterday_target_data(function (_prev_target) {
+//                //console.log(5+5);
+//                _ctl._calculate_recommend_target_data(_target, _prev_target, _callback);
+//            });
+//        });
 
+//        var _time1 = _ctl.get_period_start_timestamp(0);
+//        $.console_trace("time1", _time1);
+//        var _time2 = _ctl.get_period_start_timestamp(-1, _time1 - 1);
+//        $.console_trace("time2", _time2);
 
-        _ctl.get_yesterday_target_data(function (_target) {
-            _ctl.get_before_yesterday_target_data(function (_prev_target) {
-				console.log(5+5);
-                _ctl._calculate_recommend_target_data(_target, _prev_target, _callback);
-            });
+        _ctl._get_prev_target_data_set(function (_prev_target_data_set) {
+            _ctl._calculate_recommend_target_data(_prev_target_data_set, _callback);
         });
+    };
+
+    _ctl._get_prev_target_data_set = function (_callback) {
+        $.console_trace("_get_prev_target_data_set()");
+        var _prev_target_data_set = [];
+
+        //var _max_timestamp = _ctl.get_period_end_timestamp(-1, _refer_timestamp);
+        _ctl.get_before_target_data(-1, function (_prev1) {
+            if (_prev1 !== undefined) {
+                _prev_target_data_set.push(_prev1[0]);
+                var _refer_timestamp = _prev1[1];
+                $.console_trace("refer", _refer_timestamp);
+                _ctl.get_before_target_data(-1, _refer_timestamp, function (_prev2) {
+                    if (_prev2 !== undefined) {
+                        $.console_trace("prev2");
+                        _prev_target_data_set.push(_prev2[0]);
+                    }
+                    $.trigger_callback(_callback, _prev_target_data_set);
+                });
+            }
+            else {
+                $.trigger_callback(_callback, _prev_target_data_set);
+            }
+        });
+
+        //$.console_trace("_get_prev_target_data_set", _max_timestamp);
+        //var _sql = "SELECT timestamp, data FROM log " 
+        //        + "WHERE file_name = '" + _log_file + "' AND function_name = 'set_target()' "
+        //        + " AND timestamp < " + _max_timestamp + " LIMIT 1";
+        //
+        //$scope.DB.exec(_sql, function (_row) {
+        //    if (_row.length > 0) {
+        //        _prev_target_data_set.push(JSON.parse(_row[0].data));
+        //    }
+        //    $.console_trace(_prev_target_data_set);
+        $.trigger_callback(_callback, _prev_target_data_set);
+        //});
+
     };
 
     /**
@@ -506,55 +618,102 @@ var controller_target = function ($scope) {
      * @param {type} _prev_target
      * @param {type} _callback
      */
-    _ctl._calculate_recommend_target_data = function (_target, _prev_target, _callback) {
+    _ctl._calculate_recommend_target_data = function (_prev_target_data_set, _callback) {
 
         var _recommend_target_data = {};
 
-        for (var _i in _target) {
-            var _t = _target[_i];
-            //------不確定是不是因為沒有DB，_prev_target[_i]為null會出錯-------------
-			var _p = 1212;//_prev_target[_i];
-			//----------------------
-            _recommend_target_data[_i] = {
-                last_done: _t.done,
-                last_target: _t.target
-            };
+        var _target = undefined;
+        var _prev_target = undefined;
+        if (typeof (_prev_target_data_set[0]) === "object") {
+            _target = _prev_target_data_set[0];
+        }
+        if (typeof (_prev_target_data_set[1]) === "object") {
+            _prev_target = _prev_target_data_set[1];
+        }
 
-            var _recommend_target;
+        $.console_trace("_prev_target_data_set", _prev_target_data_set.length);
 
-            if (_t.done < _t.target) {
-                // 昨天未完成目標
-                _recommend_target = Math.floor((_t.target - _t.done) / 2) + _t.done;
-            }
-            else if (_t.done > _t.target) {
-                // 昨天超過目標的情況
-                _recommend_target = _t.done;
-            }
-            else {
-                // 昨天剛好達成目標
-                
-                if (_t.done === _p.done) {
-                    // 今天做的量，跟昨天相同
-                    if (_p.target > _p.done) {
-                        _recommend_target = _p.done + Math.floor((_p.target - _p.done) / 2);
-                    }
-                    else {
-                        // p.d = 10
-                        // p.t = 6
-                        // r = 12
-                        _recommend_target = _p.done + Math.floor((_p.done - _p.target) / 2);
-                    }
+        if (_target !== undefined && _prev_target !== undefined) {
+            for (var _i in _target) {
+                var _t = _target[_i];
+                var _p = _prev_target[_i];
+
+                //----------------------
+                _recommend_target_data[_i] = {
+                    last_done: _t.done,
+                    last_target: _t.target
+                };
+
+                var _recommend_target;
+
+                if (_t.done < _t.target) {
+                    // 昨天未完成目標
+                    _recommend_target = Math.floor((_t.target - _t.done) / 2) + _t.done;
                 }
-                else if (_t.done < _p.done) {
-                    _recommend_target = _p.done;
+                else if (_t.done > _t.target) {
+                    // 昨天超過目標的情況
+                    _recommend_target = _t.done;
                 }
                 else {
-                    _recommend_target = Math.max(_t.done, _p.target);
-                }
-            }
+                    // 昨天剛好達成目標
 
-            _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
-        }   //for (var _i in _target) {
+                    if (_t.done === _p.done) {
+                        // 今天做的量，跟昨天相同
+                        if (_p.target > _p.done) {
+                            _recommend_target = _p.done + Math.floor((_p.target - _p.done) / 2);
+                        }
+                        else {
+                            // p.d = 10
+                            // p.t = 6
+                            // r = 12
+                            _recommend_target = _p.done + Math.floor((_p.done - _p.target) / 2);
+                        }
+                    }
+                    else if (_t.done < _p.done) {
+                        _recommend_target = _p.done;
+                    }
+                    else {
+                        _recommend_target = Math.max(_t.done, _p.target);
+                    }
+                }
+
+                _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
+            }   //for (var _i in _target) {
+        }   //if (_target !== undefined && _prev_target !== undefined) {
+        else if (_target !== undefined && _prev_target === undefined) {
+            for (var _i in _target) {
+                var _t = _target[_i];
+
+                //----------------------
+                _recommend_target_data[_i] = {
+                    last_done: _t.done,
+                    last_target: _t.target
+                };
+
+                var _recommend_target;
+
+                if (_t.done < _t.target) {
+                    // 昨天未完成目標
+                    _recommend_target = Math.floor((_t.target - _t.done) / 2) + _t.done;
+                }
+                else if (_t.done > _t.target) {
+                    // 昨天超過目標的情況
+                    _recommend_target = _t.done;
+                }
+                else {
+                    _recommend_target = _t.target + 1;
+                }
+
+                _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
+            }   //for (var _i in _target) {
+        }   //if (_target !== undefined && _prev_target !== undefined) {
+        else {
+            var _setting_target = _ctl.get_setting_target();
+            for (var _i in _setting_target) {
+                _recommend_target_data[_i].recommend_target = _setting_target[_i];
+            }
+        }
+
         _var.recommend_target_data = _recommend_target_data;
         $.trigger_callback(_callback);
     };
@@ -577,8 +736,14 @@ var controller_target = function ($scope) {
     _ctl.get_yesterday_target_data = function (_callback) {
         // 先取得開始與結束時間點
         //$.trigger_callback(_callback, _yesterday_target_data_mock);
-        return _ctl.get_period_target_data(-1, _callback);
-
+        //$.console_trace("get_yesterday_target_data()");
+        //return _ctl.get_period_target_data(-1, _callback);
+        return _ctl.get_before_target_data(-1, function (_data) {
+            if (_data !== undefined) {
+                _data = _data[0];
+            }
+            $.trigger_callback(_callback, _data);
+        });
     };
 
     var _before_yesterday_target_data_mock = {
@@ -596,6 +761,22 @@ var controller_target = function ($scope) {
         }
     };
 
+    _ctl.get_target_data_default = function () {
+        var _target_data = {};
+        for (var _i = 0; _i < _var.target_setting.length; _i++) {
+            var _item = _var.target_setting[_i];
+            var _key = _item.key;
+            var _target = _item.default_target;
+            _target_data[_key] = {
+                "done": 0,
+                "target": _target
+            };
+        }
+
+        //$.console_trace("get_target_data_default()", _target_data);
+        return _target_data;
+    };
+
     _ctl.get_before_yesterday_target_data = function (_callback) {
         //$.trigger_callback(_callback, _before_yesterday_target_data_mock);
         return _ctl.get_period_target_data(-2, _callback);
@@ -605,20 +786,27 @@ var controller_target = function ($scope) {
         var _min_timestamp = _ctl.get_period_start_timestamp(_offset_day);
         var _max_timestamp = _ctl.get_period_end_timestamp(_offset_day);
 
-        var _target_data = {};
-
+        //var _target_data = {};
+        //$.console_trace("_get_target_data_callback()", _target_data);
         var _get_target_data_callback = function (_data) {
+            //if (_data === undefined) {
+            //    $.trigger_callback(_callback);
+            //    return;
+            //}
+
+            var _default_target_data = _ctl.get_target_data_default();
             if (_data === undefined) {
-                $.trigger_callback(_callback);
-                return;
+                _data = _default_target_data;
             }
 
+            var _target_data = {};
             for (var _key in _data) {
                 _target_data[_key] = {
                     done: 0,
-                    target: _data[_key]
+                    target: _data[_key].target
                 };
             }
+            //$.console_trace("_target_data", _target_data);
 
             // 一個一個查詢大家的log
             var _ary_keys = $.array_keys(_target_data);
@@ -636,12 +824,16 @@ var controller_target = function ($scope) {
                             if (_data !== undefined) {
                                 _target_data[_key].done = _data.done;
                             }
+                            else {
+                                _target_data[_key] = _default_target_data[_key];
+                            }
                             _i++;
                             _loop(_i);
                         }
                     });
                 }
                 else {
+                    //$.console_trace("_get_target_data_callback()", _target_data);
                     $.trigger_callback(_callback, _target_data);
                 }
             };
@@ -649,11 +841,90 @@ var controller_target = function ($scope) {
         };
 
         // 先取得target的部分
+        //$.console_trace("$scope.db_log.get_latest_log({");
         $scope.db_log.get_latest_log({
             file_name: _log_file,
             function_name: "set_target()",
             min_timestamp: _min_timestamp,
             max_timestamp: _max_timestamp,
+            callback: _get_target_data_callback
+        });
+    };
+
+    _ctl.get_before_target_data = function (_offset_day, _refer_timestamp, _callback) {
+        if (typeof (_refer_timestamp) === "function") {
+            _callback = _refer_timestamp;
+            _refer_timestamp = undefined;
+        }
+
+        var _max_timestamp = _ctl.get_period_end_timestamp(_offset_day, _refer_timestamp);
+        $.console_trace("_max_timestamp", _max_timestamp);
+
+        //var _target_data = {};
+        //$.console_trace("_get_target_data_callback()", _target_data);
+        var _get_target_data_callback = function (_data) {
+            if (_data === undefined) {
+                $.trigger_callback(_callback);
+                return;
+            }
+
+            //$.console_trace(_data);
+            var _target_data = {};
+            for (var _key in _data) {
+                if (_key === "_timestamp") {
+                    continue;
+                }
+                _target_data[_key] = {
+                    done: 0,
+                    target: _data[_key]
+                };
+            }
+            //$.console_trace(_target_data);
+
+
+            //_target_data._timestamp = _data._timestamp;
+
+            //$.console_trace("_target_data", _target_data);
+
+            // 一個一個查詢大家的log
+            var _ary_keys = $.array_keys(_target_data);
+            //$.console_trace(_ary_keys);
+
+            var _loop = function (_i) {
+                if (_i < _ary_keys.length) {
+                    var _key = _ary_keys[_i];
+                    $scope.db_log.get_latest_log({
+                        file_name: _log_file,
+                        function_name: "done()",
+                        max_timestamp: _max_timestamp,
+                        qualifier: _key,
+                        callback: function (_data) {
+                            if (_data !== undefined) {
+                                _target_data[_key].done = _data.done;
+                            }
+                            else {
+                                _target_data[_key].done = 0;
+                            }
+                            _i++;
+                            _loop(_i);
+                        }
+                    });
+                }
+                else {
+                    $.console_trace("_get_target_data_callback()", _target_data);
+                    $.trigger_callback(_callback, [_target_data, _data._timestamp]);
+                }
+            };
+            _loop(0);
+        };
+
+        // 先取得target的部分
+        //$.console_trace("$scope.db_log.get_latest_log({");
+        $scope.db_log.get_latest_log({
+            file_name: _log_file,
+            function_name: "set_target()",
+            max_timestamp: _max_timestamp,
+            return_timestamp: true,
             callback: _get_target_data_callback
         });
     };
@@ -665,7 +936,7 @@ var controller_target = function ($scope) {
         var _complete_percent = _ctl._calc_complete_percent(_target_data);
         $scope.ctl_target_history.add(_date, _complete_percent, _target_data);
     };
-    
+
     _ctl.is_target_setted = function () {
         var _target = 0;
         for (var _i in _status) {

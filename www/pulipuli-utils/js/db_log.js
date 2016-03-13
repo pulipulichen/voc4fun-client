@@ -13,9 +13,9 @@ var db_log = function ($scope) {
      * 那記錄的時間就會是-1天
      * @type Number
      */
-    var _debug_log_day_offset = 0;
+    var _debug_log_day_offset = $scope.CONFIG.day_offset;
 
-    var _server_url = $scope.CONFIG.server_url;
+    //var _server_url = $scope.CONFIG.server_url;
 
 //    setTimeout(function () {
 //        //$scope.db_log.reset();
@@ -109,6 +109,7 @@ var db_log = function ($scope) {
             var _where_sql = $.parse_opt(_opt, "where_sql");
             var _min_timestamp = $.parse_opt(_opt, "min_timestamp");
             var _max_timestamp = $.parse_opt(_opt, "max_timestamp");
+            var _return_timestamp = $.parse_opt(_opt, "return_timestamp", false);
             var _callback = $.parse_opt(_opt, "callback");
 
             if (typeof (_min_timestamp) === "number"
@@ -146,7 +147,7 @@ var db_log = function ($scope) {
 
             _where_sql = _where_array.join(" AND ");
 
-            var _sql = "SELECT data FROM log ";
+            var _sql = "SELECT timestamp, data FROM log ";
             if (_where_sql !== undefined && _where_sql !== "") {
                 _sql = _sql + " WHERE " + _where_sql;
             }
@@ -157,12 +158,16 @@ var db_log = function ($scope) {
                 var _data;
                 if (_row.length > 0) {
                     _data = JSON.parse(_row[0].data);
+                    
+                    if (_return_timestamp === true) {
+                        _data["_timestamp"] = _row[0].timestamp;
+                    }
                 }
                 $.trigger_callback(_callback, _data);
             });
         //});
     };
-
+    
     _ctl._create_where_sql = function (_field_name, _data) {
         var _sql = "";
         if (typeof (_data) === "string") {
@@ -249,6 +254,7 @@ var db_log = function ($scope) {
         if (_debug_log_day_offset !== 0) {
             _timestamp = _timestamp + _debug_log_day_offset * 24 * 60 * 60 * 1000;
         }
+        
         if (typeof (_offset) === "number") {
             _timestamp = _timestamp + _offset * 24 * 60 * 60 * 1000;
         }
@@ -285,6 +291,9 @@ var db_log = function ($scope) {
     _ctl.sync = function (_callback) {
         //ctl._init_db(function () {
 
+        if (typeof($scope.CONFIG.server_url) !== "string") {
+            return;
+        }
 
             var _url = $scope.CONFIG.server_url + "model/sync.php";
 
@@ -303,7 +312,7 @@ var db_log = function ($scope) {
             var _sync_complete = function () {
                 _syncing = false;
                 $.trigger_callback(_callback);
-            }
+            };
 
             _ctl.get_latest_log_timestamp(function (_timestamp) {
                 _data.timestamp = _timestamp;
@@ -348,7 +357,9 @@ var db_log = function ($scope) {
     _ctl.sync_push = function (_server_timestamp, _callback) {
         //_ctl._init_db(function () {
             
-        
+        if (typeof($scope.CONFIG.server_url) !== "string") {
+            return;
+        }
         var _url = $scope.CONFIG.server_url + "model/sync.php";
         //$.console_trace("sync_push: " + _server_timestamp);
 
@@ -388,6 +399,10 @@ var db_log = function ($scope) {
         
         $scope.DB.insert("log", _logs, function () {
             _ctl.sync_complete("pull", function (_log) {
+                
+                if (typeof($scope.CONFIG.server_url) !== "string") {
+                    return;
+                }
                 var _url = $scope.CONFIG.server_url + "model/sync.php";
 
                 $.console_trace("sync_pull", _log);

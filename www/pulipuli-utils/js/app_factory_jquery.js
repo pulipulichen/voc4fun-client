@@ -6,12 +6,18 @@ var _app_factory_jquery_utils = function ($scope) {
      * @param {String} _msg
      */
     $.console_trace = function (_heading, _msg) {
-        if (typeof (_msg) !== "undefined") {
-            _heading = "===" + _heading + "====================================";
+        if (_heading !== undefined && _msg !== undefined && typeof(_msg) !== "object" && (_msg + "").length < 20) {
+            _heading = "===" + _heading + ": " + _msg + "=====";
+            console.trace(_heading);
         }
-        console.trace(_heading);
-        if (typeof (_msg) !== "undefined") {
-            console.trace(_msg);
+        else {
+            if (typeof (_msg) !== "undefined") {
+                _heading = "===" + _heading + "====================================";
+            }
+            console.trace(_heading);
+            if (typeof (_msg) !== "undefined") {
+                console.trace(_msg);
+            }
         }
     };
 

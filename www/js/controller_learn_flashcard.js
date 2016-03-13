@@ -6,7 +6,7 @@ var controller_learn_flashcard = function ($scope) {
 
     var _log_file = "controller_learn_flashcard.js";
 
-    var _server_url = $scope.CONFIG.server_url;
+    //var _server_url = $scope.CONFIG.server_url;
 
     // ------------------------------
 
@@ -409,23 +409,26 @@ var controller_learn_flashcard = function ($scope) {
             uuid: $scope.db_log.get_uuid()
         };
 
-        var _url = $scope.CONFIG.server_url + "model/note.php";
-        setTimeout(function () {
-            $.getJSON(_url, _data, function (_other_note) {
-                //$.console_trace(_other_note);
-                _var.learn_flashcard.other_note = _other_note;
+        if (typeof($scope.CONFIG.server_url) === "string") {
+            var _url = $scope.CONFIG.server_url + "model/note.php";
+            setTimeout(function () {
+                $.getJSON(_url, _data, function (_other_note) {
+                    //$.console_trace(_other_note);
+                    _var.learn_flashcard.other_note = _other_note;
 
-                var _notification = $(".learn-flashcard-page .notification")
-                _notification.find(".load-icon").hide();
-                _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
-                _notification.find(".notification-text").show();
-                //_var.learn_flashcard.other_note_loaded = true;
-                //$scope.$digest();
-                $scope.$digest();
-                //$.console_trace("other_note_ajax 尚未完成");
-                $.trigger_callback(_callback);
-            });
-        }, 1000);
+                    var _notification = $(".learn-flashcard-page .notification")
+                    _notification.find(".load-icon").hide();
+                    _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
+                    _notification.find(".notification-text").show();
+                    //_var.learn_flashcard.other_note_loaded = true;
+                    //$scope.$digest();
+                    $scope.$digest();
+                    //$.console_trace("other_note_ajax 尚未完成");
+                    $.trigger_callback(_callback);
+                });
+            }, 1000);
+        }
+            
 
 //        setTimeout(function () {
 //            _var.learn_flashcard.other_note = _var._other_note_mock;
