@@ -160,6 +160,7 @@
                             if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
                                 ons.ready(function () {
                                     if (typeof(cordova) === "object") {
+                                        alert("等待");
                                         document.addEventListener("deviceready", function () {
                                             _app_ready($scope);
                                         }, false);
