@@ -51,7 +51,7 @@ var db_log = function ($scope) {
                 _data = null;
             }
 
-            var _timestamp = $scope.db_log.get_timestamp();
+            var _timestamp = $scope.db_log.get_timestamp(0);
             var _insert_data = {
                 timestamp: _timestamp,
                 file_name: _file_name,
