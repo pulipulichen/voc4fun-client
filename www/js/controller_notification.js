@@ -25,7 +25,7 @@ var controller_notification = function ($scope, $filter) {
                 text: _data.text,
                 sound: "file://sound/silent.ogg",
                 ongoing: true,   // 避免被關掉
-                smallIcon: "res://img/ic_stat_voc4fun_icon256/res",
+                //smallIcon: "res://img/ic_stat_voc4fun_icon256/res",
                 //icon: "file://img/Voc4Fun-icon256.png"
             };
 
