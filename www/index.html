@@ -93,6 +93,7 @@
     <script src="js/controller_note_list.js"></script>
     <script src="js/controller_notification.js"></script>
     <script src="js/controller_target_history.js"></script>
+    <script src="js/controller_setting.js"></script>
 
     <script src="js/controller_test_select.js"></script>
 
@@ -153,6 +154,7 @@
                     controller_test_select($scope);
                     controller_notification($scope, $filter);
                     controller_target_history($scope);
+                    controller_setting($scope);
 
                     // -----------------------------------
 
@@ -160,16 +162,16 @@
                         $scope.db_status.ready(function () {
                             if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
                                 ons.ready(function () {
-                                    //if (typeof(cordova) === "object") {
+                                    if (typeof(cordova) === "object") {
                                         //alert("等待");
-                                    //    document.addEventListener("deviceready", function () {
-                                    //        _app_ready($scope);
-                                    //    }, false);
-                                    //}
-                                    //else {
-                                    //    _app_ready($scope);
-                                    //}
-                                    _app_ready($scope);
+                                        document.addEventListener("deviceready", function () {
+                                            _app_ready($scope);
+                                        }, false);
+                                    }
+                                    else {
+                                        _app_ready($scope);
+                                    }
+                                    //_app_ready($scope);
                                 });
                             }
                             else {

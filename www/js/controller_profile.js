@@ -8,7 +8,7 @@ var controller_profile = function ($scope) {
     
     var _var = {};
     
-    _var.name_mock = "John Doe";
+    _var.name_mock = $scope.CONFIG.default_name;
 
     _ctl.var = _var;
 
@@ -73,6 +73,8 @@ var controller_profile = function ($scope) {
 //        }
 //        //$.console_trace("profile_exists");
 //        return $scope.DB.row_exists(_table_name, _callback);
+
+        //throw [typeof(_status.name), _status];
         return (_status.name !== undefined);
     };
 
@@ -129,9 +131,12 @@ var controller_profile = function ($scope) {
             //_status.name = $scope.cordova_utils.get_device_name();
             $scope.cordova_utils.get_device_name(function (_name) {
                 _status.name = _name;
+                $.trigger_callback(_callback);
             });
         }
-        $.trigger_callback(_callback);
+        else {
+            $.trigger_callback(_callback);
+        }
     };
     
     _ctl.get_uuid = function () {
@@ -147,6 +152,10 @@ var controller_profile = function ($scope) {
             });
         });
         
+    };
+    
+    _ctl.reset = function () {
+        $scope.ctl_profile.status = {};
     };
     
     // -----------------------------------

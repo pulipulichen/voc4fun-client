@@ -32,7 +32,7 @@
                            class="text-input text-input--transparent"
                            placeholder="請輸入您的名字"
                            name="name"
-                           style="width:calc(100% - 30px);font-size: 17px;line-height: 44px;margin:0;">
+                           style="width:calc(100% - 30px);font-size: 17px;margin:0;">
                 </ons-col>
             </ons-row>
         </ons-list-item>
@@ -42,7 +42,7 @@
             設定目標
         </ons-list-item>
         
-        <ons-list-item modifier="chevron" ng-click="share_app()">
+        <ons-list-item modifier="chevron" ng-click="ctl_setting.share_app()" style="display:none;">
             <ons-icon icon="ion-android-share-alt" size="20px"></ons-icon>
             {{ 'SHARE_APP' | translate}}
         </ons-list-item>
@@ -50,6 +50,11 @@
         <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('about.html')">
             <ons-icon icon="ion-information-circled" size="20px"></ons-icon>
             {{ 'ABOUT' | translate}}
+        </ons-list-item>
+        
+        <ons-list-item modifier="chevron" ng-click="ctl_setting.reset_app()">
+            <ons-icon icon="ion-refresh" size="20px"></ons-icon>
+            重置
         </ons-list-item>
     </ons-list>
 </ons-page>
