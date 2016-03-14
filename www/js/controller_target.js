@@ -26,6 +26,14 @@ var controller_target = function ($scope) {
     };
 
     _var.use_pop_page = false;
+	
+	//閱讀策略初始值
+	_var.strategy_option = {
+		option1: false,
+		option2: false,
+		option3: false,
+		option4: false
+	};
 
     _ctl.var = _var;
 
@@ -253,8 +261,9 @@ var controller_target = function ($scope) {
         return _title;
     };
 
-
-
+	/***
+	* 設定目標(單字、筆記、測驗數量)
+	*/
     _ctl.set_target = function ($event) {
         var _form = $($event.target);
         var _log_data = {};
@@ -274,6 +283,51 @@ var controller_target = function ($scope) {
         $scope.db_status.save_status(_status_key);
     };
 
+	/***
+	* 設定目標(閱讀策略)
+	*/
+    // _ctl.set_target_survey = function () {
+	
+        // var _log_data = {};
+		// for (var _key in _var.strategy_option) {
+			
+			// if( _var.strategy_option[_key] !== false){
+		// //var _survey = _form.find('.strategy-option').each(function(){
+				// console.log( _var.strategy_option[_key] );
+				// _status[_key].survey = _var.strategy_option[_key] ;				
+				
+				// _log_data[_key] = _var.strategy_option[_key];				
+				
+			// }else{ 
+			// console.log( _var.strategy_option[_key]);
+			// _status[_key].survey = _var.strategy_option[_key] ;		
+			// _log_data[_key] = _var.strategy_option[_key];
+			
+			
+			// };
+			
+
+		// };
+
+        // /*for (var _key in _status) {
+            // var _target = _form.find('input[target_key="' + _key + '"]').val();
+            // _target = parseInt(_target, 10);
+            // _status[_key].target = _target;
+            // _log_data[_key] = _target;
+        // }*/
+
+        // $scope.log(_log_file, "set_target_survey()", _log_data);
+        // $.console_trace(_log_data);
+
+        // //$scope.ctl_activity.enter_from_target();
+
+        // // 把現在的狀態儲存進資料表中
+        // $scope.db_status.save_status(_status_key);
+    // };
+	
+	
+	
+	
     _ctl.show_help = function (_key) {
         var _setting = $scope.ctl_target._get_setting(_key);
         _var.target_help.help_img = _setting.help_img;
@@ -512,8 +566,8 @@ var controller_target = function ($scope) {
 
         for (var _i in _target) {
             var _t = _target[_i];
-            //------不確定是不是因為沒有DB，_prev_target[_i]為null會出錯-------------
-			var _p = 1212;//_prev_target[_i];
+            //------_prev_target[_i]為null會出錯-------------
+			var _p = 1212; //_prev_target[_i]; 
 			//----------------------
             _recommend_target_data[_i] = {
                 last_done: _t.done,

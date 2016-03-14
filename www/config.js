@@ -72,6 +72,35 @@ var app_config = function ($scope) {
                 "help": "設定每天目標答對的題目數量。\n題目都是三選一的選擇題。",
                 "complete_message": "恭喜您完成了今日目標！"
             }
+			/*{
+                "key": "test_survey",
+                //"default_target": 30,
+                "default_target": 1,
+                "min": 0,
+                "default_max": 6,
+                "title": "閱讀策略選擇",
+                "help_img": "img/loading.svg",
+                "help": "選擇每天採用的閱讀策略方法。\n共有四種閱讀策略可以選擇。",
+                "complete_message": "恭喜您完成了今日目標！"
+            }*/
         ],
+		"test_survey":[
+			{
+				"key": "wordcard",
+				"title": "單字卡學習法"							
+			},
+			{
+				"key": "image",
+				"title": "圖像學習法"
+			},
+			{
+				"key": "synonym",
+				"title": "同義詞學習法"
+			},
+			{
+				"key": "rootprefix",
+				"title": "字根字首學習法"
+			}
+		],
     }
 };
