@@ -3,8 +3,8 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        //"server_url": "http://localhost/voc4fun/voc4fun-server/",
-        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://localhost/voc4fun/voc4fun-server/",
+        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         /**
          * 選擇題考試的選項數量
          */
@@ -21,7 +21,7 @@ var app_config = function ($scope) {
          * 
          * 會關閉部分功能
          */
-        "control_group_version": true,
+        "control_group_version": false,
         /**
          * 單元測試模式
          * 
@@ -45,6 +45,16 @@ var app_config = function ($scope) {
          * 小螢幕尺寸
          */
         small_width: 500,
+        
+        /**
+         * 是否顯示重置按鈕
+         */
+        enable_reset: true,
+        
+        /**
+         * 重置動作中包含遠端資料庫的重置
+         */
+        enable_database_reset: false,
         
         /**
          * 表格名稱

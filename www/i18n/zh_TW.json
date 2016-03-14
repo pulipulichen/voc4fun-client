@@ -41,6 +41,7 @@
     "ONS_OK": "確定",
     "ONS_YES": "確定",
     "ONS_NO": "取消",
+    "ONS_SAVE": "儲存",
     
     "ONLY_PHONE_AVAILABLE": "只有手機上才能執行此功能"
 }

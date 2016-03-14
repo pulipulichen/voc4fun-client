@@ -53,7 +53,7 @@
             {{ 'ABOUT' | translate}}
         </ons-list-item>
         
-        <ons-list-item modifier="chevron" ng-click="ctl_setting.reset_app()">
+        <ons-list-item modifier="chevron" ng-click="ctl_setting.reset_app()" ng-show="CONFIG.enable_reset">
             <ons-icon icon="ion-refresh" size="20px"></ons-icon>
             重置 <!-- @TODO 語系 -->
         </ons-list-item>

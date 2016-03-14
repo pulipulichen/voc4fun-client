@@ -17,26 +17,29 @@ var controller_setting = function ($scope) {
     };
     
     _ctl.reset_app = function () {
-        $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
-            if (_is_exists === true) {
-                // 偵測是否有Table
-                $scope.DB.drop_table($scope.CONFIG.tables, function () {
-                    if (typeof($scope.CONFIG.server_url) === "string") {
-                        //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
-                        $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
-                            // 網頁重新整理
+        if (window.confirm("您確定要重置嗎？")) {
+            $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
+                if (_is_exists === true) {
+                    // 偵測是否有Table
+                    $scope.DB.drop_table($scope.CONFIG.tables, function () {
+                        if (typeof ($scope.CONFIG.server_url) === "string" 
+                                && $scope.CONFIG.enable_database_reset === true) {
+                            //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
+                            $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
+                                // 網頁重新整理
+                                _reload();
+                            });
+                        }
+                        else {
                             _reload();
-                        });
-                    }
-                    else {
-                        _reload();
-                    }
-                });
-            }
-            else {
-                _reload();
-            }
-        });
+                        }
+                    });
+                }
+                else {
+                    _reload();
+                }
+            });
+        }   //if (window.confirm("您確定要重置嗎？")) {
     };
     
     // ---------------------

@@ -39,6 +39,41 @@
             {{ ctl_learn_flashcard.var.learn_flashcard_transition.a}}
             <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak"></ons-icon>
         </ons-row>
+        
+        <ons-row style="display: flex;" class="side dictionary">
+            <ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
+                <ons-button>
+                    <ons-icon icon="ion-ios-book" fixed-width="true" class="yahhoo-dictionary" ></ons-icon>
+                    <div>
+                        中英字典 <!-- @TODO 語系 -->
+                    </div>
+                </ons-button>
+            </ons-col>
+            <ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
+                <ons-button>
+                    <ons-icon icon="ion-ios-book" fixed-width="true" class="synonym-dictionary" "></ons-icon>
+                    <div>
+                        同義字字典 <!-- @TODO 語系 -->
+                    </div>
+                </ons-button>
+            </ons-col>
+            <ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
+                <ons-button>
+                    <ons-icon icon="ion-ios-book" fixed-width="true" class="radicals-dictionary" ></ons-icon>
+                    <div>
+                        字根字典 <!-- @TODO 語系 -->
+                    </div>
+                </ons-button>	
+            </ons-col>
+            <ons-col width=25% ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q)">
+                <ons-button>
+                    <ons-icon icon="ion-image" fixed-width="true" class="image-search" ></ons-icon>
+                    <div>
+                        圖片搜尋 <!-- @TODO 語系 -->
+                    </div>
+                </ons-button>	
+            </ons-col>			
+        </ons-row>
     </div>
 
     <div class="note">

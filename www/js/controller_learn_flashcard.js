@@ -413,6 +413,10 @@ var controller_learn_flashcard = function ($scope) {
             var _url = $scope.CONFIG.server_url + "model/note.php";
             setTimeout(function () {
                 $.getJSON(_url, _data, function (_other_note) {
+                    if (typeof(_other_note) === "object" && typeof(_other_note.name) === "string") {
+                        _other_note = [_other_note];
+                    }
+                    
                     //$.console_trace(_other_note);
                     _var.learn_flashcard.other_note = _other_note;
 
