@@ -59,25 +59,22 @@ var controller_activity = function ($scope) {
 	 * https://tw.dictionary.yahoo.com/dictionary?p=diction
 	 */
 	 _ctl.dictionary = function ( _text, _dictionary ){
-		if ( _dictionary == "yahoo"){
+		if ( _dictionary === "yahoo"){
 			var _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text;
 
 			window.open( _search_url, '_system');
 
 		}
-		else if(  _dictionary == "synonym"){
+		else if(  _dictionary === "synonym"){
 			var _search_url = 'http://www.thesaurus.com/browse/'+ _text + '?s=t';
 			window.open( _search_url, '_system');			
 		}
-		else if( _dictionary == "radicals"){
+		else if( _dictionary === "radicals"){
 			var _search_url = 'http://www.english4formosa.com/drupal/?q=ety-search&keys_op=optional&keys='+ _text +'&field_tag_tid=All';
 			window.open( _search_url, '_system');		
 		}
 		//紀錄LOG	
-		$scope.log(_log_file, "dictionary()", {
-			"text": _text,
-			"dictionary": _dictionary			
-		});
+		$scope.log(_log_file, "dictionary()", _dictionary, _text);
 	};		
 
 	/**
