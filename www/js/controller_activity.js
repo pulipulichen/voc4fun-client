@@ -45,7 +45,7 @@ var controller_activity = function ($scope) {
      */
     _ctl.speak = function (_text, _lang) {
         //alert("發音：" + _text + "(未完成)");
-        $scope.log(_log_file, "speck", _lang, {
+        $scope.log(_log_file, "speck()", _lang, {
             "text": _text,
             "lang": _lang
         });
@@ -58,12 +58,43 @@ var controller_activity = function ($scope) {
      * @param {String} _text
 	 * https://tw.dictionary.yahoo.com/dictionary?p=diction
 	 */
-	 _ctl.dictionary = function ( _text ){
-		var _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text;
+	 _ctl.dictionary = function ( _text, _dictionary ){
+		if ( _dictionary == "yahoo"){
+			var _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text;
+
+			window.open( _search_url, '_system');
+
+		}
+		else if(  _dictionary == "synonym"){
+			var _search_url = 'http://www.thesaurus.com/browse/'+ _text + '?s=t';
+			window.open( _search_url, '_system');			
+		}
+		else if( _dictionary == "radicals"){
+			var _search_url = 'http://www.english4formosa.com/drupal/?q=ety-search&keys_op=optional&keys='+ _text +'&field_tag_tid=All';
+			window.open( _search_url, '_system');		
+		}
+		//紀錄LOG	
+		$scope.log(_log_file, "dictionary()", {
+			"text": _text,
+			"dictionary": _dictionary			
+		});
+	};		
+
+	/**
+	* 圖片搜尋
+	*
+	*/
+	 _ctl.image_search = function ( _text ){
+
+		var _search_url = 'https://www.google.com.tw/search?q='+ _text +'&espv=2&tbm=isch&tbo=u&source=univ&sa=X';
 		window.open( _search_url, '_system');
- 
+
+		//紀錄LOG	
+		$scope.log(_log_file, "image_search()", {
+			"text": _text		
+		});		
 	 
-	 };
+	 };	
 	 
 	 
 	 

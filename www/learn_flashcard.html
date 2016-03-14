@@ -32,9 +32,7 @@
 
         <!-- 英文的部分 -->
         <ons-row style="display: flex;" class="side q "> 
-			<ons-col  align="top" width="10%">		
-				
-			</ons-col>	 
+
 			<ons-col align="top" >	
 				<ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak"></ons-icon>
 
@@ -42,13 +40,8 @@
 	
 				<ons-icon icon="ion-radio-waves" fixed-width="true" class="speak" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"></ons-icon>
 			</ons-col>
-			<!--加入字典-0128-wyfan-->
-			<ons-col  align="top" width="10%">		
-				<ons-icon icon="ion-ios-book" fixed-width="true" class="dictionary"  ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q)"(></ons-icon>
-			</ons-col>
+			
         </ons-row>
-		
-		
         			
         <!-- 中文的部分 -->
         <ons-row class="side a bg-info" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.a, 'zh')">
@@ -56,7 +49,40 @@
             {{ ctl_learn_flashcard.var.learn_flashcard.a}}
             <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak"></ons-icon>
         </ons-row>
+
+		<!--加入字典-0128-wyfan-->
+		<ons-row style="display: flex;" class="side dictionary">
+			<ons-col width=25% ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
+				<div style="text-align:center; cursor:pointer;">
+					<ons-icon icon="ion-ios-book" fixed-width="true" class="yahhoo-dictionary" ></ons-icon>
+					YAHOO字典
+				</div>
+			</ons-col>
+			<ons-col width=25% ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
+				<div style="text-align:center; cursor:pointer;">
+					<ons-icon icon="ion-ios-book" fixed-width="true" class="synonym-dictionary" "></ons-icon>
+					同義字字典
+				</div>
+			</ons-col>
+			<ons-col width=25% ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
+				<div style="text-align:center; cursor:pointer;">
+					<ons-icon icon="ion-ios-book" fixed-width="true" class="radicals-dictionary" ></ons-icon>
+					字根字典
+				</div>	
+			</ons-col>
+			<ons-col width=25% ng-click="ctl_activity.image_search(ctl_learn_flashcard.var.learn_flashcard.q)">
+				<div style="text-align:center; cursor:pointer;">
+					<ons-icon icon="ion-search" fixed-width="true" class="image-search" ></ons-icon>
+					圖片搜尋
+				</div>	
+			</ons-col>			
+		</ons-row>	
+		
+		
     </div>
+
+	
+	
 
     <div class="note" ng-click="ctl_note.enter()">
         <ons-icon icon="ion-edit" fixed-width="true" class="compose"></ons-icon>
