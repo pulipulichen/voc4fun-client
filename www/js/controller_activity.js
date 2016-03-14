@@ -44,6 +44,10 @@ var controller_activity = function ($scope) {
      * @param {String} _text
      */
     _ctl.speak = function (_text, _lang) {
+        if ($scope.CONFIG.enable_speak === false) {
+            return this;
+        }
+        
         //alert("發音：" + _text + "(未完成)");
         $scope.log(_log_file, "speck()", _lang, {
             "text": _text,
@@ -63,7 +67,7 @@ var controller_activity = function ($scope) {
          * @param {String} _text
 	 * https://tw.dictionary.yahoo.com/dictionary?p=diction
 	 */
-	_ctl.dictionary = function ( _text, _dictionary ){
+	_ctl.query_dictionary = function ( _text, _dictionary ){
             var _search_url;
             if ( _dictionary === "yahoo"){
                 _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text

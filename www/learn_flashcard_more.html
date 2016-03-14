@@ -2,19 +2,48 @@
              ng-init="_learn_flashcard = ctl_learn_flashcard.var.learn_flashcard">
     <ons-list>
         <ons-list-item 
+            ng-show="CONFIG.enable_speak === true"
             ng-click="ctl_activity.speak(_learn_flashcard.q, 'en');
             ctl_learn_flashcard.var.more_menu.hide();">
+            <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak"></ons-icon>
             英文發音
         </ons-list-item>
         <ons-list-item 
+            ng-show="CONFIG.enable_speak === true"
             ng-click="ctl_activity.speak(_learn_flashcard.a, 'zh');
             ctl_learn_flashcard.var.more_menu.hide();">
+            <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak"></ons-icon>
             中文發音
         </ons-list-item>
         <ons-list-item 
             ng-click="ctl_note.enter();
             ctl_learn_flashcard.var.more_menu.hide();">
+            <ons-icon icon="ion-edit" fixed-width="true" class="compose"></ons-icon>
             撰寫筆記
+        </ons-list-item>
+        <ons-list-item 
+            ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo');
+            ctl_learn_flashcard.var.more_menu.hide();">
+            <ons-icon icon="ion-ios-book" fixed-width="true" class="yahhoo-dictionary" ></ons-icon>
+            中英字典
+        </ons-list-item>
+        <ons-list-item 
+            ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym');
+            ctl_learn_flashcard.var.more_menu.hide();">
+            <ons-icon icon="ion-ios-book" fixed-width="true" class="synonym-dictionary" "></ons-icon>
+            同義字字典
+        </ons-list-item>
+        <ons-list-item 
+            ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals');
+            ctl_learn_flashcard.var.more_menu.hide();">
+            <ons-icon icon="ion-ios-book" fixed-width="true" class="radicals-dictionary" ></ons-icon>
+            字根字典
+        </ons-list-item>
+        <ons-list-item 
+            ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q);
+            ctl_learn_flashcard.var.more_menu.hide();">
+            <ons-icon icon="ion-image" fixed-width="true" class="image-search" ></ons-icon>
+            圖片搜尋
         </ons-list-item>
     </ons-list>
 </ons-popover>

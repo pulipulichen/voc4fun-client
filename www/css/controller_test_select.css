@@ -33,6 +33,10 @@
     display: none;
     max-height: 7rem;
     overflow-y: auto;
+    
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*.test-select-page .hint.show {
     display: block
@@ -66,4 +70,10 @@
 
 .test-select-page .result.incorrect {
     background-color: red;
+}
+
+@media (max-height: 500px) {
+    .test-select-page .ons-tab-bar__footer {
+        display: none;
+    }
 }

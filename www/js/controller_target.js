@@ -168,15 +168,21 @@ var controller_target = function ($scope) {
     _ctl.enter_for_view = function () {
         _var.use_pop_page = true;
         app.navi.pushPage("target_view.html");
+        return this;
     };
 
     _ctl.exit_from_view = function () {
         _var.use_pop_page = false;
         app.navi.popPage();
+        return this;
     };
 
     _ctl.enter_from_menu = function () {
+        if ($scope.CONFIG.control_group_version === true) {
+            return this;
+        }
         app.navi.replacePage("target_view_page.html", {"animation": "none"});
+        return this;
     };
 
     // ---------------------------

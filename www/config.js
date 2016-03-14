@@ -3,8 +3,10 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        "server_url": "http://localhost/voc4fun/voc4fun-server/",
+        //"server_url": "http://localhost/voc4fun/voc4fun-server/",
         //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
+        // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
         /**
          * 選擇題考試的選項數量
          */
@@ -21,7 +23,7 @@ var app_config = function ($scope) {
          * 
          * 會關閉部分功能
          */
-        "control_group_version": false,
+        "control_group_version": true,
         /**
          * 單元測試模式
          * 
@@ -45,6 +47,11 @@ var app_config = function ($scope) {
          * 小螢幕尺寸
          */
         small_width: 500,
+        
+        /**
+         * 是否啟用發音功能
+         */
+        enable_speak: false,
         
         /**
          * 是否顯示重置按鈕

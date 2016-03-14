@@ -59,3 +59,9 @@ ons-page .speak.hide {
 .learn-flashcard-page .notification .notification-text {
     display: none;
 }
+
+@media (max-height: 500px) {
+    .learn-flashcard-page .dictionary ons-icon {
+        display: none;
+    }
+}
