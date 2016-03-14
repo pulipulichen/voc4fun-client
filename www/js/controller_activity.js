@@ -22,7 +22,7 @@ var controller_activity = function ($scope) {
     
     _ctl.is_learn_enough = function () {
         var _target_data = $scope.ctl_target.status;
-        if (typeof(_target_data) === "undefined") {
+        if (typeof(_target_data) === "undefined" || typeof(_target_data.learn_flashcard) === "undefined") {
             return false;
         }
         //$.console_trace("enter_from_target", _target_data);

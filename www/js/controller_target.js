@@ -118,6 +118,12 @@ var controller_target = function ($scope) {
         }
 
         //$.console_trace("enter_from_profile", $scope.target_data);
+        
+        if ($scope.CONFIG.control_group_version === true) {
+            _status = _ctl.get_target_data_default();
+            $scope.ctl_activity.enter_from_target();
+            return this;
+        }
 
         _ctl.period_target_exists(function (_today_exists) {
             _ctl.before_target_exists(-1, function (_yesterday_exists) {
@@ -409,17 +415,19 @@ var controller_target = function ($scope) {
     _ctl.complete_target = function (_key) {
         if (_status[_key].done === _status[_key].target) {
             var _setting = _ctl._get_setting(_key);
-            var _title = _setting.title + "已經完成";
+            var _title = _setting.title + "已經完成"; // @TODO 語系
             setTimeout(function () {
-                ons.notification.alert({
-                    title: _title,
-                    message: _setting.complete_message,
-                    callback: function () {
-                        if (_ctl.get_complete_percent() === 100) {
-                            _ctl.complete_all_target();
+                if ($scope.CONFIG.control_group_version === false) {
+                    ons.notification.alert({
+                        title: _title,
+                        message: _setting.complete_message,
+                        callback: function () {
+                            if (_ctl.get_complete_percent() === 100) {
+                                _ctl.complete_all_target();
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }, 500);
             $scope.log(_log_file, "complete_target()", _key, _status[_key]);
         }
@@ -427,10 +435,12 @@ var controller_target = function ($scope) {
 
     _ctl.complete_all_target = function () {
         setTimeout(function () {
-            ons.notification.alert({
-                title: "太厲害了！",
-                message: "您達成了全部的目標了！"
-            });
+            if ($scope.CONFIG.control_group_version === false) {
+                ons.notification.alert({
+                    title: "太厲害了！", // @TODO 語系
+                    message: "您達成了全部的目標了！" // @TODO 語系
+                });
+            }
         }, 500);
     };
 

@@ -16,7 +16,7 @@
         <div class="right"
              ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target)}"
              ng-click="ctl_target.enter_for_view()"
-             ng-show="ctl_target.status.take_note.target !== 0">
+             ng-show="ctl_target.status.take_note.target !== 0 && !CONFIG.control_group_version">
             {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
         </div>
     </ons-toolbar>

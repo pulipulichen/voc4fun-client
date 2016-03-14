@@ -19,7 +19,7 @@
             <span ng-init="_target_data = ctl_target.status.learn_flashcard" 
                   ng-class="{'target-incompleted': (_target_data.done < _target_data.target)}"
                   ng-click="ctl_target.enter_for_view()"
-                  ng-show="_target_data.target !== 0">
+                  ng-show="_target_data.target !== 0 && !CONFIG.control_group_version">
                 {{ _target_data.done}} / {{ _target_data.target}}
             </span>
 

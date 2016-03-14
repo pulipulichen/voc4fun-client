@@ -74,6 +74,11 @@ var controller_notification = function ($scope, $filter) {
      * - 離開時顯示通知
      */
     _ctl.init = function () {
+        
+        if ($scope.CONFIG.control_group_version === true) {
+            return;
+        }
+        
         var _show = function () {
             _ctl.show_notification();
         };

@@ -45,7 +45,9 @@ var controller_note = function ($scope) {
                 {"onTransitionEnd": function () {
                         var _textarea = $("#note_html textarea");
                         _ctl._set_auto_grow(_textarea);
+                        _textarea.focus();
                     }});
+        return this;
     };
 
     _ctl.auto_grow = function ($event) {

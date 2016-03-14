@@ -15,7 +15,7 @@
         <div class="right"
              ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target)}"             
              ng-click="ctl_target.enter_for_view()"
-             ng-show="ctl_target.status.take_note.target !== 0">
+             ng-show="ctl_target.status.take_note.target !== 0 && !CONFIG.control_group_version">
             {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
         </div>
     </ons-toolbar>
@@ -29,7 +29,7 @@
 
     <div style="max-height: calc(100% - 140px); overflow-y: auto;">
         <ons-row>
-            <textarea class="note textarea textarea--transparent" placeholder="撰寫筆記..."
+            <textarea class="note textarea textarea--transparent" placeholder="撰寫筆記..." 
                       ng-keyup="ctl_note.auto_grow($event)"
                       style=" margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; 
                       background-color: #f9f9f9; overflow-y: auto;width: 100%;">{{ ctl_note_list.var.note}}</textarea>
