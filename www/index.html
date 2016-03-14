@@ -35,6 +35,7 @@
         <link rel="stylesheet" href="pulipuli-utils/css/ons.css" />
         <link rel="stylesheet" href="pulipuli-utils/css/bootstrap.css" />
 
+        <link rel="stylesheet" href="css/menu.css" />
         <link rel="stylesheet" href="css/page-about_html.css" />
         <link rel="stylesheet" href="css/controller_profile.css" />
         <link rel="stylesheet" href="css/controller_target.css" />
@@ -51,7 +52,7 @@
     <!-- ======================================== 
          View
          ======================================== -->
-    <body ng-controller="app_controller">
+    <body ng-controller="app_controller" ng-class="{'control_group_version': CONFIG.control_group_version}">
 
     <ons-sliding-menu id="menu" var="app.menu" 
                       main-page="main" menu-page="menu.html" max-slide-distance="200px" 

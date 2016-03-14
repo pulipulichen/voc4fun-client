@@ -91,7 +91,7 @@ ons-page ons-toolbar .right {
     }*/
 }   /* @media screen and (min-width: 700px) { */
 
-@media screen and (min-width: 400px) and (max-width: 550px) {
+@media screen and (min-width: 500px) and (max-width: 550px) {
 
     body:not(.main-full) .onsen-sliding-menu__menu {
         display: block !important;

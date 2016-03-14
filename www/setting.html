@@ -24,7 +24,7 @@
             <ons-row>
                 <ons-col>
                     <ons-icon icon="ion-person" size="20px"></ons-icon>
-                    您的名稱
+                    您的名稱 <!-- @TODO 語系 -->
                 </ons-col>
                 <ons-col style="text-align: right;">
                     <input type="text" ng-model="profile.name"
@@ -32,14 +32,15 @@
                            class="text-input text-input--transparent"
                            placeholder="請輸入您的名字"
                            name="name"
-                           style="width:calc(100% - 30px);font-size: 17px;margin:0;">
+                           style="width:calc(100% - 30px);font-size: 17px;margin:0;border-bottom: 1px solid gray;">
+                    <!-- @TODO 語系 -->
                 </ons-col>
             </ons-row>
         </ons-list-item>
         
         <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('target_edit.html')" ng-show="!CONFIG.control_group_version">
             <ons-icon icon="ion-ios-pie" size="20px"></ons-icon>
-            設定目標
+            設定目標 <!-- @TODO 語系 -->
         </ons-list-item>
         
         <ons-list-item modifier="chevron" ng-click="ctl_setting.share_app()" style="display:none;">
@@ -54,7 +55,7 @@
         
         <ons-list-item modifier="chevron" ng-click="ctl_setting.reset_app()">
             <ons-icon icon="ion-refresh" size="20px"></ons-icon>
-            重置
+            重置 <!-- @TODO 語系 -->
         </ons-list-item>
     </ons-list>
 </ons-page>

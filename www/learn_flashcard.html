@@ -52,29 +52,37 @@
 
 		<!--加入字典-0128-wyfan-->
 		<ons-row style="display: flex;" class="side dictionary">
-			<ons-col width=25% ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
-				<div style="text-align:center; cursor:pointer;">
+			<ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
+				<ons-button>
 					<ons-icon icon="ion-ios-book" fixed-width="true" class="yahhoo-dictionary" ></ons-icon>
-					中英字典
-				</div>
+                                        <div>
+                                            中英字典 <!-- @TODO 語系 -->
+                                        </div>
+				</ons-button>
 			</ons-col>
-			<ons-col width=25% ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
-				<div style="text-align:center; cursor:pointer;">
+			<ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
+				<ons-button>
 					<ons-icon icon="ion-ios-book" fixed-width="true" class="synonym-dictionary" "></ons-icon>
-					同義字字典
-				</div>
+                                        <div>
+                                            同義字字典 <!-- @TODO 語系 -->
+                                        </div>
+				</ons-button>
 			</ons-col>
-			<ons-col width=25% ng-click="ctl_activity.dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
-				<div style="text-align:center; cursor:pointer;">
+			<ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
+				<ons-button>
 					<ons-icon icon="ion-ios-book" fixed-width="true" class="radicals-dictionary" ></ons-icon>
-					字根字典
-				</div>	
+                                        <div>
+                                            字根字典 <!-- @TODO 語系 -->
+                                        </div>
+				</ons-button>	
 			</ons-col>
-			<ons-col width=25% ng-click="ctl_activity.image_search(ctl_learn_flashcard.var.learn_flashcard.q)">
-				<div style="text-align:center; cursor:pointer;">
+			<ons-col width=25% ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q)">
+				<ons-button>
 					<ons-icon icon="ion-image" fixed-width="true" class="image-search" ></ons-icon>
-					圖片搜尋
-				</div>	
+                                        <div>
+                                            圖片搜尋 <!-- @TODO 語系 -->
+                                        </div>
+				</ons-button>	
 			</ons-col>			
 		</ons-row>	
 		

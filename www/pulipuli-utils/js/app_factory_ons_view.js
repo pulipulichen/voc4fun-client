@@ -48,11 +48,11 @@ var _app_factory_ons_view = function ($scope) {
 
     // -------------------
     $scope.menu_click = function ($event) {
-        if ($(window).width() < 400) {
+        if ($(window).width() < $scope.CONFIG.small_width) {
             app.menu.close();
         }
         else {
-            //$.console_trace("視窗寬度" + $(window).width() + ", 不關閉");
+            $.console_trace("視窗寬度" + $(window).width() + ", 不關閉");
         }
 
         $("#menu_html .menu-active").removeClass("menu-active");
@@ -61,6 +61,12 @@ var _app_factory_ons_view = function ($scope) {
             _item = _item.parents("ons-list-item").eq(0);
         }
         _item.addClass("menu-active");
+        
+        // 加上記錄
+        var _text = _item.find(".menu-label").text();
+        _text = $.trim(_text);
+        //$.console_trace(_text);
+        $scope.log(_log_file, "menu_click()", undefined, _text);
     };
 
 

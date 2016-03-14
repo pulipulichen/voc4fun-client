@@ -32,7 +32,7 @@ var controller_activity = function ($scope) {
     
     _ctl.is_test_enough = function () {
         var _target_data = $scope.ctl_target.status;
-        if (typeof(_target_data) === "undefined") {
+        if (typeof(_target_data) === "undefined" || typeof(_target_data.test_select) === "undefined") {
             return false;
         }
         //$.console_trace("is_test_enough", _target_data);
@@ -53,44 +53,43 @@ var controller_activity = function ($scope) {
         $scope.cordova_text_to_speech.speak(_text, _lang);
     };
 	
+    var _window_name = "_blank";
+    if (typeof(cordova) === "object") {
+        _window_name = "_system";
+    }
+        
 	/**
 	 * 字典搜尋
-     * @param {String} _text
+         * @param {String} _text
 	 * https://tw.dictionary.yahoo.com/dictionary?p=diction
 	 */
-	 _ctl.dictionary = function ( _text, _dictionary ){
-		if ( _dictionary === "yahoo"){
-			var _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text;
-
-			window.open( _search_url, '_system');
-
-		}
-		else if(  _dictionary === "synonym"){
-			var _search_url = 'http://www.thesaurus.com/browse/'+ _text + '?s=t';
-			window.open( _search_url, '_system');			
-		}
-		else if( _dictionary === "radicals"){
-			var _search_url = 'http://www.english4formosa.com/drupal/?q=ety-search&keys_op=optional&keys='+ _text +'&field_tag_tid=All';
-			window.open( _search_url, '_system');		
-		}
-		//紀錄LOG	
-		$scope.log(_log_file, "dictionary()", _dictionary, _text);
+	_ctl.dictionary = function ( _text, _dictionary ){
+            var _search_url;
+            if ( _dictionary === "yahoo"){
+                _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text
+            }
+            else if(  _dictionary === "synonym"){
+                _search_url = 'http://www.thesaurus.com/browse/'+ _text + '?s=t';
+            }
+            else if( _dictionary === "radicals"){
+                _search_url = 'http://www.english4formosa.com/drupal/?q=ety-search&keys_op=optional&keys='+ _text +'&field_tag_tid=All';
+            }
+            window.open( _search_url, _window_name);
+            
+            //紀錄LOG	
+            $scope.log(_log_file, "query_dictionary()", _dictionary, _text);
 	};		
 
 	/**
 	* 圖片搜尋
 	*
 	*/
-	 _ctl.image_search = function ( _text ){
-
+	 _ctl.search_image = function ( _text ){
 		var _search_url = 'https://www.google.com.tw/search?q='+ _text +'&espv=2&tbm=isch&tbo=u&source=univ&sa=X';
-		window.open( _search_url, '_system');
+		window.open( _search_url, _window_name);
 
 		//紀錄LOG	
-		$scope.log(_log_file, "image_search()", {
-			"text": _text		
-		});		
-	 
+		$scope.log(_log_file, "search_image()", undefined, _text);	
 	 };	
 	 
 	 

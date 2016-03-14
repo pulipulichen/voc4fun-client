@@ -4,7 +4,7 @@ var app_config = function ($scope) {
          * 伺服器的位置
          */
         //"server_url": "http://localhost/voc4fun/voc4fun-server/",
-        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         /**
          * 選擇題考試的選項數量
          */
@@ -40,6 +40,11 @@ var app_config = function ($scope) {
         day_offset: 0,
         
         default_name: "Voc4Fun",
+        
+        /**
+         * 小螢幕尺寸
+         */
+        small_width: 500,
         
         /**
          * 表格名稱
