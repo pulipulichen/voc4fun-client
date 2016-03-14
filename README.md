@@ -30,3 +30,6 @@ https://github.com/hank7444/qunitTutorialTW
 
 * Bootstrap Button Options Color
 http://getbootstrap.com/css/#buttons-options
+
+* 資料庫重置的方法
+修改config.js

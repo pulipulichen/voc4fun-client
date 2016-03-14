@@ -126,7 +126,10 @@ var controller_profile = function ($scope) {
     
     _ctl.init = function (_callback) {
         if (_status.name === undefined) {
-            _status.name = $scope.cordova_utils.get_device_name();
+            //_status.name = $scope.cordova_utils.get_device_name();
+            $scope.cordova_utils.get_device_name(function (_name) {
+                _status.name = _name;
+            });
         }
         $.trigger_callback(_callback);
     };

@@ -36,6 +36,7 @@
         <link rel="stylesheet" href="pulipuli-utils/css/bootstrap.css" />
 
         <link rel="stylesheet" href="css/page-about_html.css" />
+        <link rel="stylesheet" href="css/controller_profile.css" />
         <link rel="stylesheet" href="css/controller_target.css" />
         <link rel="stylesheet" href="css/controller_learn_flashcard.css" />
         <link rel="stylesheet" href="css/controller_note.css" />
@@ -44,6 +45,7 @@
 
         <title>{{ 'TITLE' | translate }}</title>
 
+        <link rel="shortcut icon" type="image/png" href="img/Voc4Fun-icon256.png"/>
     </head>
 
     <!-- ======================================== 
@@ -102,6 +104,7 @@
     <!-- cordova -->
     <script src="cordova.js"></script>
     <script type="text/javascript" charset="utf-8" src="tts.js"></script>
+    <script type="text/javascript" charset="utf-8" src="telephonenumber.js"></script>
 
     <!-- ========================================= -->
 
@@ -159,6 +162,15 @@
                         $scope.db_status.ready(function () {
                             if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
                                 ons.ready(function () {
+                                    //if (typeof(cordova) === "object") {
+                                        //alert("等待");
+                                    //    document.addEventListener("deviceready", function () {
+                                    //        _app_ready($scope);
+                                    //    }, false);
+                                    //}
+                                    //else {
+                                    //    _app_ready($scope);
+                                    //}
                                     _app_ready($scope);
                                 });
                             }
@@ -171,15 +183,21 @@
 
                     };
 
-                    if ($scope.CONFIG.empty_dabase === true) {
+                    if ($scope.CONFIG.empty_database === true) {
                         $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
                             if (_is_exists === true) {
                                 // 偵測是否有Table
                                 $scope.DB.drop_table($scope.CONFIG.tables, function () {
-                                    $.getJSON($scope.CONFIG.server_url + "reset.php", function () {
-                                        // 網頁重新整理
+                                    if (typeof($scope.CONFIG.server_url) === "string") {
+                                        //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
+                                        $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
+                                            // 網頁重新整理
+                                            location.reload();
+                                        });
+                                    }
+                                    else {
                                         location.reload();
-                                    });
+                                    }
                                 });
                             }
                             else {

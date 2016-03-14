@@ -1,0 +1,5 @@
+@media (max-height: 400px) {
+    #profile_html img {
+        display: none;
+    }
+}

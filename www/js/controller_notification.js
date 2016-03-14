@@ -22,9 +22,11 @@ var controller_notification = function ($scope, $filter) {
             var _opt = {
                 id: _notification_id,
                 title: _data.title,
-                text: _notification_id,
-                sound: null,
-                ongoing: true   // 避免被關掉
+                text: _data.text,
+                sound: "file://sound/silent.ogg",
+                ongoing: true,   // 避免被關掉
+                //smallIcon: "res://img/ic_stat_voc4fun_icon256/res",
+                //icon: "file://img/Voc4Fun-icon256.png"
             };
 
             // 好吧，先假設她可以使用好了，按下去應該會打開app吧，我猜
@@ -49,14 +51,18 @@ var controller_notification = function ($scope, $filter) {
     };
 
     _ctl.hide_notification = function () {
-        if (typeof (cordova) === "object") {
+        if (typeof (cordova) === "object"
+            && typeof(cordova.plugins) !== "undefined"
+            && typeof(cordova.plugins.notification) !== "undefined") {
             cordova.plugins.notification.local.cancel(_notification_id);
         }
     };
 
     _ctl.get_notification_message = function () {
+        // @TODO 語系
         return {
             title: "全民樂單字",
+            sound: "",
             text: $scope.ctl_target.get_notification_message()
         };
     };

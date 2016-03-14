@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="pulipuli.blogspot.tw.voc4fun" version="1.0.0">
-    <name>NCCU Book Cart</name>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="blog.pulipuli.info.voc4fun" version="0.0.1">
+    <name>Voc4Fun</name>
     <description>
-        還在用筆抄要借的書嗎？政大借書籃讓您記錄在APP上，方便查詢。還可以直接掃描條碼來記錄喔！
-        本APP的原始碼開源於 https://github.com/pulipulichen/nccu-book-cart-client
+        全民樂單字，實驗用APP
     </description>
-    <author href="http://pulipuli.blogspot.tw" email="pulipuli.chen@gmail.com">布丁布丁吃布丁</author>
+    <author href="http://blog.pulipuli.info" email="pulipuli.chen@gmail.com">布丁布丁吃布丁</author>
   
     <!--  allows access to any external resource. -->
     <access origin="*"/>
@@ -13,7 +12,7 @@
     <content src="index.html"/>
     <icon src="icon.png"/>
   
-    <preference name="phonegap-version" value="3.7.0"/>
+    <preference name="phonegap-version" value="3.7.0" />
     
     <!-- 防止太多權限 -->
     <preference name="permissions" value="none" />
@@ -26,6 +25,8 @@
     <plugin name="org.apache.cordova.inappbrowser" spec="0.3.3" source="pgb" />
     <plugin name="nl.x-services.plugins.socialsharing" spec="4.3.8" source="pgb" />
     <gap:plugin name="de.appplant.cordova.plugin.local-notification"/>
+    <plugin name="de.appplant.cordova.plugin.local-notification" spec="0.8.1" source="pgb" />
+    <plugin name="com.simonmacdonald.telephonenumber" spec="1.0.0" source="pgb" />
     
     <plugin name="org.tt.plugin.tts" spec="1" source="pgb" />
     <!-- 操作說明: https://github.com/macdonst/TTS
