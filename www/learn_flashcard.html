@@ -34,7 +34,7 @@
         <ons-row style="display: flex;" class="side q "  ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"> 
 
             <ons-col align="top" >	
-                <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak"></ons-icon>
+                <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak" ng-show="CONFIG.enable_speak === true"></ons-icon>
 
                 {{ ctl_learn_flashcard.var.learn_flashcard.q}}
 
@@ -45,7 +45,7 @@
         			
         <!-- 中文的部分 -->
         <ons-row class="side a bg-info" ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.a, 'zh')">
-            <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak"></ons-icon>
+            <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak" ng-show="CONFIG.enable_speak === true"></ons-icon>
             {{ ctl_learn_flashcard.var.learn_flashcard.a}}
             <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak" ng-show="CONFIG.enable_speak === true"></ons-icon>
         </ons-row>

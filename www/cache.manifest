@@ -1,13 +1,12 @@
+
 CACHE MANIFEST
 about.html
 app_ready.js
-cache.manifest
 config.js
 index.html
 learn_flashcard.html
 learn_flashcard_more.html
 learn_flashcard_transition.html
-list_files.php
 menu.html
 note.html
 note_list.html
@@ -48,6 +47,12 @@ lib/responsivevoice/responsivevoice.js
 lib/qunit/qunit-git.css
 lib/qunit/qunit-git.js
 lib/onsen/js/onsenui.min.js
+lib/onsen/fonts/fontawesome-webfont.eot
+lib/onsen/fonts/fontawesome-webfont.svg
+lib/onsen/fonts/fontawesome-webfont.ttf
+lib/onsen/fonts/fontawesome-webfont.woff
+lib/onsen/fonts/fontawesome-webfont.woff2
+lib/onsen/fonts/FontAwesome.otf
 lib/onsen/css/onsen-css-components-blue-basic-theme.css
 lib/onsen/css/onsen-css-components-blue-theme.css
 lib/onsen/css/onsen-css-components-dark-theme.css
@@ -58,14 +63,8 @@ lib/onsen/css/onsen-css-components.css
 lib/onsen/css/onsenui.css
 lib/onsen/css/ionicons/fonts/ionicons.eot
 lib/onsen/css/ionicons/fonts/ionicons.svg
-lib/onsen/css/ionicons/fonts/ionicons.ttf
-lib/onsen/css/ionicons/fonts/ionicons.woff
-lib/onsen/css/ionicons/css/ionicons.css
-lib/onsen/css/ionicons/css/ionicons.min.css
-lib/onsen/css/ionicons/fonts/ionicons.eot
-lib/onsen/css/ionicons/fonts/ionicons.svg
-lib/onsen/css/ionicons/fonts/ionicons.ttf
-lib/onsen/css/ionicons/fonts/ionicons.woff
+lib/onsen/css/ionicons/fonts/ionicons.ttf?v=2.0.0
+lib/onsen/css/ionicons/fonts/ionicons.woff?v=2.0.0
 lib/onsen/css/ionicons/css/ionicons.css
 lib/onsen/css/ionicons/css/ionicons.min.css
 lib/onsen/css/font_awesome/fonts/fontawesome-webfont.eot

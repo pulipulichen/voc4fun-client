@@ -29,7 +29,7 @@
     <div class="question bg-info"
          ng-click="ctl_activity.speak(_test_select.question, 'zh')">
         
-        <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak hide"></ons-icon>
+        <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak hide" ng-show="CONFIG.enable_speak === true"></ons-icon>
         {{ _test_select.question }}
         <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak" ng-show="CONFIG.enable_speak === true"></ons-icon>
         

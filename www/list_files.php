@@ -30,10 +30,30 @@ function read_all_files($root = '.'){
   return $files; 
 } 
 
+$exclude_files = array(
+    '.\\cache.manifest',
+    '.\\list_files.php'
+);
+
+$replace_files = array(
+    "lib/onsen/css/ionicons/fonts/ionicons.ttf" => "lib/onsen/css/ionicons/fonts/ionicons.ttf?v=2.0.0",
+    "lib/onsen/css/ionicons/fonts/ionicons.woff" => "lib/onsen/css/ionicons/fonts/ionicons.woff?v=2.0.0",
+);
+
 $ary = read_all_files();
 $files = $ary['files'];
+
+echo "CACHE MANIFEST\n";
 foreach ($files AS $file) {
+    //echo $file;
+    if (in_array($file, $exclude_files) !== FALSE) {
+        continue;
+    }
+    
     $file = substr($file, 2);
     $file = str_replace("\\", "/", $file);
+    if (isset($replace_files[$file])) {
+        $file = $replace_files[$file];
+    }
     echo $file."\n";
 }

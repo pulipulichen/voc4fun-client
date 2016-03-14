@@ -402,6 +402,11 @@ var controller_learn_flashcard = function ($scope) {
     // --------------------------------------------------
 
     _ctl.other_note_ajax = function (_callback) {
+        //$.console_trace("other_note_ajax()", typeof(_var.learn_flashcard.q));
+        if (typeof(_var.learn_flashcard.q) !== "string") {
+            return;
+        }
+        
         var _id = _ctl.get_current_flashcard_id();
 
         var _data = {
@@ -412,6 +417,11 @@ var controller_learn_flashcard = function ($scope) {
         if (typeof($scope.CONFIG.server_url) === "string") {
             var _url = $scope.CONFIG.server_url + "model/note.php";
             setTimeout(function () {
+                if (typeof(_data.q) !== "string" || _data.q === "") {
+                    _ctl.other_note_ajax(_callback);
+                    return;
+                } 
+                
                 $.getJSON(_url, _data, function (_other_note) {
                     if (typeof(_other_note) === "object" && typeof(_other_note.name) === "string") {
                         _other_note = [_other_note];
