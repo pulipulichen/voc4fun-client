@@ -41,7 +41,16 @@ var app_config = function ($scope) {
          */
         day_offset: 0,
         
+        /**
+         * 預設的使用者名稱
+         */
         default_name: "Voc4Fun",
+        
+        /**
+         * 自動間隔同步時間，單位是分鐘
+         * -1表示不設定
+         */
+        sync_interval: 5,
         
         /**
          * 小螢幕尺寸

@@ -471,7 +471,11 @@ var db_log = function ($scope) {
                 document.addEventListener("online", _sync, false);
 
             }, false);
-
+        }
+        
+        if ($scope.CONFIG.sync_interval > 0) {
+            var _time = $scope.CONFIG.sync_interval * 1000 * 60;
+            setInterval(_sync, _time);
         }
 
         // 離開的情況
