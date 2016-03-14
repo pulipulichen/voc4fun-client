@@ -27,7 +27,7 @@ var _app_factory_db_utils = function ($scope) {
 
     $scope.DB.exec = function (_sql, _success_callback) {
 
-        $.console_trace("exec", _sql);
+        //$.console_trace("exec", _sql);
         if (typeof (_sql) !== "string") {
             $.console_trace("$scope.DB.exec error: _sql is not string");
             return;

@@ -290,8 +290,10 @@ var db_log = function ($scope) {
     var _syncing = false;
     _ctl.sync = function (_callback) {
         //ctl._init_db(function () {
+        $.console_trace("開始同步");
 
         if (typeof($scope.CONFIG.server_url) !== "string") {
+            $.console_trace("沒有遠端伺服器");
             return;
         }
 

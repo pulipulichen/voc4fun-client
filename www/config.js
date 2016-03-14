@@ -3,7 +3,8 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        "server_url": "http://localhost/voc4fun/voc4fun-server/",
+        //"server_url": "http://localhost/voc4fun/voc4fun-server/",
+        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         /**
          * 選擇題考試的選項數量
          */
@@ -31,7 +32,7 @@ var app_config = function ($scope) {
          * 清空資料庫的模式
          */
         //"empty_database": false,
-        "empty_database": true,
+        //"empty_database": true,
         
         /**
          * 設定時間偏移，單位是天數
