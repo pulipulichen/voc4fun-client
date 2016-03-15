@@ -85,7 +85,7 @@ var app_config = function ($scope) {
                 "min": 0,
                 "default_max": 100,
                 "title": "學習單字",
-                "help_img": "img/loading.svg",
+                "help_img": "img/go_learning.png",
                 "help": "設定每天目標學習的單字數量。",
                 "complete_message": "恭喜您完成了今日目標！"
             },
@@ -96,7 +96,7 @@ var app_config = function ($scope) {
                 "min": 0,
                 "default_max": 100,
                 "title": "撰寫筆記",
-                "help_img": "img/loading.svg",
+                "help_img": "img/write_note.png",
                 "help": "設定每天要撰寫的筆記數量。\n針對不同單字，寫下你對不同單字的筆記與想法。\n字數及內容不拘，可隨意發揮。",
                 "complete_message": "恭喜您完成了今日目標！"
             },
@@ -107,7 +107,7 @@ var app_config = function ($scope) {
                 "min": 0,
                 "default_max": 100,
                 "title": "答對測驗",
-                "help_img": "img/loading.svg",
+                "help_img": "img/ans_test.png",
                 "help": "設定每天目標答對的題目數量。\n題目都是三選一的選擇題。",
                 "complete_message": "恭喜您完成了今日目標！"
             }
