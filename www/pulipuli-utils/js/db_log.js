@@ -41,6 +41,9 @@ var db_log = function ($scope) {
      */
     $scope.log = function (_file_name, _function_name, _qualifier, _data, _callback) {
         //_ctl._init_db(function () {
+        if (_function_name === "set_target()") {
+            $.console_trace("set_target()");
+        }
 
             if (typeof (_qualifier) === "object"
                     && typeof (_data) === "undefined") {
@@ -157,7 +160,7 @@ var db_log = function ($scope) {
             $scope.DB.exec(_sql, function (_row) {
                 var _data;
                 if (_row.length > 0) {
-                    _data = JSON.parse(_row[0].data);
+                    _data = $.json_parse(_row[0].data);
                     
                     if (_return_timestamp === true) {
                         _data["_timestamp"] = _row[0].timestamp;
@@ -290,10 +293,10 @@ var db_log = function ($scope) {
     var _syncing = false;
     _ctl.sync = function (_callback) {
         //ctl._init_db(function () {
-        $.console_trace("開始同步");
+        //$.console_trace("開始同步");
 
         if (typeof($scope.CONFIG.server_url) !== "string") {
-            $.console_trace("沒有遠端伺服器");
+            //$.console_trace("沒有遠端伺服器");
             return;
         }
 

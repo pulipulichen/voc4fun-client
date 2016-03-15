@@ -3,9 +3,9 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        //"server_url": "http://localhost/voc4fun/voc4fun-server/",
-        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
-        //"server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
+        //"server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
+        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
         // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
         /**
          * 選擇題考試的選項數量
@@ -60,7 +60,7 @@ var app_config = function ($scope) {
         /**
          * 是否啟用發音功能
          */
-        enable_speak: false,
+        enable_speak: true,
         
         /**
          * 是否顯示重置按鈕
@@ -70,13 +70,19 @@ var app_config = function ($scope) {
         /**
          * 重置動作中包含遠端資料庫的重置
          */
-        enable_database_reset: false,
+        enable_database_reset: true,
+        
+        /**
+         * 遠端除錯功能
+         */
+        remote_debug: true,
         
         /**
          * 表格名稱
          * @params String[]
          */
-        "tables": ["log", "flashcard", "status", "target_history"],
+        //"tables": ["log", "flashcard", "status", "target_history"],
+        "tables": ["log"],
         "target_setting": [
             {
                 "key": "learn_flashcard",

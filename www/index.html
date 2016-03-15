@@ -73,6 +73,7 @@
     <script src="lib/fingerprint/fingerprint.min.js"></script>
     <script type="text/javascript" src="lib/js-xlsx/xlsx.core.min.js"></script>
 
+    <script src="pulipuli-utils/js/app_factory_localstorage_utils.js"></script>
     <script src="pulipuli-utils/js/app_factory_db_utils.js"></script>
     <script src="pulipuli-utils/js/app_factory_ons_view.js"></script>
     <script src="pulipuli-utils/js/app_factory_ons_utils.js"></script>
@@ -88,6 +89,7 @@
     <script src='lib/responsivevoice/responsivevoice.js'></script>
     <script src="pulipuli-utils/js/cordova_text_to_speech.js"></script>
 
+    <script src="js/controller_platform.js"></script>
     <script src="js/controller_profile.js"></script>
     <script src="js/controller_flashcard.js"></script>
     <script src="js/controller_target.js"></script>
@@ -112,112 +114,123 @@
     <!-- ========================================= -->
 
     <script type="text/javascript">
-                /*global ons:false */
-                /*global $translateProvider:false */
-                /*global $scope:false */
-                /*global $filter:false */
-                var app = ons.bootstrap('app', ['onsen', 'pascalprecht.translate']);
+        
+        /*global ons:false */
+        /*global $translateProvider:false */
+        /*global $scope:false */
+        /*global $filter:false */
+        var app = ons.bootstrap('app', ['onsen', 'pascalprecht.translate']);
 
-                /**
-                 * 翻譯
-                 * @link https://angular-translate.github.io/
-                 * @param {Object} $translateProvider 翻譯的工具
-                 */
-                app.config(function ($translateProvider) {
-                    $translateProvider.preferredLanguage('zh_TW');
-                    $translateProvider.useStaticFilesLoader({
-                        prefix: 'i18n/',
-                        suffix: '.json'
-                    });
+        /**
+         * 翻譯
+         * @link https://angular-translate.github.io/
+         * @param {Object} $translateProvider 翻譯的工具
+         */
+        app.config(function ($translateProvider) {
+            $translateProvider.preferredLanguage('zh_TW');
+            $translateProvider.useStaticFilesLoader({
+                prefix: 'i18n/',
+                suffix: '.json'
+            });
+        });
+
+        var _app_controller = function ($scope, $filter) {
+
+            app_config($scope);
+
+            _app_factory_db_utils($scope);
+            _app_factory_localstorage_utils($scope);
+            cordova_utils($scope);
+            _app_factory_jquery_utils($scope);
+
+            cordova_social_share($scope, $filter);
+            cordova_inappbrowser_submit($scope);
+            cordova_text_to_speech($scope);
+            _app_factory_ons_view($scope);
+            _app_factory_ons_utils($scope, $filter);
+
+            db_status($scope);
+            db_log($scope);
+
+            controller_platform($scope);
+            controller_profile($scope);
+            controller_flashcard($scope);
+            controller_target($scope);
+            controller_activity($scope);
+            controller_learn_flashcard($scope);
+            controller_note($scope);
+            controller_note_list($scope);
+            controller_test_select($scope);
+            controller_notification($scope, $filter);
+            controller_target_history($scope);
+            controller_setting($scope);
+
+            // -----------------------------------
+            
+            var _ready = function () {
+                if ($scope.CONFIG.remote_debug === true 
+                    && typeof($scope.CONFIG.server_url) === "string") {
+                    var _url = $scope.CONFIG.server_url + "model/debug_reset.php";
+                    $.get(_url);
+                }
+                
+                //$.console_trace("before $scope.db_status.ready(function () {");
+                $scope.db_status.ready(function () {
+                    //$.console_trace("after $scope.db_status.ready(function () {");
+                    if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
+                        ons.ready(function () {
+                            if (typeof(cordova) === "object") {
+                                //alert("等待");
+                                document.addEventListener("deviceready", function () {
+                                    _app_ready($scope);
+                                }, false);
+                            }
+                            else {
+                                _app_ready($scope);
+                            }
+                            //_app_ready($scope);
+                        });
+                    }
+                    else {
+                        if (typeof (QUNIT_INITED) === "undefined") {
+                            $.getScript("pulipuli-utils/qunit.js");
+                        }
+                    }
                 });
 
-                var _app_controller = function ($scope, $filter) {
+            };
 
-                    app_config($scope);
-
-                    _app_factory_db_utils($scope);
-                    cordova_utils($scope);
-                    _app_factory_jquery_utils($scope);
-
-                    cordova_social_share($scope, $filter);
-                    cordova_inappbrowser_submit($scope);
-                    cordova_text_to_speech($scope);
-                    _app_factory_ons_view($scope);
-                    _app_factory_ons_utils($scope, $filter);
-
-                    db_status($scope);
-                    db_log($scope);
-
-                    controller_profile($scope);
-                    controller_flashcard($scope);
-                    controller_target($scope);
-                    controller_activity($scope);
-                    controller_learn_flashcard($scope);
-                    controller_note($scope);
-                    controller_note_list($scope);
-                    controller_test_select($scope);
-                    controller_notification($scope, $filter);
-                    controller_target_history($scope);
-                    controller_setting($scope);
-
-                    // -----------------------------------
-
-                    var _ready = function () {
-                        $scope.db_status.ready(function () {
-                            if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
-                                ons.ready(function () {
-                                    if (typeof(cordova) === "object") {
-                                        //alert("等待");
-                                        document.addEventListener("deviceready", function () {
-                                            _app_ready($scope);
-                                        }, false);
-                                    }
-                                    else {
-                                        _app_ready($scope);
-                                    }
-                                    //_app_ready($scope);
+            if ($scope.CONFIG.empty_database === true) {
+                $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
+                    if (_is_exists === true) {
+                        // 偵測是否有Table
+                        $scope.DB.drop_table($scope.CONFIG.tables, function () {
+                            if (typeof($scope.CONFIG.server_url) === "string") {
+                                //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
+                                $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
+                                    // 網頁重新整理
+                                    location.reload();
                                 });
                             }
                             else {
-                                if (typeof (QUNIT_INITED) === "undefined") {
-                                    $.getScript("pulipuli-utils/qunit.js");
-                                }
-                            }
-                        });
-
-                    };
-
-                    if ($scope.CONFIG.empty_database === true) {
-                        $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
-                            if (_is_exists === true) {
-                                // 偵測是否有Table
-                                $scope.DB.drop_table($scope.CONFIG.tables, function () {
-                                    if (typeof($scope.CONFIG.server_url) === "string") {
-                                        //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
-                                        $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
-                                            // 網頁重新整理
-                                            location.reload();
-                                        });
-                                    }
-                                    else {
-                                        location.reload();
-                                    }
-                                });
-                            }
-                            else {
-                                _ready();
+                                location.reload();
                             }
                         });
                     }
                     else {
                         _ready();
                     }
-                };
+                });
+            }
+            else {
+                _ready();
+            }
+        };
 
-                app.controller('app_controller',
-                        ['$scope',
-                            '$filter',
-                            _app_controller]);
+        app.controller('app_controller',
+                ['$scope',
+                    '$filter',
+                    _app_controller]);
     </script>
 
     <!-- ============================= -->

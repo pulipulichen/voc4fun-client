@@ -1,10 +1,28 @@
 var _app_factory_db_utils = function ($scope) {
     $scope.DB = {};
     var _db;
+    
+    var _db_checked = false;
 
     var _init_db = function () {
+        //$.console_trace("var _init_db = function () {");
+        //alert(!window.openDatabase);
+        if (_db_checked === true) {
+            return;
+        }
+        
         if (_db === undefined) {
-            _db = openDatabase('open_database', '1.0', 'Pulipuli Open Database', 2 * 1024 * 1024);
+            try {
+                _db = openDatabase('open_database', '1.0', 'Pulipuli Open Database', 2 * 1024 * 1024 );
+                //$.console_trace("finish");
+            }
+            catch (_error) {
+                //$.console_trace("finish1");
+                $.console_trace("OpenDatabase Error", _error.message);
+                _db_checked = true;
+                alert("資料庫初始化失敗，不能使用");
+            }
+            
             //console.log(typeof(_db.transaction));
         }
         return _db;
@@ -35,6 +53,7 @@ var _app_factory_db_utils = function ($scope) {
 
         _init_tables(function () {
             _db.transaction(function (_tx) {
+                //$.console_trace("表格建好了，準備執行");
                 _tx.executeSql(_sql, [], function (_tx, _results) {
                     if (typeof (_success_callback) === "function") {
                         var _data = [];
@@ -48,7 +67,7 @@ var _app_factory_db_utils = function ($scope) {
                             }
                             _data.push(_d);
                         }
-                        ;
+                        
                         _success_callback(_data);
                     }
                 }, function (_tx, _error) {
@@ -64,8 +83,11 @@ var _app_factory_db_utils = function ($scope) {
     var _tables_inited = false;
 
     var _init_tables = function (_callback) {
+        //$.console_trace("var _init_tables = function (_callback) {");
         if (_tables_inited === false) {
+            //$.console_trace("before _init_db();");
             _init_db();
+            //$.console_trace("_init_db();");
             var _keys = $.array_keys(_register_data);
             
             //$.console_trace("_init_tables", _keys);
@@ -73,19 +95,23 @@ var _app_factory_db_utils = function ($scope) {
                 if (_i < _keys.length) {
                     var _table_name = _keys[_i];
                     var _fields = _register_data[_table_name];
+                    //$.console_trace("before $scope.DB.create_table(_table_name, _fields, function () {");
                     $scope.DB.create_table(_table_name, _fields, function () {
+                        //$.console_trace("after $scope.DB.create_table(_table_name, _fields, function () {");
                         _i++;
                         _loop(_i);
                     });
                 }
                 else {
                     _tables_inited = true;
+                    //$.console_trace("1a");
                     $.trigger_callback(_callback);
                 }
             };
             _loop(0);
         }
         else {
+            //$.console_trace("1b");
             $.trigger_callback(_callback);
         }
     };
@@ -93,9 +119,10 @@ var _app_factory_db_utils = function ($scope) {
     // ----------------------------------
 
     $scope.DB.create_table = function (_table_name, _field_name_list, _success_callback) {
+        //var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + " (";
         var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + " (";
 
-        _sql = _sql + "id INTEGER PRIMARY KEY, ";
+        _sql = _sql + "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ";
 
         for (var _i in _field_name_list) {
             var _field_name = _field_name_list[_i];
@@ -108,8 +135,13 @@ var _app_factory_db_utils = function ($scope) {
         //$scope.DB.exec(_sql, _success_callback);
         //$.console_trace("create table_name", _table_name);
         _init_db();
+        
+        //$.console_trace("before _db.transaction(function (_tx) {");
         _db.transaction(function (_tx) {
-            _tx.executeSql(_sql, [], _success_callback);
+            //$.console_trace("before _tx.executeSql(_sql, [], _success_callback);");
+            _tx.executeSql(_sql, [], _success_callback, function (_tx, _error) {
+                $scope.DB.error_handler(_tx, _error, _sql);
+            });
         });
         return this;
     };
@@ -319,6 +351,7 @@ var _app_factory_db_utils = function ($scope) {
 
     $scope.DB.get = function (_table_name, _callback) {
         var _sql = "SELECT * from " + _table_name;
+        //$.console_trace(_sql);
         return $scope.DB.exec(_sql, _callback);
     };
 };

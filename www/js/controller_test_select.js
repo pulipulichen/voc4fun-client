@@ -91,7 +91,9 @@ var controller_test_select = function ($scope) {
             }
             else {
                 _var.test_select = _test;
-                $scope.$digest();
+                
+                ons.digest();
+                
                 app.navi.replacePage("test_select.html", {
                     "animation": "none",
                     "onTransitionEnd": _do_callback

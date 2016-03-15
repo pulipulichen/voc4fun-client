@@ -35,7 +35,8 @@ var controller_flashcard = function ($scope) {
     
     // -----------------------
     
-    $scope.DB.register_table(_db_name, _db_fields);
+    //$scope.DB.register_table(_db_name, _db_fields);
+    
     _ctl.setup = function (_callback) {
         // 從xlsx讀取資料
 
@@ -48,32 +49,62 @@ var controller_flashcard = function ($scope) {
                     _status.flashcard_count = _data.length;
                     $scope.db_status.save_status(_status_key);
                     _data = $.array_shuffle(_data);
-                    //$.console_log(_data);
-                    $scope.DB.insert(_db_name, _data, _callback);
+                    
+                    //$scope.DB.insert(_db_name, _data, _callback);
+                    
+                    $scope.ls.set(_db_name, _data);
+                    //_data = $scope.ls.get(_db_name, 0);
+                    //$.console_trace(_data);
+                    
+                    $.trigger_callback(_callback);
                 });
             //});
         };
             
-        $scope.DB.row_exists(_db_name, function (_result) {
-            if (_result === true) {
-                //$.console_trace("已經建立了");
-                $.trigger_callback(_callback);
-            }
-            else {
-                _create_table();
-            }
-        });
+//        $scope.DB.row_exists(_db_name, function (_result) {
+//            if (_result === true) {
+//                //$.console_trace("已經建立了");
+//                $.trigger_callback(_callback);
+//            }
+//            else {
+//                _create_table();
+//            }
+//        });
+        if ($scope.ls.isTableExists(_db_name) === false) {
+            _create_table();
+        }
+        else {
+            $.trigger_callback(_callback);
+        }
     };
     
     _ctl.get_flashcard = function(_id, _callback) {
-        var _sql = "SELECT * FROM flashcard WHERE id = " + _id;
-        $scope.DB.exec(_sql, function (_data) {
-            var _flashcard;
-            if (_data.length > 0) {
-                _flashcard = _data[0];
+//        var _sql = "SELECT * FROM flashcard WHERE id = " + _id;
+//        $scope.DB.exec(_sql, function (_data) {
+//            var _flashcard;
+//            if (_data.length > 0) {
+//                _flashcard = _data[0];
+//            }
+//            $.trigger_callback(_callback, _flashcard);
+//        });
+        //_id--;
+        var _flashcard = $scope.ls.get(_db_name, _id);
+        if (typeof(_flashcard) === "object") {
+            _flashcard.id = _id;
+        }
+        //$.console_trace(_flashcard);
+        $.trigger_callback(_callback, _flashcard);
+        return _flashcard;
+    };
+    
+    _ctl.find_flashcard = function (_q) {
+        var _flashcards = $scope.ls.get(_db_name);
+        
+        for (var _i = 0; _i < _flashcards.length; _i++) {
+            if (_flashcards[_i].q === _q) {
+                return _flashcards[_i];
             }
-            $.trigger_callback(_callback, _flashcard);
-        });
+        }
     };
     
     _ctl.get_other_flashcards = function (_exclude_id, _length, _callback) {
@@ -103,17 +134,21 @@ var controller_flashcard = function ($scope) {
             }
         }
         
-        _random_index = [0, 5];
-        $.console_trace("random_index", _random_index);
+        //_random_index = [0, 5];
+        //$.console_trace("random_index", _random_index);
         
         var _loop = function (_i) {
             if (_i < _random_index.length) {
-                var _sql = "SELECT * FROM flashcard WHERE id != " + _exclude_id + " LIMIT " + _random_index[_i] + ", 1";
-                $scope.DB.exec(_sql, function (_row) {
-                    _other_cards.push(_row[0]);
-                    _i++;
-                    _loop(_i);
-                });
+//                var _sql = "SELECT * FROM flashcard WHERE id != " + _exclude_id + " LIMIT " + _random_index[_i] + ", 1";
+//                $scope.DB.exec(_sql, function (_row) {
+//                    _other_cards.push(_row[0]);
+//                    _i++;
+//                    _loop(_i);
+//                });
+                var _flashcard = _ctl.get_flashcard(_random_index[_i]);
+                _other_cards.push(_flashcard);
+                _i++;
+                _loop(_i);
             }
             else {
                 $.trigger_callback(_callback, _other_cards);
@@ -126,12 +161,16 @@ var controller_flashcard = function ($scope) {
     // -----------------------
     
     _ctl.set_note = function (_id, _note, _callback) {
-        var _data = {
-            note: _note
-        };
-        var _where_sql = 'id = ' + _id;
+//        var _data = {
+//            note: _note
+//        };
+        //var _where_sql = 'id = ' + _id;
         
-        $scope.DB.update(_db_name, _data, _where_sql, _callback);
+        //$scope.DB.update(_db_name, _data, _where_sql, _callback);
+        var _flashcard = _ctl.get_flashcard(_id);
+        _flashcard.note = _note;
+        $scope.ls.set(_db_name, _id, _flashcard);
+        $.trigger_callback(_callback);
     };
     
     // -----------------------

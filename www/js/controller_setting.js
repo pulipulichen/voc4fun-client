@@ -18,6 +18,7 @@ var controller_setting = function ($scope) {
     
     _ctl.reset_app = function () {
         if (window.confirm("您確定要重置嗎？")) {
+            localStorage.clear();
             $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
                 if (_is_exists === true) {
                     // 偵測是否有Table
@@ -25,7 +26,7 @@ var controller_setting = function ($scope) {
                         if (typeof ($scope.CONFIG.server_url) === "string" 
                                 && $scope.CONFIG.enable_database_reset === true) {
                             //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
-                            $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
+                            $.getJSON($scope.CONFIG.server_url + "model/reset.php?uuid=" + $scope.ctl_profile.status.uuid, function () {
                                 // 網頁重新整理
                                 _reload();
                             });

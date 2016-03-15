@@ -76,7 +76,7 @@ var controller_learn_flashcard = function ($scope) {
         /**
          * 查詢單字卡用的索引
          */
-        flashcard_index: 0,
+        flashcard_index: -1,
         /**
          * 需要複習的單字卡索引，保存的是ID喔
          */
@@ -170,7 +170,10 @@ var controller_learn_flashcard = function ($scope) {
                     $scope.ctl_target.done_plus("learn_flashcard");
                 }
 
-                $scope.$digest();
+                setTimeout(function () {
+                    $scope.$digest();
+                }, 0);
+                
 
                 _trans_callback(_flashcard);
             };
@@ -344,18 +347,31 @@ var controller_learn_flashcard = function ($scope) {
         var _id = _status.flashcard_index;
 
         // 如果跟現在的id相同，則繼續下一個
+        
+        //_id++;
+        $.console_trace(typeof(_id), _id);
 
-        $scope.ctl_flashcard.get_flashcard(_id, function (_flashcard) {
+//        $scope.ctl_flashcard.get_flashcard(_id, function (_flashcard) {
+//            //$.console_trace("test");
+//            if (_flashcard === undefined) {
+//                // 表示已經到了最後一列
+//                _status.flashcard_index = 0;
+//                _ctl.add_new_flashcard(_callback);
+//            }
+//            else {
+//                $.trigger_callback(_callback, _flashcard);
+//            }
+//        });
+        
+        var _flashcard = $scope.ctl_flashcard.get_flashcard(_id);
             if (_flashcard === undefined) {
                 // 表示已經到了最後一列
                 _status.flashcard_index = 0;
                 _ctl.add_new_flashcard(_callback);
             }
             else {
-
                 $.trigger_callback(_callback, _flashcard);
             }
-        });
     };
 
     _ctl.add_review_flashcard = function (_callback) {

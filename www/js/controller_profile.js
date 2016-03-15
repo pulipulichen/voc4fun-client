@@ -27,6 +27,7 @@ var controller_profile = function ($scope) {
         return $scope.db_status.add_listener(
                 _status_key,
                 function (_s) {
+                    //$.console_trace("ctl_profile", _s);
                     _ctl.status = _s;
                     _status = _s;
                     _ctl.setup_uuid();
