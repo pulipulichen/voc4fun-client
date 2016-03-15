@@ -92,7 +92,7 @@ var app_config = function ($scope) {
             {
                 "key": "take_note",
                 //"default_target": 20,
-                "default_target": 2,
+                "default_target": 10,
                 "min": 0,
                 "default_max": 100,
                 "title": "撰寫筆記",
@@ -103,7 +103,7 @@ var app_config = function ($scope) {
             {
                 "key": "test_select",
                 //"default_target": 30,
-                "default_target": 3,
+                "default_target": 10,
                 "min": 0,
                 "default_max": 100,
                 "title": "答對測驗",
