@@ -23,7 +23,7 @@ var app_config = function ($scope) {
          * 
          * 會關閉部分功能
          */
-        "control_group_version": false,
+        "control_group_version": true,
         /**
          * 單元測試模式
          * 
