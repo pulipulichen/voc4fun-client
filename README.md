@@ -1,4 +1,10 @@
 
+實驗組網址：
+http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-client/www/
+
+控制組網址：
+http://exp-voc4fun-2015.dlll.nccu.edu.tw/ctl/voc4fun-client/www/
+
 # GITHUB URL
 https://github.com/pulipulichen/voc4fun-client
 
