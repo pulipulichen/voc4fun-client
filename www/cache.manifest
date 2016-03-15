@@ -24,6 +24,7 @@ sound/silent.ogg
 pulipuli-utils/js/app_factory_db_utils.js
 pulipuli-utils/js/app_factory_jquery.js
 pulipuli-utils/js/app_factory_jquery.qunit.js
+pulipuli-utils/js/app_factory_localstorage_utils.js
 pulipuli-utils/js/app_factory_ons_utils.js
 pulipuli-utils/js/app_factory_ons_view.js
 pulipuli-utils/js/cordova_inappbrowser_submit.js
@@ -95,6 +96,7 @@ js/controller_note.js
 js/controller_note_list.js
 js/controller_note_list.qunit.js
 js/controller_notification.js
+js/controller_platform.js
 js/controller_profile.js
 js/controller_profile.qunit.js
 js/controller_setting.js
@@ -102,12 +104,16 @@ js/controller_target.js
 js/controller_target.qunit.js
 js/controller_target_history.js
 js/controller_test_select.js
+img/ans_test.png
+img/go_learning.png
 img/loading.svg
 img/pudding-icon.svg
+img/shun.jpg
 img/Voc4Fun-icon.png
 img/Voc4Fun-icon256.png
+img/write_note.png
 i18n/zh_TW.json
-data/flashcard-little.xlsx
+data/flashcard-full.xlsx
 data/flashcard.xlsx
 css/controller_learn_flashcard.css
 css/controller_note.css
@@ -116,3 +122,5 @@ css/controller_target.css
 css/controller_test_select.css
 css/menu.css
 css/page-about_html.css
+NETWORK:
+*

@@ -99,10 +99,12 @@ var controller_flashcard = function ($scope) {
     
     _ctl.find_flashcard = function (_q) {
         var _flashcards = $scope.ls.get(_db_name);
-        
+        //$.console_trace("find_flashcard", _q);
         for (var _i = 0; _i < _flashcards.length; _i++) {
             if (_flashcards[_i].q === _q) {
-                return _flashcards[_i];
+                var _flashcard = _flashcards[_i];
+                _flashcard.id = _i;
+                return _flashcard;
             }
         }
     };

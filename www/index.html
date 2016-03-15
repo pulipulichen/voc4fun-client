@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!-- CSP support mode (required for Windows Universal apps): https://docs.angularjs.org/api/ng/directive/ngCsp -->
-<html lang="en" ng-csp>
+<html lang="en" ng-csp ng-csp>
 <!-- <html lang="en" ng-csp manifest="cache.manifest" type="text/cache-manifest"> -->
     <head>
         <meta charset="utf-8" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="viewport" content="minimal-ui">
+        <meta name="viewport" content="minimal-ui" />
 
         <!-- ======================================== 
              Library
@@ -49,6 +49,7 @@
         <title>{{ 'TITLE' | translate }}</title>
 
         <link rel="shortcut icon" type="image/png" href="img/Voc4Fun-icon256.png"/>
+        <link rel="apple-touch-icon" href="img/Voc4Fun-icon256.png" />
     </head>
 
     <!-- ======================================== 

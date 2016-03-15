@@ -75,7 +75,7 @@ var controller_note_list = function ($scope) {
 //            });
 //        });
         
-        var _flashcard = $scope.ctl_flashcard.find_flashcard($scope.DB._escape_value(_var.q));
+        var _flashcard = $scope.ctl_flashcard.find_flashcard(_var.q);
         _var.flashcard_id = _flashcard.id;
             
             app.navi.pushPage("note_list_view.html", {
