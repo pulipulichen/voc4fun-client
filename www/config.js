@@ -81,7 +81,7 @@ var app_config = function ($scope) {
             {
                 "key": "learn_flashcard",
                 //"default_target": 30,
-                "default_target": 3,
+                "default_target": 10,
                 "min": 0,
                 "default_max": 100,
                 "title": "學習單字",
