@@ -94,10 +94,9 @@
         <ons-icon icon="ion-edit" fixed-width="true" class="compose"></ons-icon>
 
         <span class="your-note pre" 
-              ng-show="(ctl_learn_flashcard.var.learn_flashcard.note !== null)">{{ ctl_learn_flashcard.var.learn_flashcard.note}}</span>
-
+              ng-show="(ctl_learn_flashcard.var.learn_flashcard.note !== null && ctl_learn_flashcard.var.learn_flashcard.note !== undefined)">{{ ctl_learn_flashcard.var.learn_flashcard.note}}</span>
         <span class="note-empty" 
-              ng-show="(ctl_learn_flashcard.var.learn_flashcard.note === null)">
+              ng-show="(ctl_learn_flashcard.var.learn_flashcard.note === null || ctl_learn_flashcard.var.learn_flashcard.note === undefined)">
             {{ 'LEARN_FLASHCARD_NOTE_EMPTY' | translate }}
         </span>
     </div>

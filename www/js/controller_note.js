@@ -42,10 +42,12 @@ var controller_note = function ($scope) {
 //        $scope.$digest();
         app.navi.pushPage(
                 "note.html",
-                {"onTransitionEnd": function () {
+                {"onTransitionEnd": function (_event) {
                         var _textarea = $("#note_html textarea");
                         _ctl._set_auto_grow(_textarea);
+                        //alert(_textarea.length);
                         _textarea.focus();
+                        _textarea.select();
                     }});
         return this;
     };
@@ -79,12 +81,13 @@ var controller_note = function ($scope) {
     };
 
     _ctl.submit = function ($event) {
+        //alert(1);
 //        var _note = _var.note;
         //var _note = $("#note_html textarea").val();
         var _note = $($event.target).parents("ons-page").eq(0).find("textarea.note").val();
         _note = $.trim(_note);
 
-        if ($scope.ctl_learn_flashcard.var.learn_flashcard.note !== _note) {
+        if (_note !== "" && $scope.ctl_learn_flashcard.var.learn_flashcard.note !== _note) {
             _ctl.save_note_to_db(_note);
 
             if (_note !== "") {

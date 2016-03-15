@@ -24,6 +24,7 @@ var _app_factory_jquery_utils = function ($scope) {
             }
         }
         
+        //alert(_remote_debug);
         if ($scope.CONFIG.remote_debug === true 
                 && typeof($scope.CONFIG.server_url) === "string") {
             var _url = $scope.CONFIG.server_url + "model/debug.php";
@@ -296,5 +297,17 @@ var _app_factory_jquery_utils = function ($scope) {
             }
             return _json;
         }
+    };
+    
+    $.array_append = function (_ary1, _ary2) {
+        if ($.is_array(_ary1) === false) {
+            _ary1 = [];
+        }
+        //$.console_trace(_ary1);
+        //$.console_trace(_ary2);
+        for (var _i = 0; _i < _ary2.length; _i++) {
+            _ary1.push(_ary2[_i]);
+        }
+        return _ary1;
     };
 };

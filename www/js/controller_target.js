@@ -42,7 +42,7 @@ var controller_target = function ($scope) {
         return $scope.db_status.add_listener(
                 _status_key,
                 function (_s) {
-                    $.console_trace("呼叫target status");
+                    //$.console_trace("呼叫target status");
                     //$.clone_json(_ctl.status, _s);
                     _ctl.status = _s;
                     _status = _s;
@@ -129,9 +129,9 @@ var controller_target = function ($scope) {
         _ctl.period_target_exists(function (_today_exists) {
             _ctl.before_target_exists(-1, function (_yesterday_exists) {
                 var _page = "target_view.html";
-                $.console_trace("exists", [_today_exists, _yesterday_exists]);
+                //$.console_trace("exists", [_today_exists, _yesterday_exists]);
                 if (_today_exists === false) {
-                    $.console_trace("今天沒有資料的情況", _yesterday_exists);
+                    //$.console_trace("今天沒有資料的情況", _yesterday_exists);
                     _ctl._init_target_data();
                     if (_yesterday_exists === false) {
                         // 沒有今天，也沒有昨天資料的情況
@@ -144,13 +144,13 @@ var controller_target = function ($scope) {
                 }
 
                 //$scope.target_data.learn_flashcard.done = 50;
-                $.console_trace(_page, _animation);
+                //$.console_trace(_page, _animation);
                 //$.console_trace("enter_from_profile()", _page);
                 if (_page === "target_recommend.html") {
 
                     // 把昨天的資料加入
                     _ctl.get_yesterday_target_data(function (_target_data) {
-                        $.console_trace("!!", _target_data);
+                        //$.console_trace("!!", _target_data);
                         _ctl.add_target_history(_target_data);
 
                         _ctl.init_recommend_target_data(function () {
@@ -399,6 +399,9 @@ var controller_target = function ($scope) {
 
         if (!(_val < _min || _val > _max)) {
             _input.val(_val);
+        }
+        else {
+            _input.val(_max);
         }
         return this;
     };

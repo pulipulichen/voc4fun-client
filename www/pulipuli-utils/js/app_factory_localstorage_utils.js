@@ -12,8 +12,9 @@ var _app_factory_localstorage_utils = function ($scope) {
         if (_table === undefined) {
             return;
         }
-        //$.console_trace("test");
-        if (typeof(_key) === "string") {
+        //$.console_trace("set() table", _table);
+        //$.console_trace("set() typeof key", typeof(_key));
+        if (typeof(_key) === "string" || typeof(_key) === "number") {
 
             var _data = _ctl.get(_table);
             

@@ -62,7 +62,7 @@ var controller_test_select = function ($scope) {
 
     _ctl.enter = function (_callback, _do_animation) {
         // 讓選單保持在選取的狀態
-        $scope.ons_view.active_menu(2);
+        $scope.ons_view.active_menu(3);
         
         return _ctl.next(_callback, _do_animation);
     };

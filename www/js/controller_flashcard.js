@@ -169,6 +169,8 @@ var controller_flashcard = function ($scope) {
         //$scope.DB.update(_db_name, _data, _where_sql, _callback);
         var _flashcard = _ctl.get_flashcard(_id);
         _flashcard.note = _note;
+        delete _flashcard.id;
+        //$.console_trace("輸入筆記 " + _id, _flashcard);
         $scope.ls.set(_db_name, _id, _flashcard);
         $.trigger_callback(_callback);
     };
