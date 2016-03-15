@@ -62,7 +62,7 @@ var controller_target_history = function ($scope) {
 //    //_ctl._init_db();
 //    
 //    
-    //$scope.DB.register_table(_table_name, _field_list);
+    $scope.DB.register_table(_table_name, _field_list);
 
     // -------------------------------------------------
 

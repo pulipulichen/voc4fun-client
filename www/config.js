@@ -88,7 +88,7 @@ var app_config = function ($scope) {
          * @params String[]
          */
         //"tables": ["log", "flashcard", "status", "target_history"],
-        "tables": ["log"],
+        "tables": ["log", "target_history"],
         "target_setting": [
             {
                 "key": "learn_flashcard",
