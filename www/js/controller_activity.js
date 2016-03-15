@@ -73,7 +73,7 @@ var controller_activity = function ($scope) {
                 _search_url = 'https://tw.dictionary.yahoo.com/dictionary?p=' + _text
             }
             else if(  _dictionary === "synonym"){
-                _search_url = 'http://www.thesaurus.com/browse/'+ _text + '?s=t';
+                _search_url = 'http://dictionary.sina.com.tw/word/ec/'+ _text;
             }
             else if( _dictionary === "radicals"){
                 _search_url = 'http://www.english4formosa.com/drupal/?q=ety-search&keys_op=optional&keys='+ _text +'&field_tag_tid=All';
