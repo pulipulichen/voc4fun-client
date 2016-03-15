@@ -108,6 +108,7 @@ img/pudding-icon.svg
 img/Voc4Fun-icon.png
 img/Voc4Fun-icon256.png
 i18n/zh_TW.json
+data/flashcard-little.xlsx
 data/flashcard.xlsx
 css/controller_learn_flashcard.css
 css/controller_note.css
