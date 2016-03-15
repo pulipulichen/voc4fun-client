@@ -44,7 +44,7 @@ var app_config = function ($scope) {
         /**
          * 預設的使用者名稱
          */
-        default_name: "Voc4Fun",
+        default_name: "Voc4FunE",
         
         /**
          * 自動間隔同步時間，單位是分鐘
