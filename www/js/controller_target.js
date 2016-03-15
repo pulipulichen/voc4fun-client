@@ -341,7 +341,7 @@ var controller_target = function ($scope) {
             _log_data[_key] = _target;
         }
 
-        $.console_trace("什麼時候寫進去的？", _status_key);
+        //$.console_trace("什麼時候寫進去的？", _status_key);
         $scope.log(_log_file, "set_target()", _log_data);
         //$.console_trace(_log_data);
 

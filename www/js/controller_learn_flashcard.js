@@ -349,7 +349,7 @@ var controller_learn_flashcard = function ($scope) {
         // 如果跟現在的id相同，則繼續下一個
         
         //_id++;
-        $.console_trace(typeof(_id), _id);
+        //$.console_trace(typeof(_id), _id);
 
 //        $scope.ctl_flashcard.get_flashcard(_id, function (_flashcard) {
 //            //$.console_trace("test");
