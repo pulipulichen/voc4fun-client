@@ -28,12 +28,17 @@ var controller_target_history = function ($scope) {
             $scope.log(_log_file, "add()", _complete_percent, _target_data);
         };
 
-        var _where_sql = " year = " + _date.year
-                + " AND month = " + _date.month
-                + " AND day = " + _date.day;
+//        var _where_sql = " year = " + _date.year
+//                + " AND month = " + _date.month
+//                + " AND day = " + _date.day;
+        var _where_data = {
+            "year": _date.year,
+            "month": _date.month,
+            "day": _date.day
+        };
         
         // 不要重複記錄啊
-        $scope.DB.count(_table_name, _where_sql, function (_result) {
+        $scope.DB.count(_table_name, _where_data, function (_result) {
             if (_result === 0) {
                 _add_process();
             }
@@ -55,6 +60,8 @@ var controller_target_history = function ($scope) {
 //        return this;
 //    };
 //    //_ctl._init_db();
+//    
+//    
     $scope.DB.register_table(_table_name, _field_list);
 
     // -------------------------------------------------

@@ -23,12 +23,14 @@ var _app_factory_ons_view = function ($scope) {
         
         $scope.log(_log_file, "exit_app()");
         
-        if (typeof (cordova) !== "undefined") {
-            navigator.app.exitApp();
-        }
-        else {
-            window.close();
-        }
+        $scope.sync(function () {
+            if (typeof (cordova) !== "undefined") {
+                navigator.app.exitApp();
+            }
+            else {
+                window.close();
+            }
+        });
     };
     // -------------------------
 
@@ -52,20 +54,31 @@ var _app_factory_ons_view = function ($scope) {
             app.menu.close();
         }
         else {
-            $.console_trace("視窗寬度" + $(window).width() + ", 不關閉");
+            //$.console_trace("視窗寬度" + $(window).width() + ", 不關閉");
         }
-
-        $("#menu_html .menu-active").removeClass("menu-active");
-        var _item = $($event.target);
-        if (_item.attr("nodeName").toLowerCase() !== "ons-list-item") {
-            _item = _item.parents("ons-list-item").eq(0);
-        }
-        _item.addClass("menu-active");
         
-        // 加上記錄
-        var _text = _item.find(".menu-label").text();
-        _text = $.trim(_text);
-        //$.console_trace(_text);
+        var _text = "setting";
+        if (typeof($event.target) === "object") {
+            $("#menu_html .menu-active").removeClass("menu-active");
+            var _item = $($event.target);
+            if (_item.attr("nodeName").toLowerCase() !== "ons-list-item") {
+                _item = _item.parents("ons-list-item").eq(0);
+            }
+            _item.addClass("menu-active");
+            
+            //alert($event.target.getAttribute("icon"));
+            // 加上記錄
+            if (_item.find(".menu-label").length > 0) {
+                _text = _item.find(".menu-label").text();
+                _text = $.trim(_text);
+                //alert(1);
+            }
+            else if (typeof($event.target.getAttribute("icon")) === "string") {
+                _text = $event.target.getAttribute("icon");
+                //alert(2, _text);
+            }
+        }
+        
         $scope.log(_log_file, "menu_click()", undefined, _text);
     };
 

@@ -30,14 +30,19 @@ var controller_note_list = function ($scope) {
         var _sql = "SELECT MAX(timestamp) AS timestamp , data FROM log "
             //+ " WHERE file_name = 'controller_note.js' AND function_name = 'submit()' "
             + " GROUP BY file_name, function_name, qualifier "
-            + " HAVING file_name = 'controller_note.js' AND function_name = 'submit()' "
+            + " HAVING file_name = ? AND function_name = ? "
             + " ORDER BY timestamp DESC ";
-        $scope.DB.exec(_sql, function (_rows) {
+        var _sql_data = [
+            'controller_note.js',
+            'submit()'
+        ];
+        $scope.DB.exec(_sql, _sql_data, function (_rows) {
             _var.list = [];
             for (var _i = 0; _i < _rows.length; _i++) {
-                _var.list.push(JSON.parse(_rows[_i].data));
+                _var.list.push($.json_parse(_rows[_i].data));
             }
-            $scope.$digest();
+            //$scope.$digest();
+            ons.digest();
             $.trigger_callback(_callback);
         });
     };
@@ -58,32 +63,40 @@ var controller_note_list = function ($scope) {
         _var.note = _var.list[_index].note;
         
         $scope.log(_log_file_name, "view", _var.q, _var.list[_index]);
+//        
+//        var _sql = "SELECT id FROM flashcard WHERE q = " + $scope.DB._escape_value(_var.q);
+//        $scope.DB.exec(_sql, function (_rows) {
+//            _var.flashcard_id = _rows[0].id;
+//            
+//            app.navi.pushPage("note_list_view.html", {
+//                onTransitionEnd: function () {
+//                    $scope.ctl_note._set_auto_grow($("#note_list_view_html textarea.note"));
+//                }
+//            });
+//        });
         
-        var _sql = "SELECT id FROM flashcard WHERE q = " + $scope.DB._escape_value(_var.q);
-        $scope.DB.exec(_sql, function (_rows) {
-            _var.flashcard_id = _rows[0].id;
+        var _flashcard = $scope.ctl_flashcard.find_flashcard(_var.q);
+        _var.flashcard_id = _flashcard.id;
             
             app.navi.pushPage("note_list_view.html", {
                 onTransitionEnd: function () {
                     $scope.ctl_note._set_auto_grow($("#note_list_view_html textarea.note"));
                 }
             });
-        });
-        
     };
     
     _ctl.submit = function ($event) {
         var _note = $($event.target).parents("ons-page").eq(0).find("textarea.note").val();
         _var.list[_var.current_index].note = _note;
         
-        var _data = {
-            note: _note
-        };
-        var _where_sql = "q = " + $scope.DB._escape_value(_var.q);
+//        var _data = {
+//            note: _note
+//        };
+//        var _where_sql = "q = " + $scope.DB._escape_value(_var.q);
         
         // 儲存到資料庫去
-        $scope.DB.update("flashcard", _data, _where_sql, function () {
-            
+        //$scope.DB.update("flashcard", _data, _where_sql, function () {
+        $scope.ctl_flashcard.set_note(_ctl.get_current_flashcard_id(), _note, function () {    
             $scope.log("controller_note.js", "submit()", _var.q, {
                 q: _var.q,
                 a: _var.a,
@@ -93,7 +106,8 @@ var controller_note_list = function ($scope) {
             //var _id = _var.flashcard_id;
             //$scope.ctl_note.check_note_edited(_id);
             
-            $scope.$digest();
+            //$scope.$digest();
+            ons.digest();
             
             app.navi.popPage();
         });
@@ -101,7 +115,7 @@ var controller_note_list = function ($scope) {
     
     _ctl.get_current_flashcard_id = function () {
         return _var.flashcard_id;
-    }
+    };
     
     // -----------------------------------
     

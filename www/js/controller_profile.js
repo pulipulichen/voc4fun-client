@@ -27,6 +27,7 @@ var controller_profile = function ($scope) {
         return $scope.db_status.add_listener(
                 _status_key,
                 function (_s) {
+                    //$.console_trace("ctl_profile", _s);
                     _ctl.status = _s;
                     _status = _s;
                     _ctl.setup_uuid();
@@ -109,6 +110,7 @@ var controller_profile = function ($scope) {
     
     _ctl.submit = function () {
         _ctl.setup_uuid();
+        $scope.ctl_platform.recordPlatform();
         _ctl.save();
         
         // 設定log
