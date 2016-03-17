@@ -2,7 +2,7 @@
           ng-device-backbutton="main_back()" 
           ng-init="profile = ctl_profile.status">
 
-    <ons-toolbar>
+    <ons-toolbar ng-click="ctl_setting.toggle_debug_mode($event);">
         <div class="left">
             <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
                 <span class="toolbar-button--quiet navigation-bar__line-height" >

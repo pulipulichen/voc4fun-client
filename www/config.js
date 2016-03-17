@@ -3,9 +3,9 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        "server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
+        //"server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
         //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
-        //"server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
+        "server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
         // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
         
         /**
