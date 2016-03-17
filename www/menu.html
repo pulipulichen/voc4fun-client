@@ -91,7 +91,8 @@
             </ons-col>
             <ons-col style="text-align: right;"
                      ng-click="app.navi.replacePage('setting.html', {animation: 'none'});
-                         menu_click($event);">
+                         menu_click($event);"
+                         ng-dblclick="ctl_setting.toggle_debug_mode($event)">
                 <ons-icon icon="ion-android-settings" fixed-width="true"></ons-icon>
                 <!--
                 <span>

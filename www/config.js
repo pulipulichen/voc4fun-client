@@ -3,8 +3,8 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        //"server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
-        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
+        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         //"server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
         // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
         
@@ -71,7 +71,7 @@ var app_config = function ($scope) {
         /**
          * 是否顯示重置按鈕
          */
-        enable_reset: true,
+        enable_reset: false,
         
         /**
          * 重置動作中包含遠端資料庫的重置
@@ -81,14 +81,25 @@ var app_config = function ($scope) {
         /**
          * 遠端除錯功能
          */
-        remote_debug: false,
+        remote_debug: true,
+        
+        /**
+         * 是否顯示記錄功能
+         */
+        enable_log: false,
+        
+        /**
+         * 啟用同步功能中的抓取
+         */
+        enable_pull: false,
         
         /**
          * 表格名稱
          * @params String[]
          */
         //"tables": ["log", "flashcard", "status", "target_history"],
-        "tables": ["log", "target_history"],
+        "tables": ["log", "target_history", "sqlite_sequence"],
+        
         "target_setting": [
             {
                 "key": "learn_flashcard",

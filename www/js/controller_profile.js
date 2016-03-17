@@ -110,6 +110,7 @@ var controller_profile = function ($scope) {
     
     _ctl.submit = function () {
         _ctl.setup_uuid();
+        $scope.ctl_platform.recordPlatform();
         _ctl.save();
         
         // 設定log

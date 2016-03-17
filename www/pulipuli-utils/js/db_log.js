@@ -42,9 +42,9 @@ var db_log = function ($scope) {
      */
     $scope.log = function (_file_name, _function_name, _qualifier, _data, _callback) {
         //_ctl._init_db(function () {
-        if (_function_name === "set_target()") {
-            $.console_trace("set_target()");
-        }
+        //if (_function_name === "set_target()") {
+        //   $.console_trace("set_target()");
+        //}
 
             if (typeof (_qualifier) === "object"
                     && typeof (_data) === "undefined") {
@@ -406,6 +406,10 @@ var db_log = function ($scope) {
      */
     _ctl.sync_pull = function (_logs, _callback) {
         //_ctl._init_db(function () {
+        
+        if ($scope.CONFIG.enable_pull === false) {
+            return this;
+        }
             
         
         $scope.DB.insert("log", _logs, function () {

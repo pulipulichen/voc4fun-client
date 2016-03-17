@@ -45,5 +45,59 @@ var controller_setting = function ($scope) {
     
     // ---------------------
     
+    _ctl.log = [];
+    
+    _ctl.reload_log = function (_callback) {
+//        var _log = {
+//            "file_name": "file_name",
+//            "function_name": "function_name",
+//            "qualifier": "qualifier",
+//            "timestamp": 121212,
+//            "data": "data"
+//        };
+//        //_ctl.log.push(_log);
+//        //_ctl.log.push(_log);
+//        _ctl.log = [{
+//            "file_name": "file_name",
+//            "function_name": "function_name",
+//            "qualifier": "qualifier",
+//            "timestamp": 121212,
+//            "data": "data"
+//        }, {
+//            "file_name": "file_name",
+//            "function_name": "function_name",
+//            "qualifier": "qualifier",
+//            "timestamp": 121212,
+//            "data": "data"
+//        }];
+////        _ctl.log.push(_log);
+////        _ctl.log.push(_log);
+////        _ctl.log.push(_log);
+//        $.console_trace(_ctl.log);
+        var _sql = "SELECT * FROM log ORDER BY timestamp DESC LIMIT 0, 100";
+        var _sql_data = [];
+        
+        $scope.DB.exec(_sql, _sql_data, function (_data) {
+            _ctl.log = _data;
+            $.trigger_callback(_callback);
+        });
+    };
+    
+    _ctl.open_log = function () {
+        _ctl.reload_log(function () {
+            app.navi.pushPage('log.html');
+        });
+    };
+    
+    _ctl.toggle_debug_mode = function ($event) {
+        $scope.CONFIG.enable_log = !$scope.CONFIG.enable_log;
+        $scope.CONFIG.enable_reset = !$scope.CONFIG.enable_reset;
+        
+        app.navi.replacePage('setting.html', {animation: 'none'});
+        $scope.menu_click($event);
+    };
+    
+    // ---------------------
+    
     $scope.ctl_setting = _ctl;
 };

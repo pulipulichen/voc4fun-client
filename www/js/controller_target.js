@@ -80,6 +80,15 @@ var controller_target = function ($scope) {
             var _item = _var.target_setting[_i];
             var _key = _item.key;
             var _target = _item.default_target;
+            
+            if (_target > $scope.ctl_flashcard.status.flashcard_count) {
+                _target = $scope.ctl_flashcard.status.flashcard_count;
+            }
+            var _max = _ctl.get_max_target(_key);
+            if (_target > _max) {
+                _target = _max;
+            }
+            
             _status[_key] = {
                 "done": 0,
                 "target": _target
