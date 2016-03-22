@@ -81,7 +81,7 @@ var app_config = function ($scope) {
         /**
          * 遠端除錯功能
          */
-        remote_debug: true,
+        remote_debug: false,
         
         /**
          * 是否顯示記錄功能
