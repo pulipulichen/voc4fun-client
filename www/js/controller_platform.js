@@ -5,7 +5,13 @@ var controller_platform = function ($scope) {
     // 加入平臺的記錄
     _ctl.recordPlatform = function () {
         var _version = navigator.appVersion;
-        $scope.log("controller_platform.js", "recordPlatform", undefined, _version);
+        $scope.log("controller_platform.js", "recordPlatform()", undefined, _version);
+        //$.console_trace(_version);
+    };
+    
+    // 加入平臺的記錄
+    _ctl.recordGroup = function () {
+        $scope.log("controller_platform.js", "recordGroup()", undefined, $scope.CONFIG.control_group_version);
         //$.console_trace(_version);
     };
     
