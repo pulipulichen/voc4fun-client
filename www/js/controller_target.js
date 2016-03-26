@@ -912,7 +912,7 @@ var controller_target = function ($scope) {
                     var _key = _ary_keys[_i];
                     $scope.db_log.get_latest_log({
                         file_name: _log_file,
-                        function_name: "done()",
+                        function_name: "done_plus()",
                         max_timestamp: _max_timestamp,
                         qualifier: _key,
                         callback: function (_data) {
