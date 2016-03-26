@@ -56,7 +56,7 @@ var app_config = function ($scope) {
          * 自動間隔同步時間，單位是分鐘
          * -1表示不設定
          */
-        sync_interval: 5,
+        sync_interval: 0,
         
         /**
          * 小螢幕尺寸

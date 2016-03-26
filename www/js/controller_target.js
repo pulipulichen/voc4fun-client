@@ -605,7 +605,7 @@ var controller_target = function ($scope) {
     };
 
     _ctl._get_prev_target_data_set = function (_callback) {
-        $.console_trace("_get_prev_target_data_set()");
+        //$.console_trace("_get_prev_target_data_set()");
         var _prev_target_data_set = [];
 
         //var _max_timestamp = _ctl.get_period_end_timestamp(-1, _refer_timestamp);
@@ -613,10 +613,10 @@ var controller_target = function ($scope) {
             if (_prev1 !== undefined) {
                 _prev_target_data_set.push(_prev1[0]);
                 var _refer_timestamp = _prev1[1];
-                $.console_trace("refer", _refer_timestamp);
+                //$.console_trace("refer", _refer_timestamp);
                 _ctl.get_before_target_data(-1, _refer_timestamp, function (_prev2) {
                     if (_prev2 !== undefined) {
-                        $.console_trace("prev2");
+                        //$.console_trace("prev2");
                         _prev_target_data_set.push(_prev2[0]);
                     }
                     $.trigger_callback(_callback, _prev_target_data_set);
@@ -888,7 +888,7 @@ var controller_target = function ($scope) {
         }
 
         var _max_timestamp = _ctl.get_period_end_timestamp(_offset_day, _refer_timestamp);
-        $.console_trace("_max_timestamp", _max_timestamp);
+        //$.console_trace("_max_timestamp", _max_timestamp);
 
         //var _target_data = {};
         //$.console_trace("_get_target_data_callback()", _target_data);
@@ -925,7 +925,7 @@ var controller_target = function ($scope) {
                     var _key = _ary_keys[_i];
                     $scope.db_log.get_latest_log({
                         file_name: _log_file,
-                        function_name: "done()",
+                        function_name: "done_plus()",
                         max_timestamp: _max_timestamp,
                         qualifier: _key,
                         callback: function (_data) {
