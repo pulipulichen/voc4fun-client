@@ -412,6 +412,9 @@ var controller_target = function ($scope) {
         else {
             _input.val(_max);
         }
+        else {
+            _input.val(_max);
+        }
         return this;
     };
 
