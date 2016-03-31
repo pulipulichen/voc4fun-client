@@ -80,6 +80,8 @@ var controller_activity = function ($scope) {
             }
             window.open( _search_url, _window_name);
             
+            //app.navi.replacePage("dictionary.html");
+            
             //紀錄LOG	
             $scope.log(_log_file, "query_dictionary()", _dictionary, _text);
 	};		
