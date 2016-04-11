@@ -3,12 +3,12 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         
         //"server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
         //"server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
         // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
-        "server_url": "/voc4fun/voc4fun-server/",
+        //"server_url": "/voc4fun/voc4fun-server/",
         
         /**
          * 選擇題考試的選項數量
@@ -24,7 +24,7 @@ var app_config = function ($scope) {
         /**
          * 控制組模式
          * 
-         * 會關閉部分功能
+         * 設為true的話，會關閉部分功能
          */
         "control_group_version": false,
         
