@@ -18,6 +18,7 @@ var controller_profile = function ($scope) {
     
     _status.name;
     _status.uuid;
+    _status.group_name;
     
     _ctl.status = _status;
     
@@ -112,6 +113,7 @@ var controller_profile = function ($scope) {
         _ctl.setup_uuid();
         $scope.ctl_platform.recordPlatform();
         $scope.ctl_platform.recordGroup();
+        _status.group_name = $scope.CONFIG.group_name;
         
         _ctl.save();
         
@@ -121,6 +123,7 @@ var controller_profile = function ($scope) {
         _ctl.change_user_name(_status.name);
         
         $scope.ctl_target.enter_from_profile();
+        return this;
     };
     
     _ctl.change_user_name = function (_name) {

@@ -3,17 +3,12 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         
         //"server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
         //"server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
         // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
-        //"server_url": "/voc4fun/voc4fun-server/",
-        
-        /**
-         * 平臺形式
-         */
-        //"platform": "iOS",
+        "server_url": "/voc4fun/voc4fun-server/",
         
         /**
          * 選擇題考試的選項數量
@@ -32,12 +27,24 @@ var app_config = function ($scope) {
          * 會關閉部分功能
          */
         "control_group_version": false,
+        
+        /**
+         * 組別代號 (請自訂)
+         */
+        group_name: "Voc4Fun",
+        
+        /**
+         * 預設的使用者名稱
+         */
+        default_name: "Voc4FunE",
+        
         /**
          * 單元測試模式
          * 
          * 如果設為true，則強制轉移到單元測試顯示畫面
          */
         "qunit": false,
+        
         /**
          * 清空資料庫的模式
          */
@@ -49,10 +56,6 @@ var app_config = function ($scope) {
          */
         day_offset: 0,
         
-        /**
-         * 預設的使用者名稱
-         */
-        default_name: "Voc4FunE",
         
         /**
          * 自動間隔同步時間，單位是分鐘

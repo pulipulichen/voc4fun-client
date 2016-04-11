@@ -54,6 +54,9 @@ var db_log = function ($scope) {
             if (typeof (_data) === "undefined") {
                 _data = null;
             }
+            if (typeof (_qualifier) === "undefined") {
+                _qualifier = null;
+            }
 
             var _timestamp = $scope.db_log.get_timestamp(0);
             var _insert_data = {
