@@ -6,8 +6,9 @@ var _app_ready = function ($scope) {
 
     $scope.set_swipeable(false);
 
+    //$.console_trace("$scope.ctl_flashcard.setup(function () {");
     $scope.ctl_flashcard.setup(function () {
-
+        //$.console_trace("準備好了嗎？");
         if ($scope.ctl_profile.is_exists() === false) {
             //$.console_trace("is not exists");
             $scope.ctl_profile.enter();

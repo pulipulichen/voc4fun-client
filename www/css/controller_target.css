@@ -38,3 +38,8 @@
 .target-page ons-row.recommend {
     text-align: center;
 }
+
+ons-icon[icon="ion-ios-minus-outline"],
+ons-icon[icon="ion-ios-plus-outline"] {
+    cursor: pointer;
+}

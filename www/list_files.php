@@ -32,7 +32,8 @@ function read_all_files($root = '.'){
 
 $exclude_files = array(
     '.\\cache.manifest',
-    '.\\list_files.php'
+    '.\\list_files.php',
+    '.\\.htaccess'
 );
 
 $replace_files = array(
@@ -57,3 +58,5 @@ foreach ($files AS $file) {
     }
     echo $file."\n";
 }
+
+echo "NETWORK:\n*";

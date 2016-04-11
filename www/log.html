@@ -1,0 +1,52 @@
+<ons-page id="log_html" ng-device-backbutton="app.navi.popPage()">
+
+
+    <ons-toolbar>
+        <div class="left">
+            <ons-toolbar-button ng-click="app.navi.popPage()">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <i class="ion-android-arrow-back"></i>
+                </span>
+            </ons-toolbar-button>
+        </div>
+        
+        <div class="center">
+            LOG <!-- @TODO 語系 -->
+        </div>
+
+    </ons-toolbar>
+
+    <!-- --------------------------------------------------------- -->
+
+    <ons-list modifier="inset">
+        <table border="1">
+            <tbody ng-repeat="data in ctl_setting.log"
+                    ng-init="log = ctl_setting.log[$index]">
+                <tr style="background-color:#CCC">
+                    <td>
+                        {{ log.file_name }}
+                    </td>
+                    <td>
+                        {{ log.function_name }}
+                    </td>
+                    <td>
+                        {{ log.qualifer }}
+                    </td>
+                    <td>
+                        {{ log.timestamp }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        {{ log.data }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ons-list>
+    
+    <ons-tabbar ng-click="app.navi.popPage()">
+        <ons-tab label="{{ 'ONS_YES' | translate }}" ></ons-tab>
+    </ons-tabbar>
+
+</ons-page>

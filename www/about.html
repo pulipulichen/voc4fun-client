@@ -1,4 +1,4 @@
-<ons-page id="about_html" ng-device-backbutton="app.menu.open()">
+<ons-page id="about_html" ng-device-backbutton="app.navi.popPage()">
 
 
     <ons-toolbar>
@@ -33,6 +33,21 @@
 
     </div>
 
+    <div class="profile-card">
+        
+		<img src="img/shun.jpg" class="profile-image" alt="{{ 'AUTHOR_PHOTO' | translate}}" />
+        <div class="profile-name">
+            {{ 'AUTHOR_NAME2' | translate}}
+        </div>
+        <div class="profile-id">            
+			{{ 'AUTHOR_ID2' | translate}}
+        </div>
+        <div class="profile-desc">
+            {{ 'AUTHOR_DESC2' | translate}}
+        </div>
+
+    </div>	    
+    
     <ons-list modifier="inset" style="margin-top: 10px">
 
         <ons-list-item modifier="chevron" onclick="window.open('http://pulipuli.blogspot.tw', '_system')">

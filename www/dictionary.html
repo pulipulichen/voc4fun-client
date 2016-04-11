@@ -1,0 +1,36 @@
+<ons-page id="dictionary_html" ng-device-backbutton="app.navi.popPage()"
+          ng-init="_learn_flashcard = ctl_learn_flashcard.var.learn_flashcard">
+
+    <ons-toolbar>
+
+        <div class="left">
+            <ons-toolbar-button ng-click="app.navi.popPage()">
+                <span class="toolbar-button--quiet navigation-bar__line-height" >
+                    <i class="ion-android-arrow-back"></i>
+                </span>
+            </ons-toolbar-button>
+        </div>
+
+        <div class="center">{{ _learn_flashcard.q}} 字典</div>
+
+        <div class="right"
+             ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target)}"
+             ng-click="ctl_target.enter_for_view()"
+             ng-show="ctl_target.status.take_note.target !== 0 && !CONFIG.control_group_version">
+            {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
+        </div>
+    </ons-toolbar>
+
+    <!-- ==================================== -->
+
+    <div>
+        <iframe src="http://tw.dictionary.search.yahoo.com/search?p=Tired&fr2=dict" width="100%" frameborder="0" />
+    </div>
+
+    <!-- ==================================== -->
+
+    <ons-tabbar ng-click="app.navi.popPage()">
+        <ons-tab label="{{ 'ONS_OK' | translate }}" ></ons-tab>
+    </ons-tabbar>
+
+</ons-page>

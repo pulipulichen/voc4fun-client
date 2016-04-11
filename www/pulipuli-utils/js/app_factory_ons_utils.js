@@ -51,5 +51,9 @@ var _app_factory_ons_utils = function ($scope, $filter) {
         ons.notification._confirm(_opt);
     };
     
-
+    ons.digest = function () {
+        setTimeout(function () {
+            $scope.$digest();
+        }, 0);
+    };
 };

@@ -2,7 +2,7 @@
           ng-device-backbutton="main_back()" 
           ng-init="profile = ctl_profile.status">
 
-    <ons-toolbar>
+    <ons-toolbar ng-click="ctl_setting.toggle_debug_mode($event);">
         <div class="left">
             <ons-toolbar-button ng-click="app.menu.open()" class="menu-open">
                 <span class="toolbar-button--quiet navigation-bar__line-height" >
@@ -22,7 +22,7 @@
     <ons-list modifier="inset" class="settings-list">
         <ons-list-item>
             <ons-row>
-                <ons-col>
+                <ons-col width="200px">
                     <ons-icon icon="ion-person" size="20px"></ons-icon>
                     您的名稱 <!-- @TODO 語系 -->
                 </ons-col>
@@ -51,6 +51,11 @@
         <ons-list-item modifier="chevron" ng-click="app.navi.pushPage('about.html')">
             <ons-icon icon="ion-information-circled" size="20px"></ons-icon>
             {{ 'ABOUT' | translate}}
+        </ons-list-item>
+        
+        <ons-list-item modifier="chevron" ng-click="ctl_setting.open_log()" ng-show="CONFIG.enable_log">
+            <ons-icon icon="ion-pound" size="20px"></ons-icon>
+            偵錯記錄 <!-- @TODO 語系 -->
         </ons-list-item>
         
         <ons-list-item modifier="chevron" ng-click="ctl_setting.reset_app()" ng-show="CONFIG.enable_reset">

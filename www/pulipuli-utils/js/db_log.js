@@ -38,9 +38,13 @@ var db_log = function ($scope) {
      * @param {string} _qualifier 可以省略，省略後變成_data
      * @param {JSON} _data 可以省略
      * @returns {db_log.$scope}
+     * 20160315 websql 完美
      */
     $scope.log = function (_file_name, _function_name, _qualifier, _data, _callback) {
         //_ctl._init_db(function () {
+        //if (_function_name === "set_target()") {
+        //   $.console_trace("set_target()");
+        //}
 
             if (typeof (_qualifier) === "object"
                     && typeof (_data) === "undefined") {
@@ -49,6 +53,9 @@ var db_log = function ($scope) {
             }
             if (typeof (_data) === "undefined") {
                 _data = null;
+            }
+            if (typeof (_qualifier) === "undefined") {
+                _qualifier = null;
             }
 
             var _timestamp = $scope.db_log.get_timestamp(0);
@@ -60,6 +67,7 @@ var db_log = function ($scope) {
                 data: JSON.stringify(_data)
             };
             //$.console_trace(_insert_data);
+            //alert(JSON.stringify(_insert_data));
             $scope.DB.insert(_log_db, _insert_data, _callback);
         //});
         return this;
@@ -97,81 +105,88 @@ var db_log = function ($scope) {
      *      "max_timestamp"
      *      "callback"
      * }
+     * 20160315 websql 完美
      */
     _ctl.get_latest_log = function (_opt) {
-        //_ctl._init_db(function () {
+        
+        var _return_timestamp = $.parse_opt(_opt, "return_timestamp", false);
+        var _callback = $.parse_opt(_opt, "callback");
+        
+        var _where = _ctl._create_log_where(_opt);
 
+        var _sql = "SELECT timestamp, data FROM log ";
+        if (_where.sql !== undefined && _where.sql !== "") {
+            _sql = _sql + " WHERE " + _where.sql;
+        }
 
+        _sql = _sql + " ORDER BY timestamp DESC LIMIT 0,1";
 
-            var _file_name = $.parse_opt(_opt, "file_name");
-            var _function_name = $.parse_opt(_opt, "function_name");
-            var _qualifier = $.parse_opt(_opt, "qualifier");
-            var _where_sql = $.parse_opt(_opt, "where_sql");
-            var _min_timestamp = $.parse_opt(_opt, "min_timestamp");
-            var _max_timestamp = $.parse_opt(_opt, "max_timestamp");
-            var _return_timestamp = $.parse_opt(_opt, "return_timestamp", false);
-            var _callback = $.parse_opt(_opt, "callback");
+        $scope.DB.exec(_sql, _where.data, function (_row) {
+            var _data;
+            if (_row.length > 0) {
+                _data = $.json_parse(_row[0].data);
 
-            if (typeof (_min_timestamp) === "number"
-                    || typeof (_max_timestamp) === "number") {
-                var _timestamp_where_sql = _ctl.create_timestamp_where_sql(_min_timestamp, _max_timestamp);
-                if (_where_sql === undefined) {
-                    _where_sql = _timestamp_where_sql;
+                if (_return_timestamp === true) {
+                    _data["_timestamp"] = _row[0].timestamp;
                 }
-                else {
-                    _where_sql = _where_sql + " AND " + _timestamp_where_sql;
-                }
             }
+            $.trigger_callback(_callback, _data);
+        });
+    };
+    
+    _ctl._create_log_where = function (_opt) {
+        var _file_name = $.parse_opt(_opt, "file_name");
+        var _function_name = $.parse_opt(_opt, "function_name");
+        var _qualifier = $.parse_opt(_opt, "qualifier");
+        var _min_timestamp = $.parse_opt(_opt, "min_timestamp");
+        var _max_timestamp = $.parse_opt(_opt, "max_timestamp");
 
-//        _file_name = _ctl._create_where_sql("file_name", _file_name);
-//        _function_name = _ctl._create_where_sql("function_name", _function_name);
-//        _qualifier = _ctl._create_where_sql("qualifier", _qualifier);
-//
-//        var _sql = "SELECT data FROM log "
-//                + " WHERE " + _file_name
-//                + " AND " + _function_name;
+        var _where_sql = $.parse_opt(_opt, "where_sql", "");
+        var _where_data_array = $.parse_opt(_opt, "where_data_array", []);
+        
+        // --------------------------------
 
-            var _where_array = [];
-            if (typeof (_file_name) === "string") {
-                _where_array.push('file_name = "' + _file_name + '"');
-            }
-            if (typeof (_function_name) === "string") {
-                _where_array.push('function_name = "' + _function_name + '"');
-            }
-            if (typeof (_qualifier) === "string") {
-                _where_array.push('qualifier = "' + _qualifier + '"');
-            }
-            if (typeof (_where_sql) === "string") {
-                _where_array.push(_where_sql);
-            }
+        var _where_array = [];
 
-            _where_sql = _where_array.join(" AND ");
+        if (_where_sql !== "") {
+            _where_array.push(_where_sql);
+            //至此剛好跟_where_data_array搭配
+        }
 
-            var _sql = "SELECT timestamp, data FROM log ";
-            if (_where_sql !== undefined && _where_sql !== "") {
-                _sql = _sql + " WHERE " + _where_sql;
-            }
+        var _timestamp_where_sql = _ctl.create_timestamp_where_sql(_min_timestamp, _max_timestamp);
+        if (_timestamp_where_sql !== undefined) {
+            _where_array.push(_timestamp_where_sql.sql);
+            _where_data_array = $.array_append(_where_data_array, _timestamp_where_sql.data);
+        }
 
-            _sql = _sql + " ORDER BY timestamp DESC LIMIT 0,1";
 
-            $scope.DB.exec(_sql, function (_row) {
-                var _data;
-                if (_row.length > 0) {
-                    _data = JSON.parse(_row[0].data);
-                    
-                    if (_return_timestamp === true) {
-                        _data["_timestamp"] = _row[0].timestamp;
-                    }
-                }
-                $.trigger_callback(_callback, _data);
-            });
-        //});
+        if (typeof (_file_name) === "string") {
+            _where_array.push('file_name = ?');
+            _where_data_array.push(_file_name);
+        }
+        if (typeof (_function_name) === "string") {
+            _where_array.push('function_name = ?');
+            _where_data_array.push(_function_name);
+        }
+        if (typeof (_qualifier) === "string") {
+            _where_array.push('qualifier = ?');
+            _where_data_array.push(_qualifier);
+        }
+
+        _where_sql = _where_array.join(" AND ");
+        
+        return {
+            "sql": _where_sql,
+            "data": _where_data_array
+        };
     };
     
     _ctl._create_where_sql = function (_field_name, _data) {
         var _sql = "";
+        var _sql_data = [];
         if (typeof (_data) === "string") {
-            _sql = " " + _field_name + " = '" + _data + "' ";
+            _sql = " " + _field_name + " = ? ";
+            _sql_data.push(_data);
         }
         else if ($.is_array(_data)) {
             var _sql = " (";
@@ -179,11 +194,15 @@ var db_log = function ($scope) {
                 if (_i > 0) {
                     _sql = _sql + " OR ";
                 }
-                _sql = _sql + " " + _field_name + " = '" + _data[_i] + "' ";
+                _sql = _sql + " " + _field_name + " = ? ";
+                _sql_data.push(_data[_i]);
             }
             _sql = _sql + ") ";
         }
-        return _sql;
+        return {
+            "sql": _sql,
+            "data": _sql_data
+        };
     };
 
     /**
@@ -198,46 +217,18 @@ var db_log = function ($scope) {
      * }
      */
     _ctl.count_log = function (_opt) {
-        //_ctl._init_db(function () {
+        var _callback = $.parse_opt(_opt, "callback");
+        
+        var _where = _ctl._create_log_where(_opt);
 
+        var _sql = "SELECT id FROM log ";
+        if (_where.sql !== undefined && _where.sql !== "") {
+            _sql = _sql + " WHERE " + _where.sql;
+        }
 
-            var _file_name = $.parse_opt(_opt, "file_name");
-            var _function_name = $.parse_opt(_opt, "function_name");
-            var _qualifier = $.parse_opt(_opt, "qualifier");
-            var _where_sql = $.parse_opt(_opt, "where_sql");
-            var _min_timestamp = $.parse_opt(_opt, "min_timestamp");
-            var _max_timestamp = $.parse_opt(_opt, "max_timestamp");
-            var _callback = $.parse_opt(_opt, "callback");
-
-            if (typeof (_min_timestamp) === "number"
-                    || typeof (_max_timestamp) === "number") {
-                var _timestamp_where_sql = $scope.db_log.create_timestamp_where_sql(_min_timestamp, _max_timestamp);
-                if (_where_sql === undefined) {
-                    _where_sql = _timestamp_where_sql;
-                }
-                else {
-                    _where_sql = _where_sql + " AND " + _timestamp_where_sql;
-                }
-            }
-
-            _file_name = $scope.db_log._create_where_sql("file_name", _file_name);
-            _function_name = $scope.db_log._create_where_sql("function_name", _function_name);
-            _qualifier = $scope.db_log._create_where_sql("qualifier", _qualifier);
-
-            var _sql = "SELECT data FROM log "
-                    + " WHERE " + _file_name
-                    + " AND " + _function_name;
-            if (_qualifier !== "") {
-                _sql = _sql + " AND " + _qualifier;
-            }
-            if (_where_sql !== undefined) {
-                _sql = _sql + " AND " + _where_sql;
-            }
-
-            $scope.DB.exec(_sql, function (_row) {
-                $.trigger_callback(_callback, _row.length);
-            });
-        //});
+        $scope.DB.exec(_sql, _where.data, function (_row) {
+            $.trigger_callback(_callback, _row.length);
+        });
     };
 
     _ctl.reset = function () {
@@ -262,19 +253,36 @@ var db_log = function ($scope) {
         return _timestamp;
     };
 
+    /**
+     * 
+     * @param {type} _min_time
+     * @param {type} _max_time
+     * @returns {db_log._ctl.create_timestamp_where_sql.db_logAnonym$3|undefined}
+     * 20160316 websql 完美
+     */
     _ctl.create_timestamp_where_sql = function (_min_time, _max_time) {
+        if (typeof(_min_time) !== "number" && typeof(_max_time) !== "number") {
+            return;
+        }
+        
         var _where_sql = "";
+        var _where_data = [];
         if (typeof (_min_time) === "number") {
-            _where_sql = _where_sql + " timestamp > " + _min_time;
+            _where_sql = _where_sql + " timestamp > ?";
+            _where_data.push(_min_time);
         }
         if (typeof (_max_time) === "number") {
 
             if (_where_sql !== "") {
                 _where_sql = _where_sql + " AND ";
             }
-            _where_sql = _where_sql + " timestamp < " + _max_time;
+            _where_sql = _where_sql + " timestamp < ?";
+            _where_data.push(_max_time);
         }
-        return _where_sql;
+        return {
+            "sql": _where_sql,
+            "data": _where_data
+        };
     };
 
     _ctl.set_debug_log_day_offset = function (_offset, _callback) {
@@ -290,10 +298,10 @@ var db_log = function ($scope) {
     var _syncing = false;
     _ctl.sync = function (_callback) {
         //ctl._init_db(function () {
-        $.console_trace("開始同步");
+        //$.console_trace("開始同步");
 
         if (typeof($scope.CONFIG.server_url) !== "string") {
-            $.console_trace("沒有遠端伺服器");
+            //$.console_trace("沒有遠端伺服器");
             return;
         }
 
@@ -344,7 +352,8 @@ var db_log = function ($scope) {
 
 
             var _sql = "SELECT timestamp FROM log ORDER BY timestamp DESC limit 0, 1";
-            $scope.DB.exec(_sql, function (_data) {
+            //return;
+            $scope.DB.exec(_sql, [], function (_data) {
                 var _timestamp = 0;
                 if (_data.length > 0) {
                     _timestamp = _data[0].timestamp;
@@ -368,9 +377,12 @@ var db_log = function ($scope) {
 
         // 先準備好要傳過去的資料
         var _sql = "SELECT timestamp, file_name, function_name, qualifier, data "
-                + " FROM log WHERE timestamp > " + _server_timestamp
+                + " FROM log WHERE timestamp > ?"
                 + " ORDER BY timestamp ASC";
-        $scope.DB.exec(_sql, function (_logs) {
+        var _sql_data = [
+            _server_timestamp
+        ];
+        $scope.DB.exec(_sql, _sql_data, function (_logs) {
             if (_logs.length > 0) {
                 _ctl.sync_complete("push", function (_log) {
                     _logs.push(_log);
@@ -397,6 +409,10 @@ var db_log = function ($scope) {
      */
     _ctl.sync_pull = function (_logs, _callback) {
         //_ctl._init_db(function () {
+        
+        if ($scope.CONFIG.enable_pull === false) {
+            return this;
+        }
             
         
         $scope.DB.insert("log", _logs, function () {
@@ -427,10 +443,14 @@ var db_log = function ($scope) {
             // 查詢最新插入的log?
             var _sql = "SELECT timestamp, file_name, function_name, qualifier, data "
                     + " FROM log "
-                    + " WHERE file_name = 'db_log.js' AND function_name = 'sync_complete()' "
+                    + " WHERE file_name = ? AND function_name = ? "
                     + " ORDER BY timestamp DESC limit 1";
+            var _sql_data = [
+                "db_log.js",
+                "sync_complete()"
+            ];
 
-            $scope.DB.exec(_sql, function (_row) {
+            $scope.DB.exec(_sql, _sql_data, function (_row) {
                 var _log = _row[0];
                 $.trigger_callback(_callback, _log);
             });

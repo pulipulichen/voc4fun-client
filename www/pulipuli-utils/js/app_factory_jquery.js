@@ -6,19 +6,33 @@ var _app_factory_jquery_utils = function ($scope) {
      * @param {String} _msg
      */
     $.console_trace = function (_heading, _msg) {
+        var _remote_debug = "";
         if (_heading !== undefined && _msg !== undefined && typeof(_msg) !== "object" && (_msg + "").length < 20) {
+            _remote_debug = _heading + ": " + _msg;
             _heading = "===" + _heading + ": " + _msg + "=====";
             console.trace(_heading);
         }
         else {
+            _remote_debug = _heading;
             if (typeof (_msg) !== "undefined") {
                 _heading = "===" + _heading + "====================================";
             }
             console.trace(_heading);
             if (typeof (_msg) !== "undefined") {
                 console.trace(_msg);
+                _remote_debug = _remote_debug + ": " + _msg;
             }
         }
+        
+        //alert(_remote_debug);
+        if ($scope.CONFIG.remote_debug === true 
+                && typeof($scope.CONFIG.server_url) === "string") {
+            var _url = $scope.CONFIG.server_url + "model/debug.php";
+            $.post(_url, {
+                "m": _remote_debug
+            });
+        }
+        
     };
 
     $.trigger_callback = function (_callback, _parameter) {
@@ -268,5 +282,32 @@ var _app_factory_jquery_utils = function ($scope) {
         _output = _code[_int] + _output;
         //_output = _output + _code[_int];
         return _output;
+    };
+    
+    $.json_parse = function (_json) {
+        if (_json === undefined || typeof(_json) !== "string") {
+            return _json;
+        }
+        else {
+            try {
+                _json = JSON.parse(_json);
+            }
+            catch (_error) {
+                $.console_trace(_error);
+            }
+            return _json;
+        }
+    };
+    
+    $.array_append = function (_ary1, _ary2) {
+        if ($.is_array(_ary1) === false) {
+            _ary1 = [];
+        }
+        //$.console_trace(_ary1);
+        //$.console_trace(_ary2);
+        for (var _i = 0; _i < _ary2.length; _i++) {
+            _ary1.push(_ary2[_i]);
+        }
+        return _ary1;
     };
 };

@@ -18,6 +18,7 @@ var controller_profile = function ($scope) {
     
     _status.name;
     _status.uuid;
+    _status.group_name;
     
     _ctl.status = _status;
     
@@ -27,6 +28,7 @@ var controller_profile = function ($scope) {
         return $scope.db_status.add_listener(
                 _status_key,
                 function (_s) {
+                    //$.console_trace("ctl_profile", _s);
                     _ctl.status = _s;
                     _status = _s;
                     _ctl.setup_uuid();
@@ -109,6 +111,10 @@ var controller_profile = function ($scope) {
     
     _ctl.submit = function () {
         _ctl.setup_uuid();
+        $scope.ctl_platform.recordPlatform();
+        $scope.ctl_platform.recordGroup();
+        _status.group_name = $scope.CONFIG.group_name;
+        
         _ctl.save();
         
         // 設定log
@@ -117,6 +123,7 @@ var controller_profile = function ($scope) {
         _ctl.change_user_name(_status.name);
         
         $scope.ctl_target.enter_from_profile();
+        return this;
     };
     
     _ctl.change_user_name = function (_name) {
