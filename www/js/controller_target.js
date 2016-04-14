@@ -519,6 +519,10 @@ var controller_target = function ($scope) {
                 _percent = Math.floor(_done / _target * 100);
             }
         }
+        
+        if (_percent > 100) {
+            _percent = 100;
+        }
 
         return _percent;
     };
