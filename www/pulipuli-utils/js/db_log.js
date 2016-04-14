@@ -507,7 +507,9 @@ var db_log = function ($scope) {
 
     _ctl.get_uuid = function () {
         var _fingerprint = new Fingerprint().get();
-        return $.int_to_letters(_fingerprint);
+        _fingerprint = _fingerprint + _ctl.get_timestamp();
+        _fingerprint = $.int_to_letters(_fingerprint);
+        return _fingerprint;
     };
 
     // ----------------------------------
