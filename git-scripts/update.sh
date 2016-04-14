@@ -1,4 +1,4 @@
-if [ -z "$KALS_BRANCH" ]; then KALS_BRANCH=origin/master; fi
+if [ -z "$KALS_BRANCH" ]; then KALS_BRANCH=voc4fun-server/ctl; fi
 if [ -z "$KALS_DIR" ]; then KALS_DIR=/var/www/html; fi
 if [ -z "$KALS_PATH" ]; then KALS_PATH=/var/www/html/voc4fun-client; fi
 
