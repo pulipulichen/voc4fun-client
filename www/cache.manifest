@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2016-04-24 09:19:17
+# 2016-04-24 09:22:08
 
 about.html
 app_ready.js
@@ -120,7 +120,6 @@ i18n/zh_TW.json
 data/flashcard-test.xlsx
 data/flashcard.xlsx
 data/flashcard_increase_100.xlsx
-data/~$flashcard.xlsx
 css/controller_learn_flashcard.css
 css/controller_note.css
 css/controller_profile.css
