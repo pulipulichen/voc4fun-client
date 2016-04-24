@@ -58,6 +58,25 @@ var _app_factory_localstorage_utils = function ($scope) {
         return _value;
     };
     
+    /**
+     * 計算表格內資料的數量
+     * @param {type} _table
+     * @returns {localStorage@call;getItem.length|Number|undefined}
+     */
+    _ctl.countArray = function (_table) {
+        var _data = localStorage.getItem(_table);
+        if (_data === null) {
+            return;
+        }
+        
+        if (typeof(_data) === "object" && typeof(_data.length) === "number") {
+            return _data.length;
+        }
+        else {
+            return 1;
+        }
+    };
+    
     $scope.ls = _ctl;
     
 };
