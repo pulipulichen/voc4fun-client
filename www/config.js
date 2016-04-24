@@ -99,6 +99,11 @@ var app_config = function ($scope) {
         enable_pull: false,
         
         /**
+         * 單字卡的位置
+         */
+        flashcard_path: "data/flashcard.xlsx",
+        
+        /**
          * 表格名稱
          * @params String[]
          */

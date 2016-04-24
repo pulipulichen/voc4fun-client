@@ -510,6 +510,14 @@ var db_log = function ($scope) {
         _fingerprint = _fingerprint + _ctl.get_timestamp();
         _fingerprint = $.int_to_letters(_fingerprint);
         return _fingerprint;
+//        
+//        new Fingerprint2().get(function(_result, _components){
+//            console.log(_result);
+//            
+//            if (typeof(_callback) === "function") {
+//                _callback(_result);
+//            }
+//        });
     };
 
     // ----------------------------------

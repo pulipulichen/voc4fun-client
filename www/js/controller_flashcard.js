@@ -1,7 +1,7 @@
 /** @global XLSX fase */
 var controller_flashcard = function ($scope) {
 
-    var _source_file_name = "data/flashcard.xlsx";
+    var _source_file_name = $scope.CONFIG.flashcard_path;
 
     var _db_name = "flashcard";
     var _db_fields = ["q", "a", "note"];
@@ -41,25 +41,7 @@ var controller_flashcard = function ($scope) {
         // 從xlsx讀取資料
 
         //$.console_log(typeof(XLSXReader));
-        var _create_table = function () {
-            //$scope.DB.create_table(_db_name, _db_fields, function () {
-            //$scope.DB.register_table(_db_name, _db_fields, function () {
-                XLSX.ajax_loader(_source_file_name, function (_data) {
-                    //$.console_log(_data);
-                    _status.flashcard_count = _data.length;
-                    $scope.db_status.save_status(_status_key);
-                    _data = $.array_shuffle(_data);
-                    
-                    //$scope.DB.insert(_db_name, _data, _callback);
-                    
-                    $scope.ls.set(_db_name, _data);
-                    //_data = $scope.ls.get(_db_name, 0);
-                    //$.console_trace(_data);
-                    
-                    $.trigger_callback(_callback);
-                });
-            //});
-        };
+        
             
 //        $scope.DB.row_exists(_db_name, function (_result) {
 //            if (_result === true) {
@@ -71,11 +53,103 @@ var controller_flashcard = function ($scope) {
 //            }
 //        });
         if ($scope.ls.isTableExists(_db_name) === false) {
-            _create_table();
+            _ctl._create_table(_callback);
         }
         else {
-            $.trigger_callback(_callback);
+            // 檢查數量
+            
+            
+            //$.trigger_callback(_callback);
+            
+            _ctl._check_table(_callback);
         }
+    };
+    
+    _ctl._create_table = function (_callback) {
+        //$scope.DB.create_table(_db_name, _db_fields, function () {
+        //$scope.DB.register_table(_db_name, _db_fields, function () {
+        XLSX.ajax_loader(_source_file_name, function (_data) {
+            //$.console_log(_data);
+            _status.flashcard_count = _data.length;
+            _status.flashcard_file_name = _source_file_name;
+            $scope.db_status.save_status(_status_key);
+            _data = $.array_shuffle(_data);
+
+            //$scope.DB.insert(_db_name, _data, _callback);
+
+            $scope.ls.set(_db_name, _data);
+            //_data = $scope.ls.get(_db_name, 0);
+            //$.console_trace(_data);
+
+            $.trigger_callback(_callback);
+        });
+        //});
+    };
+    
+    _ctl._check_table = function (_callback) {
+        
+        var _flashcard_array_to_json = function (_ary) {
+            var _json = {};
+            for (var _i = 0; _i < _ary.length; _i++) {
+                var _q = _ary[_i].q;
+                var _a = _ary[_i].a;
+                _json[_q] = _a;
+            }
+            return _json;
+        };
+        
+        var _flashcard_json_diff = function (_json_main, _json_add) {
+            var _json_diff = {};
+            
+            for (var _q in _json_add) {
+                if (typeof(_json_main[_q]) === "undefined") {
+                    _json_diff[_q] = _json_add[_q];
+                }
+            }
+            
+            return _json_diff;
+        };
+        
+        
+        
+        XLSX.ajax_loader(_source_file_name, function (_data) {
+            //$.console_log(_data);
+            //_status.flashcard_count = _data.length;
+            //console.log([_status.flashcard_count, _data.length]);
+            if (_status.flashcard_count !== _data.length) {
+                var _new_data = _data;
+                _new_data = $.array_shuffle(_new_data);
+                _status.flashcard_count = _data.length;
+                
+                // 取得原來的資料
+                var _data_array = $scope.ls.get(_db_name);
+                var _new_data_array = _new_data;
+                
+                var _data_json = _flashcard_array_to_json(_data_array);
+                var _new_data_json = _flashcard_array_to_json(_new_data_array);
+                
+                var _diff_json = _flashcard_json_diff(_data_json, _new_data_json);
+                
+                
+                for (var _q in _diff_json) {
+                    _data.push({
+                        q: _q,
+                        a: _diff_json[_q]
+                    });
+                }
+                
+                $scope.db_status.save_status(_status_key);
+                $scope.ls.set(_db_name, _data);
+                
+                //console.log("已經重置");
+            }
+            else {
+                //console.log("沒有重置");
+            }
+            
+            $.trigger_callback(_callback);
+        });
+        //});
     };
     
     _ctl.get_flashcard = function(_id, _callback) {
