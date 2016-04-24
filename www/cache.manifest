@@ -1,11 +1,15 @@
 CACHE MANIFEST
+# 2016-04-24 09:19:17
+
 about.html
 app_ready.js
 config.js
+dictionary.html
 index.html
 learn_flashcard.html
 learn_flashcard_more.html
 learn_flashcard_transition.html
+log.html
 menu.html
 note.html
 note_list.html
@@ -82,13 +86,13 @@ lib/js-xlsx/xlsx.full.min.js
 lib/js-xlsx/xlsx.min.js
 lib/fingerprint/fingerprint.js
 lib/fingerprint/fingerprint.min.js
+lib/fingerprint/fingerprint2.min.js
 lib/angular/angular-csp.css
 lib/angular/angular-moment.min.js
 lib/angular/angular-translate-loader-static-files.min.js
 lib/angular/angular-translate.min.js
 lib/angular/angular-websql.min.js
 lib/angular/angular.min.js
-lib/angular/README.md
 js/controller_activity.js
 js/controller_flashcard.js
 js/controller_learn_flashcard.js
@@ -113,8 +117,10 @@ img/Voc4Fun-icon.png
 img/Voc4Fun-icon256.png
 img/write_note.png
 i18n/zh_TW.json
-data/flashcard-full.xlsx
+data/flashcard-test.xlsx
 data/flashcard.xlsx
+data/flashcard_increase_100.xlsx
+data/~$flashcard.xlsx
 css/controller_learn_flashcard.css
 css/controller_note.css
 css/controller_profile.css
@@ -122,5 +128,6 @@ css/controller_target.css
 css/controller_test_select.css
 css/menu.css
 css/page-about_html.css
+
 NETWORK:
 *

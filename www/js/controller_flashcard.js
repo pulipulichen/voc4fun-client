@@ -1,7 +1,7 @@
 /** @global XLSX fase */
 var controller_flashcard = function ($scope) {
 
-    var _source_file_name = "data/flashcard.xlsx";
+    var _source_file_name = $scope.CONFIG.flashcard_path;
 
     var _db_name = "flashcard";
     var _db_fields = ["q", "a", "note"];
@@ -59,7 +59,9 @@ var controller_flashcard = function ($scope) {
             // 檢查數量
             
             
-            $.trigger_callback(_callback);
+            //$.trigger_callback(_callback);
+            
+            _ctl._check_table(_callback);
         }
     };
     
@@ -69,6 +71,7 @@ var controller_flashcard = function ($scope) {
         XLSX.ajax_loader(_source_file_name, function (_data) {
             //$.console_log(_data);
             _status.flashcard_count = _data.length;
+            _status.flashcard_file_name = _source_file_name;
             $scope.db_status.save_status(_status_key);
             _data = $.array_shuffle(_data);
 
@@ -112,6 +115,7 @@ var controller_flashcard = function ($scope) {
         XLSX.ajax_loader(_source_file_name, function (_data) {
             //$.console_log(_data);
             //_status.flashcard_count = _data.length;
+            //console.log([_status.flashcard_count, _data.length]);
             if (_status.flashcard_count !== _data.length) {
                 var _new_data = _data;
                 _new_data = $.array_shuffle(_new_data);
@@ -124,27 +128,25 @@ var controller_flashcard = function ($scope) {
                 var _data_json = _flashcard_array_to_json(_data_array);
                 var _new_data_json = _flashcard_array_to_json(_new_data_array);
                 
-                var _diff_json = _flashcard_json_diff(_data_json, _data_)
+                var _diff_json = _flashcard_json_diff(_data_json, _new_data_json);
                 
                 
-                
-                for (var _i in _new_data) {
-                    if (typeof(_data[_i]) === "undefined") {
-                        _data[_i] = _new_data[_i];
-                    }
+                for (var _q in _diff_json) {
+                    _data.push({
+                        q: _q,
+                        a: _diff_json[_q]
+                    });
                 }
                 
+                $scope.db_status.save_status(_status_key);
+                $scope.ls.set(_db_name, _data);
+                
+                //console.log("已經重置");
+            }
+            else {
+                //console.log("沒有重置");
             }
             
-            $scope.db_status.save_status(_status_key);
-            
-
-            //$scope.DB.insert(_db_name, _data, _callback);
-
-            $scope.ls.set(_db_name, _data);
-            //_data = $scope.ls.get(_db_name, 0);
-            //$.console_trace(_data);
-
             $.trigger_callback(_callback);
         });
         //});
