@@ -136,10 +136,10 @@ var _app_factory_db_utils = function ($scope) {
     $scope.DB.create_table = function (_table_name, _field_name_list, _success_callback) {
         //$.console_trace("$scope.DB.create_table");
         //return;
-        var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + "3" + " (";
+        var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + "4" + " (";
 
         //_sql = _sql + "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ";
-        _sql = _sql + "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT";
+        _sql = _sql + "id";
 
 //        for (var _i in _field_name_list) {
 //            var _field_name = _field_name_list[_i];
