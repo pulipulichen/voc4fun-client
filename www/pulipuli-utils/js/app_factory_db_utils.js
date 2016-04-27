@@ -173,13 +173,14 @@ var _app_factory_db_utils = function ($scope) {
                     $scope.DB.drop_table("target_history", function () {
                         $scope.DB.drop_table("sqlite_sequence", function () {
                             LOCK = 1;
-                            $scope.DB.create_table(_table_name, _field_name_list, _success_callback);
+                            //$scope.DB.create_table(_table_name, _field_name_list, _success_callback);
+                            $scope.DB.error_handler(_tx, _error, _sql);
                         });
                     });
                 });
                 
                 // 如果建立table失敗，那就失敗吧，應該有記得吧？
-                $scope.DB.error_handler(_tx, _error, _sql);
+                //$scope.DB.error_handler(_tx, _error, _sql);
                 
             };
             
