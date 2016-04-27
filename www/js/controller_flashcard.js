@@ -26,7 +26,8 @@ var controller_flashcard = function ($scope) {
                     _status = _s;
                 },
                 function () {
-                    return _ctl.status;
+                    //return _ctl.status;
+                    return _status;
                 });
     };
     _status_init();
@@ -139,6 +140,7 @@ var controller_flashcard = function ($scope) {
                 }
                 
                 $scope.db_status.save_status(_status_key);
+                //alert([_status_key, _status.flashcard_count, $scope.ctl_flashcard.status.flashcard_count]);
                 $scope.ls.set(_db_name, _data);
                 
                 //console.log("已經重置");
