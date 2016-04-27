@@ -136,7 +136,7 @@ var _app_factory_db_utils = function ($scope) {
     $scope.DB.create_table = function (_table_name, _field_name_list, _success_callback) {
         //$.console_trace("$scope.DB.create_table");
         //return;
-        var _sql = "CREATE TABLE " + _table_name + " (";
+        var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + " (";
 
         //_sql = _sql + "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ";
         _sql = _sql + "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ";
@@ -159,7 +159,9 @@ var _app_factory_db_utils = function ($scope) {
             //$.console_trace("before _tx.executeSql(_sql, [], _success_callback);");
             var _error_handler = function (_tx, _error) {
                 //alert(_error);
-                $scope.DB.error_handler(_tx, _error, _sql);
+                
+                // 如果建立table失敗，那就失敗吧，應該有記得吧？
+                //$scope.DB.error_handler(_tx, _error, _sql);
             };
             
             _tx.executeSql(_sql, [], _success_callback, _error_handler);
