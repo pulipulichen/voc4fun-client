@@ -161,7 +161,7 @@ var _app_factory_db_utils = function ($scope) {
                 //alert(_error);
                 
                 // 如果建立table失敗，那就失敗吧，應該有記得吧？
-                //$scope.DB.error_handler(_tx, _error, _sql);
+                $scope.DB.error_handler(_tx, _error, _sql);
             };
             
             _tx.executeSql(_sql, [], _success_callback, _error_handler);
