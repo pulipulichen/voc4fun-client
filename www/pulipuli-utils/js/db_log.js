@@ -24,11 +24,11 @@ var db_log = function ($scope) {
     var _log_db = "log";
 
     var _log_db_fields = [
-        "timestamp",
-        "file_name",
-        "function_name",
-        "qualifier",
-        "data"
+        "timestamp INTEGER",
+        "file_name TEXT",
+        "function_name TEXT",
+        "qualifier TEXT",
+        "data TEXT"
     ];
 
     /**
