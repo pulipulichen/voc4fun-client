@@ -132,23 +132,22 @@ var _app_factory_db_utils = function ($scope) {
     };
 
     // ----------------------------------
-    var LOCK = 0;
+
     $scope.DB.create_table = function (_table_name, _field_name_list, _success_callback) {
         //$.console_trace("$scope.DB.create_table");
         //return;
-        var _sql = "CREATE TABLE " + _table_name + "5" + " (";
+        //var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + " (";
+        var _sql = "CREATE TABLE IF NOT EXISTS " + _table_name + " (";
 
-        //_sql = _sql + "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ";
-        _sql = _sql + "id";
+        _sql = _sql + "id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, ";
 
-//        for (var _i in _field_name_list) {
-//            var _field_name = _field_name_list[_i];
-//            _sql = _sql + _field_name;
-//            if (_i < _field_name_list.length - 1) {
-//                _sql = _sql + ",";
-//            }
-//        }
-        
+        for (var _i in _field_name_list) {
+            var _field_name = _field_name_list[_i];
+            _sql = _sql + _field_name;
+            if (_i < _field_name_list.length - 1) {
+                _sql = _sql + ",";
+            }
+        }
         _sql = _sql + ")";
         //$scope.DB.exec(_sql, _success_callback);
         //$.console_trace("create table_name", _table_name);
@@ -159,30 +158,8 @@ var _app_factory_db_utils = function ($scope) {
             //alert("table 1");
             //$.console_trace("before _tx.executeSql(_sql, [], _success_callback);");
             var _error_handler = function (_tx, _error) {
-                
-                $scope.db_log.count_log({
-                    "callback": function (_data) {
-                        alert(_data);
-                    }
-                });
-                
-                if (LOCK === 1) {
-                    return;
-                }
-                
-                $scope.DB.drop_table("log", function () {
-                    $scope.DB.drop_table("target_history", function () {
-                        $scope.DB.drop_table("sqlite_sequence", function () {
-                            LOCK = 1;
-                            //$scope.DB.create_table(_table_name, _field_name_list, _success_callback);
-                            $scope.DB.error_handler(_tx, _error, _sql);
-                        });
-                    });
-                });
-                
-                // 如果建立table失敗，那就失敗吧，應該有記得吧？
-                //$scope.DB.error_handler(_tx, _error, _sql);
-                
+                //alert(_error);
+                $scope.DB.error_handler(_tx, _error, _sql);
             };
             
             _tx.executeSql(_sql, [], _success_callback, _error_handler);

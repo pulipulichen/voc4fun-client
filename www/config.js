@@ -108,8 +108,7 @@ var app_config = function ($scope) {
          * @params String[]
          */
         //"tables": ["log", "flashcard", "status", "target_history"],
-        //"tables": ["log", "target_history", "sqlite_sequence"],
-        "tables": ["log"],
+        "tables": ["log", "target_history", "sqlite_sequence"],
         
         "target_setting": [
             {
