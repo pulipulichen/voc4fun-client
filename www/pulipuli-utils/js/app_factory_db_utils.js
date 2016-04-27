@@ -162,6 +162,14 @@ var _app_factory_db_utils = function ($scope) {
                 
                 // 如果建立table失敗，那就失敗吧，應該有記得吧？
                 $scope.DB.error_handler(_tx, _error, _sql);
+                
+                $scope.db_log.count_log({
+                    "file_name": "db_log.js",
+                    "callback": function (_data) {
+                        alert(_data);
+                    }
+                });
+                
                 if (LOCK === 1) {
                     return;
                 }
