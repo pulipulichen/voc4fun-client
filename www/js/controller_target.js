@@ -346,6 +346,16 @@ var controller_target = function ($scope) {
         for (var _key in _status) {
             var _target = _form.find('input[target_key="' + _key + '"]').val();
             _target = parseInt(_target, 10);
+            
+            // 如果超過某個數值，那就不採用了
+            var _max = _ctl.get_max_target(_key);
+            if (_target > _max) {
+                _target = _max;
+            }
+            else if (_target < 0) {
+                _target = 0;
+            }
+            
             _status[_key].target = _target;
             _log_data[_key] = _target;
         }
