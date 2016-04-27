@@ -355,6 +355,9 @@ var controller_target = function ($scope) {
             else if (_target < 0) {
                 _target = 0;
             }
+            else if (isNaN(_target)) {
+                _target = _ctl.get_default_target(_key);
+            }
             
             _status[_key].target = _target;
             _log_data[_key] = _target;
@@ -819,6 +822,16 @@ var controller_target = function ($scope) {
 
         //$.console_trace("get_target_data_default()", _target_data);
         return _target_data;
+    };
+    
+    _ctl.get_default_target = function (_key) {
+        for (var _i = 0; _i < _var.target_setting.length; _i++) {
+            var _item = _var.target_setting[_i];
+            if (_key === _item.key) {
+                return _item.default_target;
+            }
+        }
+        return;
     };
 
     _ctl.get_before_yesterday_target_data = function (_callback) {
