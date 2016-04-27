@@ -16,7 +16,7 @@ var _app_factory_db_utils = function ($scope) {
         
         if (_db === undefined) {
             try {
-                _db = openDatabase('open_database', '1.0', 'Pulipuli Open Database', 2 * 1024 * 1024 );
+                _db = openDatabase('open_database2', '1.0', 'Pulipuli Open Database', 2 * 1024 * 1024 );
                 //$.console_trace("finish");
             }
             catch (_error) {
