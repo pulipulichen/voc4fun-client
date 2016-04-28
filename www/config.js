@@ -54,7 +54,7 @@ var app_config = function ($scope) {
         /**
          * 設定時間偏移，單位是天數
          */
-        day_offset: 0,
+        day_offset: 2,
         
         
         /**

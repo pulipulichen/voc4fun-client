@@ -7,9 +7,16 @@
              ng-show"ctl_target.get_complete_percent() !== undefined" >
              {{ ctl_profile.status.name}} 
             <div ng-show="ctl_target.is_target_setted() && !CONFIG.control_group_version"
-                 ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100)}">
+                 ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100), 'target-completed': (ctl_target.is_all_finish())}">
                 {{ 'TARGET_MENU_STATUS' | translate }}
-                <span class="complete-percent" > {{ ctl_target.get_complete_percent()}}%</span> 
+                <span class="complete-percent" > 
+                    {{ ctl_target.get_complete_percent()}}%
+                    <i class="ion-checkmark-circled" ng-show="ctl_target.get_complete_percent() === 100" />
+                </span>
+            </div>
+            <div ng-show="ctl_target.is_all_finish() && !CONFIG.control_group_version" class="target-completed">
+                 已經全部完成
+                 <i class="ion-checkmark-circled" />
             </div>
         </div>
 
@@ -44,10 +51,17 @@
                 {{ 'LEARN_FLASHCARD_TITLE' | translate }}
             </span>
 
-            <span  class="right" style="float:right"
+            <span class="right" style="float:right"
                    ng-class="{'target-incompleted': (ctl_target.status.learn_flashcard.done < ctl_target.status.learn_flashcard.target)}"
-                   ng-show="ctl_target.status.learn_flashcard.target !== 0 && !CONFIG.control_group_version">
-                {{ ctl_target.status.learn_flashcard.done}} / {{ ctl_target.status.learn_flashcard.target}}
+                   ng-show="!CONFIG.control_group_version">
+                <!-- {{ ctl_target.status.learn_flashcard.done}} / {{ ctl_target.status.learn_flashcard.target}}-->
+                <span ng-show="ctl_target.is_all_finish('learn_flashcard') === false">
+                    {{ ctl_target.menu_display_target("learn_flashcard", ctl_target.status.learn_flashcard.done, ctl_target.status.learn_flashcard.target) }}
+                </span>
+                <span class="target-completed" ng-show="ctl_target.is_all_finish('learn_flashcard')">
+                    {{ ctl_target.menu_display_target("learn_flashcard", ctl_target.status.learn_flashcard.done, ctl_target.status.learn_flashcard.target) }}
+                    <i class="ion-checkmark-circled" />
+                </span>
             </span>
         </ons-list-item>
         
@@ -55,13 +69,20 @@
             menu_click($event);">
             <ons-icon icon="ion-edit" fixed-width="true"></ons-icon>
             <span class="menu-label">
-                筆記列表
+                筆記列表 <!-- @TODO 語系 -->
             </span>
 
             <span  class="right" style="float:right"
                    ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target)}"
-                   ng-show="ctl_target.status.take_note.target !== 0 && !CONFIG.control_group_version">
-                {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
+                   ng-show="!CONFIG.control_group_version">
+                <!-- {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}} -->
+                <span ng-show="ctl_target.is_all_finish('take_note') === false">
+                    {{ ctl_target.menu_display_target("take_note", ctl_target.status.take_note.done, ctl_target.status.take_note.target) }}
+                </span>
+                <span class="target-completed" ng-show="ctl_target.is_all_finish('take_note')">
+                    {{ ctl_target.menu_display_target("take_note", ctl_target.status.take_note.done, ctl_target.status.take_note.target) }}
+                    <i class="ion-checkmark-circled" />
+                </span>
             </span>
         </ons-list-item>
 
@@ -73,8 +94,15 @@
             </span>
             <span class="right" style="float:right"
                   ng-class="{'target-incompleted': (ctl_target.status.test_select.done < ctl_target.status.test_select.target)}"
-                  ng-show="ctl_target.status.test_select.target !== 0 && !CONFIG.control_group_version">
-                {{ ctl_target.status.test_select.done}} / {{ ctl_target.status.test_select.target}}
+                  ng-show="!CONFIG.control_group_version">
+                <!-- {{ ctl_target.status.test_select.done}} / {{ ctl_target.status.test_select.target}} -->
+                <span ng-show="ctl_target.is_all_finish('test_select') === false">
+                    {{ ctl_target.menu_display_target("test_select", ctl_target.status.test_select.done, ctl_target.status.test_select.target) }}
+                </span>
+                <span class="target-completed" ng-show="ctl_target.is_all_finish('test_select')">
+                    {{ ctl_target.menu_display_target("test_select", ctl_target.status.test_select.done, ctl_target.status.test_select.target) }}
+                    <i class="ion-checkmark-circled" />
+                </span>
             </span>
         </ons-list-item>
     </ons-list>

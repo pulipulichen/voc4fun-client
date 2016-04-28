@@ -9,12 +9,13 @@ var controller_activity = function ($scope) {
     _ctl.enter_from_target = function () {
         //$.console_trace("設定swipeable");
         $scope.set_swipeable(true);
-        
+        //$.console_trace("enter_from_target");
         if ( _ctl.is_learn_enough() 
                 && _ctl.is_test_enough() === false ) {
             $scope.ctl_test_select.enter(false);
         }
         else {
+            //$.console_trace("$scope.ctl_learn_flashcard.enter();");
             $scope.ctl_learn_flashcard.enter();
         }
         return this;

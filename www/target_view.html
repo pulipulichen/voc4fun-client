@@ -22,7 +22,7 @@
                 </ons-col>
 
                 <ons-col width="50" style="text-align: right">
-                    {{ data.done }} / {{ ctl_target.display_target(data.target) }}
+                    {{ ctl_target.display_target(setting.key, data.done, data.target) }}
                 </ons-col>
             </ons-row>
         </ons-list-item>
