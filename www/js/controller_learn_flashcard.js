@@ -174,7 +174,6 @@ var controller_learn_flashcard = function ($scope) {
                     $scope.$digest();
                 }, 0);
                 
-
                 _trans_callback(_flashcard);
             };
 
@@ -367,7 +366,7 @@ var controller_learn_flashcard = function ($scope) {
         var _flashcard = $scope.ctl_flashcard.get_flashcard(_id);
             if (_flashcard === undefined) {
                 // 表示已經到了最後一列
-                _status.flashcard_index = 0;
+                _status.flashcard_index = -1;
                 _ctl.add_new_flashcard(_callback);
             }
             else {

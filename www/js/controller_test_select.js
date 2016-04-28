@@ -300,6 +300,9 @@ var controller_test_select = function ($scope) {
     };
 
     _ctl.add_history_stack = function (_flashcard_id) {
+        if (_flashcard_id === undefined || _flashcard_id === null) {
+            return this;
+        }
         if ($.inArray(_flashcard_id, _status.history_stack) === -1) {
             _status.history_stack.push(_flashcard_id);
         }

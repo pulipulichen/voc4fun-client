@@ -525,9 +525,14 @@ var controller_target = function ($scope) {
         var _target_count = 0;
 
         for (var _i in _status) {
-            _done = _done + _target_data[_i].done;
-            _target = _target + _target_data[_i].target;
-            _p = _p + Math.min(100, Math.floor(_target_data[_i].done / _target_data[_i].target * 100));
+            if (_ctl.is_all_finish(_i) === false) {
+                _done = _done + _target_data[_i].done;
+                _target = _target + _target_data[_i].target;
+                _p = _p + Math.min(100, Math.floor(_target_data[_i].done / _target_data[_i].target * 100));
+            }
+            else {
+                _p = _p + 100;
+            }
             _target_count++;
         }
 
