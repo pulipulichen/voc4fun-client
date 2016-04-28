@@ -352,8 +352,8 @@ var controller_target = function ($scope) {
             if (_target > _max) {
                 _target = _max;
             }
-            else if (_target < 0) {
-                _target = 0;
+            else if (_target < 1) {
+                _target = 1;
             }
             else if (isNaN(_target)) {
                 _target = _ctl.get_default_target(_key);
@@ -421,6 +421,9 @@ var controller_target = function ($scope) {
 
         if (!(_val < _min || _val > _max)) {
             _input.val(_val);
+        }
+        else if (_val < _min) {
+            _input.val(_min);
         }
         else {
             _input.val(_max);
@@ -1004,7 +1007,14 @@ var controller_target = function ($scope) {
     
     // -----------------------------------------------------------------
     
-    
+    _ctl.display_target = function (_target) {
+        if (_target > 0) {
+            return _target;
+        }
+        else {
+            return "完成";  // @TODO 語系
+        }
+    };
 
     // ------------------------------------------
 

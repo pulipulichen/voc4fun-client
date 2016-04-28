@@ -102,10 +102,12 @@ var controller_note = function ($scope) {
         if (_id === undefined) {
             _id = $scope.ctl_learn_flashcard.get_current_flashcard_id();
         }
+        
         if ($.inArray(_id, _status.history) === -1) {
             _status.history.push(_id);
 
             $scope.db_status.save_status(_status_key);
+            $.console_trace(_status.history);
             $scope.ctl_target.done_plus("take_note");
         }
     };

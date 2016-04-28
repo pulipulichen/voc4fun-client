@@ -427,7 +427,7 @@ var controller_learn_flashcard = function ($scope) {
 
         var _data = {
             q: _var.learn_flashcard.q,
-            uuid: $scope.db_log.get_uuid()
+            uuid: $scope.ctl_profile.get_uuid()
         };
 
         if (typeof($scope.CONFIG.server_url) === "string") {

@@ -203,7 +203,9 @@ var controller_flashcard = function ($scope) {
                     }
                 }
                 
-                _random_index.push(_i);
+                if (_exclude_id !== _i) {
+                    _random_index.push(_i);
+                }
             }
         }
         else {

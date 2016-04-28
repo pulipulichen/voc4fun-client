@@ -31,7 +31,7 @@
     <div class="flashcard">
 
         <!-- 英文的部分 -->
-        <ons-row style="display: flex;" class="side q "  ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"> 
+        <ons-row class="side q "  ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"> 
 
             <ons-col align="top" >	
                 <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak" ng-show="CONFIG.enable_speak === true"></ons-icon>
@@ -51,38 +51,36 @@
         </ons-row>
 
         <!--加入字典-0128-wyfan-->
-        <ons-row style="display: flex;" class="side dictionary">
-            <ons-col width="25%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
-                <ons-button style="width:95%; white-space: initial;">
+        <ons-row class="side dictionary">
+            <ons-col width="20%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
+                <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="yahhoo-dictionary" ></ons-icon>
-                    <div style="width:95%">
+                    <div>
                         中英字典 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>
             </ons-col>
-            <ons-col  width="25%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
-                <ons-button style="width:95%; white-space: initial;">
+            <ons-col  width="20%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
+                <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="synonym-dictionary" "></ons-icon>
-                    <div style="width:95%">
+                    <div>
                         同義字典 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>
             </ons-col>
-            <ons-col width="25%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
-                <ons-button style="width:95%; white-space: initial; ">
+            <ons-col width="20%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
+                <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="radicals-dictionary" ></ons-icon>
-                    <div style="width:95%">
+                    <div>
                         字根字典 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>	
             </ons-col>
-            <ons-col  width="25%" ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q)">
-                <ons-button style="width:95%; white-space: initial;">
+            <ons-col  width="20%" ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q)">
+                <ons-button>
                     <ons-icon icon="ion-image" fixed-width="true" class="image-search" ></ons-icon>
-                    <div style="width:95%;">
-                       
-						圖片搜尋 <!-- @TODO 語系 -->
-						
+                    <div>
+                        圖片搜尋 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>	
             </ons-col>			
