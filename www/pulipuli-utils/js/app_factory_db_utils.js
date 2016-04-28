@@ -562,4 +562,26 @@ var _app_factory_db_utils = function ($scope) {
         //$.console_trace(_sql);
         return $scope.DB.exec(_sql, [], _callback);
     };
+    
+    $scope.DB.reset = function (_callback) {
+        var _keys = $.array_keys(_register_data);
+
+        //$.console_trace("_init_tables", _keys);
+        var _loop = function (_i) {
+            if (_i < _keys.length) {
+                var _table_name = _keys[_i];
+                //$.console_trace("before $scope.DB.create_table(_table_name, _fields, function () {");
+                $scope.DB.drop_table(_table_name, function () {
+                    //$.console_trace("after $scope.DB.create_table(_table_name, _fields, function () {");
+                    _i++;
+                    _loop(_i);
+                });
+            }
+            else {
+                _tables_inited = false;
+                $.trigger_callback(_callback);
+            }
+        };
+        _loop(0);
+    };
 };

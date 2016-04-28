@@ -277,7 +277,7 @@ var controller_learn_flashcard = function ($scope) {
     };
     _status_init();
 
-    var _max_history_stack_length = 50;
+    var _max_history_stack_length = $scope.CONFIG.max_history_stack_length;
     _ctl.clean_history_stack = function () {
         if (_status.history_stack.length > _max_history_stack_length) {
             var _stk = [];
@@ -285,6 +285,7 @@ var controller_learn_flashcard = function ($scope) {
                 _stk.push(_status.history_stack[_h]);
             }
             _status.history_stack = _stk;
+            _status.history_index = _stk.length - 1;
         }
     };
 

@@ -134,6 +134,11 @@ var controller_target = function ($scope) {
             $scope.ctl_activity.enter_from_target();
             return this;
         }
+        
+        if (_ctl.is_all_finish()) {
+            $scope.ctl_activity.enter_from_target();
+            return;
+        }
 
         _ctl.period_target_exists(function (_today_exists) {
             _ctl.before_target_exists(-1, function (_yesterday_exists) {

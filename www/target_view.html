@@ -3,7 +3,8 @@
     <ons-toolbar>
         <div class="center">{{ ctl_target.get_view_title()}}</div>
 
-        <div class="right" ng-click="app.navi.pushPage('target_edit.html')">
+        <div class="right" ng-click="app.navi.pushPage('target_edit.html')"
+             ng-show="ctl_target.is_all_finish() === false">
             <ons-toolbar-button>
                 <ons-icon icon="ion-edit" fixed-width="true"></ons-icon>
             </ons-toolbar-button>
@@ -14,7 +15,7 @@
 
     <ons-list modifier="inset">
         <ons-list-item ng-repeat="data in ctl_target.status" 
-                       ng-class="{'bg-danger': (data.done < data.target), 'bg-success': (ctl_target.get_max_target(setting.key) === 0)}">
+                       ng-class="{'bg-danger': (data.done < data.target && ctl_target.get_max_target(setting.key) > 0), 'bg-success': (ctl_target.get_max_target(setting.key) === 0)}">
             <ons-row ng-init="setting = ctl_target.var.target_setting[$index]">
                 <ons-col class="title" ng-click="ctl_target.show_help(setting.key)">
                     {{ setting.title }}
@@ -23,6 +24,8 @@
 
                 <ons-col width="50" style="text-align: right">
                     {{ ctl_target.display_target(setting.key, data.done, data.target) }}
+                    <ons-icon icon="ion-checkmark-circled" fixed-width="true"
+                              ng-show="ctl_target.is_all_finish(setting.key)"></ons-icon>
                 </ons-col>
             </ons-row>
         </ons-list-item>

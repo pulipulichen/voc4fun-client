@@ -163,7 +163,7 @@ var db_status = function ($scope) {
             $.trigger_callback(_ready_listener[_r]);
         }
     };
-
+    
     _ctl.init_ons_ready = function () {
         //$.console_trace("_ctl.init_ons_ready");
         ons.ready(function () {

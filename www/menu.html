@@ -6,7 +6,7 @@
                  menu_click($event);"
              ng-show"ctl_target.get_complete_percent() !== undefined" >
              {{ ctl_profile.status.name}} 
-            <div ng-show="ctl_target.is_target_setted() && !CONFIG.control_group_version"
+            <div ng-show="ctl_target.is_target_setted() && ctl_target.is_all_finish() === false && !CONFIG.control_group_version"
                  ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100), 'target-completed': (ctl_target.is_all_finish())}">
                 {{ 'TARGET_MENU_STATUS' | translate }}
                 <span class="complete-percent" > 
@@ -37,10 +37,14 @@
             <span class="menu-label">
                 {{ 'TARGET_MENU_TITLE' | translate }}
             </span>
-            <span  class="right" style="float:right" 
-                   ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100)}"
-                   ng-show="ctl_target.is_target_setted() && !CONFIG.control_group_version">
-                {{ ctl_target.get_complete_percent()}}%
+            <span class="right" style="float:right" 
+                   ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100), 'target-completed': (ctl_target.is_all_finish())}"
+                   ng-show="!CONFIG.control_group_version">
+                <span ng-show="ctl_target.is_all_finish() === false">
+                    {{ ctl_target.get_complete_percent()}}%
+                </span>
+                <ons-icon icon="ion-checkmark-circled" fixed-width="true"
+                           ng-show="ctl_target.is_all_finish()"></ons-icon>
             </span>
         </ons-list-item>
 

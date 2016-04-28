@@ -3,7 +3,7 @@
 }
 
 .target-completed {
-    color: #5cb85c;
+    color: #5cb85c !important;
     /* http://getbootstrap.com/css/#less-variables-colors */
 }
 

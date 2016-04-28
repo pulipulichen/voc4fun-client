@@ -501,7 +501,8 @@ var db_log = function ($scope) {
         // 離開的情況
         $scope.ons_view.exit_app_add_listener(_sync);
     };
-    _ctl.sync_init();
+    // 20160428 移到初始化動作去做
+    //_ctl.sync_init();
 
     // ----------------------------------
 

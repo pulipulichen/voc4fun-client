@@ -169,65 +169,8 @@
 
             // -----------------------------------
             
-            var _ready = function () {
-                if ($scope.CONFIG.remote_debug === true 
-                    && typeof($scope.CONFIG.server_url) === "string") {
-                    var _url = $scope.CONFIG.server_url + "model/debug_reset.php";
-                    $.get(_url);
-                }
-                
-                //$.console_trace("before $scope.db_status.ready(function () {");
-                $scope.db_status.ready(function () {
-                    //$.console_trace("after $scope.db_status.ready(function () {");
-                    if ($scope.CONFIG.qunit === false && $._GET("qunit") !== "1") {
-                        ons.ready(function () {
-                            if (typeof(cordova) === "object") {
-                                //alert("等待");
-                                document.addEventListener("deviceready", function () {
-                                    _app_ready($scope);
-                                }, false);
-                            }
-                            else {
-                                _app_ready($scope);
-                            }
-                            //_app_ready($scope);
-                        });
-                    }
-                    else {
-                        if (typeof (QUNIT_INITED) === "undefined") {
-                            $.getScript("pulipuli-utils/qunit.js");
-                        }
-                    }
-                });
-
-            };
-
-            if ($scope.CONFIG.empty_database === true) {
-                $scope.DB.table_exists($scope.CONFIG.tables[0], function (_is_exists) {
-                    if (_is_exists === true) {
-                        // 偵測是否有Table
-                        $scope.DB.drop_table($scope.CONFIG.tables, function () {
-                            if (typeof($scope.CONFIG.server_url) === "string") {
-                                //$.console_trace($scope.CONFIG.server_url + "model/reset.php");
-                                $.getJSON($scope.CONFIG.server_url + "model/reset.php", function () {
-                                    // 網頁重新整理
-                                    location.reload();
-                                });
-                            }
-                            else {
-                                location.reload();
-                            }
-                        });
-                    }
-                    else {
-                        _ready();
-                    }
-                });
-            }
-            else {
-                _ready();
-            }
-        };
+            _app_ready($scope);
+        };  //var _app_controller = function ($scope, $filter) {
 
         app.controller('app_controller',
                 ['$scope',

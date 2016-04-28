@@ -31,7 +31,7 @@ var app_config = function ($scope) {
         /**
          * 組別代號 (請自訂)
          */
-        group_name: "Voc4Fun",
+        group_name: "2016-04 Voc4Fun E",
         
         /**
          * 預設的使用者名稱
@@ -56,6 +56,13 @@ var app_config = function ($scope) {
          */
         day_offset: 2,
         
+        /**
+         * 版本 
+         * 資料格式是Timestamp http://www.unixtimestamp.com/index.php
+         * 
+         * 如果裝置記錄版本與此版本不合，則會進行重置
+         */
+        version: 1461888005,
         
         /**
          * 自動間隔同步時間，單位是分鐘
@@ -81,7 +88,7 @@ var app_config = function ($scope) {
         /**
          * 重置動作中包含遠端資料庫的重置
          */
-        enable_database_reset: true,
+        enable_database_reset: false,
         
         /**
          * 遠端除錯功能
@@ -102,6 +109,11 @@ var app_config = function ($scope) {
          * 單字卡的位置
          */
         flashcard_path: "data/flashcard.xlsx",
+        
+        /**
+         * 單字卡最大歷史保留的次數
+         */
+        max_history_stack_length: 3,
         
         /**
          * 表格名稱
