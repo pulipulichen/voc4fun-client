@@ -254,7 +254,7 @@ var controller_test_select = function ($scope) {
             //}
             _flashcard_id = $.array_get_random(_status.history_stack
                     , _test_select.flashcard_id);
-            $.console_trace("get from history_stack", [_flashcard_id, _test_select.flashcard_id]);
+            //$.console_trace("get from history_stack", [_flashcard_id, _test_select.flashcard_id]);
             _qualifier = "history";
         }
         var _options = [];

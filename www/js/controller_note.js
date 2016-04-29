@@ -107,7 +107,7 @@ var controller_note = function ($scope) {
             _status.history.push(_id);
 
             $scope.db_status.save_status(_status_key);
-            $.console_trace(_status.history);
+            //$.console_trace(_status.history);
             $scope.ctl_target.done_plus("take_note");
         }
         

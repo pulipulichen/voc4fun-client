@@ -24,7 +24,7 @@ var app_config = function ($scope) {
         /**
          * 控制組模式
          * 
-         * 設為true的話，會關閉部分功能
+         * 設為true的話，會關閉目標設定的功能
          */
         "control_group_version": false,
         
@@ -54,7 +54,7 @@ var app_config = function ($scope) {
         /**
          * 設定時間偏移，單位是天數
          */
-        day_offset: 0,
+        day_offset: 1,
         
         /**
          * 版本 
@@ -62,7 +62,7 @@ var app_config = function ($scope) {
          * 
          * 如果裝置記錄版本與此版本不合，則會進行重置
          */
-        version: 1461888016,
+        version: 1461888017,
         
         /**
          * 自動間隔同步時間，單位是分鐘

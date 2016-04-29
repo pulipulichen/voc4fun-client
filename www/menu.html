@@ -2,21 +2,19 @@
     <ons-row class="target-status menu-heading" style="cursor: pointer;">
 
         <div class="left" style="padding: 0.5rem; font-size: 12pt;" 
-             ng-click="ctl_target.enter_from_menu();
-                 menu_click($event);"
-             ng-show"ctl_target.get_complete_percent() !== undefined" >
+             ng-click="menu_header_click($event);">
              {{ ctl_profile.status.name}} 
             <div ng-show="ctl_target.is_target_setted() && ctl_target.is_all_finish() === false && !CONFIG.control_group_version"
                  ng-class="{'target-incompleted': (ctl_target.get_complete_percent() < 100), 'target-completed': (ctl_target.is_all_finish())}">
                 {{ 'TARGET_MENU_STATUS' | translate }}
                 <span class="complete-percent" > 
                     {{ ctl_target.get_complete_percent()}}%
-                    <i class="ion-checkmark-circled" ng-show="ctl_target.get_complete_percent() === 100" />
+                    <i class="ion-android-star" ng-show="ctl_target.get_complete_percent() === 100" />
                 </span>
             </div>
             <div ng-show="ctl_target.is_all_finish() && !CONFIG.control_group_version" class="target-completed">
                  已經全部完成
-                 <i class="ion-checkmark-circled" />
+                 <i class="ion-android-star" />
             </div>
         </div>
 
@@ -43,7 +41,7 @@
                 <span ng-show="ctl_target.is_all_finish() === false">
                     {{ ctl_target.get_complete_percent()}}%
                 </span>
-                <ons-icon icon="ion-checkmark-circled" fixed-width="true"
+                <ons-icon icon="ion-android-star" fixed-width="true"
                            ng-show="ctl_target.is_all_finish()"></ons-icon>
             </span>
         </ons-list-item>
@@ -64,7 +62,7 @@
                 </span>
                 <span class="target-completed" ng-show="ctl_target.is_all_finish('learn_flashcard')">
                     {{ ctl_target.menu_display_target("learn_flashcard", ctl_target.status.learn_flashcard.done, ctl_target.status.learn_flashcard.target) }}
-                    <i class="ion-checkmark-circled" />
+                    <i class="ion-android-star" />
                 </span>
             </span>
         </ons-list-item>
@@ -85,7 +83,7 @@
                 </span>
                 <span class="target-completed" ng-show="ctl_target.is_all_finish('take_note')">
                     {{ ctl_target.menu_display_target("take_note", ctl_target.status.take_note.done, ctl_target.status.take_note.target) }}
-                    <i class="ion-checkmark-circled" />
+                    <i class="ion-android-star" />
                 </span>
             </span>
         </ons-list-item>
@@ -105,7 +103,7 @@
                 </span>
                 <span class="target-completed" ng-show="ctl_target.is_all_finish('test_select')">
                     {{ ctl_target.menu_display_target("test_select", ctl_target.status.test_select.done, ctl_target.status.test_select.target) }}
-                    <i class="ion-checkmark-circled" />
+                    <i class="ion-android-star" />
                 </span>
             </span>
         </ons-list-item>
