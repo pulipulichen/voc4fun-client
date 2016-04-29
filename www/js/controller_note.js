@@ -96,6 +96,7 @@ var controller_note = function ($scope) {
         }
 
         app.navi.popPage();
+        return this;
     };
 
     _ctl.check_note_edited = function (_id) {

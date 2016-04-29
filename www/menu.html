@@ -9,7 +9,7 @@
                 {{ 'TARGET_MENU_STATUS' | translate }}
                 <span class="complete-percent" > 
                     {{ ctl_target.get_complete_percent()}}%
-                    <i class="ion-android-star" ng-show="ctl_target.get_complete_percent() === 100" />
+                    <i class="ion-android-star" ng-show="ctl_target.get_complete_percent() === 100 && ctl_target.is_all_finish()" />
                 </span>
             </div>
             <div ng-show="ctl_target.is_all_finish() && !CONFIG.control_group_version" class="target-completed">

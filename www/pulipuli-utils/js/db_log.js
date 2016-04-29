@@ -373,7 +373,7 @@ var db_log = function ($scope) {
             return;
         }
         var _url = $scope.CONFIG.server_url + "model/sync.php";
-        //$.console_trace("sync_push: " + _server_timestamp);
+        $.console_trace("sync_push: " + _server_timestamp);
 
 
         // 先準備好要傳過去的資料

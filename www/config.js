@@ -3,10 +3,10 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         
-        "server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
-        //"server_url": "http://pc.pulipuli.info:8080/voc4fun/voc4fun-server/",
+        //"server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
+        //"server_url": "http://pc.pulipuli.info/voc4fun/voc4fun-server/",
         // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
         //"server_url": "/voc4fun/voc4fun-server/",
         
@@ -54,7 +54,7 @@ var app_config = function ($scope) {
         /**
          * 設定時間偏移，單位是天數
          */
-        day_offset: 1,
+        day_offset: 0,
         
         /**
          * 版本 
@@ -62,7 +62,7 @@ var app_config = function ($scope) {
          * 
          * 如果裝置記錄版本與此版本不合，則會進行重置
          */
-        version: 1461888017,
+        version: 1461888023,
         
         /**
          * 自動間隔同步時間，單位是分鐘

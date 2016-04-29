@@ -3,6 +3,7 @@ var db_status = function ($scope) {
     var _table_name = 'status';
     var _field_list = ['key', 'status'];
     var _listeners = [];
+    var _keys = [];
 
     //$scope.DB.drop_table(_table_name);
 
@@ -21,6 +22,7 @@ var db_status = function ($scope) {
             _listener.close_callback = _close_callback;
         }
         _listeners.push(_listener);
+        _keys.push(_key);
         return this;
     };
 
@@ -34,10 +36,14 @@ var db_status = function ($scope) {
         var _data = [];
         for (var _l = 0; _l < _listeners.length; _l++) {
             if (typeof (_listeners[_l].close_callback) === "function") {
-                _data.push({
-                    key: _listeners[_l].key,
-                    status: _listeners[_l].close_callback()
-                });
+                var _close_status = _listeners[_l].close_callback();
+//                _data.push({
+//                    key: _listeners[_l].key,
+//                    status: _close_status
+//                });
+                
+                $.console_trace("儲存");
+                $scope.ls.set(_table_name + "_" + _listeners[_l].key, _close_status);
             }
         }
 
@@ -60,7 +66,7 @@ var db_status = function ($scope) {
 //            }
 //        };
 //        _loop(0);
-        $scope.ls.set(_table_name, _data);
+        //$scope.ls.set(_table_name, _data);
         $.trigger_callback(_callback);
         return this;
     };
@@ -73,7 +79,9 @@ var db_status = function ($scope) {
             if (typeof (_listeners[_l].close_callback) === "function" && _listeners[_l].key === _key) {
                 _status = _listeners[_l].close_callback();
                 //$.console_trace("save_status()" , _key);
-                $scope.ls.set(_table_name, _key, _status);
+                //$scope.ls.set(_table_name, _key, _status);
+                
+                $scope.ls.set(_table_name + "_" + _key, _status);
                 //_status = JSON.stringify(_status);
                 break;
             }
@@ -115,13 +123,19 @@ var db_status = function ($scope) {
 //            $.trigger_callback(_callback);
 //        });
         
-        var _data = $scope.ls.get(_table_name);
+        //var _data = $scope.ls.get(_table_name);
+        //var _keys  = _ctl.get_keys();
         //$.console_trace("呼叫status", _data);
-        for (var _key in _data) {
-
+        for (var _i = 0; _i < _keys.length; _i++) {
+            var _key = _keys[_i];
             //var _key = _data[_d].key;
 
-            var _status = _data[_key];
+            //var _status = _data[_key];
+            var _status = $scope.ls.get(_table_name + "_" + _key);
+            if (_status === undefined) {
+                //_status = {};
+                continue;
+            }
             //$.console_trace(_key, _status);
             //$.console_trace("1 _status = JSON.parse(_status);");
             //_status = $.json_parse(_status);
@@ -163,6 +177,14 @@ var db_status = function ($scope) {
             $.trigger_callback(_ready_listener[_r]);
         }
     };
+    
+//    _ctl.get_keys = function () {
+////        var _keys = $scope.ls.get(_table_name + "_keys");
+////        if (_keys === undefined) {
+////            _keys = [];
+////        }
+//        return _keys;
+//    };
     
     _ctl.init_ons_ready = function () {
         //$.console_trace("_ctl.init_ons_ready");
