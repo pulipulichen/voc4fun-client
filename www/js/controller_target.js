@@ -1079,7 +1079,7 @@ var controller_target = function ($scope) {
         if (_target > 0) {
             return _done + " / " + _target;
         }
-        else if (_done === 0) {
+        else if (_done === 0 || _key === "take_note") {
             return "";
         }
         else {

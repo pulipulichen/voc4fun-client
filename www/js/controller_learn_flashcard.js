@@ -423,12 +423,24 @@ var controller_learn_flashcard = function ($scope) {
             return;
         }
         
-        var _id = _ctl.get_current_flashcard_id();
+        //var _id = _ctl.get_current_flashcard_id();
 
+        
         var _data = {
-            q: _var.learn_flashcard.q,
-            uuid: $scope.ctl_profile.get_uuid()
+            q: _var.learn_flashcard.q
+            //uuid: $scope.ctl_profile.get_uuid()
         };
+        
+        //$.console_trace("現在有筆記嗎？", _var.learn_flashcard.note);
+        var _check_my_note = true;
+        if (typeof(_var.learn_flashcard.note) === "string" && $.trim(_var.learn_flashcard.note) !== "") {
+            $.console_trace("有資料", [typeof(_var.learn_flashcard.note), _var.learn_flashcard.note])
+            _data.uuid = $scope.ctl_profile.get_uuid();
+            _check_my_note = false;
+        }
+        else {
+            $.console_trace("沒有資料", [typeof(_var.learn_flashcard.note), _var.learn_flashcard.note])
+        }
 
         if (typeof($scope.CONFIG.server_url) === "string") {
             var _url = $scope.CONFIG.server_url + "model/note.php";
@@ -436,25 +448,10 @@ var controller_learn_flashcard = function ($scope) {
                 if (typeof(_data.q) !== "string" || _data.q === "") {
                     _ctl.other_note_ajax(_callback);
                     return;
-                } 
+                }
                 
                 $.getJSON(_url, _data, function (_other_note) {
-                    if (typeof(_other_note) === "object" && typeof(_other_note.name) === "string") {
-                        _other_note = [_other_note];
-                    }
-                    
-                    //$.console_trace(_other_note);
-                    _var.learn_flashcard.other_note = _other_note;
-
-                    var _notification = $(".learn-flashcard-page .notification")
-                    _notification.find(".load-icon").hide();
-                    _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
-                    _notification.find(".notification-text").show();
-                    //_var.learn_flashcard.other_note_loaded = true;
-                    //$scope.$digest();
-                    $scope.$digest();
-                    //$.console_trace("other_note_ajax 尚未完成");
-                    $.trigger_callback(_callback);
+                    _ctl.set_other_note(_other_note, _check_my_note, _callback);
                 });
             }, 1000);
         }
@@ -473,10 +470,53 @@ var controller_learn_flashcard = function ($scope) {
 //            $.console_trace("other_note_ajax 尚未完成");
 //            $.trigger_callback(_callback);
 //        }, 1000);
+    };  //_ctl.other_note_ajax = function (_callback) {
+    
+    _ctl.set_other_note = function (_notes, _check_my_note, _callback) {
+        if (typeof(_notes) === "object" && typeof(_notes.name) === "string") {
+            _notes = [_notes];
+        }
+
+        var _other_note = [];
+        if (_check_my_note === true) {
+            // 先檢查note中是否有自己的
+            var _uuid = $scope.ctl_profile.get_uuid();
+            for (var _i = 0; _i < _notes.length; _i++) {
+                var _note = _notes[_i];
+                $.console_trace([_note.uuid, _uuid]);
+                if (_note.uuid !== _uuid) {
+                    _other_note.push(_note);
+                }
+                else {
+                    // 加入筆記功能中
+                    $.console_trace("抓到自己的資料了", _note);
+                    var _flashcard_id = _ctl.get_current_flashcard_id();
+                    $scope.ctl_note.check_note_edited(_flashcard_id);
+                    $scope.ctl_note.save_note_to_db(_note.note);
+                    // take_note加一
+                }
+            }
+        }
+        else {
+            _other_note = _notes;
+        }
+
+        //$.console_trace(_other_note);
+        _var.learn_flashcard.other_note = _other_note;
+
+        var _notification = $(".learn-flashcard-page .notification");
+        _notification.find(".load-icon").hide();
+        _notification.find(".notification-text .count").text(_var.learn_flashcard.other_note.length);
+        _notification.find(".notification-text").show();
+        //_var.learn_flashcard.other_note_loaded = true;
+        //$scope.$digest();
+        $scope.$digest();
+        //$.console_trace("other_note_ajax 尚未完成");
+        $.trigger_callback(_callback);
     };
 
     _ctl.other_note_reset = function () {
-        var _notification = $(".learn-flashcard-page .notification")
+        var _notification = $(".learn-flashcard-page .notification");
         _notification.find(".load-icon").show();
         _notification.find(".notification-text").hide();
     };

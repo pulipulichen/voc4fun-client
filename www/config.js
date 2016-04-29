@@ -62,7 +62,7 @@ var app_config = function ($scope) {
          * 
          * 如果裝置記錄版本與此版本不合，則會進行重置
          */
-        version: 1461888005,
+        version: 1461888012,
         
         /**
          * 自動間隔同步時間，單位是分鐘
@@ -113,7 +113,7 @@ var app_config = function ($scope) {
         /**
          * 單字卡最大歷史保留的次數
          */
-        max_history_stack_length: 3,
+        max_history_stack_length: 10,
         
         /**
          * 表格名稱

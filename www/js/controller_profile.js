@@ -184,6 +184,7 @@ var controller_profile = function ($scope) {
             
             // STEP 3. 設定 version
             _status.version = $scope.CONFIG.version;
+            //alert(_status.uuid);
             $scope.db_status.save_status(_status_key);
 
             // STEP 4. 重新整理網頁
