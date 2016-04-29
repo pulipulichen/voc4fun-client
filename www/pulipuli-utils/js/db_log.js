@@ -298,7 +298,7 @@ var db_log = function ($scope) {
     var _syncing = false;
     _ctl.sync = function (_callback) {
         //ctl._init_db(function () {
-        //$.console_trace("開始同步");
+        $.console_trace("開始同步");
 
         if (typeof($scope.CONFIG.server_url) !== "string") {
             //$.console_trace("沒有遠端伺服器");
@@ -330,6 +330,7 @@ var db_log = function ($scope) {
                     //$.console_trace("getJSON", _result);
                     if (typeof (_result) === "boolean" && _result === true) {
                         // 表示沒有資料需要更新
+                        $.console_trace("沒有需要更新");
                         _sync_complete();
                     }
                     else if (typeof (_result) === "number") {
@@ -339,7 +340,7 @@ var db_log = function ($scope) {
                     else if ($.is_array(_result)
                             || (typeof (_result) === "object" && typeof (_result.timestamp) !== "undefined")) {
                         // pull 模式
-                        //$.console_trace("pull模式", _result);
+                        $.console_trace("pull模式", _result);                        
                         _ctl.sync_pull(_result, _sync_complete);
                     }
                 });
@@ -372,7 +373,7 @@ var db_log = function ($scope) {
             return;
         }
         var _url = $scope.CONFIG.server_url + "model/sync.php";
-        //$.console_trace("sync_push: " + _server_timestamp);
+        $.console_trace("sync_push: " + _server_timestamp);
 
 
         // 先準備好要傳過去的資料
@@ -469,6 +470,7 @@ var db_log = function ($scope) {
 
         if (typeof (cordova) === "undefined") {
             // 桌面版的情況
+            $.console_trace("sync_init 開始監聽");
 
             // 開啟
             $(window).on("load", _sync);

@@ -54,15 +54,15 @@ var app_config = function ($scope) {
         /**
          * 設定時間偏移，單位是天數
          */
-        day_offset: 2,
+        day_offset: 0,
         
         /**
          * 版本 
-         * 資料格式是Timestamp http://www.unixtimestamp.com/index.php
+         * 資料格式是Timestamp http://www.unixtimestamp.com/index.php (請複製 The Current Unix Timestamp)
          * 
          * 如果裝置記錄版本與此版本不合，則會進行重置
          */
-        version: 1461888012,
+        version: 1461888016,
         
         /**
          * 自動間隔同步時間，單位是分鐘
