@@ -5,20 +5,20 @@ var app_config = function ($scope) {
          * [版本] 記得修改！！
          * 設為true的話，會關閉目標設定的功能
          */
-        "control_group_version": false,
+        "control_group_version": true,
         
         /**
          * 組別代號 (請自訂)
          * 
          * [版本] 記得修改！！
          */
-        "group_name": "2016-04 Voc4Fun E",
+        "group_name": "2016-04 Voc4Fun C",
         
         /**
          * 預設的使用者名稱
          * [版本] 記得修改！！
          */
-        "default_name": "Voc4FunE",
+        "default_name": "Voc4FunC",
         
         // ------------------------------------
         
