@@ -17,10 +17,13 @@
 
         <div class="right" >
             <span ng-init="_target_data = ctl_target.status.learn_flashcard" 
-                  ng-class="{'target-incompleted': (_target_data.done < _target_data.target)}"
+                  ng-class="{'target-incompleted': (_target_data.done < _target_data.target), 'target-completed': (ctl_target.is_all_finish('learn_flashcard'))}"
                   ng-click="ctl_target.enter_for_view()"
-                  ng-show="_target_data.target !== 0 && !CONFIG.control_group_version">
-                {{ _target_data.done}} / {{ _target_data.target}}
+                  ng-show="!CONFIG.control_group_version">
+                <!-- {{ _target_data.done}} / {{ _target_data.target}} -->
+                {{ ctl_target.menu_display_target("learn_flashcard", _target_data.done, _target_data.target) }}
+                <ons-icon icon="ion-android-star" fixed-width="true"
+                           ng-show="ctl_target.is_all_finish('learn_flashcard')"></ons-icon>
             </span>
 
             <ons-icon icon='ion-android-more-vertical' fixed-width="true" class="more-button" 
@@ -31,7 +34,7 @@
     <div class="flashcard">
 
         <!-- 英文的部分 -->
-        <ons-row style="display: flex;" class="side q "  ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"> 
+        <ons-row class="side q "  ng-click="ctl_activity.speak(ctl_learn_flashcard.var.learn_flashcard.q, 'en')"> 
 
             <ons-col align="top" >	
                 <ons-icon icon="ion-radio-waves" fixed-width="true" class="hide speak" ng-show="CONFIG.enable_speak === true"></ons-icon>
@@ -51,38 +54,36 @@
         </ons-row>
 
         <!--加入字典-0128-wyfan-->
-        <ons-row style="display: flex;" class="side dictionary">
-            <ons-col width="25%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
-                <ons-button style="width:95%; white-space: initial;">
+        <ons-row class="side dictionary">
+            <ons-col width="20%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
+                <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="yahhoo-dictionary" ></ons-icon>
-                    <div style="width:95%">
+                    <div>
                         中英字典 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>
             </ons-col>
-            <ons-col  width="25%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
-                <ons-button style="width:95%; white-space: initial;">
+            <ons-col  width="20%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
+                <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="synonym-dictionary" "></ons-icon>
-                    <div style="width:95%">
+                    <div>
                         同義字典 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>
             </ons-col>
-            <ons-col width="25%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
-                <ons-button style="width:95%; white-space: initial; ">
+            <ons-col width="20%" ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
+                <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="radicals-dictionary" ></ons-icon>
-                    <div style="width:95%">
+                    <div>
                         字根字典 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>	
             </ons-col>
-            <ons-col  width="25%" ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q)">
-                <ons-button style="width:95%; white-space: initial;">
+            <ons-col  width="20%" ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q)">
+                <ons-button>
                     <ons-icon icon="ion-image" fixed-width="true" class="image-search" ></ons-icon>
-                    <div style="width:95%;">
-                       
-						圖片搜尋 <!-- @TODO 語系 -->
-						
+                    <div>
+                        圖片搜尋 <!-- @TODO 語系 -->
                     </div>
                 </ons-button>	
             </ons-col>			
@@ -96,7 +97,9 @@
         <ons-icon icon="ion-edit" fixed-width="true" class="compose"></ons-icon>
 
         <span class="your-note pre" 
-              ng-show="(ctl_learn_flashcard.var.learn_flashcard.note !== null && ctl_learn_flashcard.var.learn_flashcard.note !== undefined)">{{ ctl_learn_flashcard.var.learn_flashcard.note}}</span>
+              ng-show="(ctl_learn_flashcard.var.learn_flashcard.note !== null && ctl_learn_flashcard.var.learn_flashcard.note !== undefined)">
+            {{ ctl_learn_flashcard.var.learn_flashcard.note }}
+        </span>
         <span class="note-empty" 
               ng-show="(ctl_learn_flashcard.var.learn_flashcard.note === null || ctl_learn_flashcard.var.learn_flashcard.note === undefined)">
             {{ 'LEARN_FLASHCARD_NOTE_EMPTY' | translate }}

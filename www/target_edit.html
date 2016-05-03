@@ -1,7 +1,7 @@
 <ons-page id="target_edit_html" class="target-page" 
           ng-device-backbutton="$($event.target).find('form').submit()">
     <form ng-submit="ctl_target.set_target($event); ctl_target.set_target_survey();
-            app.navi.popPage();">
+        app.navi.popPage();" novalidate>
         <ons-toolbar>
             <div class="center">{{ ctl_target.get_set_title()}}</div>
         </ons-toolbar>
@@ -22,7 +22,7 @@
                         <ons-icon icon="ion-ios-minus-outline" fixed-width="true" style="cursor:pointer" 
                                   ng-click="ctl_target.change_target_number($event, -1)"></ons-icon>
                         <input min="{{ setting.min}}" max="{{ ctl_target.get_max_target(setting.key)}}" type="number" 
-                               value="{{ data.target}}"
+                               ng-value="{{ data.target}}"
                                target_key="{{ setting.key}}"
                                name="target_{{ setting.key}}"
                                class="target-input" />

@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 2016-04-24 09:22:09
+# 2016-04-29 23:39:33
 
 about.html
 app_ready.js
@@ -114,12 +114,15 @@ img/loading.svg
 img/pudding-icon.svg
 img/shun.jpg
 img/Voc4Fun-icon.png
+img/Voc4Fun-icon.svg
 img/Voc4Fun-icon256.png
 img/write_note.png
 i18n/zh_TW.json
-data/flashcard-test.xlsx
+data/flashcard-201603-original.xlsx
+data/flashcard-20160424-extended.xlsx
+data/flashcard-20160428.xlsx
 data/flashcard.xlsx
-data/flashcard_increase_100.xlsx
+data/flashcard_300-20160430.xlsx
 css/controller_learn_flashcard.css
 css/controller_note.css
 css/controller_profile.css

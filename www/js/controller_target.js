@@ -134,6 +134,11 @@ var controller_target = function ($scope) {
             $scope.ctl_activity.enter_from_target();
             return this;
         }
+        
+        if (_ctl.is_all_finish()) {
+            $scope.ctl_activity.enter_from_target();
+            return;
+        }
 
         _ctl.period_target_exists(function (_today_exists) {
             _ctl.before_target_exists(-1, function (_yesterday_exists) {
@@ -341,30 +346,35 @@ var controller_target = function ($scope) {
     };
 
     _ctl.set_target = function ($event) {
-        var _form = $($event.target);
-        var _log_data = {};
-        for (var _key in _status) {
-            var _target = _form.find('input[target_key="' + _key + '"]').val();
-            _target = parseInt(_target, 10);
-            
-            // 如果超過某個數值，那就不採用了
-            var _max = _ctl.get_max_target(_key);
-            if (_target > _max) {
-                _target = _max;
-            }
-            else if (_target < 0) {
-                _target = 0;
-            }
-            else if (isNaN(_target)) {
-                _target = _ctl.get_default_target(_key);
-            }
-            
-            _status[_key].target = _target;
-            _log_data[_key] = _target;
-        }
+        
+        //$.console_trace("_ctl.set_target = function ($event) {");
+        if (_ctl.is_all_finish() === false) {
+            var _form = $($event.target);
+            var _log_data = {};
+            for (var _key in _status) {
+                var _target = _form.find('input[target_key="' + _key + '"]').val();
+                _target = parseInt(_target, 10);
 
-        //$.console_trace("什麼時候寫進去的？", _status_key);
-        $scope.log(_log_file, "set_target()", _log_data);
+                // 如果超過某個數值，那就不採用了
+                var _max = _ctl.get_max_target(_key);
+                if (_target > _max) {
+                    _target = _max;
+                }
+                else if (_target < 1) {
+                    _target = 1;
+                }
+                else if (isNaN(_target)) {
+                    _target = _ctl.get_default_target(_key);
+                }
+
+                _status[_key].target = _target;
+                _log_data[_key] = _target;
+            }
+
+            //$.console_trace("什麼時候寫進去的？", _status_key);
+            $scope.log(_log_file, "set_target()", _log_data);
+        }
+        
         //$.console_trace(_log_data);
 
         //$scope.ctl_activity.enter_from_target();
@@ -421,6 +431,9 @@ var controller_target = function ($scope) {
 
         if (!(_val < _min || _val > _max)) {
             _input.val(_val);
+        }
+        else if (_val < _min) {
+            _input.val(_min);
         }
         else {
             _input.val(_max);
@@ -512,9 +525,14 @@ var controller_target = function ($scope) {
         var _target_count = 0;
 
         for (var _i in _status) {
-            _done = _done + _target_data[_i].done;
-            _target = _target + _target_data[_i].target;
-            _p = _p + Math.min(100, Math.floor(_target_data[_i].done / _target_data[_i].target * 100));
+            if (_ctl.is_all_finish(_i) === false) {
+                _done = _done + _target_data[_i].done;
+                _target = _target + _target_data[_i].target;
+                _p = _p + Math.min(100, Math.floor(_target_data[_i].done / _target_data[_i].target * 100));
+            }
+            else {
+                _p = _p + 100;
+            }
             _target_count++;
         }
 
@@ -617,6 +635,7 @@ var controller_target = function ($scope) {
 //        $.console_trace("time2", _time2);
 
         _ctl._get_prev_target_data_set(function (_prev_target_data_set) {
+            //$.console_trace("預備呼叫calc");
             _ctl._calculate_recommend_target_data(_prev_target_data_set, _callback);
         });
     };
@@ -630,17 +649,22 @@ var controller_target = function ($scope) {
             if (_prev1 !== undefined) {
                 _prev_target_data_set.push(_prev1[0]);
                 var _refer_timestamp = _prev1[1];
-                //$.console_trace("refer", _refer_timestamp);
+//                $.console_trace("refer", _refer_timestamp);
+//                $.console_trace("呼叫了0次");
                 _ctl.get_before_target_data(-1, _refer_timestamp, function (_prev2) {
                     if (_prev2 !== undefined) {
                         //$.console_trace("prev2");
                         _prev_target_data_set.push(_prev2[0]);
                     }
+                    //$.console_trace("呼叫了1次");
                     $.trigger_callback(_callback, _prev_target_data_set);
+                    return;
                 });
             }
             else {
+                //$.console_trace("呼叫了2次");
                 $.trigger_callback(_callback, _prev_target_data_set);
+                return;
             }
         });
 
@@ -654,7 +678,7 @@ var controller_target = function ($scope) {
         //        _prev_target_data_set.push(JSON.parse(_row[0].data));
         //    }
         //    $.console_trace(_prev_target_data_set);
-        $.trigger_callback(_callback, _prev_target_data_set);
+//        $.trigger_callback(_callback, _prev_target_data_set);
         //});
 
     };
@@ -678,7 +702,7 @@ var controller_target = function ($scope) {
             _prev_target = _prev_target_data_set[1];
         }
 
-        $.console_trace("_prev_target_data_set", _prev_target_data_set.length);
+        //$.console_trace("_prev_target_data_set", _prev_target_data_set.length);
 
         if (_target !== undefined && _prev_target !== undefined) {
             for (var _i in _target) {
@@ -726,6 +750,7 @@ var controller_target = function ($scope) {
 
                 _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
             }   //for (var _i in _target) {
+            //$.console_trace("set_recommend 3");
         }   //if (_target !== undefined && _prev_target !== undefined) {
         else if (_target !== undefined && _prev_target === undefined) {
             for (var _i in _target) {
@@ -751,18 +776,35 @@ var controller_target = function ($scope) {
                     _recommend_target = _t.target + 1;
                 }
 
+                //_recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
                 _recommend_target_data[_i].recommend_target = Math.min(_recommend_target, _ctl.get_max_target(_i));
             }   //for (var _i in _target) {
+            //$.console_trace("set_recommend 2", _recommend_target_data);
         }   //if (_target !== undefined && _prev_target !== undefined) {
         else {
             var _setting_target = _ctl.get_setting_target();
             for (var _i in _setting_target) {
-                _recommend_target_data[_i].recommend_target = _setting_target[_i];
+                _recommend_target_data[_i].recommend_target = Math.min(_setting_target[_i], _ctl.get_max_target(_i));
             }
+            //$.console_trace("set_recommend 1");
         }
 
         _var.recommend_target_data = _recommend_target_data;
+        
+        // 記錄推薦的目標數字
+        $scope.log(_log_file, "_calculate_recommend_target_data()", _recommend_target_data);
+        
+        //$.console_trace("set_recommend finish");
         $.trigger_callback(_callback);
+    };
+    
+    _ctl.get_recommend_target_data = function (_key) {
+        var _recommend = 0;
+        if (typeof(_var.recommend_target_data) === "object" 
+                && typeof(_var.recommend_target_data[_key]) === "number") {
+            _recommend = _var.recommend_target_data[_key];
+        }
+        return _recommend;
     };
 
     var _yesterday_target_data_mock = {
@@ -919,7 +961,10 @@ var controller_target = function ($scope) {
 
         //var _target_data = {};
         //$.console_trace("_get_target_data_callback()", _target_data);
+        
         var _get_target_data_callback = function (_data) {
+            //$.console_trace("_get_target_data_callback()");
+            
             if (_data === undefined) {
                 $.trigger_callback(_callback);
                 return;
@@ -963,17 +1008,19 @@ var controller_target = function ($scope) {
                                 _target_data[_key].done = 0;
                             }
                             _i++;
+                            //$.console_trace("_i", _i);
                             _loop(_i);
                         }
                     });
                 }
                 else {
-                    $.console_trace("_get_target_data_callback()", _target_data);
+                    //$.console_trace("_get_target_data_callback()", _target_data);
+                    //$.console_trace("_get_target_data_callback()", _callback);
                     $.trigger_callback(_callback, [_target_data, _data._timestamp]);
                 }
             };
             _loop(0);
-        };
+        };  //var _get_target_data_callback = function (_data) {
 
         // 先取得target的部分
         //$.console_trace("$scope.db_log.get_latest_log({");
@@ -1004,7 +1051,69 @@ var controller_target = function ($scope) {
     
     // -----------------------------------------------------------------
     
+    _ctl.display_target = function (_key, _done, _target) {
+        
+        var _max = _ctl.get_max_target(_key);
+        if (_max === 0) {
+            _target = 0;
+        }
+        
+        if (_target > 0) {
+            return _done + " / " + _target;
+        }
+        else if (_done === 0) {
+            return "已經全部完成";  // @TODO 語系
+        }
+        else {
+            return _done + " / 已經全部完成";  // @TODO 語系
+        }
+    };
     
+    _ctl.menu_display_target = function (_key, _done, _target) {
+        
+        var _max = _ctl.get_max_target(_key);
+        if (_max === 0) {
+            _target = 0;
+        }
+        
+        if (_target > 0) {
+            return _done + " / " + _target;
+        }
+        else if (_done === 0 || _key === "take_note") {
+            return "";
+        }
+        else {
+            return _done + " / ";  // @TODO 語系
+        }
+    };
+    
+    _ctl.is_all_finish = function (_key) {
+        if (_key === undefined) {
+            var _keys = _ctl.get_target_keys();
+            for (var _i = 0; _i < _keys.length; _i++) {
+                _key = _keys[_i];
+                if (_ctl.get_max_target(_key) > 0) {
+                    //$.console_trace("is_all_finish false " + _key);
+                    return false;
+                }
+            }
+            //$.console_trace("is_all_finish true");
+            return true;
+        }
+        else {
+            return !(_ctl.get_max_target(_key) > 0);
+        }
+    };
+    
+    _ctl.get_target_keys = function () {
+        var _keys = [];
+        for (var _i = 0; _i < _var.target_setting.length; _i++) {
+            var _item = _var.target_setting[_i];
+            var _key = _item.key;
+            _keys.push(_key);
+        }
+        return _keys;
+    };
 
     // ------------------------------------------
 

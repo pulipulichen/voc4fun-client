@@ -19,6 +19,7 @@ var controller_profile = function ($scope) {
     _status.name;
     _status.uuid;
     _status.group_name;
+    _status.version;
     
     _ctl.status = _status;
     
@@ -114,6 +115,7 @@ var controller_profile = function ($scope) {
         $scope.ctl_platform.recordPlatform();
         $scope.ctl_platform.recordGroup();
         _status.group_name = $scope.CONFIG.group_name;
+        _status.version = $scope.CONFIG.version;
         
         _ctl.save();
         
@@ -163,6 +165,32 @@ var controller_profile = function ($scope) {
     
     _ctl.reset = function () {
         $scope.ctl_profile.status = {};
+    };
+    
+    // -----------------------------------
+    
+    _ctl.check_version_match = function () {
+        return (typeof(_status.version) === "number" 
+                && _status.version === $scope.CONFIG.version);
+    };
+    
+    _ctl.reset_app = function () {
+        
+        // STEP 1. 刪除 所有 status
+        $scope.ls.reset();
+        
+        // STEP 2. 刪除 所有 資料庫
+        $scope.DB.reset(function () {
+            
+            // STEP 3. 設定 version
+            _status.version = $scope.CONFIG.version;
+            //alert(_status.uuid);
+            $scope.db_status.save_status(_status_key);
+
+            // STEP 4. 重新整理網頁
+            //alert("重設完畢");
+            location.reload();
+        });
     };
     
     // -----------------------------------

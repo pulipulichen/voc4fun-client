@@ -4,7 +4,7 @@
     <ons-toolbar>
 
         <div class="left">
-            <ons-toolbar-button ng-click="app.navi.popPage()">
+            <ons-toolbar-button ng-click="ctl_note.submit($event);">
                 <span class="toolbar-button--quiet navigation-bar__line-height" >
                     <i class="ion-android-arrow-back"></i>
                 </span>
@@ -28,9 +28,13 @@
         {{ _learn_flashcard.q}} / {{ _learn_flashcard.a}}
     </div>
 
-    <div style="max-height: calc(100% - 140px); overflow-y: auto;">
+    <div style="max-height: calc(100% - 140px); overflow-y: auto;" 
+         onclick="$(this).find('textarea').focus();" 
+         onfocus="$(this).find('textarea').focus();">
         <ons-row>
-            <textarea class="note textarea textarea--transparent" placeholder="撰寫筆記..."
+            <!-- @TODO 語系 -->
+            <textarea class="note textarea textarea--transparent" placeholder="壓一下撰寫筆記..."
+                      autofocus
                       ng-keyup="ctl_note.auto_grow($event)"
                       style=" margin:1rem;   padding: 1rem;  border-radius: 4px;border: 1px solid #ddd; 
                       background-color: #f9f9f9; overflow-y: auto;width: 100%;">{{ _learn_flashcard.note }}</textarea>

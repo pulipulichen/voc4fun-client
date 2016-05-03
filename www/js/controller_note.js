@@ -96,18 +96,23 @@ var controller_note = function ($scope) {
         }
 
         app.navi.popPage();
+        return this;
     };
 
     _ctl.check_note_edited = function (_id) {
         if (_id === undefined) {
             _id = $scope.ctl_learn_flashcard.get_current_flashcard_id();
         }
+        
         if ($.inArray(_id, _status.history) === -1) {
             _status.history.push(_id);
 
             $scope.db_status.save_status(_status_key);
+            //$.console_trace(_status.history);
             $scope.ctl_target.done_plus("take_note");
         }
+        
+        return this;
     };
 
     _ctl.save_note_to_db = function (_note) {
@@ -125,6 +130,8 @@ var controller_note = function ($scope) {
         var _id = $scope.ctl_learn_flashcard.get_current_flashcard_id();
         //$.console_trace(_id, _note);
         $scope.ctl_flashcard.set_note(_id, _note);
+        
+        return this;
     };
     
     _ctl.get_noted_count = function () {

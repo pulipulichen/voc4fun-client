@@ -82,8 +82,8 @@ var controller_test_select = function ($scope) {
 
         //var _test = _var._test_select_mock;
         _ctl.get_test_flashcard(function (_test, _mode) {
-            _ctl.add_history_stack(_test.flashcard_id);
-            
+            // 不是在這裡加進去的
+            //_ctl.add_history_stack(_test.flashcard_id);
 
             $scope.log(_log_file, "next()", _mode, _test);
             if (_do_animation === true) {
@@ -140,7 +140,10 @@ var controller_test_select = function ($scope) {
     // ----------------------
 
     _ctl.add_test_stack = function (_id) {
-        _status.stack.push(_id);
+        //_status.stack.push(_id);
+        if ($.inArray(_id, _status.stack) === -1) {
+            _status.stack.push(_id);
+        }
         $scope.db_status.save_status(_status_key);
         return this;
     };
@@ -173,6 +176,12 @@ var controller_test_select = function ($scope) {
         }
 
         $scope.db_status.save_status(_status_key);
+        
+        // 不管答案正不正確，都發出聲音
+        //$.console_trace(_test_select.options[_test_select.correct].q);
+        //$scope.ctl_activity.speak(_test_select.options[_test_select.correct].q, 'en')
+        
+        return this;
     };
 
     _ctl._give_correct_answer = function () {
@@ -190,6 +199,11 @@ var controller_test_select = function ($scope) {
                 && _status.stack[0] === _test_select.flashcard_id) {
             _status.stack = [];
         }
+        
+        // 把這個動作加入history stack中
+        _ctl.add_history_stack(_test_select.flashcard_id);
+        
+        return this;
     };
 
     _ctl._give_incorrect_answer = function () {
@@ -254,7 +268,7 @@ var controller_test_select = function ($scope) {
             //}
             _flashcard_id = $.array_get_random(_status.history_stack
                     , _test_select.flashcard_id);
-            $.console_trace("get from history_stack", [_flashcard_id, _test_select.flashcard_id]);
+            //$.console_trace("get from history_stack", [_flashcard_id, _test_select.flashcard_id]);
             _qualifier = "history";
         }
         var _options = [];
@@ -300,6 +314,9 @@ var controller_test_select = function ($scope) {
     };
 
     _ctl.add_history_stack = function (_flashcard_id) {
+        if (_flashcard_id === undefined || _flashcard_id === null) {
+            return this;
+        }
         if ($.inArray(_flashcard_id, _status.history_stack) === -1) {
             _status.history_stack.push(_flashcard_id);
         }

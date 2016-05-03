@@ -12,14 +12,17 @@
         </div>
 
         <div class="center">
+            <!-- @TODO 語系 -->
             筆記列表
         </div>
 
         <div class="right"
-             ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target)}"
+             ng-class="{'target-incompleted': (ctl_target.status.take_note.done < ctl_target.status.take_note.target), 'target-completed': (ctl_target.is_all_finish('take_note'))}"
              ng-click="ctl_target.enter_for_view()"
-             ng-show="ctl_target.status.take_note.target !== 0 && !CONFIG.control_group_version">
-            {{ ctl_target.status.take_note.done}} / {{ ctl_target.status.take_note.target}}
+             ng-show="!CONFIG.control_group_version">
+            {{ ctl_target.menu_display_target("take_note", ctl_target.status.take_note.done, ctl_target.status.take_note.target) }}
+            <ons-icon icon="ion-android-star" fixed-width="true"
+                           ng-show="ctl_target.is_all_finish('take_note')"></ons-icon>
         </div>
     </ons-toolbar>
 

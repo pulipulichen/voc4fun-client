@@ -81,6 +81,13 @@ var _app_factory_ons_view = function ($scope) {
         
         $scope.log(_log_file, "menu_click()", undefined, _text);
     };
+    
+    $scope.menu_header_click = function ($event) {
+        if (!$scope.CONFIG.control_group_version) {
+            $scope.ctl_target.enter_from_menu();
+            $scope.menu_click($event);
+        }
+    };
 
 
     // -------------------

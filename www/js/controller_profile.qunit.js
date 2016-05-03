@@ -10,6 +10,7 @@ test("get_uuid()", function (_assert) {
     var _uuid = _ctl.get_uuid();
     notEqual(_uuid, 0, _uuid);
     var _fingerprint = new Fingerprint().get();
+    _fingerprint = _fingerprint + _ctl.get_timestamp();
     ok((_uuid.length < (_fingerprint + "").length), _fingerprint);
     _done();
 });

@@ -77,6 +77,10 @@ var _app_factory_localstorage_utils = function ($scope) {
         }
     };
     
+    _ctl.reset = function () {
+        localStorage.clear();
+    };
+    
     $scope.ls = _ctl;
     
 };

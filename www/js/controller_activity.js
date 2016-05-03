@@ -7,16 +7,58 @@ var controller_activity = function ($scope) {
     // --------------------------
     
     _ctl.enter_from_target = function () {
+        
         //$.console_trace("設定swipeable");
         $scope.set_swipeable(true);
+        //$.console_trace("enter_from_target");
+
+        if ($scope.CONFIG.control_group_version || $scope.ctl_target.is_all_finish()) {
+            _ctl.select_enter_by_last_action();
+        }
+        else {
+            _ctl.select_enter_by_target();
+        }
         
+        return this;
+    };
+    
+    _ctl.select_enter_by_target = function () {
         if ( _ctl.is_learn_enough() 
                 && _ctl.is_test_enough() === false ) {
             $scope.ctl_test_select.enter(false);
         }
         else {
+            //$.console_trace("$scope.ctl_learn_flashcard.enter();");
             $scope.ctl_learn_flashcard.enter();
         }
+        return this;
+    };
+    
+    _ctl.select_enter_by_last_action = function () {
+        
+        // 要記得上次開啟的那一個項目
+        // app_factory_ons_view.js
+        // menu_click()
+        $scope.db_log.get_latest_log({
+            "file_name": "app_factory_ons_view.js",
+            "function_name": "menu_click()",
+            "callback": function (_action) {
+                // @TODO 語系
+                if (_action === "單字學習") {
+                    $scope.ctl_learn_flashcard.enter();
+                }
+                else if (_action === "筆記列表") {
+                    $scope.ctl_note_list.enter();
+                }
+                else if (_action === "測驗") {
+                    $scope.ctl_test_select.enter(false);
+                }
+                else {
+                    $scope.ctl_learn_flashcard.enter();
+                }
+            }
+        });
+        
         return this;
     };
     

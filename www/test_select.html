@@ -19,10 +19,12 @@
 
         <div class="right"
              ng-init="_target_data = ctl_target.status.test_select" 
-             ng-class="{'target-incompleted': (_target_data.done < _target_data.target)}"
+             ng-class="{'target-incompleted': (_target_data.done < _target_data.target), 'target-completed': (ctl_target.is_all_finish('test_select'))}"
              ng-click="ctl_target.enter_for_view()"
-             ng-show="_target_data.target !== 0 && !CONFIG.control_group_version">
-            {{ _target_data.done}} / {{ _target_data.target}}
+             ng-show="!CONFIG.control_group_version">
+            {{ ctl_target.menu_display_target("test_select", _target_data.done, _target_data.target) }}
+                <ons-icon icon="ion-android-star" fixed-width="true"
+                           ng-show="ctl_target.is_all_finish('test_select')"></ons-icon>
         </div>
     </ons-toolbar>
 

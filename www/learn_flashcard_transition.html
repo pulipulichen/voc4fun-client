@@ -15,14 +15,15 @@
 
         <div class="right" >
             <span ng-init="_target_data = ctl_target.status.learn_flashcard" 
-                  ng-class="{'target-incompleted': (_target_data.done < _target_data.target)}"
-                  ng-click="ctl_target.enter_for_view()"
-                  ng-show="_target_data.target !== 0 && !CONFIG.control_group_version">
-                {{ _target_data.done}} / {{ _target_data.target}}
+                  ng-class="{'target-incompleted': (_target_data.done < _target_data.target), 'target-completed': (ctl_target.is_all_finish('learn_flashcard'))}"
+                  ng-show="!CONFIG.control_group_version">
+                <!-- {{ _target_data.done}} / {{ _target_data.target}} -->
+                {{ ctl_target.menu_display_target("learn_flashcard", _target_data.done, _target_data.target) }}
+                <ons-icon icon="ion-android-star" fixed-width="true"
+                           ng-show="ctl_target.is_all_finish('learn_flashcard')"></ons-icon>
             </span>
 
-            <ons-icon icon='ion-android-more-vertical' fixed-width="true" class="more-button" 
-                      ng-click="ctl_learn_flashcard.open_more_menu($event)"></ons-icon>
+            <ons-icon icon='ion-android-more-vertical' fixed-width="true" class="more-button"></ons-icon>
         </div>
     </ons-toolbar>
 
@@ -40,8 +41,8 @@
             <ons-icon icon="ion-radio-waves" fixed-width="true" class="speak" ng-show="CONFIG.enable_speak === true"></ons-icon>
         </ons-row>
         
-        <ons-row style="display: flex;" class="side dictionary">
-            <ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'yahoo')">
+        <ons-row class="side dictionary">
+            <ons-col width="20%">
                 <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="yahhoo-dictionary" ></ons-icon>
                     <div>
@@ -49,7 +50,7 @@
                     </div>
                 </ons-button>
             </ons-col>
-            <ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'synonym')">
+            <ons-col width="20%">
                 <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="synonym-dictionary" "></ons-icon>
                     <div>
@@ -57,7 +58,7 @@
                     </div>
                 </ons-button>
             </ons-col>
-            <ons-col width=25% ng-click="ctl_activity.query_dictionary(ctl_learn_flashcard.var.learn_flashcard.q, 'radicals')">
+            <ons-col width="20%">
                 <ons-button>
                     <ons-icon icon="ion-ios-book" fixed-width="true" class="radicals-dictionary" ></ons-icon>
                     <div>
@@ -65,7 +66,7 @@
                     </div>
                 </ons-button>	
             </ons-col>
-            <ons-col width=25% ng-click="ctl_activity.search_image(ctl_learn_flashcard.var.learn_flashcard.q)">
+            <ons-col width="20%">
                 <ons-button>
                     <ons-icon icon="ion-image" fixed-width="true" class="image-search" ></ons-icon>
                     <div>
@@ -79,12 +80,8 @@
     <div class="note">
         <ons-icon icon="ion-edit" fixed-width="true" class="compose"></ons-icon>
 
-        <span class="your-note pre" 
-              ng-show="(ctl_learn_flashcard.var.learn_flashcard_transition.note !== null && ctl_learn_flashcard.var.learn_flashcard.note !== undefined)">{{ ctl_learn_flashcard.var.learn_flashcard_transition.note}}</span>
-
-        <span class="note-empty" 
-              ng-show="(ctl_learn_flashcard.var.learn_flashcard_transition.note === null || ctl_learn_flashcard.var.learn_flashcard.note === undefined)">
-            {{ 'LEARN_FLASHCARD_NOTE_EMPTY' | translate }}
+        <span class="note-empty" >
+            <ons-icon icon="ion-load-a"></ons-icon>
         </span>
 
     </div>
