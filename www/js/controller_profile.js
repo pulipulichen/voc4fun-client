@@ -175,22 +175,30 @@ var controller_profile = function ($scope) {
     };
     
     _ctl.reset_app = function () {
-        
         // STEP 1. 刪除 所有 status
         $scope.ls.reset();
-        
+
         // STEP 2. 刪除 所有 資料庫
         $scope.DB.reset(function () {
-            
+
             // STEP 3. 設定 version
             _status.version = $scope.CONFIG.version;
             //alert(_status.uuid);
             $scope.db_status.save_status(_status_key);
 
-            // STEP 4. 重新整理網頁
-            //alert("重設完畢");
-            location.reload();
+            ons.notification.alert({
+                title: "新版本啟用通知",  // @TODO 語系
+                message: $scope.CONFIG.version_message,
+                callback: function () {
+                    // STEP 4. 重新整理網頁
+                    //alert("重設完畢");
+                    location.reload();
+                }
+            });
+        
         });
+        
+        
     };
     
     // -----------------------------------
