@@ -36,7 +36,7 @@ var app_config = function ($scope) {
         /**
          * 單字卡的位置
          */
-        "flashcard_path": "data/flashcard.xlsx",
+        "flashcard_path": "data/flashcard_300-20160430.xlsx",
         
         /**
          * 設定時間偏移，單位是天數
