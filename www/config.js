@@ -25,10 +25,10 @@ var app_config = function ($scope) {
         /**
          * 伺服器的位置
          */
-        //"server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
+        "server_url": "http://exp-voc4fun-2015.dlll.nccu.edu.tw/voc4fun-server/",
         
         //"server_url": "http://192.168.11.50/voc4fun/voc4fun-server/",
-        "server_url": "http://pc.pulipuli.info/voc4fun/voc4fun-server/",
+        //"server_url": "http://pc.pulipuli.info/voc4fun/voc4fun-server/",
         // http://pc.pulipuli.info:8080/voc4fun/voc4fun-client  http://goo.gl/BCV6gy
         //"server_url": "/voc4fun/voc4fun-server/",
         
@@ -49,7 +49,7 @@ var app_config = function ($scope) {
          * 
          * 如果裝置記錄版本與此版本不合，則會進行重置
          */
-        "version": 1461888024,
+        "version": 1461888025,
         
         /**
          * 目標設定參數
