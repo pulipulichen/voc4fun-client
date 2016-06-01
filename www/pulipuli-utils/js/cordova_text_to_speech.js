@@ -64,7 +64,7 @@ var cordova_text_to_speech = function ($scope) {
             if (typeof(responsiveVoice) === "object" 
                     && responsiveVoice.isPlaying() === false) {
                 responsiveVoice.speak(_text, _lang);
-                $.console_trace("Speak: " + _text + " (" + _lang + ")");
+                //$.console_trace("Speak: " + _text + " (" + _lang + ")");
             }
             else {
                 setTimeout(function () {

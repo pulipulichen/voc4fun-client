@@ -10,6 +10,10 @@ var _app_ready = function ($scope) {
         //$.console_trace("$scope.ctl_flashcard.setup(function () {");
         $scope.ctl_flashcard.setup(function () {
             //$.console_trace("準備好了嗎？");
+            
+            // 加入記錄: 進入程式了
+            $scope.log("app_ready.js", "_enter()");
+            
             if ($scope.ctl_profile.is_exists() === false) {
                 //$.console_trace("is not exists");
                 $scope.db_log.sync_init();

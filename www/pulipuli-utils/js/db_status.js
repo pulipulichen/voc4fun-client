@@ -42,7 +42,7 @@ var db_status = function ($scope) {
 //                    status: _close_status
 //                });
                 
-                $.console_trace("儲存");
+                //$.console_trace("儲存");
                 $scope.ls.set(_table_name + "_" + _listeners[_l].key, _close_status);
             }
         }
