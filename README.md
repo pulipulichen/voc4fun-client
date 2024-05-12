@@ -1,11 +1,27 @@
+# voc4fun-client: 全民樂單字 PhoneGap端程式碼
 
-# GITHUB URL
+A mobile application featuring a flashcard learning system with a self-regulating learning mechanism. It dynamically adjusts daily goals based on the learner's progress.
+
+抽認卡學習模式的手機應用程式。具備自律學習機制，能夠根據學習者的進度動態調整每日目標。
+
+![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFia79N9pZ9gakIfwRhpNSYB4OgXtv-fn3Rj0sjl76TIHVlbHyge0k3p1w2e_2qXkpvSOoi_SFGnxh8e2K3Dnq4PyHK6b1sytBtoWpVE-52mjWghX9skCjSgeQ_oZ7EHI30tCo9A/s1600/image%255B123%255D)
+
+## Technologies
+
+- PhoneGap: 基於HTML的應用程式封裝工具。
+- OnsenUI & Bootstrap: 適合手機應用程式的CSS框架。
+
+----
+
+# Drafts
+
+## GITHUB URL
 https://github.com/pulipulichen/voc4fun-client
 
 * Server端
 https://github.com/pulipulichen/voc4fun-server
 
-# Quick Link
+## Quick Link
 
 * GITHUB Issues
 https://github.com/pulipulichen/voc4fun-client/issues
