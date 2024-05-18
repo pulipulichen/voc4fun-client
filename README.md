@@ -14,6 +14,10 @@ A mobile application featuring a flashcard learning system with a self-regulatin
 - **OnsenUI & Bootstrap**: 適合手機應用程式的CSS框架。
 - **AngularJS**: MVVM框架。
 
+# Citation
+
+Chen, Y.-T. (2024). *Voc4fun-client* (20240518.204617) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.11214075](https://doi.org/10.5281/ZENODO.11214075)
+
 ----
 
 # Drafts
