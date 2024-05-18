@@ -8,8 +8,9 @@ A mobile application featuring a flashcard learning system with a self-regulatin
 
 ## Technologies
 
-- PhoneGap: 基於HTML的應用程式封裝工具。
-- OnsenUI & Bootstrap: 適合手機應用程式的CSS框架。
+- **PhoneGap**: 基於HTML的應用程式封裝工具。
+- **OnsenUI & Bootstrap**: 適合手機應用程式的CSS框架。
+- **AngularJS**: MVVM框架。
 
 ----
 

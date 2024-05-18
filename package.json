@@ -1,0 +1,37 @@
+{
+  "name": "voc4fun-client",
+  "version": "1.0.0",
+  "description": "A mobile application featuring a flashcard learning system with a self-regulating learning mechanism. It dynamically adjusts daily goals based on the learner's progress.",
+  "main": "index.js",
+  "scripts": {
+    "tag": "./build/tag.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/voc4fun-client.git"
+  },
+  "keywords": [
+    "PhoneGap",
+    "OnsenUI",
+    "Bootstrap",
+    "HTML5",
+    "JavaScript",
+    "CSS",
+    "AngularJS"
+  ],
+  "author": {
+    "name": "Yung-Ting Chen",
+    "email": "blog@pulipuli.info",
+    "orcid": "https://orcid.org/0000-0003-3751-610X",
+    "url": "https://blog.pulipuli.info"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/voc4fun-client/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/voc4fun-client#readme",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
