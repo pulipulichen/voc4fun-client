@@ -9,3 +9,6 @@ title: "voc4fun-client"
 license: "MIT"
 repository-code: "https://github.com/pulipulichen/voc4fun-client"
 abstract: "A mobile application featuring a flashcard learning system with a self-regulating learning mechanism. It dynamically adjusts daily goals based on the learner's progress."
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.11214075

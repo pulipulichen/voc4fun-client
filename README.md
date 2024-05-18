@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/46420529.svg)](https://zenodo.org/doi/10.5281/zenodo.11214075)
+
 # voc4fun-client: 全民樂單字 PhoneGap端程式碼
 
 A mobile application featuring a flashcard learning system with a self-regulating learning mechanism. It dynamically adjusts daily goals based on the learner's progress.

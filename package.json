@@ -30,6 +30,7 @@
     "url": "https://github.com/pulipulichen/voc4fun-client/issues"
   },
   "homepage": "https://github.com/pulipulichen/voc4fun-client#readme",
+  "doi": "10.5281/zenodo.11214075",
   "devDependencies": {
   },
   "dependencies": {
