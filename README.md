@@ -8,7 +8,7 @@ A mobile application featuring a flashcard learning system with a self-regulatin
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFia79N9pZ9gakIfwRhpNSYB4OgXtv-fn3Rj0sjl76TIHVlbHyge0k3p1w2e_2qXkpvSOoi_SFGnxh8e2K3Dnq4PyHK6b1sytBtoWpVE-52mjWghX9skCjSgeQ_oZ7EHI30tCo9A/s1600/image%255B123%255D)
 
-## Technologies
+## Techniques
 
 - **PhoneGap**: 基於HTML的應用程式封裝工具。
 - **OnsenUI & Bootstrap**: 適合手機應用程式的CSS框架。
